@@ -76,10 +76,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Classes\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="UIs\" />
+    <Content Include="Classes\instructionsClassFolder.txt" />
+    <Content Include="Controllers\instructionsControllersFolder.txt" />
+    <Content Include="UIs\instructionsUIsFolder.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
