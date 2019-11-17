@@ -74,3 +74,41 @@ C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\o
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\CreateLogin.exe
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\CreateLogin.pdb
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\CreateLogin.exe.config
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\CreateLogin.exe
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\CreateLogin.pdb
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Antlr3.Runtime.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Docker.DotNet.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\FluentNHibernate.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Google.Apis.Gmail.v1.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Iesi.Collections.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Nancy.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Newtonsoft.Json.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\NHibernate.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Owin.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Remotion.Linq.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Remotion.Linq.EagerFetching.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.Buffers.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.ValueTuple.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Antlr3.Runtime.xml
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\FluentNHibernate.xml
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Google.Apis.Gmail.v1.pdb
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Google.Apis.Gmail.v1.xml
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Iesi.Collections.xml
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.pdb
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Nancy.xml
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Newtonsoft.Json.xml
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\NHibernate.xml
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Remotion.Linq.xml
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Remotion.Linq.EagerFetching.xml
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.ValueTuple.xml
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.csprojAssemblyReference.cache
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.LogEvents.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.GoogleForm.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\CreateLogin.Properties.Resources.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.csproj.GenerateResource.cache
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\CreateLogin.exe
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\CreateLogin.pdb
