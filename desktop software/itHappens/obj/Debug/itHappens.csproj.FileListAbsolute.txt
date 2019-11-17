@@ -1,0 +1,3 @@
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\desktop software\itHappens\obj\Debug\itHappens.csprojAssemblyReference.cache
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\desktop software\itHappens\obj\Debug\itHappens.Properties.Resources.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\desktop software\itHappens\obj\Debug\itHappens.csproj.GenerateResource.cache
