@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "itHappens", "itHappens\itHappens.csproj", "{9B620ED4-17F5-4B7D-9E9A-972A85944D17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "itHappens", "..\..\..\desktop software-copy\itHappens2\itHappens.csproj", "{110929E7-DEBC-40D2-B9D2-90395C929AD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9B620ED4-17F5-4B7D-9E9A-972A85944D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B620ED4-17F5-4B7D-9E9A-972A85944D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9B620ED4-17F5-4B7D-9E9A-972A85944D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9B620ED4-17F5-4B7D-9E9A-972A85944D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{110929E7-DEBC-40D2-B9D2-90395C929AD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{110929E7-DEBC-40D2-B9D2-90395C929AD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{110929E7-DEBC-40D2-B9D2-90395C929AD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{110929E7-DEBC-40D2-B9D2-90395C929AD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
