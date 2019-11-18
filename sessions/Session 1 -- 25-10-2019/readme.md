@@ -6,7 +6,7 @@
 * [Κωνσταντίνα Καραμπίδου](https://github.com/KonstantinaK98)
 * [Άννα Αρχιτεκτονίδου](https://github.com/Anna-ar)
 * [Βαλεντίνα Αρχιτεκτονίδου](https://github.com/Valentina-ar)
-* [Κουμπατής Νικόλαος](https://github.com/Lycaonas)
+* [Νικόλαος Κουμπατής](https://github.com/Lycaonas)
 * [Ανδρέας Ραπεσης](https://github.com/outergaze)
 
 #### Δραστηριότητες
