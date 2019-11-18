@@ -7,7 +7,7 @@
 * [Άννα Αρχιτεκτονίδου](https://github.com/Anna-ar)
 * [Βαλεντίνα Αρχιτεκτονίδου](https://github.com/Valentina-ar)
 * [Κουμπατής Νικόλαος](https://github.com/Lycaonas)
-* [Ανδρέας ραπεσης](https://github.com/outergaze)
+* [Ανδρέας Ραπεσης](https://github.com/outergaze)
 
 #### Δραστηριότητες
 1. Δημιουργία Discord ομάδας και προσθήκη όλων των μελών.
