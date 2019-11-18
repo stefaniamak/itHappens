@@ -36,9 +36,6 @@ C:\Users\Κωνσταντίνα\Desktop\Events\bin\Debug\System.ValueTuple.xml
 C:\Users\Κωνσταντίνα\Desktop\Events\obj\Debug\itHappens.csproj.CopyComplete
 C:\Users\Κωνσταντίνα\Desktop\Events\obj\Debug\itHappens.LogEvents.resources
 C:\Users\Κωνσταντίνα\Desktop\Events\obj\Debug\itHappens.GoogleForm.resources
-C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\bin\Debug\CreateLogin.exe.config
-C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\bin\Debug\CreateLogin.exe
-C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\bin\Debug\CreateLogin.pdb
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\bin\Debug\Antlr3.Runtime.dll
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\bin\Debug\Docker.DotNet.dll
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\bin\Debug\FluentNHibernate.dll
@@ -69,11 +66,8 @@ C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\b
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.csprojAssemblyReference.cache
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.LogEvents.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.GoogleForm.resources
-C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\CreateLogin.Properties.Resources.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.csproj.GenerateResource.cache
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
-C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\CreateLogin.exe
-C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\CreateLogin.pdb
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\CreateLogin.exe.config
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\CreateLogin.exe
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\CreateLogin.pdb
@@ -112,3 +106,9 @@ L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\i
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\CreateLogin.exe
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\CreateLogin.pdb
+C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\bin\Debug\itHappens.exe.config
+C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\bin\Debug\itHappens.exe
+C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\bin\Debug\itHappens.pdb
+C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.Properties.Resources.resources
+C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.exe
+C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.pdb

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EB44BE92-9298-4CA5-90DB-1534F9891541}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CreateLogin</RootNamespace>
-    <AssemblyName>CreateLogin</AssemblyName>
+    <RootNamespace>itHappens</RootNamespace>
+    <AssemblyName>itHappens</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
