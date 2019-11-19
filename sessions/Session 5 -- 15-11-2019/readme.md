@@ -1,4 +1,4 @@
-<h1 align="center">Session 3</h13>
+<h1 align="center">Session 4</h13>
 <h6 align="center">Friday 15/11/2019 (20:00)</h6>
 
 #### Συμμετέχοντες
