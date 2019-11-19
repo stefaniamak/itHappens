@@ -1,5 +1,5 @@
-<h1 align="center">Session 3</h13>
-<h6 align="center">Tuesday 5/11/2019 (18:00)</h6>
+<h1 align="center">Session 6</h13>
+<h6 align="center">Tuesday 18/11/2019 (8:00)</h6>
 
 #### Συμμετέχοντες
 * [Στεφανία Μακρυγιαννάκη](https://github.com/stefaniamak)
@@ -10,4 +10,4 @@
 
 #### Δραστηριότητες
 1. Ολοκλήρωσης των [Functional Requirements](https://docs.google.com/spreadsheets/d/1-FQYydeJ0SdIuMXPixpHzTE4_ZNRNRxyu-x8ttQcUn8/edit?usp=sharing).
-2. Σχεδίαση [Interfaces](https://github.com/stefaniamak/adopse-events/wiki/Interfaces).
+2. Σχεδίαση prototype των [Interfaces](https://github.com/stefaniamak/adopse-events/wiki/Interfaces).
