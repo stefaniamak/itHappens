@@ -7,9 +7,7 @@
 * [Άννα Αρχιτεκτονίδου](https://github.com/Anna-ar)
 * [Βαλεντίνα Αρχιτεκτονίδου](https://github.com/Valentina-ar)
 * [Νικόλαος Κουμπατής](https://github.com/Lycaonas)
-* [Ανδρέας Ραπεσης](https://github.com/outergaze)
-* [Παναγιωτης Στόικος](https://github.com/Stoy-atd)
 
 #### Δραστηριότητες
-1. Δημιουργία Project στο Visual Studio. Πρόταση ονόματος εφαρμογής από Ανδρέα: “itHappens”.
-2. Ανάθεση νέων Tasks για την εβδομάδα.
+1. Ολοκλήρωσης των [Functional Requirements](https://docs.google.com/spreadsheets/d/1-FQYydeJ0SdIuMXPixpHzTE4_ZNRNRxyu-x8ttQcUn8/edit?usp=sharing).
+2. Σχεδίαση [Interfaces](https://github.com/stefaniamak/adopse-events/wiki/Interfaces).
