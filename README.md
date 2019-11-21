@@ -1,1 +1,1 @@
-# adopse-events
+# Theme: Events
