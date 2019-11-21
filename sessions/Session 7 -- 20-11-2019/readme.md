@@ -1,5 +1,5 @@
 <h1 align="center">Session 7</h13>
-<h6 align="center">΅Wednesday 20/11/2019 (18:00)</h6>
+<h6 align="center">Wednesday 20/11/2019 (18:00-21:00)</h6>
 
 #### Συμμετέχοντες
 * Όλη η ομάδα
