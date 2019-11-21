@@ -10,4 +10,4 @@
 
 #### Δραστηριότητες
 1. Ολοκλήρωσης των [Functional Requirements](https://docs.google.com/spreadsheets/d/1-FQYydeJ0SdIuMXPixpHzTE4_ZNRNRxyu-x8ttQcUn8/edit?usp=sharing).
-2. Σχεδίαση prototype των [Interfaces](https://github.com/stefaniamak/adopse-events/wiki/Interfaces).
+2. Σχεδίαση prototype mockups για τα [Interfaces](https://github.com/stefaniamak/adopse-events/wiki/Interfaces).
