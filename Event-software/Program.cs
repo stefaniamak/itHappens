@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using itHappends;
 
 namespace itHappens
 {
@@ -14,6 +15,7 @@ namespace itHappens
         [STAThread]
         static void Main()
         {
+            Db_connector Alpha = new Db_connector();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LogEvents());
