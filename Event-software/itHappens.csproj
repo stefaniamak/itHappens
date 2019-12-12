@@ -145,6 +145,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Area.cs" />
+    <Compile Include="Classes\Category.cs" />
+    <Compile Include="Classes\Event.cs" />
+    <Compile Include="Classes\EventList.cs" />
+    <Compile Include="Classes\User.cs" />
+    <Compile Include="Classes\Venue.cs" />
     <Compile Include="Db_connector.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="UIs\LoginForm.cs">
