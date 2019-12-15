@@ -153,6 +153,12 @@
     <Compile Include="Classes\Venue.cs" />
     <Compile Include="Db_connector.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="UIs\main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\main.resx">
+      <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
