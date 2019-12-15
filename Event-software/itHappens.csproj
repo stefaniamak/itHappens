@@ -151,6 +151,7 @@
     <Compile Include="Classes\EventList.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\Venue.cs" />
+    <Compile Include="DBs\TestDataClass.cs" />
     <Compile Include="Db_connector.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="UIs\LoginForm.cs">

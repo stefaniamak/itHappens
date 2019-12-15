@@ -19,6 +19,7 @@ namespace itHappends
             {
                 con = new MySqlConnection(conStr);
                 con.Open();
+                
             }
             catch(Exception e) {
                 Console.WriteLine("Error");
