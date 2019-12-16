@@ -18,7 +18,7 @@ namespace itHappens
             Db_connector Alpha = new Db_connector();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LogEvents());
+            Application.Run(new UIs.SampleForm());
         }
     }
 }
