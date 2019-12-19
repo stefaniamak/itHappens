@@ -68,9 +68,6 @@ C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\o
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.GoogleForm.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.csproj.GenerateResource.cache
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\CreateLogin.exe.config
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\CreateLogin.exe
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\CreateLogin.pdb
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Antlr3.Runtime.dll
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Docker.DotNet.dll
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\FluentNHibernate.dll
@@ -99,13 +96,9 @@ L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\R
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Remotion.Linq.EagerFetching.xml
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.ValueTuple.xml
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.csprojAssemblyReference.cache
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.LogEvents.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.GoogleForm.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\CreateLogin.Properties.Resources.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.csproj.GenerateResource.cache
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\CreateLogin.exe
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\CreateLogin.pdb
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\bin\Debug\itHappens.exe.config
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\bin\Debug\itHappens.exe
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\bin\Debug\itHappens.pdb
@@ -157,3 +150,28 @@ C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Renci.
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Google.Protobuf.xml
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\MySql.Data.xml
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Renci.SshNet.xml
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\itHappens.exe.config
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\itHappens.exe
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\itHappens.pdb
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\BouncyCastle.Crypto.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Google.Protobuf.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\MySql.Data.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Renci.SshNet.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Google.Protobuf.xml
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\MySql.Data.xml
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Renci.SshNet.xml
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.Properties.Resources.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.SampleForm.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.exe
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.pdb
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.MainForm.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.LoginForm.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.CreateEventForm.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.EventProfileForm.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.VenueProfileForm.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.ListsForm.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.MadeForYouForm.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.SettingsForm.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpForm.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.UserProfileForm.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.SearchForm.resources

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace itHappens.UIs
 {
-    public partial class main : Form
+    public partial class SettingsForm : Form
     {
-        public main()
+        public SettingsForm()
         {
             InitializeComponent();
+        }
+
+        private void SettingsForm_Load(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
         }
     }
 }

@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace itHappens
 {
-    public partial class LogEvents : Form
+    public partial class LoginForm : Form
     {
-        public LogEvents()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
         }       
 
         private void LoginButton_Click(object sender, EventArgs e)
