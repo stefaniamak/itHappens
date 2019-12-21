@@ -19,7 +19,7 @@ namespace itHappens.UIs
 
         public void SampleForm_Load(object sender, EventArgs e)
         {
- 
+            //mainFlowLayout.AddControl(new MainForm());
         }
 
         public void mainPage_Paint(object sender, PaintEventArgs e)
@@ -61,20 +61,18 @@ namespace itHappens.UIs
         {
 
         }
-
+   
         void showPage(Form testForm)
         {
-            
-
             testForm.TopLevel = false;
             testForm.TopMost = false;
 
             SampleForm form1 = (SampleForm)Application.OpenForms["SampleForm"];
             Panel middlePanel = (Panel)form1.Controls["middlePanel"];
             middlePanel.Controls.Clear();
-            middlePanel.Controls.Add(value: testForm);
+            middlePanel.Size = testForm.Size;
             testForm.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            testForm.Size = middlePanel.Size;
+            //middlePanel.AutoScroll = true;
             testForm.Show();
         }
         private void logInToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,8 +83,7 @@ namespace itHappens.UIs
 
         private void mainPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MainForm Form = new MainForm();
-            showPage(Form);
+            Common.interfaceMethods.showPage("mainForm");
         }
 
         private void mainToolStripMenuItem_Click(object sender, EventArgs e)

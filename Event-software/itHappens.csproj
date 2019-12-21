@@ -155,6 +155,19 @@
     <Compile Include="DBs\TestDataClass.cs" />
     <Compile Include="Db_connector.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="UIs\Common\interfaceMethods.cs" />
+    <Compile Include="UIs\Common\Carousel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Common\Carousel.Designer.cs">
+      <DependentUpon>Carousel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Common\categoryBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Common\categoryBox.Designer.cs">
+      <DependentUpon>categoryBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\[Anna] LogIn, SignUp, Create Event\CreateEventForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +179,12 @@
     </Compile>
     <Compile Include="UIs\[Andr] User, Venue, Event Profiles\EventProfileForm.Designer.cs">
       <DependentUpon>EventProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Common\EventMiniView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Common\EventMiniView.Designer.cs">
+      <DependentUpon>EventMiniView.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\[Stef] Main, SearchPage\SearchForm.cs">
       <SubType>Form</SubType>
@@ -235,11 +254,20 @@
     <Compile Include="UIs\SampleForm.designer.cs">
       <DependentUpon>SampleForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UIs\Common\categoryBox.resx">
+      <DependentUpon>categoryBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Common\Carousel.resx">
+      <DependentUpon>Carousel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIs\[Anna] LogIn, SignUp, Create Event\CreateEventForm.resx">
       <DependentUpon>CreateEventForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\[Andr] User, Venue, Event Profiles\EventProfileForm.resx">
       <DependentUpon>EventProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Common\EventMiniView.resx">
+      <DependentUpon>EventMiniView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\[Stef] Main, SearchPage\SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
