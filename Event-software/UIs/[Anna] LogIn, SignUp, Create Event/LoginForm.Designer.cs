@@ -1,6 +1,6 @@
 ﻿namespace itHappens
 {
-    partial class LogEvents
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogEvents));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.UsernameTextBox = new System.Windows.Forms.TextBox();
@@ -137,7 +137,7 @@
             // LogEvents
             // 
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(413, 510);
+            this.ClientSize = new System.Drawing.Size(839, 528);
             this.Controls.Add(this.GooglePictureBox);
             this.Controls.Add(this.UserPictureBox);
             this.Controls.Add(this.LoginButton);
