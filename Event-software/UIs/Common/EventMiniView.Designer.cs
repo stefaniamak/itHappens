@@ -56,6 +56,7 @@
             this.eventTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.eventTableLayout.Size = new System.Drawing.Size(173, 273);
             this.eventTableLayout.TabIndex = 0;
+            this.eventTableLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.eventTableLayout_Paint);
             // 
             // eventPictureBox
             // 
@@ -64,10 +65,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.eventPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("eventPictureBox.BackgroundImage")));
             this.eventPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.eventPictureBox.Location = new System.Drawing.Point(3, 3);
+            this.eventPictureBox.Location = new System.Drawing.Point(0, 0);
             this.eventPictureBox.Margin = new System.Windows.Forms.Padding(0);
             this.eventPictureBox.Name = "eventPictureBox";
-            this.eventPictureBox.Size = new System.Drawing.Size(167, 242);
+            this.eventPictureBox.Size = new System.Drawing.Size(173, 248);
             this.eventPictureBox.TabIndex = 0;
             this.eventPictureBox.TabStop = false;
             // 
@@ -78,10 +79,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.categoryColorControl.AutoScroll = true;
             this.categoryColorControl.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.categoryColorControl.Location = new System.Drawing.Point(3, 251);
+            this.categoryColorControl.Location = new System.Drawing.Point(0, 248);
             this.categoryColorControl.Margin = new System.Windows.Forms.Padding(0);
             this.categoryColorControl.Name = "categoryColorControl";
-            this.categoryColorControl.Size = new System.Drawing.Size(167, 19);
+            this.categoryColorControl.Padding = new System.Windows.Forms.Padding(2);
+            this.categoryColorControl.Size = new System.Drawing.Size(173, 25);
             this.categoryColorControl.TabIndex = 1;
             // 
             // EventMiniView
@@ -94,6 +96,7 @@
             this.Name = "EventMiniView";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.Size = new System.Drawing.Size(175, 275);
+            this.MouseHover += new System.EventHandler(this.EventMiniView_MouseHover);
             this.eventTableLayout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.eventPictureBox)).EndInit();
             this.ResumeLayout(false);

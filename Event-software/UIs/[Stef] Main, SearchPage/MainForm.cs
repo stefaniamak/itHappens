@@ -25,28 +25,6 @@ namespace itHappens.UIs
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            /*
-            Mutual.eventSmall testForm = new Mutual.eventSmall();
-            testForm.TopLevel = false;
-            testForm.TopMost = false;
-
-            MainForm form1 = (MainForm)Application.OpenForms["MainForm"];
-            Panel todayPanel = (Panel)form1.Controls["todayPanel"];
-            todayPanel.Controls.Clear();
-            todayPanel.Controls.Add(value: testForm);
-            
-            //todayPanel.Controls.Add(value: testForm);
-            //todayPanel.Controls.Add(value: testForm);
-            testForm.Anchor = (AnchorStyles.Top | AnchorStyles.Left);
-            //testForm.Size = todayPanel.Size;
-            testForm.Width = testForm.Width / 2;
-            //testForm.Height = testForm.Height / 2;
-            
-            testForm.Location = new Point(todayPanel.Left + 4, todayPanel.Top - testForm.Height);
-
-
-            testForm.Show();
-            */
 
             for (int i = 0; i < 10; i++)
             {
@@ -55,16 +33,13 @@ namespace itHappens.UIs
 
             for (int i = 0; i < 5; i++)
             {
-                madeForYouCarusel.AddControl(new Common.categoryBox());
+                madeForYouCarusel.AddControl(new Common.CategoryGroupBox());
             }
             /*
             var scroll = todayEventsCarousel.AutoScrollPosition;
             scroll.X = 0;
             todayEventsCarousel.AutoScrollPosition = scroll;
             */
-
-
-
         }
 
         private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
@@ -87,6 +62,11 @@ namespace itHappens.UIs
         {
 
 
+
+        }
+
+        private void todayEventsCarousel_Load(object sender, EventArgs e)
+        {
 
         }
     }

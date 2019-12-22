@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace itHappens.UIs.Common
 {
-    public partial class categoryBox : UserControl
+    public partial class Listing : UserControl
     {
-        public categoryBox()
+        public Listing()
         {
             InitializeComponent();
+        }
+
+        public void AddControl(UserControl control)
+        {
+            listingFlowLayout.Controls.Add(control);
         }
     }
 }

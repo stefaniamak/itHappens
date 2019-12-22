@@ -100,6 +100,7 @@
             this.todayEventsCarousel.Size = new System.Drawing.Size(924, 300);
             this.todayEventsCarousel.TabIndex = 3;
             this.todayEventsCarousel.TabStop = false;
+            this.todayEventsCarousel.Load += new System.EventHandler(this.todayEventsCarousel_Load);
             // 
             // MainForm
             // 

@@ -1,6 +1,6 @@
 ﻿namespace itHappens.UIs.Common
 {
-    partial class categoryBox
+    partial class Listing
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,26 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.categoryName = new System.Windows.Forms.Label();
+            this.listingFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // categoryName
+            // listingFlowLayout
             // 
-            this.categoryName.AutoSize = true;
-            this.categoryName.Location = new System.Drawing.Point(94, 20);
-            this.categoryName.Name = "categoryName";
-            this.categoryName.Size = new System.Drawing.Size(49, 13);
-            this.categoryName.TabIndex = 0;
-            this.categoryName.Text = "Category";
+            this.listingFlowLayout.AutoSize = true;
+            this.listingFlowLayout.BackColor = System.Drawing.SystemColors.Control;
+            this.listingFlowLayout.Location = new System.Drawing.Point(3, 0);
+            this.listingFlowLayout.Name = "listingFlowLayout";
+            this.listingFlowLayout.Size = new System.Drawing.Size(348, 86);
+            this.listingFlowLayout.TabIndex = 1;
+            this.listingFlowLayout.TabStop = true;
             // 
-            // categoryBox
+            // Listing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Controls.Add(this.categoryName);
-            this.Name = "categoryBox";
-            this.Size = new System.Drawing.Size(240, 233);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Controls.Add(this.listingFlowLayout);
+            this.Margin = new System.Windows.Forms.Padding(0);
+            this.Name = "Listing";
+            this.Size = new System.Drawing.Size(354, 89);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -55,6 +58,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label categoryName;
+        private System.Windows.Forms.FlowLayoutPanel listingFlowLayout;
     }
 }
