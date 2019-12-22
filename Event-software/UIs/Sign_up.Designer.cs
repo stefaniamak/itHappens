@@ -58,6 +58,7 @@
             this.UsernameBox.TabStop = false;
             this.UsernameBox.Text = "Username";
             this.UsernameBox.Click += new System.EventHandler(this.UsernameBox_Click);
+ 
             // 
             // PassBox
             // 
@@ -72,6 +73,7 @@
             this.PassBox.TabStop = false;
             this.PassBox.Text = "Password";
             this.PassBox.Click += new System.EventHandler(this.PassBox_Click);
+            this.PassBox.TextChanged += new System.EventHandler(this.PassBox_TextChanged);
             // 
             // EmailBox
             // 
@@ -110,6 +112,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(246, 1);
             this.panel1.TabIndex = 9;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -118,6 +121,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(246, 1);
             this.panel2.TabIndex = 10;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -153,6 +157,7 @@
             this.picpass.Size = new System.Drawing.Size(30, 30);
             this.picpass.TabIndex = 2;
             this.picpass.TabStop = false;
+            this.picpass.Click += new System.EventHandler(this.picpass_Click);
             // 
             // picuser
             // 
