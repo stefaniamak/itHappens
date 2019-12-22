@@ -65,7 +65,7 @@
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(184, 615);
+            this.panel1.Size = new System.Drawing.Size(184, 664);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -98,28 +98,28 @@
             this.searchToolStripMenuItem,
             this.eventsProfileToolStripMenuItem});
             this.stefaniaToolStripMenuItem.Name = "stefaniaToolStripMenuItem";
-            this.stefaniaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stefaniaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.stefaniaToolStripMenuItem.Text = "Andreas";
             this.stefaniaToolStripMenuItem.Click += new System.EventHandler(this.stefaniaToolStripMenuItem_Click);
             // 
             // mainToolStripMenuItem
             // 
             this.mainToolStripMenuItem.Name = "mainToolStripMenuItem";
-            this.mainToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mainToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.mainToolStripMenuItem.Text = "User\'s Profile";
             this.mainToolStripMenuItem.Click += new System.EventHandler(this.mainToolStripMenuItem_Click);
             // 
             // searchToolStripMenuItem
             // 
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.searchToolStripMenuItem.Text = "Venue\'s Profile";
             this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
             // eventsProfileToolStripMenuItem
             // 
             this.eventsProfileToolStripMenuItem.Name = "eventsProfileToolStripMenuItem";
-            this.eventsProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eventsProfileToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.eventsProfileToolStripMenuItem.Text = "Event\'s Profile";
             this.eventsProfileToolStripMenuItem.Click += new System.EventHandler(this.eventsProfileToolStripMenuItem_Click);
             // 
@@ -130,7 +130,7 @@
             this.signUpToolStripMenuItem,
             this.createEventToolStripMenuItem});
             this.annaToolStripMenuItem.Name = "annaToolStripMenuItem";
-            this.annaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.annaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.annaToolStripMenuItem.Text = "Anna";
             // 
             // logInToolStripMenuItem
@@ -143,14 +143,14 @@
             // signUpToolStripMenuItem
             // 
             this.signUpToolStripMenuItem.Name = "signUpToolStripMenuItem";
-            this.signUpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.signUpToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.signUpToolStripMenuItem.Text = "Sign up";
             this.signUpToolStripMenuItem.Click += new System.EventHandler(this.signUpToolStripMenuItem_Click);
             // 
             // createEventToolStripMenuItem
             // 
             this.createEventToolStripMenuItem.Name = "createEventToolStripMenuItem";
-            this.createEventToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createEventToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.createEventToolStripMenuItem.Text = "Create event";
             this.createEventToolStripMenuItem.Click += new System.EventHandler(this.createEventToolStripMenuItem_Click);
             // 
@@ -161,27 +161,27 @@
             this.madeForYouToolStripMenuItem,
             this.settingsToolStripMenuItem});
             this.valentinaToolStripMenuItem.Name = "valentinaToolStripMenuItem";
-            this.valentinaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.valentinaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.valentinaToolStripMenuItem.Text = "Valentina";
             // 
             // listToolStripMenuItem
             // 
             this.listToolStripMenuItem.Name = "listToolStripMenuItem";
-            this.listToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.listToolStripMenuItem.Text = "List";
             this.listToolStripMenuItem.Click += new System.EventHandler(this.listToolStripMenuItem_Click);
             // 
             // madeForYouToolStripMenuItem
             // 
             this.madeForYouToolStripMenuItem.Name = "madeForYouToolStripMenuItem";
-            this.madeForYouToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.madeForYouToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.madeForYouToolStripMenuItem.Text = "Made for you";
             this.madeForYouToolStripMenuItem.Click += new System.EventHandler(this.madeForYouToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
@@ -191,7 +191,7 @@
             this.mainPageToolStripMenuItem,
             this.searchPageToolStripMenuItem});
             this.stefaniaToolStripMenuItem1.Name = "stefaniaToolStripMenuItem1";
-            this.stefaniaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.stefaniaToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
             this.stefaniaToolStripMenuItem1.Text = "Stefania";
             // 
             // mainPageToolStripMenuItem
@@ -204,7 +204,7 @@
             // searchPageToolStripMenuItem
             // 
             this.searchPageToolStripMenuItem.Name = "searchPageToolStripMenuItem";
-            this.searchPageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchPageToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.searchPageToolStripMenuItem.Text = "Search page";
             this.searchPageToolStripMenuItem.Click += new System.EventHandler(this.searchPageToolStripMenuItem_Click);
             // 
@@ -212,7 +212,7 @@
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 615);
+            this.splitter1.Size = new System.Drawing.Size(3, 664);
             this.splitter1.TabIndex = 1;
             this.splitter1.TabStop = false;
             // 
@@ -220,7 +220,7 @@
             // 
             this.splitContainer1.BackColor = System.Drawing.Color.Coral;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitContainer1.Location = new System.Drawing.Point(889, 0);
+            this.splitContainer1.Location = new System.Drawing.Point(1121, 0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -231,8 +231,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(150, 615);
-            this.splitContainer1.SplitterDistance = 166;
+            this.splitContainer1.Size = new System.Drawing.Size(150, 664);
+            this.splitContainer1.SplitterDistance = 218;
             this.splitContainer1.TabIndex = 5;
             // 
             // middlePanel
@@ -240,21 +240,23 @@
             this.middlePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.middlePanel.AutoScroll = true;
             this.middlePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.middlePanel.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.middlePanel.Location = new System.Drawing.Point(180, 0);
+            this.middlePanel.Location = new System.Drawing.Point(187, 0);
+            this.middlePanel.Margin = new System.Windows.Forms.Padding(0);
             this.middlePanel.Name = "middlePanel";
             this.middlePanel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.middlePanel.Size = new System.Drawing.Size(693, 615);
+            this.middlePanel.Size = new System.Drawing.Size(918, 664);
             this.middlePanel.TabIndex = 4;
             this.middlePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPage_Paint_1);
             // 
             // splitter2
             // 
             this.splitter2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitter2.Location = new System.Drawing.Point(879, 0);
+            this.splitter2.Location = new System.Drawing.Point(1111, 0);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(10, 615);
+            this.splitter2.Size = new System.Drawing.Size(10, 664);
             this.splitter2.TabIndex = 6;
             this.splitter2.TabStop = false;
             this.splitter2.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitter2_SplitterMoved);
@@ -263,7 +265,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1039, 615);
+            this.ClientSize = new System.Drawing.Size(1271, 664);
             this.Controls.Add(this.splitter2);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.middlePanel);
