@@ -21,5 +21,15 @@ namespace itHappens.UIs
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
     }
 }
