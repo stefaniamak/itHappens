@@ -55,7 +55,7 @@
             // leftSplitContainer.Panel2
             // 
             this.leftSplitContainer.Panel2.Controls.Add(this.rightSplitContainer);
-            this.leftSplitContainer.Size = new System.Drawing.Size(857, 550);
+            this.leftSplitContainer.Size = new System.Drawing.Size(899, 556);
             this.leftSplitContainer.SplitterDistance = 157;
             this.leftSplitContainer.TabIndex = 0;
             // 
@@ -73,15 +73,15 @@
             // rightSplitContainer.Panel2
             // 
             this.rightSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.rightSplitContainer.Size = new System.Drawing.Size(696, 550);
-            this.rightSplitContainer.SplitterDistance = 602;
+            this.rightSplitContainer.Size = new System.Drawing.Size(738, 556);
+            this.rightSplitContainer.SplitterDistance = 609;
             this.rightSplitContainer.TabIndex = 0;
             // 
             // TestSplitForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 556);
+            this.ClientSize = new System.Drawing.Size(902, 562);
             this.Controls.Add(this.leftSplitContainer);
             this.Name = "TestSplitForm";
             this.Text = "TestSplitForm";
