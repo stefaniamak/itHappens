@@ -112,3 +112,42 @@ L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\i
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\CreateLogin.exe
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\CreateLogin.pdb
+D:\adopse\adopse-events\Event-software\bin\Debug\CreateLogin.exe.config
+D:\adopse\adopse-events\Event-software\bin\Debug\CreateLogin.exe
+D:\adopse\adopse-events\Event-software\bin\Debug\CreateLogin.pdb
+D:\adopse\adopse-events\Event-software\bin\Debug\Antlr3.Runtime.dll
+D:\adopse\adopse-events\Event-software\bin\Debug\Docker.DotNet.dll
+D:\adopse\adopse-events\Event-software\bin\Debug\FluentNHibernate.dll
+D:\adopse\adopse-events\Event-software\bin\Debug\Google.Apis.Gmail.v1.dll
+D:\adopse\adopse-events\Event-software\bin\Debug\Iesi.Collections.dll
+D:\adopse\adopse-events\Event-software\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+D:\adopse\adopse-events\Event-software\bin\Debug\Nancy.dll
+D:\adopse\adopse-events\Event-software\bin\Debug\Newtonsoft.Json.dll
+D:\adopse\adopse-events\Event-software\bin\Debug\NHibernate.dll
+D:\adopse\adopse-events\Event-software\bin\Debug\Owin.dll
+D:\adopse\adopse-events\Event-software\bin\Debug\Remotion.Linq.dll
+D:\adopse\adopse-events\Event-software\bin\Debug\Remotion.Linq.EagerFetching.dll
+D:\adopse\adopse-events\Event-software\bin\Debug\System.Buffers.dll
+D:\adopse\adopse-events\Event-software\bin\Debug\System.ValueTuple.dll
+D:\adopse\adopse-events\Event-software\bin\Debug\Antlr3.Runtime.xml
+D:\adopse\adopse-events\Event-software\bin\Debug\FluentNHibernate.xml
+D:\adopse\adopse-events\Event-software\bin\Debug\Google.Apis.Gmail.v1.pdb
+D:\adopse\adopse-events\Event-software\bin\Debug\Google.Apis.Gmail.v1.xml
+D:\adopse\adopse-events\Event-software\bin\Debug\Iesi.Collections.xml
+D:\adopse\adopse-events\Event-software\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.pdb
+D:\adopse\adopse-events\Event-software\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+D:\adopse\adopse-events\Event-software\bin\Debug\Nancy.xml
+D:\adopse\adopse-events\Event-software\bin\Debug\Newtonsoft.Json.xml
+D:\adopse\adopse-events\Event-software\bin\Debug\NHibernate.xml
+D:\adopse\adopse-events\Event-software\bin\Debug\Remotion.Linq.xml
+D:\adopse\adopse-events\Event-software\bin\Debug\Remotion.Linq.EagerFetching.xml
+D:\adopse\adopse-events\Event-software\bin\Debug\System.ValueTuple.xml
+D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.csprojAssemblyReference.cache
+D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.LogEvents.resources
+D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.GoogleForm.resources
+D:\adopse\adopse-events\Event-software\obj\Debug\CreateLogin.Properties.Resources.resources
+D:\adopse\adopse-events\Event-software\obj\Debug\CreateLogin.UIs.Form1.resources
+D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.csproj.GenerateResource.cache
+D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
+D:\adopse\adopse-events\Event-software\obj\Debug\CreateLogin.exe
+D:\adopse\adopse-events\Event-software\obj\Debug\CreateLogin.pdb

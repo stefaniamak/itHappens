@@ -129,6 +129,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="UIs\Sign_up.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\Sign_up.Designer.cs">
+      <DependentUpon>Sign_up.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Sign_up.resx">
+      <DependentUpon>Sign_up.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -177,6 +186,13 @@
     <Content Include="Classes\instructionsClassFolder.txt" />
     <Content Include="Controllers\instructionsControllersFolder.txt" />
     <Content Include="Images\signInGoogle.png" />
+    <None Include="Resources\email1.jpg" />
+    <None Include="Resources\email2.jpg" />
+    <None Include="Resources\LOGOPLSS.png" />
+    <None Include="Resources\pass1.jpg" />
+    <None Include="Resources\pass2.jpg" />
+    <None Include="Resources\user1.jpg" />
+    <None Include="Resources\user2.jpg" />
     <Content Include="UIs\instructionsUIsFolder.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
