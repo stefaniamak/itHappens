@@ -50,12 +50,10 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.middlePanel = new System.Windows.Forms.Panel();
             this.splitter2 = new System.Windows.Forms.Splitter();
-            this.mainFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.SuspendLayout();
-            this.middlePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -234,7 +232,7 @@
             // 
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(150, 664);
-            this.splitContainer1.SplitterDistance = 179;
+            this.splitContainer1.SplitterDistance = 218;
             this.splitContainer1.TabIndex = 5;
             // 
             // middlePanel
@@ -245,12 +243,11 @@
             this.middlePanel.AutoScroll = true;
             this.middlePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.middlePanel.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.middlePanel.Controls.Add(this.mainFlowLayout);
-            this.middlePanel.Location = new System.Drawing.Point(180, 0);
+            this.middlePanel.Location = new System.Drawing.Point(187, 0);
             this.middlePanel.Margin = new System.Windows.Forms.Padding(0);
             this.middlePanel.Name = "middlePanel";
             this.middlePanel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.middlePanel.Size = new System.Drawing.Size(925, 664);
+            this.middlePanel.Size = new System.Drawing.Size(918, 664);
             this.middlePanel.TabIndex = 4;
             this.middlePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPage_Paint_1);
             // 
@@ -263,18 +260,6 @@
             this.splitter2.TabIndex = 6;
             this.splitter2.TabStop = false;
             this.splitter2.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitter2_SplitterMoved);
-            // 
-            // mainFlowLayout
-            // 
-            this.mainFlowLayout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainFlowLayout.AutoScroll = true;
-            this.mainFlowLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.mainFlowLayout.Location = new System.Drawing.Point(0, 0);
-            this.mainFlowLayout.Name = "mainFlowLayout";
-            this.mainFlowLayout.Size = new System.Drawing.Size(935, 664);
-            this.mainFlowLayout.TabIndex = 0;
             // 
             // SampleForm
             // 
@@ -296,7 +281,6 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.middlePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -325,6 +309,5 @@
         private System.Windows.Forms.ToolStripMenuItem stefaniaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem mainPageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchPageToolStripMenuItem;
-        private System.Windows.Forms.FlowLayoutPanel mainFlowLayout;
     }
 }

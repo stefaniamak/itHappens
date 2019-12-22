@@ -16,6 +16,7 @@ namespace itHappens.UIs.Common
             testForm.TopLevel = false;
             testForm.TopMost = false;
 
+
             SampleForm form1 = (SampleForm)System.Windows.Forms.Application.OpenForms["SampleForm"];
             System.Windows.Forms.Panel middlePanel = (System.Windows.Forms.Panel)form1.Controls["middlePanel"];
             middlePanel.Controls.Clear();

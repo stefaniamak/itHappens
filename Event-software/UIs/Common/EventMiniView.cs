@@ -22,5 +22,15 @@ namespace itHappens.UIs.Common
             eventPictureBox.Image = eventImage;
             categoryColorControl.BackColor = categoryColor;
         }
+
+        private void EventMiniView_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void eventTableLayout_Paint(object sender, PaintEventArgs e)
+        {
+            // Method for the Controller
+        }
     }
 }

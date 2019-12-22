@@ -155,6 +155,12 @@
     <Compile Include="DBs\TestDataClass.cs" />
     <Compile Include="Db_connector.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="UIs\Common\TestSplitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\Common\TestSplitForm.Designer.cs">
+      <DependentUpon>TestSplitForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\Common\interfaceMethods.cs" />
     <Compile Include="UIs\Common\Carousel.cs">
       <SubType>UserControl</SubType>
@@ -162,11 +168,23 @@
     <Compile Include="UIs\Common\Carousel.Designer.cs">
       <DependentUpon>Carousel.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Common\categoryBox.cs">
+    <Compile Include="UIs\Common\CategoryGroupBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\Common\categoryBox.Designer.cs">
-      <DependentUpon>categoryBox.cs</DependentUpon>
+    <Compile Include="UIs\Common\CategoryGroupBox.Designer.cs">
+      <DependentUpon>CategoryGroupBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Common\Listing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Common\Listing.Designer.cs">
+      <DependentUpon>Listing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Common\CategoryMiniBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Common\CategoryMiniBox.Designer.cs">
+      <DependentUpon>CategoryMiniBox.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\[Anna] LogIn, SignUp, Create Event\CreateEventForm.cs">
       <SubType>Form</SubType>
@@ -203,6 +221,12 @@
     </Compile>
     <Compile Include="UIs\[Andr] User, Venue, Event Profiles\UserProfileForm.Designer.cs">
       <DependentUpon>UserProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Common\SearchFormTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Common\SearchFormTest.Designer.cs">
+      <DependentUpon>SearchFormTest.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\[Valia] List, Made for you, Settings\SettingsForm.cs">
       <SubType>Form</SubType>
@@ -254,11 +278,20 @@
     <Compile Include="UIs\SampleForm.designer.cs">
       <DependentUpon>SampleForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UIs\Common\categoryBox.resx">
-      <DependentUpon>categoryBox.cs</DependentUpon>
+    <EmbeddedResource Include="UIs\Common\CategoryGroupBox.resx">
+      <DependentUpon>CategoryGroupBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Common\Carousel.resx">
       <DependentUpon>Carousel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Common\Listing.resx">
+      <DependentUpon>Listing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Common\CategoryMiniBox.resx">
+      <DependentUpon>CategoryMiniBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Common\TestSplitForm.resx">
+      <DependentUpon>TestSplitForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\[Anna] LogIn, SignUp, Create Event\CreateEventForm.resx">
       <DependentUpon>CreateEventForm.cs</DependentUpon>
@@ -274,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\[Andr] User, Venue, Event Profiles\VenueProfileForm.resx">
       <DependentUpon>VenueProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Common\SearchFormTest.resx">
+      <DependentUpon>SearchFormTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\[Valia] List, Made for you, Settings\ListsForm.resx">
       <DependentUpon>ListsForm.cs</DependentUpon>
