@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace itHappens.UIs.Common
 {
-    public partial class SearchFormTest : UserControl
+    public partial class SearchPage : UserControl
     {
-        public SearchFormTest()
+        public SearchPage()
         {
             InitializeComponent();
         }

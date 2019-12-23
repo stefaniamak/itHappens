@@ -1,6 +1,6 @@
 ﻿namespace itHappens.UIs.Common
 {
-    partial class SearchFormTest
+    partial class SearchPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -130,6 +130,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoScroll = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.mostFrequentList);
@@ -158,14 +159,15 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 0);
             this.flowLayoutPanel1.TabIndex = 18;
             // 
-            // SearchFormTest
+            // SearchPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.Controls.Add(this.panel1);
-            this.Name = "SearchFormTest";
+            this.Name = "SearchPage";
             this.Size = new System.Drawing.Size(529, 646);
             this.Load += new System.EventHandler(this.SearchFormTest_Load);
             this.panel1.ResumeLayout(false);

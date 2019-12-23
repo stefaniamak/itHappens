@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace itHappens.Controllers
 {
-    class interfaceController
+    class InterfaceController
     {
+        
     }
 }

@@ -19,8 +19,8 @@ namespace itHappens
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new UIs.SampleForm());
-            //Application.Run(new UIs.Common.TestSplitForm());
+            //Application.Run(new UIs.SampleForm());
+            Application.Run(new UIs.Common.MainSplitForm());
 
             //Application.Run(new LogEvents());
 
