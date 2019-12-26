@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace itHappens.UIs.andrea
 {
-    public partial class VenueProfilePage : UserControl
+    public partial class EventProfilePage : UserControl
     {
-        public VenueProfilePage()
+        public EventProfilePage()
         {
             InitializeComponent();
+        }
+
+        private void EventProfilePage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
