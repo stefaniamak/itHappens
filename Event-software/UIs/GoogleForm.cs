@@ -12,7 +12,7 @@ using Owin;
 using System.Reflection;
 using System.IO;
 using Newtonsoft.Json;
-using FluentNHibernate.Mapping;
+//using FluentNHibernate.Mapping;
 using Nancy.Json;
 
 namespace itHappens

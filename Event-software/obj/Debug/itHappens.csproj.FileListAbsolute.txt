@@ -69,29 +69,22 @@ C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\o
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.csproj.GenerateResource.cache
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Antlr3.Runtime.dll
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Docker.DotNet.dll
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\FluentNHibernate.dll
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Google.Apis.Gmail.v1.dll
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Iesi.Collections.dll
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Nancy.dll
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Newtonsoft.Json.dll
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\NHibernate.dll
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Owin.dll
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Remotion.Linq.dll
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Remotion.Linq.EagerFetching.dll
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.Buffers.dll
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.ValueTuple.dll
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Antlr3.Runtime.xml
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\FluentNHibernate.xml
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Google.Apis.Gmail.v1.pdb
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Google.Apis.Gmail.v1.xml
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Iesi.Collections.xml
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.pdb
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Nancy.xml
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Newtonsoft.Json.xml
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\NHibernate.xml
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Remotion.Linq.xml
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Remotion.Linq.EagerFetching.xml
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.ValueTuple.xml
@@ -195,3 +188,33 @@ D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.SettingsForm.reso
 D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpForm.resources
 D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.UserProfileForm.resources
 D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.csproj.GenerateResource.Cache
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.Carousel.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.EventMiniView.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.Listing.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.CategoryGroupBox.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.CategoryMiniBox.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.exe.config
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.IO.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.Net.Http.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.Runtime.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.Security.Cryptography.Algorithms.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.Security.Cryptography.Encoding.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.Security.Cryptography.Primitives.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.MainSplitForm.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.stefania.MainPage.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.SearchPage.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.EventProfilePage.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.VenueProfilePage.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.UserProfilePage.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.SignUpPage.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.CreateEventPage.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.LogInPage.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.ListPage.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.MadeForYouPage.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.SettingsPage.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.FriendListSidebar.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.ListsSidebar.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.ProfileSidebar.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.UpcomingEventsSidebar.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.stefania.CommonSearchTextPage.resources
