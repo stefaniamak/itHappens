@@ -28,34 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.matchesList = new itHappens.UIs.Common.Listing();
-            this.allCategoriesList = new itHappens.UIs.Common.Listing();
             this.mostFrequentLabel = new System.Windows.Forms.Label();
             this.machesLabel = new System.Windows.Forms.Label();
             this.allCategoriesLabel = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fullPageflowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.AutoScroll = true;
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Controls.Add(this.matchesList);
-            this.panel1.Controls.Add(this.allCategoriesList);
-            this.panel1.Controls.Add(this.mostFrequentLabel);
-            this.panel1.Controls.Add(this.machesLabel);
-            this.panel1.Controls.Add(this.allCategoriesLabel);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(523, 640);
-            this.panel1.TabIndex = 18;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // flowLayoutPanel1
             // 
@@ -63,37 +45,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Red;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(30, 63);
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(53, 61);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 0);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 10);
             this.flowLayoutPanel1.TabIndex = 18;
-            // 
-            // matchesList
-            // 
-            this.matchesList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.matchesList.AutoSize = true;
-            this.matchesList.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.matchesList.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.matchesList.Location = new System.Drawing.Point(24, 464);
-            this.matchesList.Margin = new System.Windows.Forms.Padding(0);
-            this.matchesList.Name = "matchesList";
-            this.matchesList.Size = new System.Drawing.Size(354, 89);
-            this.matchesList.TabIndex = 17;
-            // 
-            // allCategoriesList
-            // 
-            this.allCategoriesList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.allCategoriesList.AutoSize = true;
-            this.allCategoriesList.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.allCategoriesList.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.allCategoriesList.Location = new System.Drawing.Point(26, 255);
-            this.allCategoriesList.Margin = new System.Windows.Forms.Padding(0);
-            this.allCategoriesList.Name = "allCategoriesList";
-            this.allCategoriesList.Size = new System.Drawing.Size(354, 89);
-            this.allCategoriesList.TabIndex = 16;
             // 
             // mostFrequentLabel
             // 
@@ -124,6 +81,63 @@
             this.allCategoriesLabel.TabIndex = 13;
             this.allCategoriesLabel.Text = "All Categories...";
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel2.AutoSize = true;
+            this.flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel2.BackColor = System.Drawing.SystemColors.Control;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(27, 238);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(0, 0);
+            this.flowLayoutPanel2.TabIndex = 19;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel3.AutoSize = true;
+            this.flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel3.BackColor = System.Drawing.SystemColors.Control;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(27, 458);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(0, 0);
+            this.flowLayoutPanel3.TabIndex = 20;
+            // 
+            // fullPageflowLayoutPanel
+            // 
+            this.fullPageflowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.fullPageflowLayoutPanel.AutoSize = true;
+            this.fullPageflowLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.fullPageflowLayoutPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.fullPageflowLayoutPanel.Location = new System.Drawing.Point(3, 3);
+            this.fullPageflowLayoutPanel.Name = "fullPageflowLayoutPanel";
+            this.fullPageflowLayoutPanel.Size = new System.Drawing.Size(0, 0);
+            this.fullPageflowLayoutPanel.TabIndex = 21;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoScroll = true;
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.fullPageflowLayoutPanel);
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
+            this.panel1.Controls.Add(this.flowLayoutPanel2);
+            this.panel1.Controls.Add(this.flowLayoutPanel3);
+            this.panel1.Controls.Add(this.mostFrequentLabel);
+            this.panel1.Controls.Add(this.machesLabel);
+            this.panel1.Controls.Add(this.allCategoriesLabel);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(109, 640);
+            this.panel1.TabIndex = 18;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // SearchPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,7 +147,7 @@
             this.BackColor = System.Drawing.Color.LightGreen;
             this.Controls.Add(this.panel1);
             this.Name = "SearchPage";
-            this.Size = new System.Drawing.Size(529, 646);
+            this.Size = new System.Drawing.Size(115, 646);
             this.Load += new System.EventHandler(this.SearchFormTest_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -142,12 +156,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Listing matchesList;
-        private Listing allCategoriesList;
         private System.Windows.Forms.Label mostFrequentLabel;
         private System.Windows.Forms.Label machesLabel;
         private System.Windows.Forms.Label allCategoriesLabel;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel fullPageflowLayoutPanel;
+        private System.Windows.Forms.Panel panel1;
     }
 }

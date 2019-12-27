@@ -23,8 +23,25 @@ namespace itHappens.UIs.Common
             {
                 flowLayoutPanel1.Controls.Add(new Common.CategoryMiniBox());
             }
+            for (int i = 0; i < 20; i++)
+            {
+                flowLayoutPanel2.Controls.Add(new Common.CategoryMiniBox());
+            }
 
-            
+            for (int i = 0; i < 20; i++)
+            {
+                flowLayoutPanel3.Controls.Add(new Common.EventMiniView());
+            }
+
+            fullPageflowLayoutPanel.Controls.Add(mostFrequentLabel);
+            fullPageflowLayoutPanel.Controls.Add(flowLayoutPanel1);
+            fullPageflowLayoutPanel.SetFlowBreak(flowLayoutPanel1, true);
+            fullPageflowLayoutPanel.Controls.Add(allCategoriesLabel);
+            fullPageflowLayoutPanel.Controls.Add(flowLayoutPanel2);
+            fullPageflowLayoutPanel.SetFlowBreak(flowLayoutPanel2, true);
+            fullPageflowLayoutPanel.Controls.Add(machesLabel);
+            fullPageflowLayoutPanel.Controls.Add(flowLayoutPanel3);
+            fullPageflowLayoutPanel.SetFlowBreak(flowLayoutPanel3, true);
 
         }
 
