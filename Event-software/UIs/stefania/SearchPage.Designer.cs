@@ -70,6 +70,7 @@
             this.machesLabel.Size = new System.Drawing.Size(84, 13);
             this.machesLabel.TabIndex = 14;
             this.machesLabel.Text = "Matches";
+            this.machesLabel.Click += new System.EventHandler(this.machesLabel_Click);
             // 
             // allCategoriesLabel
             // 

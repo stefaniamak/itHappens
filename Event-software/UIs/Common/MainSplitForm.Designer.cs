@@ -170,7 +170,7 @@
             this.searchToolStripMenuItem,
             this.eventsProfileToolStripMenuItem});
             this.stefaniaToolStripMenuItem.Name = "stefaniaToolStripMenuItem";
-            this.stefaniaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stefaniaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.stefaniaToolStripMenuItem.Text = "Andreas";
             // 
             // mainToolStripMenuItem
@@ -201,7 +201,7 @@
             this.signUpToolStripMenuItem,
             this.createEventToolStripMenuItem});
             this.annaToolStripMenuItem.Name = "annaToolStripMenuItem";
-            this.annaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.annaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.annaToolStripMenuItem.Text = "Anna";
             // 
             // logInToolStripMenuItem
@@ -232,7 +232,7 @@
             this.madeForYouToolStripMenuItem,
             this.settingsToolStripMenuItem});
             this.valentinaToolStripMenuItem.Name = "valentinaToolStripMenuItem";
-            this.valentinaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.valentinaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.valentinaToolStripMenuItem.Text = "Valentina";
             // 
             // listToolStripMenuItem
@@ -262,7 +262,7 @@
             this.mainPageToolStripMenuItem,
             this.searchPageToolStripMenuItem});
             this.stefaniaToolStripMenuItem1.Name = "stefaniaToolStripMenuItem1";
-            this.stefaniaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.stefaniaToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
             this.stefaniaToolStripMenuItem1.Text = "Stefania";
             // 
             // mainPageToolStripMenuItem
@@ -295,7 +295,7 @@
             this.rightSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.rightSplitContainer.Panel2.Controls.Add(this.splitContainer1);
             this.rightSplitContainer.Size = new System.Drawing.Size(738, 556);
-            this.rightSplitContainer.SplitterDistance = 609;
+            this.rightSplitContainer.SplitterDistance = 536;
             this.rightSplitContainer.TabIndex = 0;
             // 
             // splitContainer1
@@ -318,7 +318,7 @@
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Cyan;
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(131, 664);
+            this.splitContainer1.Size = new System.Drawing.Size(204, 664);
             this.splitContainer1.SplitterDistance = 218;
             this.splitContainer1.TabIndex = 6;
             // 

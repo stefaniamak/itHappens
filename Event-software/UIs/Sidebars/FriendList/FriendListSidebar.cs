@@ -15,6 +15,15 @@ namespace itHappens.UIs.Sidebars
         public FriendListSidebar()
         {
             InitializeComponent();
+            for (int i = 0; i < 10; i++)
+            {
+                var friendMiniView = new FriendList.FriendListMini();
+                friendListsFlowLayoutPanel.Controls.Add(friendMiniView);
+                /*
+                friendMiniView.Anchor = (AnchorStyles.Right | AnchorStyles.Left);
+                friendListsFlowLayoutPanel.SetFlowBreak(friendMiniView, true);
+                */
+            }
         }
     }
 }
