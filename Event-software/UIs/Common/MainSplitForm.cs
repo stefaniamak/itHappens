@@ -19,6 +19,10 @@ namespace itHappens.UIs.Common
         Panel leftPanel;
         Panel middlePanel;
         Panel rightpanel;
+        Panel leftTopPanel;
+        Panel leftMiddlePanel;
+        Panel rightTopPanel;
+        Panel rightBottomPanel;
 
         public MainSplitForm()
         {
@@ -26,6 +30,10 @@ namespace itHappens.UIs.Common
             leftPanel = leftSplitContainer.Panel1;
             middlePanel = rightSplitContainer.Panel1;
             rightpanel = rightSplitContainer.Panel2;
+            leftTopPanel = splitContainer3.Panel1;
+            leftMiddlePanel = splitContainer3.Panel2;
+            rightTopPanel = splitContainer1.Panel1;
+            rightBottomPanel = splitContainer1.Panel2;
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -52,20 +60,45 @@ namespace itHappens.UIs.Common
         }
         */
 
-        public void addPageToMiddlePanel()
+
+        public void addSidebarUpcomingEvents()
         {
-            
+            var upcomingEventsSidebar = new Sidebars.UpcomingEventsSidebar();
+            leftTopPanel.Controls.Add(upcomingEventsSidebar);
+            upcomingEventsSidebar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            upcomingEventsSidebar.Dock = DockStyle.Fill;
+        }
+
+        public void addSidebarLists()
+        {
+            var listsSidebar = new Sidebars.ListsSidebar();
+            leftMiddlePanel.Controls.Add(listsSidebar);
+            listsSidebar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            listsSidebar.Dock = DockStyle.Fill;
+        }
+
+        public void addSidebarProfile()
+        {
+            var Profileidebar = new Sidebars.ProfileSidebar();
+            rightTopPanel.Controls.Add(Profileidebar);
+            Profileidebar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            Profileidebar.Dock = DockStyle.Fill;
+        }
+
+        public void addSidebarFriendList()
+        {
+            var FriendListSidebar = new Sidebars.FriendListSidebar();
+            rightBottomPanel.Controls.Add(FriendListSidebar);
+            FriendListSidebar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            FriendListSidebar.Dock = DockStyle.Fill;
         }
 
         private void TestSplitForm_Load(object sender, EventArgs e)
         {
-            
-            //var searchForm = new SearchFormTest();
-            //middlePanel.Controls.Add(searchForm);
-            //searchForm.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            //searchForm.Dock = DockStyle.Fill;
-            
-
+            addSidebarUpcomingEvents();
+            addSidebarLists();
+            addSidebarProfile();
+            addSidebarFriendList();
         }
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
@@ -157,29 +190,57 @@ namespace itHappens.UIs.Common
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             middlePanel.Controls.Clear();
             var middlePage = new valentina.SettingsPage();
             middlePanel.Controls.Add(middlePage);
             middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             middlePage.Dock = DockStyle.Fill;
+            
         }
 
         private void mainPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            middlePanel.Controls.Clear();
-            var middlePage = new stefania.MainPage();
-            middlePanel.Controls.Add(middlePage);
-            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            middlePage.Dock = DockStyle.Fill;
+            openHostForMainAndSearchPage();
+            Controllers.UIController.openPage("main");
+            //stefania.CommonSearchTextPage.
+
         }
 
         private void searchPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            middlePanel.Controls.Clear();
-            var middlePage = new SearchPage();
-            middlePanel.Controls.Add(middlePage);
-            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            middlePage.Dock = DockStyle.Fill;
+            openHostForMainAndSearchPage();
+            Controllers.UIController.openPage("search");
         }
+
+        private void openHostForMainAndSearchPage()
+        {
+            middlePanel.Controls.Clear();
+            var hostPage = new stefania.CommonSearchTextPage();
+
+            middlePanel.Controls.Add(hostPage);
+            hostPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            hostPage.Dock = DockStyle.Fill;
+        }
+        /*
+        private void chosePageToHost(string page)
+        {
+            if (string.Equals(page, "main"))
+            {
+                //stTheMainPage();
+            }
+            else if (string.Equals(page, "search"))
+            {
+                //stTheSearchPage();
+            }
+        }
+        */
+        /*
+        public void SetMiddlePage(UserControl page)
+        {
+            middlePanel.Controls.Clear();
+            middlePanel.Controls.Add(page);
+        }
+        */
     }
 }
