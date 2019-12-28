@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace itHappens.UIs.anna
+namespace itHappens.UIs.Sidebars
 {
-    public partial class LogInPage : UserControl
+    public partial class ProfileSidebar : UserControl
     {
-        public LogInPage()
+        public ProfileSidebar()
         {
             InitializeComponent();
         }
-
-        
     }
 }

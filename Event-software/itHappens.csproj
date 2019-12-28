@@ -152,7 +152,7 @@
     <Compile Include="Classes\EventList.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\Venue.cs" />
-    <Compile Include="Controllers\InterfaceController.cs" />
+    <Compile Include="Controllers\UIController.cs" />
     <Compile Include="DBs\TestDataClass.cs" />
     <Compile Include="Db_connector.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -222,6 +222,36 @@
     </Compile>
     <Compile Include="UIs\Common\CategoryMiniBox.Designer.cs">
       <DependentUpon>CategoryMiniBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Sidebars\UpcomingEventsSidebar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Sidebars\UpcomingEventsSidebar.Designer.cs">
+      <DependentUpon>UpcomingEventsSidebar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Sidebars\ListsSidebar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Sidebars\ListsSidebar.Designer.cs">
+      <DependentUpon>ListsSidebar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Sidebars\ProfileSidebar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Sidebars\ProfileSidebar.Designer.cs">
+      <DependentUpon>ProfileSidebar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Sidebars\FriendListSidebar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Sidebars\FriendListSidebar.Designer.cs">
+      <DependentUpon>FriendListSidebar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\stefania\CommonSearchTextPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\stefania\CommonSearchTextPage.Designer.cs">
+      <DependentUpon>CommonSearchTextPage.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\valentina\ListPage.cs">
       <SubType>UserControl</SubType>
@@ -371,6 +401,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Common\MainSplitForm.resx">
       <DependentUpon>MainSplitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Sidebars\FriendListSidebar.resx">
+      <DependentUpon>FriendListSidebar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Sidebars\listsSidebar.resx">
+      <DependentUpon>ListsSidebar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Sidebars\ProfileSidebar.resx">
+      <DependentUpon>ProfileSidebar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Sidebars\UpcomingEventsSidebar.resx">
+      <DependentUpon>UpcomingEventsSidebar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\stefania\CommonSearchTextPage.resx">
+      <DependentUpon>CommonSearchTextPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\valentina\ListPage.resx">
       <DependentUpon>ListPage.cs</DependentUpon>
