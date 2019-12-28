@@ -21,5 +21,7 @@ namespace itHappens.UIs
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
         }
+
+        
     }
 }
