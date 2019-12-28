@@ -47,11 +47,12 @@
             this.UsernameLabel.BackColor = System.Drawing.Color.DimGray;
             this.UsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.UsernameLabel.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.UsernameLabel.Location = new System.Drawing.Point(82, 157);
+            this.UsernameLabel.Location = new System.Drawing.Point(280, 151);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(111, 24);
             this.UsernameLabel.TabIndex = 0;
             this.UsernameLabel.Text = "Username:";
+            this.UsernameLabel.Click += new System.EventHandler(this.UsernameLabel_Click);
             // 
             // PasswordLabel
             // 
@@ -59,51 +60,55 @@
             this.PasswordLabel.BackColor = System.Drawing.Color.DimGray;
             this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.PasswordLabel.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.PasswordLabel.Location = new System.Drawing.Point(82, 234);
+            this.PasswordLabel.Location = new System.Drawing.Point(280, 228);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(106, 24);
             this.PasswordLabel.TabIndex = 1;
             this.PasswordLabel.Text = "Password:";
+            this.PasswordLabel.Click += new System.EventHandler(this.PasswordLabel_Click);
             // 
             // UsernameTextBox
             // 
             this.UsernameTextBox.BackColor = System.Drawing.Color.LightGray;
             this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UsernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.UsernameTextBox.Location = new System.Drawing.Point(82, 186);
+            this.UsernameTextBox.Location = new System.Drawing.Point(280, 180);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(250, 26);
             this.UsernameTextBox.TabIndex = 2;
+            this.UsernameTextBox.TextChanged += new System.EventHandler(this.UsernameTextBox_TextChanged);
             // 
             // PasswordTextBox
             // 
             this.PasswordTextBox.BackColor = System.Drawing.Color.LightGray;
             this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.PasswordTextBox.Location = new System.Drawing.Point(82, 263);
+            this.PasswordTextBox.Location = new System.Drawing.Point(280, 257);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(250, 26);
             this.PasswordTextBox.TabIndex = 3;
             this.PasswordTextBox.UseSystemPasswordChar = true;
+            this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
             this.PasswordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PasswordTextBox_KeyPress);
             // 
             // createAccountLabel
             // 
             this.createAccountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.createAccountLabel.Location = new System.Drawing.Point(79, 482);
+            this.createAccountLabel.Location = new System.Drawing.Point(277, 476);
             this.createAccountLabel.Name = "createAccountLabel";
             this.createAccountLabel.Size = new System.Drawing.Size(250, 19);
             this.createAccountLabel.TabIndex = 4;
             this.createAccountLabel.TabStop = true;
             this.createAccountLabel.Text = "Create new account";
             this.createAccountLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.createAccountLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.createAccountLabel_LinkClicked);
             // 
             // LoginButton
             // 
             this.LoginButton.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.LoginButton.Location = new System.Drawing.Point(82, 335);
+            this.LoginButton.Location = new System.Drawing.Point(280, 329);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(250, 37);
             this.LoginButton.TabIndex = 5;
@@ -115,7 +120,7 @@
             // 
             this.GooglePictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GooglePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("GooglePictureBox.Image")));
-            this.GooglePictureBox.Location = new System.Drawing.Point(82, 413);
+            this.GooglePictureBox.Location = new System.Drawing.Point(280, 407);
             this.GooglePictureBox.Name = "GooglePictureBox";
             this.GooglePictureBox.Size = new System.Drawing.Size(250, 37);
             this.GooglePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,14 +132,15 @@
             // 
             this.UserPictureBox.BackColor = System.Drawing.Color.DimGray;
             this.UserPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("UserPictureBox.Image")));
-            this.UserPictureBox.Location = new System.Drawing.Point(165, 35);
+            this.UserPictureBox.Location = new System.Drawing.Point(363, 29);
             this.UserPictureBox.Name = "UserPictureBox";
             this.UserPictureBox.Size = new System.Drawing.Size(104, 103);
             this.UserPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.UserPictureBox.TabIndex = 7;
             this.UserPictureBox.TabStop = false;
+            
             // 
-            // LogEvents
+            // LoginForm
             // 
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(839, 528);
@@ -146,7 +152,7 @@
             this.Controls.Add(this.UsernameTextBox);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.UsernameLabel);
-            this.Name = "LogEvents";
+            this.Name = "LoginForm";
             this.Text = "itHappened";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GooglePictureBox)).EndInit();
