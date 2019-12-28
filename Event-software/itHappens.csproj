@@ -501,6 +501,7 @@
   <ItemGroup>
     <Content Include="Classes\instructionsClassFolder.txt" />
     <Content Include="Controllers\instructionsControllersFolder.txt" />
+    <Content Include="DBs\it_happens.sql" />
     <Content Include="Images\signInGoogle.png" />
     <Content Include="UIs\instructionsUIsFolder.txt" />
   </ItemGroup>
