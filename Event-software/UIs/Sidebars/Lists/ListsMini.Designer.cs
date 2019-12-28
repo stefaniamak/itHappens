@@ -1,6 +1,6 @@
-﻿namespace itHappens.UIs.Sidebars
+﻿namespace itHappens.UIs.Sidebars.Lists
 {
-    partial class ListsSidebar
+    partial class ListsMini
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,25 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.title = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // title
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(68, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Lists";
+            this.title.AutoSize = true;
+            this.title.Location = new System.Drawing.Point(12, 9);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(27, 13);
+            this.title.TabIndex = 0;
+            this.title.Text = "Title";
             // 
-            // ListsSidebar
+            // ListsMini
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RoyalBlue;
-            this.Controls.Add(this.label1);
-            this.Name = "ListsSidebar";
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.title);
+            this.Name = "ListsMini";
+            this.Size = new System.Drawing.Size(129, 32);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -54,6 +55,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label title;
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace itHappens.UIs.Sidebars
+namespace itHappens.UIs.Common
 {
-    public partial class UpcomingEventsSidebar : UserControl
+    public partial class HorizontalListing : UserControl
     {
-        public UpcomingEventsSidebar()
+        public HorizontalListing()
         {
             InitializeComponent();
         }
