@@ -34,16 +34,18 @@
             // title
             // 
             this.title.AutoSize = true;
-            this.title.Location = new System.Drawing.Point(12, 9);
+            this.title.Location = new System.Drawing.Point(3, 0);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(27, 13);
             this.title.TabIndex = 0;
             this.title.Text = "Title";
+            this.title.Click += new System.EventHandler(this.title_Click);
             // 
             // ListsMini
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.title);
             this.Name = "ListsMini";

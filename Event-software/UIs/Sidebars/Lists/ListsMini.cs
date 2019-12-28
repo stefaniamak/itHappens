@@ -16,5 +16,10 @@ namespace itHappens.UIs.Sidebars.Lists
         {
             InitializeComponent();
         }
+
+        private void title_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

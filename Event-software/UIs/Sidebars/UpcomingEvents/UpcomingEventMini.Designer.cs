@@ -32,14 +32,18 @@
             this.month = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.Label();
             this.location = new System.Windows.Forms.Label();
-            this.upcomingEventDetails = new System.Windows.Forms.Panel();
-            this.upcomingEventDetails.SuspendLayout();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // eventName
             // 
             this.eventName.AutoSize = true;
-            this.eventName.Location = new System.Drawing.Point(7, 10);
+            this.eventName.Location = new System.Drawing.Point(3, 0);
             this.eventName.Name = "eventName";
             this.eventName.Size = new System.Drawing.Size(66, 13);
             this.eventName.TabIndex = 0;
@@ -49,7 +53,7 @@
             // month
             // 
             this.month.AutoSize = true;
-            this.month.Location = new System.Drawing.Point(89, 10);
+            this.month.Location = new System.Drawing.Point(3, 0);
             this.month.Name = "month";
             this.month.Size = new System.Drawing.Size(37, 13);
             this.month.TabIndex = 1;
@@ -59,7 +63,7 @@
             // date
             // 
             this.date.AutoSize = true;
-            this.date.Location = new System.Drawing.Point(98, 33);
+            this.date.Location = new System.Drawing.Point(3, 13);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(28, 13);
             this.date.TabIndex = 2;
@@ -69,38 +73,68 @@
             // location
             // 
             this.location.AutoSize = true;
-            this.location.Location = new System.Drawing.Point(7, 33);
+            this.location.Location = new System.Drawing.Point(3, 13);
             this.location.Name = "location";
             this.location.Size = new System.Drawing.Size(44, 13);
             this.location.TabIndex = 3;
             this.location.Text = "location";
             this.location.Click += new System.EventHandler(this.location_Click);
             // 
-            // upcomingEventDetails
+            // flowLayoutPanel1
             // 
-            this.upcomingEventDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.Controls.Add(this.eventName);
+            this.flowLayoutPanel1.Controls.Add(this.location);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(72, 26);
+            this.flowLayoutPanel1.TabIndex = 4;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.flowLayoutPanel2.AutoSize = true;
+            this.flowLayoutPanel2.Controls.Add(this.month);
+            this.flowLayoutPanel2.Controls.Add(this.date);
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(81, 3);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(43, 26);
+            this.flowLayoutPanel2.TabIndex = 5;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.upcomingEventDetails.Controls.Add(this.location);
-            this.upcomingEventDetails.Controls.Add(this.date);
-            this.upcomingEventDetails.Controls.Add(this.month);
-            this.upcomingEventDetails.Controls.Add(this.eventName);
-            this.upcomingEventDetails.Location = new System.Drawing.Point(0, 0);
-            this.upcomingEventDetails.Name = "upcomingEventDetails";
-            this.upcomingEventDetails.Size = new System.Drawing.Size(138, 55);
-            this.upcomingEventDetails.TabIndex = 4;
+            this.flowLayoutPanel3.AutoSize = true;
+            this.flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel3.Controls.Add(this.flowLayoutPanel1);
+            this.flowLayoutPanel3.Controls.Add(this.flowLayoutPanel2);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(127, 32);
+            this.flowLayoutPanel3.TabIndex = 4;
             // 
             // UpcomingEventMini
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.Controls.Add(this.upcomingEventDetails);
+            this.Controls.Add(this.flowLayoutPanel3);
             this.Name = "UpcomingEventMini";
-            this.Size = new System.Drawing.Size(138, 55);
-            this.upcomingEventDetails.ResumeLayout(false);
-            this.upcomingEventDetails.PerformLayout();
+            this.Size = new System.Drawing.Size(130, 35);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -110,6 +144,8 @@
         private System.Windows.Forms.Label month;
         private System.Windows.Forms.Label date;
         private System.Windows.Forms.Label location;
-        private System.Windows.Forms.Panel upcomingEventDetails;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
     }
 }

@@ -18,8 +18,11 @@ namespace itHappens.UIs.Sidebars
             
             for (int i = 0; i < 10; i++)
             {
-                upcomingEventsFlowLayout.Controls.Add(new UpcomingEvents.UpcomingEventMini());
-                upcomingEventsFlowLayout.SetFlowBreak(upcomingEventsFlowLayout, true);
+                var upevent = new UpcomingEvents.UpcomingEventMini();
+                upcomingEventsFlowLayout.Controls.Add(upevent);
+                upevent
+                upevent.Anchor = (AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+                //upcomingEventsFlowLayout.SetFlowBreak(upcomingEventsFlowLayout, true);
             }
 
             //upcomingEventsFlowLayout.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
@@ -29,6 +32,11 @@ namespace itHappens.UIs.Sidebars
         private void mainFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
         {
             
+        }
+
+        private void title_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

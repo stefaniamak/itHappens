@@ -36,12 +36,14 @@
             // 
             // title
             // 
+            this.title.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.title.AutoSize = true;
-            this.title.Location = new System.Drawing.Point(0, 0);
+            this.title.Location = new System.Drawing.Point(51, 0);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(91, 13);
             this.title.TabIndex = 0;
             this.title.Text = "Upcoming Events";
+            this.title.Click += new System.EventHandler(this.title_Click);
             // 
             // upcomingEventsFlowLayout
             // 
