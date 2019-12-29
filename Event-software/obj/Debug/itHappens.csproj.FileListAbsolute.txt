@@ -301,3 +301,7 @@ G:\Uni\9th Semester\ΑΔΠΟΣΕ\adopse-events\Event-software\obj\Debug\itHappen
 G:\Uni\9th Semester\ΑΔΠΟΣΕ\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.HorizontalListing.resources
 G:\Uni\9th Semester\ΑΔΠΟΣΕ\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.Lists.ListsMini.resources
 G:\Uni\9th Semester\ΑΔΠΟΣΕ\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.FriendList.FriendListMini.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.HorizontalListing.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.FriendList.FriendListMini.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.Lists.ListsMini.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.UpcomingEvents.UpcomingEventMini.resources

@@ -20,8 +20,8 @@ namespace itHappens.UIs.Sidebars
             {
                 var upevent = new UpcomingEvents.UpcomingEventMini();
                 upcomingEventsFlowLayout.Controls.Add(upevent);
-                upevent
-                upevent.Anchor = (AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+                //upevent
+                //upevent.Anchor = (AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
                 //upcomingEventsFlowLayout.SetFlowBreak(upcomingEventsFlowLayout, true);
             }
 
