@@ -67,6 +67,27 @@ namespace itHappens.Controllers
         }
 
 
+        public static void SearchPageFlowLayoutPanels_Load()
+        {
+
+            for (int i = 0; i < 20; i++)
+            {
+                UIs.Common.SearchPage.flowLayoutPanel1.Controls.Add(new UIs.Common.CategoryMiniBox());
+            }
+            for (int i = 0; i < 20; i++)
+            {
+                UIs.Common.SearchPage.flowLayoutPanel2.Controls.Add(new UIs.Common.CategoryMiniBox());
+            }
+
+            for (int i = 0; i < 20; i++)
+            {
+                var eventminiview = new UIs.Common.EventMiniView();
+                eventminiview.Scale(0.55F);
+                UIs.Common.SearchPage.flowLayoutPanel3.Controls.Add(eventminiview);
+            }
+        }
+
+
 
     }
 }
