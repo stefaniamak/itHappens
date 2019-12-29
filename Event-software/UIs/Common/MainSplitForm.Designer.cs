@@ -139,6 +139,7 @@
             this.CreateEvent.TabIndex = 0;
             this.CreateEvent.Text = "Create Event";
             this.CreateEvent.UseVisualStyleBackColor = true;
+            this.CreateEvent.Click += new System.EventHandler(this.CreateEvent_Click);
             // 
             // menuStrip1
             // 
@@ -170,7 +171,7 @@
             this.searchToolStripMenuItem,
             this.eventsProfileToolStripMenuItem});
             this.stefaniaToolStripMenuItem.Name = "stefaniaToolStripMenuItem";
-            this.stefaniaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.stefaniaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.stefaniaToolStripMenuItem.Text = "Andreas";
             // 
             // mainToolStripMenuItem
@@ -201,7 +202,7 @@
             this.signUpToolStripMenuItem,
             this.createEventToolStripMenuItem});
             this.annaToolStripMenuItem.Name = "annaToolStripMenuItem";
-            this.annaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.annaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.annaToolStripMenuItem.Text = "Anna";
             // 
             // logInToolStripMenuItem
@@ -232,7 +233,7 @@
             this.madeForYouToolStripMenuItem,
             this.settingsToolStripMenuItem});
             this.valentinaToolStripMenuItem.Name = "valentinaToolStripMenuItem";
-            this.valentinaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.valentinaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.valentinaToolStripMenuItem.Text = "Valentina";
             // 
             // listToolStripMenuItem
@@ -262,20 +263,20 @@
             this.mainPageToolStripMenuItem,
             this.searchPageToolStripMenuItem});
             this.stefaniaToolStripMenuItem1.Name = "stefaniaToolStripMenuItem1";
-            this.stefaniaToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.stefaniaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.stefaniaToolStripMenuItem1.Text = "Stefania";
             // 
             // mainPageToolStripMenuItem
             // 
             this.mainPageToolStripMenuItem.Name = "mainPageToolStripMenuItem";
-            this.mainPageToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.mainPageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mainPageToolStripMenuItem.Text = "Main page";
             this.mainPageToolStripMenuItem.Click += new System.EventHandler(this.mainPageToolStripMenuItem_Click);
             // 
             // searchPageToolStripMenuItem
             // 
             this.searchPageToolStripMenuItem.Name = "searchPageToolStripMenuItem";
-            this.searchPageToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.searchPageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.searchPageToolStripMenuItem.Text = "Search page";
             this.searchPageToolStripMenuItem.Click += new System.EventHandler(this.searchPageToolStripMenuItem_Click);
             // 

@@ -17,7 +17,7 @@ namespace itHappens.UIs.Common
     {
 
         Panel leftPanel;
-        Panel middlePanel;
+        public static Panel middlePanel;
         Panel rightpanel;
         Panel leftTopPanel;
         Panel leftMiddlePanel;
@@ -201,7 +201,7 @@ namespace itHappens.UIs.Common
 
         private void mainPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openHostForMainAndSearchPage();
+            Controllers.UIController.openHostForMainAndSearchPage();
             Controllers.UIController.openPage("main");
             //stefania.CommonSearchTextPage.
 
@@ -209,32 +209,29 @@ namespace itHappens.UIs.Common
 
         private void searchPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openHostForMainAndSearchPage();
+            Controllers.UIController.openHostForMainAndSearchPage();
             Controllers.UIController.openPage("search");
         }
 
-        private void openHostForMainAndSearchPage()
-        {
-            middlePanel.Controls.Clear();
-            var hostPage = new stefania.CommonSearchTextPage();
+       
 
-            middlePanel.Controls.Add(hostPage);
-            hostPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            hostPage.Dock = DockStyle.Fill;
+        private void CreateEvent_Click(object sender, EventArgs e)
+        {
+
         }
         /*
-        private void chosePageToHost(string page)
-        {
-            if (string.Equals(page, "main"))
-            {
-                //stTheMainPage();
-            }
-            else if (string.Equals(page, "search"))
-            {
-                //stTheSearchPage();
-            }
-        }
-        */
+private void chosePageToHost(string page)
+{
+   if (string.Equals(page, "main"))
+   {
+       //stTheMainPage();
+   }
+   else if (string.Equals(page, "search"))
+   {
+       //stTheSearchPage();
+   }
+}
+*/
         /*
         public void SetMiddlePage(UserControl page)
         {
