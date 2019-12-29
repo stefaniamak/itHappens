@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace itHappens.UIs.Sidebars
+namespace itHappens.UIs.Sidebars.Lists
 {
-    public partial class ListsSidebar : UserControl
+    public partial class ListsMini : UserControl
     {
-        public ListsSidebar()
+        public ListsMini()
         {
             InitializeComponent();
+        }
+
+        private void title_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

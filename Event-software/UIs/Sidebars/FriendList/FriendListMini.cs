@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace itHappens.UIs.Sidebars
+namespace itHappens.UIs.Sidebars.FriendList
 {
-    public partial class FriendListSidebar : UserControl
+    public partial class FriendListMini : UserControl
     {
-        public FriendListSidebar()
+        public FriendListMini()
         {
             InitializeComponent();
         }

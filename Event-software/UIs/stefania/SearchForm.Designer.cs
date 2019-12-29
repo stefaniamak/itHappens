@@ -33,9 +33,9 @@
             this.mostFrequentLabel = new System.Windows.Forms.Label();
             this.allCategoriesLabel = new System.Windows.Forms.Label();
             this.machesLabel = new System.Windows.Forms.Label();
-            this.matchesList = new itHappens.UIs.Common.Listing();
-            this.allCategoriesList = new itHappens.UIs.Common.Listing();
-            this.mostFrequentList = new itHappens.UIs.Common.Listing();
+            this.matchesList = new itHappens.UIs.Common.HorizontalListing();
+            this.allCategoriesList = new itHappens.UIs.Common.HorizontalListing();
+            this.mostFrequentList = new itHappens.UIs.Common.HorizontalListing();
             this.panel1 = new System.Windows.Forms.Panel();
             this.allCategoriesFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
@@ -177,9 +177,9 @@
         private System.Windows.Forms.Label mostFrequentLabel;
         private System.Windows.Forms.Label allCategoriesLabel;
         private System.Windows.Forms.Label machesLabel;
-        private Common.Listing mostFrequentList;
-        private Common.Listing allCategoriesList;
-        private Common.Listing matchesList;
+        private Common.HorizontalListing mostFrequentList;
+        private Common.HorizontalListing allCategoriesList;
+        private Common.HorizontalListing matchesList;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel allCategoriesFlowPanel;
     }

@@ -223,32 +223,58 @@
     <Compile Include="UIs\Common\CategoryMiniBox.Designer.cs">
       <DependentUpon>CategoryMiniBox.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="UIs\Common\HorizontalListing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UIs\Common\OvalPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UIs\Sidebars\UpcomingEventsSidebar.cs">
+
+    <Compile Include="UIs\Common\HorizontalListing.Designer.cs">
+      <DependentUpon>HorizontalListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Sidebars\FriendList\FriendListMini.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\Sidebars\UpcomingEventsSidebar.Designer.cs">
+    <Compile Include="UIs\Sidebars\FriendList\FriendListMini.Designer.cs">
+      <DependentUpon>FriendListMini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Sidebars\Lists\ListsMini.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Sidebars\Lists\ListsMini.Designer.cs">
+      <DependentUpon>ListsMini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Sidebars\UpcomingEvents\UpcomingEventsSidebar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Sidebars\UpcomingEvents\UpcomingEventsSidebar.Designer.cs">
       <DependentUpon>UpcomingEventsSidebar.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Sidebars\ListsSidebar.cs">
+    <Compile Include="UIs\Sidebars\Lists\ListsSidebar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\Sidebars\ListsSidebar.Designer.cs">
+    <Compile Include="UIs\Sidebars\Lists\ListsSidebar.Designer.cs">
       <DependentUpon>ListsSidebar.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Sidebars\ProfileSidebar.cs">
+    <Compile Include="UIs\Sidebars\Profile\ProfileSidebar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\Sidebars\ProfileSidebar.Designer.cs">
+    <Compile Include="UIs\Sidebars\Profile\ProfileSidebar.Designer.cs">
       <DependentUpon>ProfileSidebar.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Sidebars\FriendListSidebar.cs">
+    <Compile Include="UIs\Sidebars\FriendList\FriendListSidebar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\Sidebars\FriendListSidebar.Designer.cs">
+    <Compile Include="UIs\Sidebars\FriendList\FriendListSidebar.Designer.cs">
       <DependentUpon>FriendListSidebar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Sidebars\UpcomingEvents\UpcomingEventMini.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Sidebars\UpcomingEvents\UpcomingEventMini.Designer.cs">
+      <DependentUpon>UpcomingEventMini.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\stefania\CommonSearchTextPage.cs">
       <SubType>UserControl</SubType>
@@ -396,6 +422,9 @@
     <EmbeddedResource Include="UIs\Common\Carousel.resx">
       <DependentUpon>Carousel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Common\HorizontalListing.resx">
+      <DependentUpon>HorizontalListing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIs\Common\Listing.resx">
       <DependentUpon>Listing.cs</DependentUpon>
     </EmbeddedResource>
@@ -405,16 +434,25 @@
     <EmbeddedResource Include="UIs\Common\MainSplitForm.resx">
       <DependentUpon>MainSplitForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\Sidebars\FriendListSidebar.resx">
+    <EmbeddedResource Include="UIs\Sidebars\FriendList\FriendListMini.resx">
+      <DependentUpon>FriendListMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Sidebars\FriendList\FriendListSidebar.resx">
       <DependentUpon>FriendListSidebar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\Sidebars\listsSidebar.resx">
+    <EmbeddedResource Include="UIs\Sidebars\Lists\ListsMini.resx">
+      <DependentUpon>ListsMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Sidebars\Lists\listsSidebar.resx">
       <DependentUpon>ListsSidebar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\Sidebars\ProfileSidebar.resx">
+    <EmbeddedResource Include="UIs\Sidebars\Profile\ProfileSidebar.resx">
       <DependentUpon>ProfileSidebar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\Sidebars\UpcomingEventsSidebar.resx">
+    <EmbeddedResource Include="UIs\Sidebars\UpcomingEvents\UpcomingEventMini.resx">
+      <DependentUpon>UpcomingEventMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Sidebars\UpcomingEvents\UpcomingEventsSidebar.resx">
       <DependentUpon>UpcomingEventsSidebar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\stefania\CommonSearchTextPage.resx">

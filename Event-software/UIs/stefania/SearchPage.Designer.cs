@@ -35,8 +35,7 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.fullPageflowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.fullPageflowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -46,16 +45,16 @@
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(53, 61);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 16);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 10);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(84, 10);
             this.flowLayoutPanel1.TabIndex = 18;
             // 
             // mostFrequentLabel
             // 
             this.mostFrequentLabel.AutoSize = true;
-            this.mostFrequentLabel.Location = new System.Drawing.Point(24, 26);
+            this.mostFrequentLabel.Location = new System.Drawing.Point(3, 0);
             this.mostFrequentLabel.Name = "mostFrequentLabel";
             this.mostFrequentLabel.Size = new System.Drawing.Size(84, 13);
             this.mostFrequentLabel.TabIndex = 12;
@@ -66,16 +65,17 @@
             this.machesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.machesLabel.AutoSize = true;
-            this.machesLabel.Location = new System.Drawing.Point(24, 418);
+            this.machesLabel.Location = new System.Drawing.Point(3, 48);
             this.machesLabel.Name = "machesLabel";
-            this.machesLabel.Size = new System.Drawing.Size(48, 13);
+            this.machesLabel.Size = new System.Drawing.Size(84, 13);
             this.machesLabel.TabIndex = 14;
             this.machesLabel.Text = "Matches";
+            this.machesLabel.Click += new System.EventHandler(this.machesLabel_Click);
             // 
             // allCategoriesLabel
             // 
             this.allCategoriesLabel.AutoSize = true;
-            this.allCategoriesLabel.Location = new System.Drawing.Point(27, 207);
+            this.allCategoriesLabel.Location = new System.Drawing.Point(3, 29);
             this.allCategoriesLabel.Name = "allCategoriesLabel";
             this.allCategoriesLabel.Size = new System.Drawing.Size(80, 13);
             this.allCategoriesLabel.TabIndex = 13;
@@ -88,9 +88,9 @@
             this.flowLayoutPanel2.AutoSize = true;
             this.flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel2.BackColor = System.Drawing.SystemColors.Control;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(27, 238);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 45);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(0, 0);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(84, 0);
             this.flowLayoutPanel2.TabIndex = 19;
             // 
             // flowLayoutPanel3
@@ -100,58 +100,43 @@
             this.flowLayoutPanel3.AutoSize = true;
             this.flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel3.BackColor = System.Drawing.SystemColors.Control;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(27, 458);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 64);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(0, 0);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(84, 0);
             this.flowLayoutPanel3.TabIndex = 20;
             // 
             // fullPageflowLayoutPanel
             // 
-            this.fullPageflowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.fullPageflowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fullPageflowLayoutPanel.AutoSize = true;
-            this.fullPageflowLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.fullPageflowLayoutPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.fullPageflowLayoutPanel.Location = new System.Drawing.Point(3, 3);
+            this.fullPageflowLayoutPanel.Controls.Add(this.mostFrequentLabel);
+            this.fullPageflowLayoutPanel.Controls.Add(this.flowLayoutPanel1);
+            this.fullPageflowLayoutPanel.Controls.Add(this.allCategoriesLabel);
+            this.fullPageflowLayoutPanel.Controls.Add(this.flowLayoutPanel2);
+            this.fullPageflowLayoutPanel.Controls.Add(this.machesLabel);
+            this.fullPageflowLayoutPanel.Controls.Add(this.flowLayoutPanel3);
+            this.fullPageflowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.fullPageflowLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.fullPageflowLayoutPanel.Name = "fullPageflowLayoutPanel";
-            this.fullPageflowLayoutPanel.Size = new System.Drawing.Size(0, 0);
+            this.fullPageflowLayoutPanel.Size = new System.Drawing.Size(331, 646);
             this.fullPageflowLayoutPanel.TabIndex = 21;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.AutoScroll = true;
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.Controls.Add(this.fullPageflowLayoutPanel);
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Controls.Add(this.flowLayoutPanel2);
-            this.panel1.Controls.Add(this.flowLayoutPanel3);
-            this.panel1.Controls.Add(this.mostFrequentLabel);
-            this.panel1.Controls.Add(this.machesLabel);
-            this.panel1.Controls.Add(this.allCategoriesLabel);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(109, 640);
-            this.panel1.TabIndex = 18;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // SearchPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightGreen;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.fullPageflowLayoutPanel);
             this.Name = "SearchPage";
-            this.Size = new System.Drawing.Size(115, 646);
+            this.Size = new System.Drawing.Size(331, 646);
             this.Load += new System.EventHandler(this.SearchFormTest_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.fullPageflowLayoutPanel.ResumeLayout(false);
+            this.fullPageflowLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -163,6 +148,5 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel fullPageflowLayoutPanel;
-        private System.Windows.Forms.Panel panel1;
     }
 }

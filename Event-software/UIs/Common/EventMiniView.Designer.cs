@@ -92,7 +92,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Yellow;
             this.Controls.Add(this.eventTableLayout);
-            this.Margin = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.Margin = new System.Windows.Forms.Padding(20);
             this.Name = "EventMiniView";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.Size = new System.Drawing.Size(175, 275);

@@ -1,6 +1,6 @@
-﻿namespace itHappens.UIs.Sidebars
+﻿namespace itHappens.UIs.Sidebars.Lists
 {
-    partial class ProfileSidebar
+    partial class ListsMini
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,18 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.title = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // ProfileSidebar
+            // title
+            // 
+            this.title.AutoSize = true;
+            this.title.Location = new System.Drawing.Point(3, 0);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(27, 13);
+            this.title.TabIndex = 0;
+            this.title.Text = "Title";
+            this.title.Click += new System.EventHandler(this.title_Click);
+            // 
+            // ListsMini
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Aquamarine;
-            this.Name = "ProfileSidebar";
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.title);
+            this.Name = "ListsMini";
+            this.Size = new System.Drawing.Size(129, 32);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label title;
     }
 }

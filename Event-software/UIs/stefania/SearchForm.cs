@@ -24,7 +24,7 @@ namespace itHappens.UIs
             for (int i = 0; i < 20; i++)
             {
                 //allCategoriesList.AddControl(new Common.CategoryMiniBox());
-                allCategoriesList.AddControl(new Common.CategoryMiniBox());
+                //allCategoriesList.AddControl(new Common.CategoryMiniBox());
                 //allCategoriesList.Controls.Add(DataGridLineStyle 5);
                 
             }
