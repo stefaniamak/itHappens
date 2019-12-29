@@ -304,3 +304,4 @@ L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\i
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.FriendList.FriendListMini.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.Lists.ListsMini.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.UpcomingEvents.UpcomingEventMini.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.ListsContentPage.resources
