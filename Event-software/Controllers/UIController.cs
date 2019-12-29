@@ -95,5 +95,120 @@ namespace itHappens.Controllers
             }
         }
 
+        public static void addSidebarFriendList()
+        {
+            var FriendListSidebar = new UIs.Sidebars.FriendListSidebar();
+            UIs.Common.MainSplitForm.rightBottomPanel.Controls.Add(FriendListSidebar);
+            FriendListSidebar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            FriendListSidebar.Dock = DockStyle.Fill;
+        }
+
+        public static void addSidebarUpcomingEvents()
+        {
+            var upcomingEventsSidebar = new UIs.Sidebars.UpcomingEventsSidebar();
+            UIs.Common.MainSplitForm.leftTopPanel.Controls.Add(upcomingEventsSidebar);
+            upcomingEventsSidebar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            upcomingEventsSidebar.Dock = DockStyle.Fill;
+        }
+
+        public static void addSidebarLists()
+        {
+            var listsSidebar = new UIs.Sidebars.ListsSidebar();
+            UIs.Common.MainSplitForm.leftMiddlePanel.Controls.Add(listsSidebar);
+            listsSidebar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            listsSidebar.Dock = DockStyle.Fill;
+        }
+
+        public static void addSidebarProfile()
+        {
+            var Profileidebar = new UIs.Sidebars.ProfileSidebar();
+            UIs.Common.MainSplitForm.rightTopPanel.Controls.Add(Profileidebar);
+            Profileidebar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            Profileidebar.Dock = DockStyle.Fill;
+        }
+
+        public static void mainToolStripMenuItem_MiddlePanel()
+        {
+            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            var middlePage = new UIs.andrea.UserProfilePage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
+            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            middlePage.Dock = DockStyle.Fill;
+        }
+
+        public static void searchToolStripMenuItem_MiddlePanel()
+        {
+            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            var middlePage = new UIs.andrea.VenueProfilePage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
+            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            middlePage.Dock = DockStyle.Fill;
+        }
+
+        public static void eventsProfileToolStripMenuItem_MiddlePanel()
+        {
+            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            var middlePage = new UIs.andrea.EventProfilePage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
+            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            middlePage.Dock = DockStyle.Fill;
+        }
+
+        public static void logInToolStripMenuItem_MiddlePanel()
+        {
+            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            var middlePage = new UIs.anna.LogInPage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
+            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            middlePage.Dock = DockStyle.Fill;
+        }
+
+        public static void signUpToolStripMenuItem_MiddlePanel()
+        {
+            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            var middlePage = new UIs.anna.SignUpPage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
+            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            middlePage.Dock = DockStyle.Fill;
+        }
+
+
+        public static void createEventToolStripMenuItem_MiddlePanel()
+        {
+            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            var middlePage = new UIs.anna.CreateEventPage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
+            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            middlePage.Dock = DockStyle.Fill;
+        }
+
+
+        public static void listToolStripMenuItem_MiddlePanel()
+        {
+            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            var middlePage = new UIs.valentina.ListPage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
+            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            middlePage.Dock = DockStyle.Fill;
+        }
+
+        public static void madeForYouToolStripMenuItem_MiddlePanel()
+        {
+            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            var middlePage = new UIs.valentina.ListsContentPage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
+            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            middlePage.Dock = DockStyle.Fill;
+        }
+
+        public static void settingsToolStripMenuItem_MiddlePanel()
+        {
+            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            var middlePage = new UIs.valentina.SettingsPage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
+            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            middlePage.Dock = DockStyle.Fill;
+        }
+
     }
 }

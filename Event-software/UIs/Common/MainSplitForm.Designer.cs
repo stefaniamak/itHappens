@@ -84,7 +84,6 @@
             this.leftSplitContainer.Panel1.BackColor = System.Drawing.Color.Gold;
             this.leftSplitContainer.Panel1.Controls.Add(this.splitContainer2);
             this.leftSplitContainer.Panel1.Controls.Add(this.menuStrip1);
-            this.leftSplitContainer.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // leftSplitContainer.Panel2
             // 
@@ -150,7 +149,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(157, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // mainInterfaceToolStripMenuItem
             // 
@@ -162,7 +160,6 @@
             this.mainInterfaceToolStripMenuItem.Name = "mainInterfaceToolStripMenuItem";
             this.mainInterfaceToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.mainInterfaceToolStripMenuItem.Text = "Interfaces";
-            this.mainInterfaceToolStripMenuItem.Click += new System.EventHandler(this.mainInterfaceToolStripMenuItem_Click);
             // 
             // stefaniaToolStripMenuItem
             // 
@@ -312,13 +309,11 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Cyan;
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(204, 664);
             this.splitContainer1.SplitterDistance = 218;
             this.splitContainer1.TabIndex = 6;
