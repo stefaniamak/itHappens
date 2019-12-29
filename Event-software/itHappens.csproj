@@ -223,6 +223,9 @@
     <Compile Include="UIs\Common\CategoryMiniBox.Designer.cs">
       <DependentUpon>CategoryMiniBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\Common\OvalPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UIs\Sidebars\UpcomingEventsSidebar.cs">
       <SubType>UserControl</SubType>
     </Compile>
