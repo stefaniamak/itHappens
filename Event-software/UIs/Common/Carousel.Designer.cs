@@ -1,11 +1,11 @@
 ﻿namespace itHappens.UIs.Common
 {
-    partial class Carousel
+    public partial class Carousel
     {
         /// <summary> 
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        public System.ComponentModel.IContainer components = null;
 
         /// <summary> 
         /// Clean up any resources being used.

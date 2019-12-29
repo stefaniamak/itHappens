@@ -16,33 +16,9 @@ namespace itHappens.UIs.stefania
         public CommonSearchTextPage()
         {
             InitializeComponent();
-            //hostTheMainPage();
-            //hostTheSearchPage();
             
         }
 
-        private void hostPanel_Paint(object sender, PaintEventArgs e)
-        {
-            //hostPanel.AddControl(new stefania.MainPage());
-            
-        }
-
-       
-
-        /*
-private void chosePageToHost(string page)
-{
-   hostPanel.Controls.Clear();
-   if(string.Equals(page, "main"))
-   {
-       hostTheMainPage();
-   }
-   else if (string.Equals(page, "search"))
-   {
-       hostTheSearchPage();
-   }
-}
-*/
 
     }
 }

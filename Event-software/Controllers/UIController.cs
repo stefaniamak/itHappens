@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace itHappens.Controllers
 {
     class UIController
@@ -49,6 +50,20 @@ namespace itHappens.Controllers
             UIs.stefania.CommonSearchTextPage.hostPanel.Controls.Add(searchPage);
             searchPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             searchPage.Dock = DockStyle.Fill;
+        }
+
+
+        public static void MainPageTodayEventsAndMadeForYouCarousel_Load()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                UIs.stefania.MainPage.todayEventsCarousel.AddControl(new UIs.Common.EventMiniView());
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                UIs.stefania.MainPage.madeForYouCarusel.AddControl(new UIs.Common.CategoryGroupBox());
+            }
         }
 
 
