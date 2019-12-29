@@ -223,14 +223,12 @@
     <Compile Include="UIs\Common\CategoryMiniBox.Designer.cs">
       <DependentUpon>CategoryMiniBox.cs</DependentUpon>
     </Compile>
-
     <Compile Include="UIs\Common\HorizontalListing.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UIs\Common\OvalPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-
     <Compile Include="UIs\Common\HorizontalListing.Designer.cs">
       <DependentUpon>HorizontalListing.cs</DependentUpon>
     </Compile>
@@ -288,11 +286,11 @@
     <Compile Include="UIs\valentina\ListPage.Designer.cs">
       <DependentUpon>ListPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\valentina\MadeForYouPage.cs">
+    <Compile Include="UIs\valentina\ListsContentPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\valentina\MadeForYouPage.Designer.cs">
-      <DependentUpon>MadeForYouPage.cs</DependentUpon>
+    <Compile Include="UIs\valentina\ListsContentPage.Designer.cs">
+      <DependentUpon>ListsContentPage.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\valentina\SettingsPage.cs">
       <SubType>UserControl</SubType>
@@ -461,8 +459,8 @@
     <EmbeddedResource Include="UIs\valentina\ListPage.resx">
       <DependentUpon>ListPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\valentina\MadeForYouPage.resx">
-      <DependentUpon>MadeForYouPage.cs</DependentUpon>
+    <EmbeddedResource Include="UIs\valentina\ListsContentPage.resx">
+      <DependentUpon>ListsContentPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\valentina\SettingsPage.resx">
       <DependentUpon>SettingsPage.cs</DependentUpon>

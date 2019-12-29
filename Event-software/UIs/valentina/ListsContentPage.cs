@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace itHappens.UIs.valentina
 {
-    public partial class MadeForYouPage : UserControl
+    public partial class ListsContentPage : UserControl
     {
-        public MadeForYouPage()
+        public ListsContentPage()
         {
             InitializeComponent();
         }
@@ -35,6 +35,21 @@ namespace itHappens.UIs.valentina
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ListsContentPage_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                var eventminiview = new Common.EventMiniView();
+              //  eventminiview.Scale(0.55F);
+                EventHolderFlowLayoutPanel.Controls.Add(eventminiview);
+            }
         }
     }
 }

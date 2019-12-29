@@ -182,7 +182,7 @@ namespace itHappens.UIs.Common
         private void madeForYouToolStripMenuItem_Click(object sender, EventArgs e)
         {
             middlePanel.Controls.Clear();
-            var middlePage = new valentina.MadeForYouPage();
+            var middlePage = new stefania.MainPage();
             middlePanel.Controls.Add(middlePage);
             middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             middlePage.Dock = DockStyle.Fill;
