@@ -14,11 +14,11 @@ namespace itHappens.Controllers
             
             if (string.Equals(page, "main"))
             {
-                UIs.stefania.CommonSearchTextPage.hostTheMainPage();
+                hostTheMainPage();
             }
             else if (string.Equals(page, "search"))
             {
-                UIs.stefania.CommonSearchTextPage.hostTheSearchPage();
+                hostTheSearchPage();
             }
             
         }
@@ -32,6 +32,23 @@ namespace itHappens.Controllers
             UIs.Common.MainSplitForm.middlePanel.Controls.Add(hostPage);
             hostPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             hostPage.Dock = DockStyle.Fill;
+        }
+
+
+        public static void hostTheMainPage()
+        {
+
+            var mainPage = new UIs.stefania.MainPage();
+            UIs.stefania.CommonSearchTextPage.hostPanel.Controls.Add(mainPage);
+            mainPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            mainPage.Dock = DockStyle.Fill;
+        }
+        public static void hostTheSearchPage()
+        {
+            var searchPage = new UIs.Common.SearchPage();
+            UIs.stefania.CommonSearchTextPage.hostPanel.Controls.Add(searchPage);
+            searchPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            searchPage.Dock = DockStyle.Fill;
         }
 
 

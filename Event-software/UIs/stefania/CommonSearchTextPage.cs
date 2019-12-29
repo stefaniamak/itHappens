@@ -27,22 +27,7 @@ namespace itHappens.UIs.stefania
             
         }
 
-        public static void hostTheMainPage()
-        {
-            
-            var mainPage = new stefania.MainPage();
-            hostPanel.Controls.Add(mainPage);
-            mainPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            mainPage.Dock = DockStyle.Fill;
-        }
-        public static void hostTheSearchPage()
-        {
-            var searchPage = new Common.SearchPage();
-            hostPanel.Controls.Add(searchPage);
-            searchPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            searchPage.Dock = DockStyle.Fill;
-        }
-
+       
 
         /*
 private void chosePageToHost(string page)
