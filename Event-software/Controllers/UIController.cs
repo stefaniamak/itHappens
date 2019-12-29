@@ -87,7 +87,13 @@ namespace itHappens.Controllers
             }
         }
 
-
+        public static void AllCategoriesFlowPanel_Load()
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                UIs.SearchForm.allCategoriesFlowPanel.Controls.Add(new UIs.Common.CategoryMiniBox());
+            }
+        }
 
     }
 }
