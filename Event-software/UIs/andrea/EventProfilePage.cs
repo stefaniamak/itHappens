@@ -10,11 +10,42 @@ using System.Windows.Forms;
 
 namespace itHappens.UIs.andrea
 {
-    public partial class EventProfilePage : UserControl
+    public partial class VenueProfilePage : UserControl
     {
-        public EventProfilePage()
+        public VenueProfilePage()
         {
             InitializeComponent();
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dayLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VenueProfilePage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

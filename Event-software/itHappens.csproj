@@ -223,9 +223,14 @@
     <Compile Include="UIs\Common\CategoryMiniBox.Designer.cs">
       <DependentUpon>CategoryMiniBox.cs</DependentUpon>
     </Compile>
+
     <Compile Include="UIs\Common\HorizontalListing.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UIs\Common\OvalPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+
     <Compile Include="UIs\Common\HorizontalListing.Designer.cs">
       <DependentUpon>HorizontalListing.cs</DependentUpon>
     </Compile>
@@ -537,6 +542,7 @@
   <ItemGroup>
     <Content Include="Classes\instructionsClassFolder.txt" />
     <Content Include="Controllers\instructionsControllersFolder.txt" />
+    <Content Include="DBs\it_happens.sql" />
     <Content Include="Images\signInGoogle.png" />
     <Content Include="UIs\instructionsUIsFolder.txt" />
   </ItemGroup>
