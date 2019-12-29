@@ -211,7 +211,6 @@ L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\i
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.CreateEventPage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.LogInPage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.ListPage.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.MadeForYouPage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.SettingsPage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.FriendListSidebar.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.ListsSidebar.resources
@@ -367,3 +366,4 @@ D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.stefania.MainPage
 D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.SearchPage.resources
 D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.ListsContentPage.resources
 D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.UserControl1.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.ListsContentPage.resources
