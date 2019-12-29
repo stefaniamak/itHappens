@@ -112,7 +112,6 @@
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.Text = "MainForm";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
