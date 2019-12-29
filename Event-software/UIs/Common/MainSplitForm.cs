@@ -219,25 +219,6 @@ namespace itHappens.UIs.Common
         {
 
         }
-        /*
-private void chosePageToHost(string page)
-{
-   if (string.Equals(page, "main"))
-   {
-       //stTheMainPage();
-   }
-   else if (string.Equals(page, "search"))
-   {
-       //stTheSearchPage();
-   }
-}
-*/
-        /*
-        public void SetMiddlePage(UserControl page)
-        {
-            middlePanel.Controls.Clear();
-            middlePanel.Controls.Add(page);
-        }
-        */
+        
     }
 }
