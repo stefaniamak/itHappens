@@ -553,6 +553,14 @@
     <Content Include="Controllers\instructionsControllersFolder.txt" />
     <Content Include="DBs\it_happens.sql" />
     <Content Include="Images\signInGoogle.png" />
+    <None Include="Resources\email1.jpg" />
+    <None Include="Resources\email2.jpg" />
+    <None Include="Resources\insert image1.jpg" />
+    <None Include="Resources\LOGOPLSS.png" />
+    <None Include="Resources\pass1.jpg" />
+    <None Include="Resources\pass2.jpg" />
+    <None Include="Resources\user1.jpg" />
+    <None Include="Resources\user2.jpg" />
     <Content Include="UIs\instructionsUIsFolder.txt" />
   </ItemGroup>
   <ItemGroup>

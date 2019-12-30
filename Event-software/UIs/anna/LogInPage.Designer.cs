@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogInPage));
-            this.label1 = new System.Windows.Forms.Label();
             this.GooglePictureBox = new System.Windows.Forms.PictureBox();
             this.UserPictureBox = new System.Windows.Forms.PictureBox();
             this.LoginButton = new System.Windows.Forms.Button();
@@ -41,15 +40,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.GooglePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(283, 237);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "log in";
             // 
             // GooglePictureBox
             // 
@@ -120,7 +110,6 @@
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.BackColor = System.Drawing.Color.DimGray;
             this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.PasswordLabel.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.PasswordLabel.Location = new System.Drawing.Point(171, 221);
@@ -132,7 +121,6 @@
             // UsernameLabel
             // 
             this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.BackColor = System.Drawing.Color.DimGray;
             this.UsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.UsernameLabel.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.UsernameLabel.Location = new System.Drawing.Point(171, 144);
@@ -153,7 +141,6 @@
             this.Controls.Add(this.UsernameTextBox);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.UsernameLabel);
-            this.Controls.Add(this.label1);
             this.Name = "LogInPage";
             this.Size = new System.Drawing.Size(650, 547);
             ((System.ComponentModel.ISupportInitialize)(this.GooglePictureBox)).EndInit();
@@ -164,8 +151,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox GooglePictureBox;
         private System.Windows.Forms.PictureBox UserPictureBox;
         private System.Windows.Forms.Button LoginButton;
