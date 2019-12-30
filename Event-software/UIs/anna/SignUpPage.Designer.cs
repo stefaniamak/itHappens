@@ -112,6 +112,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackgroundImage = global::itHappens.Properties.Resources.pass1;
             this.pictureBox4.Location = new System.Drawing.Point(51, 161);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(30, 30);
@@ -120,6 +121,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackgroundImage = global::itHappens.Properties.Resources.email1;
             this.pictureBox3.Location = new System.Drawing.Point(51, 217);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 30);
@@ -128,6 +130,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackgroundImage = global::itHappens.Properties.Resources.user1;
             this.pictureBox2.Location = new System.Drawing.Point(51, 102);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 30);
@@ -136,6 +139,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::itHappens.Properties.Resources.LOGOPLSS;
             this.pictureBox1.Location = new System.Drawing.Point(151, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(76, 65);
