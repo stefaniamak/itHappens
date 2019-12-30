@@ -232,6 +232,12 @@
     <Compile Include="UIs\Common\HorizontalListing.Designer.cs">
       <DependentUpon>HorizontalListing.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\Common\ListMiniBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Common\ListMiniBox.Designer.cs">
+      <DependentUpon>ListMiniBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\Sidebars\FriendList\FriendListMini.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -428,6 +434,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Common\CategoryMiniBox.resx">
       <DependentUpon>CategoryMiniBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Common\ListMiniBox.resx">
+      <DependentUpon>ListMiniBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Common\MainSplitForm.resx">
       <DependentUpon>MainSplitForm.cs</DependentUpon>

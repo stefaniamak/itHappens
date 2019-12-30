@@ -61,7 +61,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.ListsContentTitle);
             this.Controls.Add(this.EventHolderFlowLayoutPanel);
             this.Name = "ListsContentPage";

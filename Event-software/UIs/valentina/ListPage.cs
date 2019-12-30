@@ -21,5 +21,15 @@ namespace itHappens.UIs.valentina
         {
 
         }
+
+        private void ListPage_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                var listminibox = new Common.ListMiniBox();
+                //  eventminiview.Scale(0.55F);
+                ListsFlowLayoutPanel.Controls.Add(listminibox);
+            }
+        }
     }
 }
