@@ -17,22 +17,12 @@ namespace itHappens.UIs.stefania
             InitializeComponent();
         }
 
+
         private void todayEventsCarousel_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                todayEventsCarousel.AddControl(new Common.EventMiniView());
-            }
-
-            for (int i = 0; i < 5; i++)
-            {
-                madeForYouCarusel.AddControl(new Common.CategoryGroupBox());
-            }
+            Controllers.UIController.MainPageTodayEventsAndMadeForYouCarousel_Load();
         }
 
-        private void MainPage_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
