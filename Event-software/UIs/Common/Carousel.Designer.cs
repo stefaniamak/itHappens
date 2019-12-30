@@ -1,11 +1,11 @@
 ﻿namespace itHappens.UIs.Common
 {
-    partial class Carousel
+    public partial class Carousel
     {
         /// <summary> 
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        public System.ComponentModel.IContainer components = null;
 
         /// <summary> 
         /// Clean up any resources being used.
@@ -53,7 +53,6 @@
             this.Name = "Carousel";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.Size = new System.Drawing.Size(902, 279);
-            this.Load += new System.EventHandler(this.UserControl1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

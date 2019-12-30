@@ -15,12 +15,7 @@ namespace itHappens.UIs.Common
         public Carousel()
         {
             InitializeComponent();
-        }
-
-        private void UserControl1_Load(object sender, EventArgs e)
-        {
-
-        }
+        }      
 
         public void AddControl(UserControl control)
         {

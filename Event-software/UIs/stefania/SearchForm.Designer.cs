@@ -37,7 +37,7 @@
             this.allCategoriesList = new itHappens.UIs.Common.HorizontalListing();
             this.mostFrequentList = new itHappens.UIs.Common.HorizontalListing();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.allCategoriesFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            allCategoriesFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,7 +131,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.Controls.Add(this.allCategoriesFlowPanel);
+            this.panel1.Controls.Add(allCategoriesFlowPanel);
             this.panel1.Controls.Add(this.usersLocationLabel);
             this.panel1.Controls.Add(this.searchTextBox);
             this.panel1.Controls.Add(this.mostFrequentLabel);
@@ -147,14 +147,14 @@
             // 
             // allCategoriesFlowPanel
             // 
-            this.allCategoriesFlowPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            allCategoriesFlowPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.allCategoriesFlowPanel.AutoSize = true;
-            this.allCategoriesFlowPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.allCategoriesFlowPanel.Location = new System.Drawing.Point(64, 330);
-            this.allCategoriesFlowPanel.Name = "allCategoriesFlowPanel";
-            this.allCategoriesFlowPanel.Size = new System.Drawing.Size(0, 0);
-            this.allCategoriesFlowPanel.TabIndex = 10;
+            allCategoriesFlowPanel.AutoSize = true;
+            allCategoriesFlowPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            allCategoriesFlowPanel.Location = new System.Drawing.Point(64, 330);
+            allCategoriesFlowPanel.Name = "allCategoriesFlowPanel";
+            allCategoriesFlowPanel.Size = new System.Drawing.Size(0, 0);
+            allCategoriesFlowPanel.TabIndex = 10;
             // 
             // SearchForm
             // 
@@ -181,6 +181,6 @@
         private Common.HorizontalListing allCategoriesList;
         private Common.HorizontalListing matchesList;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel allCategoriesFlowPanel;
+        public static System.Windows.Forms.FlowLayoutPanel allCategoriesFlowPanel;
     }
 }

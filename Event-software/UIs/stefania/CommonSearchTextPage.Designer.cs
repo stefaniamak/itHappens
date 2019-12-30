@@ -60,7 +60,6 @@
             hostPanel.Name = "hostPanel";
             hostPanel.Size = new System.Drawing.Size(468, 340);
             hostPanel.TabIndex = 6;
-            hostPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.hostPanel_Paint);
             // 
             // CommonSearchTextPage
             // 

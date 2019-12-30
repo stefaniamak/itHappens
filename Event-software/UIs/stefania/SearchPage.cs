@@ -19,31 +19,9 @@ namespace itHappens.UIs.Common
 
         private void SearchFormTest_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 20; i++)
-            {
-                flowLayoutPanel1.Controls.Add(new Common.CategoryMiniBox());
-            }
-            for (int i = 0; i < 20; i++)
-            {
-                flowLayoutPanel2.Controls.Add(new Common.CategoryMiniBox());
-            }
-
-            for (int i = 0; i < 20; i++)
-            {
-                var eventminiview = new Common.EventMiniView();
-                eventminiview.Scale(0.55F);
-                flowLayoutPanel3.Controls.Add(eventminiview);
-            }
+            Controllers.UIController.SearchPageFlowLayoutPanels_Load();       
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void machesLabel_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
