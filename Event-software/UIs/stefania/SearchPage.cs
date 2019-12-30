@@ -30,7 +30,7 @@ namespace itHappens.UIs.Common
 
             for (int i = 0; i < 20; i++)
             {
-                EventMiniView eventminiview = new Common.EventMiniView();
+                var eventminiview = new Common.EventMiniView();
                 eventminiview.Scale(0.55F);
                 flowLayoutPanel3.Controls.Add(eventminiview);
             }
