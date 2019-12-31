@@ -105,6 +105,16 @@ namespace itHappens.Controllers
             }
         }
 
+        public static void ListsContentPageLoad()
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                var eventminiview = new UIs.Common.EventMiniView();
+                //  eventminiview.Scale(0.55F);
+                UIs.valentina.ListsContentPage.EventHolderFlowLayoutPanel.Controls.Add(eventminiview);
+            }
+        }
+
         public static void addSidebarFriendList()
         {
             Classes.SidebarsMethods.addFriendList();
