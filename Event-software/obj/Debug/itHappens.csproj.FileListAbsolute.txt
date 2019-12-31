@@ -414,3 +414,4 @@ D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.EventMiniV
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.stefania.MainPage.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.SearchPage.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
+C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.ListMiniBox.resources

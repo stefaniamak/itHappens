@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label7 = new System.Windows.Forms.Label();
-            this.ListsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            ListsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // label7
@@ -41,18 +41,17 @@
             this.label7.Size = new System.Drawing.Size(66, 36);
             this.label7.TabIndex = 72;
             this.label7.Text = "Lists";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // ListsFlowLayoutPanel
             // 
-            this.ListsFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            ListsFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ListsFlowLayoutPanel.AutoSize = true;
-            this.ListsFlowLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ListsFlowLayoutPanel.Location = new System.Drawing.Point(-1, 61);
-            this.ListsFlowLayoutPanel.Name = "ListsFlowLayoutPanel";
-            this.ListsFlowLayoutPanel.Size = new System.Drawing.Size(0, 0);
-            this.ListsFlowLayoutPanel.TabIndex = 73;
+            ListsFlowLayoutPanel.AutoSize = true;
+            ListsFlowLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            ListsFlowLayoutPanel.Location = new System.Drawing.Point(-1, 61);
+            ListsFlowLayoutPanel.Name = "ListsFlowLayoutPanel";
+            ListsFlowLayoutPanel.Size = new System.Drawing.Size(0, 0);
+            ListsFlowLayoutPanel.TabIndex = 73;
             // 
             // ListPage
             // 
@@ -61,7 +60,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Controls.Add(this.ListsFlowLayoutPanel);
+            this.Controls.Add(ListsFlowLayoutPanel);
             this.Controls.Add(this.label7);
             this.Name = "ListPage";
             this.Size = new System.Drawing.Size(72, 64);
@@ -73,6 +72,6 @@
 
         #endregion
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.FlowLayoutPanel ListsFlowLayoutPanel;
+        public static System.Windows.Forms.FlowLayoutPanel ListsFlowLayoutPanel;
     }
 }

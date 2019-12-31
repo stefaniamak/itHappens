@@ -175,7 +175,6 @@
             this.Controls.Add(this.Button1);
             this.Name = "SignUpPage";
             this.Size = new System.Drawing.Size(297, 358);
-            this.Load += new System.EventHandler(this.SignUpPage_Load);
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

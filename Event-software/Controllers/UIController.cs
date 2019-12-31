@@ -95,6 +95,16 @@ namespace itHappens.Controllers
             }
         }
 
+        public static void ListPageLoad()
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                var listminibox = new UIs.Common.ListMiniBox();
+                //  eventminiview.Scale(0.55F);
+                UIs.valentina.ListPage.ListsFlowLayoutPanel.Controls.Add(listminibox);
+            }
+        }
+
         public static void addSidebarFriendList()
         {
             Classes.SidebarsMethods.addFriendList();
