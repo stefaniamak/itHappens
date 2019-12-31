@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using itHappends;
+using eventful;
 
 namespace itHappens
 {
@@ -16,6 +17,13 @@ namespace itHappens
         static void Main()
         {
             Db_connector Alpha = new Db_connector();
+
+            EventfulAPI eventful = new EventfulAPI();
+                        
+            // Add Location & Number of Results
+            // Add Month otherwise default month is January
+            eventful.GetXmlData("Greece",5);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
