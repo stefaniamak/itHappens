@@ -129,7 +129,6 @@ namespace eventful
                     {
                         popdb.addEventRecord(eventName, 0, venueID, categoryID, startingTime, endingTime, eventDescription, parsedPrice);
                     }
-                    Console.WriteLine(xmlNode[i].ChildNodes[0].Name);
 
 
 
