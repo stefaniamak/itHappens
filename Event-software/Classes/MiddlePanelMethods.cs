@@ -49,7 +49,8 @@ namespace itHappens.Classes
         public static void signUpToolStripMenuItem()
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
-            var middlePage = new UIs.anna.SignUpPage();
+            //var middlePage = new UIs.anna.SignUpPage();
+            var middlePage = new UIs.SignUpUserControl();           
             UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
             middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             middlePage.Dock = DockStyle.Fill;

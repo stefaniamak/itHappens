@@ -152,6 +152,12 @@
     <Compile Include="Classes\EventList.cs" />
     <Compile Include="Classes\MiddlePanelMethods.cs" />
     <Compile Include="Classes\SidebarsMethods.cs" />
+    <Compile Include="Classes\SignUpUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\SignUpUserControl.designer.cs">
+      <DependentUpon>SignUpUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\Venue.cs" />
     <Compile Include="Controllers\UIController.cs" />
@@ -404,6 +410,9 @@
     <Compile Include="UIs\SampleForm.designer.cs">
       <DependentUpon>SampleForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Classes\SignUpUserControl.resx">
+      <DependentUpon>SignUpUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIs\andrea\EventProfilePage.resx">
       <DependentUpon>EventProfilePage.cs</DependentUpon>
     </EmbeddedResource>
