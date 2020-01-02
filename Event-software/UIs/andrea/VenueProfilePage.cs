@@ -10,14 +10,22 @@ using System.Windows.Forms;
 
 namespace itHappens.UIs.andrea
 {
-    public partial class EventProfilePage : UserControl
+    public partial class VenueProfilePage : UserControl
     {
-        public EventProfilePage()
+        public VenueProfilePage()
         {
             InitializeComponent();
+        }    
+
+        private void VenueProfilePage_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                friendsVisitedFlowLayoutPanel.Controls.Add(new UIs.Common.FriendsAttending());
+            }
         }
 
-        private void EventProfilePage_Load(object sender, EventArgs e)
+        private void interestedButton_Click(object sender, EventArgs e)
         {
 
         }

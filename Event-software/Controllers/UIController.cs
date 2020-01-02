@@ -95,6 +95,14 @@ namespace itHappens.Controllers
             }
         }
 
+        public static void friendsAttendingPanel_Load()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                //UIs.andrea.EventProfilePage.friendsAttendingPanel.friendsFlowPanel.Controls.Add(new UIs.Common.FriendsAttending());
+            }
+        }
+
         public static void ListPageLoad()
         {
             for (int i = 0; i < 20; i++)
