@@ -158,11 +158,11 @@
     <Compile Include="DBs\TestDataClass.cs" />
     <Compile Include="Db_connector.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="UIs\andrea\EventProfilePage.cs">
+    <Compile Include="UIs\andrea\VenueProfilePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\andrea\EventProfilePage.Designer.cs">
-      <DependentUpon>EventProfilePage.cs</DependentUpon>
+    <Compile Include="UIs\andrea\VenueProfilePage.Designer.cs">
+      <DependentUpon>VenueProfilePage.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\andrea\UserProfilePage.cs">
       <SubType>UserControl</SubType>
@@ -170,11 +170,11 @@
     <Compile Include="UIs\andrea\UserProfilePage.Designer.cs">
       <DependentUpon>UserProfilePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\andrea\VenueProfilePage.cs">
+    <Compile Include="UIs\andrea\EventProfilePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\andrea\VenueProfilePage.Designer.cs">
-      <DependentUpon>VenueProfilePage.cs</DependentUpon>
+    <Compile Include="UIs\andrea\EventProfilePage.Designer.cs">
+      <DependentUpon>EventProfilePage.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\anna\SignUpPage.cs">
       <SubType>UserControl</SubType>
@@ -245,6 +245,12 @@
     </Compile>
     <Compile Include="UIs\Common\ListMiniBox.Designer.cs">
       <DependentUpon>ListMiniBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Common\FriendsAttending.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Common\FriendsAttending.Designer.cs">
+      <DependentUpon>FriendsAttending.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\Sidebars\FriendList\FriendListMini.cs">
       <SubType>UserControl</SubType>
@@ -410,14 +416,14 @@
     <Compile Include="UIs\SampleForm.designer.cs">
       <DependentUpon>SampleForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UIs\andrea\EventProfilePage.resx">
-      <DependentUpon>EventProfilePage.cs</DependentUpon>
+    <EmbeddedResource Include="UIs\andrea\VenueProfilePage.resx">
+      <DependentUpon>VenueProfilePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\andrea\UserProfilePage.resx">
       <DependentUpon>UserProfilePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\andrea\VenueProfilePage.resx">
-      <DependentUpon>VenueProfilePage.cs</DependentUpon>
+    <EmbeddedResource Include="UIs\andrea\EventProfilePage.resx">
+      <DependentUpon>EventProfilePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\anna\CreateEventPage.resx">
       <DependentUpon>CreateEventPage.cs</DependentUpon>
@@ -436,6 +442,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Common\Carousel.resx">
       <DependentUpon>Carousel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Common\FriendsAttending.resx">
+      <DependentUpon>FriendsAttending.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Common\HorizontalListing.resx">
       <DependentUpon>HorizontalListing.cs</DependentUpon>
