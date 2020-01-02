@@ -194,6 +194,12 @@
     <Compile Include="UIs\anna\LogInPage.Designer.cs">
       <DependentUpon>LogInPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\anna\SignUpUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\anna\SignUpUserControl.designer.cs">
+      <DependentUpon>SignUpUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\Common\MainSplitForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -427,6 +433,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\anna\SignUpPage.resx">
       <DependentUpon>SignUpPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\anna\SignUpUserControl.resx">
+      <DependentUpon>SignUpUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Common\CategoryGroupBox.resx">
       <DependentUpon>CategoryGroupBox.cs</DependentUpon>

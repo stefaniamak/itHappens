@@ -74,6 +74,7 @@
             this.LoginButton.TabIndex = 14;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // createAccountLabel
             // 
@@ -85,6 +86,7 @@
             this.createAccountLabel.TabStop = true;
             this.createAccountLabel.Text = "Create new account";
             this.createAccountLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.createAccountLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.createAccountLabel_LinkClicked_1);
             // 
             // PasswordTextBox
             // 
@@ -96,6 +98,7 @@
             this.PasswordTextBox.Size = new System.Drawing.Size(250, 26);
             this.PasswordTextBox.TabIndex = 12;
             this.PasswordTextBox.UseSystemPasswordChar = true;
+            this.PasswordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PasswordTextBox_KeyPress);
             // 
             // UsernameTextBox
             // 

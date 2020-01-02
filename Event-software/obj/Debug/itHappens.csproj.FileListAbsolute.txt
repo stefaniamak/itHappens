@@ -415,5 +415,5 @@ D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.stefania.MainPage
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.SearchPage.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.ListMiniBox.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.ListMiniBox.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.friendsAttending.resources
+
+C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpUserControl.resources
