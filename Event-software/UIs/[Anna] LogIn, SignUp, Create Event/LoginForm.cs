@@ -25,7 +25,7 @@ namespace itHappens
         private void LoginButton_Click(object sender, EventArgs e)
         {
             
-            itHappens.Controllers.LoginController.FieldsValidation(UsernameTextBox.Text,PasswordTextBox.Text);
+            //itHappens.Controllers.LoginController.FieldsValidation(UsernameTextBox.Text,PasswordTextBox.Text);
             UsernameTextBox.Text = "";
             PasswordTextBox.Text = "";
         }

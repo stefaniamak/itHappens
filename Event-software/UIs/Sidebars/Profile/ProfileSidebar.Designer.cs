@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileSidebar));
-            this.usernameLable = new System.Windows.Forms.Label();
+            usernameLable = new System.Windows.Forms.Label();
             this.profilePicPictureBox1 = new System.Windows.Forms.PictureBox();
             this.bellNotificationPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicPictureBox1)).BeginInit();
@@ -38,13 +38,13 @@
             // 
             // usernameLable
             // 
-            this.usernameLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.usernameLable.AutoSize = true;
-            this.usernameLable.Location = new System.Drawing.Point(31, 106);
-            this.usernameLable.Name = "usernameLable";
-            this.usernameLable.Size = new System.Drawing.Size(80, 13);
-            this.usernameLable.TabIndex = 1;
-            this.usernameLable.Text = "Name Surname";
+            usernameLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            usernameLable.AutoSize = true;
+            usernameLable.Location = new System.Drawing.Point(31, 106);
+            usernameLable.Name = "usernameLable";
+            usernameLable.Size = new System.Drawing.Size(80, 13);
+            usernameLable.TabIndex = 1;
+            usernameLable.Text = "Name Surname";
             // 
             // profilePicPictureBox1
             // 
@@ -75,7 +75,7 @@
             this.BackColor = System.Drawing.Color.Aquamarine;
             this.Controls.Add(this.bellNotificationPictureBox);
             this.Controls.Add(this.profilePicPictureBox1);
-            this.Controls.Add(this.usernameLable);
+            this.Controls.Add(usernameLable);
             this.Name = "ProfileSidebar";
             this.Size = new System.Drawing.Size(142, 175);
             ((System.ComponentModel.ISupportInitialize)(this.profilePicPictureBox1)).EndInit();
@@ -87,7 +87,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label usernameLable;
+        public static System.Windows.Forms.Label usernameLable;
         private System.Windows.Forms.PictureBox profilePicPictureBox1;
         private System.Windows.Forms.PictureBox bellNotificationPictureBox;
     }
