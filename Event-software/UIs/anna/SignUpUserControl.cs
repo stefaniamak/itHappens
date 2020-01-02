@@ -242,8 +242,7 @@ namespace itHappens.UIs
                 MessageBox.Show("Your registration has been successfully completed!", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 signUpCon(areaComboBox.SelectedItem.ToString(), Convert.ToInt32(numericUpDown.Value), usernameTextBox.Text,
                     passwordTextBox.Text, nameTextBox.Text, surnameTextBox.Text, emailTextBox.Text);
-                //Meta tin eggrafi opou tha phgainei
-                //----------------------------------
+                //Opou tha phgainei meta to signUp
             }
 
         }
@@ -322,6 +321,6 @@ namespace itHappens.UIs
             return true;
         }
 
-       
+
     }
 }
