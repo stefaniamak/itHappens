@@ -179,7 +179,6 @@ L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\S
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.Security.Cryptography.Primitives.dll
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.Security.Cryptography.X509Certificates.dll
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.MainSplitForm.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.stefania.MainPage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.SearchPage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.EventProfilePage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.VenueProfilePage.resources
@@ -193,7 +192,6 @@ L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\i
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.ListsSidebar.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.ProfileSidebar.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.UpcomingEventsSidebar.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.stefania.CommonSearchTextPage.resources
 G:\Uni\9th Semester\ΑΔΠΟΣΕ\adopse-events\Event-software\bin\Debug\itHappens.exe.config
 G:\Uni\9th Semester\ΑΔΠΟΣΕ\adopse-events\Event-software\bin\Debug\itHappens.exe
 G:\Uni\9th Semester\ΑΔΠΟΣΕ\adopse-events\Event-software\bin\Debug\itHappens.pdb
@@ -406,3 +404,5 @@ C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\o
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpUserControl.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsAttending.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.ListMiniBox.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.CommonSearchTextPage.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.MainPage.resources
