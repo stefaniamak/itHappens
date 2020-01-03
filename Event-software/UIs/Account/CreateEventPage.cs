@@ -17,6 +17,9 @@ namespace itHappens.UIs.anna
             InitializeComponent();
         }
 
-       
+        private void CreateEventPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
