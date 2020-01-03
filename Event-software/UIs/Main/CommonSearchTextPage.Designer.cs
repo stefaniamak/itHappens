@@ -1,4 +1,4 @@
-﻿namespace itHappens.UIs.stefania
+﻿namespace itHappens.UIs.Main
 {
     partial class CommonSearchTextPage
     {
