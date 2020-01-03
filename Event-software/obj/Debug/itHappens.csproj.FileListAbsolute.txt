@@ -81,7 +81,6 @@ L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\R
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Remotion.Linq.EagerFetching.xml
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\System.ValueTuple.xml
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.csprojAssemblyReference.cache
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.GoogleForm.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.csproj.GenerateResource.cache
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\bin\Debug\itHappens.exe.config
@@ -146,20 +145,8 @@ L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\G
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\MySql.Data.xml
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\bin\Debug\Renci.SshNet.xml
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.Properties.Resources.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.SampleForm.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.exe
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.pdb
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.MainForm.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.LoginForm.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.CreateEventForm.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.EventProfileForm.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.VenueProfileForm.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.ListsForm.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.MadeForYouForm.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.SettingsForm.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpForm.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.UserProfileForm.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.SearchForm.resources
 D:\Adopse\adopse-events\Event-software\bin\Debug\itHappens.exe.config
 D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.exe
 D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.pdb
@@ -415,5 +402,7 @@ D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.stefania.MainPage
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.SearchPage.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.ListMiniBox.resources
-
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpUserControl.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpUserControl.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsAttending.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.ListMiniBox.resources

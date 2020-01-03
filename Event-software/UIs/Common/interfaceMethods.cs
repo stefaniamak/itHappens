@@ -11,6 +11,8 @@ namespace itHappens.UIs.Common
 
         public static void showPage(string test)
         {
+            /*
+            
             MainForm testForm = new MainForm();  
 
             testForm.TopLevel = false;
@@ -24,7 +26,7 @@ namespace itHappens.UIs.Common
             testForm.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right | System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left);
             //testForm.Size = middlePanel.Size;
             testForm.Show();
-
+            */
         }
 
     }
