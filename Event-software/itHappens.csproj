@@ -158,48 +158,57 @@
     <Compile Include="DBs\TestDataClass.cs" />
     <Compile Include="Db_connector.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+
     <Compile Include="EventfulAPI.cs" />
     <Compile Include="populateDB.cs" />
-    <Compile Include="UIs\andrea\EventProfilePage.cs">
+
+    <Compile Include="UIs\Profiles\VenueProfilePage.cs">
+
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\andrea\EventProfilePage.Designer.cs">
-      <DependentUpon>EventProfilePage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIs\andrea\UserProfilePage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIs\andrea\UserProfilePage.Designer.cs">
-      <DependentUpon>UserProfilePage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIs\andrea\VenueProfilePage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIs\andrea\VenueProfilePage.Designer.cs">
+    <Compile Include="UIs\Profiles\VenueProfilePage.Designer.cs">
       <DependentUpon>VenueProfilePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\anna\SignUpPage.cs">
+    <Compile Include="UIs\Profiles\UserProfilePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\anna\SignUpPage.Designer.cs">
+    <Compile Include="UIs\Profiles\UserProfilePage.Designer.cs">
+      <DependentUpon>UserProfilePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Profiles\EventProfilePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Profiles\EventProfilePage.Designer.cs">
+      <DependentUpon>EventProfilePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Account\SignUpPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Account\SignUpPage.Designer.cs">
       <DependentUpon>SignUpPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\anna\CreateEventPage.cs">
+    <Compile Include="UIs\Account\CreateEventPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\anna\CreateEventPage.Designer.cs">
+    <Compile Include="UIs\Account\CreateEventPage.Designer.cs">
       <DependentUpon>CreateEventPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\anna\LogInPage.cs">
+    <Compile Include="UIs\Account\LogInPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\anna\LogInPage.Designer.cs">
+    <Compile Include="UIs\Account\LogInPage.Designer.cs">
       <DependentUpon>LogInPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Common\MainSplitForm.cs">
+    <Compile Include="UIs\Account\SignUpUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Account\SignUpUserControl.designer.cs">
+      <DependentUpon>SignUpUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Main\MainSplitForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UIs\Common\MainSplitForm.Designer.cs">
+    <Compile Include="UIs\Main\MainSplitForm.Designer.cs">
       <DependentUpon>MainSplitForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\Common\interfaceMethods.cs" />
@@ -235,6 +244,18 @@
     </Compile>
     <Compile Include="UIs\Common\HorizontalListing.Designer.cs">
       <DependentUpon>HorizontalListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Common\ListMiniBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Common\ListMiniBox.Designer.cs">
+      <DependentUpon>ListMiniBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Common\FriendsAttending.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Common\FriendsAttending.Designer.cs">
+      <DependentUpon>FriendsAttending.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\Sidebars\FriendList\FriendListMini.cs">
       <SubType>UserControl</SubType>
@@ -278,41 +299,29 @@
     <Compile Include="UIs\Sidebars\UpcomingEvents\UpcomingEventMini.Designer.cs">
       <DependentUpon>UpcomingEventMini.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\stefania\CommonSearchTextPage.cs">
+    <Compile Include="UIs\Main\CommonSearchTextPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\stefania\CommonSearchTextPage.Designer.cs">
+    <Compile Include="UIs\Main\CommonSearchTextPage.Designer.cs">
       <DependentUpon>CommonSearchTextPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\valentina\ListPage.cs">
+    <Compile Include="UIs\Lists and Settings\ListPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\valentina\ListPage.Designer.cs">
+    <Compile Include="UIs\Lists and Settings\ListPage.Designer.cs">
       <DependentUpon>ListPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\valentina\ListsContentPage.cs">
+    <Compile Include="UIs\Lists and Settings\ListsContentPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\valentina\ListsContentPage.Designer.cs">
+    <Compile Include="UIs\Lists and Settings\ListsContentPage.Designer.cs">
       <DependentUpon>ListsContentPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\valentina\SettingsPage.cs">
+    <Compile Include="UIs\Lists and Settings\SettingsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\valentina\SettingsPage.Designer.cs">
+    <Compile Include="UIs\Lists and Settings\SettingsPage.Designer.cs">
       <DependentUpon>SettingsPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIs\[Anna] LogIn, SignUp, Create Event\CreateEventForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIs\[Anna] LogIn, SignUp, Create Event\CreateEventForm.Designer.cs">
-      <DependentUpon>CreateEventForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIs\[Andr] User, Venue, Event Profiles\EventProfileForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIs\[Andr] User, Venue, Event Profiles\EventProfileForm.Designer.cs">
-      <DependentUpon>EventProfileForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\Common\EventMiniView.cs">
       <SubType>UserControl</SubType>
@@ -320,109 +329,49 @@
     <Compile Include="UIs\Common\EventMiniView.Designer.cs">
       <DependentUpon>EventMiniView.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\stefania\SearchForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIs\stefania\SearchForm.Designer.cs">
-      <DependentUpon>SearchForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIs\[Andr] User, Venue, Event Profiles\VenueProfileForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIs\[Andr] User, Venue, Event Profiles\VenueProfileForm.Designer.cs">
-      <DependentUpon>VenueProfileForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIs\[Andr] User, Venue, Event Profiles\UserProfileForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIs\[Andr] User, Venue, Event Profiles\UserProfileForm.Designer.cs">
-      <DependentUpon>UserProfileForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIs\stefania\SearchPage.cs">
+    <Compile Include="UIs\Main\SearchPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\stefania\SearchPage.Designer.cs">
+    <Compile Include="UIs\Main\SearchPage.Designer.cs">
       <DependentUpon>SearchPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\stefania\MainPage.cs">
+    <Compile Include="UIs\Main\MainPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\stefania\MainPage.Designer.cs">
+    <Compile Include="UIs\Main\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIs\[Valia] List, Made for you, Settings\SettingsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIs\[Valia] List, Made for you, Settings\SettingsForm.Designer.cs">
-      <DependentUpon>SettingsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIs\[Valia] List, Made for you, Settings\MadeForYouForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIs\[Valia] List, Made for you, Settings\MadeForYouForm.Designer.cs">
-      <DependentUpon>MadeForYouForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIs\[Valia] List, Made for you, Settings\ListsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIs\[Valia] List, Made for you, Settings\ListsForm.Designer.cs">
-      <DependentUpon>ListsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIs\[Anna] LogIn, SignUp, Create Event\SignUpForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIs\[Anna] LogIn, SignUp, Create Event\SignUpForm.Designer.cs">
-      <DependentUpon>SignUpForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIs\stefania\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIs\stefania\MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIs\[Anna] LogIn, SignUp, Create Event\LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIs\[Anna] LogIn, SignUp, Create Event\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIs\GoogleForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIs\GoogleForm.Designer.cs">
-      <DependentUpon>GoogleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UIs\SampleForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIs\SampleForm.designer.cs">
-      <DependentUpon>SampleForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="UIs\andrea\EventProfilePage.resx">
-      <DependentUpon>EventProfilePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\andrea\UserProfilePage.resx">
-      <DependentUpon>UserProfilePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\andrea\VenueProfilePage.resx">
+    <EmbeddedResource Include="UIs\Profiles\VenueProfilePage.resx">
       <DependentUpon>VenueProfilePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\anna\CreateEventPage.resx">
+    <EmbeddedResource Include="UIs\Profiles\UserProfilePage.resx">
+      <DependentUpon>UserProfilePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Profiles\EventProfilePage.resx">
+      <DependentUpon>EventProfilePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Account\CreateEventPage.resx">
       <DependentUpon>CreateEventPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\anna\LogInPage.resx">
+    <EmbeddedResource Include="UIs\Account\LogInPage.resx">
       <DependentUpon>LogInPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\anna\SignUpPage.resx">
+    <EmbeddedResource Include="UIs\Account\SignUpPage.resx">
       <DependentUpon>SignUpPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Account\SignUpUserControl.resx">
+      <DependentUpon>SignUpUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Common\CategoryGroupBox.resx">
       <DependentUpon>CategoryGroupBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Common\Carousel.resx">
       <DependentUpon>Carousel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Common\FriendsAttending.resx">
+      <DependentUpon>FriendsAttending.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Common\HorizontalListing.resx">
       <DependentUpon>HorizontalListing.cs</DependentUpon>
@@ -433,7 +382,10 @@
     <EmbeddedResource Include="UIs\Common\CategoryMiniBox.resx">
       <DependentUpon>CategoryMiniBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\Common\MainSplitForm.resx">
+    <EmbeddedResource Include="UIs\Common\ListMiniBox.resx">
+      <DependentUpon>ListMiniBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Main\MainSplitForm.resx">
       <DependentUpon>MainSplitForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Sidebars\FriendList\FriendListMini.resx">
@@ -457,70 +409,31 @@
     <EmbeddedResource Include="UIs\Sidebars\UpcomingEvents\UpcomingEventsSidebar.resx">
       <DependentUpon>UpcomingEventsSidebar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\stefania\CommonSearchTextPage.resx">
+    <EmbeddedResource Include="UIs\Main\CommonSearchTextPage.resx">
       <DependentUpon>CommonSearchTextPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\valentina\ListPage.resx">
+    <EmbeddedResource Include="UIs\Lists and Settings\ListPage.resx">
       <DependentUpon>ListPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\valentina\ListsContentPage.resx">
+    <EmbeddedResource Include="UIs\Lists and Settings\ListsContentPage.resx">
       <DependentUpon>ListsContentPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\valentina\SettingsPage.resx">
+    <EmbeddedResource Include="UIs\Lists and Settings\SettingsPage.resx">
       <DependentUpon>SettingsPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\[Anna] LogIn, SignUp, Create Event\CreateEventForm.resx">
-      <DependentUpon>CreateEventForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\[Andr] User, Venue, Event Profiles\EventProfileForm.resx">
-      <DependentUpon>EventProfileForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Common\EventMiniView.resx">
       <DependentUpon>EventMiniView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\stefania\MainPage.resx">
+    <EmbeddedResource Include="UIs\Main\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\stefania\SearchForm.resx">
-      <DependentUpon>SearchForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\[Andr] User, Venue, Event Profiles\VenueProfileForm.resx">
-      <DependentUpon>VenueProfileForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\stefania\SearchPage.resx">
+    <EmbeddedResource Include="UIs\Main\SearchPage.resx">
       <DependentUpon>SearchPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\[Valia] List, Made for you, Settings\ListsForm.resx">
-      <DependentUpon>ListsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\[Anna] LogIn, SignUp, Create Event\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\GoogleForm.resx">
-      <DependentUpon>GoogleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\[Valia] List, Made for you, Settings\MadeForYouForm.resx">
-      <DependentUpon>MadeForYouForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\stefania\MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\SampleForm.resx">
-      <DependentUpon>SampleForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\[Valia] List, Made for you, Settings\SettingsForm.resx">
-      <DependentUpon>SettingsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\[Anna] LogIn, SignUp, Create Event\SignUpForm.resx">
-      <DependentUpon>SignUpForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\[Andr] User, Venue, Event Profiles\UserProfileForm.resx">
-      <DependentUpon>UserProfileForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -546,10 +459,16 @@
     <Content Include="Controllers\instructionsControllersFolder.txt" />
     <Content Include="DBs\it_happens.sql" />
     <Content Include="Images\signInGoogle.png" />
+    <None Include="Resources\email1.jpg" />
+    <None Include="Resources\email2.jpg" />
+    <None Include="Resources\insert image1.jpg" />
+    <None Include="Resources\LOGOPLSS.png" />
+    <None Include="Resources\pass1.jpg" />
+    <None Include="Resources\pass2.jpg" />
+    <None Include="Resources\user1.jpg" />
+    <None Include="Resources\user2.jpg" />
     <Content Include="UIs\instructionsUIsFolder.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UIs\[Stef] Main, SearchPage\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
