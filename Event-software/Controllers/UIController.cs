@@ -91,7 +91,35 @@ namespace itHappens.Controllers
         {
             for (int i = 0; i < 20; i++)
             {
-                UIs.SearchForm.allCategoriesFlowPanel.Controls.Add(new UIs.Common.CategoryMiniBox());
+                //UIs.SearchForm.allCategoriesFlowPanel.Controls.Add(new UIs.Common.CategoryMiniBox());
+            }
+        }
+
+        public static void friendsAttendingPanel_Load()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                //UIs.andrea.EventProfilePage.friendsAttendingPanel.friendsFlowPanel.Controls.Add(new UIs.Common.FriendsAttending());
+            }
+        }
+
+        public static void ListPageLoad()
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                var listminibox = new UIs.Common.ListMiniBox();
+                //  eventminiview.Scale(0.55F);
+                UIs.valentina.ListPage.ListsFlowLayoutPanel.Controls.Add(listminibox);
+            }
+        }
+
+        public static void ListsContentPageLoad()
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                var eventminiview = new UIs.Common.EventMiniView();
+                //  eventminiview.Scale(0.55F);
+                UIs.valentina.ListsContentPage.EventHolderFlowLayoutPanel.Controls.Add(eventminiview);
             }
         }
 
