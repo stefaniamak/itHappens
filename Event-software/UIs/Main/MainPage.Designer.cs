@@ -1,4 +1,4 @@
-﻿namespace itHappens.UIs.stefania
+﻿namespace itHappens.UIs.Main
 {
     partial class MainPage
     {
@@ -83,7 +83,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.Salmon;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.madeForYouLabel);
             this.Controls.Add(madeForYouCarusel);
             this.Controls.Add(todayEventsCarousel);

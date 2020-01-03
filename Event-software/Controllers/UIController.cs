@@ -28,7 +28,7 @@ namespace itHappens.Controllers
         public static void openHostForMainAndSearchPage()
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
-            var hostPage = new UIs.stefania.CommonSearchTextPage();
+            var hostPage = new UIs.Main.CommonSearchTextPage();
 
             UIs.Common.MainSplitForm.middlePanel.Controls.Add(hostPage);
             hostPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
@@ -39,15 +39,15 @@ namespace itHappens.Controllers
         public static void hostTheMainPage()
         {
 
-            var mainPage = new UIs.stefania.MainPage();
-            UIs.stefania.CommonSearchTextPage.hostPanel.Controls.Add(mainPage);
+            var mainPage = new UIs.Main.MainPage();
+            UIs.Main.CommonSearchTextPage.hostPanel.Controls.Add(mainPage);
             mainPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             mainPage.Dock = DockStyle.Fill;
         }
         public static void hostTheSearchPage()
         {
             var searchPage = new UIs.Common.SearchPage();
-            UIs.stefania.CommonSearchTextPage.hostPanel.Controls.Add(searchPage);
+            UIs.Main.CommonSearchTextPage.hostPanel.Controls.Add(searchPage);
             searchPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             searchPage.Dock = DockStyle.Fill;
         }
@@ -57,12 +57,12 @@ namespace itHappens.Controllers
         {
             for (int i = 0; i < 10; i++)
             {
-                UIs.stefania.MainPage.todayEventsCarousel.AddControl(new UIs.Common.EventMiniView());
+                UIs.Main.MainPage.todayEventsCarousel.AddControl(new UIs.Common.EventMiniView());
             }
 
             for (int i = 0; i < 5; i++)
             {
-                UIs.stefania.MainPage.madeForYouCarusel.AddControl(new UIs.Common.CategoryGroupBox());
+                UIs.Main.MainPage.madeForYouCarusel.AddControl(new UIs.Common.CategoryGroupBox());
             }
         }
 
