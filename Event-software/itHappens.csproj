@@ -158,7 +158,12 @@
     <Compile Include="DBs\TestDataClass.cs" />
     <Compile Include="Db_connector.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+
+    <Compile Include="EventfulAPI.cs" />
+    <Compile Include="populateDB.cs" />
+
     <Compile Include="UIs\Profiles\VenueProfilePage.cs">
+
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UIs\Profiles\VenueProfilePage.Designer.cs">
