@@ -17,5 +17,9 @@ namespace itHappens.UIs.valentina
             InitializeComponent();
         }
 
+        private void ProfileTitleSettings_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
