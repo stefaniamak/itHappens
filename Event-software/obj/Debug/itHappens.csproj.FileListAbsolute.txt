@@ -333,7 +333,6 @@ C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\o
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.SettingsForm.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpForm.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.UserProfileForm.resources
-
 C:\Users\outergaze\Desktop\GitHub\adopse-events\Event-software\bin\Debug\itHappens.exe.config
 C:\Users\outergaze\Desktop\GitHub\adopse-events\Event-software\bin\Debug\itHappens.exe
 C:\Users\outergaze\Desktop\GitHub\adopse-events\Event-software\bin\Debug\itHappens.pdb
@@ -417,7 +416,6 @@ C:\Users\outergaze\Desktop\GitHub\adopse-events\Event-software\obj\Debug\itHappe
 C:\Users\outergaze\Desktop\GitHub\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
 C:\Users\outergaze\Desktop\GitHub\adopse-events\Event-software\obj\Debug\itHappens.exe
 C:\Users\outergaze\Desktop\GitHub\adopse-events\Event-software\obj\Debug\itHappens.pdb
-
 D:\adopse\adopse-events\Event-software\bin\Debug\itHappens.exe
 D:\adopse\adopse-events\Event-software\bin\Debug\itHappens.pdb
 D:\adopse\adopse-events\Event-software\bin\Debug\Antlr3.Runtime.dll
