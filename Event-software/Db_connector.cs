@@ -10,13 +10,14 @@ namespace itHappends
 {
     public class Db_connector
     {
-        string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=root;";
+        string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
         MySqlConnection con;
 
         public Db_connector()
         {
             try
             {
+                Console.WriteLine(conStr);
                 con = new MySqlConnection(conStr);
                 con.Open();
 
