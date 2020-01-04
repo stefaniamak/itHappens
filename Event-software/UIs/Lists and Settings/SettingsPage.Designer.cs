@@ -92,6 +92,7 @@
             // ProfileSettingsTab
             // 
             this.ProfileSettingsTab.AutoScroll = true;
+            this.ProfileSettingsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ProfileSettingsTab.Controls.Add(this.ProfileTitleLabel);
             this.ProfileSettingsTab.Controls.Add(this.RegionSettingsTextBox);
             this.ProfileSettingsTab.Controls.Add(this.RegionSettingsLabel);
@@ -114,22 +115,24 @@
             this.ProfileSettingsTab.Size = new System.Drawing.Size(828, 515);
             this.ProfileSettingsTab.TabIndex = 0;
             this.ProfileSettingsTab.Text = "Profile";
-            this.ProfileSettingsTab.UseVisualStyleBackColor = true;
             // 
             // ProfileTitleLabel
             // 
+            this.ProfileTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ProfileTitleLabel.AutoSize = true;
-            this.ProfileTitleLabel.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProfileTitleLabel.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProfileTitleLabel.ForeColor = System.Drawing.Color.DarkOrange;
             this.ProfileTitleLabel.Location = new System.Drawing.Point(285, 51);
             this.ProfileTitleLabel.Name = "ProfileTitleLabel";
-            this.ProfileTitleLabel.Size = new System.Drawing.Size(104, 31);
+            this.ProfileTitleLabel.Size = new System.Drawing.Size(129, 44);
             this.ProfileTitleLabel.TabIndex = 19;
             this.ProfileTitleLabel.Text = "Profile";
             this.ProfileTitleLabel.Click += new System.EventHandler(this.ProfileTitleSettings_Click);
             // 
             // RegionSettingsTextBox
             // 
-            this.RegionSettingsTextBox.Location = new System.Drawing.Point(291, 467);
+            this.RegionSettingsTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.RegionSettingsTextBox.Location = new System.Drawing.Point(291, 530);
             this.RegionSettingsTextBox.Name = "RegionSettingsTextBox";
             this.RegionSettingsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.RegionSettingsTextBox.Size = new System.Drawing.Size(136, 20);
@@ -137,24 +140,31 @@
             // 
             // RegionSettingsLabel
             // 
+            this.RegionSettingsLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RegionSettingsLabel.AutoSize = true;
-            this.RegionSettingsLabel.Location = new System.Drawing.Point(288, 451);
+            this.RegionSettingsLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.RegionSettingsLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.RegionSettingsLabel.Location = new System.Drawing.Point(287, 507);
             this.RegionSettingsLabel.Name = "RegionSettingsLabel";
-            this.RegionSettingsLabel.Size = new System.Drawing.Size(41, 13);
+            this.RegionSettingsLabel.Size = new System.Drawing.Size(60, 20);
             this.RegionSettingsLabel.TabIndex = 15;
             this.RegionSettingsLabel.Text = "Region";
             // 
             // ProfilePictureBoxEdit
             // 
+            this.ProfilePictureBoxEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ProfilePictureBoxEdit.Location = new System.Drawing.Point(291, 143);
             this.ProfilePictureBoxEdit.Name = "ProfilePictureBoxEdit";
-            this.ProfilePictureBoxEdit.Size = new System.Drawing.Size(100, 99);
+            this.ProfilePictureBoxEdit.Size = new System.Drawing.Size(136, 127);
             this.ProfilePictureBoxEdit.TabIndex = 2;
             this.ProfilePictureBoxEdit.TabStop = false;
             // 
             // UpdateChangesButton
             // 
-            this.UpdateChangesButton.Location = new System.Drawing.Point(292, 580);
+            this.UpdateChangesButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.UpdateChangesButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.UpdateChangesButton.ForeColor = System.Drawing.Color.DarkOrange;
+            this.UpdateChangesButton.Location = new System.Drawing.Point(291, 645);
             this.UpdateChangesButton.Name = "UpdateChangesButton";
             this.UpdateChangesButton.Size = new System.Drawing.Size(198, 32);
             this.UpdateChangesButton.TabIndex = 14;
@@ -163,96 +173,121 @@
             // 
             // NameSettingsTextBox
             // 
-            this.NameSettingsTextBox.Location = new System.Drawing.Point(291, 289);
+            this.NameSettingsTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.NameSettingsTextBox.Location = new System.Drawing.Point(291, 313);
             this.NameSettingsTextBox.Name = "NameSettingsTextBox";
             this.NameSettingsTextBox.Size = new System.Drawing.Size(136, 20);
             this.NameSettingsTextBox.TabIndex = 1;
             // 
             // RepeatNewPasswordTextBox
             // 
-            this.RepeatNewPasswordTextBox.Location = new System.Drawing.Point(291, 365);
+            this.RepeatNewPasswordTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.RepeatNewPasswordTextBox.Location = new System.Drawing.Point(292, 403);
             this.RepeatNewPasswordTextBox.Name = "RepeatNewPasswordTextBox";
             this.RepeatNewPasswordTextBox.Size = new System.Drawing.Size(136, 20);
             this.RepeatNewPasswordTextBox.TabIndex = 13;
             // 
             // ProfilePictureLabel
             // 
+            this.ProfilePictureLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ProfilePictureLabel.AutoSize = true;
-            this.ProfilePictureLabel.Location = new System.Drawing.Point(288, 127);
+            this.ProfilePictureLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.ProfilePictureLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.ProfilePictureLabel.Location = new System.Drawing.Point(287, 120);
             this.ProfilePictureLabel.Name = "ProfilePictureLabel";
-            this.ProfilePictureLabel.Size = new System.Drawing.Size(72, 13);
+            this.ProfilePictureLabel.Size = new System.Drawing.Size(109, 20);
             this.ProfilePictureLabel.TabIndex = 3;
             this.ProfilePictureLabel.Text = "Profile Picture";
             // 
             // NewPasswordTextBox
             // 
-            this.NewPasswordTextBox.Location = new System.Drawing.Point(291, 339);
+            this.NewPasswordTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.NewPasswordTextBox.Location = new System.Drawing.Point(292, 377);
             this.NewPasswordTextBox.Name = "NewPasswordTextBox";
             this.NewPasswordTextBox.Size = new System.Drawing.Size(136, 20);
             this.NewPasswordTextBox.TabIndex = 12;
+            this.NewPasswordTextBox.TextChanged += new System.EventHandler(this.NewPasswordTextBox_TextChanged);
             // 
             // EditPictureButton
             // 
-            this.EditPictureButton.Location = new System.Drawing.Point(414, 219);
+            this.EditPictureButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.EditPictureButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.EditPictureButton.ForeColor = System.Drawing.Color.DarkOrange;
+            this.EditPictureButton.Location = new System.Drawing.Point(447, 236);
             this.EditPictureButton.Name = "EditPictureButton";
-            this.EditPictureButton.Size = new System.Drawing.Size(75, 23);
+            this.EditPictureButton.Size = new System.Drawing.Size(85, 34);
             this.EditPictureButton.TabIndex = 4;
             this.EditPictureButton.Text = "Edit";
             this.EditPictureButton.UseVisualStyleBackColor = true;
             // 
             // PasswordSettingsLabel
             // 
+            this.PasswordSettingsLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PasswordSettingsLabel.AutoSize = true;
-            this.PasswordSettingsLabel.Location = new System.Drawing.Point(288, 323);
+            this.PasswordSettingsLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.PasswordSettingsLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.PasswordSettingsLabel.Location = new System.Drawing.Point(288, 354);
             this.PasswordSettingsLabel.Name = "PasswordSettingsLabel";
-            this.PasswordSettingsLabel.Size = new System.Drawing.Size(115, 13);
+            this.PasswordSettingsLabel.Size = new System.Drawing.Size(180, 20);
             this.PasswordSettingsLabel.TabIndex = 11;
             this.PasswordSettingsLabel.Text = "Change your password";
             // 
             // NameSettingsLabel
             // 
+            this.NameSettingsLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.NameSettingsLabel.AutoSize = true;
-            this.NameSettingsLabel.Location = new System.Drawing.Point(288, 273);
+            this.NameSettingsLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.NameSettingsLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.NameSettingsLabel.Location = new System.Drawing.Point(288, 290);
             this.NameSettingsLabel.Name = "NameSettingsLabel";
-            this.NameSettingsLabel.Size = new System.Drawing.Size(35, 13);
+            this.NameSettingsLabel.Size = new System.Drawing.Size(53, 20);
             this.NameSettingsLabel.TabIndex = 5;
             this.NameSettingsLabel.Text = "Name";
             // 
             // LanguageSettingsComboBox
             // 
+            this.LanguageSettingsComboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LanguageSettingsComboBox.FormattingEnabled = true;
-            this.LanguageSettingsComboBox.Location = new System.Drawing.Point(291, 524);
+            this.LanguageSettingsComboBox.Location = new System.Drawing.Point(291, 593);
             this.LanguageSettingsComboBox.Name = "LanguageSettingsComboBox";
             this.LanguageSettingsComboBox.Size = new System.Drawing.Size(136, 21);
             this.LanguageSettingsComboBox.TabIndex = 10;
             // 
             // EmailSettingsLabel
             // 
+            this.EmailSettingsLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.EmailSettingsLabel.AutoSize = true;
-            this.EmailSettingsLabel.Location = new System.Drawing.Point(288, 397);
+            this.EmailSettingsLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.EmailSettingsLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.EmailSettingsLabel.Location = new System.Drawing.Point(288, 444);
             this.EmailSettingsLabel.Name = "EmailSettingsLabel";
-            this.EmailSettingsLabel.Size = new System.Drawing.Size(32, 13);
+            this.EmailSettingsLabel.Size = new System.Drawing.Size(46, 20);
             this.EmailSettingsLabel.TabIndex = 6;
             this.EmailSettingsLabel.Text = "Email";
             // 
             // EmailSettingsTextBox
             // 
-            this.EmailSettingsTextBox.Location = new System.Drawing.Point(291, 413);
+            this.EmailSettingsTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.EmailSettingsTextBox.Location = new System.Drawing.Point(292, 467);
             this.EmailSettingsTextBox.Name = "EmailSettingsTextBox";
             this.EmailSettingsTextBox.Size = new System.Drawing.Size(136, 20);
             this.EmailSettingsTextBox.TabIndex = 8;
             // 
             // LanguageSettingsLabel
             // 
+            this.LanguageSettingsLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LanguageSettingsLabel.AutoSize = true;
-            this.LanguageSettingsLabel.Location = new System.Drawing.Point(288, 508);
+            this.LanguageSettingsLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.LanguageSettingsLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.LanguageSettingsLabel.Location = new System.Drawing.Point(288, 570);
             this.LanguageSettingsLabel.Name = "LanguageSettingsLabel";
-            this.LanguageSettingsLabel.Size = new System.Drawing.Size(55, 13);
+            this.LanguageSettingsLabel.Size = new System.Drawing.Size(84, 20);
             this.LanguageSettingsLabel.TabIndex = 7;
             this.LanguageSettingsLabel.Text = "Language";
             // 
             // NotificationsTabPage
             // 
+            this.NotificationsTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.NotificationsTabPage.Controls.Add(this.EventsNearbyNoticeCheckBox);
             this.NotificationsTabPage.Controls.Add(this.FriendAttendsCheckBox);
             this.NotificationsTabPage.Controls.Add(this.NewEventNoticeCheckBox);
@@ -268,12 +303,11 @@
             this.NotificationsTabPage.Size = new System.Drawing.Size(828, 515);
             this.NotificationsTabPage.TabIndex = 1;
             this.NotificationsTabPage.Text = "Notifications";
-            this.NotificationsTabPage.UseVisualStyleBackColor = true;
             // 
             // EventsNearbyNoticeCheckBox
             // 
             this.EventsNearbyNoticeCheckBox.AutoSize = true;
-            this.EventsNearbyNoticeCheckBox.Location = new System.Drawing.Point(526, 270);
+            this.EventsNearbyNoticeCheckBox.Location = new System.Drawing.Point(568, 278);
             this.EventsNearbyNoticeCheckBox.Name = "EventsNearbyNoticeCheckBox";
             this.EventsNearbyNoticeCheckBox.Size = new System.Drawing.Size(15, 14);
             this.EventsNearbyNoticeCheckBox.TabIndex = 8;
@@ -282,7 +316,7 @@
             // FriendAttendsCheckBox
             // 
             this.FriendAttendsCheckBox.AutoSize = true;
-            this.FriendAttendsCheckBox.Location = new System.Drawing.Point(526, 225);
+            this.FriendAttendsCheckBox.Location = new System.Drawing.Point(568, 233);
             this.FriendAttendsCheckBox.Name = "FriendAttendsCheckBox";
             this.FriendAttendsCheckBox.Size = new System.Drawing.Size(15, 14);
             this.FriendAttendsCheckBox.TabIndex = 7;
@@ -291,7 +325,7 @@
             // NewEventNoticeCheckBox
             // 
             this.NewEventNoticeCheckBox.AutoSize = true;
-            this.NewEventNoticeCheckBox.Location = new System.Drawing.Point(526, 174);
+            this.NewEventNoticeCheckBox.Location = new System.Drawing.Point(568, 181);
             this.NewEventNoticeCheckBox.Name = "NewEventNoticeCheckBox";
             this.NewEventNoticeCheckBox.Size = new System.Drawing.Size(15, 14);
             this.NewEventNoticeCheckBox.TabIndex = 6;
@@ -300,7 +334,7 @@
             // FollowNoticeCheckBox
             // 
             this.FollowNoticeCheckBox.AutoSize = true;
-            this.FollowNoticeCheckBox.Location = new System.Drawing.Point(526, 132);
+            this.FollowNoticeCheckBox.Location = new System.Drawing.Point(568, 139);
             this.FollowNoticeCheckBox.Name = "FollowNoticeCheckBox";
             this.FollowNoticeCheckBox.Size = new System.Drawing.Size(15, 14);
             this.FollowNoticeCheckBox.TabIndex = 5;
@@ -309,51 +343,61 @@
             // EventsNearbyLabel
             // 
             this.EventsNearbyLabel.AutoSize = true;
-            this.EventsNearbyLabel.Location = new System.Drawing.Point(287, 271);
+            this.EventsNearbyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.EventsNearbyLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.EventsNearbyLabel.Location = new System.Drawing.Point(263, 274);
             this.EventsNearbyLabel.Name = "EventsNearbyLabel";
-            this.EventsNearbyLabel.Size = new System.Drawing.Size(77, 13);
+            this.EventsNearbyLabel.Size = new System.Drawing.Size(104, 18);
             this.EventsNearbyLabel.TabIndex = 4;
             this.EventsNearbyLabel.Text = "Events Nearby";
             // 
             // FriendAttendsNoticeLabel
             // 
             this.FriendAttendsNoticeLabel.AutoSize = true;
-            this.FriendAttendsNoticeLabel.Location = new System.Drawing.Point(287, 226);
+            this.FriendAttendsNoticeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.FriendAttendsNoticeLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.FriendAttendsNoticeLabel.Location = new System.Drawing.Point(263, 229);
             this.FriendAttendsNoticeLabel.Name = "FriendAttendsNoticeLabel";
-            this.FriendAttendsNoticeLabel.Size = new System.Drawing.Size(207, 13);
+            this.FriendAttendsNoticeLabel.Size = new System.Drawing.Size(285, 18);
             this.FriendAttendsNoticeLabel.TabIndex = 3;
             this.FriendAttendsNoticeLabel.Text = "A friend is coming to an event you\'re going";
             // 
             // NewEventsNoticeLabel
             // 
             this.NewEventsNoticeLabel.AutoSize = true;
-            this.NewEventsNoticeLabel.Location = new System.Drawing.Point(287, 174);
+            this.NewEventsNoticeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.NewEventsNoticeLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.NewEventsNoticeLabel.Location = new System.Drawing.Point(263, 177);
             this.NewEventsNoticeLabel.Name = "NewEventsNoticeLabel";
-            this.NewEventsNoticeLabel.Size = new System.Drawing.Size(109, 13);
+            this.NewEventsNoticeLabel.Size = new System.Drawing.Size(146, 18);
             this.NewEventsNoticeLabel.TabIndex = 2;
             this.NewEventsNoticeLabel.Text = "New events to check";
             // 
             // FollowNoticeLabel
             // 
             this.FollowNoticeLabel.AutoSize = true;
-            this.FollowNoticeLabel.Location = new System.Drawing.Point(287, 132);
+            this.FollowNoticeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.FollowNoticeLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.FollowNoticeLabel.Location = new System.Drawing.Point(263, 135);
             this.FollowNoticeLabel.Name = "FollowNoticeLabel";
-            this.FollowNoticeLabel.Size = new System.Drawing.Size(104, 13);
+            this.FollowNoticeLabel.Size = new System.Drawing.Size(149, 18);
             this.FollowNoticeLabel.TabIndex = 1;
             this.FollowNoticeLabel.Text = "Someone follows me";
             // 
             // PushNotificationsLabel
             // 
             this.PushNotificationsLabel.AutoSize = true;
-            this.PushNotificationsLabel.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PushNotificationsLabel.Location = new System.Drawing.Point(284, 51);
+            this.PushNotificationsLabel.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.PushNotificationsLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.PushNotificationsLabel.Location = new System.Drawing.Point(258, 58);
             this.PushNotificationsLabel.Name = "PushNotificationsLabel";
-            this.PushNotificationsLabel.Size = new System.Drawing.Size(241, 31);
+            this.PushNotificationsLabel.Size = new System.Drawing.Size(331, 44);
             this.PushNotificationsLabel.TabIndex = 0;
-            this.PushNotificationsLabel.Text = "Push Notificaions";
+            this.PushNotificationsLabel.Text = "Push Notifications";
             // 
             // LinkedAccountsTabPage
             // 
+            this.LinkedAccountsTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.LinkedAccountsTabPage.Controls.Add(this.ConnectFacebookButton);
             this.LinkedAccountsTabPage.Controls.Add(this.FacebookLabel);
             this.LinkedAccountsTabPage.Controls.Add(this.LinkedAccountsLabel);
@@ -362,11 +406,12 @@
             this.LinkedAccountsTabPage.Size = new System.Drawing.Size(828, 515);
             this.LinkedAccountsTabPage.TabIndex = 2;
             this.LinkedAccountsTabPage.Text = "Linked Accounts";
-            this.LinkedAccountsTabPage.UseVisualStyleBackColor = true;
             // 
             // ConnectFacebookButton
             // 
-            this.ConnectFacebookButton.Location = new System.Drawing.Point(429, 133);
+            this.ConnectFacebookButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.ConnectFacebookButton.ForeColor = System.Drawing.Color.DarkOrange;
+            this.ConnectFacebookButton.Location = new System.Drawing.Point(402, 141);
             this.ConnectFacebookButton.Name = "ConnectFacebookButton";
             this.ConnectFacebookButton.Size = new System.Drawing.Size(140, 29);
             this.ConnectFacebookButton.TabIndex = 2;
@@ -376,24 +421,28 @@
             // FacebookLabel
             // 
             this.FacebookLabel.AutoSize = true;
-            this.FacebookLabel.Location = new System.Drawing.Point(289, 141);
+            this.FacebookLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.FacebookLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.FacebookLabel.Location = new System.Drawing.Point(263, 152);
             this.FacebookLabel.Name = "FacebookLabel";
-            this.FacebookLabel.Size = new System.Drawing.Size(55, 13);
+            this.FacebookLabel.Size = new System.Drawing.Size(75, 18);
             this.FacebookLabel.TabIndex = 1;
             this.FacebookLabel.Text = "Facebook";
             // 
             // LinkedAccountsLabel
             // 
             this.LinkedAccountsLabel.AutoSize = true;
-            this.LinkedAccountsLabel.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkedAccountsLabel.Location = new System.Drawing.Point(286, 53);
+            this.LinkedAccountsLabel.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkedAccountsLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.LinkedAccountsLabel.Location = new System.Drawing.Point(259, 61);
             this.LinkedAccountsLabel.Name = "LinkedAccountsLabel";
-            this.LinkedAccountsLabel.Size = new System.Drawing.Size(228, 31);
+            this.LinkedAccountsLabel.Size = new System.Drawing.Size(299, 42);
             this.LinkedAccountsLabel.TabIndex = 0;
             this.LinkedAccountsLabel.Text = "Linked Accounts";
             // 
             // DeleteAccountTabPage
             // 
+            this.DeleteAccountTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.DeleteAccountTabPage.Controls.Add(this.DangerZoneLabel);
             this.DeleteAccountTabPage.Controls.Add(this.DeleteAccountButton);
             this.DeleteAccountTabPage.Controls.Add(this.AccountLabel);
@@ -402,24 +451,25 @@
             this.DeleteAccountTabPage.Size = new System.Drawing.Size(828, 515);
             this.DeleteAccountTabPage.TabIndex = 3;
             this.DeleteAccountTabPage.Text = "Account";
-            this.DeleteAccountTabPage.UseVisualStyleBackColor = true;
             // 
             // DangerZoneLabel
             // 
             this.DangerZoneLabel.AutoSize = true;
-            this.DangerZoneLabel.Location = new System.Drawing.Point(289, 130);
+            this.DangerZoneLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.DangerZoneLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.DangerZoneLabel.Location = new System.Drawing.Point(249, 137);
             this.DangerZoneLabel.Name = "DangerZoneLabel";
-            this.DangerZoneLabel.Size = new System.Drawing.Size(246, 13);
+            this.DangerZoneLabel.Size = new System.Drawing.Size(306, 17);
             this.DangerZoneLabel.TabIndex = 2;
             this.DangerZoneLabel.Text = "Danger Zone! Deleting your account is irreversible.";
             // 
             // DeleteAccountButton
             // 
             this.DeleteAccountButton.BackColor = System.Drawing.Color.Red;
-            this.DeleteAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.DeleteAccountButton.Location = new System.Drawing.Point(289, 149);
+            this.DeleteAccountButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.DeleteAccountButton.Location = new System.Drawing.Point(252, 167);
             this.DeleteAccountButton.Name = "DeleteAccountButton";
-            this.DeleteAccountButton.Size = new System.Drawing.Size(278, 42);
+            this.DeleteAccountButton.Size = new System.Drawing.Size(303, 42);
             this.DeleteAccountButton.TabIndex = 1;
             this.DeleteAccountButton.Text = "Delete Account";
             this.DeleteAccountButton.UseVisualStyleBackColor = false;
@@ -427,10 +477,11 @@
             // AccountLabel
             // 
             this.AccountLabel.AutoSize = true;
-            this.AccountLabel.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccountLabel.Location = new System.Drawing.Point(286, 56);
+            this.AccountLabel.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccountLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.AccountLabel.Location = new System.Drawing.Point(244, 60);
             this.AccountLabel.Name = "AccountLabel";
-            this.AccountLabel.Size = new System.Drawing.Size(116, 31);
+            this.AccountLabel.Size = new System.Drawing.Size(174, 44);
             this.AccountLabel.TabIndex = 0;
             this.AccountLabel.Text = "Account";
             // 

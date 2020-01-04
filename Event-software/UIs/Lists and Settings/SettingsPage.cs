@@ -21,5 +21,10 @@ namespace itHappens.UIs.valentina
         {
 
         }
+
+        private void NewPasswordTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
