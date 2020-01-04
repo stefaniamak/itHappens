@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace itHappens.UIs.stefania
+namespace itHappens.UIs.Main
 {
     public partial class CommonSearchTextPage : UserControl
     {

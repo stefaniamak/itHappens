@@ -35,18 +35,18 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SignupUsernametextBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LogoPictureBox = new System.Windows.Forms.PictureBox();
             this.Button1 = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -102,13 +102,13 @@
             this.textBox2.TabIndex = 19;
             this.textBox2.Text = "Email";
             // 
-            // textBox1
+            // SignupUsernametextBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 20);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.Text = "Username";
+            this.SignupUsernametextBox1.Location = new System.Drawing.Point(96, 112);
+            this.SignupUsernametextBox1.Name = "SignupUsernametextBox1";
+            this.SignupUsernametextBox1.Size = new System.Drawing.Size(198, 20);
+            this.SignupUsernametextBox1.TabIndex = 18;
+            this.SignupUsernametextBox1.Text = "Username";
             // 
             // pictureBox4
             // 
@@ -137,14 +137,14 @@
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // LogoPictureBox
             // 
-            this.pictureBox1.BackgroundImage = global::itHappens.Properties.Resources.LOGOPLSS;
-            this.pictureBox1.Location = new System.Drawing.Point(151, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(76, 65);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
+            this.LogoPictureBox.BackgroundImage = global::itHappens.Properties.Resources.LOGOPLSS;
+            this.LogoPictureBox.Location = new System.Drawing.Point(151, 3);
+            this.LogoPictureBox.Name = "LogoPictureBox";
+            this.LogoPictureBox.Size = new System.Drawing.Size(76, 65);
+            this.LogoPictureBox.TabIndex = 14;
+            this.LogoPictureBox.TabStop = false;
             // 
             // Button1
             // 
@@ -167,11 +167,11 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SignupUsernametextBox1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.LogoPictureBox);
             this.Controls.Add(this.Button1);
             this.Name = "SignUpPage";
             this.Size = new System.Drawing.Size(297, 358);
@@ -180,7 +180,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,11 +195,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SignupUsernametextBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox LogoPictureBox;
         private System.Windows.Forms.Button Button1;
     }
 }
