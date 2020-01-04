@@ -35,10 +35,10 @@
             // ListsTitleLabel
             // 
             this.ListsTitleLabel.AutoSize = true;
-            this.ListsTitleLabel.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.ListsTitleLabel.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.ListsTitleLabel.Location = new System.Drawing.Point(3, 12);
             this.ListsTitleLabel.Name = "ListsTitleLabel";
-            this.ListsTitleLabel.Size = new System.Drawing.Size(66, 36);
+            this.ListsTitleLabel.Size = new System.Drawing.Size(67, 36);
             this.ListsTitleLabel.TabIndex = 72;
             this.ListsTitleLabel.Text = "Lists";
             // 
@@ -60,10 +60,12 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.ListsFlowLayoutPanel);
             this.Controls.Add(this.ListsTitleLabel);
+            this.ForeColor = System.Drawing.Color.DarkOrange;
             this.Name = "ListPage";
-            this.Size = new System.Drawing.Size(72, 64);
+            this.Size = new System.Drawing.Size(73, 64);
             this.Load += new System.EventHandler(this.ListPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
