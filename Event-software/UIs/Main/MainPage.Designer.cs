@@ -30,8 +30,8 @@
         {
             this.madeForYouLabel = new System.Windows.Forms.Label();
             this.todayLabel = new System.Windows.Forms.Label();
-            madeForYouCarusel = new itHappens.UIs.Common.Carousel();
-            todayEventsCarousel = new itHappens.UIs.Common.Carousel();
+            this.madeForYouCarusel = new itHappens.UIs.Common.Carousel();
+            this.todayEventsCarousel = new itHappens.UIs.Common.Carousel();
             this.SuspendLayout();
             // 
             // madeForYouLabel
@@ -54,29 +54,29 @@
             // 
             // madeForYouCarusel
             // 
-            madeForYouCarusel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.madeForYouCarusel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            madeForYouCarusel.AutoScroll = true;
-            madeForYouCarusel.BackColor = System.Drawing.SystemColors.ControlLight;
-            madeForYouCarusel.Location = new System.Drawing.Point(12, 404);
-            madeForYouCarusel.Name = "madeForYouCarusel";
-            madeForYouCarusel.Padding = new System.Windows.Forms.Padding(2);
-            madeForYouCarusel.Size = new System.Drawing.Size(442, 279);
-            madeForYouCarusel.TabIndex = 8;
+            this.madeForYouCarusel.AutoScroll = true;
+            this.madeForYouCarusel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.madeForYouCarusel.Location = new System.Drawing.Point(12, 404);
+            this.madeForYouCarusel.Name = "madeForYouCarusel";
+            this.madeForYouCarusel.Padding = new System.Windows.Forms.Padding(2);
+            this.madeForYouCarusel.Size = new System.Drawing.Size(442, 279);
+            this.madeForYouCarusel.TabIndex = 8;
             // 
             // todayEventsCarousel
             // 
-            todayEventsCarousel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.todayEventsCarousel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            todayEventsCarousel.AutoScroll = true;
-            todayEventsCarousel.BackColor = System.Drawing.SystemColors.ControlLight;
-            todayEventsCarousel.Location = new System.Drawing.Point(12, 54);
-            todayEventsCarousel.Name = "todayEventsCarousel";
-            todayEventsCarousel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            todayEventsCarousel.Size = new System.Drawing.Size(442, 286);
-            todayEventsCarousel.TabIndex = 7;
-            todayEventsCarousel.TabStop = false;
-            todayEventsCarousel.Load += new System.EventHandler(this.todayEventsCarousel_Load);
+            this.todayEventsCarousel.AutoScroll = true;
+            this.todayEventsCarousel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.todayEventsCarousel.Location = new System.Drawing.Point(12, 54);
+            this.todayEventsCarousel.Name = "todayEventsCarousel";
+            this.todayEventsCarousel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.todayEventsCarousel.Size = new System.Drawing.Size(442, 286);
+            this.todayEventsCarousel.TabIndex = 7;
+            this.todayEventsCarousel.TabStop = false;
+            this.todayEventsCarousel.Load += new System.EventHandler(this.todayEventsCarousel_Load);
             // 
             // MainPage
             // 
@@ -85,8 +85,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.madeForYouLabel);
-            this.Controls.Add(madeForYouCarusel);
-            this.Controls.Add(todayEventsCarousel);
+            this.Controls.Add(this.madeForYouCarusel);
+            this.Controls.Add(this.todayEventsCarousel);
             this.Controls.Add(this.todayLabel);
             this.Name = "MainPage";
             this.Size = new System.Drawing.Size(466, 703);
@@ -98,7 +98,7 @@
         #endregion
         private System.Windows.Forms.Label madeForYouLabel;
         private System.Windows.Forms.Label todayLabel;
-        public static Common.Carousel madeForYouCarusel;
-        public static Common.Carousel todayEventsCarousel;
+        public Common.Carousel madeForYouCarusel;
+        public Common.Carousel todayEventsCarousel;
     }
 }
