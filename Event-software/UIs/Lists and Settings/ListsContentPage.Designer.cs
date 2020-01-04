@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.ListsContentTitle = new System.Windows.Forms.Label();
-            this.EventHolderFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            EventHolderFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // ListsContentTitle
@@ -45,14 +45,14 @@
             // 
             // EventHolderFlowLayoutPanel
             // 
-            this.EventHolderFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            EventHolderFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EventHolderFlowLayoutPanel.AutoSize = true;
-            this.EventHolderFlowLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.EventHolderFlowLayoutPanel.Location = new System.Drawing.Point(3, 51);
-            this.EventHolderFlowLayoutPanel.Name = "EventHolderFlowLayoutPanel";
-            this.EventHolderFlowLayoutPanel.Size = new System.Drawing.Size(0, 0);
-            this.EventHolderFlowLayoutPanel.TabIndex = 36;
+            EventHolderFlowLayoutPanel.AutoSize = true;
+            EventHolderFlowLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            EventHolderFlowLayoutPanel.Location = new System.Drawing.Point(3, 51);
+            EventHolderFlowLayoutPanel.Name = "EventHolderFlowLayoutPanel";
+            EventHolderFlowLayoutPanel.Size = new System.Drawing.Size(0, 0);
+            EventHolderFlowLayoutPanel.TabIndex = 36;
             // 
             // ListsContentPage
             // 
@@ -63,7 +63,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.ListsContentTitle);
-            this.Controls.Add(this.EventHolderFlowLayoutPanel);
+            this.Controls.Add(EventHolderFlowLayoutPanel);
             this.Name = "ListsContentPage";
             this.Size = new System.Drawing.Size(133, 54);
             this.Load += new System.EventHandler(this.ListsContentPage_Load);
@@ -74,6 +74,6 @@
 
         #endregion
         private System.Windows.Forms.Label ListsContentTitle;
-        public System.Windows.Forms.FlowLayoutPanel EventHolderFlowLayoutPanel;
+        public static System.Windows.Forms.FlowLayoutPanel EventHolderFlowLayoutPanel;
     }
 }
