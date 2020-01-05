@@ -467,12 +467,12 @@ L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\i
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.ListMiniBox.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.CommonSearchTextPage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.MainPage.resources
-
+D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.csprojResolveAssemblyReference.cache
+D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.csproj.itHappens.exe.config
+D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpUserControl.resources
+D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsAttending.resources
+D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.CommonSearchTextPage.resources
+D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.MainPage.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsAttending.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.CommonSearchTextPage.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.MainPage.resources
-
-D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpUserControl.resources
-D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsAttending.resources
-D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.CommonSearchTextPage.resources
-D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.MainPage.resources
