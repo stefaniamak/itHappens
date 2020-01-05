@@ -88,12 +88,13 @@
             // leftSplitContainer.Panel2
             // 
             this.leftSplitContainer.Panel2.Controls.Add(this.rightSplitContainer);
-            this.leftSplitContainer.Size = new System.Drawing.Size(899, 556);
-            this.leftSplitContainer.SplitterDistance = 157;
+            this.leftSplitContainer.Size = new System.Drawing.Size(1009, 522);
+            this.leftSplitContainer.SplitterDistance = 178;
             this.leftSplitContainer.TabIndex = 0;
             // 
             // splitContainer2
             // 
+            this.splitContainer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 24);
             this.splitContainer2.Name = "splitContainer2";
@@ -106,12 +107,13 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.CreateEvent);
-            this.splitContainer2.Size = new System.Drawing.Size(157, 532);
-            this.splitContainer2.SplitterDistance = 487;
+            this.splitContainer2.Size = new System.Drawing.Size(178, 498);
+            this.splitContainer2.SplitterDistance = 455;
             this.splitContainer2.TabIndex = 2;
             // 
             // splitContainer3
             // 
+            this.splitContainer3.BackColor = System.Drawing.Color.DarkOrange;
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer3.Location = new System.Drawing.Point(0, 0);
             this.splitContainer3.Name = "splitContainer3";
@@ -120,24 +122,27 @@
             // splitContainer3.Panel1
             // 
             this.splitContainer3.Panel1.AutoScroll = true;
-            this.splitContainer3.Panel1.BackColor = System.Drawing.Color.HotPink;
+            this.splitContainer3.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             // 
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.AutoScroll = true;
-            this.splitContainer3.Size = new System.Drawing.Size(157, 487);
-            this.splitContainer3.SplitterDistance = 169;
+            this.splitContainer3.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.splitContainer3.Size = new System.Drawing.Size(178, 455);
+            this.splitContainer3.SplitterDistance = 270;
             this.splitContainer3.TabIndex = 0;
             // 
             // CreateEvent
             // 
+            this.CreateEvent.BackColor = System.Drawing.Color.WhiteSmoke;
             this.CreateEvent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CreateEvent.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateEvent.Location = new System.Drawing.Point(0, 0);
             this.CreateEvent.Name = "CreateEvent";
-            this.CreateEvent.Size = new System.Drawing.Size(157, 41);
+            this.CreateEvent.Size = new System.Drawing.Size(178, 39);
             this.CreateEvent.TabIndex = 0;
-            this.CreateEvent.Text = "Create Event";
-            this.CreateEvent.UseVisualStyleBackColor = true;
+            this.CreateEvent.Text = "CREATE EVENT";
+            this.CreateEvent.UseVisualStyleBackColor = false;
             this.CreateEvent.Click += new System.EventHandler(this.CreateEvent_Click);
             // 
             // menuStrip1
@@ -146,7 +151,7 @@
             this.mainInterfaceToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(157, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(178, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -292,16 +297,17 @@
             // 
             this.rightSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.rightSplitContainer.Panel2.Controls.Add(this.splitContainer1);
-            this.rightSplitContainer.Size = new System.Drawing.Size(738, 556);
-            this.rightSplitContainer.SplitterDistance = 536;
+            this.rightSplitContainer.Size = new System.Drawing.Size(827, 522);
+            this.rightSplitContainer.SplitterDistance = 639;
             this.rightSplitContainer.TabIndex = 0;
+            this.rightSplitContainer.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.rightSplitContainer_SplitterMoved);
             // 
             // splitContainer1
             // 
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.BackColor = System.Drawing.Color.Coral;
+            this.splitContainer1.BackColor = System.Drawing.Color.DarkOrange;
             this.splitContainer1.Location = new System.Drawing.Point(-6, 0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -309,20 +315,21 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
-            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Cyan;
-            this.splitContainer1.Size = new System.Drawing.Size(204, 664);
-            this.splitContainer1.SplitterDistance = 218;
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.splitContainer1.Size = new System.Drawing.Size(190, 522);
+            this.splitContainer1.SplitterDistance = 171;
             this.splitContainer1.TabIndex = 6;
             // 
             // MainSplitForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 562);
+            this.ClientSize = new System.Drawing.Size(1012, 528);
             this.Controls.Add(this.leftSplitContainer);
             this.Name = "MainSplitForm";
             this.Text = "itHappened";
