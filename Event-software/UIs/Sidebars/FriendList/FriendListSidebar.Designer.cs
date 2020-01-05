@@ -38,11 +38,11 @@
             // 
             this.title.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.Color.DarkOrange;
             this.title.Location = new System.Drawing.Point(48, 11);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(76, 18);
+            this.title.Size = new System.Drawing.Size(78, 20);
             this.title.TabIndex = 0;
             this.title.Text = "Friend List";
             this.title.Click += new System.EventHandler(this.title_Click);
