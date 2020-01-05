@@ -38,7 +38,6 @@
             this.StartingDateLabel = new System.Windows.Forms.Label();
             this.EventNameLabel = new System.Windows.Forms.Label();
             this.UploadEventPicbutton2 = new System.Windows.Forms.Button();
-            this.EventCategorylistBox1 = new System.Windows.Forms.ListBox();
             this.EventDescriptionlabel8 = new System.Windows.Forms.Label();
             this.EventDescriptionRichTextbox1 = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -61,13 +60,14 @@
             this.EventVenueNameLabel = new System.Windows.Forms.Label();
             this.TagsLabel = new System.Windows.Forms.Label();
             this.TagsTextBox = new System.Windows.Forms.TextBox();
-            this.EventVenuelistBox1 = new System.Windows.Forms.ListBox();
-            this.SDaylistBox1 = new System.Windows.Forms.ListBox();
-            this.SMonthlistBox2 = new System.Windows.Forms.ListBox();
-            this.SYearlistBox3 = new System.Windows.Forms.ListBox();
-            this.EdaylistBox4 = new System.Windows.Forms.ListBox();
-            this.EMonthListBox5 = new System.Windows.Forms.ListBox();
-            this.EYearlistBox6 = new System.Windows.Forms.ListBox();
+            this.CategorycomboBox = new System.Windows.Forms.ComboBox();
+            this.VenuecomboBox = new System.Windows.Forms.ComboBox();
+            this.SDaycomboBox = new System.Windows.Forms.ComboBox();
+            this.SMonthcomboBox = new System.Windows.Forms.ComboBox();
+            this.SYearcomboBox = new System.Windows.Forms.ComboBox();
+            this.EDaycomboBox = new System.Windows.Forms.ComboBox();
+            this.EMonthcomboBox = new System.Windows.Forms.ComboBox();
+            this.EYearcomboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label3
@@ -143,7 +143,7 @@
             this.StartingDateLabel.AutoSize = true;
             this.StartingDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartingDateLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.StartingDateLabel.Location = new System.Drawing.Point(54, 377);
+            this.StartingDateLabel.Location = new System.Drawing.Point(56, 388);
             this.StartingDateLabel.Name = "StartingDateLabel";
             this.StartingDateLabel.Size = new System.Drawing.Size(94, 18);
             this.StartingDateLabel.TabIndex = 15;
@@ -171,14 +171,6 @@
             this.UploadEventPicbutton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.UploadEventPicbutton2.UseVisualStyleBackColor = true;
             // 
-            // EventCategorylistBox1
-            // 
-            this.EventCategorylistBox1.FormattingEnabled = true;
-            this.EventCategorylistBox1.Location = new System.Drawing.Point(235, 509);
-            this.EventCategorylistBox1.Name = "EventCategorylistBox1";
-            this.EventCategorylistBox1.Size = new System.Drawing.Size(193, 17);
-            this.EventCategorylistBox1.TabIndex = 24;
-            // 
             // EventDescriptionlabel8
             // 
             this.EventDescriptionlabel8.AutoSize = true;
@@ -202,7 +194,8 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(269, 383);
+            this.label8.ForeColor = System.Drawing.Color.Turquoise;
+            this.label8.Location = new System.Drawing.Point(270, 383);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(12, 16);
             this.label8.TabIndex = 27;
@@ -211,7 +204,8 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(326, 385);
+            this.label9.ForeColor = System.Drawing.Color.Turquoise;
+            this.label9.Location = new System.Drawing.Point(333, 387);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(10, 13);
             this.label9.TabIndex = 28;
@@ -241,7 +235,7 @@
             // 
             this.SYearLabel.AutoSize = true;
             this.SYearLabel.ForeColor = System.Drawing.Color.Turquoise;
-            this.SYearLabel.Location = new System.Drawing.Point(352, 361);
+            this.SYearLabel.Location = new System.Drawing.Point(363, 361);
             this.SYearLabel.Name = "SYearLabel";
             this.SYearLabel.Size = new System.Drawing.Size(29, 13);
             this.SYearLabel.TabIndex = 33;
@@ -251,7 +245,7 @@
             // 
             this.EYearLabel.AutoSize = true;
             this.EYearLabel.ForeColor = System.Drawing.Color.Turquoise;
-            this.EYearLabel.Location = new System.Drawing.Point(352, 427);
+            this.EYearLabel.Location = new System.Drawing.Point(365, 427);
             this.EYearLabel.Name = "EYearLabel";
             this.EYearLabel.Size = new System.Drawing.Size(29, 13);
             this.EYearLabel.TabIndex = 42;
@@ -280,7 +274,8 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(326, 451);
+            this.label16.ForeColor = System.Drawing.Color.Turquoise;
+            this.label16.Location = new System.Drawing.Point(334, 451);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(10, 13);
             this.label16.TabIndex = 37;
@@ -290,7 +285,8 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(269, 448);
+            this.label17.ForeColor = System.Drawing.Color.Turquoise;
+            this.label17.Location = new System.Drawing.Point(270, 448);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(12, 16);
             this.label17.TabIndex = 36;
@@ -394,74 +390,83 @@
             this.TagsTextBox.Size = new System.Drawing.Size(193, 20);
             this.TagsTextBox.TabIndex = 52;
             // 
-            // EventVenuelistBox1
+            // CategorycomboBox
             // 
-            this.EventVenuelistBox1.FormattingEnabled = true;
-            this.EventVenuelistBox1.Location = new System.Drawing.Point(235, 332);
-            this.EventVenuelistBox1.Name = "EventVenuelistBox1";
-            this.EventVenuelistBox1.Size = new System.Drawing.Size(193, 17);
-            this.EventVenuelistBox1.TabIndex = 53;
+            this.CategorycomboBox.FormattingEnabled = true;
+            this.CategorycomboBox.Location = new System.Drawing.Point(235, 510);
+            this.CategorycomboBox.Name = "CategorycomboBox";
+            this.CategorycomboBox.Size = new System.Drawing.Size(193, 21);
+            this.CategorycomboBox.TabIndex = 60;
             // 
-            // SDaylistBox1
+            // VenuecomboBox
             // 
-            this.SDaylistBox1.FormattingEnabled = true;
-            this.SDaylistBox1.Location = new System.Drawing.Point(231, 377);
-            this.SDaylistBox1.Name = "SDaylistBox1";
-            this.SDaylistBox1.Size = new System.Drawing.Size(32, 30);
-            this.SDaylistBox1.TabIndex = 54;
+            this.VenuecomboBox.FormattingEnabled = true;
+            this.VenuecomboBox.Location = new System.Drawing.Point(235, 329);
+            this.VenuecomboBox.Name = "VenuecomboBox";
+            this.VenuecomboBox.Size = new System.Drawing.Size(193, 21);
+            this.VenuecomboBox.TabIndex = 61;
             // 
-            // SMonthlistBox2
+            // SDaycomboBox
             // 
-            this.SMonthlistBox2.FormattingEnabled = true;
-            this.SMonthlistBox2.Location = new System.Drawing.Point(288, 377);
-            this.SMonthlistBox2.Name = "SMonthlistBox2";
-            this.SMonthlistBox2.Size = new System.Drawing.Size(34, 30);
-            this.SMonthlistBox2.TabIndex = 55;
+            this.SDaycomboBox.FormattingEnabled = true;
+            this.SDaycomboBox.Location = new System.Drawing.Point(231, 385);
+            this.SDaycomboBox.Name = "SDaycomboBox";
+            this.SDaycomboBox.Size = new System.Drawing.Size(33, 21);
+            this.SDaycomboBox.TabIndex = 62;
             // 
-            // SYearlistBox3
+            // SMonthcomboBox
             // 
-            this.SYearlistBox3.FormattingEnabled = true;
-            this.SYearlistBox3.Location = new System.Drawing.Point(346, 377);
-            this.SYearlistBox3.Name = "SYearlistBox3";
-            this.SYearlistBox3.Size = new System.Drawing.Size(52, 30);
-            this.SYearlistBox3.TabIndex = 56;
+            this.SMonthcomboBox.FormattingEnabled = true;
+            this.SMonthcomboBox.Location = new System.Drawing.Point(287, 385);
+            this.SMonthcomboBox.Name = "SMonthcomboBox";
+            this.SMonthcomboBox.Size = new System.Drawing.Size(38, 21);
+            this.SMonthcomboBox.TabIndex = 63;
             // 
-            // EdaylistBox4
+            // SYearcomboBox
             // 
-            this.EdaylistBox4.FormattingEnabled = true;
-            this.EdaylistBox4.Location = new System.Drawing.Point(231, 444);
-            this.EdaylistBox4.Name = "EdaylistBox4";
-            this.EdaylistBox4.Size = new System.Drawing.Size(32, 30);
-            this.EdaylistBox4.TabIndex = 57;
+            this.SYearcomboBox.FormattingEnabled = true;
+            this.SYearcomboBox.Location = new System.Drawing.Point(355, 385);
+            this.SYearcomboBox.Name = "SYearcomboBox";
+            this.SYearcomboBox.Size = new System.Drawing.Size(51, 21);
+            this.SYearcomboBox.TabIndex = 64;
             // 
-            // EMonthListBox5
+            // EDaycomboBox
             // 
-            this.EMonthListBox5.FormattingEnabled = true;
-            this.EMonthListBox5.Location = new System.Drawing.Point(288, 444);
-            this.EMonthListBox5.Name = "EMonthListBox5";
-            this.EMonthListBox5.Size = new System.Drawing.Size(34, 30);
-            this.EMonthListBox5.TabIndex = 58;
+            this.EDaycomboBox.FormattingEnabled = true;
+            this.EDaycomboBox.Location = new System.Drawing.Point(231, 447);
+            this.EDaycomboBox.Name = "EDaycomboBox";
+            this.EDaycomboBox.Size = new System.Drawing.Size(33, 21);
+            this.EDaycomboBox.TabIndex = 65;
             // 
-            // EYearlistBox6
+            // EMonthcomboBox
             // 
-            this.EYearlistBox6.FormattingEnabled = true;
-            this.EYearlistBox6.Location = new System.Drawing.Point(346, 443);
-            this.EYearlistBox6.Name = "EYearlistBox6";
-            this.EYearlistBox6.Size = new System.Drawing.Size(52, 30);
-            this.EYearlistBox6.TabIndex = 59;
+            this.EMonthcomboBox.FormattingEnabled = true;
+            this.EMonthcomboBox.Location = new System.Drawing.Point(287, 448);
+            this.EMonthcomboBox.Name = "EMonthcomboBox";
+            this.EMonthcomboBox.Size = new System.Drawing.Size(38, 21);
+            this.EMonthcomboBox.TabIndex = 66;
+            // 
+            // EYearcomboBox
+            // 
+            this.EYearcomboBox.FormattingEnabled = true;
+            this.EYearcomboBox.Location = new System.Drawing.Point(355, 448);
+            this.EYearcomboBox.Name = "EYearcomboBox";
+            this.EYearcomboBox.Size = new System.Drawing.Size(51, 21);
+            this.EYearcomboBox.TabIndex = 67;
             // 
             // CreateEventPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Controls.Add(this.EYearlistBox6);
-            this.Controls.Add(this.EMonthListBox5);
-            this.Controls.Add(this.EdaylistBox4);
-            this.Controls.Add(this.SYearlistBox3);
-            this.Controls.Add(this.SMonthlistBox2);
-            this.Controls.Add(this.SDaylistBox1);
-            this.Controls.Add(this.EventVenuelistBox1);
+            this.Controls.Add(this.EYearcomboBox);
+            this.Controls.Add(this.EMonthcomboBox);
+            this.Controls.Add(this.EDaycomboBox);
+            this.Controls.Add(this.SYearcomboBox);
+            this.Controls.Add(this.SMonthcomboBox);
+            this.Controls.Add(this.SDaycomboBox);
+            this.Controls.Add(this.VenuecomboBox);
+            this.Controls.Add(this.CategorycomboBox);
             this.Controls.Add(this.TagsTextBox);
             this.Controls.Add(this.TagsLabel);
             this.Controls.Add(this.EventVenueNameLabel);
@@ -484,7 +489,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.EventDescriptionRichTextbox1);
             this.Controls.Add(this.EventDescriptionlabel8);
-            this.Controls.Add(this.EventCategorylistBox1);
             this.Controls.Add(this.UploadEventPicbutton2);
             this.Controls.Add(this.CreateEventButton);
             this.Controls.Add(this.UploadEventpic);
@@ -514,7 +518,6 @@
         private System.Windows.Forms.Label StartingDateLabel;
         private System.Windows.Forms.Label EventNameLabel;
         private System.Windows.Forms.Button UploadEventPicbutton2;
-        private System.Windows.Forms.ListBox EventCategorylistBox1;
         private System.Windows.Forms.Label EventDescriptionlabel8;
         private System.Windows.Forms.RichTextBox EventDescriptionRichTextbox1;
         private System.Windows.Forms.Label label8;
@@ -537,12 +540,13 @@
         private System.Windows.Forms.Label EventVenueNameLabel;
         private System.Windows.Forms.Label TagsLabel;
         private System.Windows.Forms.TextBox TagsTextBox;
-        private System.Windows.Forms.ListBox EventVenuelistBox1;
-        private System.Windows.Forms.ListBox SDaylistBox1;
-        private System.Windows.Forms.ListBox SMonthlistBox2;
-        private System.Windows.Forms.ListBox SYearlistBox3;
-        private System.Windows.Forms.ListBox EdaylistBox4;
-        private System.Windows.Forms.ListBox EMonthListBox5;
-        private System.Windows.Forms.ListBox EYearlistBox6;
+        private System.Windows.Forms.ComboBox CategorycomboBox;
+        private System.Windows.Forms.ComboBox VenuecomboBox;
+        private System.Windows.Forms.ComboBox SDaycomboBox;
+        private System.Windows.Forms.ComboBox SMonthcomboBox;
+        private System.Windows.Forms.ComboBox SYearcomboBox;
+        private System.Windows.Forms.ComboBox EDaycomboBox;
+        private System.Windows.Forms.ComboBox EMonthcomboBox;
+        private System.Windows.Forms.ComboBox EYearcomboBox;
     }
 }
