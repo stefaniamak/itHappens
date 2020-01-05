@@ -12,13 +12,15 @@ namespace itHappens.UIs.anna
 {
     public partial class LogInPage : UserControl
     {
+        public static bool loggedInUser;
         public LogInPage()
         {
             InitializeComponent();
-        }
+        }       
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+          
             bool flag = false;
             bool validation = Controllers.LoginController.FieldsValidation(UsernameTextBox.Text, PasswordTextBox.Text, flag);
 
@@ -29,6 +31,8 @@ namespace itHappens.UIs.anna
                 {
                     //oti theloume na emfanizei meta tin sundesi
                     UIs.Sidebars.ProfileSidebar.usernameLable.Text = Controllers.LoginController.loginNameSurnameToProfile(UsernameTextBox.Text, PasswordTextBox.Text);
+                    loggedInUser = true;
+                    UIs.Sidebars.ProfileSidebar.LogoutButton.Visible = true;
                 }
                 else
                 {
