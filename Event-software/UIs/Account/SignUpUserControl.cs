@@ -37,15 +37,15 @@ namespace itHappens.UIs
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select country from area";
+                String queryString = "Select distinct country from area";
 
                 command = new MySqlCommand(queryString, con);
 
-                dataReader = command.ExecuteReader();
+                dataReader = command.ExecuteReader();              
 
                 while (dataReader.Read())
-                {
-                    areaComboBox.Items.Add(dataReader.GetString(0));
+                {                  
+                   areaComboBox.Items.Add(dataReader.GetString(0));                    
                 }
                 con.Close();
 
