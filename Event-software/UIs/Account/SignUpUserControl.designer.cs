@@ -72,8 +72,6 @@
             this.repassValLabel.Name = "repassValLabel";
             this.repassValLabel.Size = new System.Drawing.Size(223, 28);
             this.repassValLabel.TabIndex = 49;
-            this.repassValLabel.Validating += new System.ComponentModel.CancelEventHandler(this.repassTextBox_Validating);
-            this.repassValLabel.Validated += new System.EventHandler(this.repassTextBox_Validated);
             // 
             // passwordValLabel
             // 
@@ -83,8 +81,6 @@
             this.passwordValLabel.Name = "passwordValLabel";
             this.passwordValLabel.Size = new System.Drawing.Size(223, 28);
             this.passwordValLabel.TabIndex = 48;
-            this.passwordValLabel.Validating += new System.ComponentModel.CancelEventHandler(this.passwordTextBox_Validating);
-            this.passwordValLabel.Validated += new System.EventHandler(this.passwordTextBox_Validated);
             // 
             // usernameValLabel
             // 
@@ -94,8 +90,6 @@
             this.usernameValLabel.Name = "usernameValLabel";
             this.usernameValLabel.Size = new System.Drawing.Size(223, 28);
             this.usernameValLabel.TabIndex = 47;
-            this.usernameValLabel.Validating += new System.ComponentModel.CancelEventHandler(this.usernameTextBox_Validating);
-            this.usernameValLabel.Validated += new System.EventHandler(this.usernameTextBox_Validated);
             // 
             // emailValLabel
             // 
@@ -105,8 +99,6 @@
             this.emailValLabel.Name = "emailValLabel";
             this.emailValLabel.Size = new System.Drawing.Size(223, 28);
             this.emailValLabel.TabIndex = 46;
-            this.emailValLabel.Validating += new System.ComponentModel.CancelEventHandler(this.emailTextBox_Validating);
-            this.emailValLabel.Validated += new System.EventHandler(this.emailTextBox_Validated);
             // 
             // surnameValLabel
             // 
@@ -116,8 +108,6 @@
             this.surnameValLabel.Name = "surnameValLabel";
             this.surnameValLabel.Size = new System.Drawing.Size(223, 28);
             this.surnameValLabel.TabIndex = 45;
-            this.surnameValLabel.Validating += new System.ComponentModel.CancelEventHandler(this.surnameTextBox_Validating);
-            this.surnameValLabel.Validated += new System.EventHandler(this.surnameTextBox_Validated);
             // 
             // nameValLabel
             // 
@@ -127,8 +117,6 @@
             this.nameValLabel.Name = "nameValLabel";
             this.nameValLabel.Size = new System.Drawing.Size(223, 28);
             this.nameValLabel.TabIndex = 44;
-            this.nameValLabel.Validating += new System.ComponentModel.CancelEventHandler(this.nameTextBox_Validating);
-            this.nameValLabel.Validated += new System.EventHandler(this.nameTextBox_Validated);
             // 
             // numericUpDown
             // 
@@ -202,6 +190,8 @@
             this.repassTextBox.Size = new System.Drawing.Size(262, 20);
             this.repassTextBox.TabIndex = 38;
             this.repassTextBox.UseSystemPasswordChar = true;
+            this.repassTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.repassTextBox_Validating);
+            this.repassTextBox.Validated += new System.EventHandler(this.repassTextBox_Validated);
             // 
             // repassLabel
             // 
@@ -222,6 +212,8 @@
             this.passwordTextBox.Size = new System.Drawing.Size(262, 20);
             this.passwordTextBox.TabIndex = 36;
             this.passwordTextBox.UseSystemPasswordChar = true;
+            this.passwordTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.passwordTextBox_Validating);
+            this.passwordTextBox.Validated += new System.EventHandler(this.passwordTextBox_Validated);
             // 
             // passwordLabel
             // 
@@ -241,6 +233,8 @@
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(262, 20);
             this.usernameTextBox.TabIndex = 34;
+            this.usernameTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.usernameTextBox_Validating);
+            this.usernameTextBox.Validated += new System.EventHandler(this.usernameTextBox_Validated);
             // 
             // usernameLabel
             // 
@@ -260,6 +254,8 @@
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(262, 20);
             this.emailTextBox.TabIndex = 32;
+            this.emailTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.emailTextBox_Validating);
+            this.emailTextBox.Validated += new System.EventHandler(this.emailTextBox_Validated);
             // 
             // emailLabel
             // 
@@ -279,6 +275,8 @@
             this.surnameTextBox.Name = "surnameTextBox";
             this.surnameTextBox.Size = new System.Drawing.Size(262, 20);
             this.surnameTextBox.TabIndex = 30;
+            this.surnameTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.surnameTextBox_Validating);
+            this.surnameTextBox.Validated += new System.EventHandler(this.surnameTextBox_Validated);
             // 
             // nameTextBox
             // 
@@ -287,6 +285,8 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(262, 20);
             this.nameTextBox.TabIndex = 29;
+            this.nameTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.nameTextBox_Validating);
+            this.nameTextBox.Validated += new System.EventHandler(this.nameTextBox_Validated);
             // 
             // surnameLabel
             // 
@@ -325,6 +325,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.Controls.Add(this.areaValLabel);
             this.Controls.Add(this.repassValLabel);

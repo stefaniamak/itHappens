@@ -68,6 +68,8 @@
             this.EdaylistBox4 = new System.Windows.Forms.ListBox();
             this.EMonthListBox5 = new System.Windows.Forms.ListBox();
             this.EYearlistBox6 = new System.Windows.Forms.ListBox();
+            this.privateCheckBox = new System.Windows.Forms.CheckBox();
+            this.privacyLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -171,7 +173,7 @@
             // EventDescriptionlabel8
             // 
             this.EventDescriptionlabel8.AutoSize = true;
-            this.EventDescriptionlabel8.Location = new System.Drawing.Point(84, 668);
+            this.EventDescriptionlabel8.Location = new System.Drawing.Point(86, 681);
             this.EventDescriptionlabel8.Name = "EventDescriptionlabel8";
             this.EventDescriptionlabel8.Size = new System.Drawing.Size(63, 13);
             this.EventDescriptionlabel8.TabIndex = 25;
@@ -179,9 +181,9 @@
             // 
             // EventDescriptionRichTextbox1
             // 
-            this.EventDescriptionRichTextbox1.Location = new System.Drawing.Point(235, 668);
+            this.EventDescriptionRichTextbox1.Location = new System.Drawing.Point(235, 681);
             this.EventDescriptionRichTextbox1.Name = "EventDescriptionRichTextbox1";
-            this.EventDescriptionRichTextbox1.Size = new System.Drawing.Size(201, 96);
+            this.EventDescriptionRichTextbox1.Size = new System.Drawing.Size(201, 75);
             this.EventDescriptionRichTextbox1.TabIndex = 26;
             this.EventDescriptionRichTextbox1.Text = "";
             // 
@@ -189,7 +191,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(269, 383);
+            this.label8.Location = new System.Drawing.Point(273, 391);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(12, 16);
             this.label8.TabIndex = 27;
@@ -198,7 +200,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(326, 385);
+            this.label9.Location = new System.Drawing.Point(330, 393);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(10, 13);
             this.label9.TabIndex = 28;
@@ -207,7 +209,7 @@
             // SDayLabel
             // 
             this.SDayLabel.AutoSize = true;
-            this.SDayLabel.Location = new System.Drawing.Point(232, 361);
+            this.SDayLabel.Location = new System.Drawing.Point(236, 369);
             this.SDayLabel.Name = "SDayLabel";
             this.SDayLabel.Size = new System.Drawing.Size(26, 13);
             this.SDayLabel.TabIndex = 31;
@@ -216,7 +218,7 @@
             // SMonthLabel
             // 
             this.SMonthLabel.AutoSize = true;
-            this.SMonthLabel.Location = new System.Drawing.Point(285, 361);
+            this.SMonthLabel.Location = new System.Drawing.Point(289, 369);
             this.SMonthLabel.Name = "SMonthLabel";
             this.SMonthLabel.Size = new System.Drawing.Size(37, 13);
             this.SMonthLabel.TabIndex = 32;
@@ -225,7 +227,7 @@
             // SYearLabel
             // 
             this.SYearLabel.AutoSize = true;
-            this.SYearLabel.Location = new System.Drawing.Point(352, 361);
+            this.SYearLabel.Location = new System.Drawing.Point(356, 369);
             this.SYearLabel.Name = "SYearLabel";
             this.SYearLabel.Size = new System.Drawing.Size(29, 13);
             this.SYearLabel.TabIndex = 33;
@@ -234,7 +236,7 @@
             // EYearLabel
             // 
             this.EYearLabel.AutoSize = true;
-            this.EYearLabel.Location = new System.Drawing.Point(352, 427);
+            this.EYearLabel.Location = new System.Drawing.Point(356, 435);
             this.EYearLabel.Name = "EYearLabel";
             this.EYearLabel.Size = new System.Drawing.Size(29, 13);
             this.EYearLabel.TabIndex = 42;
@@ -243,7 +245,7 @@
             // EMonthLabel
             // 
             this.EMonthLabel.AutoSize = true;
-            this.EMonthLabel.Location = new System.Drawing.Point(285, 427);
+            this.EMonthLabel.Location = new System.Drawing.Point(289, 435);
             this.EMonthLabel.Name = "EMonthLabel";
             this.EMonthLabel.Size = new System.Drawing.Size(37, 13);
             this.EMonthLabel.TabIndex = 41;
@@ -252,7 +254,7 @@
             // EDayLabel
             // 
             this.EDayLabel.AutoSize = true;
-            this.EDayLabel.Location = new System.Drawing.Point(232, 427);
+            this.EDayLabel.Location = new System.Drawing.Point(236, 435);
             this.EDayLabel.Name = "EDayLabel";
             this.EDayLabel.Size = new System.Drawing.Size(26, 13);
             this.EDayLabel.TabIndex = 40;
@@ -261,7 +263,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(326, 451);
+            this.label16.Location = new System.Drawing.Point(330, 459);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(10, 13);
             this.label16.TabIndex = 37;
@@ -271,7 +273,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(269, 448);
+            this.label17.Location = new System.Drawing.Point(273, 456);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(12, 16);
             this.label17.TabIndex = 36;
@@ -373,7 +375,7 @@
             // SDaylistBox1
             // 
             this.SDaylistBox1.FormattingEnabled = true;
-            this.SDaylistBox1.Location = new System.Drawing.Point(231, 377);
+            this.SDaylistBox1.Location = new System.Drawing.Point(235, 385);
             this.SDaylistBox1.Name = "SDaylistBox1";
             this.SDaylistBox1.Size = new System.Drawing.Size(32, 30);
             this.SDaylistBox1.TabIndex = 54;
@@ -381,7 +383,7 @@
             // SMonthlistBox2
             // 
             this.SMonthlistBox2.FormattingEnabled = true;
-            this.SMonthlistBox2.Location = new System.Drawing.Point(288, 377);
+            this.SMonthlistBox2.Location = new System.Drawing.Point(292, 385);
             this.SMonthlistBox2.Name = "SMonthlistBox2";
             this.SMonthlistBox2.Size = new System.Drawing.Size(34, 30);
             this.SMonthlistBox2.TabIndex = 55;
@@ -389,7 +391,7 @@
             // SYearlistBox3
             // 
             this.SYearlistBox3.FormattingEnabled = true;
-            this.SYearlistBox3.Location = new System.Drawing.Point(346, 377);
+            this.SYearlistBox3.Location = new System.Drawing.Point(350, 385);
             this.SYearlistBox3.Name = "SYearlistBox3";
             this.SYearlistBox3.Size = new System.Drawing.Size(52, 30);
             this.SYearlistBox3.TabIndex = 56;
@@ -397,7 +399,7 @@
             // EdaylistBox4
             // 
             this.EdaylistBox4.FormattingEnabled = true;
-            this.EdaylistBox4.Location = new System.Drawing.Point(231, 444);
+            this.EdaylistBox4.Location = new System.Drawing.Point(235, 452);
             this.EdaylistBox4.Name = "EdaylistBox4";
             this.EdaylistBox4.Size = new System.Drawing.Size(32, 30);
             this.EdaylistBox4.TabIndex = 57;
@@ -405,7 +407,7 @@
             // EMonthListBox5
             // 
             this.EMonthListBox5.FormattingEnabled = true;
-            this.EMonthListBox5.Location = new System.Drawing.Point(288, 444);
+            this.EMonthListBox5.Location = new System.Drawing.Point(292, 452);
             this.EMonthListBox5.Name = "EMonthListBox5";
             this.EMonthListBox5.Size = new System.Drawing.Size(34, 30);
             this.EMonthListBox5.TabIndex = 58;
@@ -413,15 +415,37 @@
             // EYearlistBox6
             // 
             this.EYearlistBox6.FormattingEnabled = true;
-            this.EYearlistBox6.Location = new System.Drawing.Point(346, 443);
+            this.EYearlistBox6.Location = new System.Drawing.Point(350, 451);
             this.EYearlistBox6.Name = "EYearlistBox6";
             this.EYearlistBox6.Size = new System.Drawing.Size(52, 30);
             this.EYearlistBox6.TabIndex = 59;
+            // 
+            // privateCheckBox
+            // 
+            this.privateCheckBox.AutoSize = true;
+            this.privateCheckBox.Location = new System.Drawing.Point(235, 645);
+            this.privateCheckBox.Name = "privateCheckBox";
+            this.privateCheckBox.Size = new System.Drawing.Size(59, 17);
+            this.privateCheckBox.TabIndex = 60;
+            this.privateCheckBox.Text = "Private";
+            this.privateCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // privacyLabel
+            // 
+            this.privacyLabel.AutoSize = true;
+            this.privacyLabel.Location = new System.Drawing.Point(86, 645);
+            this.privacyLabel.Name = "privacyLabel";
+            this.privacyLabel.Size = new System.Drawing.Size(45, 13);
+            this.privacyLabel.TabIndex = 61;
+            this.privacyLabel.Text = "Privacy:";
             // 
             // CreateEventPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.Controls.Add(this.privacyLabel);
+            this.Controls.Add(this.privateCheckBox);
             this.Controls.Add(this.EYearlistBox6);
             this.Controls.Add(this.EMonthListBox5);
             this.Controls.Add(this.EdaylistBox4);
@@ -511,5 +535,7 @@
         private System.Windows.Forms.ListBox EdaylistBox4;
         private System.Windows.Forms.ListBox EMonthListBox5;
         private System.Windows.Forms.ListBox EYearlistBox6;
+        private System.Windows.Forms.CheckBox privateCheckBox;
+        private System.Windows.Forms.Label privacyLabel;
     }
 }
