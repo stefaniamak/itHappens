@@ -16,5 +16,10 @@ namespace itHappens.UIs.Common
         {
             InitializeComponent();
         }
+
+        private void categoryName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

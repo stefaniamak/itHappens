@@ -28,420 +28,506 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.ProfileTab = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.SettingsTab = new System.Windows.Forms.TabControl();
+            this.ProfileSettingsTab = new System.Windows.Forms.TabPage();
+            this.ProfileTitleLabel = new System.Windows.Forms.Label();
+            this.RegionSettingsTextBox = new System.Windows.Forms.TextBox();
+            this.RegionSettingsLabel = new System.Windows.Forms.Label();
+            this.ProfilePictureBoxEdit = new System.Windows.Forms.PictureBox();
+            this.UpdateChangesButton = new System.Windows.Forms.Button();
+            this.NameSettingsTextBox = new System.Windows.Forms.TextBox();
+            this.RepeatNewPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.ProfilePictureLabel = new System.Windows.Forms.Label();
+            this.NewPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.EditPictureButton = new System.Windows.Forms.Button();
+            this.PasswordSettingsLabel = new System.Windows.Forms.Label();
+            this.NameSettingsLabel = new System.Windows.Forms.Label();
+            this.LanguageSettingsComboBox = new System.Windows.Forms.ComboBox();
+            this.EmailSettingsLabel = new System.Windows.Forms.Label();
+            this.EmailSettingsTextBox = new System.Windows.Forms.TextBox();
+            this.LanguageSettingsLabel = new System.Windows.Forms.Label();
+            this.NotificationsTabPage = new System.Windows.Forms.TabPage();
+            this.EventsNearbyNoticeCheckBox = new System.Windows.Forms.CheckBox();
+            this.FriendAttendsCheckBox = new System.Windows.Forms.CheckBox();
+            this.NewEventNoticeCheckBox = new System.Windows.Forms.CheckBox();
+            this.FollowNoticeCheckBox = new System.Windows.Forms.CheckBox();
+            this.EventsNearbyLabel = new System.Windows.Forms.Label();
+            this.FriendAttendsNoticeLabel = new System.Windows.Forms.Label();
+            this.NewEventsNoticeLabel = new System.Windows.Forms.Label();
+            this.FollowNoticeLabel = new System.Windows.Forms.Label();
+            this.PushNotificationsLabel = new System.Windows.Forms.Label();
+            this.LinkedAccountsTabPage = new System.Windows.Forms.TabPage();
+            this.ConnectFacebookButton = new System.Windows.Forms.Button();
+            this.FacebookLabel = new System.Windows.Forms.Label();
+            this.LinkedAccountsLabel = new System.Windows.Forms.Label();
+            this.DeleteAccountTabPage = new System.Windows.Forms.TabPage();
+            this.DangerZoneLabel = new System.Windows.Forms.Label();
+            this.DeleteAccountButton = new System.Windows.Forms.Button();
+            this.AccountLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.ProfileTab.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.SettingsTab.SuspendLayout();
+            this.ProfileSettingsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfilePictureBoxEdit)).BeginInit();
+            this.NotificationsTabPage.SuspendLayout();
+            this.LinkedAccountsTabPage.SuspendLayout();
+            this.DeleteAccountTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
-            // checkBox4
+            // SettingsTab
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(107, 71);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 44;
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // ProfileTab
-            // 
-            this.ProfileTab.AccessibleDescription = "";
-            this.ProfileTab.AccessibleName = "";
-            this.ProfileTab.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SettingsTab.AccessibleDescription = "";
+            this.SettingsTab.AccessibleName = "";
+            this.SettingsTab.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ProfileTab.Controls.Add(this.tabPage1);
-            this.ProfileTab.Controls.Add(this.tabPage2);
-            this.ProfileTab.Controls.Add(this.tabPage3);
-            this.ProfileTab.Controls.Add(this.tabPage4);
-            this.ProfileTab.Location = new System.Drawing.Point(0, 1);
-            this.ProfileTab.Name = "ProfileTab";
-            this.ProfileTab.SelectedIndex = 0;
-            this.ProfileTab.Size = new System.Drawing.Size(836, 541);
-            this.ProfileTab.TabIndex = 45;
+            this.SettingsTab.Controls.Add(this.ProfileSettingsTab);
+            this.SettingsTab.Controls.Add(this.NotificationsTabPage);
+            this.SettingsTab.Controls.Add(this.LinkedAccountsTabPage);
+            this.SettingsTab.Controls.Add(this.DeleteAccountTabPage);
+            this.SettingsTab.Location = new System.Drawing.Point(0, 1);
+            this.SettingsTab.Name = "SettingsTab";
+            this.SettingsTab.SelectedIndex = 0;
+            this.SettingsTab.Size = new System.Drawing.Size(836, 541);
+            this.SettingsTab.TabIndex = 45;
             // 
-            // tabPage1
+            // ProfileSettingsTab
             // 
-            this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.label14);
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.comboBox1);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(828, 515);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Profile";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.ProfileSettingsTab.AutoScroll = true;
+            this.ProfileSettingsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ProfileSettingsTab.Controls.Add(this.radioButton2);
+            this.ProfileSettingsTab.Controls.Add(this.radioButton1);
+            this.ProfileSettingsTab.Controls.Add(this.label1);
+            this.ProfileSettingsTab.Controls.Add(this.ProfileTitleLabel);
+            this.ProfileSettingsTab.Controls.Add(this.RegionSettingsTextBox);
+            this.ProfileSettingsTab.Controls.Add(this.RegionSettingsLabel);
+            this.ProfileSettingsTab.Controls.Add(this.ProfilePictureBoxEdit);
+            this.ProfileSettingsTab.Controls.Add(this.UpdateChangesButton);
+            this.ProfileSettingsTab.Controls.Add(this.NameSettingsTextBox);
+            this.ProfileSettingsTab.Controls.Add(this.RepeatNewPasswordTextBox);
+            this.ProfileSettingsTab.Controls.Add(this.ProfilePictureLabel);
+            this.ProfileSettingsTab.Controls.Add(this.NewPasswordTextBox);
+            this.ProfileSettingsTab.Controls.Add(this.EditPictureButton);
+            this.ProfileSettingsTab.Controls.Add(this.PasswordSettingsLabel);
+            this.ProfileSettingsTab.Controls.Add(this.NameSettingsLabel);
+            this.ProfileSettingsTab.Controls.Add(this.LanguageSettingsComboBox);
+            this.ProfileSettingsTab.Controls.Add(this.EmailSettingsLabel);
+            this.ProfileSettingsTab.Controls.Add(this.EmailSettingsTextBox);
+            this.ProfileSettingsTab.Controls.Add(this.LanguageSettingsLabel);
+            this.ProfileSettingsTab.Location = new System.Drawing.Point(4, 22);
+            this.ProfileSettingsTab.Name = "ProfileSettingsTab";
+            this.ProfileSettingsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ProfileSettingsTab.Size = new System.Drawing.Size(828, 515);
+            this.ProfileSettingsTab.TabIndex = 0;
+            this.ProfileSettingsTab.Text = "Profile";
             // 
-            // label15
+            // ProfileTitleLabel
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(285, 51);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(104, 31);
-            this.label15.TabIndex = 19;
-            this.label15.Text = "Profile";
+            this.ProfileTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ProfileTitleLabel.AutoSize = true;
+            this.ProfileTitleLabel.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProfileTitleLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.ProfileTitleLabel.Location = new System.Drawing.Point(276, 51);
+            this.ProfileTitleLabel.Name = "ProfileTitleLabel";
+            this.ProfileTitleLabel.Size = new System.Drawing.Size(129, 44);
+            this.ProfileTitleLabel.TabIndex = 19;
+            this.ProfileTitleLabel.Text = "Profile";
+            this.ProfileTitleLabel.Click += new System.EventHandler(this.ProfileTitleSettings_Click);
             // 
-            // textBox5
+            // RegionSettingsTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(291, 467);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textBox5.Size = new System.Drawing.Size(136, 20);
-            this.textBox5.TabIndex = 16;
+            this.RegionSettingsTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.RegionSettingsTextBox.Location = new System.Drawing.Point(282, 531);
+            this.RegionSettingsTextBox.Name = "RegionSettingsTextBox";
+            this.RegionSettingsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.RegionSettingsTextBox.Size = new System.Drawing.Size(136, 20);
+            this.RegionSettingsTextBox.TabIndex = 16;
             // 
-            // label14
+            // RegionSettingsLabel
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(288, 451);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 13);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Region";
+            this.RegionSettingsLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.RegionSettingsLabel.AutoSize = true;
+            this.RegionSettingsLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.RegionSettingsLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.RegionSettingsLabel.Location = new System.Drawing.Point(278, 507);
+            this.RegionSettingsLabel.Name = "RegionSettingsLabel";
+            this.RegionSettingsLabel.Size = new System.Drawing.Size(60, 20);
+            this.RegionSettingsLabel.TabIndex = 15;
+            this.RegionSettingsLabel.Text = "Region";
             // 
-            // pictureBox1
+            // ProfilePictureBoxEdit
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(291, 143);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 99);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.ProfilePictureBoxEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ProfilePictureBoxEdit.Location = new System.Drawing.Point(282, 143);
+            this.ProfilePictureBoxEdit.Name = "ProfilePictureBoxEdit";
+            this.ProfilePictureBoxEdit.Size = new System.Drawing.Size(136, 127);
+            this.ProfilePictureBoxEdit.TabIndex = 2;
+            this.ProfilePictureBoxEdit.TabStop = false;
             // 
-            // button2
+            // UpdateChangesButton
             // 
-            this.button2.Location = new System.Drawing.Point(292, 580);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(198, 32);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Update Changes";
-            this.button2.UseVisualStyleBackColor = true;
+            this.UpdateChangesButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.UpdateChangesButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.UpdateChangesButton.ForeColor = System.Drawing.Color.DarkOrange;
+            this.UpdateChangesButton.Location = new System.Drawing.Point(282, 702);
+            this.UpdateChangesButton.Name = "UpdateChangesButton";
+            this.UpdateChangesButton.Size = new System.Drawing.Size(198, 32);
+            this.UpdateChangesButton.TabIndex = 14;
+            this.UpdateChangesButton.Text = "Update Changes";
+            this.UpdateChangesButton.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // NameSettingsTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(291, 289);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 20);
-            this.textBox1.TabIndex = 1;
+            this.NameSettingsTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.NameSettingsTextBox.Location = new System.Drawing.Point(282, 313);
+            this.NameSettingsTextBox.Name = "NameSettingsTextBox";
+            this.NameSettingsTextBox.Size = new System.Drawing.Size(136, 20);
+            this.NameSettingsTextBox.TabIndex = 1;
             // 
-            // textBox4
+            // RepeatNewPasswordTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(291, 365);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(136, 20);
-            this.textBox4.TabIndex = 13;
+            this.RepeatNewPasswordTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.RepeatNewPasswordTextBox.Location = new System.Drawing.Point(283, 405);
+            this.RepeatNewPasswordTextBox.Name = "RepeatNewPasswordTextBox";
+            this.RepeatNewPasswordTextBox.Size = new System.Drawing.Size(136, 20);
+            this.RepeatNewPasswordTextBox.TabIndex = 13;
             // 
-            // label2
+            // ProfilePictureLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(288, 127);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Profile Picture";
+            this.ProfilePictureLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ProfilePictureLabel.AutoSize = true;
+            this.ProfilePictureLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.ProfilePictureLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.ProfilePictureLabel.Location = new System.Drawing.Point(278, 120);
+            this.ProfilePictureLabel.Name = "ProfilePictureLabel";
+            this.ProfilePictureLabel.Size = new System.Drawing.Size(109, 20);
+            this.ProfilePictureLabel.TabIndex = 3;
+            this.ProfilePictureLabel.Text = "Profile Picture";
             // 
-            // textBox3
+            // NewPasswordTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(291, 339);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(136, 20);
-            this.textBox3.TabIndex = 12;
+            this.NewPasswordTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.NewPasswordTextBox.Location = new System.Drawing.Point(283, 380);
+            this.NewPasswordTextBox.Name = "NewPasswordTextBox";
+            this.NewPasswordTextBox.Size = new System.Drawing.Size(136, 20);
+            this.NewPasswordTextBox.TabIndex = 12;
+            this.NewPasswordTextBox.TextChanged += new System.EventHandler(this.NewPasswordTextBox_TextChanged);
             // 
-            // button1
+            // EditPictureButton
             // 
-            this.button1.Location = new System.Drawing.Point(414, 219);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.EditPictureButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.EditPictureButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.EditPictureButton.ForeColor = System.Drawing.Color.DarkOrange;
+            this.EditPictureButton.Location = new System.Drawing.Point(438, 236);
+            this.EditPictureButton.Name = "EditPictureButton";
+            this.EditPictureButton.Size = new System.Drawing.Size(85, 34);
+            this.EditPictureButton.TabIndex = 4;
+            this.EditPictureButton.Text = "Edit";
+            this.EditPictureButton.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // PasswordSettingsLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(288, 323);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Password";
+            this.PasswordSettingsLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PasswordSettingsLabel.AutoSize = true;
+            this.PasswordSettingsLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.PasswordSettingsLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.PasswordSettingsLabel.Location = new System.Drawing.Point(279, 354);
+            this.PasswordSettingsLabel.Name = "PasswordSettingsLabel";
+            this.PasswordSettingsLabel.Size = new System.Drawing.Size(180, 20);
+            this.PasswordSettingsLabel.TabIndex = 11;
+            this.PasswordSettingsLabel.Text = "Change your password";
             // 
-            // label3
+            // NameSettingsLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(288, 273);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Name";
+            this.NameSettingsLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.NameSettingsLabel.AutoSize = true;
+            this.NameSettingsLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.NameSettingsLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.NameSettingsLabel.Location = new System.Drawing.Point(279, 290);
+            this.NameSettingsLabel.Name = "NameSettingsLabel";
+            this.NameSettingsLabel.Size = new System.Drawing.Size(53, 20);
+            this.NameSettingsLabel.TabIndex = 5;
+            this.NameSettingsLabel.Text = "Name";
             // 
-            // comboBox1
+            // LanguageSettingsComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(291, 524);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(136, 21);
-            this.comboBox1.TabIndex = 10;
+            this.LanguageSettingsComboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LanguageSettingsComboBox.FormattingEnabled = true;
+            this.LanguageSettingsComboBox.Location = new System.Drawing.Point(282, 595);
+            this.LanguageSettingsComboBox.Name = "LanguageSettingsComboBox";
+            this.LanguageSettingsComboBox.Size = new System.Drawing.Size(136, 21);
+            this.LanguageSettingsComboBox.TabIndex = 10;
             // 
-            // label4
+            // EmailSettingsLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(288, 397);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Email";
+            this.EmailSettingsLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.EmailSettingsLabel.AutoSize = true;
+            this.EmailSettingsLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.EmailSettingsLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.EmailSettingsLabel.Location = new System.Drawing.Point(279, 444);
+            this.EmailSettingsLabel.Name = "EmailSettingsLabel";
+            this.EmailSettingsLabel.Size = new System.Drawing.Size(46, 20);
+            this.EmailSettingsLabel.TabIndex = 6;
+            this.EmailSettingsLabel.Text = "Email";
             // 
-            // textBox2
+            // EmailSettingsTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(291, 413);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 20);
-            this.textBox2.TabIndex = 8;
+            this.EmailSettingsTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.EmailSettingsTextBox.Location = new System.Drawing.Point(283, 468);
+            this.EmailSettingsTextBox.Name = "EmailSettingsTextBox";
+            this.EmailSettingsTextBox.Size = new System.Drawing.Size(136, 20);
+            this.EmailSettingsTextBox.TabIndex = 8;
             // 
-            // label5
+            // LanguageSettingsLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(288, 508);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Language";
+            this.LanguageSettingsLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LanguageSettingsLabel.AutoSize = true;
+            this.LanguageSettingsLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.LanguageSettingsLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.LanguageSettingsLabel.Location = new System.Drawing.Point(279, 570);
+            this.LanguageSettingsLabel.Name = "LanguageSettingsLabel";
+            this.LanguageSettingsLabel.Size = new System.Drawing.Size(84, 20);
+            this.LanguageSettingsLabel.TabIndex = 7;
+            this.LanguageSettingsLabel.Text = "Language";
             // 
-            // tabPage2
+            // NotificationsTabPage
             // 
-            this.tabPage2.Controls.Add(this.checkBox1);
-            this.tabPage2.Controls.Add(this.checkBox3);
-            this.tabPage2.Controls.Add(this.checkBox2);
-            this.tabPage2.Controls.Add(this.checkBox5);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(828, 515);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Notifications";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.NotificationsTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.NotificationsTabPage.Controls.Add(this.EventsNearbyNoticeCheckBox);
+            this.NotificationsTabPage.Controls.Add(this.FriendAttendsCheckBox);
+            this.NotificationsTabPage.Controls.Add(this.NewEventNoticeCheckBox);
+            this.NotificationsTabPage.Controls.Add(this.FollowNoticeCheckBox);
+            this.NotificationsTabPage.Controls.Add(this.EventsNearbyLabel);
+            this.NotificationsTabPage.Controls.Add(this.FriendAttendsNoticeLabel);
+            this.NotificationsTabPage.Controls.Add(this.NewEventsNoticeLabel);
+            this.NotificationsTabPage.Controls.Add(this.FollowNoticeLabel);
+            this.NotificationsTabPage.Controls.Add(this.PushNotificationsLabel);
+            this.NotificationsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.NotificationsTabPage.Name = "NotificationsTabPage";
+            this.NotificationsTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.NotificationsTabPage.Size = new System.Drawing.Size(828, 515);
+            this.NotificationsTabPage.TabIndex = 1;
+            this.NotificationsTabPage.Text = "Notifications";
             // 
-            // checkBox1
+            // EventsNearbyNoticeCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(526, 270);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.EventsNearbyNoticeCheckBox.AutoSize = true;
+            this.EventsNearbyNoticeCheckBox.Location = new System.Drawing.Point(568, 278);
+            this.EventsNearbyNoticeCheckBox.Name = "EventsNearbyNoticeCheckBox";
+            this.EventsNearbyNoticeCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.EventsNearbyNoticeCheckBox.TabIndex = 8;
+            this.EventsNearbyNoticeCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // FriendAttendsCheckBox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(526, 225);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 7;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.FriendAttendsCheckBox.AutoSize = true;
+            this.FriendAttendsCheckBox.Location = new System.Drawing.Point(568, 233);
+            this.FriendAttendsCheckBox.Name = "FriendAttendsCheckBox";
+            this.FriendAttendsCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.FriendAttendsCheckBox.TabIndex = 7;
+            this.FriendAttendsCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // NewEventNoticeCheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(526, 174);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.NewEventNoticeCheckBox.AutoSize = true;
+            this.NewEventNoticeCheckBox.Location = new System.Drawing.Point(568, 181);
+            this.NewEventNoticeCheckBox.Name = "NewEventNoticeCheckBox";
+            this.NewEventNoticeCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.NewEventNoticeCheckBox.TabIndex = 6;
+            this.NewEventNoticeCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // FollowNoticeCheckBox
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(526, 132);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
-            this.checkBox5.TabIndex = 5;
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.FollowNoticeCheckBox.AutoSize = true;
+            this.FollowNoticeCheckBox.Location = new System.Drawing.Point(568, 139);
+            this.FollowNoticeCheckBox.Name = "FollowNoticeCheckBox";
+            this.FollowNoticeCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.FollowNoticeCheckBox.TabIndex = 5;
+            this.FollowNoticeCheckBox.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // EventsNearbyLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(287, 271);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(77, 13);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Events Nearby";
+            this.EventsNearbyLabel.AutoSize = true;
+            this.EventsNearbyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.EventsNearbyLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.EventsNearbyLabel.Location = new System.Drawing.Point(263, 274);
+            this.EventsNearbyLabel.Name = "EventsNearbyLabel";
+            this.EventsNearbyLabel.Size = new System.Drawing.Size(104, 18);
+            this.EventsNearbyLabel.TabIndex = 4;
+            this.EventsNearbyLabel.Text = "Events Nearby";
             // 
-            // label9
+            // FriendAttendsNoticeLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(287, 226);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(207, 13);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "A friend is coming to an event you\'re going";
+            this.FriendAttendsNoticeLabel.AutoSize = true;
+            this.FriendAttendsNoticeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.FriendAttendsNoticeLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.FriendAttendsNoticeLabel.Location = new System.Drawing.Point(263, 229);
+            this.FriendAttendsNoticeLabel.Name = "FriendAttendsNoticeLabel";
+            this.FriendAttendsNoticeLabel.Size = new System.Drawing.Size(285, 18);
+            this.FriendAttendsNoticeLabel.TabIndex = 3;
+            this.FriendAttendsNoticeLabel.Text = "A friend is coming to an event you\'re going";
             // 
-            // label8
+            // NewEventsNoticeLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(287, 174);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "New events to check";
+            this.NewEventsNoticeLabel.AutoSize = true;
+            this.NewEventsNoticeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.NewEventsNoticeLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.NewEventsNoticeLabel.Location = new System.Drawing.Point(263, 177);
+            this.NewEventsNoticeLabel.Name = "NewEventsNoticeLabel";
+            this.NewEventsNoticeLabel.Size = new System.Drawing.Size(146, 18);
+            this.NewEventsNoticeLabel.TabIndex = 2;
+            this.NewEventsNoticeLabel.Text = "New events to check";
             // 
-            // label7
+            // FollowNoticeLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(287, 132);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Someone follows me";
+            this.FollowNoticeLabel.AutoSize = true;
+            this.FollowNoticeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.FollowNoticeLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.FollowNoticeLabel.Location = new System.Drawing.Point(263, 135);
+            this.FollowNoticeLabel.Name = "FollowNoticeLabel";
+            this.FollowNoticeLabel.Size = new System.Drawing.Size(149, 18);
+            this.FollowNoticeLabel.TabIndex = 1;
+            this.FollowNoticeLabel.Text = "Someone follows me";
+            // 
+            // PushNotificationsLabel
+            // 
+            this.PushNotificationsLabel.AutoSize = true;
+            this.PushNotificationsLabel.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.PushNotificationsLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.PushNotificationsLabel.Location = new System.Drawing.Point(258, 58);
+            this.PushNotificationsLabel.Name = "PushNotificationsLabel";
+            this.PushNotificationsLabel.Size = new System.Drawing.Size(331, 44);
+            this.PushNotificationsLabel.TabIndex = 0;
+            this.PushNotificationsLabel.Text = "Push Notifications";
+            // 
+            // LinkedAccountsTabPage
+            // 
+            this.LinkedAccountsTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LinkedAccountsTabPage.Controls.Add(this.ConnectFacebookButton);
+            this.LinkedAccountsTabPage.Controls.Add(this.FacebookLabel);
+            this.LinkedAccountsTabPage.Controls.Add(this.LinkedAccountsLabel);
+            this.LinkedAccountsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.LinkedAccountsTabPage.Name = "LinkedAccountsTabPage";
+            this.LinkedAccountsTabPage.Size = new System.Drawing.Size(828, 515);
+            this.LinkedAccountsTabPage.TabIndex = 2;
+            this.LinkedAccountsTabPage.Text = "Linked Accounts";
+            // 
+            // ConnectFacebookButton
+            // 
+            this.ConnectFacebookButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.ConnectFacebookButton.ForeColor = System.Drawing.Color.DarkOrange;
+            this.ConnectFacebookButton.Location = new System.Drawing.Point(402, 141);
+            this.ConnectFacebookButton.Name = "ConnectFacebookButton";
+            this.ConnectFacebookButton.Size = new System.Drawing.Size(140, 29);
+            this.ConnectFacebookButton.TabIndex = 2;
+            this.ConnectFacebookButton.Text = "Connect Facebook";
+            this.ConnectFacebookButton.UseVisualStyleBackColor = true;
+            // 
+            // FacebookLabel
+            // 
+            this.FacebookLabel.AutoSize = true;
+            this.FacebookLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.FacebookLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.FacebookLabel.Location = new System.Drawing.Point(263, 152);
+            this.FacebookLabel.Name = "FacebookLabel";
+            this.FacebookLabel.Size = new System.Drawing.Size(75, 18);
+            this.FacebookLabel.TabIndex = 1;
+            this.FacebookLabel.Text = "Facebook";
+            // 
+            // LinkedAccountsLabel
+            // 
+            this.LinkedAccountsLabel.AutoSize = true;
+            this.LinkedAccountsLabel.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkedAccountsLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.LinkedAccountsLabel.Location = new System.Drawing.Point(259, 61);
+            this.LinkedAccountsLabel.Name = "LinkedAccountsLabel";
+            this.LinkedAccountsLabel.Size = new System.Drawing.Size(299, 42);
+            this.LinkedAccountsLabel.TabIndex = 0;
+            this.LinkedAccountsLabel.Text = "Linked Accounts";
+            // 
+            // DeleteAccountTabPage
+            // 
+            this.DeleteAccountTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.DeleteAccountTabPage.Controls.Add(this.DangerZoneLabel);
+            this.DeleteAccountTabPage.Controls.Add(this.DeleteAccountButton);
+            this.DeleteAccountTabPage.Controls.Add(this.AccountLabel);
+            this.DeleteAccountTabPage.Location = new System.Drawing.Point(4, 22);
+            this.DeleteAccountTabPage.Name = "DeleteAccountTabPage";
+            this.DeleteAccountTabPage.Size = new System.Drawing.Size(828, 515);
+            this.DeleteAccountTabPage.TabIndex = 3;
+            this.DeleteAccountTabPage.Text = "Account";
+            // 
+            // DangerZoneLabel
+            // 
+            this.DangerZoneLabel.AutoSize = true;
+            this.DangerZoneLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.DangerZoneLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.DangerZoneLabel.Location = new System.Drawing.Point(249, 137);
+            this.DangerZoneLabel.Name = "DangerZoneLabel";
+            this.DangerZoneLabel.Size = new System.Drawing.Size(306, 17);
+            this.DangerZoneLabel.TabIndex = 2;
+            this.DangerZoneLabel.Text = "Danger Zone! Deleting your account is irreversible.";
+            // 
+            // DeleteAccountButton
+            // 
+            this.DeleteAccountButton.BackColor = System.Drawing.Color.Red;
+            this.DeleteAccountButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.DeleteAccountButton.Location = new System.Drawing.Point(252, 167);
+            this.DeleteAccountButton.Name = "DeleteAccountButton";
+            this.DeleteAccountButton.Size = new System.Drawing.Size(303, 42);
+            this.DeleteAccountButton.TabIndex = 1;
+            this.DeleteAccountButton.Text = "Delete Account";
+            this.DeleteAccountButton.UseVisualStyleBackColor = false;
+            // 
+            // AccountLabel
+            // 
+            this.AccountLabel.AutoSize = true;
+            this.AccountLabel.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccountLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.AccountLabel.Location = new System.Drawing.Point(244, 60);
+            this.AccountLabel.Name = "AccountLabel";
+            this.AccountLabel.Size = new System.Drawing.Size(174, 44);
+            this.AccountLabel.TabIndex = 0;
+            this.AccountLabel.Text = "Account";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(284, 51);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label1.Location = new System.Drawing.Point(279, 633);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Push Notificaions";
+            this.label1.Size = new System.Drawing.Size(54, 18);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Theme";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // tabPage3
+            // radioButton1
             // 
-            this.tabPage3.Controls.Add(this.button4);
-            this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.label11);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(828, 515);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Linked Accounts";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.radioButton1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.radioButton1.Location = new System.Drawing.Point(283, 657);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(54, 20);
+            this.radioButton1.TabIndex = 21;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Light";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // radioButton2
             // 
-            this.button4.Location = new System.Drawing.Point(429, 133);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 29);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Connect Facebook";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(289, 141);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 13);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Facebook";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(286, 53);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(228, 31);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Linked Accounts";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.label16);
-            this.tabPage4.Controls.Add(this.button3);
-            this.tabPage4.Controls.Add(this.label13);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(828, 515);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Account";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(289, 130);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(246, 13);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "Danger Zone! Deleting your account is irreversible.";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button3.Location = new System.Drawing.Point(289, 149);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(278, 42);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Delete Account";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(286, 56);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(116, 31);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Account";
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.radioButton2.ForeColor = System.Drawing.Color.DarkOrange;
+            this.radioButton2.Location = new System.Drawing.Point(363, 657);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(55, 20);
+            this.radioButton2.TabIndex = 22;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Dark";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // SettingsPage
             // 
@@ -450,63 +536,62 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Controls.Add(this.ProfileTab);
-            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.SettingsTab);
             this.Name = "SettingsPage";
             this.Size = new System.Drawing.Size(839, 545);
-            this.ProfileTab.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.SettingsTab.ResumeLayout(false);
+            this.ProfileSettingsTab.ResumeLayout(false);
+            this.ProfileSettingsTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfilePictureBoxEdit)).EndInit();
+            this.NotificationsTabPage.ResumeLayout(false);
+            this.NotificationsTabPage.PerformLayout();
+            this.LinkedAccountsTabPage.ResumeLayout(false);
+            this.LinkedAccountsTabPage.PerformLayout();
+            this.DeleteAccountTabPage.ResumeLayout(false);
+            this.DeleteAccountTabPage.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.TabControl ProfileTab;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TabControl SettingsTab;
+        private System.Windows.Forms.TabPage ProfileSettingsTab;
+        private System.Windows.Forms.Label ProfileTitleLabel;
+        private System.Windows.Forms.TextBox RegionSettingsTextBox;
+        private System.Windows.Forms.Label RegionSettingsLabel;
+        private System.Windows.Forms.PictureBox ProfilePictureBoxEdit;
+        private System.Windows.Forms.Button UpdateChangesButton;
+        private System.Windows.Forms.TextBox NameSettingsTextBox;
+        private System.Windows.Forms.TextBox RepeatNewPasswordTextBox;
+        private System.Windows.Forms.Label ProfilePictureLabel;
+        private System.Windows.Forms.TextBox NewPasswordTextBox;
+        private System.Windows.Forms.Button EditPictureButton;
+        private System.Windows.Forms.Label PasswordSettingsLabel;
+        private System.Windows.Forms.Label NameSettingsLabel;
+        private System.Windows.Forms.ComboBox LanguageSettingsComboBox;
+        private System.Windows.Forms.Label EmailSettingsLabel;
+        private System.Windows.Forms.TextBox EmailSettingsTextBox;
+        private System.Windows.Forms.Label LanguageSettingsLabel;
+        private System.Windows.Forms.TabPage NotificationsTabPage;
+        private System.Windows.Forms.CheckBox EventsNearbyNoticeCheckBox;
+        private System.Windows.Forms.CheckBox FriendAttendsCheckBox;
+        private System.Windows.Forms.CheckBox NewEventNoticeCheckBox;
+        private System.Windows.Forms.CheckBox FollowNoticeCheckBox;
+        private System.Windows.Forms.Label EventsNearbyLabel;
+        private System.Windows.Forms.Label FriendAttendsNoticeLabel;
+        private System.Windows.Forms.Label NewEventsNoticeLabel;
+        private System.Windows.Forms.Label FollowNoticeLabel;
+        private System.Windows.Forms.Label PushNotificationsLabel;
+        private System.Windows.Forms.TabPage LinkedAccountsTabPage;
+        private System.Windows.Forms.Button ConnectFacebookButton;
+        private System.Windows.Forms.Label FacebookLabel;
+        private System.Windows.Forms.Label LinkedAccountsLabel;
+        private System.Windows.Forms.TabPage DeleteAccountTabPage;
+        private System.Windows.Forms.Label DangerZoneLabel;
+        private System.Windows.Forms.Button DeleteAccountButton;
+        private System.Windows.Forms.Label AccountLabel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

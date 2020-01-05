@@ -41,7 +41,7 @@
             // 
             this.friendnameLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.friendnameLabel.AutoSize = true;
-            this.friendnameLabel.Location = new System.Drawing.Point(44, 13);
+            this.friendnameLabel.Location = new System.Drawing.Point(47, 15);
             this.friendnameLabel.Name = "friendnameLabel";
             this.friendnameLabel.Size = new System.Drawing.Size(67, 13);
             this.friendnameLabel.TabIndex = 1;
@@ -50,18 +50,17 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.06061F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.93939F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.96491F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.03509F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 19F));
             this.tableLayoutPanel1.Controls.Add(this.friendnameLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.friendPicOvalPictureBox, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.colorControl, 2, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(153, 40);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(144, 43);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // friendPicOvalPictureBox
@@ -70,7 +69,7 @@
             this.friendPicOvalPictureBox.BackColor = System.Drawing.Color.DarkGray;
             this.friendPicOvalPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("friendPicOvalPictureBox.BackgroundImage")));
             this.friendPicOvalPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.friendPicOvalPictureBox.Location = new System.Drawing.Point(3, 3);
+            this.friendPicOvalPictureBox.Location = new System.Drawing.Point(3, 5);
             this.friendPicOvalPictureBox.Name = "friendPicOvalPictureBox";
             this.friendPicOvalPictureBox.Size = new System.Drawing.Size(33, 33);
             this.friendPicOvalPictureBox.TabIndex = 0;
@@ -80,9 +79,9 @@
             // 
             this.colorControl.BackColor = System.Drawing.Color.PaleGreen;
             this.colorControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.colorControl.Location = new System.Drawing.Point(137, 3);
+            this.colorControl.Location = new System.Drawing.Point(127, 3);
             this.colorControl.Name = "colorControl";
-            this.colorControl.Size = new System.Drawing.Size(13, 34);
+            this.colorControl.Size = new System.Drawing.Size(14, 37);
             this.colorControl.TabIndex = 2;
             // 
             // FriendsAttending
@@ -92,7 +91,7 @@
             this.BackColor = System.Drawing.Color.Azure;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FriendsAttending";
-            this.Size = new System.Drawing.Size(153, 40);
+            this.Size = new System.Drawing.Size(144, 43);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.friendPicOvalPictureBox)).EndInit();

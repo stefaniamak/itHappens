@@ -105,6 +105,10 @@ namespace itHappens.UIs.Common
         {
 
         }
-        
+
+        private void rightSplitContainer_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
     }
 }

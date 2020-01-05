@@ -37,18 +37,22 @@
             // madeForYouLabel
             // 
             this.madeForYouLabel.AutoSize = true;
-            this.madeForYouLabel.Location = new System.Drawing.Point(51, 378);
+            this.madeForYouLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.madeForYouLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.madeForYouLabel.Location = new System.Drawing.Point(50, 457);
             this.madeForYouLabel.Name = "madeForYouLabel";
-            this.madeForYouLabel.Size = new System.Drawing.Size(74, 13);
+            this.madeForYouLabel.Size = new System.Drawing.Size(164, 29);
             this.madeForYouLabel.TabIndex = 9;
-            this.madeForYouLabel.Text = "Made For You";
+            this.madeForYouLabel.Text = "Made for you";
             // 
             // todayLabel
             // 
             this.todayLabel.AutoSize = true;
-            this.todayLabel.Location = new System.Drawing.Point(56, 24);
+            this.todayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.todayLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.todayLabel.Location = new System.Drawing.Point(50, 28);
             this.todayLabel.Name = "todayLabel";
-            this.todayLabel.Size = new System.Drawing.Size(37, 13);
+            this.todayLabel.Size = new System.Drawing.Size(86, 29);
             this.todayLabel.TabIndex = 6;
             this.todayLabel.Text = "Today";
             // 
@@ -57,11 +61,13 @@
             madeForYouCarusel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             madeForYouCarusel.AutoScroll = true;
-            madeForYouCarusel.BackColor = System.Drawing.SystemColors.ControlLight;
-            madeForYouCarusel.Location = new System.Drawing.Point(12, 404);
+            madeForYouCarusel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            madeForYouCarusel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            madeForYouCarusel.Location = new System.Drawing.Point(5, 492);
+            madeForYouCarusel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             madeForYouCarusel.Name = "madeForYouCarusel";
             madeForYouCarusel.Padding = new System.Windows.Forms.Padding(2);
-            madeForYouCarusel.Size = new System.Drawing.Size(442, 279);
+            madeForYouCarusel.Size = new System.Drawing.Size(534, 322);
             madeForYouCarusel.TabIndex = 8;
             // 
             // todayEventsCarousel
@@ -69,27 +75,30 @@
             todayEventsCarousel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             todayEventsCarousel.AutoScroll = true;
-            todayEventsCarousel.BackColor = System.Drawing.SystemColors.ControlLight;
-            todayEventsCarousel.Location = new System.Drawing.Point(12, 54);
+            todayEventsCarousel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            todayEventsCarousel.Location = new System.Drawing.Point(5, 63);
+            todayEventsCarousel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             todayEventsCarousel.Name = "todayEventsCarousel";
-            todayEventsCarousel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            todayEventsCarousel.Size = new System.Drawing.Size(442, 286);
+            todayEventsCarousel.Padding = new System.Windows.Forms.Padding(2, 2, 2, 37);
+            todayEventsCarousel.Size = new System.Drawing.Size(534, 330);
             todayEventsCarousel.TabIndex = 7;
             todayEventsCarousel.TabStop = false;
             todayEventsCarousel.Load += new System.EventHandler(this.todayEventsCarousel_Load);
             // 
             // MainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.todayLabel);
+            this.Controls.Add(todayEventsCarousel);
             this.Controls.Add(this.madeForYouLabel);
             this.Controls.Add(madeForYouCarusel);
-            this.Controls.Add(todayEventsCarousel);
-            this.Controls.Add(this.todayLabel);
+            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainPage";
-            this.Size = new System.Drawing.Size(466, 703);
+            this.Size = new System.Drawing.Size(544, 1001);
             this.ResumeLayout(false);
             this.PerformLayout();
 

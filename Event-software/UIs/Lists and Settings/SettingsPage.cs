@@ -17,5 +17,19 @@ namespace itHappens.UIs.valentina
             InitializeComponent();
         }
 
+        private void ProfileTitleSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NewPasswordTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

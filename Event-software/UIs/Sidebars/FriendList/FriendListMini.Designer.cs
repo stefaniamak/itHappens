@@ -29,29 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FriendListMini));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.timeLabel = new System.Windows.Forms.Label();
-            this.locationLabel = new System.Windows.Forms.Label();
-            this.eventNameLabel = new System.Windows.Forms.Label();
+            this.ovalPictureBox1 = new itHappens.UIs.Common.OvalPictureBox();
             this.friendNameLabel = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.eventNameLabel = new System.Windows.Forms.Label();
+            this.locationLabel = new System.Windows.Forms.Label();
+            this.timeLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 34);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -59,114 +45,100 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(4, 0);
+            this.panel1.Controls.Add(this.ovalPictureBox1);
+            this.panel1.Controls.Add(this.friendNameLabel);
+            this.panel1.Controls.Add(this.eventNameLabel);
+            this.panel1.Controls.Add(this.locationLabel);
+            this.panel1.Controls.Add(this.timeLabel);
+            this.panel1.Location = new System.Drawing.Point(5, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(144, 51);
+            this.panel1.Size = new System.Drawing.Size(133, 58);
             this.panel1.TabIndex = 7;
             // 
-            // flowLayoutPanel2
+            // ovalPictureBox1
             // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel2.AutoSize = true;
-            this.flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel2.Controls.Add(this.locationLabel);
-            this.flowLayoutPanel2.Controls.Add(this.timeLabel);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 29);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(94, 13);
-            this.flowLayoutPanel2.TabIndex = 5;
+            this.ovalPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ovalPictureBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.ovalPictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ovalPictureBox1.BackgroundImage")));
+            this.ovalPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ovalPictureBox1.Location = new System.Drawing.Point(-3, 6);
+            this.ovalPictureBox1.Name = "ovalPictureBox1";
+            this.ovalPictureBox1.Size = new System.Drawing.Size(48, 49);
+            this.ovalPictureBox1.TabIndex = 7;
+            this.ovalPictureBox1.TabStop = false;
             // 
-            // timeLabel
+            // friendNameLabel
             // 
-            this.timeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.timeLabel.AutoSize = true;
-            this.timeLabel.Location = new System.Drawing.Point(57, 0);
-            this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(34, 13);
-            this.timeLabel.TabIndex = 4;
-            this.timeLabel.Text = "20:00";
-            // 
-            // locationLabel
-            // 
-            this.locationLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.locationLabel.AutoSize = true;
-            this.locationLabel.Location = new System.Drawing.Point(3, 0);
-            this.locationLabel.Name = "locationLabel";
-            this.locationLabel.Size = new System.Drawing.Size(48, 13);
-            this.locationLabel.TabIndex = 3;
-            this.locationLabel.Text = "Location";
+            this.friendNameLabel.AutoSize = true;
+            this.friendNameLabel.Location = new System.Drawing.Point(51, 6);
+            this.friendNameLabel.Name = "friendNameLabel";
+            this.friendNameLabel.Size = new System.Drawing.Size(76, 16);
+            this.friendNameLabel.TabIndex = 1;
+            this.friendNameLabel.Text = "Friend Name";
             // 
             // eventNameLabel
             // 
             this.eventNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.eventNameLabel.AutoSize = true;
-            this.eventNameLabel.Location = new System.Drawing.Point(23, 13);
+            this.eventNameLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.eventNameLabel.Location = new System.Drawing.Point(55, 23);
             this.eventNameLabel.Name = "eventNameLabel";
-            this.eventNameLabel.Size = new System.Drawing.Size(74, 13);
+            this.eventNameLabel.Size = new System.Drawing.Size(72, 16);
             this.eventNameLabel.TabIndex = 2;
             this.eventNameLabel.Text = "EVENTNAME";
             // 
-            // friendNameLabel
+            // locationLabel
             // 
-            this.friendNameLabel.AutoSize = true;
-            this.friendNameLabel.Location = new System.Drawing.Point(3, 0);
-            this.friendNameLabel.Name = "friendNameLabel";
-            this.friendNameLabel.Size = new System.Drawing.Size(67, 13);
-            this.friendNameLabel.TabIndex = 1;
-            this.friendNameLabel.Text = "Friend Name";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.locationLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.Controls.Add(this.friendNameLabel);
-            this.flowLayoutPanel1.Controls.Add(this.eventNameLabel);
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(41, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(100, 45);
-            this.flowLayoutPanel1.TabIndex = 6;
+            this.locationLabel.AutoSize = true;
+            this.locationLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.locationLabel.Location = new System.Drawing.Point(40, 39);
+            this.locationLabel.Name = "locationLabel";
+            this.locationLabel.Size = new System.Drawing.Size(55, 16);
+            this.locationLabel.TabIndex = 3;
+            this.locationLabel.Text = "Location";
+            // 
+            // timeLabel
+            // 
+            this.timeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.timeLabel.AutoSize = true;
+            this.timeLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.timeLabel.Location = new System.Drawing.Point(92, 39);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(35, 16);
+            this.timeLabel.TabIndex = 4;
+            this.timeLabel.Text = "20:00";
             // 
             // FriendListMini
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.LightGreen;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FriendListMini";
-            this.Size = new System.Drawing.Size(151, 54);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(141, 62);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label friendNameLabel;
         private System.Windows.Forms.Label eventNameLabel;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label locationLabel;
         private System.Windows.Forms.Label timeLabel;
+        private Common.OvalPictureBox ovalPictureBox1;
     }
 }
