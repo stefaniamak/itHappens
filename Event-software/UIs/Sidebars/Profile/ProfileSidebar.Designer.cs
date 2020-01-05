@@ -32,6 +32,7 @@
             usernameLable = new System.Windows.Forms.Label();
             this.profilePicPictureBox1 = new System.Windows.Forms.PictureBox();
             this.bellNotificationPictureBox = new System.Windows.Forms.PictureBox();
+            LogoutButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bellNotificationPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -68,16 +69,29 @@
             this.bellNotificationPictureBox.TabIndex = 3;
             this.bellNotificationPictureBox.TabStop = false;
             // 
+            // LogoutButton
+            // 
+            LogoutButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            LogoutButton.Location = new System.Drawing.Point(34, 157);
+            LogoutButton.Name = "LogoutButton";
+            LogoutButton.Size = new System.Drawing.Size(77, 23);
+            LogoutButton.TabIndex = 4;
+            LogoutButton.Text = "Logout";
+            LogoutButton.UseVisualStyleBackColor = true;
+            LogoutButton.Visible = false;
+            LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
+            // 
             // ProfileSidebar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aquamarine;
+            this.Controls.Add(LogoutButton);
             this.Controls.Add(this.bellNotificationPictureBox);
             this.Controls.Add(this.profilePicPictureBox1);
             this.Controls.Add(usernameLable);
             this.Name = "ProfileSidebar";
-            this.Size = new System.Drawing.Size(142, 175);
+            this.Size = new System.Drawing.Size(142, 209);
             ((System.ComponentModel.ISupportInitialize)(this.profilePicPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bellNotificationPictureBox)).EndInit();
             this.ResumeLayout(false);
@@ -86,9 +100,9 @@
         }
 
         #endregion
-
-        public static System.Windows.Forms.Label usernameLable;
         private System.Windows.Forms.PictureBox profilePicPictureBox1;
         private System.Windows.Forms.PictureBox bellNotificationPictureBox;
+        public static System.Windows.Forms.Button LogoutButton;
+        public static System.Windows.Forms.Label usernameLable;
     }
 }

@@ -16,5 +16,12 @@ namespace itHappens.UIs.Sidebars
         {
             InitializeComponent();
         }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            UIs.anna.LogInPage.loggedInUser = false;
+            usernameLable.Text = "Name Surname";
+            LogoutButton.Visible = false;
+        }
     }
 }
