@@ -238,10 +238,10 @@ namespace itHappens.UIs
             else
             {
                 areaValLabel.Text = "";
-                MessageBox.Show("Your registration has been successfully completed!", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clearTextBoxes();
+                MessageBox.Show("Your registration has been successfully completed!", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);               
                 signUpCon(areaComboBox.SelectedItem.ToString(), Convert.ToInt32(numericUpDown.Value), usernameTextBox.Text,
                     passwordTextBox.Text, nameTextBox.Text, surnameTextBox.Text, emailTextBox.Text);
+                clearTextBoxes();
                 //Opou tha phgainei meta to signUp
             }
 
