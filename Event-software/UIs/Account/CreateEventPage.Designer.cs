@@ -76,7 +76,7 @@
             this.label3.Location = new System.Drawing.Point(-180, 264);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 21);
+            this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 12;
             this.label3.Text = "Event place:";
             // 
@@ -86,7 +86,7 @@
             this.label2.Location = new System.Drawing.Point(-180, 155);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 21);
+            this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 11;
             this.label2.Text = "Event time:";
             // 
@@ -96,7 +96,7 @@
             this.label5.Location = new System.Drawing.Point(-180, 45);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 21);
+            this.label5.Size = new System.Drawing.Size(69, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "Event Name:";
             // 
@@ -104,7 +104,7 @@
             // 
             this.CreateEventButton.BackColor = System.Drawing.Color.DarkOrange;
             this.CreateEventButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateEventButton.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateEventButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateEventButton.Location = new System.Drawing.Point(347, 1290);
             this.CreateEventButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CreateEventButton.Name = "CreateEventButton";
@@ -116,12 +116,12 @@
             // UploadEventpic
             // 
             this.UploadEventpic.AutoSize = true;
-            this.UploadEventpic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UploadEventpic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UploadEventpic.ForeColor = System.Drawing.Color.DarkOrange;
             this.UploadEventpic.Location = new System.Drawing.Point(90, 237);
             this.UploadEventpic.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UploadEventpic.Name = "UploadEventpic";
-            this.UploadEventpic.Size = new System.Drawing.Size(381, 30);
+            this.UploadEventpic.Size = new System.Drawing.Size(222, 20);
             this.UploadEventpic.TabIndex = 20;
             this.UploadEventpic.Text = "Upload a picture for the event:";
             // 
@@ -130,42 +130,42 @@
             this.EventNametextBox1.Location = new System.Drawing.Point(391, 464);
             this.EventNametextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EventNametextBox1.Name = "EventNametextBox1";
-            this.EventNametextBox1.Size = new System.Drawing.Size(320, 27);
+            this.EventNametextBox1.Size = new System.Drawing.Size(320, 20);
             this.EventNametextBox1.TabIndex = 17;
             // 
             // CategoryLabel
             // 
             this.CategoryLabel.AutoSize = true;
-            this.CategoryLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CategoryLabel.ForeColor = System.Drawing.Color.DarkOrange;
             this.CategoryLabel.Location = new System.Drawing.Point(90, 822);
             this.CategoryLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CategoryLabel.Name = "CategoryLabel";
-            this.CategoryLabel.Size = new System.Drawing.Size(132, 30);
+            this.CategoryLabel.Size = new System.Drawing.Size(77, 20);
             this.CategoryLabel.TabIndex = 16;
             this.CategoryLabel.Text = "Category:";
             // 
             // StartingDateLabel
             // 
             this.StartingDateLabel.AutoSize = true;
-            this.StartingDateLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartingDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartingDateLabel.ForeColor = System.Drawing.Color.DarkOrange;
             this.StartingDateLabel.Location = new System.Drawing.Point(93, 627);
             this.StartingDateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StartingDateLabel.Name = "StartingDateLabel";
-            this.StartingDateLabel.Size = new System.Drawing.Size(171, 30);
+            this.StartingDateLabel.Size = new System.Drawing.Size(105, 20);
             this.StartingDateLabel.TabIndex = 15;
             this.StartingDateLabel.Text = "Starting date:";
             // 
             // EventNameLabel
             // 
             this.EventNameLabel.AutoSize = true;
-            this.EventNameLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EventNameLabel.ForeColor = System.Drawing.Color.DarkOrange;
             this.EventNameLabel.Location = new System.Drawing.Point(90, 467);
             this.EventNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EventNameLabel.Name = "EventNameLabel";
-            this.EventNameLabel.Size = new System.Drawing.Size(168, 30);
+            this.EventNameLabel.Size = new System.Drawing.Size(100, 20);
             this.EventNameLabel.TabIndex = 14;
             this.EventNameLabel.Text = "Event Name:";
             // 
@@ -184,12 +184,12 @@
             // EventDescriptionlabel8
             // 
             this.EventDescriptionlabel8.AutoSize = true;
-            this.EventDescriptionlabel8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventDescriptionlabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EventDescriptionlabel8.ForeColor = System.Drawing.Color.DarkOrange;
             this.EventDescriptionlabel8.Location = new System.Drawing.Point(90, 1079);
             this.EventDescriptionlabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EventDescriptionlabel8.Name = "EventDescriptionlabel8";
-            this.EventDescriptionlabel8.Size = new System.Drawing.Size(154, 30);
+            this.EventDescriptionlabel8.Size = new System.Drawing.Size(93, 20);
             this.EventDescriptionlabel8.TabIndex = 25;
             this.EventDescriptionlabel8.Text = "Description:";
             // 
@@ -205,136 +205,138 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Turquoise;
-            this.label8.Location = new System.Drawing.Point(450, 618);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Yellow;
+            this.label8.Location = new System.Drawing.Point(451, 622);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(17, 23);
+            this.label8.Size = new System.Drawing.Size(13, 18);
             this.label8.TabIndex = 27;
             this.label8.Text = "-";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Turquoise;
-            this.label9.Location = new System.Drawing.Point(556, 625);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Yellow;
+            this.label9.Location = new System.Drawing.Point(557, 622);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(15, 21);
+            this.label9.Size = new System.Drawing.Size(13, 18);
             this.label9.TabIndex = 28;
             this.label9.Text = "-";
             // 
             // SDayLabel
             // 
             this.SDayLabel.AutoSize = true;
-            this.SDayLabel.ForeColor = System.Drawing.Color.Turquoise;
-            this.SDayLabel.Location = new System.Drawing.Point(387, 583);
+            this.SDayLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.SDayLabel.Location = new System.Drawing.Point(396, 595);
             this.SDayLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SDayLabel.Name = "SDayLabel";
-            this.SDayLabel.Size = new System.Drawing.Size(41, 21);
+            this.SDayLabel.Size = new System.Drawing.Size(26, 13);
             this.SDayLabel.TabIndex = 31;
             this.SDayLabel.Text = "Day";
             // 
             // SMonthLabel
             // 
             this.SMonthLabel.AutoSize = true;
-            this.SMonthLabel.ForeColor = System.Drawing.Color.Turquoise;
-            this.SMonthLabel.Location = new System.Drawing.Point(476, 583);
+            this.SMonthLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.SMonthLabel.Location = new System.Drawing.Point(486, 595);
             this.SMonthLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SMonthLabel.Name = "SMonthLabel";
-            this.SMonthLabel.Size = new System.Drawing.Size(62, 21);
+            this.SMonthLabel.Size = new System.Drawing.Size(37, 13);
             this.SMonthLabel.TabIndex = 32;
             this.SMonthLabel.Text = "Month";
             // 
             // SYearLabel
             // 
             this.SYearLabel.AutoSize = true;
-            this.SYearLabel.ForeColor = System.Drawing.Color.Turquoise;
-            this.SYearLabel.Location = new System.Drawing.Point(604, 583);
+            this.SYearLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.SYearLabel.Location = new System.Drawing.Point(614, 595);
             this.SYearLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SYearLabel.Name = "SYearLabel";
-            this.SYearLabel.Size = new System.Drawing.Size(47, 21);
+            this.SYearLabel.Size = new System.Drawing.Size(29, 13);
             this.SYearLabel.TabIndex = 33;
             this.SYearLabel.Text = "Year";
             // 
             // EYearLabel
             // 
             this.EYearLabel.AutoSize = true;
-            this.EYearLabel.ForeColor = System.Drawing.Color.Turquoise;
-            this.EYearLabel.Location = new System.Drawing.Point(609, 690);
+            this.EYearLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.EYearLabel.Location = new System.Drawing.Point(614, 695);
             this.EYearLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EYearLabel.Name = "EYearLabel";
-            this.EYearLabel.Size = new System.Drawing.Size(47, 21);
+            this.EYearLabel.Size = new System.Drawing.Size(29, 13);
             this.EYearLabel.TabIndex = 42;
             this.EYearLabel.Text = "Year";
             // 
             // EMonthLabel
             // 
             this.EMonthLabel.AutoSize = true;
-            this.EMonthLabel.ForeColor = System.Drawing.Color.Turquoise;
-            this.EMonthLabel.Location = new System.Drawing.Point(476, 690);
+            this.EMonthLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.EMonthLabel.Location = new System.Drawing.Point(486, 695);
             this.EMonthLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EMonthLabel.Name = "EMonthLabel";
-            this.EMonthLabel.Size = new System.Drawing.Size(62, 21);
+            this.EMonthLabel.Size = new System.Drawing.Size(37, 13);
             this.EMonthLabel.TabIndex = 41;
             this.EMonthLabel.Text = "Month";
             // 
             // EDayLabel
             // 
             this.EDayLabel.AutoSize = true;
-            this.EDayLabel.ForeColor = System.Drawing.Color.Turquoise;
-            this.EDayLabel.Location = new System.Drawing.Point(387, 690);
+            this.EDayLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.EDayLabel.Location = new System.Drawing.Point(396, 695);
             this.EDayLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EDayLabel.Name = "EDayLabel";
-            this.EDayLabel.Size = new System.Drawing.Size(41, 21);
+            this.EDayLabel.Size = new System.Drawing.Size(26, 13);
             this.EDayLabel.TabIndex = 40;
             this.EDayLabel.Text = "Day";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.Turquoise;
-            this.label16.Location = new System.Drawing.Point(557, 729);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Yellow;
+            this.label16.Location = new System.Drawing.Point(557, 724);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(15, 21);
+            this.label16.Size = new System.Drawing.Size(13, 18);
             this.label16.TabIndex = 37;
             this.label16.Text = "-";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Turquoise;
-            this.label17.Location = new System.Drawing.Point(450, 723);
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Yellow;
+            this.label17.Location = new System.Drawing.Point(451, 722);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(17, 23);
+            this.label17.Size = new System.Drawing.Size(13, 18);
             this.label17.TabIndex = 36;
             this.label17.Text = "-";
             // 
             // EndingDateLabel
             // 
             this.EndingDateLabel.AutoSize = true;
-            this.EndingDateLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EndingDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EndingDateLabel.ForeColor = System.Drawing.Color.DarkOrange;
             this.EndingDateLabel.Location = new System.Drawing.Point(90, 716);
             this.EndingDateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EndingDateLabel.Name = "EndingDateLabel";
-            this.EndingDateLabel.Size = new System.Drawing.Size(164, 30);
+            this.EndingDateLabel.Size = new System.Drawing.Size(99, 20);
             this.EndingDateLabel.TabIndex = 34;
             this.EndingDateLabel.Text = "Ending date:";
             // 
             // TicketPriceLabel
             // 
             this.TicketPriceLabel.AutoSize = true;
-            this.TicketPriceLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TicketPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TicketPriceLabel.ForeColor = System.Drawing.Color.DarkOrange;
             this.TicketPriceLabel.Location = new System.Drawing.Point(90, 979);
             this.TicketPriceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TicketPriceLabel.Name = "TicketPriceLabel";
-            this.TicketPriceLabel.Size = new System.Drawing.Size(157, 30);
+            this.TicketPriceLabel.Size = new System.Drawing.Size(93, 20);
             this.TicketPriceLabel.TabIndex = 43;
             this.TicketPriceLabel.Text = "Ticket price:";
             // 
@@ -343,30 +345,30 @@
             this.PriceTextbox.Location = new System.Drawing.Point(391, 979);
             this.PriceTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PriceTextbox.Name = "PriceTextbox";
-            this.PriceTextbox.Size = new System.Drawing.Size(88, 27);
+            this.PriceTextbox.Size = new System.Drawing.Size(88, 20);
             this.PriceTextbox.TabIndex = 44;
             // 
             // euroLabel
             // 
             this.euroLabel.AutoSize = true;
-            this.euroLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.euroLabel.ForeColor = System.Drawing.Color.Turquoise;
-            this.euroLabel.Location = new System.Drawing.Point(493, 984);
+            this.euroLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.euroLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.euroLabel.Location = new System.Drawing.Point(487, 977);
             this.euroLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.euroLabel.Name = "euroLabel";
-            this.euroLabel.Size = new System.Drawing.Size(21, 23);
+            this.euroLabel.Size = new System.Drawing.Size(18, 20);
             this.euroLabel.TabIndex = 45;
             this.euroLabel.Text = "€";
             // 
             // OwnerNameLabel
             // 
             this.OwnerNameLabel.AutoSize = true;
-            this.OwnerNameLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OwnerNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OwnerNameLabel.ForeColor = System.Drawing.Color.DarkOrange;
             this.OwnerNameLabel.Location = new System.Drawing.Point(90, 152);
             this.OwnerNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OwnerNameLabel.Name = "OwnerNameLabel";
-            this.OwnerNameLabel.Size = new System.Drawing.Size(180, 30);
+            this.OwnerNameLabel.Size = new System.Drawing.Size(105, 20);
             this.OwnerNameLabel.TabIndex = 46;
             this.OwnerNameLabel.Text = "Owner Name:";
             // 
@@ -375,42 +377,42 @@
             this.OwnerNameTextbox.Location = new System.Drawing.Point(384, 153);
             this.OwnerNameTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OwnerNameTextbox.Name = "OwnerNameTextbox";
-            this.OwnerNameTextbox.Size = new System.Drawing.Size(320, 27);
+            this.OwnerNameTextbox.Size = new System.Drawing.Size(320, 20);
             this.OwnerNameTextbox.TabIndex = 47;
             // 
             // CreateEventTitleLabel
             // 
             this.CreateEventTitleLabel.AutoSize = true;
-            this.CreateEventTitleLabel.Font = new System.Drawing.Font("Century Gothic", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateEventTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateEventTitleLabel.ForeColor = System.Drawing.Color.DarkOrange;
             this.CreateEventTitleLabel.Location = new System.Drawing.Point(271, 30);
             this.CreateEventTitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CreateEventTitleLabel.Name = "CreateEventTitleLabel";
-            this.CreateEventTitleLabel.Size = new System.Drawing.Size(373, 65);
+            this.CreateEventTitleLabel.Size = new System.Drawing.Size(227, 40);
             this.CreateEventTitleLabel.TabIndex = 48;
             this.CreateEventTitleLabel.Text = "Create Event";
             // 
             // EventVenueNameLabel
             // 
             this.EventVenueNameLabel.AutoSize = true;
-            this.EventVenueNameLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventVenueNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EventVenueNameLabel.ForeColor = System.Drawing.Color.DarkOrange;
             this.EventVenueNameLabel.Location = new System.Drawing.Point(90, 537);
             this.EventVenueNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EventVenueNameLabel.Name = "EventVenueNameLabel";
-            this.EventVenueNameLabel.Size = new System.Drawing.Size(171, 30);
+            this.EventVenueNameLabel.Size = new System.Drawing.Size(101, 20);
             this.EventVenueNameLabel.TabIndex = 49;
             this.EventVenueNameLabel.Text = "Event venue:";
             // 
             // TagsLabel
             // 
             this.TagsLabel.AutoSize = true;
-            this.TagsLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TagsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TagsLabel.ForeColor = System.Drawing.Color.DarkOrange;
             this.TagsLabel.Location = new System.Drawing.Point(93, 897);
             this.TagsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TagsLabel.Name = "TagsLabel";
-            this.TagsLabel.Size = new System.Drawing.Size(73, 30);
+            this.TagsLabel.Size = new System.Drawing.Size(48, 20);
             this.TagsLabel.TabIndex = 51;
             this.TagsLabel.Text = "Tags:";
             // 
@@ -419,7 +421,7 @@
             this.TagsTextBox.Location = new System.Drawing.Point(391, 897);
             this.TagsTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TagsTextBox.Name = "TagsTextBox";
-            this.TagsTextBox.Size = new System.Drawing.Size(320, 27);
+            this.TagsTextBox.Size = new System.Drawing.Size(320, 20);
             this.TagsTextBox.TabIndex = 52;
             // 
             // CategorycomboBox
@@ -428,7 +430,7 @@
             this.CategorycomboBox.Location = new System.Drawing.Point(391, 824);
             this.CategorycomboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CategorycomboBox.Name = "CategorycomboBox";
-            this.CategorycomboBox.Size = new System.Drawing.Size(320, 29);
+            this.CategorycomboBox.Size = new System.Drawing.Size(320, 21);
             this.CategorycomboBox.TabIndex = 60;
             // 
             // VenuecomboBox
@@ -437,7 +439,7 @@
             this.VenuecomboBox.Location = new System.Drawing.Point(391, 531);
             this.VenuecomboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.VenuecomboBox.Name = "VenuecomboBox";
-            this.VenuecomboBox.Size = new System.Drawing.Size(320, 29);
+            this.VenuecomboBox.Size = new System.Drawing.Size(320, 21);
             this.VenuecomboBox.TabIndex = 61;
             // 
             // SDaycomboBox
@@ -446,7 +448,7 @@
             this.SDaycomboBox.Location = new System.Drawing.Point(384, 622);
             this.SDaycomboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SDaycomboBox.Name = "SDaycomboBox";
-            this.SDaycomboBox.Size = new System.Drawing.Size(53, 29);
+            this.SDaycomboBox.Size = new System.Drawing.Size(53, 21);
             this.SDaycomboBox.TabIndex = 62;
             // 
             // SMonthcomboBox
@@ -455,7 +457,7 @@
             this.SMonthcomboBox.Location = new System.Drawing.Point(478, 622);
             this.SMonthcomboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SMonthcomboBox.Name = "SMonthcomboBox";
-            this.SMonthcomboBox.Size = new System.Drawing.Size(61, 29);
+            this.SMonthcomboBox.Size = new System.Drawing.Size(61, 21);
             this.SMonthcomboBox.TabIndex = 63;
             // 
             // SYearcomboBox
@@ -464,7 +466,7 @@
             this.SYearcomboBox.Location = new System.Drawing.Point(591, 622);
             this.SYearcomboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SYearcomboBox.Name = "SYearcomboBox";
-            this.SYearcomboBox.Size = new System.Drawing.Size(82, 29);
+            this.SYearcomboBox.Size = new System.Drawing.Size(82, 21);
             this.SYearcomboBox.TabIndex = 64;
             // 
             // EDaycomboBox
@@ -473,7 +475,7 @@
             this.EDaycomboBox.Location = new System.Drawing.Point(384, 722);
             this.EDaycomboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EDaycomboBox.Name = "EDaycomboBox";
-            this.EDaycomboBox.Size = new System.Drawing.Size(53, 29);
+            this.EDaycomboBox.Size = new System.Drawing.Size(53, 21);
             this.EDaycomboBox.TabIndex = 65;
             // 
             // EMonthcomboBox
@@ -482,7 +484,7 @@
             this.EMonthcomboBox.Location = new System.Drawing.Point(478, 723);
             this.EMonthcomboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EMonthcomboBox.Name = "EMonthcomboBox";
-            this.EMonthcomboBox.Size = new System.Drawing.Size(61, 29);
+            this.EMonthcomboBox.Size = new System.Drawing.Size(61, 21);
             this.EMonthcomboBox.TabIndex = 66;
             // 
             // EYearcomboBox
@@ -491,12 +493,12 @@
             this.EYearcomboBox.Location = new System.Drawing.Point(591, 723);
             this.EYearcomboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EYearcomboBox.Name = "EYearcomboBox";
-            this.EYearcomboBox.Size = new System.Drawing.Size(82, 29);
+            this.EYearcomboBox.Size = new System.Drawing.Size(82, 21);
             this.EYearcomboBox.TabIndex = 67;
             // 
             // CreateEventPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.EYearcomboBox);
@@ -539,7 +541,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
-            this.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CreateEventPage";
             this.Size = new System.Drawing.Size(996, 1399);
