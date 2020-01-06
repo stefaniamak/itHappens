@@ -174,10 +174,10 @@
         private System.Windows.Forms.PictureBox UserPictureBox;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.LinkLabel createAccountLabel;
-        private System.Windows.Forms.TextBox PasswordTextBox;
-        private System.Windows.Forms.TextBox UsernameTextBox;
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.Label UsernameLabel;
         private System.Windows.Forms.Label itHappensLabel;
+        public System.Windows.Forms.TextBox PasswordTextBox;
+        public System.Windows.Forms.TextBox UsernameTextBox;
     }
 }
