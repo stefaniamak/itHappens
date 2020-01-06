@@ -42,7 +42,7 @@ namespace itHappens.Controllers
 
         public static String DatabaseFieldValidation(String username, String password)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
             MySqlConnection con;
             String result = "";
 
@@ -80,7 +80,7 @@ namespace itHappens.Controllers
 
         public static String loginNameSurnameToProfile(String usern, String pass)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
             MySqlConnection con;
             String Name = "";
             String Surname = "";

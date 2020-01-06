@@ -110,5 +110,77 @@ namespace itHappens.UIs.Common
         {
 
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void mainInterfaceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mainPageToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.openHostForMainAndSearchPage();
+            Controllers.UIController.openPage("main");
+        }
+
+        private void searchPageToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.openHostForMainAndSearchPage();
+            Controllers.UIController.openPage("search");
+        }
+
+        private void usersProfileToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.mainToolStripMenuItem_MiddlePanel();
+        }
+
+        private void venuesProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.searchToolStripMenuItem_MiddlePanel();
+        }
+
+        private void eventsProfileToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.eventsProfileToolStripMenuItem_MiddlePanel();
+        }
+
+        private void logInToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.logInToolStripMenuItem_MiddlePanel();
+        }
+
+        private void signUpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.signUpToolStripMenuItem_MiddlePanel();
+        }
+
+        private void createEventToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.createEventToolStripMenuItem_MiddlePanel();
+        }
+
+        private void listsPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.listToolStripMenuItem_MiddlePanel();
+        }
+
+        private void listsContentPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.madeForYouToolStripMenuItem_MiddlePanel();
+        }
+
+        private void settingsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.settingsToolStripMenuItem_MiddlePanel();
+        }
     }
 }

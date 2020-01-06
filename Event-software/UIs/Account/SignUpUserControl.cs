@@ -27,7 +27,7 @@ namespace itHappens.UIs
 
         public void fillTheComboBox()
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
             MySqlConnection con;
 
             try
@@ -261,7 +261,7 @@ namespace itHappens.UIs
         public static void signUpCon(String area, int age, String userName, String pass, String name, String surname, String email)
         {
             int areaId = 0;
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
             MySqlConnection con;
 
             try
