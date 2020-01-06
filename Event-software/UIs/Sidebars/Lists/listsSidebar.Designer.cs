@@ -38,9 +38,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 1);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label1.Location = new System.Drawing.Point(63, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.Size = new System.Drawing.Size(39, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Lists";
             // 
@@ -51,9 +53,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listsPanel.AutoScroll = true;
             this.listsPanel.Controls.Add(this.listsFlowLayoutPanel);
-            this.listsPanel.Location = new System.Drawing.Point(0, 17);
+            this.listsPanel.Location = new System.Drawing.Point(0, 21);
+            this.listsPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listsPanel.Name = "listsPanel";
-            this.listsPanel.Size = new System.Drawing.Size(150, 133);
+            this.listsPanel.Size = new System.Drawing.Size(175, 164);
             this.listsPanel.TabIndex = 1;
             // 
             // listsFlowLayoutPanel
@@ -67,12 +70,15 @@
             // 
             // ListsSidebar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listsPanel);
+            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ListsSidebar";
+            this.Size = new System.Drawing.Size(175, 185);
             this.listsPanel.ResumeLayout(false);
             this.listsPanel.PerformLayout();
             this.ResumeLayout(false);

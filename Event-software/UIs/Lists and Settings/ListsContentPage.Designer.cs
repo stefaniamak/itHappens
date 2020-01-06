@@ -35,10 +35,11 @@
             // ListsContentTitle
             // 
             this.ListsContentTitle.AutoSize = true;
-            this.ListsContentTitle.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.ListsContentTitle.Location = new System.Drawing.Point(0, 0);
+            this.ListsContentTitle.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.ListsContentTitle.ForeColor = System.Drawing.Color.DarkOrange;
+            this.ListsContentTitle.Location = new System.Drawing.Point(-3, 0);
             this.ListsContentTitle.Name = "ListsContentTitle";
-            this.ListsContentTitle.Size = new System.Drawing.Size(94, 36);
+            this.ListsContentTitle.Size = new System.Drawing.Size(133, 36);
             this.ListsContentTitle.TabIndex = 35;
             this.ListsContentTitle.Text = "Content";
             // 
@@ -60,15 +61,11 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-
-
-
-            this.BackColor = System.Drawing.Color.Thistle;
-
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.ListsContentTitle);
             this.Controls.Add(EventHolderFlowLayoutPanel);
             this.Name = "ListsContentPage";
-            this.Size = new System.Drawing.Size(97, 54);
+            this.Size = new System.Drawing.Size(133, 54);
             this.Load += new System.EventHandler(this.ListsContentPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -38,9 +38,11 @@
             // 
             this.title.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.title.AutoSize = true;
-            this.title.Location = new System.Drawing.Point(51, 0);
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.DarkOrange;
+            this.title.Location = new System.Drawing.Point(17, 9);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(91, 13);
+            this.title.Size = new System.Drawing.Size(125, 18);
             this.title.TabIndex = 0;
             this.title.Text = "Upcoming Events";
             this.title.Click += new System.EventHandler(this.title_Click);
@@ -51,7 +53,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.upcomingEventsFlowLayout.AutoSize = true;
             this.upcomingEventsFlowLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.upcomingEventsFlowLayout.Location = new System.Drawing.Point(3, 25);
+            this.upcomingEventsFlowLayout.Location = new System.Drawing.Point(3, 4);
+            this.upcomingEventsFlowLayout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.upcomingEventsFlowLayout.Name = "upcomingEventsFlowLayout";
             this.upcomingEventsFlowLayout.Size = new System.Drawing.Size(0, 0);
             this.upcomingEventsFlowLayout.TabIndex = 1;
@@ -63,22 +66,25 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.upcomingEventsFlowLayout);
-            this.panel1.Location = new System.Drawing.Point(0, 16);
+            this.panel1.Location = new System.Drawing.Point(0, 37);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(205, 237);
+            this.panel1.Size = new System.Drawing.Size(159, 150);
             this.panel1.TabIndex = 2;
             // 
             // UpcomingEventsSidebar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.LightPink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.Controls.Add(this.title);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UpcomingEventsSidebar";
-            this.Size = new System.Drawing.Size(205, 253);
+            this.Size = new System.Drawing.Size(159, 187);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

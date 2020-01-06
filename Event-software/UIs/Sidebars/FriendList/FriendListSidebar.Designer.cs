@@ -38,9 +38,11 @@
             // 
             this.title.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.title.AutoSize = true;
-            this.title.Location = new System.Drawing.Point(39, 0);
+            this.title.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.DarkOrange;
+            this.title.Location = new System.Drawing.Point(48, 11);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(55, 13);
+            this.title.Size = new System.Drawing.Size(78, 20);
             this.title.TabIndex = 0;
             this.title.Text = "Friend List";
             this.title.Click += new System.EventHandler(this.title_Click);
@@ -51,7 +53,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.friendListsFlowLayoutPanel.AutoSize = true;
             this.friendListsFlowLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.friendListsFlowLayoutPanel.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.friendListsFlowLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.friendListsFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.friendListsFlowLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.friendListsFlowLayoutPanel.Name = "friendListsFlowLayoutPanel";
@@ -66,21 +68,24 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.friendListsFlowLayoutPanel);
-            this.panel1.Location = new System.Drawing.Point(3, 35);
+            this.panel1.Location = new System.Drawing.Point(16, 43);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(136, 182);
+            this.panel1.Size = new System.Drawing.Size(157, 224);
             this.panel1.TabIndex = 1;
             // 
             // FriendListSidebar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.MediumPurple;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.Controls.Add(this.title);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FriendListSidebar";
-            this.Size = new System.Drawing.Size(140, 219);
+            this.Size = new System.Drawing.Size(175, 270);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

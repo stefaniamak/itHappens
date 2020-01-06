@@ -27,7 +27,7 @@ namespace itHappens.UIs
 
         public void fillTheComboBox()
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
             MySqlConnection con;
 
             try
@@ -37,15 +37,15 @@ namespace itHappens.UIs
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select country from area";
+                String queryString = "Select distinct country from area";
 
                 command = new MySqlCommand(queryString, con);
 
-                dataReader = command.ExecuteReader();
+                dataReader = command.ExecuteReader();              
 
                 while (dataReader.Read())
-                {
-                    areaComboBox.Items.Add(dataReader.GetString(0));
+                {                  
+                   areaComboBox.Items.Add(dataReader.GetString(0));                    
                 }
                 con.Close();
 
@@ -185,7 +185,6 @@ namespace itHappens.UIs
 
         private void repassTextBox_Validated(object sender, EventArgs e)
         {
-
             if (!repassTextBox.Text.Equals("") && repassTextBox.Text.Equals(passwordTextBox.Text))
             {
                 repassValLabel.Text = "";
@@ -239,18 +238,30 @@ namespace itHappens.UIs
             else
             {
                 areaValLabel.Text = "";
-                MessageBox.Show("Your registration has been successfully completed!", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Your registration has been successfully completed!", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);               
                 signUpCon(areaComboBox.SelectedItem.ToString(), Convert.ToInt32(numericUpDown.Value), usernameTextBox.Text,
                     passwordTextBox.Text, nameTextBox.Text, surnameTextBox.Text, emailTextBox.Text);
+                clearTextBoxes();
                 //Opou tha phgainei meta to signUp
             }
 
         }
 
+        public void clearTextBoxes()
+        {
+            nameTextBox.Text = "";
+            surnameTextBox.Text = "";
+            emailTextBox.Text = "";
+            usernameTextBox.Text = "";
+            passwordTextBox.Text = "";
+            repassTextBox.Text = "";
+            
+        }
+
         public static void signUpCon(String area, int age, String userName, String pass, String name, String surname, String email)
         {
             int areaId = 0;
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
             MySqlConnection con;
 
             try
@@ -321,6 +332,6 @@ namespace itHappens.UIs
             return true;
         }
 
-
+        
     }
 }
