@@ -33,13 +33,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.CreateEventButton = new System.Windows.Forms.Button();
             this.UploadEventpic = new System.Windows.Forms.Label();
-            this.EventNametextBox1 = new System.Windows.Forms.TextBox();
+            this.EventNameTextbox = new System.Windows.Forms.TextBox();
             this.CategoryLabel = new System.Windows.Forms.Label();
             this.StartingDateLabel = new System.Windows.Forms.Label();
             this.EventNameLabel = new System.Windows.Forms.Label();
             this.UploadEventPicbutton2 = new System.Windows.Forms.Button();
             this.EventDescriptionlabel8 = new System.Windows.Forms.Label();
-            this.EventDescriptionRichTextbox1 = new System.Windows.Forms.RichTextBox();
+            this.DescTextbox = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.SDayLabel = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@
             this.CreateEventTitleLabel = new System.Windows.Forms.Label();
             this.EventVenueNameLabel = new System.Windows.Forms.Label();
             this.TagsLabel = new System.Windows.Forms.Label();
-            this.TagsTextBox = new System.Windows.Forms.TextBox();
+            this.TagsTextbox = new System.Windows.Forms.TextBox();
             this.privateCheckBox = new System.Windows.Forms.CheckBox();
             this.privacyLabel = new System.Windows.Forms.Label();
             this.CategorycomboBox = new System.Windows.Forms.ComboBox();
@@ -70,6 +70,13 @@
             this.EDaycomboBox = new System.Windows.Forms.ComboBox();
             this.EMonthcomboBox = new System.Windows.Forms.ComboBox();
             this.EYearcomboBox = new System.Windows.Forms.ComboBox();
+            this.NameValLabel = new System.Windows.Forms.Label();
+            this.VenueValLabel = new System.Windows.Forms.Label();
+            this.OwnerValLabel = new System.Windows.Forms.Label();
+            this.CategoryValLabel = new System.Windows.Forms.Label();
+            this.TagsValLabel = new System.Windows.Forms.Label();
+            this.TPriceValLabel = new System.Windows.Forms.Label();
+            this.DescValLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -107,7 +114,7 @@
             this.CreateEventButton.BackColor = System.Drawing.Color.DarkOrange;
             this.CreateEventButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateEventButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateEventButton.Location = new System.Drawing.Point(218, 1089);
+            this.CreateEventButton.Location = new System.Drawing.Point(256, 1096);
             this.CreateEventButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CreateEventButton.Name = "CreateEventButton";
             this.CreateEventButton.Size = new System.Drawing.Size(207, 46);
@@ -127,13 +134,15 @@
             this.UploadEventpic.TabIndex = 20;
             this.UploadEventpic.Text = "Upload a picture for the event:";
             // 
-            // EventNametextBox1
+            // EventNameTextbox
             // 
-            this.EventNametextBox1.Location = new System.Drawing.Point(329, 358);
-            this.EventNametextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.EventNametextBox1.Name = "EventNametextBox1";
-            this.EventNametextBox1.Size = new System.Drawing.Size(187, 20);
-            this.EventNametextBox1.TabIndex = 17;
+            this.EventNameTextbox.Location = new System.Drawing.Point(329, 358);
+            this.EventNameTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.EventNameTextbox.Name = "EventNameTextbox";
+            this.EventNameTextbox.Size = new System.Drawing.Size(187, 20);
+            this.EventNameTextbox.TabIndex = 17;
+            this.EventNameTextbox.Validating += new System.ComponentModel.CancelEventHandler(this.EventNameTextbox_Validating);
+            this.EventNameTextbox.Validated += new System.EventHandler(this.EventNameTextbox_Validated);
             // 
             // CategoryLabel
             // 
@@ -195,21 +204,22 @@
             this.EventDescriptionlabel8.TabIndex = 25;
             this.EventDescriptionlabel8.Text = "Description:";
             // 
-            // EventDescriptionRichTextbox1
+            // DescTextbox
             // 
-            this.EventDescriptionRichTextbox1.Location = new System.Drawing.Point(330, 931);
-            this.EventDescriptionRichTextbox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.EventDescriptionRichTextbox1.Name = "EventDescriptionRichTextbox1";
-            this.EventDescriptionRichTextbox1.Size = new System.Drawing.Size(211, 97);
-            this.EventDescriptionRichTextbox1.TabIndex = 26;
-            this.EventDescriptionRichTextbox1.Text = "";
+            this.DescTextbox.Location = new System.Drawing.Point(330, 931);
+            this.DescTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DescTextbox.Name = "DescTextbox";
+            this.DescTextbox.Size = new System.Drawing.Size(211, 97);
+            this.DescTextbox.TabIndex = 26;
+            this.DescTextbox.Text = "";
+            this.DescTextbox.Validating += new System.ComponentModel.CancelEventHandler(this.DescTextbox_Validating);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Yellow;
-            this.label8.Location = new System.Drawing.Point(380, 595);
+            this.label8.Location = new System.Drawing.Point(389, 595);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(13, 18);
@@ -221,7 +231,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Yellow;
-            this.label9.Location = new System.Drawing.Point(458, 596);
+            this.label9.Location = new System.Drawing.Point(485, 596);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(13, 18);
@@ -232,7 +242,7 @@
             // 
             this.SDayLabel.AutoSize = true;
             this.SDayLabel.ForeColor = System.Drawing.Color.Yellow;
-            this.SDayLabel.Location = new System.Drawing.Point(339, 568);
+            this.SDayLabel.Location = new System.Drawing.Point(339, 565);
             this.SDayLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SDayLabel.Name = "SDayLabel";
             this.SDayLabel.Size = new System.Drawing.Size(26, 13);
@@ -243,7 +253,7 @@
             // 
             this.SMonthLabel.AutoSize = true;
             this.SMonthLabel.ForeColor = System.Drawing.Color.Yellow;
-            this.SMonthLabel.Location = new System.Drawing.Point(408, 568);
+            this.SMonthLabel.Location = new System.Drawing.Point(426, 565);
             this.SMonthLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SMonthLabel.Name = "SMonthLabel";
             this.SMonthLabel.Size = new System.Drawing.Size(37, 13);
@@ -254,7 +264,7 @@
             // 
             this.SYearLabel.AutoSize = true;
             this.SYearLabel.ForeColor = System.Drawing.Color.Yellow;
-            this.SYearLabel.Location = new System.Drawing.Point(494, 568);
+            this.SYearLabel.Location = new System.Drawing.Point(528, 565);
             this.SYearLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SYearLabel.Name = "SYearLabel";
             this.SYearLabel.Size = new System.Drawing.Size(29, 13);
@@ -265,7 +275,7 @@
             // 
             this.EYearLabel.AutoSize = true;
             this.EYearLabel.ForeColor = System.Drawing.Color.Yellow;
-            this.EYearLabel.Location = new System.Drawing.Point(494, 658);
+            this.EYearLabel.Location = new System.Drawing.Point(528, 658);
             this.EYearLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EYearLabel.Name = "EYearLabel";
             this.EYearLabel.Size = new System.Drawing.Size(29, 13);
@@ -276,7 +286,7 @@
             // 
             this.EMonthLabel.AutoSize = true;
             this.EMonthLabel.ForeColor = System.Drawing.Color.Yellow;
-            this.EMonthLabel.Location = new System.Drawing.Point(408, 658);
+            this.EMonthLabel.Location = new System.Drawing.Point(426, 658);
             this.EMonthLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EMonthLabel.Name = "EMonthLabel";
             this.EMonthLabel.Size = new System.Drawing.Size(37, 13);
@@ -299,7 +309,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Yellow;
-            this.label16.Location = new System.Drawing.Point(458, 686);
+            this.label16.Location = new System.Drawing.Point(485, 682);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(13, 18);
@@ -311,7 +321,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Yellow;
-            this.label17.Location = new System.Drawing.Point(380, 685);
+            this.label17.Location = new System.Drawing.Point(390, 683);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(13, 18);
@@ -349,6 +359,8 @@
             this.PriceTextbox.Name = "PriceTextbox";
             this.PriceTextbox.Size = new System.Drawing.Size(88, 20);
             this.PriceTextbox.TabIndex = 44;
+            this.PriceTextbox.Validating += new System.ComponentModel.CancelEventHandler(this.PriceTextbox_Validating);
+            this.PriceTextbox.Validated += new System.EventHandler(this.PriceTextbox_Validated);
             // 
             // euroLabel
             // 
@@ -381,13 +393,15 @@
             this.OwnerNameTextbox.Name = "OwnerNameTextbox";
             this.OwnerNameTextbox.Size = new System.Drawing.Size(193, 20);
             this.OwnerNameTextbox.TabIndex = 47;
+            this.OwnerNameTextbox.Validating += new System.ComponentModel.CancelEventHandler(this.OwnerNameTextbox_Validating);
+            this.OwnerNameTextbox.Validated += new System.EventHandler(this.OwnerNameTextbox_Validated);
             // 
             // CreateEventTitleLabel
             // 
             this.CreateEventTitleLabel.AutoSize = true;
             this.CreateEventTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateEventTitleLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.CreateEventTitleLabel.Location = new System.Drawing.Point(232, 40);
+            this.CreateEventTitleLabel.Location = new System.Drawing.Point(277, 33);
             this.CreateEventTitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CreateEventTitleLabel.Name = "CreateEventTitleLabel";
             this.CreateEventTitleLabel.Size = new System.Drawing.Size(173, 31);
@@ -418,13 +432,14 @@
             this.TagsLabel.TabIndex = 51;
             this.TagsLabel.Text = "Tags:";
             // 
-            // TagsTextBox
+            // TagsTextbox
             // 
-            this.TagsTextBox.Location = new System.Drawing.Point(330, 814);
-            this.TagsTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TagsTextBox.Name = "TagsTextBox";
-            this.TagsTextBox.Size = new System.Drawing.Size(186, 20);
-            this.TagsTextBox.TabIndex = 52;
+            this.TagsTextbox.Location = new System.Drawing.Point(330, 814);
+            this.TagsTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TagsTextbox.Name = "TagsTextbox";
+            this.TagsTextbox.Size = new System.Drawing.Size(186, 20);
+            this.TagsTextbox.TabIndex = 52;
+            this.TagsTextbox.Validating += new System.ComponentModel.CancelEventHandler(this.TagsTextbox_Validating);
             // 
             // privateCheckBox
             // 
@@ -457,6 +472,8 @@
             this.CategorycomboBox.Name = "CategorycomboBox";
             this.CategorycomboBox.Size = new System.Drawing.Size(186, 21);
             this.CategorycomboBox.TabIndex = 60;
+            this.CategorycomboBox.Validating += new System.ComponentModel.CancelEventHandler(this.CategorycomboBox_Validating);
+            this.CategorycomboBox.Validated += new System.EventHandler(this.CategorycomboBox_Validated);
             // 
             // VenuecomboBox
             // 
@@ -466,60 +483,131 @@
             this.VenuecomboBox.Name = "VenuecomboBox";
             this.VenuecomboBox.Size = new System.Drawing.Size(187, 21);
             this.VenuecomboBox.TabIndex = 61;
+            this.VenuecomboBox.Validating += new System.ComponentModel.CancelEventHandler(this.VenuecomboBox_Validating);
+            this.VenuecomboBox.Validated += new System.EventHandler(this.VenuecomboBox_Validated);
             // 
             // SDaycomboBox
             // 
+            this.SDaycomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SDaycomboBox.FormattingEnabled = true;
-            this.SDaycomboBox.Location = new System.Drawing.Point(330, 595);
+            this.SDaycomboBox.Location = new System.Drawing.Point(326, 598);
             this.SDaycomboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SDaycomboBox.Name = "SDaycomboBox";
-            this.SDaycomboBox.Size = new System.Drawing.Size(39, 21);
+            this.SDaycomboBox.Size = new System.Drawing.Size(55, 21);
             this.SDaycomboBox.TabIndex = 62;
             // 
             // SMonthcomboBox
             // 
+            this.SMonthcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SMonthcomboBox.FormattingEnabled = true;
-            this.SMonthcomboBox.Location = new System.Drawing.Point(403, 596);
+            this.SMonthcomboBox.Location = new System.Drawing.Point(412, 596);
             this.SMonthcomboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SMonthcomboBox.Name = "SMonthcomboBox";
-            this.SMonthcomboBox.Size = new System.Drawing.Size(47, 21);
+            this.SMonthcomboBox.Size = new System.Drawing.Size(65, 21);
             this.SMonthcomboBox.TabIndex = 63;
             // 
             // SYearcomboBox
             // 
+            this.SYearcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SYearcomboBox.FormattingEnabled = true;
-            this.SYearcomboBox.Location = new System.Drawing.Point(479, 595);
+            this.SYearcomboBox.Location = new System.Drawing.Point(506, 595);
             this.SYearcomboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SYearcomboBox.Name = "SYearcomboBox";
-            this.SYearcomboBox.Size = new System.Drawing.Size(68, 21);
+            this.SYearcomboBox.Size = new System.Drawing.Size(62, 21);
             this.SYearcomboBox.TabIndex = 64;
             // 
             // EDaycomboBox
             // 
+            this.EDaycomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EDaycomboBox.FormattingEnabled = true;
-            this.EDaycomboBox.Location = new System.Drawing.Point(330, 683);
+            this.EDaycomboBox.Location = new System.Drawing.Point(326, 685);
             this.EDaycomboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EDaycomboBox.Name = "EDaycomboBox";
-            this.EDaycomboBox.Size = new System.Drawing.Size(39, 21);
+            this.EDaycomboBox.Size = new System.Drawing.Size(56, 21);
             this.EDaycomboBox.TabIndex = 65;
             // 
             // EMonthcomboBox
             // 
+            this.EMonthcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EMonthcomboBox.FormattingEnabled = true;
-            this.EMonthcomboBox.Location = new System.Drawing.Point(403, 686);
+            this.EMonthcomboBox.Location = new System.Drawing.Point(413, 684);
             this.EMonthcomboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EMonthcomboBox.Name = "EMonthcomboBox";
-            this.EMonthcomboBox.Size = new System.Drawing.Size(47, 21);
+            this.EMonthcomboBox.Size = new System.Drawing.Size(64, 21);
             this.EMonthcomboBox.TabIndex = 66;
             // 
             // EYearcomboBox
             // 
+            this.EYearcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EYearcomboBox.FormattingEnabled = true;
-            this.EYearcomboBox.Location = new System.Drawing.Point(479, 687);
+            this.EYearcomboBox.Location = new System.Drawing.Point(506, 682);
             this.EYearcomboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EYearcomboBox.Name = "EYearcomboBox";
-            this.EYearcomboBox.Size = new System.Drawing.Size(68, 21);
+            this.EYearcomboBox.Size = new System.Drawing.Size(62, 21);
             this.EYearcomboBox.TabIndex = 67;
+            // 
+            // NameValLabel
+            // 
+            this.NameValLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.NameValLabel.ForeColor = System.Drawing.Color.Lime;
+            this.NameValLabel.Location = new System.Drawing.Point(552, 355);
+            this.NameValLabel.Name = "NameValLabel";
+            this.NameValLabel.Size = new System.Drawing.Size(139, 23);
+            this.NameValLabel.TabIndex = 68;
+            // 
+            // VenueValLabel
+            // 
+            this.VenueValLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.VenueValLabel.ForeColor = System.Drawing.Color.Lime;
+            this.VenueValLabel.Location = new System.Drawing.Point(552, 425);
+            this.VenueValLabel.Name = "VenueValLabel";
+            this.VenueValLabel.Size = new System.Drawing.Size(139, 23);
+            this.VenueValLabel.TabIndex = 69;
+            // 
+            // OwnerValLabel
+            // 
+            this.OwnerValLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.OwnerValLabel.ForeColor = System.Drawing.Color.Lime;
+            this.OwnerValLabel.Location = new System.Drawing.Point(555, 132);
+            this.OwnerValLabel.Name = "OwnerValLabel";
+            this.OwnerValLabel.Size = new System.Drawing.Size(136, 23);
+            this.OwnerValLabel.TabIndex = 70;
+            // 
+            // CategoryValLabel
+            // 
+            this.CategoryValLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.CategoryValLabel.ForeColor = System.Drawing.Color.Lime;
+            this.CategoryValLabel.Location = new System.Drawing.Point(542, 748);
+            this.CategoryValLabel.Name = "CategoryValLabel";
+            this.CategoryValLabel.Size = new System.Drawing.Size(149, 23);
+            this.CategoryValLabel.TabIndex = 71;
+            // 
+            // TagsValLabel
+            // 
+            this.TagsValLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.TagsValLabel.ForeColor = System.Drawing.Color.Lime;
+            this.TagsValLabel.Location = new System.Drawing.Point(545, 812);
+            this.TagsValLabel.Name = "TagsValLabel";
+            this.TagsValLabel.Size = new System.Drawing.Size(146, 23);
+            this.TagsValLabel.TabIndex = 72;
+            // 
+            // TPriceValLabel
+            // 
+            this.TPriceValLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.TPriceValLabel.ForeColor = System.Drawing.Color.Lime;
+            this.TPriceValLabel.Location = new System.Drawing.Point(475, 872);
+            this.TPriceValLabel.Name = "TPriceValLabel";
+            this.TPriceValLabel.Size = new System.Drawing.Size(163, 23);
+            this.TPriceValLabel.TabIndex = 73;
+            // 
+            // DescValLabel
+            // 
+            this.DescValLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.DescValLabel.ForeColor = System.Drawing.Color.Lime;
+            this.DescValLabel.Location = new System.Drawing.Point(576, 929);
+            this.DescValLabel.Name = "DescValLabel";
+            this.DescValLabel.Size = new System.Drawing.Size(115, 99);
+            this.DescValLabel.TabIndex = 74;
             // 
             // CreateEventPage
             // 
@@ -527,6 +615,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.DescValLabel);
+            this.Controls.Add(this.TPriceValLabel);
+            this.Controls.Add(this.TagsValLabel);
+            this.Controls.Add(this.CategoryValLabel);
+            this.Controls.Add(this.OwnerValLabel);
+            this.Controls.Add(this.VenueValLabel);
+            this.Controls.Add(this.NameValLabel);
             this.Controls.Add(this.privacyLabel);
             this.Controls.Add(this.privateCheckBox);
             this.Controls.Add(this.EYearcomboBox);
@@ -537,7 +632,7 @@
             this.Controls.Add(this.SDaycomboBox);
             this.Controls.Add(this.VenuecomboBox);
             this.Controls.Add(this.CategorycomboBox);
-            this.Controls.Add(this.TagsTextBox);
+            this.Controls.Add(this.TagsTextbox);
             this.Controls.Add(this.TagsLabel);
             this.Controls.Add(this.EventVenueNameLabel);
             this.Controls.Add(this.CreateEventTitleLabel);
@@ -557,12 +652,12 @@
             this.Controls.Add(this.SDayLabel);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.EventDescriptionRichTextbox1);
+            this.Controls.Add(this.DescTextbox);
             this.Controls.Add(this.EventDescriptionlabel8);
             this.Controls.Add(this.UploadEventPicbutton2);
             this.Controls.Add(this.CreateEventButton);
             this.Controls.Add(this.UploadEventpic);
-            this.Controls.Add(this.EventNametextBox1);
+            this.Controls.Add(this.EventNameTextbox);
             this.Controls.Add(this.CategoryLabel);
             this.Controls.Add(this.StartingDateLabel);
             this.Controls.Add(this.EventNameLabel);
@@ -572,7 +667,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CreateEventPage";
-            this.Size = new System.Drawing.Size(666, 1205);
+            this.Size = new System.Drawing.Size(724, 1205);
             this.Load += new System.EventHandler(this.CreateEventPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -585,13 +680,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button CreateEventButton;
         private System.Windows.Forms.Label UploadEventpic;
-        private System.Windows.Forms.TextBox EventNametextBox1;
+        private System.Windows.Forms.TextBox EventNameTextbox;
         private System.Windows.Forms.Label CategoryLabel;
         private System.Windows.Forms.Label StartingDateLabel;
         private System.Windows.Forms.Label EventNameLabel;
         private System.Windows.Forms.Button UploadEventPicbutton2;
         private System.Windows.Forms.Label EventDescriptionlabel8;
-        private System.Windows.Forms.RichTextBox EventDescriptionRichTextbox1;
+        private System.Windows.Forms.RichTextBox DescTextbox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label SDayLabel;
@@ -611,7 +706,7 @@
         private System.Windows.Forms.Label CreateEventTitleLabel;
         private System.Windows.Forms.Label EventVenueNameLabel;
         private System.Windows.Forms.Label TagsLabel;
-        private System.Windows.Forms.TextBox TagsTextBox;
+        private System.Windows.Forms.TextBox TagsTextbox;
 
 
 
@@ -625,5 +720,12 @@
         private System.Windows.Forms.ComboBox EYearcomboBox;
         private System.Windows.Forms.CheckBox privateCheckBox;
         private System.Windows.Forms.Label privacyLabel;
+        private System.Windows.Forms.Label NameValLabel;
+        private System.Windows.Forms.Label VenueValLabel;
+        private System.Windows.Forms.Label OwnerValLabel;
+        private System.Windows.Forms.Label CategoryValLabel;
+        private System.Windows.Forms.Label TagsValLabel;
+        private System.Windows.Forms.Label TPriceValLabel;
+        private System.Windows.Forms.Label DescValLabel;
     }
 }
