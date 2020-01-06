@@ -16,7 +16,9 @@ namespace itHappens.UIs.anna
         public LogInPage()
         {
             InitializeComponent();
-        }       
+        }
+
+        public static String userName;
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
@@ -26,7 +28,7 @@ namespace itHappens.UIs.anna
 
             if (validation == true)
             {
-                String userName = Controllers.LoginController.DatabaseFieldValidation(UsernameTextBox.Text, PasswordTextBox.Text);
+                userName = Controllers.LoginController.DatabaseFieldValidation(UsernameTextBox.Text, PasswordTextBox.Text);
                 if (!userName.Equals(""))
                 {
                     //oti theloume na emfanizei meta tin sundesi
