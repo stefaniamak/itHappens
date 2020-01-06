@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `it_happens`.`area` (
   `continent` TEXT NOT NULL,
   `country` TEXT NOT NULL,
   `city` TEXT NOT NULL,
-  `zip_code` INT(11) NOT NULL,
+  `zip_code` VARCHAR(50),
   `address` TEXT NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
@@ -150,6 +150,48 @@ ENGINE = InnoDB
 AUTO_INCREMENT = 93
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
+
+
+INSERT into categories (id,categories, parent) values (1,'Entertainment', 0);
+INSERT into categories (id,categories, parent) values (2,'Educational', 0);
+INSERT into categories (id,categories, parent) values (3,'Health and General', 0);
+
+INSERT into categories (categories, parent) values ('music', 1);
+INSERT into categories (categories, parent) values ('dance', 1);
+INSERT into categories (categories, parent) values ('food', 1);
+INSERT into categories (categories, parent) values ('sales', 1);
+INSERT into categories (categories, parent) values ('comedy', 1);
+INSERT into categories (categories, parent) values ('movies_film', 1);
+INSERT into categories (categories, parent) values ('theatric_plays', 1);
+INSERT into categories (categories, parent) values ('club_associations', 1);
+INSERT into categories (categories, parent) values ('singles_social', 1);
+INSERT into categories (categories, parent) values ('parties', 1);
+INSERT into categories (categories, parent) values ('festivals_parades', 1);
+INSERT into categories (categories, parent) values ('performing_arts', 1);
+INSERT into categories (categories, parent) values ('holiday', 1);
+
+INSERT into categories (categories, parent) values ('business', 2);
+INSERT into categories (categories, parent) values ('learning_education', 2);
+INSERT into categories (categories, parent) values ('attractions', 2);
+INSERT into categories (categories, parent) values ('art', 2);
+INSERT into categories (categories, parent) values ('conference', 2);
+INSERT into categories (categories, parent) values ('seminars', 2);
+INSERT into categories (categories, parent) values ('books', 2);
+INSERT into categories (categories, parent) values ('politics_activism', 2);
+INSERT into categories (categories, parent) values ('science', 2);
+INSERT into categories (categories, parent) values ('technology', 2);
+
+INSERT into categories (categories, parent) values ('family_fun_kids', 3);
+INSERT into categories (categories, parent) values ('fundraisers', 3);
+INSERT into categories (categories, parent) values ('support', 3);
+INSERT into categories (categories, parent) values ('community', 3);
+INSERT into categories (categories, parent) values ('schools_alumni', 3);
+INSERT into categories (categories, parent) values ('outdoors_recreation', 3);
+INSERT into categories (categories, parent) values ('animals', 3);
+INSERT into categories (categories, parent) values ('religion_spirituality', 3);
+INSERT into categories (categories, parent) values ('sports', 3);
+INSERT into categories (categories, parent) values ('other', 3);
+
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

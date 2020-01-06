@@ -3,6 +3,7 @@ using System;
 using System.Globalization;
 using System.IO;
 using System.Net;
+using System.Text.RegularExpressions;
 using System.Xml;
 
 namespace eventful
@@ -10,6 +11,9 @@ namespace eventful
     class EventfulAPI
     {
         string currentMonth = DateTime.Now.ToString("MMMM", CultureInfo.InvariantCulture);
+
+        //Regex for price parsing
+        private static readonly Regex rxNonDigits = new Regex(@"[^\d]+");
 
         public void GetXmlData(string userLocation, byte page_size, string month = "January" )
         {
@@ -86,10 +90,18 @@ namespace eventful
                     }
 
 
+
+
                     //Price
                     string price = xmlNode[i].ChildNodes[35]?.InnerText.Trim();
+                    //Method for price parsing by removing any Letters and or other symbols
+                    if (!string.IsNullOrEmpty(price))
+                    {
+                        price = rxNonDigits.Replace(price, "");
+                    }
+                    
                     double parsedPrice = (string.IsNullOrEmpty(price)) ? 0 : Double.Parse(price);
-
+                        
                     //Venue Info
                     string venueId = xmlNode[i].ChildNodes[9]?.InnerText.Trim();
                     string venueEventfulUrl = xmlNode[i].ChildNodes[11]?.InnerText.Trim();
@@ -123,7 +135,7 @@ namespace eventful
 
                     areaID = (popdb.checkIfAreaNotExists(venueAddress)) ? popdb.addAreaRecord(countryName, cityName, zip_code, venueAddress) : popdb.findAreaID(venueAddress);
                     venueID = (popdb.checkIfVenueNotExists(venueName)) ? popdb.addVenueRecord(areaID, venueName) : popdb.findVenueID(venueName);
-                    categoryID = (popdb.checkIfCategoryNotExists(categoryName)) ? popdb.addCategoryRecord(categoryName) : popdb.findCategoryID(categoryName);
+                    categoryID = (popdb.checkIfCategoryNotExists(categoryEventfulId)) ? popdb.addCategoryRecord(categoryEventfulId) : popdb.findCategoryID(categoryEventfulId);
 
                     if (popdb.checkIfEventNotExists(eventName))
                     {
