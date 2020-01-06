@@ -11,6 +11,8 @@ namespace eventful
     class EventfulAPI
     {
         string currentMonth = DateTime.Now.ToString("MMMM", CultureInfo.InvariantCulture);
+
+        //Regex for price parsing
         private static readonly Regex rxNonDigits = new Regex(@"[^\d]+");
 
         public void GetXmlData(string userLocation, byte page_size, string month = "January" )
@@ -92,7 +94,7 @@ namespace eventful
 
                     //Price
                     string price = xmlNode[i].ChildNodes[35]?.InnerText.Trim();
-
+                    //Method for price parsing by removing any Letters and or other symbols
                     if (!string.IsNullOrEmpty(price))
                     {
                         price = rxNonDigits.Replace(price, "");
