@@ -131,7 +131,7 @@ namespace eventful
                     long categoryID;
 
                     //Save Data
-                    PopulateDB popdb = new PopulateDB();
+                    Db_controller popdb = new Db_controller();
 
                     areaID = (popdb.checkIfAreaNotExists(venueAddress)) ? popdb.addAreaRecord(countryName, cityName, zip_code, venueAddress) : popdb.findAreaID(venueAddress);
                     venueID = (popdb.checkIfVenueNotExists(venueName)) ? popdb.addVenueRecord(areaID, venueName) : popdb.findVenueID(venueName);
