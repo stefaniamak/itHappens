@@ -156,7 +156,7 @@ namespace itHappends
             // Change the second parameter to the value you want to add (i.e. the Nodes from the response)
 
             sCommand.Parameters.AddWithValue("@title", title);
-            sCommand.Parameters.AddWithValue("@ownerID", ownerID);
+            sCommand.Parameters.AddWithValue("@ownerID", 1);
             sCommand.Parameters.AddWithValue("@venueID", venueID);
             sCommand.Parameters.AddWithValue("@categoryID", categoryID);
             sCommand.Parameters.AddWithValue("@startingDate", startingDate);
@@ -176,7 +176,7 @@ namespace itHappends
             var sCommand = new MySqlCommand(s, con);
 
 
-            sCommand.Parameters.AddWithValue("@accID", 0);
+            sCommand.Parameters.AddWithValue("@accID", 1);
             sCommand.Parameters.AddWithValue("@areaID", areaID);
             sCommand.Parameters.AddWithValue("@name", name);
             sCommand.Parameters.AddWithValue("@capacity", 0);
@@ -223,6 +223,36 @@ namespace itHappends
 
 
         }
+
+        public long addFollowing(int following_user_id, int followed_user_id)
+        {
+            string s = @"insert into following (following_user_id, followed_user_id)
+		                    values (@followingID, @followedID)";
+
+            var sCommand = new MySqlCommand(s, con);
+
+
+            sCommand.Parameters.AddWithValue("(@followingID", following_user_id);
+            sCommand.Parameters.AddWithValue("@followedID", followed_user_id);
+            sCommand.ExecuteNonQuery();
+
+            return sCommand.LastInsertedId;
+        }
+
+        public long removeFollowing(int following_user_ID, int followed_user_ID)
+        {
+            string s = @"delete from following WHERE (following_user_ID = @followingID AND followed_user_ID = @followedID)";
+
+            var sCommand = new MySqlCommand(s, con);
+
+
+            sCommand.Parameters.AddWithValue("(@followingID", following_user_ID);
+            sCommand.Parameters.AddWithValue("@followedID", followed_user_ID);
+            sCommand.ExecuteNonQuery();
+
+            return sCommand.LastInsertedId;
+        }
+
 
         MySqlDataReader doit(string query)
         {
