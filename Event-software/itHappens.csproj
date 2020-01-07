@@ -148,6 +148,7 @@
   <ItemGroup>
     <Compile Include="Classes\Area.cs" />
     <Compile Include="Classes\Category.cs" />
+    <Compile Include="Classes\CreateList.cs" />
     <Compile Include="Classes\Event.cs" />
     <Compile Include="Classes\EventList.cs" />
     <Compile Include="Classes\MiddlePanelMethods.cs" />

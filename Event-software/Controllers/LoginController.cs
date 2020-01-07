@@ -119,7 +119,43 @@ namespace itHappens.Controllers
 
         }
 
+        public static int returnUsersID(String username, String password)
+        {
+            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+            MySqlConnection con;
+            String result = "";
 
+            try
+            {
+                con = new MySqlConnection(conStr);
+                con.Open();
+
+                MySqlCommand command;
+                MySqlDataReader dataReader;
+                String queryString = "Select id from users where Username= '" + username + "' and password= '" + password + "'";
+
+                command = new MySqlCommand(queryString, con);
+
+                dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    result = dataReader.GetString(0);
+                }
+                con.Close();
+
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error");
+            }
+
+
+            return Convert.ToInt32(result);
+
+        }
 
 
     }
