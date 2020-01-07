@@ -10,7 +10,7 @@ namespace itHappends
 {
     public class PopulateDB
     {
-        string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+        string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=root;";
         MySqlConnection con;
 
         public PopulateDB()
@@ -156,7 +156,7 @@ namespace itHappends
             // Change the second parameter to the value you want to add (i.e. the Nodes from the response)
 
             sCommand.Parameters.AddWithValue("@title", title);
-            sCommand.Parameters.AddWithValue("@ownerID", ownerID);
+            sCommand.Parameters.AddWithValue("@ownerID", 1);
             sCommand.Parameters.AddWithValue("@venueID", venueID);
             sCommand.Parameters.AddWithValue("@categoryID", categoryID);
             sCommand.Parameters.AddWithValue("@startingDate", startingDate);
@@ -176,7 +176,7 @@ namespace itHappends
             var sCommand = new MySqlCommand(s, con);
 
 
-            sCommand.Parameters.AddWithValue("@accID", 0);
+            sCommand.Parameters.AddWithValue("@accID", 1);
             sCommand.Parameters.AddWithValue("@areaID", areaID);
             sCommand.Parameters.AddWithValue("@name", name);
             sCommand.Parameters.AddWithValue("@capacity", 0);
