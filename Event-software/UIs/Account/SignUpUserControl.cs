@@ -16,7 +16,7 @@ namespace itHappens.UIs
     public partial class SignUpUserControl : UserControl
     {
         private static DbConnector dbCon = new DbConnector();
-        private string conStr = dbCon.GetConnectionString();
+        private static string conStr = dbCon.GetConnectionString();
 
         public SignUpUserControl()
         {
@@ -265,7 +265,6 @@ namespace itHappens.UIs
         {
 
             int areaId = 0;
-            string conStr = dbCon.GetConnectionString();
             MySqlConnection con;
 
             try

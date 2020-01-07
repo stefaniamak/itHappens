@@ -12,7 +12,7 @@ namespace itHappens.Controllers
     class LoginController
     {
         private static DbConnector dbCon = new DbConnector();
-        private string conStr = dbCon.GetConnectionString();
+        private static string conStr = dbCon.GetConnectionString();
 
         public static bool FieldsValidation(String username,String password,bool flag)
         {

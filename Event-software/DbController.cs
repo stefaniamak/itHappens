@@ -8,13 +8,13 @@ using MySql.Data.MySqlClient;
 
 namespace dbstuff
 {
-    public class Db_controller
+    public class DbController
     {
         private static DbConnector dbCon = new DbConnector();
         private string conStr = dbCon.GetConnectionString();
         MySqlConnection con;
 
-        public Db_controller()
+        public DbController()
         {
             try
             {
