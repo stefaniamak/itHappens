@@ -155,6 +155,8 @@
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\Venue.cs" />
     <Compile Include="Controllers\UIController.cs" />
+    <Compile Include="DbConnector.cs" />
+    <Compile Include="DbConnectorInfo.cs" />
     <Compile Include="DBs\DBConnector.cs" />
     <Compile Include="DBs\TestDataClass.cs" />
     <Compile Include="Db_connector.cs" />
