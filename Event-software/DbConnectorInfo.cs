@@ -15,7 +15,7 @@ namespace dbstuff
 
         public DbConnector()
         {
-            
+
 
             try
             {
@@ -24,12 +24,13 @@ namespace dbstuff
                 con.Open();
 
             }
-            catch(Exception e) {
+            catch (Exception e)
+            {
                 Console.WriteLine("Error");
             }
         }
 
-        MySqlDataReader doit (string query)
+        MySqlDataReader doit(string query)
         {
 
             return new MySqlCommand(query, con).ExecuteReader();
