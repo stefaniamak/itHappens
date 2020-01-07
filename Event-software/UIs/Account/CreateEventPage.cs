@@ -301,6 +301,10 @@ namespace itHappens.UIs.anna
                 createEventCon(EventNameTextbox.Text,venue,ownerId,StartingDate,EndingDate,category,TagsTextbox.Text,
                     Convert.ToDouble(PriceTextbox.Text),DescTextbox.Text);
                 MessageBox.Show("You successfully made an event!","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                
+                //Emfanish tou EventProfile (kanonika tha prepei me ta stoixeia tou event)
+                Controllers.UIController.eventsProfileToolStripMenuItem_MiddlePanel();
+                
                 clearTextBoxes();
                 SDaycomboBox.SelectedIndex = 0;
                 EDaycomboBox.SelectedIndex = 0;
