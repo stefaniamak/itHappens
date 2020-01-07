@@ -160,11 +160,11 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="EventfulAPI.cs" />
     <Compile Include="populateDB.cs" />
-    <Compile Include="UIs\Main\UserControl1.cs">
+    <Compile Include="UIs\Main\LoginWarning.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\Main\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="UIs\Main\LoginWarning.Designer.cs">
+      <DependentUpon>LoginWarning.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\Profiles\VenueProfilePage.cs">
       <SubType>UserControl</SubType>
@@ -346,8 +346,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="UIs\Main\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="UIs\Main\LoginWarning.resx">
+      <DependentUpon>LoginWarning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Profiles\VenueProfilePage.resx">
       <DependentUpon>VenueProfilePage.cs</DependentUpon>

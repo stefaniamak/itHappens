@@ -32,7 +32,7 @@ namespace itHappens.UIs.anna
                 if (!userName.Equals(""))
                 {
                     //oti theloume na emfanizei meta tin sundesi
-                    UIs.Sidebars.ProfileSidebar.usernameLable.Text = Controllers.LoginController.loginNameSurnameToProfile(UsernameTextBox.Text, PasswordTextBox.Text);
+                    UIs.Sidebars.ProfileSidebar.usernameLable.Text = UsernameTextBox.Text;
                     loggedInUser = true;
                     UIs.Sidebars.ProfileSidebar.LogoutButton.Visible = true;
                 }

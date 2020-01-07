@@ -40,14 +40,14 @@
             // usernameLable
             // 
             usernameLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            usernameLable.AutoSize = true;
             usernameLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             usernameLable.ForeColor = System.Drawing.Color.DarkOrange;
-            usernameLable.Location = new System.Drawing.Point(14, 101);
+            usernameLable.Location = new System.Drawing.Point(17, 101);
             usernameLable.Name = "usernameLable";
-            usernameLable.Size = new System.Drawing.Size(112, 18);
+            usernameLable.Size = new System.Drawing.Size(104, 18);
             usernameLable.TabIndex = 1;
-            usernameLable.Text = "Name Surname";
+            usernameLable.Text = "Username";
+            usernameLable.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // bellNotificationPictureBox
             // 
@@ -77,7 +77,7 @@
             LogoutButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             LogoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             LogoutButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            LogoutButton.Location = new System.Drawing.Point(35, 122);
+            LogoutButton.Location = new System.Drawing.Point(35, 136);
             LogoutButton.Name = "LogoutButton";
             LogoutButton.Size = new System.Drawing.Size(77, 21);
             LogoutButton.TabIndex = 4;
@@ -100,7 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bellNotificationPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
