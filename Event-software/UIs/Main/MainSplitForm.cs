@@ -104,7 +104,15 @@ namespace itHappens.UIs.Common
 
         private void CreateEvent_Click(object sender, EventArgs e)
         {
-
+            if(UIs.anna.LogInPage.loggedInUser == true)
+            {
+                Controllers.UIController.createEventToolStripMenuItem_MiddlePanel();
+            }
+            else
+            {
+                //Ti tha emfanizei an den einai sundedemenos o xrhsths
+            }
+            
         }
 
         private void rightSplitContainer_SplitterMoved(object sender, SplitterEventArgs e)

@@ -283,6 +283,11 @@ namespace itHappens.UIs.anna
             {
                 MessageBox.Show("Fill the fields right", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (!NameValLabel.Text.Equals("") || !VenueValLabel.Text.Equals("") || !CategoryValLabel.Text.Equals("")
+                     || !TagsValLabel.Text.Equals("") || !TPriceValLabel.Text.Equals("") || !DescValLabel.Text.Equals(""))
+            {
+                     MessageBox.Show("Correct the fields right", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
 
@@ -296,6 +301,10 @@ namespace itHappens.UIs.anna
                 createEventCon(EventNameTextbox.Text,venue,ownerId,StartingDate,EndingDate,category,TagsTextbox.Text,
                     Convert.ToDouble(PriceTextbox.Text),DescTextbox.Text);
                 MessageBox.Show("You successfully made an event!","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                
+                //Emfanish tou EventProfile (kanonika tha prepei me ta stoixeia tou event)
+                Controllers.UIController.eventsProfileToolStripMenuItem_MiddlePanel();
+                
                 clearTextBoxes();
                 SDaycomboBox.SelectedIndex = 0;
                 EDaycomboBox.SelectedIndex = 0;
@@ -365,7 +374,7 @@ namespace itHappens.UIs.anna
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select id from users where Username='" + s + "'";
+                String queryString = "Select id from users where username='" + s + "'";
 
 
                 command = new MySqlCommand(queryString, con);
@@ -400,7 +409,7 @@ namespace itHappens.UIs.anna
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select id from categories where name='" + s + "'";
+                String queryString = "Select id from categories where categories='" + s + "'";
 
 
                 command = new MySqlCommand(queryString, con);
