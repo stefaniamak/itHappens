@@ -1,6 +1,6 @@
 ﻿namespace itHappens.UIs.Main
 {
-    partial class UserControl1
+    partial class LoginWarning
     {
         /// <summary> 
         /// Required designer variable.
