@@ -45,7 +45,6 @@ namespace itHappens.Controllers
 
         public static String DatabaseFieldValidation(String username, String password)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
             String result = "";
 
@@ -56,7 +55,7 @@ namespace itHappens.Controllers
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select username from users where Username= '" + username + "' and password= '" + password + "'";
+                String queryString = "Select username from users where username= '" + username + "' and password= '" + password + "'";
 
                 command = new MySqlCommand(queryString, con);
 
@@ -83,7 +82,6 @@ namespace itHappens.Controllers
 
         public static String loginNameSurnameToProfile(String usern, String pass)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
             String userName = "";
 
@@ -124,7 +122,6 @@ namespace itHappens.Controllers
 
         public static int returnUsersID(String username, String password)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
             String result = "";
 
@@ -135,7 +132,7 @@ namespace itHappens.Controllers
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select id from users where Username= '" + username + "' and password= '" + password + "'";
+                String queryString = "Select id from users where username= '" + username + "' and password= '" + password + "'";
 
                 command = new MySqlCommand(queryString, con);
 
