@@ -35,6 +35,8 @@ namespace itHappens.UIs.anna
                     UIs.Sidebars.ProfileSidebar.usernameLable.Text = UsernameTextBox.Text;
                     loggedInUser = true;
                     UIs.Sidebars.ProfileSidebar.LogoutButton.Visible = true;
+                    Controllers.UIController.openHostForMainAndSearchPage();
+                    Controllers.UIController.openPage("main");
                 }
                 else
                 {

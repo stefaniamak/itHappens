@@ -18,6 +18,10 @@ namespace itHappens.UIs
         {
             InitializeComponent();
             fillTheComboBox();
+            areaComboBox.Items.RemoveAt(0);
+            areaComboBox.Items.Insert(0, "Select");
+            areaComboBox.SelectedIndex = 0;
+
         }
 
         private void SignUpUserControl_Load(object sender, EventArgs e)
@@ -27,7 +31,7 @@ namespace itHappens.UIs
 
         public void fillTheComboBox()
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
+            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
 
             try
@@ -231,7 +235,7 @@ namespace itHappens.UIs
             {
                 repassValLabel.Text = "It does not match with Password";
             }
-            else if (!(areaComboBox.SelectedIndex > -1))
+            else if (areaComboBox.Text.Equals("Select"))
             {
                 areaValLabel.Text = "Select a country";
             }
@@ -242,7 +246,8 @@ namespace itHappens.UIs
                 signUpCon(areaComboBox.SelectedItem.ToString(), Convert.ToInt32(numericUpDown.Value), usernameTextBox.Text,
                     passwordTextBox.Text, nameTextBox.Text, surnameTextBox.Text, emailTextBox.Text);
                 clearTextBoxes();
-                //Opou tha phgainei meta to signUp
+                Controllers.UIController.logInToolStripMenuItem_MiddlePanel();
+
             }
 
         }
@@ -261,7 +266,7 @@ namespace itHappens.UIs
         public static void signUpCon(String area, int age, String userName, String pass, String name, String surname, String email)
         {
             int areaId = 0;
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
+            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
 
             try
@@ -301,11 +306,11 @@ namespace itHappens.UIs
 
                 MySqlCommand cmd = con.CreateCommand(); ;
 
-                String query = "INSERT INTO users(areaID,Username,password,email,name,surname,age) VALUES(@areaId,@Username,@password,@email,@name,@surname,@age)";
+                String query = "INSERT INTO users(areaID,username,password,email,name,surname,age) VALUES(@areaId,@username,@password,@email,@name,@surname,@age)";
 
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@areaId", areaId);
-                cmd.Parameters.AddWithValue("@Username", userName);
+                cmd.Parameters.AddWithValue("@username", userName);
                 cmd.Parameters.AddWithValue("@password", pass);
                 cmd.Parameters.AddWithValue("@email", email);
                 cmd.Parameters.AddWithValue("@name", name);

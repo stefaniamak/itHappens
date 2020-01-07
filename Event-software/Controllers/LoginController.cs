@@ -53,7 +53,7 @@ namespace itHappens.Controllers
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select Username from users where Username= '" + username + "' and password= '" + password + "'";
+                String queryString = "Select username from users where Username= '" + username + "' and password= '" + password + "'";
 
                 command = new MySqlCommand(queryString, con);
 
@@ -91,7 +91,7 @@ namespace itHappens.Controllers
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select Username from users where Username= '" + usern + "' and password= '" + pass + "'";
+                String queryString = "Select username from users where username= '" + usern + "' and password= '" + pass + "'";
 
                 command = new MySqlCommand(queryString, con);
 

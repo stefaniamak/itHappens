@@ -283,6 +283,11 @@ namespace itHappens.UIs.anna
             {
                 MessageBox.Show("Fill the fields right", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (!NameValLabel.Text.Equals("") || !VenueValLabel.Text.Equals("") || !CategoryValLabel.Text.Equals("")
+                     || !TagsValLabel.Text.Equals("") || !TPriceValLabel.Text.Equals("") || !DescValLabel.Text.Equals(""))
+            {
+                     MessageBox.Show("Correct the fields right", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
 
@@ -365,7 +370,7 @@ namespace itHappens.UIs.anna
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select id from users where Username='" + s + "'";
+                String queryString = "Select id from users where username='" + s + "'";
 
 
                 command = new MySqlCommand(queryString, con);
@@ -400,7 +405,7 @@ namespace itHappens.UIs.anna
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select id from categories where name='" + s + "'";
+                String queryString = "Select id from categories where categories='" + s + "'";
 
 
                 command = new MySqlCommand(queryString, con);
