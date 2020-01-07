@@ -42,9 +42,9 @@
             this.ageLabel = new System.Windows.Forms.Label();
             this.repassTextBox = new System.Windows.Forms.TextBox();
             this.repassLabel = new System.Windows.Forms.Label();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            passwordTextBox = new System.Windows.Forms.TextBox();
             this.passwordLabel = new System.Windows.Forms.Label();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            usernameTextBox = new System.Windows.Forms.TextBox();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.emailLabel = new System.Windows.Forms.Label();
@@ -221,15 +221,15 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.passwordTextBox.Location = new System.Drawing.Point(226, 513);
-            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(5);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(220, 24);
-            this.passwordTextBox.TabIndex = 36;
-            this.passwordTextBox.UseSystemPasswordChar = true;
-            this.passwordTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.passwordTextBox_Validating);
-            this.passwordTextBox.Validated += new System.EventHandler(this.passwordTextBox_Validated);
+            passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            passwordTextBox.Location = new System.Drawing.Point(226, 513);
+            passwordTextBox.Margin = new System.Windows.Forms.Padding(5);
+            passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.Size = new System.Drawing.Size(220, 24);
+            passwordTextBox.TabIndex = 36;
+            passwordTextBox.UseSystemPasswordChar = true;
+            passwordTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.passwordTextBox_Validating);
+            passwordTextBox.Validated += new System.EventHandler(this.passwordTextBox_Validated);
             // 
             // passwordLabel
             // 
@@ -245,14 +245,14 @@
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.usernameTextBox.Location = new System.Drawing.Point(230, 436);
-            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(5);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(214, 24);
-            this.usernameTextBox.TabIndex = 34;
-            this.usernameTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.usernameTextBox_Validating);
-            this.usernameTextBox.Validated += new System.EventHandler(this.usernameTextBox_Validated);
+            usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            usernameTextBox.Location = new System.Drawing.Point(230, 436);
+            usernameTextBox.Margin = new System.Windows.Forms.Padding(5);
+            usernameTextBox.Name = "usernameTextBox";
+            usernameTextBox.Size = new System.Drawing.Size(214, 24);
+            usernameTextBox.TabIndex = 34;
+            usernameTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.usernameTextBox_Validating);
+            usernameTextBox.Validated += new System.EventHandler(this.usernameTextBox_Validated);
             // 
             // usernameLabel
             // 
@@ -377,10 +377,10 @@
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.emailValLabel);
             this.Controls.Add(this.usernameLabel);
-            this.Controls.Add(this.usernameTextBox);
+            this.Controls.Add(usernameTextBox);
             this.Controls.Add(this.usernameValLabel);
             this.Controls.Add(this.passwordLabel);
-            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(passwordTextBox);
             this.Controls.Add(this.passwordValLabel);
             this.Controls.Add(this.repassLabel);
             this.Controls.Add(this.repassTextBox);
@@ -418,9 +418,9 @@
         private System.Windows.Forms.Label ageLabel;
         public System.Windows.Forms.TextBox repassTextBox;
         private System.Windows.Forms.Label repassLabel;
-        public System.Windows.Forms.TextBox passwordTextBox;
+        public static System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label passwordLabel;
-        public System.Windows.Forms.TextBox usernameTextBox;
+        public static System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Label usernameLabel;
         public System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.Label emailLabel;
