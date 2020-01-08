@@ -33,14 +33,16 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.topBarPanel = new System.Windows.Forms.Panel();
             this.backgroundPictureBox = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuTabControl = new System.Windows.Forms.TabControl();
             this.eventsTabPage = new System.Windows.Forms.TabPage();
+            this.ticketPanel = new System.Windows.Forms.Panel();
+            this.ticketPriceLabel = new System.Windows.Forms.Label();
+            this.ticketPictureBox = new System.Windows.Forms.PictureBox();
             this.detailsLabel = new System.Windows.Forms.Label();
             this.locationTextBox = new System.Windows.Forms.TextBox();
             this.organizerTextBox = new System.Windows.Forms.TextBox();
-            this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.dayTimeTextBox = new System.Windows.Forms.TextBox();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.descriptionLabel = new System.Windows.Forms.Label();
             this.galleryTabPage = new System.Windows.Forms.TabPage();
             this.visitorsabPage = new System.Windows.Forms.TabPage();
@@ -52,12 +54,15 @@
             this.eventNameLabel = new System.Windows.Forms.Label();
             this.dayLabel = new System.Windows.Forms.Label();
             this.monthLabel = new System.Windows.Forms.Label();
+            this.categoryColorPanel = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.topBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundPictureBox)).BeginInit();
             this.menuTabControl.SuspendLayout();
             this.eventsTabPage.SuspendLayout();
+            this.ticketPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketPictureBox)).BeginInit();
             this.friendsAttendingPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,7 +88,7 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.topBarPanel, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.categoryColorPanel, 0, 0);
             this.tableLayoutPanel1.Enabled = false;
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.DarkOrange;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 16);
@@ -121,16 +126,6 @@
             this.backgroundPictureBox.TabIndex = 3;
             this.backgroundPictureBox.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Red;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(937, 20);
-            this.label1.TabIndex = 0;
-            // 
             // menuTabControl
             // 
             this.menuTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -151,11 +146,12 @@
             // 
             this.eventsTabPage.AutoScroll = true;
             this.eventsTabPage.BackColor = System.Drawing.SystemColors.Control;
+            this.eventsTabPage.Controls.Add(this.ticketPanel);
             this.eventsTabPage.Controls.Add(this.detailsLabel);
             this.eventsTabPage.Controls.Add(this.locationTextBox);
             this.eventsTabPage.Controls.Add(this.organizerTextBox);
-            this.eventsTabPage.Controls.Add(this.descriptionTextBox);
             this.eventsTabPage.Controls.Add(this.dayTimeTextBox);
+            this.eventsTabPage.Controls.Add(this.descriptionTextBox);
             this.eventsTabPage.Controls.Add(this.descriptionLabel);
             this.eventsTabPage.Location = new System.Drawing.Point(4, 25);
             this.eventsTabPage.Margin = new System.Windows.Forms.Padding(2);
@@ -164,6 +160,36 @@
             this.eventsTabPage.Size = new System.Drawing.Size(713, 363);
             this.eventsTabPage.TabIndex = 0;
             this.eventsTabPage.Text = "DETAILS";
+            // 
+            // ticketPanel
+            // 
+            this.ticketPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ticketPanel.Controls.Add(this.ticketPriceLabel);
+            this.ticketPanel.Controls.Add(this.ticketPictureBox);
+            this.ticketPanel.Location = new System.Drawing.Point(427, 34);
+            this.ticketPanel.Name = "ticketPanel";
+            this.ticketPanel.Size = new System.Drawing.Size(159, 105);
+            this.ticketPanel.TabIndex = 8;
+            // 
+            // ticketPriceLabel
+            // 
+            this.ticketPriceLabel.AutoSize = true;
+            this.ticketPriceLabel.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ticketPriceLabel.Location = new System.Drawing.Point(55, 31);
+            this.ticketPriceLabel.Name = "ticketPriceLabel";
+            this.ticketPriceLabel.Size = new System.Drawing.Size(55, 40);
+            this.ticketPriceLabel.TabIndex = 7;
+            this.ticketPriceLabel.Text = "$5";
+            this.ticketPriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ticketPictureBox
+            // 
+            this.ticketPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ticketPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.ticketPictureBox.Name = "ticketPictureBox";
+            this.ticketPictureBox.Size = new System.Drawing.Size(159, 105);
+            this.ticketPictureBox.TabIndex = 6;
+            this.ticketPictureBox.TabStop = false;
             // 
             // detailsLabel
             // 
@@ -193,6 +219,15 @@
             this.organizerTextBox.TabIndex = 2;
             this.organizerTextBox.Text = "Organizer";
             // 
+            // dayTimeTextBox
+            // 
+            this.dayTimeTextBox.Location = new System.Drawing.Point(27, 116);
+            this.dayTimeTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dayTimeTextBox.Name = "dayTimeTextBox";
+            this.dayTimeTextBox.Size = new System.Drawing.Size(165, 21);
+            this.dayTimeTextBox.TabIndex = 3;
+            this.dayTimeTextBox.Text = "Date | Time";
+            // 
             // descriptionTextBox
             // 
             this.descriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -203,17 +238,8 @@
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.ReadOnly = true;
-            this.descriptionTextBox.Size = new System.Drawing.Size(633, 187);
+            this.descriptionTextBox.Size = new System.Drawing.Size(522, 187);
             this.descriptionTextBox.TabIndex = 5;
-            // 
-            // dayTimeTextBox
-            // 
-            this.dayTimeTextBox.Location = new System.Drawing.Point(27, 116);
-            this.dayTimeTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dayTimeTextBox.Name = "dayTimeTextBox";
-            this.dayTimeTextBox.Size = new System.Drawing.Size(165, 21);
-            this.dayTimeTextBox.TabIndex = 3;
-            this.dayTimeTextBox.Text = "Date | Time";
             // 
             // descriptionLabel
             // 
@@ -363,6 +389,16 @@
             this.monthLabel.TabIndex = 5;
             this.monthLabel.Text = "NOV";
             // 
+            // categoryColorPanel
+            // 
+            this.categoryColorPanel.BackColor = System.Drawing.Color.Red;
+            this.categoryColorPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryColorPanel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.categoryColorPanel.Location = new System.Drawing.Point(3, 3);
+            this.categoryColorPanel.Name = "categoryColorPanel";
+            this.categoryColorPanel.Size = new System.Drawing.Size(937, 14);
+            this.categoryColorPanel.TabIndex = 18;
+            // 
             // EventProfilePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -381,12 +417,14 @@
             this.Load += new System.EventHandler(this.EventProfilePage_Load);
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.topBarPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.backgroundPictureBox)).EndInit();
             this.menuTabControl.ResumeLayout(false);
             this.eventsTabPage.ResumeLayout(false);
             this.eventsTabPage.PerformLayout();
+            this.ticketPanel.ResumeLayout(false);
+            this.ticketPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketPictureBox)).EndInit();
             this.friendsAttendingPanel.ResumeLayout(false);
             this.friendsAttendingPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -418,6 +456,9 @@
         private System.Windows.Forms.Button goingButton;
         private System.Windows.Forms.Button interestedButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel ticketPanel;
+        private System.Windows.Forms.Label ticketPriceLabel;
+        private System.Windows.Forms.PictureBox ticketPictureBox;
+        private System.Windows.Forms.Panel categoryColorPanel;
     }
 }

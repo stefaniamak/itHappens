@@ -470,3 +470,4 @@ C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\o
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.MainPage.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.LoginWarning.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.LoginWarning.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsWhoHaveVisited.resources

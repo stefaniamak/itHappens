@@ -16,5 +16,14 @@ namespace itHappens.UIs.Common
         {
             InitializeComponent();
         }
+
+        public FriendsAttending(Image friendProfilePicture, string friendName, string friendSurname, Color categoryColor)
+        {
+            InitializeComponent();
+
+            friendPicOvalPictureBox.BackgroundImage = friendProfilePicture;
+            friendnameLabel.Text = friendName; // Sundiase to onoma tou filou me to epitheto 
+            colorControl.BackColor = categoryColor;
+        }
     }
 }
