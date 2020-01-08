@@ -459,7 +459,6 @@ D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.MainPage.res
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsAttending.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.CommonSearchTextPage.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.MainPage.resources
-
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\System.IO.dll
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\System.Net.Http.dll
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\System.Runtime.dll
@@ -497,6 +496,6 @@ C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHapp
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.EventMiniView.resources
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.MainPage.resources
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.SearchPage.resources
-
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.UserControl1.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.LoginWarning.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.LoginWarning.resources

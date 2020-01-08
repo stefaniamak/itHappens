@@ -76,7 +76,7 @@ namespace itHappens.UIs.anna
 
         public void fillCategories()
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=0dinth0rz3us;";
             MySqlConnection con;
 
             try
@@ -107,7 +107,7 @@ namespace itHappens.UIs.anna
 
         public void fillVenues()
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=0dinth0rz3us;";
             MySqlConnection con;
 
             try
@@ -327,7 +327,7 @@ namespace itHappens.UIs.anna
 
         public void createEventCon(String eventTitle,int eventVenue,int eventOwner,DateTime start, DateTime end, int eventCategory, String EventTags,double ticketPrice, String desc)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=0dinth0rz3us;";
             MySqlConnection con;
 
             try
@@ -363,7 +363,7 @@ namespace itHappens.UIs.anna
 
         public int getOwnerId(String s)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=0dinth0rz3us;";
             MySqlConnection con;
             String ownerid = "0";
 
@@ -398,7 +398,7 @@ namespace itHappens.UIs.anna
 
         public int getCategoryId(String s)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=0dinth0rz3us;";
             MySqlConnection con;
             String categoryid = "0";
 
@@ -433,7 +433,7 @@ namespace itHappens.UIs.anna
 
         public int getVenueId(String s)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=0dinth0rz3us;";
             MySqlConnection con;
             String venueid="0";
 

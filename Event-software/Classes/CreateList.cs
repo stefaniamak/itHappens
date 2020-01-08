@@ -12,7 +12,7 @@ namespace itHappens.Classes
 
         public static void createEvent_ListMethod(String Etitle, int EcreatorID)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=0dinth0rz3us;";
             MySqlConnection con;
 
             try
