@@ -31,5 +31,10 @@ namespace itHappens.UIs.valentina
         {
 
         }
+
+        private void NameSettingsLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
