@@ -32,9 +32,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.topBarPanel = new System.Windows.Forms.Panel();
-            this.eventNameLabel = new System.Windows.Forms.Label();
-            this.dayLabel = new System.Windows.Forms.Label();
-            this.monthLabel = new System.Windows.Forms.Label();
             this.backgroundPictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuTabControl = new System.Windows.Forms.TabControl();
@@ -52,6 +49,9 @@
             this.friendsFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.goingButton = new System.Windows.Forms.Button();
             this.interestedButton = new System.Windows.Forms.Button();
+            this.eventNameLabel = new System.Windows.Forms.Label();
+            this.dayLabel = new System.Windows.Forms.Label();
+            this.monthLabel = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.topBarPanel.SuspendLayout();
@@ -104,51 +104,6 @@
             this.topBarPanel.Name = "topBarPanel";
             this.topBarPanel.Size = new System.Drawing.Size(937, 269);
             this.topBarPanel.TabIndex = 17;
-            // 
-            // eventNameLabel
-            // 
-            this.eventNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.eventNameLabel.AutoSize = true;
-            this.eventNameLabel.BackColor = System.Drawing.Color.Black;
-            this.eventNameLabel.Font = new System.Drawing.Font("Century Gothic", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eventNameLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.eventNameLabel.Location = new System.Drawing.Point(38, 255);
-            this.eventNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.eventNameLabel.Name = "eventNameLabel";
-            this.eventNameLabel.Size = new System.Drawing.Size(212, 40);
-            this.eventNameLabel.TabIndex = 8;
-            this.eventNameLabel.Text = "Event Name";
-            // 
-            // dayLabel
-            // 
-            this.dayLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dayLabel.AutoSize = true;
-            this.dayLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.dayLabel.Font = new System.Drawing.Font("Century Gothic", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dayLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.dayLabel.Location = new System.Drawing.Point(835, 102);
-            this.dayLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.dayLabel.Name = "dayLabel";
-            this.dayLabel.Size = new System.Drawing.Size(77, 57);
-            this.dayLabel.TabIndex = 4;
-            this.dayLabel.Text = "25";
-            // 
-            // monthLabel
-            // 
-            this.monthLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.monthLabel.AutoSize = true;
-            this.monthLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.monthLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.monthLabel.Location = new System.Drawing.Point(835, 66);
-            this.monthLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.monthLabel.Name = "monthLabel";
-            this.monthLabel.Size = new System.Drawing.Size(77, 33);
-            this.monthLabel.TabIndex = 5;
-            this.monthLabel.Text = "NOV";
             // 
             // backgroundPictureBox
             // 
@@ -242,12 +197,13 @@
             // 
             this.descriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.descriptionTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.descriptionTextBox.Location = new System.Drawing.Point(27, 197);
             this.descriptionTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.ReadOnly = true;
-            this.descriptionTextBox.Size = new System.Drawing.Size(650, 187);
+            this.descriptionTextBox.Size = new System.Drawing.Size(633, 187);
             this.descriptionTextBox.TabIndex = 5;
             // 
             // dayTimeTextBox
@@ -278,7 +234,7 @@
             this.galleryTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.galleryTabPage.Name = "galleryTabPage";
             this.galleryTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.galleryTabPage.Size = new System.Drawing.Size(713, 408);
+            this.galleryTabPage.Size = new System.Drawing.Size(713, 363);
             this.galleryTabPage.TabIndex = 3;
             this.galleryTabPage.Text = "GALLERY";
             // 
@@ -290,7 +246,7 @@
             this.visitorsabPage.Margin = new System.Windows.Forms.Padding(2);
             this.visitorsabPage.Name = "visitorsabPage";
             this.visitorsabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.visitorsabPage.Size = new System.Drawing.Size(713, 408);
+            this.visitorsabPage.Size = new System.Drawing.Size(713, 363);
             this.visitorsabPage.TabIndex = 2;
             this.visitorsabPage.Text = "VISITORS ALSO LIKE";
             // 
@@ -361,6 +317,51 @@
             this.interestedButton.TabIndex = 13;
             this.interestedButton.Text = "INTRESTED";
             this.interestedButton.UseVisualStyleBackColor = false;
+            // 
+            // eventNameLabel
+            // 
+            this.eventNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.eventNameLabel.AutoSize = true;
+            this.eventNameLabel.BackColor = System.Drawing.Color.Black;
+            this.eventNameLabel.Font = new System.Drawing.Font("Century Gothic", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eventNameLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.eventNameLabel.Location = new System.Drawing.Point(38, 255);
+            this.eventNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.eventNameLabel.Name = "eventNameLabel";
+            this.eventNameLabel.Size = new System.Drawing.Size(212, 40);
+            this.eventNameLabel.TabIndex = 8;
+            this.eventNameLabel.Text = "Event Name";
+            // 
+            // dayLabel
+            // 
+            this.dayLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dayLabel.AutoSize = true;
+            this.dayLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.dayLabel.Font = new System.Drawing.Font("Century Gothic", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dayLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.dayLabel.Location = new System.Drawing.Point(835, 102);
+            this.dayLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dayLabel.Name = "dayLabel";
+            this.dayLabel.Size = new System.Drawing.Size(77, 57);
+            this.dayLabel.TabIndex = 4;
+            this.dayLabel.Text = "25";
+            // 
+            // monthLabel
+            // 
+            this.monthLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.monthLabel.AutoSize = true;
+            this.monthLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.monthLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.monthLabel.Location = new System.Drawing.Point(835, 66);
+            this.monthLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.monthLabel.Name = "monthLabel";
+            this.monthLabel.Size = new System.Drawing.Size(77, 33);
+            this.monthLabel.TabIndex = 5;
+            this.monthLabel.Text = "NOV";
             // 
             // EventProfilePage
             // 

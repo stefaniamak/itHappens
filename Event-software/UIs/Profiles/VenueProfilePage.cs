@@ -21,7 +21,12 @@ namespace itHappens.UIs.andrea
         {
             for (int i = 0; i < 5; i++)
             {
-                friendsVisitedFlowLayoutPanel.Controls.Add(new UIs.Common.FriendsAttending());
+                friendsVisitedPanel.Controls.Add(new UIs.Common.FriendsAttending());
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                eventsUserWillAttendCarousel.AddControl(new UIs.Common.EventMiniView());
             }
         }
 

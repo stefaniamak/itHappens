@@ -19,7 +19,10 @@ namespace itHappens.UIs.andrea
 
         private void UserProfilePage_Load(object sender, EventArgs e)
         {
-
+            for (int i = 0; i < 10; i++)
+            {
+                eventsUserWillAttendCarousel.AddControl(new UIs.Common.EventMiniView());
+            }
         }
 
     }
