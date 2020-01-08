@@ -16,5 +16,14 @@ namespace itHappens.UIs.Sidebars
         {
             InitializeComponent();
         }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            UIs.anna.LogInPage.loggedInUser = false;
+            usernameLable.Text = "Username";
+            LogoutButton.Visible = false;
+            Controllers.UIController.openHostForMainAndSearchPage();
+            Controllers.UIController.openPage("main");
+        }
     }
 }

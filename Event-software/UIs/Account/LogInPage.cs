@@ -12,23 +12,30 @@ namespace itHappens.UIs.anna
 {
     public partial class LogInPage : UserControl
     {
+        public static bool loggedInUser;
         public LogInPage()
         {
             InitializeComponent();
         }
 
+        public static String userName;
+
         private void LoginButton_Click(object sender, EventArgs e)
         {
+          
             bool flag = false;
             bool validation = Controllers.LoginController.FieldsValidation(UsernameTextBox.Text, PasswordTextBox.Text, flag);
 
             if (validation == true)
             {
-                String userName = Controllers.LoginController.DatabaseFieldValidation(UsernameTextBox.Text, PasswordTextBox.Text);
+                userName = Controllers.LoginController.DatabaseFieldValidation(UsernameTextBox.Text, PasswordTextBox.Text);
                 if (!userName.Equals(""))
                 {
-                    //oti theloume na emfanizei meta tin sundesi
-                    UIs.Sidebars.ProfileSidebar.usernameLable.Text = Controllers.LoginController.loginNameSurnameToProfile(UsernameTextBox.Text, PasswordTextBox.Text);
+                    UIs.Sidebars.ProfileSidebar.usernameLable.Text = UsernameTextBox.Text;
+                    loggedInUser = true;
+                    UIs.Sidebars.ProfileSidebar.LogoutButton.Visible = true;
+                    Controllers.UIController.openHostForMainAndSearchPage();
+                    Controllers.UIController.openPage("main");
                 }
                 else
                 {

@@ -148,6 +148,7 @@
   <ItemGroup>
     <Compile Include="Classes\Area.cs" />
     <Compile Include="Classes\Category.cs" />
+    <Compile Include="Classes\CreateList.cs" />
     <Compile Include="Classes\Event.cs" />
     <Compile Include="Classes\EventList.cs" />
     <Compile Include="Classes\MiddlePanelMethods.cs" />
@@ -155,15 +156,25 @@
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\Venue.cs" />
     <Compile Include="Controllers\UIController.cs" />
+    <Compile Include="DbConnector.cs" />
+    <Compile Include="DbConnectorInfo.cs" />
+    <Compile Include="DBs\DBConnector.cs" />
     <Compile Include="DBs\TestDataClass.cs" />
     <Compile Include="Db_connector.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-
     <Compile Include="EventfulAPI.cs" />
+
+    <Compile Include="DbController.cs" />
+
     <Compile Include="populateDB.cs" />
+    <Compile Include="UIs\Main\LoginWarning.cs">
 
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Main\LoginWarning.Designer.cs">
+      <DependentUpon>LoginWarning.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\Profiles\VenueProfilePage.cs">
-
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UIs\Profiles\VenueProfilePage.Designer.cs">
@@ -343,6 +354,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UIs\Main\LoginWarning.resx">
+      <DependentUpon>LoginWarning.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIs\Profiles\VenueProfilePage.resx">
       <DependentUpon>VenueProfilePage.cs</DependentUpon>
     </EmbeddedResource>

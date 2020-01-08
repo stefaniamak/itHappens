@@ -5,11 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dbstuff;
 
 namespace itHappens.Controllers
 {
     class LoginController
     {
+        private static DbConnector dbCon = new DbConnector();
+        private static string conStr = dbCon.GetConnectionString();
 
         public static bool FieldsValidation(String username,String password,bool flag)
         {
@@ -42,7 +45,6 @@ namespace itHappens.Controllers
 
         public static String DatabaseFieldValidation(String username, String password)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
             String result = "";
 
@@ -53,7 +55,7 @@ namespace itHappens.Controllers
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select Username from users where Username= '" + username + "' and password= '" + password + "'";
+                String queryString = "Select username from users where username= '" + username + "' and password= '" + password + "'";
 
                 command = new MySqlCommand(queryString, con);
 
@@ -80,10 +82,8 @@ namespace itHappens.Controllers
 
         public static String loginNameSurnameToProfile(String usern, String pass)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
-            String Name = "";
-            String Surname = "";
+            String userName = "";
 
             try
             {
@@ -92,7 +92,7 @@ namespace itHappens.Controllers
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select name,surname from users where Username= '" + usern + "' and password= '" + pass + "'";
+                String queryString = "Select username from users where username= '" + usern + "' and password= '" + pass + "'";
 
                 command = new MySqlCommand(queryString, con);
 
@@ -100,14 +100,13 @@ namespace itHappens.Controllers
 
                 while (dataReader.Read())
                 {
-                    Name = dataReader.GetString(0);
-                    Surname = dataReader.GetString(1);
+                    userName = dataReader.GetString(0);
                 }
 
-                
+
                 con.Close();
 
-                return Name+ " "+Surname;
+                return userName;
 
 
             }
@@ -117,11 +116,46 @@ namespace itHappens.Controllers
             }
 
 
-            return Name+Surname;
+            return userName;
 
         }
 
+        public static int returnUsersID(String username, String password)
+        {
+            MySqlConnection con;
+            String result = "";
 
+            try
+            {
+                con = new MySqlConnection(conStr);
+                con.Open();
+
+                MySqlCommand command;
+                MySqlDataReader dataReader;
+                String queryString = "Select id from users where username= '" + username + "' and password= '" + password + "'";
+
+                command = new MySqlCommand(queryString, con);
+
+                dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    result = dataReader.GetString(0);
+                }
+                con.Close();
+
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error");
+            }
+
+
+            return Convert.ToInt32(result);
+
+        }
 
 
     }
