@@ -22,10 +22,8 @@ namespace itHappens.UIs
         {
             InitializeComponent();
             fillTheComboBox();
-            areaComboBox.Items.RemoveAt(0);
             areaComboBox.Items.Insert(0, "Select");
             areaComboBox.SelectedIndex = 0;
-
         }
 
         private void SignUpUserControl_Load(object sender, EventArgs e)
