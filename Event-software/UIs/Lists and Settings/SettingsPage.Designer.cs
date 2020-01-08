@@ -30,6 +30,9 @@
         {
             this.SettingsTab = new System.Windows.Forms.TabControl();
             this.ProfileSettingsTab = new System.Windows.Forms.TabPage();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.ProfileTitleLabel = new System.Windows.Forms.Label();
             this.RegionSettingsTextBox = new System.Windows.Forms.TextBox();
             this.RegionSettingsLabel = new System.Windows.Forms.Label();
@@ -64,9 +67,6 @@
             this.DangerZoneLabel = new System.Windows.Forms.Label();
             this.DeleteAccountButton = new System.Windows.Forms.Button();
             this.AccountLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.SettingsTab.SuspendLayout();
             this.ProfileSettingsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePictureBoxEdit)).BeginInit();
@@ -122,13 +122,54 @@
             this.ProfileSettingsTab.TabIndex = 0;
             this.ProfileSettingsTab.Text = "Profile";
             // 
+            // radioButton2
+            // 
+            this.radioButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.radioButton2.ForeColor = System.Drawing.Color.DarkOrange;
+            this.radioButton2.Location = new System.Drawing.Point(363, 657);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(55, 20);
+            this.radioButton2.TabIndex = 22;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Dark";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.radioButton1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.radioButton1.Location = new System.Drawing.Point(283, 657);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(54, 20);
+            this.radioButton1.TabIndex = 21;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Light";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label1.Location = new System.Drawing.Point(279, 633);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 18);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Theme";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // ProfileTitleLabel
             // 
             this.ProfileTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ProfileTitleLabel.AutoSize = true;
             this.ProfileTitleLabel.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProfileTitleLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.ProfileTitleLabel.Location = new System.Drawing.Point(276, 51);
+            this.ProfileTitleLabel.Location = new System.Drawing.Point(267, 51);
             this.ProfileTitleLabel.Name = "ProfileTitleLabel";
             this.ProfileTitleLabel.Size = new System.Drawing.Size(129, 44);
             this.ProfileTitleLabel.TabIndex = 19;
@@ -138,7 +179,7 @@
             // RegionSettingsTextBox
             // 
             this.RegionSettingsTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.RegionSettingsTextBox.Location = new System.Drawing.Point(282, 531);
+            this.RegionSettingsTextBox.Location = new System.Drawing.Point(273, 531);
             this.RegionSettingsTextBox.Name = "RegionSettingsTextBox";
             this.RegionSettingsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.RegionSettingsTextBox.Size = new System.Drawing.Size(136, 20);
@@ -150,7 +191,7 @@
             this.RegionSettingsLabel.AutoSize = true;
             this.RegionSettingsLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.RegionSettingsLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.RegionSettingsLabel.Location = new System.Drawing.Point(278, 507);
+            this.RegionSettingsLabel.Location = new System.Drawing.Point(269, 507);
             this.RegionSettingsLabel.Name = "RegionSettingsLabel";
             this.RegionSettingsLabel.Size = new System.Drawing.Size(60, 20);
             this.RegionSettingsLabel.TabIndex = 15;
@@ -159,7 +200,7 @@
             // ProfilePictureBoxEdit
             // 
             this.ProfilePictureBoxEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ProfilePictureBoxEdit.Location = new System.Drawing.Point(282, 143);
+            this.ProfilePictureBoxEdit.Location = new System.Drawing.Point(273, 143);
             this.ProfilePictureBoxEdit.Name = "ProfilePictureBoxEdit";
             this.ProfilePictureBoxEdit.Size = new System.Drawing.Size(136, 127);
             this.ProfilePictureBoxEdit.TabIndex = 2;
@@ -170,7 +211,7 @@
             this.UpdateChangesButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.UpdateChangesButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.UpdateChangesButton.ForeColor = System.Drawing.Color.DarkOrange;
-            this.UpdateChangesButton.Location = new System.Drawing.Point(282, 702);
+            this.UpdateChangesButton.Location = new System.Drawing.Point(273, 702);
             this.UpdateChangesButton.Name = "UpdateChangesButton";
             this.UpdateChangesButton.Size = new System.Drawing.Size(198, 32);
             this.UpdateChangesButton.TabIndex = 14;
@@ -180,7 +221,7 @@
             // NameSettingsTextBox
             // 
             this.NameSettingsTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.NameSettingsTextBox.Location = new System.Drawing.Point(282, 313);
+            this.NameSettingsTextBox.Location = new System.Drawing.Point(273, 313);
             this.NameSettingsTextBox.Name = "NameSettingsTextBox";
             this.NameSettingsTextBox.Size = new System.Drawing.Size(136, 20);
             this.NameSettingsTextBox.TabIndex = 1;
@@ -188,7 +229,7 @@
             // RepeatNewPasswordTextBox
             // 
             this.RepeatNewPasswordTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.RepeatNewPasswordTextBox.Location = new System.Drawing.Point(283, 405);
+            this.RepeatNewPasswordTextBox.Location = new System.Drawing.Point(274, 405);
             this.RepeatNewPasswordTextBox.Name = "RepeatNewPasswordTextBox";
             this.RepeatNewPasswordTextBox.Size = new System.Drawing.Size(136, 20);
             this.RepeatNewPasswordTextBox.TabIndex = 13;
@@ -199,7 +240,7 @@
             this.ProfilePictureLabel.AutoSize = true;
             this.ProfilePictureLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.ProfilePictureLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.ProfilePictureLabel.Location = new System.Drawing.Point(278, 120);
+            this.ProfilePictureLabel.Location = new System.Drawing.Point(269, 120);
             this.ProfilePictureLabel.Name = "ProfilePictureLabel";
             this.ProfilePictureLabel.Size = new System.Drawing.Size(109, 20);
             this.ProfilePictureLabel.TabIndex = 3;
@@ -208,7 +249,7 @@
             // NewPasswordTextBox
             // 
             this.NewPasswordTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.NewPasswordTextBox.Location = new System.Drawing.Point(283, 380);
+            this.NewPasswordTextBox.Location = new System.Drawing.Point(274, 380);
             this.NewPasswordTextBox.Name = "NewPasswordTextBox";
             this.NewPasswordTextBox.Size = new System.Drawing.Size(136, 20);
             this.NewPasswordTextBox.TabIndex = 12;
@@ -219,7 +260,7 @@
             this.EditPictureButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.EditPictureButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.EditPictureButton.ForeColor = System.Drawing.Color.DarkOrange;
-            this.EditPictureButton.Location = new System.Drawing.Point(438, 236);
+            this.EditPictureButton.Location = new System.Drawing.Point(429, 236);
             this.EditPictureButton.Name = "EditPictureButton";
             this.EditPictureButton.Size = new System.Drawing.Size(85, 34);
             this.EditPictureButton.TabIndex = 4;
@@ -232,7 +273,7 @@
             this.PasswordSettingsLabel.AutoSize = true;
             this.PasswordSettingsLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.PasswordSettingsLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.PasswordSettingsLabel.Location = new System.Drawing.Point(279, 354);
+            this.PasswordSettingsLabel.Location = new System.Drawing.Point(270, 354);
             this.PasswordSettingsLabel.Name = "PasswordSettingsLabel";
             this.PasswordSettingsLabel.Size = new System.Drawing.Size(180, 20);
             this.PasswordSettingsLabel.TabIndex = 11;
@@ -244,7 +285,7 @@
             this.NameSettingsLabel.AutoSize = true;
             this.NameSettingsLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.NameSettingsLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.NameSettingsLabel.Location = new System.Drawing.Point(279, 290);
+            this.NameSettingsLabel.Location = new System.Drawing.Point(270, 290);
             this.NameSettingsLabel.Name = "NameSettingsLabel";
             this.NameSettingsLabel.Size = new System.Drawing.Size(53, 20);
             this.NameSettingsLabel.TabIndex = 5;
@@ -254,7 +295,7 @@
             // 
             this.LanguageSettingsComboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LanguageSettingsComboBox.FormattingEnabled = true;
-            this.LanguageSettingsComboBox.Location = new System.Drawing.Point(282, 595);
+            this.LanguageSettingsComboBox.Location = new System.Drawing.Point(273, 595);
             this.LanguageSettingsComboBox.Name = "LanguageSettingsComboBox";
             this.LanguageSettingsComboBox.Size = new System.Drawing.Size(136, 21);
             this.LanguageSettingsComboBox.TabIndex = 10;
@@ -265,7 +306,7 @@
             this.EmailSettingsLabel.AutoSize = true;
             this.EmailSettingsLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.EmailSettingsLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.EmailSettingsLabel.Location = new System.Drawing.Point(279, 444);
+            this.EmailSettingsLabel.Location = new System.Drawing.Point(270, 444);
             this.EmailSettingsLabel.Name = "EmailSettingsLabel";
             this.EmailSettingsLabel.Size = new System.Drawing.Size(46, 20);
             this.EmailSettingsLabel.TabIndex = 6;
@@ -274,7 +315,7 @@
             // EmailSettingsTextBox
             // 
             this.EmailSettingsTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.EmailSettingsTextBox.Location = new System.Drawing.Point(283, 468);
+            this.EmailSettingsTextBox.Location = new System.Drawing.Point(274, 468);
             this.EmailSettingsTextBox.Name = "EmailSettingsTextBox";
             this.EmailSettingsTextBox.Size = new System.Drawing.Size(136, 20);
             this.EmailSettingsTextBox.TabIndex = 8;
@@ -285,7 +326,7 @@
             this.LanguageSettingsLabel.AutoSize = true;
             this.LanguageSettingsLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.LanguageSettingsLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.LanguageSettingsLabel.Location = new System.Drawing.Point(279, 570);
+            this.LanguageSettingsLabel.Location = new System.Drawing.Point(270, 570);
             this.LanguageSettingsLabel.Name = "LanguageSettingsLabel";
             this.LanguageSettingsLabel.Size = new System.Drawing.Size(84, 20);
             this.LanguageSettingsLabel.TabIndex = 7;
@@ -490,44 +531,6 @@
             this.AccountLabel.Size = new System.Drawing.Size(174, 44);
             this.AccountLabel.TabIndex = 0;
             this.AccountLabel.Text = "Account";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label1.Location = new System.Drawing.Point(279, 633);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 18);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Theme";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.radioButton1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.radioButton1.Location = new System.Drawing.Point(283, 657);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(54, 20);
-            this.radioButton1.TabIndex = 21;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Light";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.radioButton2.ForeColor = System.Drawing.Color.DarkOrange;
-            this.radioButton2.Location = new System.Drawing.Point(363, 657);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(55, 20);
-            this.radioButton2.TabIndex = 22;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Dark";
-            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // SettingsPage
             // 
