@@ -32,36 +32,36 @@
             this.userNameLabel = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.eventsUserTab = new System.Windows.Forms.TabPage();
-            this.eventsUserWillAttendCarousel = new itHappens.UIs.Common.Carousel();
-            this.eventsTheUserWillAttendLabel = new System.Windows.Forms.Label();
-            this.vanueLabel = new System.Windows.Forms.Label();
-            this.overAtLabel = new System.Windows.Forms.Label();
+            this.upNextLabel = new System.Windows.Forms.Label();
             this.eventNameLabel = new System.Windows.Forms.Label();
+            this.overAtLabel = new System.Windows.Forms.Label();
+            this.vanueLabel = new System.Windows.Forms.Label();
             this.monthLabel = new System.Windows.Forms.Label();
             this.dayLabel = new System.Windows.Forms.Label();
             this.upcomingNextPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.categoryColorPanel = new System.Windows.Forms.Panel();
             this.eventShowcasedPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.upNextLabel = new System.Windows.Forms.Label();
+            this.miniEventBakcgroundPictureBox = new System.Windows.Forms.PictureBox();
+            this.eventsTheUserWillAttendLabel = new System.Windows.Forms.Label();
+            this.eventsUserWillAttendCarousel = new itHappens.UIs.Common.Carousel();
             this.PastVisitsTab = new System.Windows.Forms.TabPage();
             this.InterestedUserTab = new System.Windows.Forms.TabPage();
             this.UserStatusTab = new System.Windows.Forms.TabPage();
             this.InvitesUserTab = new System.Windows.Forms.TabPage();
             this.UserEventsTab = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ovalPictureBox1 = new itHappens.UIs.Common.OvalPictureBox();
-            this.backgroundPictureBox = new System.Windows.Forms.PictureBox();
+            this.userProfilePictureOvalPictureBox = new itHappens.UIs.Common.OvalPictureBox();
+            this.userBackgroundPictureBox = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.eventsUserTab.SuspendLayout();
             this.upcomingNextPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.eventShowcasedPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.miniEventBakcgroundPictureBox)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.backgroundPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userProfilePictureOvalPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBackgroundPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // userNameLabel
@@ -117,51 +117,16 @@
             this.eventsUserTab.Text = "EVENTS";
             this.eventsUserTab.UseVisualStyleBackColor = true;
             // 
-            // eventsUserWillAttendCarousel
+            // upNextLabel
             // 
-            this.eventsUserWillAttendCarousel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.eventsUserWillAttendCarousel.AutoScroll = true;
-            this.eventsUserWillAttendCarousel.BackColor = System.Drawing.SystemColors.Control;
-            this.eventsUserWillAttendCarousel.Location = new System.Drawing.Point(28, 321);
-            this.eventsUserWillAttendCarousel.Name = "eventsUserWillAttendCarousel";
-            this.eventsUserWillAttendCarousel.Padding = new System.Windows.Forms.Padding(2);
-            this.eventsUserWillAttendCarousel.Size = new System.Drawing.Size(703, 279);
-            this.eventsUserWillAttendCarousel.TabIndex = 21;
-            // 
-            // eventsTheUserWillAttendLabel
-            // 
-            this.eventsTheUserWillAttendLabel.AutoSize = true;
-            this.eventsTheUserWillAttendLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eventsTheUserWillAttendLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.eventsTheUserWillAttendLabel.Location = new System.Drawing.Point(68, 277);
-            this.eventsTheUserWillAttendLabel.Name = "eventsTheUserWillAttendLabel";
-            this.eventsTheUserWillAttendLabel.Size = new System.Drawing.Size(291, 29);
-            this.eventsTheUserWillAttendLabel.TabIndex = 20;
-            this.eventsTheUserWillAttendLabel.Text = "Events the user will attend";
-            // 
-            // vanueLabel
-            // 
-            this.vanueLabel.AutoSize = true;
-            this.vanueLabel.BackColor = System.Drawing.Color.Black;
-            this.vanueLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.vanueLabel.Location = new System.Drawing.Point(159, 137);
-            this.vanueLabel.Name = "vanueLabel";
-            this.vanueLabel.Size = new System.Drawing.Size(48, 13);
-            this.vanueLabel.TabIndex = 19;
-            this.vanueLabel.Text = "Location";
-            // 
-            // overAtLabel
-            // 
-            this.overAtLabel.AutoSize = true;
-            this.overAtLabel.BackColor = System.Drawing.Color.Black;
-            this.overAtLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.overAtLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.overAtLabel.Location = new System.Drawing.Point(101, 138);
-            this.overAtLabel.Name = "overAtLabel";
-            this.overAtLabel.Size = new System.Drawing.Size(45, 13);
-            this.overAtLabel.TabIndex = 18;
-            this.overAtLabel.Text = "Over at:";
+            this.upNextLabel.AutoSize = true;
+            this.upNextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.upNextLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.upNextLabel.Location = new System.Drawing.Point(68, 28);
+            this.upNextLabel.Name = "upNextLabel";
+            this.upNextLabel.Size = new System.Drawing.Size(178, 29);
+            this.upNextLabel.TabIndex = 0;
+            this.upNextLabel.Text = "Upcoming Next";
             // 
             // eventNameLabel
             // 
@@ -177,6 +142,29 @@
             this.eventNameLabel.Size = new System.Drawing.Size(212, 40);
             this.eventNameLabel.TabIndex = 11;
             this.eventNameLabel.Text = "Event Name";
+            // 
+            // overAtLabel
+            // 
+            this.overAtLabel.AutoSize = true;
+            this.overAtLabel.BackColor = System.Drawing.Color.Black;
+            this.overAtLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.overAtLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.overAtLabel.Location = new System.Drawing.Point(101, 138);
+            this.overAtLabel.Name = "overAtLabel";
+            this.overAtLabel.Size = new System.Drawing.Size(45, 13);
+            this.overAtLabel.TabIndex = 18;
+            this.overAtLabel.Text = "Over at:";
+            // 
+            // vanueLabel
+            // 
+            this.vanueLabel.AutoSize = true;
+            this.vanueLabel.BackColor = System.Drawing.Color.Black;
+            this.vanueLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.vanueLabel.Location = new System.Drawing.Point(159, 137);
+            this.vanueLabel.Name = "vanueLabel";
+            this.vanueLabel.Size = new System.Drawing.Size(48, 13);
+            this.vanueLabel.TabIndex = 19;
+            this.vanueLabel.Text = "Location";
             // 
             // monthLabel
             // 
@@ -243,39 +231,51 @@
             // eventShowcasedPanel
             // 
             this.eventShowcasedPanel.AutoSize = true;
-            this.eventShowcasedPanel.Controls.Add(this.pictureBox1);
+            this.eventShowcasedPanel.Controls.Add(this.miniEventBakcgroundPictureBox);
             this.eventShowcasedPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eventShowcasedPanel.Location = new System.Drawing.Point(29, 3);
             this.eventShowcasedPanel.Name = "eventShowcasedPanel";
             this.eventShowcasedPanel.Size = new System.Drawing.Size(513, 165);
             this.eventShowcasedPanel.TabIndex = 1;
             // 
-            // pictureBox1
+            // miniEventBakcgroundPictureBox
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.miniEventBakcgroundPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-6, -183);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(520, 526);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.miniEventBakcgroundPictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.miniEventBakcgroundPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("miniEventBakcgroundPictureBox.BackgroundImage")));
+            this.miniEventBakcgroundPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.miniEventBakcgroundPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("miniEventBakcgroundPictureBox.Image")));
+            this.miniEventBakcgroundPictureBox.Location = new System.Drawing.Point(-6, -183);
+            this.miniEventBakcgroundPictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.miniEventBakcgroundPictureBox.Name = "miniEventBakcgroundPictureBox";
+            this.miniEventBakcgroundPictureBox.Size = new System.Drawing.Size(520, 526);
+            this.miniEventBakcgroundPictureBox.TabIndex = 4;
+            this.miniEventBakcgroundPictureBox.TabStop = false;
             // 
-            // upNextLabel
+            // eventsTheUserWillAttendLabel
             // 
-            this.upNextLabel.AutoSize = true;
-            this.upNextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.upNextLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.upNextLabel.Location = new System.Drawing.Point(68, 28);
-            this.upNextLabel.Name = "upNextLabel";
-            this.upNextLabel.Size = new System.Drawing.Size(178, 29);
-            this.upNextLabel.TabIndex = 0;
-            this.upNextLabel.Text = "Upcoming Next";
+            this.eventsTheUserWillAttendLabel.AutoSize = true;
+            this.eventsTheUserWillAttendLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eventsTheUserWillAttendLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.eventsTheUserWillAttendLabel.Location = new System.Drawing.Point(68, 277);
+            this.eventsTheUserWillAttendLabel.Name = "eventsTheUserWillAttendLabel";
+            this.eventsTheUserWillAttendLabel.Size = new System.Drawing.Size(291, 29);
+            this.eventsTheUserWillAttendLabel.TabIndex = 20;
+            this.eventsTheUserWillAttendLabel.Text = "Events the user will attend";
+            // 
+            // eventsUserWillAttendCarousel
+            // 
+            this.eventsUserWillAttendCarousel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.eventsUserWillAttendCarousel.AutoScroll = true;
+            this.eventsUserWillAttendCarousel.BackColor = System.Drawing.SystemColors.Control;
+            this.eventsUserWillAttendCarousel.Location = new System.Drawing.Point(28, 321);
+            this.eventsUserWillAttendCarousel.Name = "eventsUserWillAttendCarousel";
+            this.eventsUserWillAttendCarousel.Padding = new System.Windows.Forms.Padding(2);
+            this.eventsUserWillAttendCarousel.Size = new System.Drawing.Size(703, 279);
+            this.eventsUserWillAttendCarousel.TabIndex = 21;
             // 
             // PastVisitsTab
             // 
@@ -335,35 +335,35 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.userNameLabel);
-            this.panel1.Controls.Add(this.ovalPictureBox1);
-            this.panel1.Controls.Add(this.backgroundPictureBox);
+            this.panel1.Controls.Add(this.userProfilePictureOvalPictureBox);
+            this.panel1.Controls.Add(this.userBackgroundPictureBox);
             this.panel1.Location = new System.Drawing.Point(19, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(772, 194);
             this.panel1.TabIndex = 13;
             // 
-            // ovalPictureBox1
+            // userProfilePictureOvalPictureBox
             // 
-            this.ovalPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ovalPictureBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.ovalPictureBox1.Location = new System.Drawing.Point(645, 68);
-            this.ovalPictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.ovalPictureBox1.Name = "ovalPictureBox1";
-            this.ovalPictureBox1.Size = new System.Drawing.Size(90, 92);
-            this.ovalPictureBox1.TabIndex = 11;
-            this.ovalPictureBox1.TabStop = false;
+            this.userProfilePictureOvalPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userProfilePictureOvalPictureBox.BackColor = System.Drawing.Color.DarkGray;
+            this.userProfilePictureOvalPictureBox.Location = new System.Drawing.Point(645, 68);
+            this.userProfilePictureOvalPictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.userProfilePictureOvalPictureBox.Name = "userProfilePictureOvalPictureBox";
+            this.userProfilePictureOvalPictureBox.Size = new System.Drawing.Size(90, 92);
+            this.userProfilePictureOvalPictureBox.TabIndex = 11;
+            this.userProfilePictureOvalPictureBox.TabStop = false;
             // 
-            // backgroundPictureBox
+            // userBackgroundPictureBox
             // 
-            this.backgroundPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.userBackgroundPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.backgroundPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backgroundPictureBox.BackgroundImage")));
-            this.backgroundPictureBox.Location = new System.Drawing.Point(0, -273);
-            this.backgroundPictureBox.Name = "backgroundPictureBox";
-            this.backgroundPictureBox.Size = new System.Drawing.Size(772, 778);
-            this.backgroundPictureBox.TabIndex = 12;
-            this.backgroundPictureBox.TabStop = false;
+            this.userBackgroundPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userBackgroundPictureBox.BackgroundImage")));
+            this.userBackgroundPictureBox.Location = new System.Drawing.Point(0, -273);
+            this.userBackgroundPictureBox.Name = "userBackgroundPictureBox";
+            this.userBackgroundPictureBox.Size = new System.Drawing.Size(772, 778);
+            this.userBackgroundPictureBox.TabIndex = 12;
+            this.userBackgroundPictureBox.TabStop = false;
             // 
             // UserProfilePage
             // 
@@ -382,18 +382,18 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.eventShowcasedPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.miniEventBakcgroundPictureBox)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.backgroundPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userProfilePictureOvalPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBackgroundPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Label userNameLabel;
-        private Common.OvalPictureBox ovalPictureBox1;
+        private Common.OvalPictureBox userProfilePictureOvalPictureBox;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage eventsUserTab;
         private System.Windows.Forms.TabPage PastVisitsTab;
@@ -402,12 +402,12 @@
         private System.Windows.Forms.TabPage InvitesUserTab;
         private System.Windows.Forms.TabPage UserEventsTab;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox backgroundPictureBox;
+        private System.Windows.Forms.PictureBox userBackgroundPictureBox;
         private System.Windows.Forms.Panel upcomingNextPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label upNextLabel;
         private System.Windows.Forms.Panel eventShowcasedPanel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox miniEventBakcgroundPictureBox;
         private System.Windows.Forms.Label eventsTheUserWillAttendLabel;
         private System.Windows.Forms.Label vanueLabel;
         private System.Windows.Forms.Label overAtLabel;
