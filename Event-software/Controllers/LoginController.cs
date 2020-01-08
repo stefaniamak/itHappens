@@ -5,11 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dbstuff;
 
 namespace itHappens.Controllers
 {
     class LoginController
     {
+        private static DbConnector dbCon = new DbConnector();
+        private static string conStr = dbCon.GetConnectionString();
 
         public static bool FieldsValidation(String username,String password,bool flag)
         {
@@ -42,7 +45,6 @@ namespace itHappens.Controllers
 
         public static String DatabaseFieldValidation(String username, String password)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
             String result = "";
 
@@ -53,7 +55,7 @@ namespace itHappens.Controllers
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select username from users where Username= '" + username + "' and password= '" + password + "'";
+                String queryString = "Select username from users where username= '" + username + "' and password= '" + password + "'";
 
                 command = new MySqlCommand(queryString, con);
 
@@ -80,7 +82,6 @@ namespace itHappens.Controllers
 
         public static String loginNameSurnameToProfile(String usern, String pass)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
             String userName = "";
 
@@ -102,7 +103,7 @@ namespace itHappens.Controllers
                     userName = dataReader.GetString(0);
                 }
 
-                
+
                 con.Close();
 
                 return userName;
@@ -121,7 +122,6 @@ namespace itHappens.Controllers
 
         public static int returnUsersID(String username, String password)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
             String result = "";
 
@@ -132,7 +132,7 @@ namespace itHappens.Controllers
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select id from users where Username= '" + username + "' and password= '" + password + "'";
+                String queryString = "Select id from users where username= '" + username + "' and password= '" + password + "'";
 
                 command = new MySqlCommand(queryString, con);
 
