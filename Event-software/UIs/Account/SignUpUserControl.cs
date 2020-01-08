@@ -25,7 +25,7 @@ namespace itHappens.UIs
             areaComboBox.Items.RemoveAt(0);
             areaComboBox.Items.Insert(0, "Select");
             areaComboBox.SelectedIndex = 0;
-
+            //sxolio
         }
 
         private void SignUpUserControl_Load(object sender, EventArgs e)
