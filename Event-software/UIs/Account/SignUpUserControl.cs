@@ -9,19 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
+using dbstuff;
 
 namespace itHappens.UIs
 {
     public partial class SignUpUserControl : UserControl
     {
+        private static DbConnector dbCon = new DbConnector();
+        private static string conStr = dbCon.GetConnectionString();
+
         public SignUpUserControl()
         {
             InitializeComponent();
             fillTheComboBox();
-            areaComboBox.Items.RemoveAt(0);
             areaComboBox.Items.Insert(0, "Select");
             areaComboBox.SelectedIndex = 0;
-
         }
 
         private void SignUpUserControl_Load(object sender, EventArgs e)
@@ -31,7 +33,6 @@ namespace itHappens.UIs
 
         public void fillTheComboBox()
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=0dinth0rz3us;";
             MySqlConnection con;
 
             try
@@ -45,11 +46,11 @@ namespace itHappens.UIs
 
                 command = new MySqlCommand(queryString, con);
 
-                dataReader = command.ExecuteReader();              
+                dataReader = command.ExecuteReader();
 
                 while (dataReader.Read())
-                {                  
-                   areaComboBox.Items.Add(dataReader.GetString(0));                    
+                {
+                   areaComboBox.Items.Add(dataReader.GetString(0));
                 }
                 con.Close();
 
@@ -242,7 +243,7 @@ namespace itHappens.UIs
             else
             {
                 areaValLabel.Text = "";
-                MessageBox.Show("Your registration has been successfully completed!", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);               
+                MessageBox.Show("Your registration has been successfully completed!", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 signUpCon(areaComboBox.SelectedItem.ToString(), Convert.ToInt32(numericUpDown.Value), usernameTextBox.Text,
                     passwordTextBox.Text, nameTextBox.Text, surnameTextBox.Text, emailTextBox.Text);
                 int creatorid = Controllers.LoginController.returnUsersID(usernameTextBox.Text, passwordTextBox.Text);
@@ -264,13 +265,13 @@ namespace itHappens.UIs
             usernameTextBox.Text = "";
             passwordTextBox.Text = "";
             repassTextBox.Text = "";
-            
+
         }
 
         public static void signUpCon(String area, int age, String userName, String pass, String name, String surname, String email)
         {
+
             int areaId = 0;
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=0dinth0rz3us;";
             MySqlConnection con;
 
             try
@@ -341,6 +342,6 @@ namespace itHappens.UIs
             return true;
         }
 
-        
+
     }
 }

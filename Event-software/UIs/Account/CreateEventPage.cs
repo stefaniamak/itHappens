@@ -8,11 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using dbstuff;
 
 namespace itHappens.UIs.anna
 {
     public partial class CreateEventPage : UserControl
     {
+
+        private static DbConnector dbCon = new DbConnector();
+        private static string conStr = dbCon.GetConnectionString();
+
         public CreateEventPage()
         {
             InitializeComponent();
@@ -58,7 +63,6 @@ namespace itHappens.UIs.anna
             {
                 SDaycomboBox.Items.Add(i.ToString());
                 EDaycomboBox.Items.Add(i.ToString());
-
             }
 
             for (int j = 1; j <= 12; j++)
@@ -76,7 +80,6 @@ namespace itHappens.UIs.anna
 
         public void fillCategories()
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=0dinth0rz3us;";
             MySqlConnection con;
 
             try
@@ -107,7 +110,6 @@ namespace itHappens.UIs.anna
 
         public void fillVenues()
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=0dinth0rz3us;";
             MySqlConnection con;
 
             try
@@ -254,7 +256,7 @@ namespace itHappens.UIs.anna
         }
 
         private void VenuecomboBox_Validating(object sender, CancelEventArgs e)
-        {          
+        {
             if (VenuecomboBox.Text.Equals("Select"))
             {
                 VenueValLabel.Text = "Select a category";
@@ -291,7 +293,7 @@ namespace itHappens.UIs.anna
             else
             {
 
-                DateTime StartingDate = convertDate(SYearcomboBox.Text,SMonthcomboBox.Text, 
+                DateTime StartingDate = convertDate(SYearcomboBox.Text,SMonthcomboBox.Text,
                                                     SDaycomboBox.Text,HourComboBox.Text,MinutesComboBox.Text);
                 DateTime EndingDate = convertDate(EYearcomboBox.Text, EMonthcomboBox.Text,
                                                     EDaycomboBox.Text, "0", "0");
@@ -301,10 +303,10 @@ namespace itHappens.UIs.anna
                 createEventCon(EventNameTextbox.Text,venue,ownerId,StartingDate,EndingDate,category,TagsTextbox.Text,
                     Convert.ToDouble(PriceTextbox.Text),DescTextbox.Text);
                 MessageBox.Show("You successfully made an event!","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                
+
                 //Emfanish tou EventProfile (kanonika tha prepei me ta stoixeia tou event)
                 Controllers.UIController.eventsProfileToolStripMenuItem_MiddlePanel();
-                
+
                 clearTextBoxes();
                 SDaycomboBox.SelectedIndex = 0;
                 EDaycomboBox.SelectedIndex = 0;
@@ -327,7 +329,6 @@ namespace itHappens.UIs.anna
 
         public void createEventCon(String eventTitle,int eventVenue,int eventOwner,DateTime start, DateTime end, int eventCategory, String EventTags,double ticketPrice, String desc)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=0dinth0rz3us;";
             MySqlConnection con;
 
             try
@@ -363,7 +364,6 @@ namespace itHappens.UIs.anna
 
         public int getOwnerId(String s)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=0dinth0rz3us;";
             MySqlConnection con;
             String ownerid = "0";
 
@@ -398,7 +398,6 @@ namespace itHappens.UIs.anna
 
         public int getCategoryId(String s)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=0dinth0rz3us;";
             MySqlConnection con;
             String categoryid = "0";
 
@@ -433,7 +432,6 @@ namespace itHappens.UIs.anna
 
         public int getVenueId(String s)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=0dinth0rz3us;";
             MySqlConnection con;
             String venueid="0";
 
@@ -445,7 +443,7 @@ namespace itHappens.UIs.anna
                 MySqlCommand command;
                 MySqlDataReader dataReader;
                 String queryString = "Select id from venues where name='" +s+"'";
-                
+
 
                 command = new MySqlCommand(queryString, con);
 
@@ -456,7 +454,7 @@ namespace itHappens.UIs.anna
                     venueid = dataReader.GetString(0);
                 }
                 con.Close();
-                
+
             }
             catch (Exception e)
             {

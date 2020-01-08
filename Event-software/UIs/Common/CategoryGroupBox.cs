@@ -17,6 +17,14 @@ namespace itHappens.UIs.Common
             InitializeComponent();
         }
 
+        public CategoryGroupBox(string categoryName, Image firstEventImage, Image secondEventImage, Color categoryColor) : this()
+        {
+            categoryNameLabel.Text = categoryName;
+            firstEventimagePictureBox.Image = firstEventImage;
+            secondEventimagePictureBox.Image = secondEventImage;
+            categoryColorControl.BackColor = categoryColor;
+        }
+
         private void categoryName_Click(object sender, EventArgs e)
         {
 
