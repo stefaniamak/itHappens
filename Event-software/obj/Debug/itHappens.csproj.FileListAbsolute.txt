@@ -424,8 +424,6 @@ D:\adopse\adopse-events\Event-software\bin\Debug\Remotion.Linq.xml
 D:\adopse\adopse-events\Event-software\bin\Debug\Remotion.Linq.EagerFetching.xml
 D:\adopse\adopse-events\Event-software\bin\Debug\Renci.SshNet.xml
 D:\adopse\adopse-events\Event-software\bin\Debug\System.ValueTuple.xml
-D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.csprojAssemblyReference.cache
-D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.exe.config
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.VenueProfilePage.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.UserProfilePage.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.EventProfilePage.resources
@@ -451,7 +449,6 @@ D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.ListsCo
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.SettingsPage.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.EventMiniView.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.SearchPage.resources
-D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.ListMiniBox.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpUserControl.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpUserControl.resources
