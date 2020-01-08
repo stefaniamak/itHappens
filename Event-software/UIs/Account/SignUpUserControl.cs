@@ -9,15 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
+using dbstuff;
 
 namespace itHappens.UIs
 {
     public partial class SignUpUserControl : UserControl
     {
+        private static DbConnector dbCon = new DbConnector();
+        private static string conStr = dbCon.GetConnectionString();
+
         public SignUpUserControl()
         {
             InitializeComponent();
             fillTheComboBox();
+            areaComboBox.Items.RemoveAt(0);
+            areaComboBox.Items.Insert(0, "Select");
+            areaComboBox.SelectedIndex = 0;
+
         }
 
         private void SignUpUserControl_Load(object sender, EventArgs e)
@@ -27,7 +35,6 @@ namespace itHappens.UIs
 
         public void fillTheComboBox()
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
             MySqlConnection con;
 
             try
@@ -41,11 +48,11 @@ namespace itHappens.UIs
 
                 command = new MySqlCommand(queryString, con);
 
-                dataReader = command.ExecuteReader();              
+                dataReader = command.ExecuteReader();
 
                 while (dataReader.Read())
-                {                  
-                   areaComboBox.Items.Add(dataReader.GetString(0));                    
+                {
+                   areaComboBox.Items.Add(dataReader.GetString(0));
                 }
                 con.Close();
 
@@ -231,18 +238,23 @@ namespace itHappens.UIs
             {
                 repassValLabel.Text = "It does not match with Password";
             }
-            else if (!(areaComboBox.SelectedIndex > -1))
+            else if (areaComboBox.Text.Equals("Select"))
             {
                 areaValLabel.Text = "Select a country";
             }
             else
             {
                 areaValLabel.Text = "";
-                MessageBox.Show("Your registration has been successfully completed!", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);               
+                MessageBox.Show("Your registration has been successfully completed!", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 signUpCon(areaComboBox.SelectedItem.ToString(), Convert.ToInt32(numericUpDown.Value), usernameTextBox.Text,
                     passwordTextBox.Text, nameTextBox.Text, surnameTextBox.Text, emailTextBox.Text);
+                int creatorid = Controllers.LoginController.returnUsersID(usernameTextBox.Text, passwordTextBox.Text);
+                Classes.CreateList.createEvent_ListMethod("History",creatorid);
+                Classes.CreateList.createEvent_ListMethod("Going", creatorid);
+                Classes.CreateList.createEvent_ListMethod("Interested", creatorid);
                 clearTextBoxes();
-                //Opou tha phgainei meta to signUp
+                Controllers.UIController.logInToolStripMenuItem_MiddlePanel();
+
             }
 
         }
@@ -255,13 +267,13 @@ namespace itHappens.UIs
             usernameTextBox.Text = "";
             passwordTextBox.Text = "";
             repassTextBox.Text = "";
-            
+
         }
 
         public static void signUpCon(String area, int age, String userName, String pass, String name, String surname, String email)
         {
+
             int areaId = 0;
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
             MySqlConnection con;
 
             try
@@ -301,11 +313,11 @@ namespace itHappens.UIs
 
                 MySqlCommand cmd = con.CreateCommand(); ;
 
-                String query = "INSERT INTO users(areaID,Username,password,email,name,surname,age) VALUES(@areaId,@Username,@password,@email,@name,@surname,@age)";
+                String query = "INSERT INTO users(areaID,username,password,email,name,surname,age) VALUES(@areaId,@username,@password,@email,@name,@surname,@age)";
 
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@areaId", areaId);
-                cmd.Parameters.AddWithValue("@Username", userName);
+                cmd.Parameters.AddWithValue("@username", userName);
                 cmd.Parameters.AddWithValue("@password", pass);
                 cmd.Parameters.AddWithValue("@email", email);
                 cmd.Parameters.AddWithValue("@name", name);
@@ -332,6 +344,6 @@ namespace itHappens.UIs
             return true;
         }
 
-        
+
     }
 }

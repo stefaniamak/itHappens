@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using itHappends;
+using dbstuff;
 using eventful;
 
 namespace itHappens
@@ -16,10 +16,8 @@ namespace itHappens
         [STAThread]
         static void Main()
         {
-            Db_connector Alpha = new Db_connector();
-
             EventfulAPI eventful = new EventfulAPI();
-                        
+            
             // Add Location & Number of Results
             // Add Month otherwise default month is January
             eventful.GetXmlData("Greece",5);

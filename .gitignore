@@ -382,3 +382,5 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+Event-software/.vs/events-software/v16/Server/sqlite3/storage.ide-wal
+Event-software/.vs/events-software/v16/Server/sqlite3/storage.ide-shm

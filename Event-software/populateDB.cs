@@ -5,12 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using dbstuff;
 
 namespace itHappends
 {
     public class PopulateDB
     {
-        string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=root;";
+        private static DbConnector dbCon = new DbConnector();
+        private static string conStr = dbCon.GetConnectionString();
         MySqlConnection con;
 
         public PopulateDB()

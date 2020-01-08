@@ -8,11 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using dbstuff;
 
 namespace itHappens.UIs.anna
 {
     public partial class CreateEventPage : UserControl
     {
+
+        private static DbConnector dbCon = new DbConnector();
+        private static string conStr = dbCon.GetConnectionString();
+
         public CreateEventPage()
         {
             InitializeComponent();
@@ -76,7 +81,6 @@ namespace itHappens.UIs.anna
 
         public void fillCategories()
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
 
             try
@@ -107,7 +111,6 @@ namespace itHappens.UIs.anna
 
         public void fillVenues()
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
 
             try
@@ -283,6 +286,11 @@ namespace itHappens.UIs.anna
             {
                 MessageBox.Show("Fill the fields right", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (!NameValLabel.Text.Equals("") || !VenueValLabel.Text.Equals("") || !CategoryValLabel.Text.Equals("")
+                     || !TagsValLabel.Text.Equals("") || !TPriceValLabel.Text.Equals("") || !DescValLabel.Text.Equals(""))
+            {
+                     MessageBox.Show("Correct the fields right", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
 
@@ -296,6 +304,10 @@ namespace itHappens.UIs.anna
                 createEventCon(EventNameTextbox.Text,venue,ownerId,StartingDate,EndingDate,category,TagsTextbox.Text,
                     Convert.ToDouble(PriceTextbox.Text),DescTextbox.Text);
                 MessageBox.Show("You successfully made an event!","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                
+                //Emfanish tou EventProfile (kanonika tha prepei me ta stoixeia tou event)
+                Controllers.UIController.eventsProfileToolStripMenuItem_MiddlePanel();
+                
                 clearTextBoxes();
                 SDaycomboBox.SelectedIndex = 0;
                 EDaycomboBox.SelectedIndex = 0;
@@ -318,7 +330,6 @@ namespace itHappens.UIs.anna
 
         public void createEventCon(String eventTitle,int eventVenue,int eventOwner,DateTime start, DateTime end, int eventCategory, String EventTags,double ticketPrice, String desc)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
 
             try
@@ -354,7 +365,6 @@ namespace itHappens.UIs.anna
 
         public int getOwnerId(String s)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
             String ownerid = "0";
 
@@ -365,7 +375,7 @@ namespace itHappens.UIs.anna
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select id from users where Username='" + s + "'";
+                String queryString = "Select id from users where username='" + s + "'";
 
 
                 command = new MySqlCommand(queryString, con);
@@ -389,7 +399,6 @@ namespace itHappens.UIs.anna
 
         public int getCategoryId(String s)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
             String categoryid = "0";
 
@@ -400,7 +409,7 @@ namespace itHappens.UIs.anna
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select id from categories where name='" + s + "'";
+                String queryString = "Select id from categories where categories='" + s + "'";
 
 
                 command = new MySqlCommand(queryString, con);
@@ -424,7 +433,6 @@ namespace itHappens.UIs.anna
 
         public int getVenueId(String s)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
             String venueid="0";
 

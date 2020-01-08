@@ -22,6 +22,8 @@ namespace itHappens.UIs.Sidebars
             UIs.anna.LogInPage.loggedInUser = false;
             usernameLable.Text = "Username";
             LogoutButton.Visible = false;
+            Controllers.UIController.openHostForMainAndSearchPage();
+            Controllers.UIController.openPage("main");
         }
     }
 }

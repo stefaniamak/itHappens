@@ -1,4 +1,4 @@
-﻿using itHappends;
+﻿using dbstuff;
 using System;
 using System.Globalization;
 using System.IO;
@@ -131,7 +131,7 @@ namespace eventful
                     long categoryID;
 
                     //Save Data
-                    PopulateDB popdb = new PopulateDB();
+                    DbController popdb = new DbController();
 
                     areaID = (popdb.checkIfAreaNotExists(venueAddress)) ? popdb.addAreaRecord(countryName, cityName, zip_code, venueAddress) : popdb.findAreaID(venueAddress);
                     venueID = (popdb.checkIfVenueNotExists(venueName)) ? popdb.addVenueRecord(areaID, venueName) : popdb.findVenueID(venueName);
