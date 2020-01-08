@@ -63,7 +63,6 @@ namespace itHappens.UIs.anna
             {
                 SDaycomboBox.Items.Add(i.ToString());
                 EDaycomboBox.Items.Add(i.ToString());
-
             }
 
             for (int j = 1; j <= 12; j++)
