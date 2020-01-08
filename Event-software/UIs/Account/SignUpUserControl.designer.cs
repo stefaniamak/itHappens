@@ -37,7 +37,7 @@
             this.nameValLabel = new System.Windows.Forms.Label();
             this.numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.itHappensLabel = new System.Windows.Forms.Label();
-            this.areaComboBox = new System.Windows.Forms.ComboBox();
+            areaComboBox = new System.Windows.Forms.ComboBox();
             this.areaLabel = new System.Windows.Forms.Label();
             this.ageLabel = new System.Windows.Forms.Label();
             this.repassTextBox = new System.Windows.Forms.TextBox();
@@ -163,13 +163,13 @@
             // 
             // areaComboBox
             // 
-            this.areaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.areaComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.areaComboBox.Location = new System.Drawing.Point(226, 714);
-            this.areaComboBox.Margin = new System.Windows.Forms.Padding(5);
-            this.areaComboBox.Name = "areaComboBox";
-            this.areaComboBox.Size = new System.Drawing.Size(218, 26);
-            this.areaComboBox.TabIndex = 41;
+            areaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            areaComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            areaComboBox.Location = new System.Drawing.Point(226, 714);
+            areaComboBox.Margin = new System.Windows.Forms.Padding(5);
+            areaComboBox.Name = "areaComboBox";
+            areaComboBox.Size = new System.Drawing.Size(218, 26);
+            areaComboBox.TabIndex = 41;
             // 
             // areaLabel
             // 
@@ -388,7 +388,7 @@
             this.Controls.Add(this.ageLabel);
             this.Controls.Add(this.numericUpDown);
             this.Controls.Add(this.areaLabel);
-            this.Controls.Add(this.areaComboBox);
+            this.Controls.Add(areaComboBox);
             this.Controls.Add(this.areaValLabel);
             this.Controls.Add(this.submitButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -413,7 +413,7 @@
         public System.Windows.Forms.Label nameValLabel;
         public System.Windows.Forms.NumericUpDown numericUpDown;
         private System.Windows.Forms.Label itHappensLabel;
-        public System.Windows.Forms.ComboBox areaComboBox;
+        public static System.Windows.Forms.ComboBox areaComboBox;
         private System.Windows.Forms.Label areaLabel;
         private System.Windows.Forms.Label ageLabel;
         public System.Windows.Forms.TextBox repassTextBox;

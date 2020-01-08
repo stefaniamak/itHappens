@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using dbstuff;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace itHappens.UIs.valentina
 {
@@ -23,12 +24,12 @@ namespace itHappens.UIs.valentina
             InitializeComponent();
             if (UIs.anna.LogInPage.loggedInUser == true) 
             {
+                UIs.SignUpUserControl.fillTheAreaComboBox(AreaComboBox);
                 fillTheFieldsWithUsersInfo();
             }
             
         }
 
-        
 
         public void fillTheFieldsWithUsersInfo()
         {
@@ -59,9 +60,6 @@ namespace itHappens.UIs.valentina
                     areaID = Convert.ToInt32(dataReader.GetString(3));
                 }
                 con.Close();
-
-
-
             }
             catch (Exception e)
             {
@@ -86,21 +84,104 @@ namespace itHappens.UIs.valentina
                     AreaComboBox.Text = dataReader.GetString(0);
                 }
                 con.Close();
-
-
-
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error");
             }
-
-
-
-
-
-
         }
 
+        private void NameSettingsTextBox_Validated(object sender, EventArgs e)
+        {
+            if (!NameSettingsTextBox.Text.Equals(""))
+            {
+                if (UIs.SignUpUserControl.IsAllLetters(NameSettingsTextBox.Text))
+                {
+                    NameWarningLabel.Text = "";
+                }
+                else
+                {
+                    NameWarningLabel.Text = "Write only letters";
+                }
+
+            }
+            else
+            {
+                NameWarningLabel.Text = "Name is empty";
+            }
+        }
+
+        private void SurnameSettingsTextBox_Validated(object sender, EventArgs e)
+        {
+            if (!SurnameSettingsTextBox.Text.Equals(""))
+            {
+                if (UIs.SignUpUserControl.IsAllLetters(SurnameSettingsTextBox.Text))
+                {
+                    SurnameWarningLabel.Text = "";
+                }
+                else
+                {
+                    SurnameWarningLabel.Text = "Write only letters";
+                }
+
+            }
+            else
+            {
+                SurnameWarningLabel.Text = "Surname is empty";
+            }
+        }
+
+
+
+        private void UsernameTextBox_Validated(object sender, EventArgs e)
+        {
+            if (!UsernameTextBox.Text.Equals(""))
+            {
+                if (Char.IsLetter(UsernameTextBox.Text[0]))
+                {
+                    UsernameWarningLabel.Text = "";
+                }
+                else
+                {
+                    UsernameWarningLabel.Text = "Must start with letter";
+                }
+
+            }
+            else
+            {
+                UsernameWarningLabel.Text = "Username is empty";
+            }
+        }
+
+        private void EmailSettingsTextBox_Validated(object sender, EventArgs e)
+        {
+            Regex re = new Regex(UIs.SignUpUserControl.strRegex);
+
+            if (!EmailSettingsTextBox.Text.Equals(""))
+            {
+                if (re.IsMatch(EmailSettingsTextBox.Text))
+                {
+                    EmailWarningLabel.Text = "";
+                }
+                else
+                {
+                    EmailWarningLabel.Text = "Invalid email format";
+                }
+            }
+            else
+            {
+                EmailWarningLabel.Text = "Email is empty";
+            }
+        }
+
+        private void EmailSettingsTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if(UIs.anna.LogInPage.loggedInUser == true)
+            {
+                int userID = Classes.DatabaseGeneralMethods.returnUsersIDWhenIsLogedIn(UIs.Sidebars.ProfileSidebar.usernameLable.Text);
+                //Not finished
+            }
+
+        }
     }
 }
