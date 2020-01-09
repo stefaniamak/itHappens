@@ -17,11 +17,11 @@ namespace itHappens.UIs.Sidebars.UpcomingEvents
             InitializeComponent();
         }
 
-        public UpcomingEventMini(string eventTitle, string categoryLocation, DateTime eventDate) : this()
+        public UpcomingEventMini(string eventTitle, string categoryLocation, string eventDate) : this()
         {
             eventName.Text = eventTitle;
             location.Text = categoryLocation;
-            //date.Text = eventDate;
+            date.Text = eventDate;
             //month.Text = eventDate;
         }
 
