@@ -17,11 +17,21 @@ namespace itHappens.UIs.Common
             InitializeComponent();
         }
 
-        public EventMiniView(Image eventImage, Color categoryColor) : this()
+        public EventMiniView(Image eventImage, string categoryColor) : this()
         {
+            Color catColor = Color.FromName(categoryColor);
+
             eventPictureBox.Image = eventImage;
-            categoryColorControl.BackColor = categoryColor;
+            categoryColorPanel.BackColor = catColor;
         }
+
+        public EventMiniView(string categoryColor) : this()
+        {
+            Color catColor = Color.FromName(categoryColor);
+            categoryColorPanel.BackColor = catColor;
+
+        }
+
 
         private void EventMiniView_MouseHover(object sender, EventArgs e)
         {
