@@ -62,15 +62,15 @@ namespace itHappens.UIs.Common
                 {
                     if (Convert.ToInt32(dataReader.GetString(0)) < 4)
                     {
-                        flowLayoutPanel2.Controls.Add(new UIs.Common.CategoryMiniBox(dataReader.GetString(1), dataReader.GetString(2)));
+                        allcategoriesFlowLayoutPanel1.Controls.Add(new UIs.Common.CategoryMiniBox(dataReader.GetString(1), dataReader.GetString(2)));
                     } 
                     else if (Convert.ToInt32(dataReader.GetString(0)) < 36)
                     {
-                        flowLayoutPanel4.Controls.Add(new UIs.Common.CategoryMiniBox(dataReader.GetString(1), dataReader.GetString(2)));
+                        allcategoriesFlowLayoutPanel2.Controls.Add(new UIs.Common.CategoryMiniBox(dataReader.GetString(1), dataReader.GetString(2)));
                     } 
                     else
                     {
-                        flowLayoutPanel5.Controls.Add(new UIs.Common.CategoryMiniBox(dataReader.GetString(1), dataReader.GetString(2)));
+                        allcategoriesFlowLayoutPanel3.Controls.Add(new UIs.Common.CategoryMiniBox(dataReader.GetString(1), dataReader.GetString(2)));
                     }
                     
                 }

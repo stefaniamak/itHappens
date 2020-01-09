@@ -20,12 +20,6 @@ namespace itHappens.Classes
             this.categories = categories_;
             this.parent = parent_;
         }
-        
-        public string getColor()
-        {
-
-            return "red";
-        }
 
     }
 }
