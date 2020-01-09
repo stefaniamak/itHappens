@@ -204,7 +204,41 @@ namespace itHappens.Classes
             return areaId;
         }
 
+        public static int ReturnAgeOfUser(String user, String pass)
+        {
+            MySqlConnection con;
+            int age = 0;
 
+            try
+            {
+                con = new MySqlConnection(conStr);
+                con.Open();
+
+                MySqlCommand command;
+                MySqlDataReader dataReader;
+                String queryString = "Select age from users where username='"+user+"' and password='"+pass+"'";
+
+                command = new MySqlCommand(queryString, con);
+
+                dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+
+                    age = dataReader.GetInt32(0);
+                }
+                con.Close();
+
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error!!");
+            }
+
+            return age;
+        }
 
     }
 }
