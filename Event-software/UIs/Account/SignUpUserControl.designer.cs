@@ -37,14 +37,14 @@
             this.nameValLabel = new System.Windows.Forms.Label();
             this.numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.itHappensLabel = new System.Windows.Forms.Label();
-            areaComboBox = new System.Windows.Forms.ComboBox();
+            this.areaComboBox = new System.Windows.Forms.ComboBox();
             this.areaLabel = new System.Windows.Forms.Label();
             this.ageLabel = new System.Windows.Forms.Label();
             this.repassTextBox = new System.Windows.Forms.TextBox();
             this.repassLabel = new System.Windows.Forms.Label();
-            passwordTextBox = new System.Windows.Forms.TextBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.passwordLabel = new System.Windows.Forms.Label();
-            usernameTextBox = new System.Windows.Forms.TextBox();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.emailLabel = new System.Windows.Forms.Label();
@@ -133,7 +133,7 @@
             this.numericUpDown.Location = new System.Drawing.Point(226, 646);
             this.numericUpDown.Margin = new System.Windows.Forms.Padding(5);
             this.numericUpDown.Minimum = new decimal(new int[] {
-            17,
+            13,
             0,
             0,
             0});
@@ -142,7 +142,7 @@
             this.numericUpDown.Size = new System.Drawing.Size(69, 24);
             this.numericUpDown.TabIndex = 43;
             this.numericUpDown.Value = new decimal(new int[] {
-            17,
+            13,
             0,
             0,
             0});
@@ -163,13 +163,13 @@
             // 
             // areaComboBox
             // 
-            areaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            areaComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            areaComboBox.Location = new System.Drawing.Point(226, 714);
-            areaComboBox.Margin = new System.Windows.Forms.Padding(5);
-            areaComboBox.Name = "areaComboBox";
-            areaComboBox.Size = new System.Drawing.Size(218, 26);
-            areaComboBox.TabIndex = 41;
+            this.areaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.areaComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.areaComboBox.Location = new System.Drawing.Point(226, 714);
+            this.areaComboBox.Margin = new System.Windows.Forms.Padding(5);
+            this.areaComboBox.Name = "areaComboBox";
+            this.areaComboBox.Size = new System.Drawing.Size(218, 26);
+            this.areaComboBox.TabIndex = 41;
             // 
             // areaLabel
             // 
@@ -221,15 +221,15 @@
             // 
             // passwordTextBox
             // 
-            passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            passwordTextBox.Location = new System.Drawing.Point(226, 513);
-            passwordTextBox.Margin = new System.Windows.Forms.Padding(5);
-            passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new System.Drawing.Size(220, 24);
-            passwordTextBox.TabIndex = 36;
-            passwordTextBox.UseSystemPasswordChar = true;
-            passwordTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.passwordTextBox_Validating);
-            passwordTextBox.Validated += new System.EventHandler(this.passwordTextBox_Validated);
+            this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.passwordTextBox.Location = new System.Drawing.Point(226, 513);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(220, 24);
+            this.passwordTextBox.TabIndex = 36;
+            this.passwordTextBox.UseSystemPasswordChar = true;
+            this.passwordTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.passwordTextBox_Validating);
+            this.passwordTextBox.Validated += new System.EventHandler(this.passwordTextBox_Validated);
             // 
             // passwordLabel
             // 
@@ -245,14 +245,14 @@
             // 
             // usernameTextBox
             // 
-            usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            usernameTextBox.Location = new System.Drawing.Point(230, 436);
-            usernameTextBox.Margin = new System.Windows.Forms.Padding(5);
-            usernameTextBox.Name = "usernameTextBox";
-            usernameTextBox.Size = new System.Drawing.Size(214, 24);
-            usernameTextBox.TabIndex = 34;
-            usernameTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.usernameTextBox_Validating);
-            usernameTextBox.Validated += new System.EventHandler(this.usernameTextBox_Validated);
+            this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.usernameTextBox.Location = new System.Drawing.Point(230, 436);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(214, 24);
+            this.usernameTextBox.TabIndex = 34;
+            this.usernameTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.usernameTextBox_Validating);
+            this.usernameTextBox.Validated += new System.EventHandler(this.usernameTextBox_Validated);
             // 
             // usernameLabel
             // 
@@ -377,10 +377,10 @@
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.emailValLabel);
             this.Controls.Add(this.usernameLabel);
-            this.Controls.Add(usernameTextBox);
+            this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.usernameValLabel);
             this.Controls.Add(this.passwordLabel);
-            this.Controls.Add(passwordTextBox);
+            this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.passwordValLabel);
             this.Controls.Add(this.repassLabel);
             this.Controls.Add(this.repassTextBox);
@@ -388,7 +388,7 @@
             this.Controls.Add(this.ageLabel);
             this.Controls.Add(this.numericUpDown);
             this.Controls.Add(this.areaLabel);
-            this.Controls.Add(areaComboBox);
+            this.Controls.Add(this.areaComboBox);
             this.Controls.Add(this.areaValLabel);
             this.Controls.Add(this.submitButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -413,14 +413,11 @@
         public System.Windows.Forms.Label nameValLabel;
         public System.Windows.Forms.NumericUpDown numericUpDown;
         private System.Windows.Forms.Label itHappensLabel;
-        public static System.Windows.Forms.ComboBox areaComboBox;
         private System.Windows.Forms.Label areaLabel;
         private System.Windows.Forms.Label ageLabel;
         public System.Windows.Forms.TextBox repassTextBox;
         private System.Windows.Forms.Label repassLabel;
-        public static System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label passwordLabel;
-        public static System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Label usernameLabel;
         public System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.Label emailLabel;
@@ -430,5 +427,8 @@
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.PictureBox LogoSignUppictureBox;
+        public System.Windows.Forms.ComboBox areaComboBox;
+        public System.Windows.Forms.TextBox passwordTextBox;
+        public System.Windows.Forms.TextBox usernameTextBox;
     }
 }

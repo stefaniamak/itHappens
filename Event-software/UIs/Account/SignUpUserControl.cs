@@ -181,7 +181,15 @@ namespace itHappens.UIs
         {
             if (!passwordTextBox.Text.Equals(""))
             {
-                passwordValLabel.Text = "";
+                if(passwordTextBox.Text.Length <= 4)
+                {
+                    passwordValLabel.Text = "At least 5 characters";
+                }
+                else
+                {
+                    passwordValLabel.Text = "";
+                }
+                
             }
         }
 
@@ -288,37 +296,8 @@ namespace itHappens.UIs
         public static void signUpCon(String area, int age, String userName, String pass, String name, String surname, String email)
         {
 
-            int areaId = 0;
+            int areaId = Classes.DatabaseGeneralMethods.ReturnIdOfAray(area);
             MySqlConnection con;
-
-            try
-            {
-                con = new MySqlConnection(conStr);
-                con.Open();
-
-                MySqlCommand command;
-                MySqlDataReader dataReader;
-                String queryString = "Select id from area where country= '" + area + "'";
-
-                command = new MySqlCommand(queryString, con);
-
-
-                dataReader = command.ExecuteReader();
-
-                while (dataReader.Read())
-                {
-                    areaId = Convert.ToInt32(dataReader.GetString(0));
-                }
-
-
-                con.Close();
-
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error");
-            }
 
 
             try
