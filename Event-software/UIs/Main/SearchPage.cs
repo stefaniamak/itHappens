@@ -93,7 +93,10 @@ namespace itHappens.UIs.Common
             foreach (CategoryMiniBox box in allcategoriesFlowLayoutPanel2.Controls)
                 if (box.IsSelected)
                     selectedCategoryIds.Add(box.ID.ToString());
-
+            
+            foreach (CategoryMiniBox box in allcategoriesFlowLayoutPanel3.Controls)
+                if (box.IsSelected)
+                    selectedCategoryIds.Add(box.ID.ToString());
 
 
 
