@@ -148,6 +148,8 @@
   <ItemGroup>
     <Compile Include="Classes\Area.cs" />
     <Compile Include="Classes\Category.cs" />
+    <Compile Include="Classes\madeForYouCarousel.cs" />
+    <Compile Include="Classes\todayEventsCarousel.cs" />
     <Compile Include="Classes\CreateList.cs" />
     <Compile Include="Classes\Event.cs" />
     <Compile Include="Classes\EventList.cs" />

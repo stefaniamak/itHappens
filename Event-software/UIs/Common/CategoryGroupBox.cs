@@ -19,6 +19,7 @@ namespace itHappens.UIs.Common
 
         public CategoryGroupBox(string categoryName, Image firstEventImage, Image secondEventImage, Color categoryColor) : this()
         {
+            InitializeComponent();
             categoryNameLabel.Text = categoryName;
             firstEventimagePictureBox.Image = firstEventImage;
             secondEventimagePictureBox.Image = secondEventImage;

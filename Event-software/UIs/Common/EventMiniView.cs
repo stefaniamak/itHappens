@@ -19,6 +19,7 @@ namespace itHappens.UIs.Common
 
         public EventMiniView(Image eventImage, Color categoryColor) : this()
         {
+            InitializeComponent();
             eventPictureBox.Image = eventImage;
             categoryColorControl.BackColor = categoryColor;
         }

@@ -35,6 +35,37 @@ namespace itHappends
             return Command.ExecuteReader();
 
         }
+
+        public static MySqlDataReader ActiveEvents ()
+        {
+            DateTime myDateTime = DateTime.Now;
+            string sqlFormattedDate = myDateTime.Date.ToString("yyyy-MM-dd HH:mm:ss");
+
+            return Query(@"SELECT * FROM event WHERE startingDate < @Date AND endingDate  > @Date ",
+                                   new string[,] { { "@Date", sqlFormattedDate } });
+        }
+
+        public static List<List<string>> Readrows (MySqlDataReader reader , int[] parameters)
+        {
+           
+            List<List<string>> collumns = new List<List<string>>();
+            while (reader.Read())
+            {
+                List<string> rows = new List<string>();
+
+                foreach (int i in parameters)
+                {               
+                    rows.Add(reader.GetString(i));
+                }
+               collumns.Add(rows);
+            }
+
+            return collumns;
+        }
+        public static MySqlDataReader Categories(int limit)
+        {
+            return Query(@"Select categories FROM categories LIMIT @limit",new string[,] { { "@limit", limit + "" } });
+        }
     }
     //String sql = " ";
     //sql = "Insert into event(id,onwerID,venueID,categoryID,startingDate,EndingDate,description,tags,ticketprice) values('"id" + "ownerID" + "venueID" + "categoryID" + "startingDate" + "endingDate" + "description" + "tags" + "ticketprice"')";
