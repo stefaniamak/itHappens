@@ -43,6 +43,8 @@ namespace itHappens.Classes
         public void FrequentTags()
         {
 
+            
+
         }
     }
 }
