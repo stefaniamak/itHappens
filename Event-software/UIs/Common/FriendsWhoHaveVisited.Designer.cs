@@ -32,18 +32,21 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.friendnameLabel = new System.Windows.Forms.Label();
             this.friendPicOvalPictureBox = new itHappens.UIs.Common.OvalPictureBox();
+            this.friendSurnameLabel = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.friendPicOvalPictureBox)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.96491F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.03509F));
-            this.tableLayoutPanel1.Controls.Add(this.friendnameLabel, 0, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.78572F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.21429F));
             this.tableLayoutPanel1.Controls.Add(this.friendPicOvalPictureBox, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(-2, 1);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -56,11 +59,11 @@
             // 
             this.friendnameLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.friendnameLabel.AutoSize = true;
-            this.friendnameLabel.Location = new System.Drawing.Point(63, 18);
+            this.friendnameLabel.Location = new System.Drawing.Point(3, 0);
             this.friendnameLabel.Name = "friendnameLabel";
-            this.friendnameLabel.Size = new System.Drawing.Size(76, 16);
+            this.friendnameLabel.Size = new System.Drawing.Size(41, 16);
             this.friendnameLabel.TabIndex = 1;
-            this.friendnameLabel.Text = "Friend Name";
+            this.friendnameLabel.Text = "Name";
             // 
             // friendPicOvalPictureBox
             // 
@@ -75,6 +78,25 @@
             this.friendPicOvalPictureBox.TabIndex = 0;
             this.friendPicOvalPictureBox.TabStop = false;
             // 
+            // friendSurnameLabel
+            // 
+            this.friendSurnameLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.friendSurnameLabel.AutoSize = true;
+            this.friendSurnameLabel.Location = new System.Drawing.Point(50, 0);
+            this.friendSurnameLabel.Name = "friendSurnameLabel";
+            this.friendSurnameLabel.Size = new System.Drawing.Size(56, 16);
+            this.friendSurnameLabel.TabIndex = 2;
+            this.friendSurnameLabel.Text = "Surname";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.friendnameLabel);
+            this.flowLayoutPanel1.Controls.Add(this.friendSurnameLabel);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(48, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(117, 47);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
             // FriendsWhoHaveVisited
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -85,8 +107,9 @@
             this.Name = "FriendsWhoHaveVisited";
             this.Size = new System.Drawing.Size(163, 55);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.friendPicOvalPictureBox)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -96,5 +119,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label friendnameLabel;
         private OvalPictureBox friendPicOvalPictureBox;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label friendSurnameLabel;
     }
 }

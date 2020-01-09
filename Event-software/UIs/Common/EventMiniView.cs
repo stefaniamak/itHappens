@@ -25,6 +25,7 @@ namespace itHappens.UIs.Common
             categoryColorPanel.BackColor = catColor;
         }
 
+        //  -----------  Προσωρινός Constructor χωρίς τα insert εικόνων.  -----------  
         public EventMiniView(string categoryColor) : this()
         {
             Color catColor = Color.FromName(categoryColor);

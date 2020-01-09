@@ -22,7 +22,17 @@ namespace itHappens.UIs.Common
             InitializeComponent();
 
             friendPicOvalPictureBox.BackgroundImage = friendProfilePicture;
-            friendnameLabel.Text = friendName; // Sundiase to onoma tou filou me to epitheto 
+            friendnameLabel.Text = friendName;
+            friendSurnameLabel.Text = friendSurname;
+        }
+
+        //  -----------  Προσωρινός Constructor χωρίς τα insert εικόνων.  -----------  
+        public FriendsWhoHaveVisited(string friendName, string friendSurname)
+        {
+            InitializeComponent();
+
+            friendnameLabel.Text = friendName;
+            friendSurnameLabel.Text = friendSurname;
         }
     }
 }
