@@ -58,15 +58,32 @@ namespace itHappens.UIs.Common
         {
             if (categoryLabel.Visible == false)
             {
-                setVisibility(true, false);
-                changeBackColor(40);
+                select(true);
             } 
             else
             {
-                setVisibility(false, true);
-                changeBackColor(25);
+                select(false);
             }
             
+        }
+
+        public void select(bool isSelected)
+        {
+            if(isSelected == true)
+            {
+                changeStyle(true, false, 45);
+            }
+            else
+            {
+                changeStyle(false, true, 25);
+            }
+        }
+
+
+        public void changeStyle(bool normal, bool stickout, int color)
+        {
+            setVisibility(normal, stickout);
+            changeBackColor(color);
         }
 
         private void setVisibility(bool normal, bool stickout)
@@ -84,5 +101,7 @@ namespace itHappens.UIs.Common
         {
             categoryClicked();
         }
+
+        
     }
 }

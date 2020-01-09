@@ -17,6 +17,7 @@ namespace itHappens.UIs.Common
     {
         private static DbConnector dbCon = new DbConnector();
         private static string conStr = dbCon.GetConnectionString();
+        public static string[] categoriesSelected;
 
         public SearchPage()
         {
@@ -56,6 +57,8 @@ namespace itHappens.UIs.Common
 
                 while (dataReader.Read())
                 {
+                    //Console.WriteLine(GlobalData.categoriesSelectedSelected[7]);
+                    //categoriesSelectedSelected[Convert.ToInt32(dataReader.GetString(0))] = "hi";
                     if (Convert.ToInt32(dataReader.GetString(0)) < 4)
                     {
                         allcategoriesFlowLayoutPanel1.Controls.Add(new UIs.Common.CategoryMiniBox(dataReader.GetString(1), dataReader.GetString(2)));
@@ -121,7 +124,9 @@ namespace itHappens.UIs.Common
             */
         }
 
-
-
+        private void clearSelections_MouseClick(object sender, MouseEventArgs e)
+        {
+            //UIs.Common.CategoryMiniBox.setDefaultCategoryMiniBoxes();
+        }
     }
 }
