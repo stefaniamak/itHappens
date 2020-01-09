@@ -10,7 +10,19 @@ namespace itHappens.Controllers
 {
     class UIController
     {
-        public static void openPage(string page)
+
+        private UIs.Common.SearchPage theSearchPage = null;
+
+
+        // Use the Singleton pattern
+        private static UIController _instance = new UIController();
+        public static UIController Instance => _instance;
+
+        private UIController()
+        {
+        }
+
+        public void openPage(string page)
         {
             
             if (string.Equals(page, "main"))
@@ -25,7 +37,7 @@ namespace itHappens.Controllers
         }
 
 
-        public static void openHostForMainAndSearchPage()
+        public void openHostForMainAndSearchPage()
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
             var hostPage = new UIs.Main.CommonSearchTextPage();
@@ -36,7 +48,7 @@ namespace itHappens.Controllers
         }
 
 
-        public static void hostTheMainPage()
+        public void hostTheMainPage()
         {
 
             var mainPage = new UIs.Main.MainPage();
@@ -44,16 +56,16 @@ namespace itHappens.Controllers
             mainPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             mainPage.Dock = DockStyle.Fill;
         }
-        public static void hostTheSearchPage()
+        public void hostTheSearchPage()
         {
-            var searchPage = new UIs.Common.SearchPage();
-            UIs.Main.CommonSearchTextPage.hostPanel.Controls.Add(searchPage);
-            searchPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            searchPage.Dock = DockStyle.Fill;
+            theSearchPage = new UIs.Common.SearchPage();
+            UIs.Main.CommonSearchTextPage.hostPanel.Controls.Add(theSearchPage);
+            theSearchPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            theSearchPage.Dock = DockStyle.Fill;
         }
 
 
-        public static void MainPageTodayEventsAndMadeForYouCarousel_Load()
+        public void MainPageTodayEventsAndMadeForYouCarousel_Load()
         {
             for (int i = 0; i < 10; i++)
             {
@@ -67,10 +79,10 @@ namespace itHappens.Controllers
         }
 
 
-        public static void SearchPageFlowLayoutPanels_Load()
+        public void SearchPageFlowLayoutPanels_Load()
         {
 
-            UIs.Common.SearchPage.fillAllCategories();
+            theSearchPage.fillAllCategories();
             /*
             for (int i = 0; i < 20; i++)
             {
@@ -90,7 +102,7 @@ namespace itHappens.Controllers
             */
         }
 
-        public static void AllCategoriesFlowPanel_Load()
+        public void AllCategoriesFlowPanel_Load()
         {
             for (int i = 0; i < 20; i++)
             {
@@ -98,7 +110,7 @@ namespace itHappens.Controllers
             }
         }
 
-        public static void friendsAttendingPanel_Load()
+        public void friendsAttendingPanel_Load()
         {
             for (int i = 0; i < 5; i++)
             {
@@ -106,7 +118,7 @@ namespace itHappens.Controllers
             }
         }
 
-        public static void ListPageLoad()
+        public void ListPageLoad()
         {
             for (int i = 0; i < 20; i++)
             {
@@ -116,7 +128,7 @@ namespace itHappens.Controllers
             }
         }
 
-        public static void ListsContentPageLoad()
+        public void ListsContentPageLoad()
         {
             for (int i = 0; i < 20; i++)
             {
@@ -126,68 +138,68 @@ namespace itHappens.Controllers
             }
         }
 
-        public static void addSidebarFriendList()
+        public void addSidebarFriendList()
         {
             Classes.SidebarsMethods.addFriendList();
         }
 
-        public static void addSidebarUpcomingEvents()
+        public void addSidebarUpcomingEvents()
         {
             Classes.SidebarsMethods.addUpcomingEvents();
         }
 
-        public static void addSidebarLists()
+        public void addSidebarLists()
         {
             Classes.SidebarsMethods.addLists();
         }
 
-        public static void addSidebarProfile()
+        public void addSidebarProfile()
         {
             Classes.SidebarsMethods.addProfile();
         }
 
-        public static void mainToolStripMenuItem_MiddlePanel()
+        public void mainToolStripMenuItem_MiddlePanel()
         {
             Classes.MiddlePanelMethods.mainToolStripMenuItem();
         }
 
-        public static void searchToolStripMenuItem_MiddlePanel()
+        public void searchToolStripMenuItem_MiddlePanel()
         {
             Classes.MiddlePanelMethods.searchToolStripMenuItem();
         }
 
-        public static void eventsProfileToolStripMenuItem_MiddlePanel()
+        public void eventsProfileToolStripMenuItem_MiddlePanel()
         {
             Classes.MiddlePanelMethods.eventsProfileToolStripMenuItem();
         }
 
-        public static void logInToolStripMenuItem_MiddlePanel()
+        public void logInToolStripMenuItem_MiddlePanel()
         {
             Classes.MiddlePanelMethods.logInToolStripMenuItem();
         }
 
-        public static void signUpToolStripMenuItem_MiddlePanel()
+        public void signUpToolStripMenuItem_MiddlePanel()
         {
             Classes.MiddlePanelMethods.signUpToolStripMenuItem();
         }
 
-        public static void createEventToolStripMenuItem_MiddlePanel()
+        public void createEventToolStripMenuItem_MiddlePanel()
         {
             Classes.MiddlePanelMethods.createEventToolStripMenuItem();
         }
 
 
-        public static void listToolStripMenuItem_MiddlePanel()
+        public void listToolStripMenuItem_MiddlePanel()
         {
             Classes.MiddlePanelMethods.listToolStripMenuItem();
         }
 
-        public static void madeForYouToolStripMenuItem_MiddlePanel()
+        public void madeForYouToolStripMenuItem_MiddlePanel()
         {
             Classes.MiddlePanelMethods.madeForYouToolStripMenuItem();
         }
 
-        public static void settingsToolStripMenuItem_MiddlePanel()
+        public void settingsToolStripMenuItem_MiddlePanel()
         {
             Classes.MiddlePanelMethods.settingsToolStripMenuItem();
         }

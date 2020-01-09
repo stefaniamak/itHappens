@@ -24,7 +24,7 @@ namespace itHappens.UIs.valentina
 
         private void ListPage_Load(object sender, EventArgs e)
         {
-            Controllers.UIController.ListPageLoad();
+            Controllers.UIController.Instance.ListPageLoad();
         }
     }
 }

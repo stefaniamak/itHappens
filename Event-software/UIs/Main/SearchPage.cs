@@ -17,7 +17,7 @@ namespace itHappens.UIs.Common
     {
         private static DbConnector dbCon = new DbConnector();
         private static string conStr = dbCon.GetConnectionString();
-        public static string[] categoriesSelected;
+        //public string[] categoriesSelected;
 
         public SearchPage()
         {
@@ -30,7 +30,7 @@ namespace itHappens.UIs.Common
 
         private void SearchFormTest_Load(object sender, EventArgs e)
         {
-            //Controllers.UIController.SearchPageFlowLayoutPanels_Load();       
+            //Controllers.UIController.Instance.SearchPageFlowLayoutPanels_Load();       
         }
 
         public void fillMostFrequent()
@@ -38,7 +38,7 @@ namespace itHappens.UIs.Common
 
         }
 
-        public static void fillAllCategories()
+        public void fillAllCategories()
         {
             MySqlConnection con;
 
@@ -57,19 +57,20 @@ namespace itHappens.UIs.Common
 
                 while (dataReader.Read())
                 {
-                    //Console.WriteLine(GlobalData.categoriesSelectedSelected[7]);
-                    //categoriesSelectedSelected[Convert.ToInt32(dataReader.GetString(0))] = "hi";
+                    var box = new UIs.Common.CategoryMiniBox(Convert.ToInt32(dataReader.GetString(0)), dataReader.GetString(1), dataReader.GetString(2));
+                    box.OnSelectionChanged += () => { this.showMatches(); }; // new SelectionChanged(this.showMatches);
+
                     if (Convert.ToInt32(dataReader.GetString(0)) < 4)
                     {
-                        allcategoriesFlowLayoutPanel1.Controls.Add(new UIs.Common.CategoryMiniBox(dataReader.GetString(1), dataReader.GetString(2)));
+                        allcategoriesFlowLayoutPanel1.Controls.Add(box);
                     } 
                     else if (Convert.ToInt32(dataReader.GetString(0)) < 36)
                     {
-                        allcategoriesFlowLayoutPanel2.Controls.Add(new UIs.Common.CategoryMiniBox(dataReader.GetString(1), dataReader.GetString(2)));
+                        allcategoriesFlowLayoutPanel2.Controls.Add(box);
                     } 
                     else
                     {
-                        allcategoriesFlowLayoutPanel3.Controls.Add(new UIs.Common.CategoryMiniBox(dataReader.GetString(1), dataReader.GetString(2)));
+                        allcategoriesFlowLayoutPanel3.Controls.Add(box);
                     }
                     
                 }
@@ -85,6 +86,19 @@ namespace itHappens.UIs.Common
 
         public void showMatches()
         {
+            matchesFlowLayoutPanel.Controls.Clear();
+
+            List<string> selectedCategoryIds = new List<string>();
+
+            foreach (CategoryMiniBox box in allcategoriesFlowLayoutPanel2.Controls)
+                if (box.IsSelected)
+                    selectedCategoryIds.Add(box.ID.ToString());
+
+
+
+
+            var ids = String.Join(",", selectedCategoryIds);
+
             MySqlConnection con;
 
             try
@@ -96,13 +110,12 @@ namespace itHappens.UIs.Common
                 MySqlDataReader dataReader;
                 String queryString = "SELECT ev.title, cat.color " +            // When Images get inserted to database, there will be a -- event.image -- added, and the -- event.title -- will be removed.
                                      "FROM it_happens.event ev JOIN it_happens.categories cat " +
-                                     "ON cat.id = ev.categoryID";  
+                                     "ON cat.id = ev.categoryID " +
+                                     "WHERE cat.id IN (" + ids + ")";  
 
 
                 command = new MySqlCommand(queryString, con);
-
                 dataReader = command.ExecuteReader();
-
                 while (dataReader.Read())
                 {
                     var eventminiview = new UIs.Common.EventMiniView(dataReader.GetString(1));
