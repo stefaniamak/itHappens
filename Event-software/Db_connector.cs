@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using itHappens.Classes;
 using MySql.Data.MySqlClient;
 
 namespace itHappends
@@ -38,11 +39,9 @@ namespace itHappends
 
         public static MySqlDataReader ActiveEvents ()
         {
-            DateTime myDateTime = DateTime.Now;
-            string sqlFormattedDate = myDateTime.Date.ToString("yyyy-MM-dd HH:mm:ss");
-
+           
             return Query(@"SELECT * FROM event WHERE startingDate < @Date AND endingDate  > @Date ",
-                                   new string[,] { { "@Date", sqlFormattedDate } });
+                                   new string[,] { { "@Date", Utility.DateToText(DateTime.Now) } });
         }
 
         public static List<List<string>> Readrows (MySqlDataReader reader , int[] parameters)
