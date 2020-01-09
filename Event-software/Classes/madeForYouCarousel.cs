@@ -37,14 +37,20 @@ namespace itHappens.Classes
             }
             
         }
-            
 
-         
-        public void FrequentTags()
-        {
 
-            
 
-        }
+        /* public void FrequentTags()
+         {
+             return Query(@"SELECT * FROM event WHERE startingDate < @Date AND endingDate  > @Date ",
+                                    new string[,] { { "@Date", Utility.DateToText(DateTime.Now) } });
+           /*  SELECT`column`,
+     COUNT(`column`) AS `value_occurrence` 
+     FROM `my_table`
+     GROUP BY `column`
+     ORDER BY `value_occurrence` DESC
+     LIMIT 1;
+
+         }*/
     }
 }

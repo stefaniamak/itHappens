@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using itHappens.Classes;
+using itHappens.UIs.Common;
 
 namespace itHappens.UIs.andrea
 {
@@ -25,15 +27,15 @@ namespace itHappens.UIs.andrea
             
             friends();
             categoryColorPanel.BackColor = categoryColor;
-            eventNameLabel.Text = eventName; 
-            //monthLabel.Text =      // Tha Kaneis mia methodo pou tha emfanizei ta 3 prwta grammata tou mhna pou ginete, se kefalaia
-            //dayLabel               // Mono thn mera, des to design
-            //categoryColorLabel.BackColor = categoryColor; // Auto tha einai to onoma tou xrwmatos sto VS. To VS an parathrhseis exei kai onomata pera apo RGB. Des an mporeis na to efarmwseis me ta onomata, alliws tha s dwsw RGB
+            eventNameLabel.Text = eventName;
+            monthLabel.Text = Utility.Month(eventDateTime);
+            dayLabel.Text = Utility.Day(eventDateTime);
+            //categoryColorLabel.BackColor = categoryColor;
             backgroundPictureBox.BackgroundImage = background;
             locationTextBox.Text = venueName;
-            organizerTextBox.Text = organizerName; // !!!!!! Niko, sunduase ta string organizerName kai organizerSurname. Den kathisa na psaksw pws to kaneis, opote prosorina egrapsa mono to organizerName. Allakse to.
-            //dayTimeTextBox.Text = eventDateTime; // !!!!!! Niko, auto vgazei error gt prepei na deis pws na kaneis convert to date se string.
-            ticketPriceLabel.Text = (ticketPrice).ToString(); // !!!!! Tsekare an einai double to ticket price apo th vash. Kai den eimai sigourh an douleuei auth h ToSting().
+            organizerTextBox.Text = organizerName +" "+ organizerSurename ; 
+            dayTimeTextBox.Text = Utility.DateToText(eventDateTime);
+            ticketPriceLabel.Text = ticketPrice + "";
             descriptionTextBox.Text = description;
         }
 
@@ -53,6 +55,15 @@ namespace itHappens.UIs.andrea
         private void descriptionLabel_Click(object sender, EventArgs e)
         {
 
+        }
+        public static void openEventProfile(object sender, EventArgs e) 
+        {
+
+            MainSplitForm.middlePanel.Controls.Clear();
+            var middlePage = new UIs.andrea.EventProfilePage();
+            MainSplitForm.middlePanel.Controls.Add(middlePage);
+            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            middlePage.Dock = DockStyle.Fill;
         }
     }
 }

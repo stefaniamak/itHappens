@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using itHappens.Classes;
 
 namespace itHappens.UIs.andrea
 {
@@ -17,12 +18,12 @@ namespace itHappens.UIs.andrea
 
             eventsUserWillAttend();
 
-            userNameLabel.Text = userName; // prosthaise kai to userSurname
+            userNameLabel.Text = userName + " " + userSurname; 
             userProfilePictureOvalPictureBox.BackgroundImage = profilePicture;
             userBackgroundPictureBox.BackgroundImage = userBackground;
+            monthLabel.Text = Utility.Month(eventDateTime);
+            dayLabel.Text = Utility.Day(eventDateTime);
 
-            //monthLabel.Text =      // Tha Kaneis mia methodo pou tha emfanizei ta 3 prwta grammata tou mhna pou ginete, se kefalaia
-            //dayLabel               // Mono thn mera, des to design
             categoryColorPanel.BackColor = categoryColor; 
             vanueLabel.Text = venueName;
             miniEventBakcgroundPictureBox.BackgroundImage = eventBackground;

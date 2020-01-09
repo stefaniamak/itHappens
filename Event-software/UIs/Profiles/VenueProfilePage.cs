@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using itHappens.Classes;
 
 namespace itHappens.UIs.andrea
 {
@@ -28,11 +29,11 @@ namespace itHappens.UIs.andrea
 
             showUserControls();
 
-            venueNameLabel.Text = venueName; // prosthaise kai to userSurname
+            venueNameLabel.Text = venueName; 
             venueProfilePictureOvalPictureBox.BackgroundImage = profilePicture;
             backgroundPictureBox.BackgroundImage = eventBackground;
-            //monthLabel.Text =      // Tha Kaneis mia methodo pou tha emfanizei ta 3 prwta grammata tou mhna pou ginete, se kefalaia
-            //dayLabel               // Mono thn mera, des to design
+            monthLabel.Text = Utility.Month(eventDateTime);
+            dayLabel.Text = Utility.Day(eventDateTime);
             categoryColorPanel.BackColor = categoryColor; 
             miniEventBackgroundPictureBox.BackgroundImage = eventBackground;
 
