@@ -16,5 +16,13 @@ namespace itHappens.UIs.Common
         {
             InitializeComponent();
         }
+
+        public CategoryMiniBox(string categoryName, string color)
+        {
+            InitializeComponent();
+            backgroundColorPanel.BackColor = Color.FromName(color);
+            backgroundColorPanel.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            categoryLabel.Text = categoryName;
+        }
     }
 }
