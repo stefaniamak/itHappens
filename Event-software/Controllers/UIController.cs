@@ -70,6 +70,8 @@ namespace itHappens.Controllers
         public static void SearchPageFlowLayoutPanels_Load()
         {
 
+            UIs.Common.SearchPage.fillAllCategories();
+            /*
             for (int i = 0; i < 20; i++)
             {
                 UIs.Common.SearchPage.flowLayoutPanel1.Controls.Add(new UIs.Common.CategoryMiniBox());
@@ -85,6 +87,7 @@ namespace itHappens.Controllers
                 eventminiview.Scale(0.55F);
                 UIs.Common.SearchPage.flowLayoutPanel3.Controls.Add(eventminiview);
             }
+            */
         }
 
         public static void AllCategoriesFlowPanel_Load()
