@@ -10,38 +10,50 @@ using System.Windows.Forms;
 
 namespace itHappens.UIs.Common
 {
+
     public partial class CategoryMiniBox : UserControl
     {
+        public bool IsSelected => categoryLabel.Visible;
+        public int ID { get; private set; }
+
+
+        public delegate void SelectionChanged();
+        public SelectionChanged OnSelectionChanged;
+
         public CategoryMiniBox()
         {
             InitializeComponent();
         }
 
-        public CategoryMiniBox(string categoryName, string color)
+        public CategoryMiniBox(int id, string categoryName, string color)
         {
             InitializeComponent();
-            Color catColor = Color.FromName(color);
 
+            ID = id;
+
+            Color catColor = Color.FromName(color);
             backgroundColorPanel.BackColor = catColor;
             backgroundColorPanel.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             categoryLabel.Text = categoryName;
             categoryStrikeoutLabel.Text = categoryName;
+
+            categoryStrikeoutLabel.Visible = false;
             //categoryStrikeoutLabel.ForeColor = catColor;
         }
 
         private void CategoryMiniBox_MouseClick(object sender, MouseEventArgs e)
         {
-            
+
         }
 
         private void tableLayoutPanel1_MouseClick(object sender, MouseEventArgs e)
         {
-            
+
         }
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
-            
+
         }
 
         private void categoryLabel_MouseClick(object sender, MouseEventArgs e)
@@ -56,45 +68,17 @@ namespace itHappens.UIs.Common
 
         private void categoryClicked()
         {
-            if (categoryLabel.Visible == false)
-            {
-                categoryIsSelected(true);
-            } 
-            else
-            {
-                categoryIsSelected(false);
-            }
-            
+            categoryLabel.Visible = !categoryLabel.Visible;
+            categoryStrikeoutLabel.Visible = !categoryStrikeoutLabel.Visible;
+            changeBackgroundPanelBackColor(IsSelected ? 45 : 25);
+
+            OnSelectionChanged?.Invoke(); // -> OnSelectionChanged()
         }
 
-        public void categoryIsSelected(bool isSelected)
-        {
-            if(isSelected == true)
-            {
-                changeCategoryMiniBoxStyle(true, false, 45);
-            }
-            else
-            {
-                changeCategoryMiniBoxStyle(false, true, 25);
-            }
-        }
-
-
-        public void changeCategoryMiniBoxStyle(bool normal, bool stickout, int color)
-        {
-            setLabelVisibility(normal, stickout);
-            changeBackgroundPanelBackColor(color);
-        }
-
-        private void setLabelVisibility(bool normal, bool stickout)
-        {
-            categoryLabel.Visible = normal;
-            categoryStrikeoutLabel.Visible = stickout;
-        }
 
         private void changeBackgroundPanelBackColor(int color)
         {
-            upperPanel.BackColor = System.Drawing.Color.FromArgb(color,color,color);
+            upperPanel.BackColor = System.Drawing.Color.FromArgb(color, color, color);
         }
 
         private void categoryStrikeoutLabel_MouseClick(object sender, MouseEventArgs e)
@@ -102,6 +86,6 @@ namespace itHappens.UIs.Common
             categoryClicked();
         }
 
-        
+
     }
 }

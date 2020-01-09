@@ -305,7 +305,7 @@ namespace itHappens.UIs.anna
                 MessageBox.Show("You successfully made an event!","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
                 //Emfanish tou EventProfile (kanonika tha prepei me ta stoixeia tou event)
-                Controllers.UIController.eventsProfileToolStripMenuItem_MiddlePanel();
+                Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel();
 
                 clearTextBoxes();
                 SDaycomboBox.SelectedIndex = 0;

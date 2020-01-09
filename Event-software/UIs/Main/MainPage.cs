@@ -20,7 +20,7 @@ namespace itHappens.UIs.Main
 
         private void todayEventsCarousel_Load(object sender, EventArgs e)
         {
-            Controllers.UIController.MainPageTodayEventsAndMadeForYouCarousel_Load();
+            Controllers.UIController.Instance.MainPageTodayEventsAndMadeForYouCarousel_Load();
         }
 
        

@@ -104,11 +104,12 @@
             this.categoryStrikeoutLabel.TabIndex = 1;
             this.categoryStrikeoutLabel.Text = "CATEGORY";
             this.categoryStrikeoutLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.categoryStrikeoutLabel.Visible = false;
             this.categoryStrikeoutLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.categoryStrikeoutLabel_MouseClick);
             // 
             // CategoryMiniBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.tableLayoutPanel1);
