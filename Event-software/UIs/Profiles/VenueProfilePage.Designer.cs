@@ -53,6 +53,7 @@
             this.venueNameLabel = new System.Windows.Forms.Label();
             this.venueProfilePictureOvalPictureBox = new itHappens.UIs.Common.OvalPictureBox();
             this.backgroundPictureBox = new System.Windows.Forms.PictureBox();
+            this.followButton = new System.Windows.Forms.Button();
             galleryTab = new System.Windows.Forms.TabPage();
             this.wholePanel.SuspendLayout();
             this.venueProfileTabControl.SuspendLayout();
@@ -81,6 +82,7 @@
             // wholePanel
             // 
             this.wholePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.wholePanel.Controls.Add(this.followButton);
             this.wholePanel.Controls.Add(this.venueProfileTabControl);
             this.wholePanel.Controls.Add(this.friendsVisitedPanel);
             this.wholePanel.Controls.Add(this.topPanel);
@@ -295,10 +297,10 @@
             this.friendsVisitedPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.friendsVisitedPanel.Controls.Add(this.friendsPVisitedLabel);
             this.friendsVisitedPanel.Controls.Add(this.friendsVisitedFlowLayoutPanel);
-            this.friendsVisitedPanel.Location = new System.Drawing.Point(906, 351);
+            this.friendsVisitedPanel.Location = new System.Drawing.Point(906, 402);
             this.friendsVisitedPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.friendsVisitedPanel.Name = "friendsVisitedPanel";
-            this.friendsVisitedPanel.Size = new System.Drawing.Size(199, 767);
+            this.friendsVisitedPanel.Size = new System.Drawing.Size(199, 716);
             this.friendsVisitedPanel.TabIndex = 17;
             // 
             // friendsPVisitedLabel
@@ -382,6 +384,16 @@
             this.backgroundPictureBox.TabIndex = 4;
             this.backgroundPictureBox.TabStop = false;
             // 
+            // followButton
+            // 
+            this.followButton.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.followButton.Location = new System.Drawing.Point(906, 349);
+            this.followButton.Name = "followButton";
+            this.followButton.Size = new System.Drawing.Size(196, 46);
+            this.followButton.TabIndex = 29;
+            this.followButton.Text = "FOLLOW";
+            this.followButton.UseVisualStyleBackColor = true;
+            // 
             // VenueProfilePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -439,5 +451,6 @@
         private System.Windows.Forms.Label eventNameLabel;
         private System.Windows.Forms.Label monthLabel;
         private System.Windows.Forms.Label dayLabel;
+        private System.Windows.Forms.Button followButton;
     }
 }

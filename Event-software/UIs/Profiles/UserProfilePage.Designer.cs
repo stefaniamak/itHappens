@@ -53,6 +53,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.userProfilePictureOvalPictureBox = new itHappens.UIs.Common.OvalPictureBox();
             this.userBackgroundPictureBox = new System.Windows.Forms.PictureBox();
+            this.followButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.eventsUserTab.SuspendLayout();
             this.upcomingNextPanel.SuspendLayout();
@@ -99,6 +100,7 @@
             // eventsUserTab
             // 
             this.eventsUserTab.AutoScroll = true;
+            this.eventsUserTab.Controls.Add(this.followButton);
             this.eventsUserTab.Controls.Add(this.upNextLabel);
             this.eventsUserTab.Controls.Add(this.eventNameLabel);
             this.eventsUserTab.Controls.Add(this.overAtLabel);
@@ -122,7 +124,7 @@
             this.upNextLabel.AutoSize = true;
             this.upNextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upNextLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.upNextLabel.Location = new System.Drawing.Point(68, 28);
+            this.upNextLabel.Location = new System.Drawing.Point(68, 50);
             this.upNextLabel.Name = "upNextLabel";
             this.upNextLabel.Size = new System.Drawing.Size(178, 29);
             this.upNextLabel.TabIndex = 0;
@@ -136,7 +138,7 @@
             this.eventNameLabel.BackColor = System.Drawing.Color.Black;
             this.eventNameLabel.Font = new System.Drawing.Font("Century Gothic", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventNameLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.eventNameLabel.Location = new System.Drawing.Point(95, 85);
+            this.eventNameLabel.Location = new System.Drawing.Point(95, 107);
             this.eventNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.eventNameLabel.Name = "eventNameLabel";
             this.eventNameLabel.Size = new System.Drawing.Size(212, 40);
@@ -149,7 +151,7 @@
             this.overAtLabel.BackColor = System.Drawing.Color.Black;
             this.overAtLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.overAtLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.overAtLabel.Location = new System.Drawing.Point(101, 138);
+            this.overAtLabel.Location = new System.Drawing.Point(101, 160);
             this.overAtLabel.Name = "overAtLabel";
             this.overAtLabel.Size = new System.Drawing.Size(45, 13);
             this.overAtLabel.TabIndex = 18;
@@ -160,7 +162,7 @@
             this.vanueLabel.AutoSize = true;
             this.vanueLabel.BackColor = System.Drawing.Color.Black;
             this.vanueLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.vanueLabel.Location = new System.Drawing.Point(159, 137);
+            this.vanueLabel.Location = new System.Drawing.Point(159, 159);
             this.vanueLabel.Name = "vanueLabel";
             this.vanueLabel.Size = new System.Drawing.Size(48, 13);
             this.vanueLabel.TabIndex = 19;
@@ -174,7 +176,7 @@
             this.monthLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.monthLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.monthLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.monthLabel.Location = new System.Drawing.Point(506, 133);
+            this.monthLabel.Location = new System.Drawing.Point(506, 155);
             this.monthLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.monthLabel.Name = "monthLabel";
             this.monthLabel.Size = new System.Drawing.Size(77, 33);
@@ -189,7 +191,7 @@
             this.dayLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.dayLabel.Font = new System.Drawing.Font("Century Gothic", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.dayLabel.Location = new System.Drawing.Point(506, 169);
+            this.dayLabel.Location = new System.Drawing.Point(506, 191);
             this.dayLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dayLabel.Name = "dayLabel";
             this.dayLabel.Size = new System.Drawing.Size(77, 57);
@@ -199,7 +201,7 @@
             // upcomingNextPanel
             // 
             this.upcomingNextPanel.Controls.Add(this.tableLayoutPanel1);
-            this.upcomingNextPanel.Location = new System.Drawing.Point(50, 68);
+            this.upcomingNextPanel.Location = new System.Drawing.Point(50, 90);
             this.upcomingNextPanel.Name = "upcomingNextPanel";
             this.upcomingNextPanel.Size = new System.Drawing.Size(545, 171);
             this.upcomingNextPanel.TabIndex = 1;
@@ -259,7 +261,7 @@
             this.eventsTheUserWillAttendLabel.AutoSize = true;
             this.eventsTheUserWillAttendLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventsTheUserWillAttendLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.eventsTheUserWillAttendLabel.Location = new System.Drawing.Point(68, 277);
+            this.eventsTheUserWillAttendLabel.Location = new System.Drawing.Point(68, 298);
             this.eventsTheUserWillAttendLabel.Name = "eventsTheUserWillAttendLabel";
             this.eventsTheUserWillAttendLabel.Size = new System.Drawing.Size(291, 29);
             this.eventsTheUserWillAttendLabel.TabIndex = 20;
@@ -271,10 +273,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.eventsUserWillAttendCarousel.AutoScroll = true;
             this.eventsUserWillAttendCarousel.BackColor = System.Drawing.SystemColors.Control;
-            this.eventsUserWillAttendCarousel.Location = new System.Drawing.Point(28, 321);
+            this.eventsUserWillAttendCarousel.Location = new System.Drawing.Point(28, 342);
             this.eventsUserWillAttendCarousel.Name = "eventsUserWillAttendCarousel";
             this.eventsUserWillAttendCarousel.Padding = new System.Windows.Forms.Padding(2);
-            this.eventsUserWillAttendCarousel.Size = new System.Drawing.Size(703, 279);
+            this.eventsUserWillAttendCarousel.Size = new System.Drawing.Size(699, 279);
             this.eventsUserWillAttendCarousel.TabIndex = 21;
             // 
             // PastVisitsTab
@@ -365,6 +367,16 @@
             this.userBackgroundPictureBox.TabIndex = 12;
             this.userBackgroundPictureBox.TabStop = false;
             // 
+            // followButton
+            // 
+            this.followButton.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.followButton.Location = new System.Drawing.Point(554, 22);
+            this.followButton.Name = "followButton";
+            this.followButton.Size = new System.Drawing.Size(196, 46);
+            this.followButton.TabIndex = 30;
+            this.followButton.Text = "FOLLOW";
+            this.followButton.UseVisualStyleBackColor = true;
+            // 
             // UserProfilePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,5 +428,6 @@
         private System.Windows.Forms.Label dayLabel;
         private Common.Carousel eventsUserWillAttendCarousel;
         private System.Windows.Forms.Panel categoryColorPanel;
+        private System.Windows.Forms.Button followButton;
     }
 }

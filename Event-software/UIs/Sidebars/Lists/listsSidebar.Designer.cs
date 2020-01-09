@@ -31,7 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.listsPanel = new System.Windows.Forms.Panel();
             this.listsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.listsPanel.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -52,7 +55,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listsPanel.AutoScroll = true;
-            this.listsPanel.Controls.Add(this.listsFlowLayoutPanel);
+            this.listsPanel.Controls.Add(this.flowLayoutPanel1);
             this.listsPanel.Location = new System.Drawing.Point(0, 21);
             this.listsPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listsPanel.Name = "listsPanel";
@@ -63,10 +66,35 @@
             // 
             this.listsFlowLayoutPanel.AutoSize = true;
             this.listsFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.listsFlowLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.listsFlowLayoutPanel.Location = new System.Drawing.Point(3, 3);
             this.listsFlowLayoutPanel.Name = "listsFlowLayoutPanel";
             this.listsFlowLayoutPanel.Size = new System.Drawing.Size(0, 0);
             this.listsFlowLayoutPanel.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.Controls.Add(this.listsFlowLayoutPanel);
+            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(172, 164);
+            this.flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel1.WrapContents = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.Location = new System.Drawing.Point(3, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "+ CREATE LIST";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // ListsSidebar
             // 
@@ -81,6 +109,8 @@
             this.Size = new System.Drawing.Size(175, 185);
             this.listsPanel.ResumeLayout(false);
             this.listsPanel.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,5 +121,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel listsPanel;
         private System.Windows.Forms.FlowLayoutPanel listsFlowLayoutPanel;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button button1;
     }
 }

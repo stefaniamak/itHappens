@@ -58,41 +58,41 @@ namespace itHappens.UIs.Common
         {
             if (categoryLabel.Visible == false)
             {
-                select(true);
+                categoryIsSelected(true);
             } 
             else
             {
-                select(false);
+                categoryIsSelected(false);
             }
             
         }
 
-        public void select(bool isSelected)
+        public void categoryIsSelected(bool isSelected)
         {
             if(isSelected == true)
             {
-                changeStyle(true, false, 45);
+                changeCategoryMiniBoxStyle(true, false, 45);
             }
             else
             {
-                changeStyle(false, true, 25);
+                changeCategoryMiniBoxStyle(false, true, 25);
             }
         }
 
 
-        public void changeStyle(bool normal, bool stickout, int color)
+        public void changeCategoryMiniBoxStyle(bool normal, bool stickout, int color)
         {
-            setVisibility(normal, stickout);
-            changeBackColor(color);
+            setLabelVisibility(normal, stickout);
+            changeBackgroundPanelBackColor(color);
         }
 
-        private void setVisibility(bool normal, bool stickout)
+        private void setLabelVisibility(bool normal, bool stickout)
         {
             categoryLabel.Visible = normal;
             categoryStrikeoutLabel.Visible = stickout;
         }
 
-        private void changeBackColor(int color)
+        private void changeBackgroundPanelBackColor(int color)
         {
             upperPanel.BackColor = System.Drawing.Color.FromArgb(color,color,color);
         }
