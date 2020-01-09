@@ -148,6 +148,8 @@
   <ItemGroup>
     <Compile Include="Classes\Area.cs" />
     <Compile Include="Classes\Category.cs" />
+    <Compile Include="Classes\madeForYouCarousel.cs" />
+    <Compile Include="Classes\todayEventsCarousel.cs" />
     <Compile Include="Classes\CreateList.cs" />
     <Compile Include="Classes\Event.cs" />
     <Compile Include="Classes\EventList.cs" />
@@ -163,12 +165,15 @@
     <Compile Include="Db_connector.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="EventfulAPI.cs" />
-
     <Compile Include="DbController.cs" />
-
     <Compile Include="populateDB.cs" />
+    <Compile Include="UIs\Common\FriendsWhoHaveVisited.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Common\FriendsWhoHaveVisited.Designer.cs">
+      <DependentUpon>FriendsWhoHaveVisited.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\Main\LoginWarning.cs">
-
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UIs\Main\LoginWarning.Designer.cs">
@@ -354,6 +359,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UIs\Common\FriendsWhoHaveVisited.resx">
+      <DependentUpon>FriendsWhoHaveVisited.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIs\Main\LoginWarning.resx">
       <DependentUpon>LoginWarning.cs</DependentUpon>
     </EmbeddedResource>

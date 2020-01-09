@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommonSearchTextPage));
             this.usersLocationLabel = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
-            hostPanel = new System.Windows.Forms.Panel();
+            this.hostPanel = new System.Windows.Forms.Panel();
             this.searchPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -64,15 +64,15 @@
             // 
             // hostPanel
             // 
-            hostPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.hostPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            hostPanel.AutoScroll = true;
-            hostPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            hostPanel.Location = new System.Drawing.Point(0, 108);
-            hostPanel.Name = "hostPanel";
-            hostPanel.Size = new System.Drawing.Size(468, 309);
-            hostPanel.TabIndex = 6;
+            this.hostPanel.AutoScroll = true;
+            this.hostPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.hostPanel.Location = new System.Drawing.Point(0, 108);
+            this.hostPanel.Name = "hostPanel";
+            this.hostPanel.Size = new System.Drawing.Size(468, 309);
+            this.hostPanel.TabIndex = 6;
             // 
             // searchPanel
             // 
@@ -115,7 +115,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.searchPanel);
-            this.Controls.Add(hostPanel);
+            this.Controls.Add(this.hostPanel);
             this.Controls.Add(this.usersLocationLabel);
             this.Name = "CommonSearchTextPage";
             this.Size = new System.Drawing.Size(468, 417);
@@ -135,6 +135,6 @@
         private System.Windows.Forms.Panel searchPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        public static System.Windows.Forms.Panel hostPanel;
+        public System.Windows.Forms.Panel hostPanel;
     }
 }

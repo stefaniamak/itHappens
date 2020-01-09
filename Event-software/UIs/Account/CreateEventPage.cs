@@ -256,7 +256,7 @@ namespace itHappens.UIs.anna
         }
 
         private void VenuecomboBox_Validating(object sender, CancelEventArgs e)
-        {          
+        {
             if (VenuecomboBox.Text.Equals("Select"))
             {
                 VenueValLabel.Text = "Select a category";
@@ -293,7 +293,7 @@ namespace itHappens.UIs.anna
             else
             {
 
-                DateTime StartingDate = convertDate(SYearcomboBox.Text,SMonthcomboBox.Text, 
+                DateTime StartingDate = convertDate(SYearcomboBox.Text,SMonthcomboBox.Text,
                                                     SDaycomboBox.Text,HourComboBox.Text,MinutesComboBox.Text);
                 DateTime EndingDate = convertDate(EYearcomboBox.Text, EMonthcomboBox.Text,
                                                     EDaycomboBox.Text, "0", "0");
@@ -303,10 +303,10 @@ namespace itHappens.UIs.anna
                 createEventCon(EventNameTextbox.Text,venue,ownerId,StartingDate,EndingDate,category,TagsTextbox.Text,
                     Convert.ToDouble(PriceTextbox.Text),DescTextbox.Text);
                 MessageBox.Show("You successfully made an event!","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                
+
                 //Emfanish tou EventProfile (kanonika tha prepei me ta stoixeia tou event)
                 Controllers.UIController.eventsProfileToolStripMenuItem_MiddlePanel();
-                
+
                 clearTextBoxes();
                 SDaycomboBox.SelectedIndex = 0;
                 EDaycomboBox.SelectedIndex = 0;
@@ -443,7 +443,7 @@ namespace itHappens.UIs.anna
                 MySqlCommand command;
                 MySqlDataReader dataReader;
                 String queryString = "Select id from venues where name='" +s+"'";
-                
+
 
                 command = new MySqlCommand(queryString, con);
 
@@ -454,7 +454,7 @@ namespace itHappens.UIs.anna
                     venueid = dataReader.GetString(0);
                 }
                 con.Close();
-                
+
             }
             catch (Exception e)
             {

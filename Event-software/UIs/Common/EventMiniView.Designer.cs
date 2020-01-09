@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventMiniView));
             this.eventTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.eventPictureBox = new System.Windows.Forms.PictureBox();
-            this.categoryColorControl = new itHappens.UIs.Common.Carousel();
+            this.categoryColorPanel = new System.Windows.Forms.Panel();
             this.eventTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +45,7 @@
             this.eventTableLayout.ColumnCount = 1;
             this.eventTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.eventTableLayout.Controls.Add(this.eventPictureBox, 0, 0);
-            this.eventTableLayout.Controls.Add(this.categoryColorControl, 0, 1);
+            this.eventTableLayout.Controls.Add(this.categoryColorPanel, 0, 1);
             this.eventTableLayout.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.eventTableLayout.Location = new System.Drawing.Point(1, 1);
             this.eventTableLayout.Margin = new System.Windows.Forms.Padding(0);
@@ -71,19 +71,13 @@
             this.eventPictureBox.TabIndex = 0;
             this.eventPictureBox.TabStop = false;
             // 
-            // categoryColorControl
+            // categoryColorPanel
             // 
-            this.categoryColorControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.categoryColorControl.AutoScroll = true;
-            this.categoryColorControl.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.categoryColorControl.Location = new System.Drawing.Point(0, 196);
-            this.categoryColorControl.Margin = new System.Windows.Forms.Padding(0);
-            this.categoryColorControl.Name = "categoryColorControl";
-            this.categoryColorControl.Padding = new System.Windows.Forms.Padding(2);
-            this.categoryColorControl.Size = new System.Drawing.Size(144, 25);
-            this.categoryColorControl.TabIndex = 1;
+            this.categoryColorPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryColorPanel.Location = new System.Drawing.Point(3, 199);
+            this.categoryColorPanel.Name = "categoryColorPanel";
+            this.categoryColorPanel.Size = new System.Drawing.Size(138, 19);
+            this.categoryColorPanel.TabIndex = 1;
             // 
             // EventMiniView
             // 
@@ -91,7 +85,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.eventTableLayout);
-            this.Margin = new System.Windows.Forms.Padding(20);
+            this.Margin = new System.Windows.Forms.Padding(10, 2, 0, 2);
             this.Name = "EventMiniView";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.Size = new System.Drawing.Size(146, 223);
@@ -106,6 +100,6 @@
 
         private System.Windows.Forms.TableLayoutPanel eventTableLayout;
         private System.Windows.Forms.PictureBox eventPictureBox;
-        private Common.Carousel categoryColorControl;
+        private System.Windows.Forms.Panel categoryColorPanel;
     }
 }
