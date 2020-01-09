@@ -17,6 +17,13 @@ namespace itHappens.UIs.Sidebars.Lists
             InitializeComponent();
         }
 
+        public ListsMini(string listTitle)
+        {
+            InitializeComponent();
+
+            title.Text = listTitle;
+        }
+
         private void title_Click(object sender, EventArgs e)
         {
 

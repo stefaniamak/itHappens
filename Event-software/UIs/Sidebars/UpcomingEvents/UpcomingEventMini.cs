@@ -17,11 +17,12 @@ namespace itHappens.UIs.Sidebars.UpcomingEvents
             InitializeComponent();
         }
 
-        public UpcomingEventMini(string eventTitle, string categoryLocation, string eventDate) : this()
+        public UpcomingEventMini(string eventTitle, string categoryLocation, DateTime eventDate) : this()
         {
             eventName.Text = eventTitle;
             location.Text = categoryLocation;
-            date.Text = eventDate;
+            // ---- Gia tis duo katw seires, pare kai xwrise se 2 strings to eventDate, sto ena na pairneis ton mhna kai sthn allh thn mera.
+            //date.Text = eventDate;
             //month.Text = eventDate;
         }
 
