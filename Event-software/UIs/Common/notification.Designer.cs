@@ -1,6 +1,6 @@
 ﻿namespace itHappens.UIs.Common
 {
-    partial class notification
+    partial class Notification
     {
         /// <summary> 
         /// Required designer variable.

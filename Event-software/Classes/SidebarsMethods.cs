@@ -13,38 +13,42 @@ namespace itHappens.Classes
         // Use the Singleton pattern
         private static SidebarsMethods _instance = new SidebarsMethods();
         public static SidebarsMethods Instance => _instance;
-        
 
-        public static void addFriendList()
+        // Profiles User Controls
+        private UIs.Sidebars.UpcomingEventsSidebar theUpcomingEvetsSidebar = null;
+        private UIs.Sidebars.ListsSidebar theListsSidebar = null;
+        private UIs.Sidebars.ProfileSidebar theProfileSidebar = null;
+        private UIs.Sidebars.FriendListSidebar theUptheFriendListSidebar = null;
+
+        // Extra User Controls
+        private UIs.Main.LoginWarning thisLoginWarningPage = null;
+
+        public void addFriendList()
         {
-            var FriendListSidebar = new UIs.Sidebars.FriendListSidebar();
-            UIs.Common.MainSplitForm.rightBottomPanel.Controls.Add(FriendListSidebar);
-            FriendListSidebar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            FriendListSidebar.Dock = DockStyle.Fill;
+            theUptheFriendListSidebar = new UIs.Sidebars.FriendListSidebar();
+            UIs.Common.MainSplitForm.rightBottomPanel.Controls.Add(theUptheFriendListSidebar);
+            Controllers.UIController.Instance.designEditOfPanels(theUptheFriendListSidebar);
         }
 
-        public static void addUpcomingEvents()
+        public void addUpcomingEvents()
         {
-            var upcomingEventsSidebar = new UIs.Sidebars.UpcomingEventsSidebar();
-            UIs.Common.MainSplitForm.leftTopPanel.Controls.Add(upcomingEventsSidebar);
-            upcomingEventsSidebar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            upcomingEventsSidebar.Dock = DockStyle.Fill;
+            theUpcomingEvetsSidebar = new UIs.Sidebars.UpcomingEventsSidebar();
+            UIs.Common.MainSplitForm.leftTopPanel.Controls.Add(theUpcomingEvetsSidebar);
+            Controllers.UIController.Instance.designEditOfPanels(theUpcomingEvetsSidebar);
         }
 
-        public static void addLists()
+        public void addLists()
         {
-            var listsSidebar = new UIs.Sidebars.ListsSidebar();
-            UIs.Common.MainSplitForm.leftMiddlePanel.Controls.Add(listsSidebar);
-            listsSidebar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            listsSidebar.Dock = DockStyle.Fill;
+            theListsSidebar = new UIs.Sidebars.ListsSidebar();
+            UIs.Common.MainSplitForm.leftMiddlePanel.Controls.Add(theListsSidebar);
+            Controllers.UIController.Instance.designEditOfPanels(theListsSidebar);
         }
 
-        public static void addProfile()
+        public void addProfile()
         {
-            var Profileidebar = new UIs.Sidebars.ProfileSidebar();
-            UIs.Common.MainSplitForm.rightTopPanel.Controls.Add(Profileidebar);
-            Profileidebar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            Profileidebar.Dock = DockStyle.Fill;
+            theProfileSidebar = new UIs.Sidebars.ProfileSidebar();
+            UIs.Common.MainSplitForm.rightTopPanel.Controls.Add(theProfileSidebar);
+            Controllers.UIController.Instance.designEditOfPanels(theProfileSidebar);
         }
 
     }

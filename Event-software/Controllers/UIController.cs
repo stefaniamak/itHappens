@@ -125,22 +125,22 @@ namespace itHappens.Controllers
         //    ----------    Sidebar Methods    ----------    
         public void addSidebarFriendList()
         {
-            Classes.SidebarsMethods.addFriendList();
+            Classes.SidebarsMethods.Instance.addFriendList();
         }
 
         public void addSidebarUpcomingEvents()
         {
-            Classes.SidebarsMethods.addUpcomingEvents();
+            Classes.SidebarsMethods.Instance.addUpcomingEvents();
         }
 
         public void addSidebarLists()
         {
-            Classes.SidebarsMethods.addLists();
+            Classes.SidebarsMethods.Instance.addLists();
         }
 
         public void addSidebarProfile()
         {
-            Classes.SidebarsMethods.addProfile();
+            Classes.SidebarsMethods.Instance.addProfile();
         }
 
         //    ----------    Middle Panel Methods    ----------    
@@ -149,7 +149,7 @@ namespace itHappens.Controllers
         
         public void mainToolStripMenuItem_MiddlePanel()
         {
-            Classes.MiddlePanelMethods.mainToolStripMenuItem();
+            Classes.MiddlePanelMethods.Instance.mainToolStripMenuItem();
         }
 
         public void searchToolStripMenuItem_MiddlePanel()

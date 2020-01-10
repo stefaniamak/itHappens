@@ -21,14 +21,15 @@ namespace itHappens.Classes
         private UIs.valentina.ListPage theListPage = null;
         private UIs.valentina.ListsContentPage theListsContentPage = null;
         private UIs.valentina.SettingsPage theSettingsPage = null;
+        // Extra User Controls
+        private UIs.Main.LoginWarning thisLoginWarningPage = null;
 
-        public static void mainToolStripMenuItem()
+        public void mainToolStripMenuItem()
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
-            var middlePage = new UIs.andrea.UserProfilePage();
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
-            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            middlePage.Dock = DockStyle.Fill;
+            theUserProfilePage = new UIs.andrea.UserProfilePage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theUserProfilePage);
+            designEditOfPanels(theUserProfilePage);
         }
 
         public void designEditOfPanels(UserControl theUserControl)
