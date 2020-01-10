@@ -19,14 +19,14 @@
             Classes.SidebarsMethods.Instance.addUpcomingEvents();
             Classes.SidebarsMethods.Instance.addLists();
             Classes.SidebarsMethods.Instance.addProfile();
-            //Controllers.UIController.Instance.addSidebarFriendList();
+ 
             Classes.SidebarsMethods.Instance.addFriendList();
-            //addWarningToLogIn();
-           // Classes.SidebarsMethods.Instance.addWarningToLogIn();
+
         }
         
         public void showLogedOutSidebars()
         {
+            Classes.SidebarsMethods.Instance.addProfile();
             Classes.SidebarsMethods.Instance.addWarningToLogIn();
         }
 
@@ -62,17 +62,14 @@
         {
             thisLoginWarningPage = new UIs.Main.LoginWarning();
 
-            UIs.Common.MainSplitForm.rightBottomPanel.Controls.Add(thisLoginWarningPage);
+            UIs.Common.MainSplitForm.leftTopPanel.Controls.Add(thisLoginWarningPage);
+
+
+            UIs.Common.MainSplitForm.leftMiddlePanel.Controls.Add(thisLoginWarningPage);
+  
+
+            UIs.Common.MainSplitForm.rightTopPanel.Controls.Add(thisLoginWarningPage);
             Controllers.UIController.Instance.designEditOfPanels(thisLoginWarningPage);
-
-            UIs.Common.MainSplitForm.leftTopPanel.Controls.Add(theUpcomingEvetsSidebar);
-            Controllers.UIController.Instance.designEditOfPanels(theUpcomingEvetsSidebar);
-
-            UIs.Common.MainSplitForm.leftMiddlePanel.Controls.Add(theListsSidebar);
-            Controllers.UIController.Instance.designEditOfPanels(theListsSidebar);
-
-            UIs.Common.MainSplitForm.rightTopPanel.Controls.Add(theProfileSidebar);
-            Controllers.UIController.Instance.designEditOfPanels(theProfileSidebar);
         }
     }
 }
