@@ -25,11 +25,11 @@ namespace itHappens.UIs.anna
         {
           
             bool flag = false;
-            bool validation = Controllers.LoginController.FieldsValidation(UsernameTextBox.Text, PasswordTextBox.Text, flag);
+            bool validation = Controllers.LoginController.Instance.FieldsValidation(UsernameTextBox.Text, PasswordTextBox.Text, flag);
 
             if (validation == true)
             {
-                userName = Controllers.LoginController.DatabaseFieldValidation(UsernameTextBox.Text, PasswordTextBox.Text);
+                userName = Controllers.LoginController.Instance.DatabaseFieldValidation(UsernameTextBox.Text, PasswordTextBox.Text);
                 if (!userName.Equals(""))
                 {
                     ageOfUser = Classes.DatabaseGeneralMethods.ReturnAgeOfUser(UsernameTextBox.Text, PasswordTextBox.Text);
