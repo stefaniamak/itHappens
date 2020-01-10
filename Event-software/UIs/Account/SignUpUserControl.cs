@@ -17,21 +17,20 @@ namespace itHappens.UIs
     {
         private static DbConnector dbCon = new DbConnector();
         private static string conStr = dbCon.GetConnectionString();
+        public static string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+                        @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
+                        @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
 
         public SignUpUserControl()
         {
             InitializeComponent();
-            fillTheComboBox();
+            fillTheAreaComboBox(areaComboBox);
             areaComboBox.Items.Insert(0, "Select");
             areaComboBox.SelectedIndex = 0;
         }
 
-        private void SignUpUserControl_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        public void fillTheComboBox()
+        public static void fillTheAreaComboBox(ComboBox combo)
         {
             MySqlConnection con;
 
@@ -50,7 +49,7 @@ namespace itHappens.UIs
 
                 while (dataReader.Read())
                 {
-                   areaComboBox.Items.Add(dataReader.GetString(0));
+                   combo.Items.Add(dataReader.GetString(0));
                 }
                 con.Close();
 
@@ -125,14 +124,19 @@ namespace itHappens.UIs
         private void emailTextBox_Validated(object sender, EventArgs e)
         {
             if (!emailTextBox.Text.Equals(""))
-            {
-                string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
-                        @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
-                        @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+            {              
                 Regex re = new Regex(strRegex);
                 if (re.IsMatch(emailTextBox.Text))
                 {
-                    emailValLabel.Text = "";
+                    if (Classes.DatabaseGeneralMethods.checkIfExistsInDatabaseInUsers("email", emailTextBox.Text))
+                    {
+                        emailValLabel.Text = "This email is used";
+                    }
+                    else
+                    {
+                        emailValLabel.Text = "";
+
+                    }
                 }
                 else
                 {
@@ -153,7 +157,15 @@ namespace itHappens.UIs
         {
             if (!usernameTextBox.Text.Equals(""))
             {
-                usernameValLabel.Text = "";
+                if (Classes.DatabaseGeneralMethods.checkIfExistsInDatabaseInUsers("username", usernameTextBox.Text))
+                {
+                    usernameValLabel.Text = "This username is used";
+                }
+                else
+                {
+                    usernameValLabel.Text = "";
+                }
+                
             }
         }
 
@@ -169,7 +181,15 @@ namespace itHappens.UIs
         {
             if (!passwordTextBox.Text.Equals(""))
             {
-                passwordValLabel.Text = "";
+                if(passwordTextBox.Text.Length <= 4)
+                {
+                    passwordValLabel.Text = "At least 5 characters";
+                }
+                else
+                {
+                    passwordValLabel.Text = "";
+                }
+                
             }
         }
 
@@ -207,6 +227,11 @@ namespace itHappens.UIs
                 usernameValLabel.Text = "Username is empty";
                 passwordValLabel.Text = "Password is empty";
                 repassValLabel.Text = "Re-Type Password is empty";
+            }
+            else if (!nameValLabel.Text.Equals("") || !surnameValLabel.Text.Equals("") || !emailValLabel.Text.Equals("")
+                  || !usernameValLabel.Text.Equals("") || !passwordValLabel.Text.Equals("") || !repassValLabel.Text.Equals(""))
+            {
+                MessageBox.Show("Fill the fields right","Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             else if (nameTextBox.Text.Equals(""))
             {
@@ -271,37 +296,8 @@ namespace itHappens.UIs
         public static void signUpCon(String area, int age, String userName, String pass, String name, String surname, String email)
         {
 
-            int areaId = 0;
+            int areaId = Classes.DatabaseGeneralMethods.ReturnIdOfAray(area);
             MySqlConnection con;
-
-            try
-            {
-                con = new MySqlConnection(conStr);
-                con.Open();
-
-                MySqlCommand command;
-                MySqlDataReader dataReader;
-                String queryString = "Select id from area where country= '" + area + "'";
-
-                command = new MySqlCommand(queryString, con);
-
-
-                dataReader = command.ExecuteReader();
-
-                while (dataReader.Read())
-                {
-                    areaId = Convert.ToInt32(dataReader.GetString(0));
-                }
-
-
-                con.Close();
-
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error");
-            }
 
 
             try
@@ -342,6 +338,6 @@ namespace itHappens.UIs
             return true;
         }
 
-
+        
     }
 }

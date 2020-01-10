@@ -13,6 +13,7 @@ namespace itHappens.UIs.anna
     public partial class LogInPage : UserControl
     {
         public static bool loggedInUser;
+        public static int ageOfUser;
         public LogInPage()
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace itHappens.UIs.anna
                 userName = Controllers.LoginController.DatabaseFieldValidation(UsernameTextBox.Text, PasswordTextBox.Text);
                 if (!userName.Equals(""))
                 {
+                    ageOfUser = Classes.DatabaseGeneralMethods.ReturnAgeOfUser(UsernameTextBox.Text, PasswordTextBox.Text);
                     UIs.Sidebars.ProfileSidebar.usernameLable.Text = UsernameTextBox.Text;
                     loggedInUser = true;
                     UIs.Sidebars.ProfileSidebar.LogoutButton.Visible = true;
