@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
+/// <summary>
+///se auto pou tha paei o xristis ..... ?
+/// </summary>
 namespace itHappens.UIs.valentina
 {
     public partial class ListPage : UserControl
@@ -19,7 +24,7 @@ namespace itHappens.UIs.valentina
 
         private void ListPage_Load(object sender, EventArgs e)
         {
-            Controllers.UIController.ListPageLoad();
+            Controllers.UIController.Instance.ListPageLoad();
         }
     }
 }

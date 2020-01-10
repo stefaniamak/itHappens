@@ -21,6 +21,7 @@ namespace itHappens.UIs.Sidebars.UpcomingEvents
         {
             eventName.Text = eventTitle;
             location.Text = categoryLocation;
+            // ---- Gia tis duo katw seires, pare kai xwrise se 2 strings to eventDate, sto ena na pairneis ton mhna kai sthn allh thn mera.
             //date.Text = eventDate;
             //month.Text = eventDate;
         }

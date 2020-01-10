@@ -45,6 +45,8 @@ DROP TABLE IF EXISTS `it_happens`.`categories` ;
 CREATE TABLE IF NOT EXISTS `it_happens`.`categories` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `categories` VARCHAR(50) NOT NULL,
+  `title` VARCHAR(50) NOT NULL,
+  `color` VARCHAR(50) NOT NULL,
   `parent` INT(11) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
@@ -211,45 +213,45 @@ ENGINE = InnoDB;
 
 INSERT into Users (id,areaID,Username,password,email,name,surname,age) values (1,1,1,1,1,1,1,1);
 
-INSERT into categories (id,categories, parent) values (1,'Entertainment', 0);
-INSERT into categories (id,categories, parent) values (2,'Educational', 0);
-INSERT into categories (id,categories, parent) values (3,'Health and General', 0);
+INSERT into categories (id,categories,title,color, parent) values (1,'Entertainment','ENTERTAINMENT','Red', 0);
+INSERT into categories (id,categories,title,color, parent) values (2,'Educational','EDUCATIONAL','Blue', 0);
+INSERT into categories (id,categories,title,color, parent) values (3,'Health and General','HEALTH & GENERAL','GreenYellow', 0);
 
-INSERT into categories (categories, parent) values ('music', 1);
-INSERT into categories (categories, parent) values ('dance', 1);
-INSERT into categories (categories, parent) values ('food', 1);
-INSERT into categories (categories, parent) values ('sales', 1);
-INSERT into categories (categories, parent) values ('comedy', 1);
-INSERT into categories (categories, parent) values ('movies_film', 1);
-INSERT into categories (categories, parent) values ('theatric_plays', 1);
-INSERT into categories (categories, parent) values ('club_associations', 1);
-INSERT into categories (categories, parent) values ('singles_social', 1);
-INSERT into categories (categories, parent) values ('parties', 1);
-INSERT into categories (categories, parent) values ('festivals_parades', 1);
-INSERT into categories (categories, parent) values ('performing_arts', 1);
-INSERT into categories (categories, parent) values ('holiday', 1);
+INSERT into categories (id,categories,title,color, parent) values (4,'music','MUSIC','Maroon', 1);
+INSERT into categories (id,categories,title,color, parent) values (5,'dance','DANCING','Violet', 1);
+INSERT into categories (id,categories,title,color, parent) values (6,'food','FOOD & DRINK','Chocolate', 1);
+INSERT into categories (id,categories,title,color, parent) values (7,'sales','SHOPPING','Goldenrod', 1);
+INSERT into categories (id,categories,title,color, parent) values (8,'comedy','COMEDY','MediumVioletRed', 1);
+INSERT into categories (id,categories,title,color, parent) values (9,'movies_film','FILM','Orchid', 1);
+INSERT into categories (id,categories,title,color, parent) values (10,'theatric_plays','THEATRE','Plum', 1);
+INSERT into categories (id,categories,title,color, parent) values (11,'club_associations','CLUB ASSOCIATIONS','Firebrick', 1);
+INSERT into categories (id,categories,title,color, parent) values (12,'singles_social','SOCIAL','IndianRed', 1);
+INSERT into categories (id,categories,title,color, parent) values (13,'parties','PARTIES','DarkRed', 1);
+INSERT into categories (id,categories,title,color, parent) values (14,'festivals_parades','FESTIVALS','HotPink', 1);
+INSERT into categories (id,categories,title,color, parent) values (15,'performing_arts','PERFORMING ARTS','PaleVioletRed', 1);
+INSERT into categories (id,categories,title,color, parent) values (16,'holiday','HOLIDAYS','OrangeRed', 1);
 
-INSERT into categories (categories, parent) values ('business', 2);
-INSERT into categories (categories, parent) values ('learning_education', 2);
-INSERT into categories (categories, parent) values ('attractions', 2);
-INSERT into categories (categories, parent) values ('art', 2);
-INSERT into categories (categories, parent) values ('conference', 2);
-INSERT into categories (categories, parent) values ('seminars', 2);
-INSERT into categories (categories, parent) values ('books', 2);
-INSERT into categories (categories, parent) values ('politics_activism', 2);
-INSERT into categories (categories, parent) values ('science', 2);
-INSERT into categories (categories, parent) values ('technology', 2);
+INSERT into categories (id,categories,title,color, parent) values (17,'business','BUSINESS','DarkBlue', 2);
+INSERT into categories (id,categories,title,color, parent) values (18,'learning_education','EDUCATION','DarkTurquoise', 2);
+INSERT into categories (id,categories,title,color, parent) values (19,'attractions','ATTRACTIONS','DarkSlateBlue', 2);
+INSERT into categories (id,categories,title,color, parent) values (20,'art','ART','BlueViolet', 2);
+INSERT into categories (id,categories,title,color, parent) values (21,'conference','CONFERENCE','MediumBlue', 2);
+INSERT into categories (id,categories,title,color, parent) values (22,'seminars','SEMINARS','RoyalBlue', 2);
+INSERT into categories (id,categories,title,color, parent) values (23,'books','BOOKS','MediumSlateBlue', 2);
+INSERT into categories (id,categories,title,color, parent) values (24,'politics_activism','ACTIVISM','MidnightBlue', 2);
+INSERT into categories (id,categories,title,color, parent) values (25,'science','SCIENCE','CadetBlue', 2);
+INSERT into categories (id,categories,title,color, parent) values (26,'technology','TECHNOLOGY','SteelBlue', 2);
 
-INSERT into categories (categories, parent) values ('family_fun_kids', 3);
-INSERT into categories (categories, parent) values ('fundraisers', 3);
-INSERT into categories (categories, parent) values ('support', 3);
-INSERT into categories (categories, parent) values ('community', 3);
-INSERT into categories (categories, parent) values ('schools_alumni', 3);
-INSERT into categories (categories, parent) values ('outdoors_recreation', 3);
-INSERT into categories (categories, parent) values ('animals', 3);
-INSERT into categories (categories, parent) values ('religion_spirituality', 3);
-INSERT into categories (categories, parent) values ('sports', 3);
-INSERT into categories (categories, parent) values ('other', 3);
+INSERT into categories (id,categories,title,color, parent) values (27,'family_fun_kids','FAMILY','OliveDrab', 3);
+INSERT into categories (id,categories,title,color, parent) values (28,'fundraisers','FUNDRAISERS','Yellow', 3);
+INSERT into categories (id,categories,title,color, parent) values (29,'support','SUPPORT','Gold', 3);
+INSERT into categories (id,categories,title,color, parent) values (30,'community','COMMUNITY','YellowGreen', 3);
+INSERT into categories (id,categories,title,color, parent) values (31,'schools_alumni','SCHOOL','MediumSeaGreen', 3);
+INSERT into categories (id,categories,title,color, parent) values (32,'outdoors_recreation','OUTDOORS','DarkGreen', 3);
+INSERT into categories (id,categories,title,color, parent) values (33,'animals','ANIMALS','Green', 3);
+INSERT into categories (id,categories,title,color, parent) values (34,'religion_spirituality','RELIGION','LimeGreen', 3);
+INSERT into categories (id,categories,title,color, parent) values (35,'sports','SPORTS','ForestGreen', 3);
+INSERT into categories (id,categories,title,color, parent) values (36,'other','OTHER','DarkGray', 3);
 
 
 

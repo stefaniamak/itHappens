@@ -36,8 +36,8 @@ namespace itHappens.UIs.anna
                     UIs.Sidebars.ProfileSidebar.usernameLable.Text = UsernameTextBox.Text;
                     loggedInUser = true;
                     UIs.Sidebars.ProfileSidebar.LogoutButton.Visible = true;
-                    Controllers.UIController.openHostForMainAndSearchPage();
-                    Controllers.UIController.openPage("main");
+                    Controllers.UIController.Instance.openHostForMainAndSearchPage();
+                    Controllers.UIController.Instance.openPage("main");
                 }
                 else
                 {
@@ -60,7 +60,7 @@ namespace itHappens.UIs.anna
 
         private void createAccountLabel_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Controllers.UIController.signUpToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.signUpToolStripMenuItem_MiddlePanel();
         }
     }
 }

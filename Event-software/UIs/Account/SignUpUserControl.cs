@@ -276,7 +276,7 @@ namespace itHappens.UIs
                 Classes.CreateList.createEvent_ListMethod("Going", creatorid);
                 Classes.CreateList.createEvent_ListMethod("Interested", creatorid);
                 clearTextBoxes();
-                Controllers.UIController.logInToolStripMenuItem_MiddlePanel();
+                Controllers.UIController.Instance.logInToolStripMenuItem_MiddlePanel();
 
             }
 

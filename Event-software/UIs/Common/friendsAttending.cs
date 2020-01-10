@@ -16,5 +16,25 @@ namespace itHappens.UIs.Common
         {
             InitializeComponent();
         }
+
+        public FriendsAttending(Image friendProfilePicture, string friendName, string friendSurname, string attendingColor)
+        {
+            InitializeComponent();
+            Color atColor = Color.FromName(attendingColor);
+            friendPicOvalPictureBox.BackgroundImage = friendProfilePicture;
+            friendnameLabel.Text = friendName;
+            friendSurnameLabel.Text = friendSurname;
+            colorControl.BackColor = atColor;
+        }
+
+        //  -----------  Προσωρινός Constructor χωρίς τα insert εικόνων.  -----------  
+        public FriendsAttending(string friendName, string friendSurname, string attendingColor)
+        {
+            InitializeComponent();
+            Color atColor = Color.FromName(attendingColor);
+            friendnameLabel.Text = friendName;
+            friendSurnameLabel.Text = friendSurname;
+            colorControl.BackColor = atColor;
+        }
     }
 }
