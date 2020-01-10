@@ -159,6 +159,7 @@
     <Compile Include="Classes\SidebarsMethods.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\Venue.cs" />
+    <Compile Include="Controllers\LogoutController.cs" />
     <Compile Include="Controllers\UIController.cs" />
     <Compile Include="DbConnector.cs" />
     <Compile Include="DbConnectorInfo.cs" />

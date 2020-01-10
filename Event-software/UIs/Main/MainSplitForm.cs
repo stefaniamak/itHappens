@@ -217,5 +217,15 @@ namespace itHappens.UIs.Common
         {
 
         }
+
+        private void logInToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Controllers.UIController.Instance.logInToolStripMenuItem_MiddlePanel();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controllers.LogoutController.Instance.logoutActions();
+        }
     }
 }
