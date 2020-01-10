@@ -50,7 +50,7 @@ namespace itHappens.UIs.Common
       
         private void TestSplitForm_Load(object sender, EventArgs e)
         {
-            Controllers.UIController.Instance.showSidebars();
+            Controllers.UIController.Instance.showSidebars("Username");
 
             Controllers.UIController.Instance.openHostForMainAndSearchPage();
             Controllers.UIController.Instance.openCommonSearchTextPage("main");

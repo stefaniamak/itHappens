@@ -40,17 +40,19 @@ namespace itHappens.Controllers
 
         }
 
-        public void showSidebars()
+        public void showSidebars(string username)
         {
+
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
                 Classes.SidebarsMethods.Instance.showLogedInSidebars();
+                UIs.Sidebars.ProfileSidebar.LogoutButton.Visible = true;
             }
             else
             {
                 Classes.SidebarsMethods.Instance.showLogedOutSidebars();
             }
-            
+            UIs.Sidebars.ProfileSidebar.usernameLable.Text = username;
         }
 
         public void openHostForMainAndSearchPage()

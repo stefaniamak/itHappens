@@ -16,6 +16,7 @@
 
         public void showLogedInSidebars()
         {
+            clearSidebars();
             Classes.SidebarsMethods.Instance.addUpcomingEvents();
             Classes.SidebarsMethods.Instance.addLists();
             Classes.SidebarsMethods.Instance.addProfile();
@@ -26,8 +27,17 @@
         
         public void showLogedOutSidebars()
         {
+            clearSidebars();
             Classes.SidebarsMethods.Instance.addProfile();
             Classes.SidebarsMethods.Instance.addWarningToLogIn();
+        }
+
+        public void clearSidebars()
+        {
+            UIs.Common.MainSplitForm.rightBottomPanel.Controls.Clear();
+            UIs.Common.MainSplitForm.leftTopPanel.Controls.Clear();
+            UIs.Common.MainSplitForm.leftMiddlePanel.Controls.Clear();
+            UIs.Common.MainSplitForm.rightTopPanel.Controls.Clear();
         }
 
         public void addFriendList()
@@ -61,15 +71,17 @@
         public void addWarningToLogIn()
         {
             thisLoginWarningPage = new UIs.Main.LoginWarning();
-
             UIs.Common.MainSplitForm.leftTopPanel.Controls.Add(thisLoginWarningPage);
-
-
-            UIs.Common.MainSplitForm.leftMiddlePanel.Controls.Add(thisLoginWarningPage);
-  
-
-            UIs.Common.MainSplitForm.rightTopPanel.Controls.Add(thisLoginWarningPage);
             Controllers.UIController.Instance.designEditOfPanels(thisLoginWarningPage);
+
+            thisLoginWarningPage = new UIs.Main.LoginWarning();
+            UIs.Common.MainSplitForm.leftMiddlePanel.Controls.Add(thisLoginWarningPage);
+            Controllers.UIController.Instance.designEditOfPanels(thisLoginWarningPage);
+
+            thisLoginWarningPage = new UIs.Main.LoginWarning();
+            UIs.Common.MainSplitForm.rightBottomPanel.Controls.Add(thisLoginWarningPage);
+            Controllers.UIController.Instance.designEditOfPanels(thisLoginWarningPage);
+
         }
     }
 }
