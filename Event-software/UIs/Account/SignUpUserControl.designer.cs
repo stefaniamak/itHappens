@@ -138,7 +138,6 @@
             0,
             0});
             this.numericUpDown.Name = "numericUpDown";
-            this.numericUpDown.ReadOnly = true;
             this.numericUpDown.Size = new System.Drawing.Size(69, 24);
             this.numericUpDown.TabIndex = 43;
             this.numericUpDown.Value = new decimal(new int[] {
