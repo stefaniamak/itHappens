@@ -58,6 +58,7 @@
     <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.IdentityModel.Clients.ActiveDirectory.5.2.4\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.0.18\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
@@ -151,6 +152,7 @@
     <Compile Include="Classes\madeForYouCarousel.cs" />
     <Compile Include="Classes\todayEventsCarousel.cs" />
     <Compile Include="Classes\CreateList.cs" />
+    <Compile Include="Classes\DatabaseGeneralMethods.cs" />
     <Compile Include="Classes\Event.cs" />
     <Compile Include="Classes\EventList.cs" />
     <Compile Include="Classes\MiddlePanelMethods.cs" />
