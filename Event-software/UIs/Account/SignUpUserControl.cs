@@ -271,7 +271,7 @@ namespace itHappens.UIs
                 MessageBox.Show("Your registration has been successfully completed!", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 signUpCon(areaComboBox.SelectedItem.ToString(), Convert.ToInt32(numericUpDown.Value), usernameTextBox.Text,
                     passwordTextBox.Text, nameTextBox.Text, surnameTextBox.Text, emailTextBox.Text);
-                int creatorid = Controllers.LoginController.returnUsersID(usernameTextBox.Text, passwordTextBox.Text);
+                int creatorid = Controllers.LoginController.Instance.returnUsersID(usernameTextBox.Text, passwordTextBox.Text);
                 Classes.CreateList.createEvent_ListMethod("History",creatorid);
                 Classes.CreateList.createEvent_ListMethod("Going", creatorid);
                 Classes.CreateList.createEvent_ListMethod("Interested", creatorid);
