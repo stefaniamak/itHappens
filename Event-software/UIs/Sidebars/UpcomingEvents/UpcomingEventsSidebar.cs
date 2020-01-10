@@ -7,22 +7,55 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using dbstuff;
 
 namespace itHappens.UIs.Sidebars
 {
     public partial class UpcomingEventsSidebar : UserControl
     {
+
+        private static DbConnector dbCon = new DbConnector();
+        private static string conStr = dbCon.GetConnectionString();
         public UpcomingEventsSidebar()
         {
             InitializeComponent();
-            
-            for (int i = 0; i < 10; i++)
+
+            //kanoume ta object pou tha xreisimopoisoume gia na kanoume connect stin database
+            MySqlConnection con;
+            MySqlCommand command;
+            MySqlDataReader dataReader;
+
+            //kane tin syndesy stin database
+            try
             {
-                var upevent = new UpcomingEvents.UpcomingEventMini();
-                upcomingEventsFlowLayout.Controls.Add(upevent);
-                //upevent
-                //upevent.Anchor = (AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-                //upcomingEventsFlowLayout.SetFlowBreak(upcomingEventsFlowLayout, true);
+
+                con = new MySqlConnection(conStr);
+                con.Open();
+
+                //to query pou xreisimopoioume gia na travixoume ta dedomena apo tin database
+                string queryString = "SELECT (id,title,location,startingDate) FROM event";
+
+
+                command = new MySqlCommand(queryString, con);
+                dataReader = command.ExecuteReader();
+                int List = (Convert.ToInt32(dataReader.GetString(0)));
+                while (dataReader.Read())
+                {
+                    for (int i = 0; i < List; i++)
+                    {
+
+                        var upevent = new UpcomingEvents.UpcomingEventMini(dataReader.GetString(1), dataReader.GetString(2),dataReader.GetDateTime(3));
+                        upcomingEventsFlowLayout.Controls.Add(upevent);
+
+                    }
+                    con.Close();
+
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error");
             }
 
             //upcomingEventsFlowLayout.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
