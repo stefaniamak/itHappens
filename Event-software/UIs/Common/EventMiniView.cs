@@ -12,6 +12,7 @@ namespace itHappens.UIs.Common
 {
     public partial class EventMiniView : UserControl
     {
+        public static int eventId;
         public EventMiniView()
         {
             InitializeComponent();
@@ -30,12 +31,12 @@ namespace itHappens.UIs.Common
         }
 
         //  -----------  Προσωρινός Constructor χωρίς τα insert εικόνων.  -----------
-        public EventMiniView(string categoryColor) : this()
+        public EventMiniView(string categoryColor, int theEventId) : this()
         {
             Color catColor = Color.FromName(categoryColor);
             categoryColorPanel.BackColor = catColor;
             hoverOverPanel.Visible = false;
-
+            eventId = theEventId;
         }
 
 
