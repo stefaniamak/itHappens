@@ -45,7 +45,7 @@ namespace itHappens.UIs.Common
             Controllers.UIController.Instance.addSidebarFriendList();
 
             Controllers.UIController.Instance.openHostForMainAndSearchPage();
-            Controllers.UIController.Instance.openPage("search");
+            Controllers.UIController.Instance.openPage("main");
         }
 
         private void mainToolStripMenuItem_Click(object sender, EventArgs e)

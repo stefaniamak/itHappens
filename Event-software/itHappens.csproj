@@ -174,11 +174,17 @@
     <Compile Include="UIs\Common\FriendsWhoHaveVisited.Designer.cs">
       <DependentUpon>FriendsWhoHaveVisited.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Common\notification.cs">
+    <Compile Include="UIs\Common\Notification.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\Common\notification.Designer.cs">
-      <DependentUpon>notification.cs</DependentUpon>
+    <Compile Include="UIs\Common\Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Common\NotificationBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Common\NotificationBox.Designer.cs">
+      <DependentUpon>NotificationBox.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\Main\LoginWarning.cs">
       <SubType>UserControl</SubType>
@@ -369,8 +375,11 @@
     <EmbeddedResource Include="UIs\Common\FriendsWhoHaveVisited.resx">
       <DependentUpon>FriendsWhoHaveVisited.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\Common\notification.resx">
-      <DependentUpon>notification.cs</DependentUpon>
+    <EmbeddedResource Include="UIs\Common\Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Common\NotificationBox.resx">
+      <DependentUpon>NotificationBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Main\LoginWarning.resx">
       <DependentUpon>LoginWarning.cs</DependentUpon>

@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileSidebar));
             usernameLable = new System.Windows.Forms.Label();
             this.bellNotificationPictureBox = new System.Windows.Forms.PictureBox();
-            this.ovalPictureBox1 = new itHappens.UIs.Common.OvalPictureBox();
             LogoutButton = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ovalPictureBox1 = new itHappens.UIs.Common.OvalPictureBox();
+            this.notificationBox = new itHappens.UIs.Common.NotificationBox();
             ((System.ComponentModel.ISupportInitialize)(this.bellNotificationPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,18 +60,7 @@
             this.bellNotificationPictureBox.Size = new System.Drawing.Size(27, 26);
             this.bellNotificationPictureBox.TabIndex = 3;
             this.bellNotificationPictureBox.TabStop = false;
-            // 
-            // ovalPictureBox1
-            // 
-            this.ovalPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ovalPictureBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.ovalPictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ovalPictureBox1.BackgroundImage")));
-            this.ovalPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ovalPictureBox1.Location = new System.Drawing.Point(47, 49);
-            this.ovalPictureBox1.Name = "ovalPictureBox1";
-            this.ovalPictureBox1.Size = new System.Drawing.Size(48, 49);
-            this.ovalPictureBox1.TabIndex = 4;
-            this.ovalPictureBox1.TabStop = false;
+            this.bellNotificationPictureBox.Click += new System.EventHandler(this.bellNotificationPictureBox_Click);
             // 
             // LogoutButton
             // 
@@ -87,21 +76,34 @@
             LogoutButton.Visible = false;
             LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
-            // flowLayoutPanel1
+            // ovalPictureBox1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 26);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(136, 146);
-            this.flowLayoutPanel1.TabIndex = 5;
-            this.flowLayoutPanel1.Visible = false;
+            this.ovalPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ovalPictureBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.ovalPictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ovalPictureBox1.BackgroundImage")));
+            this.ovalPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ovalPictureBox1.Location = new System.Drawing.Point(47, 49);
+            this.ovalPictureBox1.Name = "ovalPictureBox1";
+            this.ovalPictureBox1.Size = new System.Drawing.Size(48, 49);
+            this.ovalPictureBox1.TabIndex = 4;
+            this.ovalPictureBox1.TabStop = false;
+            // 
+            // notificationBox
+            // 
+            this.notificationBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.notificationBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.notificationBox.Location = new System.Drawing.Point(0, 25);
+            this.notificationBox.Name = "notificationBox";
+            this.notificationBox.Size = new System.Drawing.Size(142, 150);
+            this.notificationBox.TabIndex = 5;
+            this.notificationBox.Visible = false;
             // 
             // ProfileSidebar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.notificationBox);
             this.Controls.Add(this.ovalPictureBox1);
             this.Controls.Add(LogoutButton);
             this.Controls.Add(this.bellNotificationPictureBox);
@@ -119,7 +121,7 @@
         private Common.OvalPictureBox ovalPictureBox1;
 
         private System.Windows.Forms.PictureBox bellNotificationPictureBox;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Common.NotificationBox notificationBox;
         public static System.Windows.Forms.Button LogoutButton;
         public static System.Windows.Forms.Label usernameLable;
     }

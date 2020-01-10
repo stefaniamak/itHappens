@@ -15,6 +15,8 @@ namespace itHappens.UIs.Sidebars
         public ProfileSidebar()
         {
             InitializeComponent();
+
+            shownotificationUserControl();
         }
 
         private void LogoutButton_Click(object sender, EventArgs e)
@@ -24,6 +26,19 @@ namespace itHappens.UIs.Sidebars
             LogoutButton.Visible = false;
             Controllers.UIController.Instance.openHostForMainAndSearchPage();
             Controllers.UIController.Instance.openPage("main");
+        }
+
+        private void shownotificationUserControl()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                notificationBox.AddControl(new Common.Notification());
+            }
+        }
+
+        private void bellNotificationPictureBox_Click(object sender, EventArgs e)
+        {
+            notificationBox.Visible = !notificationBox.Visible;
         }
     }
 }
