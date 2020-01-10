@@ -224,8 +224,8 @@ INSERT into categories (id,categories,title,color, parent) values (7,'sales','SH
 INSERT into categories (id,categories,title,color, parent) values (8,'comedy','COMEDY','MediumVioletRed', 1);
 INSERT into categories (id,categories,title,color, parent) values (9,'movies_film','FILM','Orchid', 1);
 INSERT into categories (id,categories,title,color, parent) values (10,'theatric_plays','THEATRE','Plum', 1);
-INSERT into categories (id,categories,title,color, parent) values (11,'club_associations','CLUB ASSOCIATIONS','Firebrick', 1);
-INSERT into categories (id,categories,title,color, parent) values (12,'singles_social','SOCIAL','IndianRed', 1);
+INSERT into categories (id,categories,title,color, parent) values (11,'club_associations','MEETUPS','Firebrick', 1);
+INSERT into categories (id,categories,title,color, parent) values (12,'singles_social','NIGHTLIFE','IndianRed', 1);
 INSERT into categories (id,categories,title,color, parent) values (13,'parties','PARTIES','DarkRed', 1);
 INSERT into categories (id,categories,title,color, parent) values (14,'festivals_parades','FESTIVALS','HotPink', 1);
 INSERT into categories (id,categories,title,color, parent) values (15,'performing_arts','PERFORMING ARTS','PaleVioletRed', 1);
@@ -234,24 +234,24 @@ INSERT into categories (id,categories,title,color, parent) values (16,'holiday',
 INSERT into categories (id,categories,title,color, parent) values (17,'business','BUSINESS','DarkBlue', 2);
 INSERT into categories (id,categories,title,color, parent) values (18,'learning_education','EDUCATION','DarkTurquoise', 2);
 INSERT into categories (id,categories,title,color, parent) values (19,'attractions','ATTRACTIONS','DarkSlateBlue', 2);
-INSERT into categories (id,categories,title,color, parent) values (20,'art','ART','BlueViolet', 2);
+INSERT into categories (id,categories,title,color, parent) values (20,'art','EXHIBITS','BlueViolet', 2);
 INSERT into categories (id,categories,title,color, parent) values (21,'conference','CONFERENCE','MediumBlue', 2);
 INSERT into categories (id,categories,title,color, parent) values (22,'seminars','SEMINARS','RoyalBlue', 2);
-INSERT into categories (id,categories,title,color, parent) values (23,'books','BOOKS','MediumSlateBlue', 2);
+INSERT into categories (id,categories,title,color, parent) values (23,'books','LITERARY','MediumSlateBlue', 2);
 INSERT into categories (id,categories,title,color, parent) values (24,'politics_activism','ACTIVISM','MidnightBlue', 2);
 INSERT into categories (id,categories,title,color, parent) values (25,'science','SCIENCE','CadetBlue', 2);
 INSERT into categories (id,categories,title,color, parent) values (26,'technology','TECHNOLOGY','SteelBlue', 2);
 
 INSERT into categories (id,categories,title,color, parent) values (27,'family_fun_kids','FAMILY','OliveDrab', 3);
 INSERT into categories (id,categories,title,color, parent) values (28,'fundraisers','FUNDRAISERS','Yellow', 3);
-INSERT into categories (id,categories,title,color, parent) values (29,'support','SUPPORT','Gold', 3);
+INSERT into categories (id,categories,title,color, parent) values (29,'support','HEALTH','Gold', 3);
 INSERT into categories (id,categories,title,color, parent) values (30,'community','COMMUNITY','YellowGreen', 3);
 INSERT into categories (id,categories,title,color, parent) values (31,'schools_alumni','SCHOOL','MediumSeaGreen', 3);
 INSERT into categories (id,categories,title,color, parent) values (32,'outdoors_recreation','OUTDOORS','DarkGreen', 3);
 INSERT into categories (id,categories,title,color, parent) values (33,'animals','ANIMALS','Green', 3);
-INSERT into categories (id,categories,title,color, parent) values (34,'religion_spirituality','RELIGION','LimeGreen', 3);
+INSERT into categories (id,categories,title,color, parent) values (34,'religion_spirituality','SPIRITUALITY','LimeGreen', 3);
 INSERT into categories (id,categories,title,color, parent) values (35,'sports','SPORTS','ForestGreen', 3);
-INSERT into categories (id,categories,title,color, parent) values (36,'other','OTHER','DarkGray', 3);
+INSERT into categories (id,categories,title,color, parent) values (36,'other','OTHER MISCELLANEOUS','DarkGray', 3);
 
 
 

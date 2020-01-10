@@ -37,7 +37,7 @@ namespace itHappens.UIs.anna
                     loggedInUser = true;
                     UIs.Sidebars.ProfileSidebar.LogoutButton.Visible = true;
                     Controllers.UIController.Instance.openHostForMainAndSearchPage();
-                    Controllers.UIController.Instance.openPage("main");
+                    Controllers.UIController.Instance.openCommonSearchTextPage("main");
                 }
                 else
                 {

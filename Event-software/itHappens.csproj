@@ -188,10 +188,10 @@
     <Compile Include="UIs\Common\NotificationBox.Designer.cs">
       <DependentUpon>NotificationBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Main\LoginWarning.cs">
+    <Compile Include="UIs\Account\LoginWarning.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\Main\LoginWarning.Designer.cs">
+    <Compile Include="UIs\Account\LoginWarning.Designer.cs">
       <DependentUpon>LoginWarning.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\Profiles\VenueProfilePage.cs">
@@ -383,7 +383,7 @@
     <EmbeddedResource Include="UIs\Common\NotificationBox.resx">
       <DependentUpon>NotificationBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\Main\LoginWarning.resx">
+    <EmbeddedResource Include="UIs\Account\LoginWarning.resx">
       <DependentUpon>LoginWarning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Profiles\VenueProfilePage.resx">
