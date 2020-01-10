@@ -23,6 +23,10 @@ namespace itHappens.UIs.Common
         public static Panel leftMiddlePanel;
         public static Panel rightTopPanel;
         public static Panel rightBottomPanel;
+        
+        private static MainSplitForm _instance = new MainSplitForm();
+        public static MainSplitForm Instance => _instance;
+        
 
         public MainSplitForm()
         {
@@ -35,6 +39,13 @@ namespace itHappens.UIs.Common
             leftMiddlePanel = splitContainer3.Panel2;
             rightTopPanel = splitContainer1.Panel1;
             rightBottomPanel = splitContainer1.Panel2;
+        }
+
+        public void logInSignOutButtonsVisibility()
+        {
+            bool userIsLoggedIn = UIs.anna.LogInPage.loggedInUser;
+            logInToolStripMenuItem.Visible = userIsLoggedIn;
+            logOutToolStripMenuItem.Visible = !userIsLoggedIn;
         }
       
         private void TestSplitForm_Load(object sender, EventArgs e)
@@ -203,6 +214,11 @@ namespace itHappens.UIs.Common
         {
             Controllers.UIController.Instance.openHostForMainAndSearchPage();
             Controllers.UIController.Instance.openCommonSearchTextPage("main");
+        }
+
+        private void signUpToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
