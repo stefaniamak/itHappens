@@ -6,12 +6,15 @@ namespace itHappens.UIs.andrea
 {
     public partial class UserProfilePage : UserControl
     {
+        public int userId { get; set; }
+        public int eventId { get; set; }
+
         public UserProfilePage()
         {
             InitializeComponent();
         }
 
-        public UserProfilePage(string userName, string userSurname, string venueName, Color categoryColor, Image profilePicture, Image userBackground, Image eventBackground, DateTime eventDateTime)
+        public UserProfilePage(int userId, int eventId, string userName, string userSurname, string venueName, string categoryColor, Image profilePicture, Image eventBackground, DateTime eventDateTime)
         {
             InitializeComponent();
 
@@ -19,13 +22,15 @@ namespace itHappens.UIs.andrea
 
             userNameLabel.Text = userName; // prosthaise kai to userSurname
             userProfilePictureOvalPictureBox.BackgroundImage = profilePicture;
-            userBackgroundPictureBox.BackgroundImage = userBackground;
 
             //monthLabel.Text =      // Tha Kaneis mia methodo pou tha emfanizei ta 3 prwta grammata tou mhna pou ginete, se kefalaia
             //dayLabel               // Mono thn mera, des to design
-            categoryColorPanel.BackColor = categoryColor; 
+            categoryColorPanel.BackColor = Color.FromName(categoryColor); 
             vanueLabel.Text = venueName;
             miniEventBakcgroundPictureBox.BackgroundImage = eventBackground;
+
+            this.userId = userId;
+            this.eventId = eventId;
 
         }
 

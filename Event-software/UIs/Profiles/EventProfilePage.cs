@@ -12,6 +12,9 @@ namespace itHappens.UIs.andrea
 {
     public partial class EventProfilePage : UserControl
     {
+        public int organizerId { get; set; }
+        public int eventId { get; set; }
+
         public EventProfilePage()
         {
             InitializeComponent();
@@ -19,12 +22,12 @@ namespace itHappens.UIs.andrea
             
         }
 
-        public EventProfilePage(string eventName, string venueName, Color categoryColor, Image background, string organizerName, string organizerSurename, DateTime  eventDateTime, double ticketPrice, string description)
+        public EventProfilePage(int organizerId, int eventId, string eventName, string venueName, string categoryColor, Image background, string organizerName, string organizerSurename, DateTime  eventDateTime, double ticketPrice, string description)
         {
             InitializeComponent();
             
             friends();
-            categoryColorPanel.BackColor = categoryColor;
+            categoryColorPanel.BackColor = Color.FromName(categoryColor); ;
             eventNameLabel.Text = eventName; 
             //monthLabel.Text =      // Tha Kaneis mia methodo pou tha emfanizei ta 3 prwta grammata tou mhna pou ginete, se kefalaia
             //dayLabel               // Mono thn mera, des to design
@@ -35,6 +38,9 @@ namespace itHappens.UIs.andrea
             //dayTimeTextBox.Text = eventDateTime; // !!!!!! Niko, auto vgazei error gt prepei na deis pws na kaneis convert to date se string.
             ticketPriceLabel.Text = (ticketPrice).ToString(); // !!!!! Tsekare an einai double to ticket price apo th vash. Kai den eimai sigourh an douleuei auth h ToSting().
             descriptionTextBox.Text = description;
+
+            this.organizerId = organizerId;
+            this.eventId = eventId;
         }
 
         private void friends()
