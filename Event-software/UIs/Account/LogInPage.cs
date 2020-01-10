@@ -38,6 +38,7 @@ namespace itHappens.UIs.anna
                     UIs.Sidebars.ProfileSidebar.LogoutButton.Visible = true;
                     Controllers.UIController.Instance.openHostForMainAndSearchPage();
                     Controllers.UIController.Instance.openCommonSearchTextPage("main");
+                    Controllers.UIController.Instance.showSidebars();
                 }
                 else
                 {
