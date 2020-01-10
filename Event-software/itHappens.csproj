@@ -187,6 +187,12 @@
     <Compile Include="UIs\Account\LoginWarning.Designer.cs">
       <DependentUpon>LoginWarning.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\Lists and Settings\InputOldPassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\Lists and Settings\InputOldPassForm.designer.cs">
+      <DependentUpon>InputOldPassForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\Profiles\VenueProfilePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -375,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Account\LoginWarning.resx">
       <DependentUpon>LoginWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Lists and Settings\InputOldPassForm.resx">
+      <DependentUpon>InputOldPassForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Profiles\VenueProfilePage.resx">
       <DependentUpon>VenueProfilePage.cs</DependentUpon>

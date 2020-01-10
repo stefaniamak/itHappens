@@ -272,9 +272,9 @@ namespace itHappens.UIs
                 signUpCon(areaComboBox.SelectedItem.ToString(), Convert.ToInt32(numericUpDown.Value), usernameTextBox.Text,
                     passwordTextBox.Text, nameTextBox.Text, surnameTextBox.Text, emailTextBox.Text);
                 int creatorid = Controllers.LoginController.Instance.returnUsersID(usernameTextBox.Text, passwordTextBox.Text);
-                Classes.CreateList.createEvent_ListMethod("History",creatorid);
-                Classes.CreateList.createEvent_ListMethod("Going", creatorid);
-                Classes.CreateList.createEvent_ListMethod("Interested", creatorid);
+                Classes.CreateList.createEvent_ListMethod("HISTORY",creatorid);
+                Classes.CreateList.createEvent_ListMethod("GOING", creatorid);
+                Classes.CreateList.createEvent_ListMethod("INTERESTED", creatorid);
                 clearTextBoxes();
                 Controllers.UIController.Instance.logInToolStripMenuItem_MiddlePanel();
 
