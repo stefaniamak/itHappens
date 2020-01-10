@@ -33,11 +33,11 @@ namespace itHappens.UIs.anna
                 if (!userName.Equals(""))
                 {
                     ageOfUser = Classes.DatabaseGeneralMethods.ReturnAgeOfUser(UsernameTextBox.Text, PasswordTextBox.Text);
-                    UIs.Sidebars.ProfileSidebar.usernameLable.Text = UsernameTextBox.Text;
                     loggedInUser = true;
-                    UIs.Sidebars.ProfileSidebar.LogoutButton.Visible = true;
+                    
                     Controllers.UIController.Instance.openHostForMainAndSearchPage();
                     Controllers.UIController.Instance.openCommonSearchTextPage("main");
+                    Controllers.UIController.Instance.showSidebars(UsernameTextBox.Text);
                 }
                 else
                 {

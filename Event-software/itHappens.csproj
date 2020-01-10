@@ -248,7 +248,6 @@
     <Compile Include="UIs\Main\MainSplitForm.Designer.cs">
       <DependentUpon>MainSplitForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Common\interfaceMethods.cs" />
     <Compile Include="UIs\Common\Carousel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -305,6 +304,12 @@
     </Compile>
     <Compile Include="UIs\Sidebars\Lists\ListsMini.Designer.cs">
       <DependentUpon>ListsMini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Sidebars\Lists\CreateListPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Sidebars\Lists\CreateListPage.Designer.cs">
+      <DependentUpon>CreateListPage.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\Sidebars\UpcomingEvents\UpcomingEventsSidebar.cs">
       <SubType>UserControl</SubType>
@@ -451,6 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Sidebars\Lists\listsSidebar.resx">
       <DependentUpon>ListsSidebar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Sidebars\Lists\CreateListPage.resx">
+      <DependentUpon>CreateListPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Sidebars\Profile\ProfileSidebar.resx">
       <DependentUpon>ProfileSidebar.cs</DependentUpon>

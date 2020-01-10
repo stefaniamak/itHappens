@@ -50,10 +50,7 @@ namespace itHappens.UIs.Common
       
         private void TestSplitForm_Load(object sender, EventArgs e)
         {
-            Controllers.UIController.Instance.addSidebarUpcomingEvents();
-            Controllers.UIController.Instance.addSidebarLists();
-            Controllers.UIController.Instance.addSidebarProfile();
-            Controllers.UIController.Instance.addSidebarFriendList();
+            Controllers.UIController.Instance.showSidebars("Username");
 
             Controllers.UIController.Instance.openHostForMainAndSearchPage();
             Controllers.UIController.Instance.openCommonSearchTextPage("main");

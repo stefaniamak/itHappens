@@ -10,8 +10,6 @@ namespace itHappens.Controllers
         private UIs.Main.MainPage theMainPage = null;
         private UIs.Common.SearchPage theSearchPage = null;
 
-
-
         // Use the Singleton pattern
         private static UIController _instance = new UIController();
         public static UIController Instance => _instance;
@@ -40,6 +38,20 @@ namespace itHappens.Controllers
 
         }
 
+        public void showSidebars(string username)
+        {
+
+            if (UIs.anna.LogInPage.loggedInUser == true)
+            {
+                Classes.SidebarsMethods.Instance.showLogedInSidebars();
+                UIs.Sidebars.ProfileSidebar.LogoutButton.Visible = true;
+            }
+            else
+            {
+                Classes.SidebarsMethods.Instance.showLogedOutSidebars();
+            }
+            UIs.Sidebars.ProfileSidebar.usernameLable.Text = username;
+        }
 
         public void openHostForMainAndSearchPage()
         {
@@ -125,7 +137,7 @@ namespace itHappens.Controllers
         //    ----------    Sidebar Methods    ----------    
         public void addSidebarFriendList()
         {
-            Classes.SidebarsMethods.Instance.addFriendList();
+            Classes.SidebarsMethods.Instance.addFriendList(); 
         }
 
         public void addSidebarUpcomingEvents()

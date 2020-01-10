@@ -26,6 +26,13 @@ namespace itHappens.UIs.Sidebars
             LogoutButton.Visible = false;
             Controllers.UIController.Instance.openHostForMainAndSearchPage();
             Controllers.UIController.Instance.openCommonSearchTextPage("main");
+            Controllers.UIController.Instance.showSidebars("Username");
+        }
+
+        private void userLogedIn(string username)
+        {
+            LogoutButton.Visible = true;
+            usernameLable.Text = username;
         }
 
         private void shownotificationUserControl()
