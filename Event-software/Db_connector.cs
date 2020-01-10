@@ -63,8 +63,12 @@ namespace itHappends
         }
         public static MySqlDataReader Categories(int limit)
         {
-            return Query(@"Select categories FROM categories LIMIT @limit",new string[,] { { "@limit", limit + "" } });
+            return Query(@"Select categories , title FROM categories LIMIT @limit",new string[,] { { "@limit", limit + "" } });
         }
+        /*public void FrequentTags()
+        {
+
+        }*/
     }
     //String sql = " ";
     //sql = "Insert into event(id,onwerID,venueID,categoryID,startingDate,EndingDate,description,tags,ticketprice) values('"id" + "ownerID" + "venueID" + "categoryID" + "startingDate" + "endingDate" + "description" + "tags" + "ticketprice"')";

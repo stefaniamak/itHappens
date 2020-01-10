@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using itHappens.Classes;
+using itHappens.UIs.Common;
 
 namespace itHappens.UIs.andrea
 {
@@ -55,6 +56,14 @@ namespace itHappens.UIs.andrea
         private void interestedButton_Click(object sender, EventArgs e)
         {
 
+        }
+       public static void OpenVenueProfile(object sender, EventArgs e)
+        {
+            MainSplitForm.middlePanel.Controls.Clear();
+            var middlePage = new UIs.andrea.VenueProfilePage();
+            MainSplitForm.middlePanel.Controls.Add(middlePage);
+            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            middlePage.Dock = DockStyle.Fill;
         }
     }
 }

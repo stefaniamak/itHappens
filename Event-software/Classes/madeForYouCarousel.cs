@@ -22,38 +22,27 @@ namespace itHappens.Classes
 
         private void LoggedInUser(int size)
         {
-            for (int i = 0; i < size; i++)
-            {
-                GroupBox.Add(new CategoryGroupBox());
-            }
+             //den exw tropo na parw ton loged in user
+            
+                List<List<string>> Categories = Db_connector.Readrows(Db_connector.Categories(size), new int[] { 2, 3 });
+                for (int i = 0; i < size; i++)
+                {
+                    GroupBox.Add(new CategoryGroupBox(Categories[i][0], Categories[i][1]));
+                }
+            
         }
         private void LoggedOutUser(int size)
         {
-               
-            Db_connector.Readrows(Db_connector.Categories(size),new int[] {0} );
+            List<List<string>> Categories = Db_connector.Readrows(Db_connector.Categories(size),new int[] {2,3} );
             for (int i=0; i < size; i++)
             {
-                Query(@"SELECT * FROM event WHERE startingDate < @Date AND endingDate  > @Date ",
-                                     new string[,] { { "@Date", Utility.DateToText(DateTime.Now) } });
-                
-                GroupBox.Add(new CategoryGroupBox());
+               GroupBox.Add(new CategoryGroupBox(Categories [i] [0] , Categories[i][1]));
             }
             
         }
 
 
 
-        /* public void FrequentTags()
-         {
-             return Query(@"SELECT * FROM event WHERE startingDate < @Date AND endingDate  > @Date ",
-                                    new string[,] { { "@Date", Utility.DateToText(DateTime.Now) } });
-           /*  SELECT`column`,
-     COUNT(`column`) AS `value_occurrence` 
-     FROM `my_table`
-     GROUP BY `column`
-     ORDER BY `value_occurrence` DESC
-     LIMIT 1;
-
-         }*/
+        
     }
 }

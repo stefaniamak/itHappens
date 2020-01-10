@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using itHappens.Classes;
+using itHappens.UIs.Common;
 
 namespace itHappens.UIs.andrea
 {
@@ -42,6 +43,15 @@ namespace itHappens.UIs.andrea
             {
                 eventsUserWillAttendCarousel.AddControl(new UIs.Common.EventMiniView());
             }
+        }
+
+        public static void openUserPage(object sender, EventArgs e)
+        {
+            MainSplitForm.middlePanel.Controls.Clear();
+            var middlePage = new UIs.andrea.UserProfilePage();
+            MainSplitForm.middlePanel.Controls.Add(middlePage);
+            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            middlePage.Dock = DockStyle.Fill;
         }
 
     }
