@@ -9,11 +9,11 @@ namespace itHappens.Classes
 {
     class SidebarsMethods
     {
-        /*
+        
         // Use the Singleton pattern
         private static SidebarsMethods _instance = new SidebarsMethods();
         public static SidebarsMethods Instance => _instance;
-        */
+        
 
         public static void addFriendList()
         {

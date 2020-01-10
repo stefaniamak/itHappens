@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 
 namespace itHappens.Controllers
 {
     class UIController
     {
-
+        // Main User Controls
+        private UIs.Main.CommonSearchTextPage theHostPage = null;
+        private UIs.Main.MainPage theMainPage = null;
         private UIs.Common.SearchPage theSearchPage = null;
+
 
 
         // Use the Singleton pattern
@@ -22,9 +20,15 @@ namespace itHappens.Controllers
         {
         }
 
-        public void openPage(string page)
+        public void designEditOfPanels(UserControl theUserControl)
         {
-            
+            theUserControl.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            theUserControl.Dock = DockStyle.Fill;
+        }
+
+        public void openCommonSearchTextPage(string page)
+        {
+            Controllers.UIController.Instance.openHostForMainAndSearchPage();
             if (string.Equals(page, "main"))
             {
                 hostTheMainPage();
@@ -33,35 +37,40 @@ namespace itHappens.Controllers
             {
                 hostTheSearchPage();
             }
-            
+
         }
 
 
         public void openHostForMainAndSearchPage()
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
-            var hostPage = new UIs.Main.CommonSearchTextPage();
+            theHostPage = new UIs.Main.CommonSearchTextPage();
+            if (theHostPage != null)
+            {
+                UIs.Common.MainSplitForm.middlePanel.Controls.Add(theHostPage);
+                designEditOfPanels(theHostPage);
+            }
 
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(hostPage);
-            hostPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            hostPage.Dock = DockStyle.Fill;
         }
-
+        
 
         public void hostTheMainPage()
         {
-
-            var mainPage = new UIs.Main.MainPage();
-            UIs.Main.CommonSearchTextPage.hostPanel.Controls.Add(mainPage);
-            mainPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            mainPage.Dock = DockStyle.Fill;
+            theMainPage = new UIs.Main.MainPage();
+            if (theMainPage != null)
+            {
+                UIs.Main.CommonSearchTextPage.hostPanel.Controls.Add(theMainPage);
+                designEditOfPanels(theMainPage);
+            }
         }
         public void hostTheSearchPage()
         {
             theSearchPage = new UIs.Common.SearchPage();
-            UIs.Main.CommonSearchTextPage.hostPanel.Controls.Add(theSearchPage);
-            theSearchPage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            theSearchPage.Dock = DockStyle.Fill;
+            if (theSearchPage != null)
+            {
+                UIs.Main.CommonSearchTextPage.hostPanel.Controls.Add(theSearchPage);
+                designEditOfPanels(theSearchPage);
+            }
         }
 
 
@@ -81,41 +90,16 @@ namespace itHappens.Controllers
 
         public void SearchPageFlowLayoutPanels_Load()
         {
-
             theSearchPage.fillAllCategories();
-            /*
-            for (int i = 0; i < 20; i++)
-            {
-                UIs.Common.SearchPage.flowLayoutPanel1.Controls.Add(new UIs.Common.CategoryMiniBox());
-            }
-            for (int i = 0; i < 20; i++)
-            {
-                UIs.Common.SearchPage.flowLayoutPanel2.Controls.Add(new UIs.Common.CategoryMiniBox());
-            }
-
-            for (int i = 0; i < 20; i++)
-            {
-                var eventminiview = new UIs.Common.EventMiniView();
-                eventminiview.Scale(0.55F);
-                UIs.Common.SearchPage.flowLayoutPanel3.Controls.Add(eventminiview);
-            }
-            */
         }
 
         public void AllCategoriesFlowPanel_Load()
         {
-            for (int i = 0; i < 20; i++)
-            {
-                //UIs.SearchForm.allCategoriesFlowPanel.Controls.Add(new UIs.Common.CategoryMiniBox());
-            }
         }
 
         public void friendsAttendingPanel_Load()
         {
-            for (int i = 0; i < 5; i++)
-            {
-                //UIs.andrea.EventProfilePage.friendsAttendingPanel.friendsFlowPanel.Controls.Add(new UIs.Common.FriendsAttending());
-            }
+
         }
 
         public void ListPageLoad()
@@ -138,6 +122,7 @@ namespace itHappens.Controllers
             }
         }
 
+        //    ----------    Sidebar Methods    ----------    
         public void addSidebarFriendList()
         {
             Classes.SidebarsMethods.addFriendList();
@@ -158,6 +143,10 @@ namespace itHappens.Controllers
             Classes.SidebarsMethods.addProfile();
         }
 
+        //    ----------    Middle Panel Methods    ----------    
+        
+        
+        
         public void mainToolStripMenuItem_MiddlePanel()
         {
             Classes.MiddlePanelMethods.mainToolStripMenuItem();
@@ -165,43 +154,43 @@ namespace itHappens.Controllers
 
         public void searchToolStripMenuItem_MiddlePanel()
         {
-            Classes.MiddlePanelMethods.searchToolStripMenuItem();
+            Classes.MiddlePanelMethods.Instance.searchToolStripMenuItem();
         }
 
         public void eventsProfileToolStripMenuItem_MiddlePanel()
         {
-            Classes.MiddlePanelMethods.eventsProfileToolStripMenuItem();
+            Classes.MiddlePanelMethods.Instance.eventsProfileToolStripMenuItem();
         }
 
         public void logInToolStripMenuItem_MiddlePanel()
         {
-            Classes.MiddlePanelMethods.logInToolStripMenuItem();
+            Classes.MiddlePanelMethods.Instance.logInToolStripMenuItem();
         }
 
         public void signUpToolStripMenuItem_MiddlePanel()
         {
-            Classes.MiddlePanelMethods.signUpToolStripMenuItem();
+            Classes.MiddlePanelMethods.Instance.signUpToolStripMenuItem();
         }
 
         public void createEventToolStripMenuItem_MiddlePanel()
         {
-            Classes.MiddlePanelMethods.createEventToolStripMenuItem();
+            Classes.MiddlePanelMethods.Instance.createEventToolStripMenuItem();
         }
 
 
         public void listToolStripMenuItem_MiddlePanel()
         {
-            Classes.MiddlePanelMethods.listToolStripMenuItem();
+            Classes.MiddlePanelMethods.Instance.listToolStripMenuItem();
         }
 
         public void madeForYouToolStripMenuItem_MiddlePanel()
         {
-            Classes.MiddlePanelMethods.madeForYouToolStripMenuItem();
+            Classes.MiddlePanelMethods.Instance.madeForYouToolStripMenuItem();
         }
 
         public void settingsToolStripMenuItem_MiddlePanel()
         {
-            Classes.MiddlePanelMethods.settingsToolStripMenuItem();
+            Classes.MiddlePanelMethods.Instance.settingsToolStripMenuItem();
         }
 
     }

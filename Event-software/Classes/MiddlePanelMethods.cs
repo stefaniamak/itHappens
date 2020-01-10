@@ -1,14 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace itHappens.Classes
 {
     class MiddlePanelMethods
     {
+        // Use the Singleton pattern
+        private static MiddlePanelMethods _instance = new MiddlePanelMethods();
+        public static MiddlePanelMethods Instance => _instance;
+
+
+        // Account User Controls
+        private UIs.anna.CreateEventPage theCreateEventPage = null;
+        private UIs.anna.LogInPage theLotInPage = null;
+        private UIs.SignUpUserControl theSignUpPage = null;
+        // Profiles User Controls
+        private UIs.andrea.EventProfilePage theEventProfilePage = null;
+        private UIs.andrea.UserProfilePage theUserProfilePage = null;
+        private UIs.andrea.VenueProfilePage theSVenueProfilePage = null;
+        // Lists and Settings Controls
+        private UIs.valentina.ListPage theListPage = null;
+        private UIs.valentina.ListsContentPage theListsContentPage = null;
+        private UIs.valentina.SettingsPage theSettingsPage = null;
 
         public static void mainToolStripMenuItem()
         {
@@ -19,77 +31,74 @@ namespace itHappens.Classes
             middlePage.Dock = DockStyle.Fill;
         }
 
-        public static void searchToolStripMenuItem()
+        public void designEditOfPanels(UserControl theUserControl)
         {
-            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
-            var middlePage = new UIs.andrea.VenueProfilePage();
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
-            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            middlePage.Dock = DockStyle.Fill;
+            theUserControl.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            theUserControl.Dock = DockStyle.Fill;
         }
 
-        public static void eventsProfileToolStripMenuItem()
+        public void searchToolStripMenuItem()
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
-            var middlePage = new UIs.andrea.EventProfilePage();
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
-            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            middlePage.Dock = DockStyle.Fill;
+            theSVenueProfilePage = new UIs.andrea.VenueProfilePage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theSVenueProfilePage);
+            designEditOfPanels(theSVenueProfilePage);
         }
 
-        public static void logInToolStripMenuItem()
+        public void eventsProfileToolStripMenuItem()
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
-            var middlePage = new UIs.anna.LogInPage();
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
-            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            middlePage.Dock = DockStyle.Fill;
+            theEventProfilePage = new UIs.andrea.EventProfilePage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theEventProfilePage);
+            designEditOfPanels(theEventProfilePage);
         }
 
-        public static void signUpToolStripMenuItem()
+        public void logInToolStripMenuItem()
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
-            //var middlePage = new UIs.anna.SignUpPage();
-            var middlePage = new UIs.SignUpUserControl();           
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
-            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            middlePage.Dock = DockStyle.Fill;
+            theLotInPage = new UIs.anna.LogInPage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theLotInPage);
+            designEditOfPanels(theLotInPage);
         }
 
-        public static void createEventToolStripMenuItem()
+        public void signUpToolStripMenuItem()
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
-            var middlePage = new UIs.anna.CreateEventPage();
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
-            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            middlePage.Dock = DockStyle.Fill;
+            theSignUpPage = new UIs.SignUpUserControl();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theSignUpPage);
+            designEditOfPanels(theSignUpPage);
         }
 
-        public static void listToolStripMenuItem()
+        public void createEventToolStripMenuItem()
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
-            var middlePage = new UIs.valentina.ListPage();
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
-            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            middlePage.Dock = DockStyle.Fill;
+            theCreateEventPage = new UIs.anna.CreateEventPage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theCreateEventPage);
+            designEditOfPanels(theCreateEventPage);
         }
 
-        public static void madeForYouToolStripMenuItem()
+        public void listToolStripMenuItem()
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
-            var middlePage = new UIs.valentina.ListsContentPage();
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
-            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            middlePage.Dock = DockStyle.Fill;
+            theListPage = new UIs.valentina.ListPage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theListPage);
+            designEditOfPanels(theListPage);
         }
 
-        public static void settingsToolStripMenuItem()
+        public void madeForYouToolStripMenuItem()
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
-            var middlePage = new UIs.valentina.SettingsPage();
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(middlePage);
-            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            middlePage.Dock = DockStyle.Fill;
+            theListsContentPage = new UIs.valentina.ListsContentPage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theListsContentPage);
+            designEditOfPanels(theListsContentPage);
+        }
+
+        public void settingsToolStripMenuItem()
+        {
+            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            theSettingsPage = new UIs.valentina.SettingsPage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theSettingsPage);
+            designEditOfPanels(theSettingsPage);
         }
 
     }

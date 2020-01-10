@@ -45,7 +45,7 @@ namespace itHappens.UIs.Common
             Controllers.UIController.Instance.addSidebarFriendList();
 
             Controllers.UIController.Instance.openHostForMainAndSearchPage();
-            Controllers.UIController.Instance.openPage("main");
+            Controllers.UIController.Instance.openCommonSearchTextPage("main");
         }
 
         private void mainToolStripMenuItem_Click(object sender, EventArgs e)
@@ -96,13 +96,13 @@ namespace itHappens.UIs.Common
         private void mainPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Controllers.UIController.Instance.openHostForMainAndSearchPage();
-            Controllers.UIController.Instance.openPage("main");
+            Controllers.UIController.Instance.openCommonSearchTextPage("main");
         }
 
         private void searchPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Controllers.UIController.Instance.openHostForMainAndSearchPage();
-            Controllers.UIController.Instance.openPage("search");
+            Controllers.UIController.Instance.openCommonSearchTextPage("search");
         }
 
         private void CreateEvent_Click(object sender, EventArgs e)
@@ -140,14 +140,12 @@ namespace itHappens.UIs.Common
 
         private void mainPageToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.Instance.openHostForMainAndSearchPage();
-            Controllers.UIController.Instance.openPage("main");
+            Controllers.UIController.Instance.openCommonSearchTextPage("main");
         }
 
         private void searchPageToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.Instance.openHostForMainAndSearchPage();
-            Controllers.UIController.Instance.openPage("search");
+            Controllers.UIController.Instance.openCommonSearchTextPage("search");
         }
 
         private void usersProfileToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -198,13 +196,13 @@ namespace itHappens.UIs.Common
         private void label1_Click(object sender, EventArgs e)
         {
             Controllers.UIController.Instance.openHostForMainAndSearchPage();
-            Controllers.UIController.Instance.openPage("main");
+            Controllers.UIController.Instance.openCommonSearchTextPage("main");
         }
 
         private void homePagePictureBox_Click(object sender, EventArgs e)
         {
             Controllers.UIController.Instance.openHostForMainAndSearchPage();
-            Controllers.UIController.Instance.openPage("main");
+            Controllers.UIController.Instance.openCommonSearchTextPage("main");
         }
     }
 }

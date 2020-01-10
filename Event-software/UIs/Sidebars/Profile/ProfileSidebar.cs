@@ -23,7 +23,7 @@ namespace itHappens.UIs.Sidebars
             usernameLable.Text = "Username";
             LogoutButton.Visible = false;
             Controllers.UIController.Instance.openHostForMainAndSearchPage();
-            Controllers.UIController.Instance.openPage("main");
+            Controllers.UIController.Instance.openCommonSearchTextPage("main");
         }
     }
 }
