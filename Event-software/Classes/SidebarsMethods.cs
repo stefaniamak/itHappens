@@ -24,6 +24,11 @@
             //addWarningToLogIn();
            // Classes.SidebarsMethods.Instance.addWarningToLogIn();
         }
+        
+        public void showLogedOutSidebars()
+        {
+            Classes.SidebarsMethods.Instance.addWarningToLogIn();
+        }
 
         public void addFriendList()
         {
@@ -56,8 +61,18 @@
         public void addWarningToLogIn()
         {
             thisLoginWarningPage = new UIs.Main.LoginWarning();
+
             UIs.Common.MainSplitForm.rightBottomPanel.Controls.Add(thisLoginWarningPage);
             Controllers.UIController.Instance.designEditOfPanels(thisLoginWarningPage);
+
+            UIs.Common.MainSplitForm.leftTopPanel.Controls.Add(theUpcomingEvetsSidebar);
+            Controllers.UIController.Instance.designEditOfPanels(theUpcomingEvetsSidebar);
+
+            UIs.Common.MainSplitForm.leftMiddlePanel.Controls.Add(theListsSidebar);
+            Controllers.UIController.Instance.designEditOfPanels(theListsSidebar);
+
+            UIs.Common.MainSplitForm.rightTopPanel.Controls.Add(theProfileSidebar);
+            Controllers.UIController.Instance.designEditOfPanels(theProfileSidebar);
         }
     }
 }

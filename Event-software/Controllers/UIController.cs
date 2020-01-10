@@ -42,7 +42,15 @@ namespace itHappens.Controllers
 
         public void showSidebars()
         {
-            Classes.SidebarsMethods.Instance.showLogedInSidebars();
+            if (UIs.anna.LogInPage.loggedInUser == true)
+            {
+                Classes.SidebarsMethods.Instance.showLogedInSidebars();
+            }
+            else
+            {
+                Classes.SidebarsMethods.Instance.showLogedOutSidebars();
+            }
+            
         }
 
         public void openHostForMainAndSearchPage()
