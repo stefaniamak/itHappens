@@ -384,3 +384,6 @@ MigrationBackup/
 .ionide/
 Event-software/.vs/events-software/v16/Server/sqlite3/storage.ide-wal
 Event-software/.vs/events-software/v16/Server/sqlite3/storage.ide-shm
+Event-software/DbConnector.cs
+Event-software/DbConnector.cs
+Event-software/obj/Debug/itHappens.csproj.FileListAbsolute.txt
