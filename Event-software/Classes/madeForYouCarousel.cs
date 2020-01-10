@@ -33,7 +33,10 @@ namespace itHappens.Classes
             Db_connector.Readrows(Db_connector.Categories(size),new int[] {0} );
             for (int i=0; i < size; i++)
             {
-               GroupBox.Add( new CategoryGroupBox());
+                Query(@"SELECT * FROM event WHERE startingDate < @Date AND endingDate  > @Date ",
+                                     new string[,] { { "@Date", Utility.DateToText(DateTime.Now) } });
+                
+                GroupBox.Add(new CategoryGroupBox());
             }
             
         }

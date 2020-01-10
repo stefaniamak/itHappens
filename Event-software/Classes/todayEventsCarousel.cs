@@ -14,18 +14,18 @@ namespace itHappens.Classes
         List<EventMiniView> TodaysEvents;
         public todayEventsCarousel()
         {
-
-            for (int i = 0; i < 5; i++){
-
-                TodaysEvents.Add  (new EventMiniView("Red"));
+            
+            MySqlDataReader reader = Db_connector.ActiveEvents();
+            List<List<string>> Events = Db_connector.Readrows(reader,new int[] { 3 });
+         
+            for (int i = 0; i < Events.Count; i++){
+            EventMiniView obj = new EventMiniView(Events [i][0]);
 
             }
 
-           // MySqlDataReader reader = Db_connector.ActiveEvents();
-           // Db_connector.Readrows(reader,new int[] { 0, 1, 2 });
         }
-     
-        
+
+
 
 
     }
