@@ -21,16 +21,16 @@ namespace itHappens.UIs.andrea
             
         }
 
-        public EventProfilePage(string eventName, string venueName, Color categoryColor, Image background, string organizerName, string organizerSurename, DateTime  eventDateTime, double ticketPrice, string description)
+        public EventProfilePage(string eventName, string venueName, string categoryColor, Image background, string organizerName, string organizerSurename, DateTime  eventDateTime, double ticketPrice, string description)
         {
             InitializeComponent();
             
             friends();
-            categoryColorPanel.BackColor = categoryColor;
+            categoryColorPanel.BackColor = Utility.FromName(categoryColor);
             eventNameLabel.Text = eventName;
             monthLabel.Text = Utility.Month(eventDateTime);
             dayLabel.Text = Utility.Day(eventDateTime);
-            //categoryColorLabel.BackColor = categoryColor;
+            //categoryColorLabel.BackColor = Utility.FromName(categoryColor); category color label doesnt exists
             backgroundPictureBox.BackgroundImage = background;
             locationTextBox.Text = venueName;
             organizerTextBox.Text = organizerName +" "+ organizerSurename ; 
@@ -58,7 +58,6 @@ namespace itHappens.UIs.andrea
         }
         public static void openEventProfile(object sender, EventArgs e) 
         {
-
             MainSplitForm.middlePanel.Controls.Clear();
             var middlePage = new UIs.andrea.EventProfilePage();
             MainSplitForm.middlePanel.Controls.Add(middlePage);

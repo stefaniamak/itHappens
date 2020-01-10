@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,5 +29,11 @@ namespace itHappens.Classes
         {            
            return Date.ToString("yyyy-MM-dd HH:mm:ss");            
         }
+
+        public static Color FromName(string colorName)
+        {
+            return Color.FromName(colorName);          
+        }
+
     }
 }
