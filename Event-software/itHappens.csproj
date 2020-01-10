@@ -241,7 +241,6 @@
     <Compile Include="UIs\Main\MainSplitForm.Designer.cs">
       <DependentUpon>MainSplitForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Common\interfaceMethods.cs" />
     <Compile Include="UIs\Common\Carousel.cs">
       <SubType>UserControl</SubType>
     </Compile>

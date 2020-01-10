@@ -10,8 +10,6 @@ namespace itHappens.Controllers
         private UIs.Main.MainPage theMainPage = null;
         private UIs.Common.SearchPage theSearchPage = null;
 
-
-
         // Use the Singleton pattern
         private static UIController _instance = new UIController();
         public static UIController Instance => _instance;

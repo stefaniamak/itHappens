@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.listsPanel = new System.Windows.Forms.Panel();
-            this.listsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.listsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.listsPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -62,15 +62,6 @@
             this.listsPanel.Size = new System.Drawing.Size(175, 164);
             this.listsPanel.TabIndex = 1;
             // 
-            // listsFlowLayoutPanel
-            // 
-            this.listsFlowLayoutPanel.AutoSize = true;
-            this.listsFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.listsFlowLayoutPanel.Location = new System.Drawing.Point(3, 3);
-            this.listsFlowLayoutPanel.Name = "listsFlowLayoutPanel";
-            this.listsFlowLayoutPanel.Size = new System.Drawing.Size(0, 0);
-            this.listsFlowLayoutPanel.TabIndex = 0;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -85,6 +76,15 @@
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.WrapContents = false;
             // 
+            // listsFlowLayoutPanel
+            // 
+            this.listsFlowLayoutPanel.AutoSize = true;
+            this.listsFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.listsFlowLayoutPanel.Location = new System.Drawing.Point(3, 3);
+            this.listsFlowLayoutPanel.Name = "listsFlowLayoutPanel";
+            this.listsFlowLayoutPanel.Size = new System.Drawing.Size(0, 0);
+            this.listsFlowLayoutPanel.TabIndex = 0;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -95,6 +95,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "+ CREATE LIST";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
             // 
             // ListsSidebar
             // 
