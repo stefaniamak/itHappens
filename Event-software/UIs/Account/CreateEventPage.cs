@@ -210,17 +210,6 @@ namespace itHappens.UIs.anna
         }
 
 
-
-        public static bool IsAllLetters(string s)
-        {
-            foreach (char c in s)
-            {
-                if (!Char.IsLetter(c))
-                    return false;
-            }
-            return true;
-        }
-
         public static bool isAllDigits(string s)
         {
             foreach (char c in s)

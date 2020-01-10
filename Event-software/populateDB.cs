@@ -11,8 +11,12 @@ namespace itHappends
 {
     public class PopulateDB
     {
+
+
+
         private static DbConnector dbCon = new DbConnector();
         private static string conStr = dbCon.GetConnectionString();
+
         MySqlConnection con;
 
         public PopulateDB()

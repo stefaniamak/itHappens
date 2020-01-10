@@ -107,7 +107,7 @@ namespace itHappens.UIs.Common
 
         private void CreateEvent_Click(object sender, EventArgs e)
         {
-            if(UIs.anna.LogInPage.loggedInUser == true)
+            if(UIs.anna.LogInPage.loggedInUser == true && UIs.anna.LogInPage.ageOfUser >= 18)
             {
                 Controllers.UIController.Instance.createEventToolStripMenuItem_MiddlePanel();
             }
