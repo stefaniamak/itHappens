@@ -8,26 +8,32 @@ namespace itHappens.UIs.andrea
 {
     public partial class UserProfilePage : UserControl
     {
+        public int userId { get; set; }
+        public int eventId { get; set; }
+
         public UserProfilePage()
         {
             InitializeComponent();
         }
 
-        public UserProfilePage(string userName, string userSurname, string venueName, Color categoryColor, Image profilePicture, Image userBackground, Image eventBackground, DateTime eventDateTime)
+        public UserProfilePage(int userId, int eventId, string userName, string userSurname, string venueName, string categoryColor, Image profilePicture, Image eventBackground, DateTime eventDateTime)
         {
             InitializeComponent();
 
             eventsUserWillAttend();
 
-            userNameLabel.Text = userName + " " + userSurname; 
+            userNameLabel.Text = userName + " " + userSurname;
             userProfilePictureOvalPictureBox.BackgroundImage = profilePicture;
             userBackgroundPictureBox.BackgroundImage = userBackground;
             monthLabel.Text = Utility.Month(eventDateTime);
             dayLabel.Text = Utility.Day(eventDateTime);
 
-            categoryColorPanel.BackColor = categoryColor; 
+            categoryColorPanel.BackColor = categoryColor;
             vanueLabel.Text = venueName;
             miniEventBakcgroundPictureBox.BackgroundImage = eventBackground;
+
+            this.userId = userId;
+            this.eventId = eventId;
 
         }
 

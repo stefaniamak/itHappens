@@ -14,30 +14,34 @@ namespace itHappens.UIs.andrea
 {
     public partial class VenueProfilePage : UserControl
     {
+        public int venueId { get; set; }
+        public int eventId { get; set; }
         public VenueProfilePage()
         {
             InitializeComponent();
-        }    
+        }
 
         private void VenueProfilePage_Load(object sender, EventArgs e)
         {
             showUserControls();
         }
 
-        public VenueProfilePage(string venueName, Color categoryColor, Image profilePicture, Image venueBackground, Image eventBackground, DateTime eventDateTime)
+        public VenueProfilePage(int venueId, int eventId, string venueName, string categoryColor, Image profilePicture, Image venueBackground, Image eventBackground, DateTime eventDateTime)
         {
             InitializeComponent();
 
             showUserControls();
 
-            venueNameLabel.Text = venueName; 
+            venueNameLabel.Text = venueName;
             venueProfilePictureOvalPictureBox.BackgroundImage = profilePicture;
             backgroundPictureBox.BackgroundImage = eventBackground;
             monthLabel.Text = Utility.Month(eventDateTime);
             dayLabel.Text = Utility.Day(eventDateTime);
-            categoryColorPanel.BackColor = categoryColor; 
+            categoryColorPanel.BackColor = categoryColor;
             miniEventBackgroundPictureBox.BackgroundImage = eventBackground;
 
+            this.venueId = venueId;
+            this.eventId = eventId;
         }
 
         private void showUserControls()
