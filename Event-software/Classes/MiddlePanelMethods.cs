@@ -125,7 +125,7 @@ namespace itHappens.Classes
 
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
-                addEventDetailsInEventProfile();
+                addVenueDetailsToVenueProfile();
             }
             else
             {
