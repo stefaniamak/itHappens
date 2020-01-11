@@ -14,9 +14,19 @@ namespace itHappens.Classes
         List<EventMiniView> TodaysEvents;
         public todayEventsCarousel()
         {
+            
             MySqlDataReader reader = Db_connector.ActiveEvents();
-            Db_connector.Readrows(reader,new int[] { 0, 1, 2 });
+            List<List<string>> Events = Db_connector.Readrows(reader,new int[] { 0 , 3 });
+         
+            for (int i = 0; i < Events.Count; i++){
+            EventMiniView obj = new EventMiniView(Events [i][1], Int32.Parse(Events[i][0]));
+
+            }
+
         }
-       
+
+
+
+
     }
 }

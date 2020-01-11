@@ -7,11 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using itHappens.Classes;
+using itHappens.UIs.Common;
+using itHappends;
 
 namespace itHappens.UIs.andrea
 {
     public partial class EventProfilePage : UserControl
     {
+        public int organizerId { get; set; }
+        public int eventId { get; set; }
+
+        private static EventProfilePage _instance = new EventProfilePage();
+        public static EventProfilePage Instance => _instance;
+
         public EventProfilePage()
         {
             InitializeComponent();
@@ -25,25 +34,31 @@ namespace itHappens.UIs.andrea
                 EditButton.Visible = false;
             }
             friends();
-            
+
         }
 
-        public EventProfilePage(string eventName, string venueName, Color categoryColor, Image background, string organizerName, string organizerSurename, DateTime  eventDateTime, double ticketPrice, string description)
+
+      
+
+        public EventProfilePage(int organizerId, int eventId, string eventName, string venueName, string categoryColor, Image background, string organizerName, string organizerSurename, DateTime eventDateTime, double ticketPrice, string description)
+
         {
             InitializeComponent();
-            
+
             friends();
-            categoryColorPanel.BackColor = categoryColor;
-            eventNameLabel.Text = eventName; 
-            //monthLabel.Text =      // Tha Kaneis mia methodo pou tha emfanizei ta 3 prwta grammata tou mhna pou ginete, se kefalaia
-            //dayLabel               // Mono thn mera, des to design
-            //categoryColorLabel.BackColor = categoryColor; // Auto tha einai to onoma tou xrwmatos sto VS. To VS an parathrhseis exei kai onomata pera apo RGB. Des an mporeis na to efarmwseis me ta onomata, alliws tha s dwsw RGB
+            categoryColorPanel.BackColor = Utility.FromName(categoryColor);
+            eventNameLabel.Text = eventName;
+            monthLabel.Text = Utility.Month(eventDateTime);
+            dayLabel.Text = Utility.Day(eventDateTime);
             backgroundPictureBox.BackgroundImage = background;
             locationTextBox.Text = venueName;
-            organizerTextBox.Text = organizerName; // !!!!!! Niko, sunduase ta string organizerName kai organizerSurname. Den kathisa na psaksw pws to kaneis, opote prosorina egrapsa mono to organizerName. Allakse to.
-            //dayTimeTextBox.Text = eventDateTime; // !!!!!! Niko, auto vgazei error gt prepei na deis pws na kaneis convert to date se string.
-            ticketPriceLabel.Text = (ticketPrice).ToString(); // !!!!! Tsekare an einai double to ticket price apo th vash. Kai den eimai sigourh an douleuei auth h ToSting().
+            organizerTextBox.Text = organizerName +" "+ organizerSurename ;
+            dayTimeTextBox.Text = Utility.DateToText(eventDateTime);
+            ticketPriceLabel.Text = ticketPrice + "";
             descriptionTextBox.Text = description;
+
+            this.organizerId = organizerId;
+            this.eventId = eventId;
         }
 
         private void friends()
@@ -52,6 +67,11 @@ namespace itHappens.UIs.andrea
             {
                 friendsFlowPanel.Controls.Add(new UIs.Common.FriendsAttending());
             }
+        }
+
+        public void friendsWhoWillAttend(Image friendProfilePicture, string friendName, string friendSurname, string attendingList)
+        {
+            friendsFlowPanel.Controls.Add(new UIs.Common.FriendsAttending(friendProfilePicture, friendName, friendSurname, attendingList));
         }
 
         private void EventProfilePage_Load(object sender, EventArgs e)
@@ -64,9 +84,50 @@ namespace itHappens.UIs.andrea
 
         }
 
+      /*  public static void openEventProfile(object sender, EventArgs e)
+        {
+
+            var eventview = (EventMiniView)sender;
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
+            int eventid = eventview.eventId;
+            var v = Db_connector.Query(@"Select  event.title, venues.name, category.color, user.name ,
+                        user.surname, event.startingDate,
+						event.ticketprice, event.description, user.id , event.id
+						FROM events e JOIN venues v
+						ON e.venueID = v.id
+						JOIN category c
+						ON e.categoryID = c.id
+						JOIN user u
+						ON e.ownerID = u.id
+						WHERE @eventid = e.id",
+                       new string[,] { { "@eventid", eventid + "" } });
+            v.Read();
+            var middlePage = new EventProfilePage(
+                v.GetInt32(8), v.GetInt32(9),
+                v.GetString(0), v.GetString(1),
+                 v.GetString(2), null, v.GetString(3),
+                 v.GetString(4), v.GetDateTime(5),
+                 v.GetDouble(6), v.GetString(7));
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(middlePage);
+            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+            middlePage.Dock = DockStyle.Fill;
+
+        }*/
+
+        private void organizerTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void locationTextBox_TextChanged(object sender, EventArgs e)
+        {
+            Controllers.UIController.Instance.searchToolStripMenuItem_MiddlePanel();
+        }
+
         private void EditButton_Click(object sender, EventArgs e)
         {
             Classes.MiddlePanelMethods.Instance.createEventToolStripMenuItem("edit");
+
         }
     }
 }

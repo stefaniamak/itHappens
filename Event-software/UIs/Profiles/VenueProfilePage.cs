@@ -7,35 +7,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using itHappens.Classes;
+using itHappens.UIs.Common;
+using itHappends;
 
 namespace itHappens.UIs.andrea
 {
     public partial class VenueProfilePage : UserControl
     {
+        public int venueId { get; set; }
+        public int eventId { get; set; }
+
+        private static VenueProfilePage _instance = new VenueProfilePage();
+        public static VenueProfilePage Instance => _instance;
+
         public VenueProfilePage()
         {
             InitializeComponent();
-        }    
+        }
 
         private void VenueProfilePage_Load(object sender, EventArgs e)
         {
             showUserControls();
         }
 
-        public VenueProfilePage(string venueName, Color categoryColor, Image profilePicture, Image venueBackground, Image eventBackground, DateTime eventDateTime)
+        public VenueProfilePage(int venueId, string venueName, Image profilePicture, Image venueBackground)
         {
             InitializeComponent();
 
-            showUserControls();
+            //showUserControls();
 
-            venueNameLabel.Text = venueName; // prosthaise kai to userSurname
+            venueNameLabel.Text = venueName;
             venueProfilePictureOvalPictureBox.BackgroundImage = profilePicture;
-            backgroundPictureBox.BackgroundImage = eventBackground;
-            //monthLabel.Text =      // Tha Kaneis mia methodo pou tha emfanizei ta 3 prwta grammata tou mhna pou ginete, se kefalaia
-            //dayLabel               // Mono thn mera, des to design
-            categoryColorPanel.BackColor = categoryColor; 
-            miniEventBackgroundPictureBox.BackgroundImage = eventBackground;
+            //backgroundPictureBox.BackgroundImage = eventBackground;
+            //monthLabel.Text = Utility.Month(eventDateTime);
+            //dayLabel.Text = Utility.Day(eventDateTime);
+            //categoryColorPanel.BackColor = Color.FromName(categoryColor);
+            //miniEventBackgroundPictureBox.BackgroundImage = eventBackground;
 
+            this.venueId = venueId;
+            this.eventId = eventId;
         }
 
         private void showUserControls()
@@ -51,9 +62,15 @@ namespace itHappens.UIs.andrea
             }
         }
 
+        public void friendsWhoHaveVisited(string friendName, string friendSurname)
+        {
+            friendsVisitedFlowLayoutPanel.Controls.Add(new UIs.Common.FriendsWhoHaveVisited(friendName, friendSurname));
+        }
+
         private void interestedButton_Click(object sender, EventArgs e)
         {
 
         }
+     
     }
 }

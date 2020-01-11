@@ -12,6 +12,7 @@ namespace itHappens.UIs.Common
 {
     public partial class EventMiniView : UserControl
     {
+        public int eventId { get; set; }
         public EventMiniView()
         {
             InitializeComponent();
@@ -30,12 +31,12 @@ namespace itHappens.UIs.Common
         }
 
         //  -----------  Προσωρινός Constructor χωρίς τα insert εικόνων.  -----------
-        public EventMiniView(string categoryColor) : this()
+        public EventMiniView(string categoryColor, int theEventId) : this()
         {
             Color catColor = Color.FromName(categoryColor);
             categoryColorPanel.BackColor = catColor;
             hoverOverPanel.Visible = false;
-
+            this.eventId = theEventId;
         }
 
 
@@ -86,15 +87,31 @@ namespace itHappens.UIs.Common
 
         private void detailsButton_MouseClick(object sender, MouseEventArgs e)
         {
-            // opens Venue Profile Page
+            
         }
 
         private void goingListOvalPictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            // Adds that Event on the GOING list
+            
         }
 
         private void intrestedListOvalPictureBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void detailsButton_Click(object sender, EventArgs e)
+        {
+            // opens Venue Profile Page
+            Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel(this.eventId);
+        }
+
+        private void goingListOvalPictureBox_Click(object sender, EventArgs e)
+        {
+            // Adds that Event on the GOING list
+        }
+
+        private void intrestedListOvalPictureBox_Click(object sender, EventArgs e)
         {
             // Adds that Event on the INTERESTED list
         }
