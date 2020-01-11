@@ -69,7 +69,7 @@ namespace itHappends
 
         public static MySqlDataReader GetEvent(int id)
         {
-            return Query(@"Select * FROM event WHERE id = @id " 
+            return Query(@"Select * FROM event WHERE id = @id "
                         , new string[,] { { "@id", id + "" } });
         }
 

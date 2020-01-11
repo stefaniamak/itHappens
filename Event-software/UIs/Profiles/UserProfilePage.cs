@@ -4,14 +4,27 @@ using System.Windows.Forms;
 using itHappends;
 using itHappens.Classes;
 using itHappens.UIs.Common;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
+using dbstuff;
 
 namespace itHappens.UIs.andrea
 {
+
     public partial class UserProfilePage : UserControl
     {
 
         public int userId { get; set; }
         public int eventId { get; set; }
+
+        private static DbConnector dbCon = new DbConnector();
+        private static string conStr = dbCon.GetConnectionString();
 
         private static UserProfilePage _instance = new UserProfilePage();
         public static UserProfilePage Instance => _instance;
@@ -41,6 +54,49 @@ namespace itHappens.UIs.andrea
 
         }
        
+        private void usersUpcomingEvents()
+        {
+            
+            MySqlConnection con;
+            
+            try
+            {
+                con = new MySqlConnection(conStr);
+                con.Open();
+
+                int userId = UIs.anna.LogInPage.userId;
+                MySqlCommand command;
+                MySqlDataReader dataReader;
+                String queryString = "SELECT ev.id, cat.color, ev.title, ve.name, ev.startingDate   " +
+                                     "FROM users us " +
+                                     "JOIN event_list evL ON us.id = evL.creatorID " +
+                                     "JOIN attendants att ON evL.id = att.eventListID " +
+                                     "JOIN event ev ON att.eventID = ev.id " +
+                                     "JOIN categories cat ON cat.id = ev.categoryID " +
+                                     "JOIN venues ve ON ve.id = ev.venueID " +
+                                     "WHERE us.id = '" + userId + "'";
+
+                command = new MySqlCommand(queryString, con);
+
+                dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    vanueLabel.Text = dataReader.GetString(2);
+
+                    miniCaruselFillWithEventMiniView(dataReader.GetString(1), Convert.ToInt32(dataReader.GetString(0)), dataReader.GetString(2));
+                }
+                con.Close();
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error");
+            }
+            
+        }
+
 
         private void UserProfilePage_Load(object sender, EventArgs e)
         {
@@ -56,9 +112,9 @@ namespace itHappens.UIs.andrea
             }
         }
 
-        public void miniCaruselFillWithEventMiniView(string categoryColor, int theEventId)
+        public void miniCaruselFillWithEventMiniView(string categoryColor, int theEventId, string eventTitle)
         {
-            eventsUserWillAttendCarousel.AddControl(new UIs.Common.EventMiniView(categoryColor, theEventId));
+            eventsUserWillAttendCarousel.AddControl(new UIs.Common.EventMiniView(categoryColor, theEventId, eventTitle));
         }
 
         

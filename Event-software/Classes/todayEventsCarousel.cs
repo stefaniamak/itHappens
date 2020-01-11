@@ -16,10 +16,10 @@ namespace itHappens.Classes
         {
             
             MySqlDataReader reader = Db_connector.ActiveEvents();
-            List<List<string>> Events = Db_connector.Readrows(reader,new int[] { 0 , 3 });
+            List<List<string>> Events = Db_connector.Readrows(reader,new int[] { 0 , 3, 1 });
          
             for (int i = 0; i < Events.Count; i++){
-            EventMiniView obj = new EventMiniView(Events [i][1], Int32.Parse(Events[i][0]));
+            EventMiniView obj = new EventMiniView(Events [i][1], Int32.Parse(Events[i][0]),Events [i][2]);
 
             }
 

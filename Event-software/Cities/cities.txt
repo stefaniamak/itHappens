@@ -1,0 +1,199 @@
+New York
+Los Angeles
+Chicago
+Houston
+Phoenix
+Philadelphia
+San Antonio
+San Diego
+Dallas
+San Jose
+Detroit
+Jacksonville
+Indianapolis
+San Francisco
+Columbus
+Austin
+Memphis
+Fort Worth
+Baltimore
+Charlotte
+El Paso
+Boston
+Seattle
+Washington
+Milwaukee
+Denver
+Louisville/Jefferson County
+Las Vegas
+Nashville-Davidson
+Oklahoma City
+Portland
+Tucson
+Albuquerque
+Atlanta
+Long Beach
+Fresno
+Sacramento
+Mesa
+Kansas City
+Cleveland
+Virginia Beach
+Omaha
+Miami
+Oakland
+Tulsa
+Honolulu
+Minneapolis
+Colorado Springs
+Arlington
+Wichita
+Raleigh
+St. Louis
+Santa Ana
+Anaheim
+Tampa
+Cincinnati
+Pittsburgh
+Bakersfield
+Aurora
+Toledo
+Riverside
+Stockton
+Corpus Christi
+Newark
+Anchorage
+Buffalo
+St. Paul
+Lexington-Fayette
+Plano
+Fort Wayne
+St. Petersburg
+Glendale
+Jersey City
+Lincoln
+Henderson
+Chandler
+Greensboro
+Scottsdale
+Baton Rouge
+Birmingham
+Norfolk
+Madison
+New Orleans
+Chesapeake
+Orlando
+Garland
+Hialeah
+Laredo
+Chula Vista
+Lubbock
+Reno
+Akron
+Durham
+Rochester
+Modesto
+Montgomery
+Fremont
+Shreveport
+Arlington
+Glendale
+Moscow
+London
+Saint Petersburg
+Berlin
+Madrid
+Kyiv
+Rome
+Paris
+Bucharest
+Minsk
+Budapest
+Hamburg
+Warsaw
+Vienna
+Barcelona
+Stockholm
+Kharkiv
+Novosibirsk
+Yekaterinburg
+Nizhniy Novgorod
+Belgrade
+Munich
+Milan
+Prague
+Copenhagen
+Sofia
+Samara
+Omsk
+Kazan
+Rostov-na-Donu
+Chelyabinsk
+Ufa
+Dnipro
+Donetsk
+Dublin
+Brussels
+Volgograd
+Odessa
+Birmingham
+Perm
+Koeln
+Naples
+Krasnoyarsk
+Turin
+Liverpool
+Saratov
+Voronezh
+Valencia
+Zaporizhia
+Marseille
+Lodz
+Krakow
+Riga
+Amsterdam
+Nottingham
+Lviv
+Sevilla
+Tol'yatti
+Zagreb
+Sarajevo
+Sheffield
+Zaragoza
+Athens
+Kryvyi Rih
+Frankfurt am Main
+Krasnodar
+Palermo
+Ulyanovsk
+Chisinau
+Wroclaw
+Izhevsk
+Bristol
+Yaroslavl
+Barnaul
+Rotterdam
+Essen
+Glasgow
+Stuttgart
+Dortmund
+Vladivostok
+Irkutsk
+Genoa
+Oslo
+Khabarovsk
+Khabarovsk Vtoroy
+Duesseldorf
+Goeteborg
+Poznan
+Malaga
+Helsinki
+Orenburg
+Bremen
+Vilnius
+Novokuznetsk
+Ryazan'
+Tyumen
+Lisbon
+Lipetsk
+Hannover

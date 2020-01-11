@@ -66,9 +66,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ticketPictureBox)).BeginInit();
             this.friendsAttendingPanel.SuspendLayout();
             this.SuspendLayout();
-            //
+            // 
             // panel3
-            //
+            // 
             this.panel3.Controls.Add(this.tableLayoutPanel1);
             this.panel3.Controls.Add(this.menuTabControl);
             this.panel3.Controls.Add(this.friendsAttendingPanel);
@@ -81,10 +81,10 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(976, 710);
             this.panel3.TabIndex = 1;
-            //
+            // 
             // tableLayoutPanel1
-            //
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -100,9 +100,9 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(943, 297);
             this.tableLayoutPanel1.TabIndex = 9;
-            //
+            // 
             // topBarPanel
-            //
+            // 
             this.topBarPanel.Controls.Add(this.backgroundPictureBox);
             this.topBarPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.topBarPanel.Location = new System.Drawing.Point(3, 24);
@@ -110,11 +110,11 @@
             this.topBarPanel.Name = "topBarPanel";
             this.topBarPanel.Size = new System.Drawing.Size(937, 269);
             this.topBarPanel.TabIndex = 17;
-            //
+            // 
             // backgroundPictureBox
-            //
-            this.backgroundPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this.backgroundPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.backgroundPictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.backgroundPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backgroundPictureBox.BackgroundImage")));
@@ -126,9 +126,9 @@
             this.backgroundPictureBox.Size = new System.Drawing.Size(937, 766);
             this.backgroundPictureBox.TabIndex = 3;
             this.backgroundPictureBox.TabStop = false;
-            //
+            // 
             // categoryColorPanel
-            //
+            // 
             this.categoryColorPanel.BackColor = System.Drawing.Color.Red;
             this.categoryColorPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.categoryColorPanel.ForeColor = System.Drawing.Color.DarkOrange;
@@ -136,11 +136,11 @@
             this.categoryColorPanel.Name = "categoryColorPanel";
             this.categoryColorPanel.Size = new System.Drawing.Size(937, 14);
             this.categoryColorPanel.TabIndex = 18;
-            //
+            // 
             // menuTabControl
-            //
-            this.menuTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this.menuTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.menuTabControl.Controls.Add(this.eventsTabPage);
             this.menuTabControl.Controls.Add(this.galleryTabPage);
@@ -152,9 +152,9 @@
             this.menuTabControl.SelectedIndex = 0;
             this.menuTabControl.Size = new System.Drawing.Size(721, 392);
             this.menuTabControl.TabIndex = 16;
-            //
+            // 
             // eventsTabPage
-            //
+            // 
             this.eventsTabPage.AutoScroll = true;
             this.eventsTabPage.BackColor = System.Drawing.SystemColors.Control;
             this.eventsTabPage.Controls.Add(this.EditButton);
@@ -165,17 +165,17 @@
             this.eventsTabPage.Controls.Add(this.dayTimeTextBox);
             this.eventsTabPage.Controls.Add(this.descriptionTextBox);
             this.eventsTabPage.Controls.Add(this.descriptionLabel);
-            this.eventsTabPage.Location = new System.Drawing.Point(4, 30);
+            this.eventsTabPage.Location = new System.Drawing.Point(8, 40);
             this.eventsTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.eventsTabPage.Name = "eventsTabPage";
             this.eventsTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.eventsTabPage.Size = new System.Drawing.Size(713, 358);
+            this.eventsTabPage.Size = new System.Drawing.Size(705, 344);
             this.eventsTabPage.TabIndex = 0;
             this.eventsTabPage.Text = "DETAILS";
-            //
+            // 
             // EditButton
-            //
-            this.EditButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            // 
+            this.EditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.EditButton.Location = new System.Drawing.Point(607, 6);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(75, 48);
@@ -184,79 +184,79 @@
             this.EditButton.UseVisualStyleBackColor = true;
             this.EditButton.Visible = false;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
-            //
+            // 
             // ticketPanel
-            //
+            // 
             this.ticketPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ticketPanel.Controls.Add(this.ticketPriceLabel);
             this.ticketPanel.Controls.Add(this.ticketPictureBox);
-            this.ticketPanel.Location = new System.Drawing.Point(384, 34);
+            this.ticketPanel.Location = new System.Drawing.Point(353, 34);
             this.ticketPanel.Name = "ticketPanel";
             this.ticketPanel.Size = new System.Drawing.Size(159, 105);
             this.ticketPanel.TabIndex = 8;
-            //
+            // 
             // ticketPriceLabel
-            //
+            // 
             this.ticketPriceLabel.AutoSize = true;
-            this.ticketPriceLabel.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ticketPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ticketPriceLabel.Location = new System.Drawing.Point(55, 31);
             this.ticketPriceLabel.Name = "ticketPriceLabel";
-            this.ticketPriceLabel.Size = new System.Drawing.Size(83, 61);
+            this.ticketPriceLabel.Size = new System.Drawing.Size(107, 76);
             this.ticketPriceLabel.TabIndex = 7;
             this.ticketPriceLabel.Text = "$5";
             this.ticketPriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            //
+            // 
             // ticketPictureBox
-            //
+            // 
             this.ticketPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ticketPictureBox.Location = new System.Drawing.Point(0, 0);
             this.ticketPictureBox.Name = "ticketPictureBox";
             this.ticketPictureBox.Size = new System.Drawing.Size(159, 105);
             this.ticketPictureBox.TabIndex = 6;
             this.ticketPictureBox.TabStop = false;
-            //
+            // 
             // detailsLabel
-            //
+            // 
             this.detailsLabel.AutoSize = true;
-            this.detailsLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detailsLabel.Location = new System.Drawing.Point(37, 20);
             this.detailsLabel.Name = "detailsLabel";
-            this.detailsLabel.Size = new System.Drawing.Size(84, 25);
+            this.detailsLabel.Size = new System.Drawing.Size(105, 36);
             this.detailsLabel.TabIndex = 0;
             this.detailsLabel.Text = "Details";
-            //
+            // 
             // locationTextBox
-            //
+            // 
             this.locationTextBox.Location = new System.Drawing.Point(27, 52);
             this.locationTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.locationTextBox.Name = "locationTextBox";
-            this.locationTextBox.Size = new System.Drawing.Size(165, 28);
+            this.locationTextBox.Size = new System.Drawing.Size(165, 32);
             this.locationTextBox.TabIndex = 1;
             this.locationTextBox.Text = "Location";
             this.locationTextBox.TextChanged += new System.EventHandler(this.locationTextBox_TextChanged);
-            //
+            // 
             // organizerTextBox
-            //
+            // 
             this.organizerTextBox.Location = new System.Drawing.Point(27, 84);
             this.organizerTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.organizerTextBox.Name = "organizerTextBox";
-            this.organizerTextBox.Size = new System.Drawing.Size(165, 28);
+            this.organizerTextBox.Size = new System.Drawing.Size(165, 32);
             this.organizerTextBox.TabIndex = 2;
             this.organizerTextBox.Text = "Organizer";
             this.organizerTextBox.TextChanged += new System.EventHandler(this.organizerTextBox_TextChanged);
-            //
+            // 
             // dayTimeTextBox
-            //
+            // 
             this.dayTimeTextBox.Location = new System.Drawing.Point(27, 116);
             this.dayTimeTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dayTimeTextBox.Name = "dayTimeTextBox";
-            this.dayTimeTextBox.Size = new System.Drawing.Size(165, 28);
+            this.dayTimeTextBox.Size = new System.Drawing.Size(165, 32);
             this.dayTimeTextBox.TabIndex = 3;
             this.dayTimeTextBox.Text = "Date | Time";
-            //
+            // 
             // descriptionTextBox
-            //
-            this.descriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this.descriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.descriptionTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.descriptionTextBox.Location = new System.Drawing.Point(27, 197);
@@ -264,73 +264,73 @@
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.ReadOnly = true;
-            this.descriptionTextBox.Size = new System.Drawing.Size(479, 187);
+            this.descriptionTextBox.Size = new System.Drawing.Size(448, 187);
             this.descriptionTextBox.TabIndex = 5;
-            //
+            // 
             // descriptionLabel
-            //
+            // 
             this.descriptionLabel.AutoSize = true;
-            this.descriptionLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descriptionLabel.Location = new System.Drawing.Point(37, 165);
             this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(130, 25);
+            this.descriptionLabel.Size = new System.Drawing.Size(165, 36);
             this.descriptionLabel.TabIndex = 4;
             this.descriptionLabel.Text = "Description";
             this.descriptionLabel.Click += new System.EventHandler(this.descriptionLabel_Click);
-            //
+            // 
             // galleryTabPage
-            //
+            // 
             this.galleryTabPage.AutoScroll = true;
             this.galleryTabPage.BackColor = System.Drawing.SystemColors.Control;
-            this.galleryTabPage.Location = new System.Drawing.Point(4, 30);
+            this.galleryTabPage.Location = new System.Drawing.Point(8, 40);
             this.galleryTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.galleryTabPage.Name = "galleryTabPage";
             this.galleryTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.galleryTabPage.Size = new System.Drawing.Size(713, 358);
+            this.galleryTabPage.Size = new System.Drawing.Size(705, 344);
             this.galleryTabPage.TabIndex = 3;
             this.galleryTabPage.Text = "GALLERY";
-            //
+            // 
             // visitorsabPage
-            //
+            // 
             this.visitorsabPage.AutoScroll = true;
             this.visitorsabPage.BackColor = System.Drawing.SystemColors.Control;
-            this.visitorsabPage.Location = new System.Drawing.Point(4, 30);
+            this.visitorsabPage.Location = new System.Drawing.Point(8, 40);
             this.visitorsabPage.Margin = new System.Windows.Forms.Padding(2);
             this.visitorsabPage.Name = "visitorsabPage";
             this.visitorsabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.visitorsabPage.Size = new System.Drawing.Size(713, 358);
+            this.visitorsabPage.Size = new System.Drawing.Size(705, 344);
             this.visitorsabPage.TabIndex = 2;
             this.visitorsabPage.Text = "VISITORS ALSO LIKE";
-            //
+            // 
             // friendsAttendingPanel
-            //
-            this.friendsAttendingPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            // 
+            this.friendsAttendingPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.friendsAttendingPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.friendsAttendingPanel.Controls.Add(this.friendsAttendingLabel);
             this.friendsAttendingPanel.Controls.Add(this.friendsFlowPanel);
-            this.friendsAttendingPanel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.friendsAttendingPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.friendsAttendingPanel.Location = new System.Drawing.Point(766, 363);
             this.friendsAttendingPanel.Margin = new System.Windows.Forms.Padding(2);
             this.friendsAttendingPanel.Name = "friendsAttendingPanel";
             this.friendsAttendingPanel.Size = new System.Drawing.Size(194, 347);
             this.friendsAttendingPanel.TabIndex = 15;
-            //
+            // 
             // friendsAttendingLabel
-            //
+            // 
             this.friendsAttendingLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.friendsAttendingLabel.AutoSize = true;
             this.friendsAttendingLabel.ForeColor = System.Drawing.Color.DarkOrange;
             this.friendsAttendingLabel.Location = new System.Drawing.Point(25, 14);
             this.friendsAttendingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.friendsAttendingLabel.Name = "friendsAttendingLabel";
-            this.friendsAttendingLabel.Size = new System.Drawing.Size(198, 25);
+            this.friendsAttendingLabel.Size = new System.Drawing.Size(251, 36);
             this.friendsAttendingLabel.TabIndex = 0;
             this.friendsAttendingLabel.Text = "Friends Attending";
-            //
+            // 
             // friendsFlowPanel
-            //
-            this.friendsFlowPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this.friendsFlowPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.friendsFlowPanel.AutoSize = true;
             this.friendsFlowPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -341,12 +341,12 @@
             this.friendsFlowPanel.Name = "friendsFlowPanel";
             this.friendsFlowPanel.Size = new System.Drawing.Size(0, 0);
             this.friendsFlowPanel.TabIndex = 1;
-            //
+            // 
             // goingButton
-            //
+            // 
             this.goingButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.goingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.goingButton.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goingButton.ForeColor = System.Drawing.Color.Lime;
             this.goingButton.Location = new System.Drawing.Point(867, 318);
             this.goingButton.Margin = new System.Windows.Forms.Padding(2);
@@ -355,12 +355,13 @@
             this.goingButton.TabIndex = 14;
             this.goingButton.Text = "GOING";
             this.goingButton.UseVisualStyleBackColor = false;
-            //
+            this.goingButton.Click += new System.EventHandler(this.goingButton_Click);
+            // 
             // interestedButton
-            //
+            // 
             this.interestedButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.interestedButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.interestedButton.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.interestedButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.interestedButton.ForeColor = System.Drawing.Color.Yellow;
             this.interestedButton.Location = new System.Drawing.Point(769, 318);
             this.interestedButton.Margin = new System.Windows.Forms.Padding(2);
@@ -369,55 +370,56 @@
             this.interestedButton.TabIndex = 13;
             this.interestedButton.Text = "INTRESTED";
             this.interestedButton.UseVisualStyleBackColor = false;
-            //
+            this.interestedButton.Click += new System.EventHandler(this.interestedButton_Click);
+            // 
             // eventNameLabel
-            //
-            this.eventNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            // 
+            this.eventNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.eventNameLabel.AutoSize = true;
             this.eventNameLabel.BackColor = System.Drawing.Color.Black;
-            this.eventNameLabel.Font = new System.Drawing.Font("Century Gothic", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eventNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventNameLabel.ForeColor = System.Drawing.Color.DarkOrange;
             this.eventNameLabel.Location = new System.Drawing.Point(38, 255);
             this.eventNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.eventNameLabel.Name = "eventNameLabel";
-            this.eventNameLabel.Size = new System.Drawing.Size(328, 61);
+            this.eventNameLabel.Size = new System.Drawing.Size(396, 75);
             this.eventNameLabel.TabIndex = 8;
             this.eventNameLabel.Text = "Event Name";
-            //
+            // 
             // dayLabel
-            //
-            this.dayLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            // 
+            this.dayLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dayLabel.AutoSize = true;
             this.dayLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.dayLabel.Font = new System.Drawing.Font("Century Gothic", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayLabel.ForeColor = System.Drawing.Color.DarkOrange;
             this.dayLabel.Location = new System.Drawing.Point(835, 102);
             this.dayLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dayLabel.Name = "dayLabel";
-            this.dayLabel.Size = new System.Drawing.Size(115, 86);
+            this.dayLabel.Size = new System.Drawing.Size(149, 107);
             this.dayLabel.TabIndex = 4;
             this.dayLabel.Text = "25";
-            //
+            // 
             // monthLabel
-            //
-            this.monthLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            // 
+            this.monthLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.monthLabel.AutoSize = true;
             this.monthLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.monthLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.monthLabel.ForeColor = System.Drawing.Color.DarkOrange;
             this.monthLabel.Location = new System.Drawing.Point(835, 66);
             this.monthLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.monthLabel.Name = "monthLabel";
-            this.monthLabel.Size = new System.Drawing.Size(117, 50);
+            this.monthLabel.Size = new System.Drawing.Size(144, 63);
             this.monthLabel.TabIndex = 5;
             this.monthLabel.Text = "NOV";
-            //
+            // 
             // EventProfilePage
-            //
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -425,7 +427,7 @@
             this.Controls.Add(this.monthLabel);
             this.Controls.Add(this.dayLabel);
             this.Controls.Add(this.panel3);
-            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DarkOrange;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "EventProfilePage";

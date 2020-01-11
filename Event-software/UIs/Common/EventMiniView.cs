@@ -31,12 +31,16 @@ namespace itHappens.UIs.Common
         }
 
         //  -----------  Προσωρινός Constructor χωρίς τα insert εικόνων.  -----------
-        public EventMiniView(string categoryColor, int theEventId) : this()
+        public EventMiniView(string categoryColor, int theEventId, string eventTitle) : this()
         {
             Color catColor = Color.FromName(categoryColor);
             categoryColorPanel.BackColor = catColor;
             hoverOverPanel.Visible = false;
+
             eventId = theEventId;
+
+            eventTitleLabel.Text = eventTitle;
+
         }
 
 
@@ -47,22 +51,22 @@ namespace itHappens.UIs.Common
 
         private void hoverOverPanel_MouseHover(object sender, EventArgs e)
         {
-          
+
         }
 
         private void hoverOverPanel_MouseEnter(object sender, EventArgs e)
         {
-           
+
         }
 
         private void EventMiniView_MouseEnter(object sender, EventArgs e)
         {
-            
+
         }
 
         private void eventPictureBox_MouseHover(object sender, EventArgs e)
         {
-            
+
         }
 
         private void EventMiniView_MouseHover(object sender, EventArgs e)
@@ -87,17 +91,17 @@ namespace itHappens.UIs.Common
 
         private void detailsButton_MouseClick(object sender, MouseEventArgs e)
         {
-            
+
         }
 
         private void goingListOvalPictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            
+
         }
 
         private void intrestedListOvalPictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            
+
         }
 
         private void detailsButton_Click(object sender, EventArgs e)

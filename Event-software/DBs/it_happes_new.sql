@@ -93,6 +93,7 @@ CREATE TABLE IF NOT EXISTS `it_happens`.`users` (
   `name` TEXT NOT NULL,
   `surname` TEXT NOT NULL,
   `age` INT(11) NOT NULL,
+  `image` VARCHAR(250) DEFAULT NULL,	
   PRIMARY KEY (`id`),
   INDEX `area_id` (`areaID` ASC) VISIBLE,
   CONSTRAINT `area_id`
@@ -120,6 +121,7 @@ CREATE TABLE IF NOT EXISTS `it_happens`.`event` (
   `description` TEXT NOT NULL,
   `tags` TEXT NULL DEFAULT NULL,
   `ticketprice` DOUBLE NULL DEFAULT NULL,
+  `image` VARCHAR(250) DEFAULT NULL,
   PRIMARY KEY (`id`),
   INDEX `categoryID_idx` (`categoryID` ASC) VISIBLE,
   INDEX `venueID_idx` (`venueID` ASC) VISIBLE,
@@ -211,7 +213,7 @@ ENGINE = InnoDB;
 
 
 
-INSERT into Users (id,areaID,Username,password,email,name,surname,age) values (1,1,1,1,1,1,1,1);
+INSERT into Users (id,areaID,username,password,email,name,surname,age,image) values (1,1,1,1,1,1,1,1,1);
 
 INSERT into categories (id,categories,title,color, parent) values (1,'Entertainment','ENTERTAINMENT','Red', 0);
 INSERT into categories (id,categories,title,color, parent) values (2,'Educational','EDUCATIONAL','Blue', 0);

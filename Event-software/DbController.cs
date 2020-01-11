@@ -1,10 +1,13 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Drawing;
+using System.Net;
 
 namespace dbstuff
 {
@@ -152,10 +155,10 @@ namespace dbstuff
             return (long)(int)sCommand.ExecuteScalar();
         }
 
-        public void addEventRecord(string title, long ownerID, long venueID, long categoryID, Nullable<DateTime> startingDate, Nullable<DateTime> endingDate, string description, double ticketprice)
+        public void addEventRecord(string title, long ownerID, long venueID, long categoryID, Nullable<DateTime> startingDate, Nullable<DateTime> endingDate, string description, double ticketprice, string image)
         {
-            string s = @"insert into event (title, ownerID, venueID, categoryID, startingDate, endingDate, description, tags, ticketprice)
-		                    values ( @title, @ownerID, @venueID, @categoryID, @startingDate, @endingDate, @description, @tags, @ticketPrice)";
+            string s = @"insert into event (title, ownerID, venueID, categoryID, startingDate, endingDate, description, tags, ticketprice, image)
+		                    values ( @title, @ownerID, @venueID, @categoryID, @startingDate, @endingDate, @description, @tags, @ticketPrice, @image)";
             var sCommand = new MySqlCommand(s, con);
 
 
@@ -170,6 +173,7 @@ namespace dbstuff
             sCommand.Parameters.AddWithValue("@description", description);
             sCommand.Parameters.AddWithValue("@tags", "");
             sCommand.Parameters.AddWithValue("@ticketprice", ticketprice);
+            sCommand.Parameters.AddWithValue("@image", image);
             sCommand.ExecuteNonQuery();
         }
 
@@ -202,7 +206,7 @@ namespace dbstuff
             sCommand.Parameters.AddWithValue("@continent", "Europe");
             sCommand.Parameters.AddWithValue("@country", country);
             sCommand.Parameters.AddWithValue("@city", city);
-            sCommand.Parameters.AddWithValue("@zip_code", 141414);
+            sCommand.Parameters.AddWithValue("@zip_code", zip_code);
             sCommand.Parameters.AddWithValue("@address", address);
             sCommand.ExecuteNonQuery();
 
@@ -275,11 +279,11 @@ namespace dbstuff
         }
 
         //Needs Testing
-        public void addGoing(string eventID, int userID)
+        public void addGoing(int eventID, int userID)
         {
             string s = @"insert into attendants (eventListID, eventID)
 		                    values (@eventListId, @eventID)";
-            long eventListID = getUsersEventList(userID, "Going");
+            long eventListID = getUsersEventList(userID, "GOING");
 
             var sCommand = new MySqlCommand(s, con);
             sCommand.Parameters.AddWithValue("(@eventListID", eventListID);
@@ -289,17 +293,23 @@ namespace dbstuff
         }
 
         //Needs Testing
-        public void addInterested(string eventID, int userID)
+        public void addInterested(int eventID, int userID)
         {
-            string s = @"insert into attendants (eventListID, eventID)
+            string s = @"insert into attendants (eventListId, eventID)
 		                    values (@eventListId, @eventID)";
 
-            long eventListID = getUsersEventList(userID, "Interested");
-
-            var sCommand = new MySqlCommand(s, con);
-            sCommand.Parameters.AddWithValue("(@eventListID", eventListID);
+            long eventListId = getUsersEventList(userID, "INTERESTED");
+            if (eventListId.Equals(null)) {
+                Console.WriteLine("event list not found bro");
+            }
+            else
+            {
+ var sCommand = new MySqlCommand(s, con);
+            sCommand.Parameters.AddWithValue("@eventListId", eventListId);
             sCommand.Parameters.AddWithValue("@userID", userID);
             sCommand.ExecuteNonQuery();
+            }
+
 
         }
 
@@ -312,7 +322,21 @@ namespace dbstuff
             sCommand.Parameters.AddWithValue("@title", title);
             object tmp = sCommand.ExecuteScalar();
             Console.WriteLine(tmp);
-            return (long)(int)sCommand.ExecuteScalar();
+            return (long)(int)tmp;
+        }
+
+        //Check if event exists in UsersEventList
+
+        // Use it to grab images e.x. ( var image = GetImageFromPicPath(imageUrl)s )
+        public static Image GetImageFromPath(string strUrl)
+        {
+            using (WebResponse wrFileResponse = WebRequest.Create(strUrl).GetResponse())
+            using (Stream objWebStream = wrFileResponse.GetResponseStream())
+            {
+                MemoryStream ms = new MemoryStream();
+                objWebStream.CopyTo(ms, 8192);
+                return System.Drawing.Image.FromStream(ms);
+            }
         }
 
 
