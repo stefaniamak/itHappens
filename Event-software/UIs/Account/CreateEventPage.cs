@@ -17,6 +17,7 @@ namespace itHappens.UIs.anna
 
         private static DbConnector dbCon = new DbConnector();
         private static string conStr = dbCon.GetConnectionString();
+        public int eventID = 41; //tha pairnei to id tou event
 
         public CreateEventPage(String s)
         {
@@ -44,11 +45,11 @@ namespace itHappens.UIs.anna
             {
                 InitializeComponent();
                 CreateEventTitleLabel.Text = "Edit Event";
-                CreateEventButton.Text = "Update Event";
+                CreateEventButton.Text = "Update event";
                 fillVenues();
                 fillCategories();
                 fillTime();
-                getEventDataAndFillTheFields(41); //Tha pairnei to id tou event
+                getEventDataAndFillTheFields(eventID); 
 
             }
         }
@@ -293,30 +294,67 @@ namespace itHappens.UIs.anna
             }
             else
             {
-                //if edit h create
-                DateTime StartingDate = convertDate(SYearcomboBox.Text,SMonthcomboBox.Text,
-                                                    SDaycomboBox.Text,HourComboBox.Text,MinutesComboBox.Text);
-                DateTime EndingDate = convertDate(EYearcomboBox.Text, EMonthcomboBox.Text,
-                                                    EDaycomboBox.Text, "0", "0");
-                int venue = getVenueId(VenuecomboBox.Text);
-                int category = getCategoryId(CategorycomboBox.Text);
-                int ownerId = getOwnerId(UIs.anna.LogInPage.userName);
-                createEventCon(EventNameTextbox.Text,venue,ownerId,StartingDate,EndingDate,category,TagsTextbox.Text,
-                    Convert.ToDouble(PriceTextbox.Text),DescTextbox.Text);
-                MessageBox.Show("You successfully made an event!","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                if (CreateEventButton.Text.Equals("Create event"))
+                {
+                    DateTime StartingDate = convertDate(SYearcomboBox.Text, SMonthcomboBox.Text,
+                                                        SDaycomboBox.Text, HourComboBox.Text, MinutesComboBox.Text);
+                    DateTime EndingDate = convertDate(EYearcomboBox.Text, EMonthcomboBox.Text,
+                                                        EDaycomboBox.Text, "0", "0");
+                    int venue = getVenueId(VenuecomboBox.Text);
+                    int category = getCategoryId(CategorycomboBox.Text);
+                    int ownerId = getOwnerId(UIs.anna.LogInPage.userName);
+                    createEventCon(EventNameTextbox.Text, venue, ownerId, StartingDate, EndingDate, category, TagsTextbox.Text,
+                        Convert.ToDouble(PriceTextbox.Text), DescTextbox.Text);
+                    MessageBox.Show("You successfully made an event!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                //Emfanish tou EventProfile (kanonika tha prepei me ta stoixeia tou event)
-                Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel();
+                    //Emfanish tou EventProfile (kanonika tha prepei me ta stoixeia tou event)
+                    Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel();
 
-                clearTextBoxes();
-                SDaycomboBox.SelectedIndex = 0;
-                EDaycomboBox.SelectedIndex = 0;
-                SMonthcomboBox.SelectedIndex = 0;
-                EMonthcomboBox.SelectedIndex = 0;
-                SYearcomboBox.SelectedIndex = 0;
-                EYearcomboBox.SelectedIndex = 0;
-                HourComboBox.SelectedIndex = 0;
-                MinutesComboBox.SelectedIndex = 0;
+                    clearTextBoxes();
+                    SDaycomboBox.SelectedIndex = 0;
+                    EDaycomboBox.SelectedIndex = 0;
+                    SMonthcomboBox.SelectedIndex = 0;
+                    EMonthcomboBox.SelectedIndex = 0;
+                    SYearcomboBox.SelectedIndex = 0;
+                    EYearcomboBox.SelectedIndex = 0;
+                    HourComboBox.SelectedIndex = 0;
+                    MinutesComboBox.SelectedIndex = 0;
+                }
+                else if(CreateEventButton.Text.Equals("Update event"))
+                {
+                    DateTime StartingDate = convertDate(SYearcomboBox.Text, SMonthcomboBox.Text,
+                                                        SDaycomboBox.Text, HourComboBox.Text, MinutesComboBox.Text);
+                    DateTime EndingDate = convertDate(EYearcomboBox.Text, EMonthcomboBox.Text,
+                                                        EDaycomboBox.Text, "0", "0");
+                    int venue = getVenueId(VenuecomboBox.Text);
+                    int category = getCategoryId(CategorycomboBox.Text);
+                    int ownerId = getOwnerId(UIs.anna.LogInPage.userName);
+                    if(CheckIfThereAreChangesOfEvent(eventID, EventNameTextbox.Text,venue,category,StartingDate,EndingDate,
+                        DescTextbox.Text,TagsTextbox.Text, Convert.ToDouble(PriceTextbox.Text)))
+                    {
+                        UpdateEvent(EventNameTextbox.Text,venue,category,StartingDate,EndingDate,
+                            DescTextbox.Text, TagsTextbox.Text, Convert.ToDouble(PriceTextbox.Text));
+
+                        MessageBox.Show("You successfully update your event!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        //Emfanish tou EventProfile (kanonika tha prepei me ta stoixeia tou event)
+                        Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel();
+
+                        clearTextBoxes();
+                        SDaycomboBox.SelectedIndex = 0;
+                        EDaycomboBox.SelectedIndex = 0;
+                        SMonthcomboBox.SelectedIndex = 0;
+                        EMonthcomboBox.SelectedIndex = 0;
+                        SYearcomboBox.SelectedIndex = 0;
+                        EYearcomboBox.SelectedIndex = 0;
+                        HourComboBox.SelectedIndex = 0;
+                        MinutesComboBox.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        MessageBox.Show("There are no changes to update","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    }
+                }
             }
         }
 
@@ -576,6 +614,83 @@ namespace itHappens.UIs.anna
                 Console.WriteLine("Error");
             }
 
+        }
+
+        public bool CheckIfThereAreChangesOfEvent(int eventid,String Etitle,int EvenueID,int EcategoryID,
+            DateTime EsDate, DateTime EeDate, String Edesc ,String Etags, double Eticketprice)
+        {
+            MySqlConnection con;
+            bool result = false;
+
+            try
+            {
+                con = new MySqlConnection(conStr);
+                con.Open();
+
+                MySqlCommand command;
+                MySqlDataReader dataReader;
+                String queryString = "Select title,venueID,categoryID,startingDate,endingDate" +
+                    ",description,tags,ticketprice from event where id=" + eventid + "";
+
+
+                command = new MySqlCommand(queryString, con);
+
+                dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    if (!Etitle.Equals(dataReader.GetString(0)) || !EvenueID.Equals(dataReader.GetInt32(1)) 
+                        || !EcategoryID.Equals(dataReader.GetInt32(2)) || !EsDate.Equals(dataReader.GetDateTime(3))
+                        || !EeDate.Equals(dataReader.GetDateTime(4)) || !Edesc.Equals(dataReader.GetString(5)) 
+                        || !Etags.Equals(dataReader.GetString(6)) || !Eticketprice.Equals(dataReader.GetDouble(7)))
+                    {
+                        result = true;
+                    }
+                }
+                con.Close();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error");
+            }
+
+            return result;
+        }
+
+        public void UpdateEvent(String Etitle, int EvenueID, int EcategoryID,
+            DateTime EsDate, DateTime EeDate, String Edesc, String Etags, double Eticketprice)
+        {
+            MySqlConnection con;
+
+            try
+            {
+                con = new MySqlConnection(conStr);
+                con.Open();
+
+                MySqlCommand cmd = con.CreateCommand(); ;
+
+                String query = "Update event set title=@title, venueID=@venueID, categoryID=@categoryID," +
+                    "startingDate=@startingDate, endingDate=@endingDate, description=@description, tags=@tags," +
+                    "ticketprice=@ticketprice where id="+eventID+"";
+
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@title", Etitle);
+                cmd.Parameters.AddWithValue("@venueID", EvenueID);
+                cmd.Parameters.AddWithValue("@categoryID", EcategoryID);
+                cmd.Parameters.AddWithValue("@startingDate", EsDate);
+                cmd.Parameters.AddWithValue("@endingDate", EeDate);
+                cmd.Parameters.AddWithValue("@description", Edesc);
+                cmd.Parameters.AddWithValue("@tags", Etags);
+                cmd.Parameters.AddWithValue("@ticketprice", Eticketprice);
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch
+            {
+                Console.WriteLine("Error Update Event Statement");
+            }
         }
 
     }

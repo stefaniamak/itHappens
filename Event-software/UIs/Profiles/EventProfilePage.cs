@@ -63,5 +63,10 @@ namespace itHappens.UIs.andrea
         {
 
         }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            Classes.MiddlePanelMethods.Instance.createEventToolStripMenuItem("edit");
+        }
     }
 }

@@ -36,6 +36,7 @@
             this.categoryColorPanel = new System.Windows.Forms.Panel();
             this.menuTabControl = new System.Windows.Forms.TabControl();
             this.eventsTabPage = new System.Windows.Forms.TabPage();
+            this.EditButton = new System.Windows.Forms.Button();
             this.ticketPanel = new System.Windows.Forms.Panel();
             this.ticketPriceLabel = new System.Windows.Forms.Label();
             this.ticketPictureBox = new System.Windows.Forms.PictureBox();
@@ -55,7 +56,6 @@
             this.eventNameLabel = new System.Windows.Forms.Label();
             this.dayLabel = new System.Windows.Forms.Label();
             this.monthLabel = new System.Windows.Forms.Label();
-            this.EditButton = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.topBarPanel.SuspendLayout();
@@ -173,12 +173,24 @@
             this.eventsTabPage.TabIndex = 0;
             this.eventsTabPage.Text = "DETAILS";
             // 
+            // EditButton
+            // 
+            this.EditButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.EditButton.Location = new System.Drawing.Point(607, 6);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(75, 48);
+            this.EditButton.TabIndex = 9;
+            this.EditButton.Text = "EDIT";
+            this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Visible = false;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
+            // 
             // ticketPanel
             // 
             this.ticketPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ticketPanel.Controls.Add(this.ticketPriceLabel);
             this.ticketPanel.Controls.Add(this.ticketPictureBox);
-            this.ticketPanel.Location = new System.Drawing.Point(410, 34);
+            this.ticketPanel.Location = new System.Drawing.Point(393, 34);
             this.ticketPanel.Name = "ticketPanel";
             this.ticketPanel.Size = new System.Drawing.Size(159, 105);
             this.ticketPanel.TabIndex = 8;
@@ -250,7 +262,7 @@
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.ReadOnly = true;
-            this.descriptionTextBox.Size = new System.Drawing.Size(505, 187);
+            this.descriptionTextBox.Size = new System.Drawing.Size(488, 187);
             this.descriptionTextBox.TabIndex = 5;
             // 
             // descriptionLabel
@@ -400,17 +412,6 @@
             this.monthLabel.Size = new System.Drawing.Size(77, 33);
             this.monthLabel.TabIndex = 5;
             this.monthLabel.Text = "NOV";
-            // 
-            // EditButton
-            // 
-            this.EditButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.EditButton.Location = new System.Drawing.Point(607, 6);
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(75, 48);
-            this.EditButton.TabIndex = 9;
-            this.EditButton.Text = "EDIT";
-            this.EditButton.UseVisualStyleBackColor = true;
-            this.EditButton.Visible = false;
             // 
             // EventProfilePage
             // 
