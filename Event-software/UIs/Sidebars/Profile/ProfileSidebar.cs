@@ -21,12 +21,10 @@ namespace itHappens.UIs.Sidebars
 
         private void LogoutButton_Click(object sender, EventArgs e)
         {
-            UIs.anna.LogInPage.loggedInUser = false;
+            
             usernameLable.Text = "Username";
             LogoutButton.Visible = false;
-            Controllers.UIController.Instance.openHostForMainAndSearchPage();
-            Controllers.UIController.Instance.openCommonSearchTextPage("main");
-            Controllers.UIController.Instance.showSidebars("Username");
+            Controllers.LogoutController.Instance.logoutActions();
         }
 
         private void userLogedIn(string username)
