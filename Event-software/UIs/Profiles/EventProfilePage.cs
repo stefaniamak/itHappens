@@ -104,5 +104,15 @@ namespace itHappens.UIs.andrea
             middlePage.Dock = DockStyle.Fill;
            */
         }
+
+        private void organizerTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void locationTextBox_TextChanged(object sender, EventArgs e)
+        {
+            Controllers.UIController.Instance.searchToolStripMenuItem_MiddlePanel();
+        }
     }
 }

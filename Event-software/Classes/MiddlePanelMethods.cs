@@ -79,7 +79,7 @@ namespace itHappens.Classes
             }
             else
             {
-                theUserProfilePage = new UIs.andrea.UserProfilePage();
+                theEventProfilePage = new UIs.andrea.EventProfilePage();
             }
 
             UIs.Common.MainSplitForm.middlePanel.Controls.Add(theEventProfilePage);
