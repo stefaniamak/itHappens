@@ -17,7 +17,7 @@ namespace dbstuff
         private static DbConnector dbCon = new DbConnector();
         private string conStr = dbCon.GetConnectionString();
 
-        //string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+        //string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=;";
 
         MySqlConnection con;
 

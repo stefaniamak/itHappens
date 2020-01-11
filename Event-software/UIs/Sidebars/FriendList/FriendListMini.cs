@@ -26,7 +26,11 @@ namespace itHappens.UIs.Sidebars.FriendList
             FriendSurnameLabel.Text = friendSurname;
             eventNameLabel.Text = EventName;
             locationLabel.Text = venueLocation;
-            //timeLabel.Text = time; -- Pano, des pws metatrepeis DateTime se string, kai pare mono thn wra.
+
+            DateTime dt = time;
+            string timef = dt.ToString("hh,ss");
+            timeLabel.Text = timef;
+
         }
 
         //  -----------  Προσωρινός Constructor χωρίς τα insert εικόνων.  -----------  
@@ -38,7 +42,10 @@ namespace itHappens.UIs.Sidebars.FriendList
             FriendSurnameLabel.Text = friendSurname;
             eventNameLabel.Text = EventName;
             locationLabel.Text = venueLocation;
-            //timeLabel.Text = time; -- Pano, des pws metatrepeis DateTime se string, kai pare mono thn wra.
+
+            DateTime dt = time;
+            string timef = dt.ToString("hh,ss");
+            timeLabel.Text = timef;
         }
 
 

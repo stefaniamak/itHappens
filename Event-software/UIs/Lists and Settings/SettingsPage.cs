@@ -27,7 +27,7 @@ namespace itHappens.UIs.valentina
             InitializeComponent();
             if (UIs.anna.LogInPage.loggedInUser == true) 
             {
-                UsersID = Classes.DatabaseGeneralMethods.returnUsersIDWhenIsLogedIn(UIs.Sidebars.ProfileSidebar.usernameLable.Text);
+                UsersID = Classes.DatabaseGeneralMethods.returnUsersIDWhenIsLogedIn(Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text);
                 UIs.SignUpUserControl.fillTheAreaComboBox(AreaComboBox);
                 fillTheFieldsWithUsersInfo();
             }            
@@ -36,7 +36,7 @@ namespace itHappens.UIs.valentina
 
         public void fillTheFieldsWithUsersInfo()
         {
-            UsernameTextBox.Text = UIs.Sidebars.ProfileSidebar.usernameLable.Text;
+            UsernameTextBox.Text = Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text;
             MySqlConnection con;
             int areaID=0;
 
@@ -48,7 +48,7 @@ namespace itHappens.UIs.valentina
                 MySqlCommand command;
                 MySqlDataReader dataReader;
                 String queryString = "Select name,surname,email,areaID from users where username= '" + 
-                    UIs.Sidebars.ProfileSidebar.usernameLable.Text + "'";
+                    Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text + "'";
 
                 command = new MySqlCommand(queryString, con);
 
@@ -141,7 +141,7 @@ namespace itHappens.UIs.valentina
                 {
                     if (UIs.anna.LogInPage.loggedInUser == true)
                     {
-                        int userID = Classes.DatabaseGeneralMethods.returnUsersIDWhenIsLogedIn(UIs.Sidebars.ProfileSidebar.usernameLable.Text);
+                        int userID = Classes.DatabaseGeneralMethods.returnUsersIDWhenIsLogedIn(Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text);
 
                         if (Classes.DatabaseGeneralMethods.checkIfExistsInDatabaseWithAnotherID(userID, "username", UsernameTextBox.Text))
                         {
@@ -175,7 +175,7 @@ namespace itHappens.UIs.valentina
                 {
                     if (UIs.anna.LogInPage.loggedInUser == true)
                     {
-                        int userID = Classes.DatabaseGeneralMethods.returnUsersIDWhenIsLogedIn(UIs.Sidebars.ProfileSidebar.usernameLable.Text);
+                        int userID = Classes.DatabaseGeneralMethods.returnUsersIDWhenIsLogedIn(Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text);
                      
                         if (Classes.DatabaseGeneralMethods.checkIfExistsInDatabaseWithAnotherID(userID, "email", EmailSettingsTextBox.Text))
                         {
@@ -303,9 +303,9 @@ namespace itHappens.UIs.valentina
                         {
                             updateUserProfileWithoutPass(UsernameTextBox.Text, EmailSettingsTextBox.Text, NameSettingsTextBox.Text, SurnameSettingsTextBox.Text);
                             MessageBox.Show("You successfully update your profile!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            if (!UIs.Sidebars.ProfileSidebar.usernameLable.Text.Equals(UsernameTextBox.Text))
+                            if (!Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text.Equals(UsernameTextBox.Text))
                             {
-                                UIs.Sidebars.ProfileSidebar.usernameLable.Text = UsernameTextBox.Text;
+                                Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text = UsernameTextBox.Text;
                             }
                         }
                         else
@@ -320,9 +320,9 @@ namespace itHappens.UIs.valentina
         public void do_update()
         {
             updateUserProfile(UsernameTextBox.Text, NewPasswordTextBox.Text, EmailSettingsTextBox.Text, NameSettingsTextBox.Text, SurnameSettingsTextBox.Text);
-            if (!UIs.Sidebars.ProfileSidebar.usernameLable.Text.Equals(UsernameTextBox.Text))
+            if (!Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text.Equals(UsernameTextBox.Text))
             {
-                UIs.Sidebars.ProfileSidebar.usernameLable.Text = UsernameTextBox.Text;
+                Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text = UsernameTextBox.Text;
             }
 
             MessageBox.Show("You successfully update your profile!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);

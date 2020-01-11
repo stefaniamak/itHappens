@@ -111,7 +111,7 @@ namespace itHappens.UIs.Common
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "SELECT ev.title, cat.color " +            // When Images get inserted to database, there will be a -- event.image -- added, and the -- event.title -- will be removed.
+                String queryString = "SELECT ev.title, cat.color, ev.id " +            // When Images get inserted to database, there will be a -- event.image -- added, and the -- event.title -- will be removed.
                                      "FROM it_happens.event ev JOIN it_happens.categories cat " +
                                      "ON cat.id = ev.categoryID " +
                                      "WHERE cat.id IN (" + ids + ")";  
@@ -121,7 +121,7 @@ namespace itHappens.UIs.Common
                 dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    var eventminiview = new UIs.Common.EventMiniView(dataReader.GetString(1));
+                    var eventminiview = new UIs.Common.EventMiniView(dataReader.GetString(1), Convert.ToInt32(dataReader.GetString(2)));
                     eventminiview.Scale(0.90F);
                     matchesFlowLayoutPanel.Controls.Add(eventminiview);
                 }
