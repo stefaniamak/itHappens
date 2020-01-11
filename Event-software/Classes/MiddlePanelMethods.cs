@@ -72,13 +72,13 @@ namespace itHappens.Classes
         }
 
 // ------------------------ EVENT PROFILE ------------------------ 
-        public void eventsProfileToolStripMenuItem()
+        public void eventsProfileToolStripMenuItem(int eventId)
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
 
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
-                addEventDetailsInEventProfile();
+                addEventDetailsInEventProfile(eventId);
             }
             else
             {
@@ -89,7 +89,7 @@ namespace itHappens.Classes
             designEditOfPanels(theEventProfilePage);
         }
 
-        public void addEventDetailsInEventProfile()
+        public void addEventDetailsInEventProfile(int eventId)
         {
 
         // ----------- Gia na gemiseis to profil tou EVENT --------

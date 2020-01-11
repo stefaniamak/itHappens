@@ -44,7 +44,7 @@ namespace itHappens.Controllers
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
                 Classes.SidebarsMethods.Instance.showLogedInSidebars();
-                UIs.Sidebars.ProfileSidebar.Instance.LogoutButton.Visible = true;
+                UIs.Sidebars.ProfileSidebar.Instance.userLogedIn(username);
             }
             else
             {
@@ -173,9 +173,9 @@ namespace itHappens.Controllers
             //Classes.MiddlePanelMethods.Instance.searchToolStripMenuItem();
         }
 
-        public void eventsProfileToolStripMenuItem_MiddlePanel()
+        public void eventsProfileToolStripMenuItem_MiddlePanel(int eventId)
         {
-            Classes.MiddlePanelMethods.Instance.eventsProfileToolStripMenuItem();
+            Classes.MiddlePanelMethods.Instance.eventsProfileToolStripMenuItem(eventId);
         }
 
         public void logInToolStripMenuItem_MiddlePanel()
