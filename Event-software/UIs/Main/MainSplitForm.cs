@@ -39,13 +39,16 @@ namespace itHappens.UIs.Common
             leftMiddlePanel = splitContainer3.Panel2;
             rightTopPanel = splitContainer1.Panel1;
             rightBottomPanel = splitContainer1.Panel2;
+
+            logInSignOutButtonsVisibility();
         }
+        
 
         public void logInSignOutButtonsVisibility()
         {
             bool userIsLoggedIn = UIs.anna.LogInPage.loggedInUser;
-            logInToolStripMenuItem.Visible = userIsLoggedIn;
-            logOutToolStripMenuItem.Visible = !userIsLoggedIn;
+            logInToolStripMenuItem.Visible = !userIsLoggedIn;
+            logOutToolStripMenuItem.Visible = userIsLoggedIn;
         }
       
         private void TestSplitForm_Load(object sender, EventArgs e)
@@ -226,6 +229,9 @@ namespace itHappens.UIs.Common
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Controllers.LogoutController.Instance.logoutActions();
+            logInSignOutButtonsVisibility();
         }
+
+        
     }
 }

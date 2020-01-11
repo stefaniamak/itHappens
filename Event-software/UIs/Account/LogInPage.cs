@@ -32,12 +32,7 @@ namespace itHappens.UIs.anna
                 userName = Controllers.LoginController.Instance.DatabaseFieldValidation(UsernameTextBox.Text, PasswordTextBox.Text);
                 if (!userName.Equals(""))
                 {
-                    ageOfUser = Classes.DatabaseGeneralMethods.ReturnAgeOfUser(UsernameTextBox.Text, PasswordTextBox.Text);
-                    loggedInUser = true;
-                    
-                    Controllers.UIController.Instance.openHostForMainAndSearchPage();
-                    Controllers.UIController.Instance.openCommonSearchTextPage("main");
-                    Controllers.UIController.Instance.showSidebars(UsernameTextBox.Text);
+                    loginActions();
                 }
                 else
                 {
@@ -48,6 +43,17 @@ namespace itHappens.UIs.anna
 
             UsernameTextBox.Text = "";
             PasswordTextBox.Text = "";
+        }
+
+        private void loginActions()
+        {
+            ageOfUser = Classes.DatabaseGeneralMethods.ReturnAgeOfUser(UsernameTextBox.Text, PasswordTextBox.Text);
+            loggedInUser = true;
+            
+            Controllers.UIController.Instance.openHostForMainAndSearchPage();
+            Controllers.UIController.Instance.openCommonSearchTextPage("main");
+            Controllers.UIController.Instance.showSidebars(UsernameTextBox.Text);
+            //UIs.Common.MainSplitForm.Instance.logInSignOutButtonsVisibility();
         }
 
         private void PasswordTextBox_KeyPress(object sender, KeyPressEventArgs e)
