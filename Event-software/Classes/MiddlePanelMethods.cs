@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using itHappends;
 
@@ -103,7 +104,7 @@ namespace itHappens.Classes
         {
             int theUserId = UIs.anna.LogInPage.userId;
             var v = Db_connector.Query(@"SELECT us.id, ev.id, ev.title, ve.name , cat.color, us.name, us.surname, ev.startingDate,
-            ev.ticketprice, ev.description FROM event ev JOIN venues ve ON ev.venueID = ve.id
+            ev.ticketprice, ev.description, ev.image FROM event ev JOIN venues ve ON ev.venueID = ve.id
                 JOIN area ar ON ar.id = ve.areaID JOIN users us ON us.id = ev.ownerID
                 JOIN categories cat ON ev.categoryID = cat.id WHERE ev.id = @eventId ",
                        new string[,] { { "@eventId", eventId + "" } });
@@ -113,7 +114,7 @@ namespace itHappens.Classes
                 theEventProfilePage = new UIs.andrea.EventProfilePage(
                     v.GetInt32(0), v.GetInt32(1),
                     v.GetString(2), v.GetString(3),
-                     v.GetString(4), null, v.GetString(5),
+                     v.GetString(4), Image.FromFile(v.GetString(10)), v.GetString(5),
                      v.GetString(6), v.GetDateTime(7),
                      v.GetDouble(8), v.GetString(9));
             }
