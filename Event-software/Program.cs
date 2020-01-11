@@ -20,7 +20,9 @@ namespace itHappens
             
             // Add Location & Number of Results
             // Add Month otherwise default month is January
-            eventful.GetXmlData("Greece",5);
+            eventful.GetXmlData("Greece",20);
+            //EventsFromCities getCities = new EventsFromCities();
+          
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
