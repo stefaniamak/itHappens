@@ -51,7 +51,6 @@ namespace itHappens.Classes
 
         private void addUsersDetailsInUserProfile()
         {
-            string categoryColorString = "";
             int theUserId = UIs.anna.LogInPage.userId;
 
             // Grapse ton kwdika sou edw gia thn emfanish stoixeiwn
