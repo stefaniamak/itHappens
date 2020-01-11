@@ -178,7 +178,7 @@ namespace itHappens.Controllers
 
         public void createEventToolStripMenuItem_MiddlePanel()
         {
-            Classes.MiddlePanelMethods.Instance.createEventToolStripMenuItem();
+            Classes.MiddlePanelMethods.Instance.createEventToolStripMenuItem("create");
         }
 
 
