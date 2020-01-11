@@ -1,10 +1,25 @@
 ﻿using System.Windows.Forms;
 
+using itHappens.UIs.Common;
 
 namespace itHappens.Controllers
 {
     class UIController
     {
+
+        private MainSplitForm mainSplitForm = null;
+        public MainSplitForm MainSplitForm
+        {
+            get
+            {
+                // Lazy initialization
+                if (mainSplitForm == null)
+                    mainSplitForm = new MainSplitForm();
+                return mainSplitForm;
+            }
+
+        }
+
         // Main User Controls
         private UIs.Main.CommonSearchTextPage theHostPage = null;
         private UIs.Main.MainPage theMainPage = null;
@@ -13,6 +28,7 @@ namespace itHappens.Controllers
         // Use the Singleton pattern
         private static UIController _instance = new UIController();
         public static UIController Instance => _instance;
+
 
         private UIController()
         {
@@ -44,27 +60,28 @@ namespace itHappens.Controllers
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
                 Classes.SidebarsMethods.Instance.showLogedInSidebars();
-                UIs.Sidebars.ProfileSidebar.Instance.userLogedIn(username);
+                Classes.SidebarsMethods.Instance.TheProfileSidebar.userLogedIn(username);
             }
             else
             {
                 Classes.SidebarsMethods.Instance.showLogedOutSidebars();
+                Classes.SidebarsMethods.Instance.TheProfileSidebar.userLogOut();
             }
-            UIs.Sidebars.ProfileSidebar.Instance.usernameLable.Text = username;
+
         }
 
         public void openHostForMainAndSearchPage()
         {
-            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
             theHostPage = new UIs.Main.CommonSearchTextPage();
             if (theHostPage != null)
             {
-                UIs.Common.MainSplitForm.middlePanel.Controls.Add(theHostPage);
+                Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theHostPage);
                 designEditOfPanels(theHostPage);
             }
 
         }
-        
+
 
         public void hostTheMainPage()
         {
@@ -137,7 +154,7 @@ namespace itHappens.Controllers
         //    ----------    Sidebar Methods    ----------    
         public void addSidebarFriendList()
         {
-            Classes.SidebarsMethods.Instance.addFriendList(); 
+            Classes.SidebarsMethods.Instance.addFriendList();
         }
 
         public void addSidebarUpcomingEvents()
@@ -176,6 +193,11 @@ namespace itHappens.Controllers
         public void eventsProfileToolStripMenuItem_MiddlePanel(int eventId)
         {
             Classes.MiddlePanelMethods.Instance.eventsProfileToolStripMenuItem(eventId);
+        }
+
+        public void eventsProfileToolStripMenuItem_MiddlePanel()
+        {
+            Classes.MiddlePanelMethods.Instance.eventsProfileToolStripMenuItem();
         }
 
         public void logInToolStripMenuItem_MiddlePanel()

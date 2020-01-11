@@ -88,7 +88,7 @@ namespace itHappens.UIs.andrea
         {
 
             var eventview = (EventMiniView)sender;
-            MainSplitForm.middlePanel.Controls.Clear();
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
             int eventid = eventview.eventId;
             var v = Db_connector.Query(@"Select  event.title, venues.name, category.color, user.name ,
                         user.surname, event.startingDate,
@@ -108,7 +108,7 @@ namespace itHappens.UIs.andrea
                  v.GetString(2), null, v.GetString(3),
                  v.GetString(4), v.GetDateTime(5),
                  v.GetDouble(6), v.GetString(7));
-            MainSplitForm.middlePanel.Controls.Add(middlePage);
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(middlePage);
             middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             middlePage.Dock = DockStyle.Fill;
 
