@@ -37,38 +37,43 @@ namespace itHappends
 
         }
 
-        public static MySqlDataReader ActiveEvents ()
+        public static MySqlDataReader ActiveEvents()
         {
-           
+
             return Query(@"SELECT * FROM event WHERE startingDate < @Date AND endingDate  > @Date ",
                                    new string[,] { { "@Date", Utility.DateToText(DateTime.Now) } });
         }
 
-        public static List<List<string>> Readrows (MySqlDataReader reader , int[] parameters)
+        public static List<List<string>> Readrows(MySqlDataReader reader, int[] parameters)
         {
-           
+
             List<List<string>> collumns = new List<List<string>>();
             while (reader.Read())
             {
                 List<string> rows = new List<string>();
 
                 foreach (int i in parameters)
-                {               
+                {
                     rows.Add(reader.GetString(i));
                 }
-               collumns.Add(rows);
+                collumns.Add(rows);
             }
 
             return collumns;
         }
         public static MySqlDataReader Categories(int limit)
         {
-            return Query(@"Select categories , title FROM categories LIMIT @limit",new string[,] { { "@limit", limit + "" } });
+            return Query(@"Select categories , title FROM categories LIMIT @limit",
+                        new string[,] { { "@limit", limit + "" } });
         }
-        /*public void FrequentTags()
-        {
 
-        }*/
+        public static MySqlDataReader GetEvent(int id)
+        {
+            return Query(@"Select * FROM event WHERE id = @id " 
+                        , new string[,] { { "@id", id + "" } });
+        }
+
+
     }
     //String sql = " ";
     //sql = "Insert into event(id,onwerID,venueID,categoryID,startingDate,EndingDate,description,tags,ticketprice) values('"id" + "ownerID" + "venueID" + "categoryID" + "startingDate" + "endingDate" + "description" + "tags" + "ticketprice"')";

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using itHappens.Classes;
 using itHappens.UIs.Common;
+using itHappends;
 
 namespace itHappens.UIs.andrea
 {
@@ -21,7 +22,8 @@ namespace itHappens.UIs.andrea
             
         }
 
-        public EventProfilePage(string eventName, string venueName, string categoryColor, Image background, string organizerName, string organizerSurename, DateTime  eventDateTime, double ticketPrice, string description)
+        public EventProfilePage(string eventName, string venueName, string categoryColor, Image background, string organizerName, 
+                                string organizerSurename, DateTime  eventDateTime, double ticketPrice, string description)
         {
             InitializeComponent();
             
@@ -58,11 +60,30 @@ namespace itHappens.UIs.andrea
         }
         public static void openEventProfile(object sender, EventArgs e) 
         {
+            var eventview = (EventMiniView)sender;
             MainSplitForm.middlePanel.Controls.Clear();
-            var middlePage = new UIs.andrea.EventProfilePage();
+            int eventid = eventview.eventId;
+            var v = Db_connector.Query(@"Select event.title, venues.name, category.color, user.name , 
+                        user.surname ,event.startingDate, 
+						event.ticketprice,event.description  
+						FROM events e JOIN venues v 
+						ON e.venueID = v.id
+						JOIN category c
+						ON e.categoryID = c.id
+						JOIN user u
+						ON e.ownerID = u.id
+						WHERE @eventid = e.id",
+                       new string[,] { { "@eventid", eventid + "" } });
+            v.Read();
+            var middlePage = new UIs.andrea.EventProfilePage
+                (v.GetString(0), v.GetString(1),
+                 v.GetString(2), null, v.GetString(3),
+                 v.GetString(4), v.GetDateTime(5),
+                 v.GetDouble(6), v.GetString(7));
             MainSplitForm.middlePanel.Controls.Add(middlePage);
             middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             middlePage.Dock = DockStyle.Fill;
+          
         }
     }
 }
