@@ -56,9 +56,9 @@ namespace itHappens.UIs.andrea
             }
         }
 
-        public void miniCaruselFillWithEventMiniView(string categoryColor, int theEventId)
+        public void miniCaruselFillWithEventMiniView(string categoryColor, int theEventId, string eventTitle)
         {
-            eventsUserWillAttendCarousel.AddControl(new UIs.Common.EventMiniView(categoryColor, theEventId));
+            eventsUserWillAttendCarousel.AddControl(new UIs.Common.EventMiniView(categoryColor, theEventId, eventTitle));
         }
 
         
