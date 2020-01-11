@@ -11,11 +11,10 @@ namespace eventful
     class EventfulAPI
     {
         string currentMonth = DateTime.Now.ToString("MMMM", CultureInfo.InvariantCulture);
-
         //Regex for price parsing
-        private static readonly Regex rxNonDigits = new Regex(@"[^\d]+");
+        private static readonly Regex rxNonDigits = new Regex(@"[^0-9,.]");
 
-        public void GetXmlData(string userLocation, byte page_size, string month = "January" )
+        public void GetXmlData(string userLocation, byte page_size)
         {
 
 
@@ -31,7 +30,7 @@ namespace eventful
             //byte page_size = 5;
 
             //get name of the current month 
-            //string month = DateTime.Now.ToString("MMMM", CultureInfo.InvariantCulture);
+            string month = DateTime.Now.ToString("MMMM", CultureInfo.InvariantCulture);
 
             //Eventful API url
             string url = "http://api.eventful.com/rest/events/search?app_key=";
@@ -117,8 +116,8 @@ namespace eventful
 
                     //Image URL
 
-                    //string imageURL = xmlNode[i].ChildNodes[38].HasChildNodes ? xmlNode[i].ChildNodes[38].ChildNodes[6].ChildNodes[0]?.InnerText.Trim() : "";
-                    //Console.WriteLine(imageURL);
+                    string imageURL = xmlNode[i].ChildNodes[38].HasChildNodes ? xmlNode[i].ChildNodes[38].ChildNodes[0]?.InnerText.Trim() : "";
+                    Console.WriteLine(imageURL);
 
                     //Categories
                     string categoryName = xmlNode[i].ChildNodes[43].HasChildNodes ? xmlNode[i].ChildNodes[43].ChildNodes[0].ChildNodes[1]?.InnerText.Trim() : " ";
@@ -139,7 +138,7 @@ namespace eventful
 
                     if (popdb.checkIfEventNotExists(eventName))
                     {
-                        popdb.addEventRecord(eventName, 0, venueID, categoryID, startingTime, endingTime, eventDescription, parsedPrice);
+                        popdb.addEventRecord(eventName, 0, venueID, categoryID, startingTime, endingTime, eventDescription, parsedPrice, imageURL);
                     }
 
 

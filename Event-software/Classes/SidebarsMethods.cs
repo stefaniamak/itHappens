@@ -1,27 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace itHappens.Classes
+﻿namespace itHappens.Classes
 {
     class SidebarsMethods
     {
-        
+
         // Use the Singleton pattern
         private static SidebarsMethods _instance = new SidebarsMethods();
         public static SidebarsMethods Instance => _instance;
-
         // Profiles User Controls
         private UIs.Sidebars.UpcomingEventsSidebar theUpcomingEvetsSidebar = null;
         private UIs.Sidebars.ListsSidebar theListsSidebar = null;
         private UIs.Sidebars.ProfileSidebar theProfileSidebar = null;
         private UIs.Sidebars.FriendListSidebar theUptheFriendListSidebar = null;
-
         // Extra User Controls
         private UIs.Main.LoginWarning thisLoginWarningPage = null;
+
+        public void showLogedInSidebars()
+        {
+            Classes.SidebarsMethods.Instance.addUpcomingEvents();
+            Classes.SidebarsMethods.Instance.addLists();
+            Classes.SidebarsMethods.Instance.addProfile();
+            //Controllers.UIController.Instance.addSidebarFriendList();
+            Classes.SidebarsMethods.Instance.addFriendList();
+            //addWarningToLogIn();
+           // Classes.SidebarsMethods.Instance.addWarningToLogIn();
+        }
 
         public void addFriendList()
         {
@@ -51,5 +53,11 @@ namespace itHappens.Classes
             Controllers.UIController.Instance.designEditOfPanels(theProfileSidebar);
         }
 
+        public void addWarningToLogIn()
+        {
+            thisLoginWarningPage = new UIs.Main.LoginWarning();
+            UIs.Common.MainSplitForm.rightBottomPanel.Controls.Add(thisLoginWarningPage);
+            Controllers.UIController.Instance.designEditOfPanels(thisLoginWarningPage);
+        }
     }
 }

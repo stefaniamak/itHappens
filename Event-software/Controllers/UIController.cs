@@ -40,6 +40,10 @@ namespace itHappens.Controllers
 
         }
 
+        public void showSidebars()
+        {
+            Classes.SidebarsMethods.Instance.showLogedInSidebars();
+        }
 
         public void openHostForMainAndSearchPage()
         {
@@ -125,7 +129,7 @@ namespace itHappens.Controllers
         //    ----------    Sidebar Methods    ----------    
         public void addSidebarFriendList()
         {
-            Classes.SidebarsMethods.Instance.addFriendList();
+            Classes.SidebarsMethods.Instance.addFriendList(); 
         }
 
         public void addSidebarUpcomingEvents()

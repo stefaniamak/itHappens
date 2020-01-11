@@ -120,6 +120,7 @@ CREATE TABLE IF NOT EXISTS `it_happens`.`event` (
   `description` TEXT NOT NULL,
   `tags` TEXT NULL DEFAULT NULL,
   `ticketprice` DOUBLE NULL DEFAULT NULL,
+  `image` VARCHAR(250) DEFAULT NULL,
   PRIMARY KEY (`id`),
   INDEX `categoryID_idx` (`categoryID` ASC) VISIBLE,
   INDEX `venueID_idx` (`venueID` ASC) VISIBLE,
