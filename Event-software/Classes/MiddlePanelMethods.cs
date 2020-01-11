@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using itHappends;
 
 namespace itHappens.Classes
 {
@@ -92,17 +93,30 @@ namespace itHappens.Classes
         public void addEventDetailsInEventProfile()
         {
 
-        // ----------- Gia na gemiseis to profil tou EVENT --------
+            // ----------- Gia na gemiseis to profil tou EVENT --------
+
             
-            // Vale edw ton kwdika s
 
-            // to query:
-            // SELECT us.id, ev.id, ev.title, ve.name , cat.color, us.name, us.surname, ev.startingDate, ev.ticketprice, ev.description FROM it_happens.event ev JOIN it_happens.venues ve ON ev.venueID = ve.id JOIN it_happens.area ar ON ar.id = ve.areaID JOIN it_happens.users us ON us.id = ev.ownerID JOIN it_happens.categories cat ON ev.categoryID = cat.id WHERE ev.id = 42
-            // GUERY NOTES
-                // svise ola ta "it_happens."
-                // allakse to WHERE ev.id = 42 kai vale anti gia 42 -> to it tou event pou epilextike
+/*
+            var eventview = (EventMiniView)sender;
+            int eventid = eventview.eventId;
+            var v = Db_connector.Query(@"SELECT us.id, ev.id, ev.title, ve.name , cat.color, us.name, us.surname, ev.startingDate,
+            ev.ticketprice, ev.description FROM event ev JOIN venues ve ON ev.venueID = ve.id
+                JOIN area ar ON ar.id = ve.areaID JOIN users us ON us.id = ev.ownerID
+                JOIN categories cat ON ev.categoryID = cat.id WHERE ev.id = EDW ",
+                       new string[,] { { "@eventid", eventid + "" } });
+            v.Read();
+            theEventProfilePage = new UIs.andrea.EventProfilePage (
+                v.GetInt32(0), v.GetInt32(1),
+                v.GetString(2), v.GetString(3),
+                 v.GetString(4), null, v.GetString(5),
+                 v.GetString(6), v.GetDateTime(7),
+                 v.GetDouble(8), v.GetString(9));
+            
 
-             theEventProfilePage = new UIs.andrea.EventProfilePage(); // Xrisimopoihse ton allon constuctor, kai dwse null stis eikones. Sou exw valei ta Select me thn idia seira pou ta zhtaei o constructor
+*/        
+
+         
            
 
         // ----------- Gia na gemiseis to flowLayout me tous filous pou exoun auto to event sta lists tous GOING h INTERESTED --------

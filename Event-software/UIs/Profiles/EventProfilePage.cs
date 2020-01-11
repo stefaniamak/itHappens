@@ -29,8 +29,7 @@ namespace itHappens.UIs.andrea
         }
 
 
-        //public EventProfilePage(string eventName, string venueName, string categoryColor, Image background, string organizerName,
-        //                        string organizerSurename, DateTime eventDateTime, double ticketPrice, string description);
+      
 
         public EventProfilePage(int organizerId, int eventId, string eventName, string venueName, string categoryColor, Image background, string organizerName, string organizerSurename, DateTime eventDateTime, double ticketPrice, string description)
 
