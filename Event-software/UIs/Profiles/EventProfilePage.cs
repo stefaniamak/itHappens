@@ -40,8 +40,7 @@ namespace itHappens.UIs.andrea
         }
 
 
-        //public EventProfilePage(string eventName, string venueName, string categoryColor, Image background, string organizerName,
-        //                        string organizerSurename, DateTime eventDateTime, double ticketPrice, string description);
+      
 
         public EventProfilePage(int organizerId, int eventId, string eventName, string venueName, string categoryColor, Image background, string organizerName, string organizerSurename, DateTime eventDateTime, double ticketPrice, string description)
 
@@ -87,7 +86,7 @@ namespace itHappens.UIs.andrea
 
         }
 
-        public static void openEventProfile(object sender, EventArgs e)
+      /*  public static void openEventProfile(object sender, EventArgs e)
         {
 
             var eventview = (EventMiniView)sender;
@@ -115,7 +114,7 @@ namespace itHappens.UIs.andrea
             middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             middlePage.Dock = DockStyle.Fill;
 
-        }
+        }*/
 
         private void organizerTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -125,7 +124,7 @@ namespace itHappens.UIs.andrea
         private void locationTextBox_TextChanged(object sender, EventArgs e)
         {
             Controllers.UIController.Instance.searchToolStripMenuItem_MiddlePanel();
-}
+        }
 
         private void EditButton_Click(object sender, EventArgs e)
         {
