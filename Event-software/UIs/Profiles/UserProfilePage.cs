@@ -56,9 +56,9 @@ namespace itHappens.UIs.andrea
        
         private void usersUpcomingEvents()
         {
-            /*
+            
             MySqlConnection con;
-
+            /*
             try
             {
                 con = new MySqlConnection(conStr);

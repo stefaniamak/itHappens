@@ -45,6 +45,7 @@ namespace itHappens.UIs.anna
 
             UsernameTextBox.Text = "";
             PasswordTextBox.Text = "";
+            
         }
 
         private void loginActions()
