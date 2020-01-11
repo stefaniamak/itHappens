@@ -82,6 +82,8 @@ namespace itHappens.UIs.andrea
 
                 while (dataReader.Read())
                 {
+                    vanueLabel.Text = dataReader.GetString(2);
+
                     miniCaruselFillWithEventMiniView(dataReader.GetString(1), Convert.ToInt32(dataReader.GetString(0)), dataReader.GetString(2));
                 }
                 con.Close();
