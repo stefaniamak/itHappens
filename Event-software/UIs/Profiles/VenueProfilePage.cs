@@ -71,21 +71,6 @@ namespace itHappens.UIs.andrea
         {
 
         }
-     /*  public static void OpenVenueProfile(object sender, EventArgs e, int venueId)
-        {
-            MainSplitForm.middlePanel.Controls.Clear();
-            var v = Db_connector.Query(@"Select event.startingDate, venues.name                                         
-					        	       FROM events e JOIN venues v 
-						               ON e.venueID = v.id						
-						               WHERE @venueId = e.id",
-                                        new string[,] { { "@venueId", venueId + "" } });
-            v.Read();
-            var middlePage = new VenueProfilePage(v.GetString(0),null, null, null, null, v.GetDateTime(1));
-            MainSplitForm.middlePanel.Controls.Add(middlePage);
-            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            middlePage.Dock = DockStyle.Fill;
-
-
-        }*/
+     
     }
 }

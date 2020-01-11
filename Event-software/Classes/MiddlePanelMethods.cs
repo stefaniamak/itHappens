@@ -53,17 +53,13 @@ namespace itHappens.Classes
         {
             int theUserId = UIs.anna.LogInPage.userId;
 
-            // Grapse ton kwdika sou edw gia thn emfanish stoixeiwn
 
-            // to query gia na vreis auta pou thes:
-            // "SELECT users.id, users.name, surname FROM users WHERE users.id = '" + theUserId + "'""
-            // den xreiazetai na allakseis kati se auto to query, par to opws einai.
+            var z = Db_connector.Query(@"SELECT users.id, users.name, surname FROM users WHERE users.id = @theUserId",
+                      new string[,] {  { "@theUserId", theUserId + "" } });
+            z.Read();
+            theUserProfilePage = new UIs.andrea.UserProfilePage(z.GetInt32(0), z.GetString(1), z.GetString(2), null);
 
-            // Xrisimopoihse ton allon constuctor (tis emfaniseis apo to query apo panw tis evala me thn seira pou ths zhtaei o constructor), kai dwse null stis eikones:
-                // UserProfilePage(int userId, string userName, string userSurname, Image profilePicture)
-            theUserProfilePage = new UIs.andrea.UserProfilePage(); 
-       
-            
+      
         }
 
 // ------------------------ EVENT PROFILE ------------------------ 
@@ -86,43 +82,30 @@ namespace itHappens.Classes
 
         public void addEventDetailsInEventProfile(int eventId)
         {
-
-            // ----------- Gia na gemiseis to profil tou EVENT --------
-
-            
-
-/*
-            var eventview = (EventMiniView)sender;
-            int eventid = eventview.eventId;
+            int theUserId = UIs.anna.LogInPage.userId;
             var v = Db_connector.Query(@"SELECT us.id, ev.id, ev.title, ve.name , cat.color, us.name, us.surname, ev.startingDate,
             ev.ticketprice, ev.description FROM event ev JOIN venues ve ON ev.venueID = ve.id
                 JOIN area ar ON ar.id = ve.areaID JOIN users us ON us.id = ev.ownerID
-                JOIN categories cat ON ev.categoryID = cat.id WHERE ev.id = EDW ",
-                       new string[,] { { "@eventid", eventid + "" } });
+                JOIN categories cat ON ev.categoryID = cat.id WHERE ev.id = @eventId ",
+                       new string[,] { { "@eventId", eventId + "" } });
             v.Read();
-            theEventProfilePage = new UIs.andrea.EventProfilePage (
+            theEventProfilePage = new UIs.andrea.EventProfilePage(
                 v.GetInt32(0), v.GetInt32(1),
                 v.GetString(2), v.GetString(3),
                  v.GetString(4), null, v.GetString(5),
                  v.GetString(6), v.GetDateTime(7),
                  v.GetDouble(8), v.GetString(9));
-            
 
-*/        
 
-         
+
+
+            var z = Db_connector.Query(@"SELECT  us.name, us.surname, evL.title FROM following fol JOIN users us ON 
+            fol.followed_user_id = us.id JOIN event_list evL ON fol.followed_user_id = evL.creatorID JOIN attendants att
+            ON evL.id = att.eventListID JOIN event ev ON att.eventID = ev.id WHERE ev.id = @eventId AND fol.following_user_id = @theUserId ",
+                       new string[,] { { "@eventId", eventId + "" }, { "@theUserId", theUserId + ""} });
+            z.Read();
+            theEventProfilePage.friendsWhoWillAttend(null, z.GetString(0), z.GetString(1), z.GetString(2));
            
-
-        // ----------- Gia na gemiseis to flowLayout me tous filous pou exoun auto to event sta lists tous GOING h INTERESTED --------
-            // To query gia na gemiseis to flowLayout me tous filous.  (diavase to NOTES FOR QUERY mia seira pio katw, prin xrhsimopoieiseis to query):
-                // SELECT  it_happens.us.name, it_happens.us.surname, evL.title FROM it_happens.following fol JOIN it_happens.users us ON fol.followed_user_id = us.id JOIN it_happens.event_list evL ON fol.followed_user_id = evL.creatorID JOIN it_happens.attendants att ON evL.id = att.eventListID JOIN it_happens.event ev ON att.eventID = ev.id WHERE ev.id = 42 AND fol.following_user_id = 4
-            // ****NOTES FOR QUERY:****
-            //sto telos sto "WHERE ev.id = 42 AND us.id = 4" vale to event id anti gia 42, kai vale to user id anti gia 4. Des pws to ekana  sto panw query pou s egrapsa
-            // svise ola ta "it_happens." apo to query
-            // To query s epistrefei to noma tou filou, to epitheto tou filou kai ton titlo ths listas tou filou pou to event auto uparxei
-
-            // Kalese to katw gia na emfaniseis tous filous pou exoun stis listes GOING h INTERESTED tous to event, steile NULL gia thn eikona
-            //UIs.andrea.EventProfilePage.Instance.friendsWhoWillAttend(friendProfilePicture, friendName, friendSurname, listTitle);
         }
 
 
@@ -147,25 +130,28 @@ namespace itHappens.Classes
         public void addVenueDetailsToVenueProfile()
         {
 
-            // ----------- Gia na gemiseis to profil tou VENUE --------
-            // to query:
-            // SELECT ve.id, ve.name, ar.country FROM it_happens.venues ve JOIN it_happens.area ar ON ve.areaID = ar.id WHERE ve.id = 106
-            // GUERY NOTES
-            // svise ola ta "it_happens."
-            // allakse to WHERE ve.id = 106 kai vale anti gia 106, to eventId pou hsoun, prin pathseis na anoiksei to venue profile
+                int venueId = -1;
+                int theUserId = UIs.anna.LogInPage.userId;
+                var v = Db_connector.Query(@"SELECT ve.id, ve.name, ar.country FROM venues ve JOIN area ar
+                                            ON ve.areaID = ar.id WHERE ve.id = venueId ",
+                           new string[,] { { "@venueId", venueId + "" } });
+                v.Read();
+            theSVenueProfilePage = new UIs.andrea.VenueProfilePage(
+                v.GetInt32(0), v.GetString(1),null,null);
 
-            theSVenueProfilePage = new UIs.andrea.VenueProfilePage(); // xrhsimopoieise ton allon constructor. Vale null stis eikones
 
-            // ----------- Gia na gemiseis to FRIENDS WHO HAVE VISITED ----------- 
-            // to query s:
-            // SELECT DISTINCT it_happens.us.name, it_happens.us.surname, evL.title FROM it_happens.following fol JOIN it_happens.users us ON fol.followed_user_id = us.id JOIN it_happens.event_list evL ON fol.followed_user_id = evL.creatorID JOIN it_happens.attendants att ON evL.id = att.eventListID JOIN it_happens.event ev ON att.eventID = ev.id WHERE evL.title='HISTORY' AND fol.following_user_id = 4
-            // QUERY NOTES
-            // diegrapse ola ta "it_happens." 
-            // allakse ta: 
-            // fol.following_user_id = 4 => anti gia 4 tha valeis to onoma tou user pou einai sundedemenos
-            // ve.id = 107               => anti gia 107, tha valeis to venue ID tou venue pou pathses
+          
+            var z = Db_connector.Query(@"SELECT DISTINCT us.name, us.surname, evL.title FROM following fol 
+            JOIN users us ON fol.followed_user_id = us.id JOIN event_list evL ON fol.followed_user_id = evL.creatorID 
+            JOIN attendants att ON evL.id = att.eventListID JOIN event ev ON att.eventID = ev.id
+            WHERE evL.title='HISTORY' AND fol.following_user_id = @theUserId AND ve.id = @venueId ",
+ 
+                       new string[,] { { "@theUserId", theUserId + "" }, { "@venueId", venueId + "" } });
+            z.Read();
+            UIs.andrea.VenueProfilePage.Instance.friendsWhoHaveVisited(
+                z.GetString(0), z.GetString(1));
 
-            //UIs.andrea.VenueProfilePage.Instance.friendsWhoHaveVisited(string friendName, string friendSurname); // svise apla ta "strings" kai dwse tis times apoto query pou s egrapsa
+           
 
         }
 

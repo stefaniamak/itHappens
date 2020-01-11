@@ -62,7 +62,7 @@ namespace itHappens.UIs.andrea
         }
 
         
-       public static void openUserPage(object sender, EventArgs e, int userId)
+    /*   public static void openUserPage(object sender, EventArgs e, int userId)
         {
            
             MainSplitForm.middlePanel.Controls.Clear();
@@ -71,7 +71,7 @@ namespace itHappens.UIs.andrea
 						WHERE @userId = ",
                       new string[,] { { "@userId", userId + "" } });
             v.Read();
-            var middlePage = new UIs.andrea.UserProfilePage
+            var middlePage = new  UserProfilePage
                 (v.GetInt32(0),v.GetInt32(1),v.GetString(2), v.GetString(3),
                  v.GetString(4),v.GetString(5) , v.GetString(6),null,null,v.GetDateTime(7));
             MainSplitForm.middlePanel.Controls.Add(middlePage);
@@ -79,7 +79,7 @@ namespace itHappens.UIs.andrea
             middlePage.Dock = DockStyle.Fill;
 
 
-        }
+        }*/
 
     }
 }
