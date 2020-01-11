@@ -17,12 +17,13 @@ namespace itHappens.UIs.Common
     {
 
         Panel leftPanel;
-        public static Panel middlePanel;
+        public Panel middlePanel;
         Panel rightpanel;
-        public static Panel leftTopPanel;
-        public static Panel leftMiddlePanel;
-        public static Panel rightTopPanel;
-        public static Panel rightBottomPanel;
+        public Panel leftTopPanel;
+        public Panel leftMiddlePanel;
+        public Panel rightTopPanel;
+        public Panel rightBottomPanel;
+                
 
         public MainSplitForm()
         {
@@ -35,76 +36,94 @@ namespace itHappens.UIs.Common
             leftMiddlePanel = splitContainer3.Panel2;
             rightTopPanel = splitContainer1.Panel1;
             rightBottomPanel = splitContainer1.Panel2;
+
+            logInSignOutButtonsVisibility();
+        }
+        
+
+        public void logInSignOutButtonsVisibility()
+        {
+            bool userIsLoggedIn = UIs.anna.LogInPage.loggedInUser;
+            logInToolStripMenuItem.Visible = !userIsLoggedIn;
+            logOutToolStripMenuItem.Visible = userIsLoggedIn;
         }
       
         private void TestSplitForm_Load(object sender, EventArgs e)
         {
-            Controllers.UIController.addSidebarUpcomingEvents();
-            Controllers.UIController.addSidebarLists();
-            Controllers.UIController.addSidebarProfile();
-            Controllers.UIController.addSidebarFriendList();
+            Controllers.UIController.Instance.showSidebars("Username");
+
+            Controllers.UIController.Instance.openHostForMainAndSearchPage();
+            Controllers.UIController.Instance.openCommonSearchTextPage("main");
         }
 
         private void mainToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.mainToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.mainToolStripMenuItem_MiddlePanel();
         }
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.searchToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.searchToolStripMenuItem_MiddlePanel();
         }
 
         private void eventsProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.eventsProfileToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel();
         }
 
         private void logInToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.logInToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.logInToolStripMenuItem_MiddlePanel();
         }
 
         private void signUpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.signUpToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.signUpToolStripMenuItem_MiddlePanel();
         }
 
         private void createEventToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.createEventToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.createEventToolStripMenuItem_MiddlePanel();
         }
 
         private void listToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.listToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.listToolStripMenuItem_MiddlePanel();
         }
 
         private void madeForYouToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.madeForYouToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.madeForYouToolStripMenuItem_MiddlePanel();
         }
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.settingsToolStripMenuItem_MiddlePanel();           
+            Controllers.UIController.Instance.settingsToolStripMenuItem_MiddlePanel();           
         }
 
         private void mainPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.openHostForMainAndSearchPage();
-            Controllers.UIController.openPage("main");
+            Controllers.UIController.Instance.openHostForMainAndSearchPage();
+            Controllers.UIController.Instance.openCommonSearchTextPage("main");
         }
 
         private void searchPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.openHostForMainAndSearchPage();
-            Controllers.UIController.openPage("search");
+            Controllers.UIController.Instance.openHostForMainAndSearchPage();
+            Controllers.UIController.Instance.openCommonSearchTextPage("search");
         }
 
         private void CreateEvent_Click(object sender, EventArgs e)
         {
-
+            if(UIs.anna.LogInPage.loggedInUser == true && UIs.anna.LogInPage.ageOfUser >= 18)
+            {
+                Controllers.UIController.Instance.createEventToolStripMenuItem_MiddlePanel();
+            }
+            else
+            {
+                //Ti tha emfanizei an den einai sundedemenos o xrhsths
+            }
+            
         }
 
         private void rightSplitContainer_SplitterMoved(object sender, SplitterEventArgs e)
@@ -129,71 +148,87 @@ namespace itHappens.UIs.Common
 
         private void mainPageToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.openHostForMainAndSearchPage();
-            Controllers.UIController.openPage("main");
+            Controllers.UIController.Instance.openCommonSearchTextPage("main");
         }
 
         private void searchPageToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.openHostForMainAndSearchPage();
-            Controllers.UIController.openPage("search");
+            Controllers.UIController.Instance.openCommonSearchTextPage("search");
         }
 
         private void usersProfileToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.mainToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.mainToolStripMenuItem_MiddlePanel();
         }
 
         private void venuesProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.searchToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.venueProfileToolStripMenuItem_MiddlePanel();
         }
 
         private void eventsProfileToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.eventsProfileToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel();
         }
 
         private void logInToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.logInToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.logInToolStripMenuItem_MiddlePanel();
         }
 
         private void signUpToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.signUpToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.signUpToolStripMenuItem_MiddlePanel();
         }
 
         private void createEventToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.createEventToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.createEventToolStripMenuItem_MiddlePanel();
         }
 
         private void listsPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.listToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.listToolStripMenuItem_MiddlePanel();
         }
 
         private void listsContentPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.madeForYouToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.madeForYouToolStripMenuItem_MiddlePanel();
         }
 
         private void settingsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.settingsToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.settingsToolStripMenuItem_MiddlePanel();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.openHostForMainAndSearchPage();
-            Controllers.UIController.openPage("main");
+            Controllers.UIController.Instance.openHostForMainAndSearchPage();
+            Controllers.UIController.Instance.openCommonSearchTextPage("main");
         }
 
         private void homePagePictureBox_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.openHostForMainAndSearchPage();
-            Controllers.UIController.openPage("main");
+            Controllers.UIController.Instance.openHostForMainAndSearchPage();
+            Controllers.UIController.Instance.openCommonSearchTextPage("main");
         }
+
+        private void signUpToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logInToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Controllers.UIController.Instance.logInToolStripMenuItem_MiddlePanel();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controllers.LogoutController.Instance.logoutActions();
+            logInSignOutButtonsVisibility();
+        }
+
+        
     }
 }

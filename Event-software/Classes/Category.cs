@@ -10,6 +10,8 @@ namespace itHappens.Classes
     {
         public int id { get; set; }
         public string categories { get; set; }
+        public string title { get; set; }
+        public string color { get; set; }
         public int parent { get; set; }
 
         public Category(int id_, string categories_, int parent_)

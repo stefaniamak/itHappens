@@ -13,28 +13,28 @@ namespace itHappens.UIs.anna
     public partial class LogInPage : UserControl
     {
         public static bool loggedInUser;
+        public static int ageOfUser;
+        public static int userId = -1;
+
         public LogInPage()
         {
             InitializeComponent();
         }
-
+        
         public static String userName;
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
           
             bool flag = false;
-            bool validation = Controllers.LoginController.FieldsValidation(UsernameTextBox.Text, PasswordTextBox.Text, flag);
+            bool validation = Controllers.LoginController.Instance.FieldsValidation(UsernameTextBox.Text, PasswordTextBox.Text, flag);
 
             if (validation == true)
             {
-                userName = Controllers.LoginController.DatabaseFieldValidation(UsernameTextBox.Text, PasswordTextBox.Text);
+                userName = Controllers.LoginController.Instance.DatabaseFieldValidation(UsernameTextBox.Text, PasswordTextBox.Text);
                 if (!userName.Equals(""))
                 {
-                    //oti theloume na emfanizei meta tin sundesi
-                    UIs.Sidebars.ProfileSidebar.usernameLable.Text = Controllers.LoginController.loginNameSurnameToProfile(UsernameTextBox.Text, PasswordTextBox.Text);
-                    loggedInUser = true;
-                    UIs.Sidebars.ProfileSidebar.LogoutButton.Visible = true;
+                    loginActions();
                 }
                 else
                 {
@@ -47,6 +47,17 @@ namespace itHappens.UIs.anna
             PasswordTextBox.Text = "";
         }
 
+        private void loginActions()
+        {
+            ageOfUser = Classes.DatabaseGeneralMethods.ReturnAgeOfUser(UsernameTextBox.Text, PasswordTextBox.Text);
+            loggedInUser = true;
+            
+            Controllers.UIController.Instance.openHostForMainAndSearchPage();
+            Controllers.UIController.Instance.openCommonSearchTextPage("main");
+            Controllers.UIController.Instance.showSidebars(UsernameTextBox.Text);
+            Controllers.UIController.Instance.MainSplitForm.logInSignOutButtonsVisibility();
+        }
+
         private void PasswordTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar.Equals(Convert.ToChar(13)))
@@ -57,7 +68,7 @@ namespace itHappens.UIs.anna
 
         private void createAccountLabel_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Controllers.UIController.signUpToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.signUpToolStripMenuItem_MiddlePanel();
         }
     }
 }

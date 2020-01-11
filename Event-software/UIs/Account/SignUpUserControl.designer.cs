@@ -133,16 +133,15 @@
             this.numericUpDown.Location = new System.Drawing.Point(226, 646);
             this.numericUpDown.Margin = new System.Windows.Forms.Padding(5);
             this.numericUpDown.Minimum = new decimal(new int[] {
-            17,
+            13,
             0,
             0,
             0});
             this.numericUpDown.Name = "numericUpDown";
-            this.numericUpDown.ReadOnly = true;
             this.numericUpDown.Size = new System.Drawing.Size(69, 24);
             this.numericUpDown.TabIndex = 43;
             this.numericUpDown.Value = new decimal(new int[] {
-            17,
+            13,
             0,
             0,
             0});
@@ -413,14 +412,11 @@
         public System.Windows.Forms.Label nameValLabel;
         public System.Windows.Forms.NumericUpDown numericUpDown;
         private System.Windows.Forms.Label itHappensLabel;
-        public System.Windows.Forms.ComboBox areaComboBox;
         private System.Windows.Forms.Label areaLabel;
         private System.Windows.Forms.Label ageLabel;
         public System.Windows.Forms.TextBox repassTextBox;
         private System.Windows.Forms.Label repassLabel;
-        public System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label passwordLabel;
-        public System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Label usernameLabel;
         public System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.Label emailLabel;
@@ -430,5 +426,8 @@
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.PictureBox LogoSignUppictureBox;
+        public System.Windows.Forms.ComboBox areaComboBox;
+        public System.Windows.Forms.TextBox passwordTextBox;
+        public System.Windows.Forms.TextBox usernameTextBox;
     }
 }

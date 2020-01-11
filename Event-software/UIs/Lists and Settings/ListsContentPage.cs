@@ -20,7 +20,7 @@ namespace itHappens.UIs.valentina
 
         private void ListsContentPage_Load(object sender, EventArgs e)
         {
-            Controllers.UIController.ListsContentPageLoad();
+            Controllers.UIController.Instance.ListsContentPageLoad();
         }
     }
 }

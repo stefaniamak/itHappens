@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace itHappens.UIs.Main
 {
-    public partial class UserControl1 : UserControl
+    public partial class LoginWarning : UserControl
     {
-        public UserControl1()
+        public LoginWarning()
         {
             InitializeComponent();
         }

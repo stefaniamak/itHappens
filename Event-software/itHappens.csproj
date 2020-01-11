@@ -58,6 +58,7 @@
     <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.IdentityModel.Clients.ActiveDirectory.5.2.4\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.0.18\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
@@ -148,23 +149,57 @@
   <ItemGroup>
     <Compile Include="Classes\Area.cs" />
     <Compile Include="Classes\Category.cs" />
+    <Compile Include="Classes\Utility.cs" />
+    <Compile Include="Classes\madeForYouCarousel.cs" />
+    <Compile Include="Classes\todayEventsCarousel.cs" />
+    <Compile Include="Classes\CreateList.cs" />
+    <Compile Include="Classes\DatabaseGeneralMethods.cs" />
     <Compile Include="Classes\Event.cs" />
     <Compile Include="Classes\EventList.cs" />
     <Compile Include="Classes\MiddlePanelMethods.cs" />
     <Compile Include="Classes\SidebarsMethods.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\Venue.cs" />
+    <Compile Include="Controllers\LogoutController.cs" />
     <Compile Include="Controllers\UIController.cs" />
+    <Compile Include="DbConnector.cs" />
+    <Compile Include="DbConnectorInfo.cs" />
+    <Compile Include="DBs\DBConnector.cs" />
     <Compile Include="DBs\TestDataClass.cs" />
     <Compile Include="Db_connector.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="EventfulAPI.cs" />
+    <Compile Include="DbController.cs" />
     <Compile Include="populateDB.cs" />
-    <Compile Include="UIs\Main\UserControl1.cs">
+    <Compile Include="UIs\Common\FriendsWhoHaveVisited.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\Main\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="UIs\Common\FriendsWhoHaveVisited.Designer.cs">
+      <DependentUpon>FriendsWhoHaveVisited.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Common\Notification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Common\Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Common\NotificationBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Common\NotificationBox.Designer.cs">
+      <DependentUpon>NotificationBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Account\LoginWarning.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Account\LoginWarning.Designer.cs">
+      <DependentUpon>LoginWarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Lists and Settings\InputOldPassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\Lists and Settings\InputOldPassForm.designer.cs">
+      <DependentUpon>InputOldPassForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\Profiles\VenueProfilePage.cs">
       <SubType>UserControl</SubType>
@@ -183,12 +218,6 @@
     </Compile>
     <Compile Include="UIs\Profiles\EventProfilePage.Designer.cs">
       <DependentUpon>EventProfilePage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIs\Account\SignUpPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIs\Account\SignUpPage.Designer.cs">
-      <DependentUpon>SignUpPage.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\Account\CreateEventPage.cs">
       <SubType>UserControl</SubType>
@@ -214,7 +243,6 @@
     <Compile Include="UIs\Main\MainSplitForm.Designer.cs">
       <DependentUpon>MainSplitForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Common\interfaceMethods.cs" />
     <Compile Include="UIs\Common\Carousel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -271,6 +299,12 @@
     </Compile>
     <Compile Include="UIs\Sidebars\Lists\ListsMini.Designer.cs">
       <DependentUpon>ListsMini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Sidebars\Lists\CreateListPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Sidebars\Lists\CreateListPage.Designer.cs">
+      <DependentUpon>CreateListPage.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\Sidebars\UpcomingEvents\UpcomingEventsSidebar.cs">
       <SubType>UserControl</SubType>
@@ -346,8 +380,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="UIs\Main\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="UIs\Common\FriendsWhoHaveVisited.resx">
+      <DependentUpon>FriendsWhoHaveVisited.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Common\Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Common\NotificationBox.resx">
+      <DependentUpon>NotificationBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Account\LoginWarning.resx">
+      <DependentUpon>LoginWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Lists and Settings\InputOldPassForm.resx">
+      <DependentUpon>InputOldPassForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Profiles\VenueProfilePage.resx">
       <DependentUpon>VenueProfilePage.cs</DependentUpon>
@@ -363,9 +409,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Account\LogInPage.resx">
       <DependentUpon>LogInPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\Account\SignUpPage.resx">
-      <DependentUpon>SignUpPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Account\SignUpUserControl.resx">
       <DependentUpon>SignUpUserControl.cs</DependentUpon>
@@ -405,6 +448,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Sidebars\Lists\listsSidebar.resx">
       <DependentUpon>ListsSidebar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Sidebars\Lists\CreateListPage.resx">
+      <DependentUpon>CreateListPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Sidebars\Profile\ProfileSidebar.resx">
       <DependentUpon>ProfileSidebar.cs</DependentUpon>

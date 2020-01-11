@@ -92,35 +92,26 @@ C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\itHapp
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\itHappens.exe
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\itHappens.pdb
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Antlr3.Runtime.dll
-C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Docker.DotNet.dll
-C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\FluentNHibernate.dll
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Google.Apis.Gmail.v1.dll
-C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Iesi.Collections.dll
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Nancy.dll
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\NHibernate.dll
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Owin.dll
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Remotion.Linq.dll
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Remotion.Linq.EagerFetching.dll
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\System.Buffers.dll
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\System.ValueTuple.dll
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Antlr3.Runtime.xml
-C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\FluentNHibernate.xml
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Google.Apis.Gmail.v1.pdb
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Google.Apis.Gmail.v1.xml
-C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Iesi.Collections.xml
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.pdb
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Nancy.xml
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\NHibernate.xml
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Remotion.Linq.xml
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\Remotion.Linq.EagerFetching.xml
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\System.ValueTuple.xml
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.csprojAssemblyReference.cache
-C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.LogEvents.resources
-C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.GoogleForm.resources
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.Properties.Resources.resources
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.csproj.GenerateResource.cache
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
@@ -169,7 +160,6 @@ L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\i
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.EventProfilePage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.VenueProfilePage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.UserProfilePage.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.SignUpPage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.CreateEventPage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.LogInPage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.ListPage.resources
@@ -424,8 +414,6 @@ D:\adopse\adopse-events\Event-software\bin\Debug\Remotion.Linq.xml
 D:\adopse\adopse-events\Event-software\bin\Debug\Remotion.Linq.EagerFetching.xml
 D:\adopse\adopse-events\Event-software\bin\Debug\Renci.SshNet.xml
 D:\adopse\adopse-events\Event-software\bin\Debug\System.ValueTuple.xml
-D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.csprojAssemblyReference.cache
-D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.exe.config
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.VenueProfilePage.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.UserProfilePage.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.EventProfilePage.resources
@@ -451,7 +439,6 @@ D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.ListsCo
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.SettingsPage.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.EventMiniView.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.SearchPage.resources
-D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.ListMiniBox.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpUserControl.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpUserControl.resources
@@ -459,7 +446,6 @@ L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\i
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.ListMiniBox.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.CommonSearchTextPage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.MainPage.resources
-
 D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.csprojResolveAssemblyReference.cache
 D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.csproj.itHappens.exe.config
 D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpUserControl.resources
@@ -469,12 +455,56 @@ D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.MainPage.res
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsAttending.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.CommonSearchTextPage.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.MainPage.resources
-
-C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsAttending.resources
-C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.CommonSearchTextPage.resources
-C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.MainPage.resources
-D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpUserControl.resources
-D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsAttending.resources
-D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.CommonSearchTextPage.resources
-D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.MainPage.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.UserControl1.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\System.IO.dll
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\System.Net.Http.dll
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\System.Runtime.dll
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.exe.config
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.VenueProfilePage.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.UserProfilePage.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.EventProfilePage.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.CreateEventPage.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.LogInPage.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.SignUpPage.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpUserControl.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.CategoryGroupBox.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.Carousel.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsAttending.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.HorizontalListing.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.Listing.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.CategoryMiniBox.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.ListMiniBox.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.MainSplitForm.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.FriendList.FriendListMini.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.FriendListSidebar.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.Lists.ListsMini.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.ListsSidebar.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.ProfileSidebar.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.UpcomingEvents.UpcomingEventMini.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.UpcomingEventsSidebar.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.CommonSearchTextPage.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.ListPage.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.ListsContentPage.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.SettingsPage.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.EventMiniView.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.MainPage.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.SearchPage.resources
+C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.LoginWarning.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.LoginWarning.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.LoginWarning.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsWhoHaveVisited.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsWhoHaveVisited.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.notification.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.notification.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.NotificationBox.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.NotificationBox.resources
+C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsWhoHaveVisited.resources
+C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.Notification.resources
+C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.InputOldPassForm.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.InputOldPassForm.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.InputOldPassForm.resources
+L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.Lists.CreateListPage.resources
+C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.Lists.CreateListPage.resources

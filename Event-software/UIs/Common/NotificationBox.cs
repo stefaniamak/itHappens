@@ -8,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace itHappens.UIs.anna
+namespace itHappens.UIs.Common
 {
-    public partial class SignUpPage : UserControl
+    public partial class NotificationBox : UserControl
     {
-        public SignUpPage()
+        public NotificationBox()
         {
             InitializeComponent();
         }
 
+        public void AddControl(UserControl control)
+        {
+            notificationFlowLayoutPanel.Controls.Add(control);
+        }
     }
 }

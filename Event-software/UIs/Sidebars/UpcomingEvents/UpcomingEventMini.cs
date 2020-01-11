@@ -21,8 +21,13 @@ namespace itHappens.UIs.Sidebars.UpcomingEvents
         {
             eventName.Text = eventTitle;
             location.Text = categoryLocation;
-            //date.Text = eventDate;
-            //month.Text = eventDate;
+
+            //pernoume to eventDate kai to kanoume string oste na paroume to mina kai tin imera
+            DateTime dt = eventDate;
+            string datestring = dt.ToString("MM");
+            string monthstring = dt.ToString("dd");
+            date.Text = datestring;
+            month.Text = monthstring;
         }
 
         private void eventName_Click(object sender, EventArgs e)

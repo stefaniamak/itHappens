@@ -9,25 +9,29 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
+using dbstuff;
 
 namespace itHappens.UIs
 {
     public partial class SignUpUserControl : UserControl
     {
+        private static DbConnector dbCon = new DbConnector();
+        private static string conStr = dbCon.GetConnectionString();
+        public static string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+                        @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
+                        @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+
         public SignUpUserControl()
         {
             InitializeComponent();
-            fillTheComboBox();
+            fillTheAreaComboBox(areaComboBox);
+            areaComboBox.Items.Insert(0, "Select");
+            areaComboBox.SelectedIndex = 0;
         }
 
-        private void SignUpUserControl_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        public void fillTheComboBox()
+        public static void fillTheAreaComboBox(ComboBox combo)
         {
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
             MySqlConnection con;
 
             try
@@ -41,11 +45,11 @@ namespace itHappens.UIs
 
                 command = new MySqlCommand(queryString, con);
 
-                dataReader = command.ExecuteReader();              
+                dataReader = command.ExecuteReader();
 
                 while (dataReader.Read())
-                {                  
-                   areaComboBox.Items.Add(dataReader.GetString(0));                    
+                {
+                   combo.Items.Add(dataReader.GetString(0));
                 }
                 con.Close();
 
@@ -120,14 +124,19 @@ namespace itHappens.UIs
         private void emailTextBox_Validated(object sender, EventArgs e)
         {
             if (!emailTextBox.Text.Equals(""))
-            {
-                string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
-                        @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
-                        @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+            {              
                 Regex re = new Regex(strRegex);
                 if (re.IsMatch(emailTextBox.Text))
                 {
-                    emailValLabel.Text = "";
+                    if (Classes.DatabaseGeneralMethods.checkIfExistsInDatabaseInUsers("email", emailTextBox.Text))
+                    {
+                        emailValLabel.Text = "This email is used";
+                    }
+                    else
+                    {
+                        emailValLabel.Text = "";
+
+                    }
                 }
                 else
                 {
@@ -148,7 +157,15 @@ namespace itHappens.UIs
         {
             if (!usernameTextBox.Text.Equals(""))
             {
-                usernameValLabel.Text = "";
+                if (Classes.DatabaseGeneralMethods.checkIfExistsInDatabaseInUsers("username", usernameTextBox.Text))
+                {
+                    usernameValLabel.Text = "This username is used";
+                }
+                else
+                {
+                    usernameValLabel.Text = "";
+                }
+                
             }
         }
 
@@ -164,7 +181,15 @@ namespace itHappens.UIs
         {
             if (!passwordTextBox.Text.Equals(""))
             {
-                passwordValLabel.Text = "";
+                if(passwordTextBox.Text.Length <= 4)
+                {
+                    passwordValLabel.Text = "At least 5 characters";
+                }
+                else
+                {
+                    passwordValLabel.Text = "";
+                }
+                
             }
         }
 
@@ -203,6 +228,11 @@ namespace itHappens.UIs
                 passwordValLabel.Text = "Password is empty";
                 repassValLabel.Text = "Re-Type Password is empty";
             }
+            else if (!nameValLabel.Text.Equals("") || !surnameValLabel.Text.Equals("") || !emailValLabel.Text.Equals("")
+                  || !usernameValLabel.Text.Equals("") || !passwordValLabel.Text.Equals("") || !repassValLabel.Text.Equals(""))
+            {
+                MessageBox.Show("Fill the fields right","Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
             else if (nameTextBox.Text.Equals(""))
             {
                 nameValLabel.Text = "Name is empty";
@@ -231,18 +261,23 @@ namespace itHappens.UIs
             {
                 repassValLabel.Text = "It does not match with Password";
             }
-            else if (!(areaComboBox.SelectedIndex > -1))
+            else if (areaComboBox.Text.Equals("Select"))
             {
                 areaValLabel.Text = "Select a country";
             }
             else
             {
                 areaValLabel.Text = "";
-                MessageBox.Show("Your registration has been successfully completed!", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);               
+                MessageBox.Show("Your registration has been successfully completed!", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 signUpCon(areaComboBox.SelectedItem.ToString(), Convert.ToInt32(numericUpDown.Value), usernameTextBox.Text,
                     passwordTextBox.Text, nameTextBox.Text, surnameTextBox.Text, emailTextBox.Text);
+                int creatorid = Controllers.LoginController.Instance.returnUsersID(usernameTextBox.Text, passwordTextBox.Text);
+                Classes.CreateList.createEvent_ListMethod("HISTORY",creatorid);
+                Classes.CreateList.createEvent_ListMethod("GOING", creatorid);
+                Classes.CreateList.createEvent_ListMethod("INTERESTED", creatorid);
                 clearTextBoxes();
-                //Opou tha phgainei meta to signUp
+                Controllers.UIController.Instance.logInToolStripMenuItem_MiddlePanel();
+
             }
 
         }
@@ -255,43 +290,14 @@ namespace itHappens.UIs
             usernameTextBox.Text = "";
             passwordTextBox.Text = "";
             repassTextBox.Text = "";
-            
+
         }
 
         public static void signUpCon(String area, int age, String userName, String pass, String name, String surname, String email)
         {
-            int areaId = 0;
-            string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
+
+            int areaId = Classes.DatabaseGeneralMethods.ReturnIdOfAray(area);
             MySqlConnection con;
-
-            try
-            {
-                con = new MySqlConnection(conStr);
-                con.Open();
-
-                MySqlCommand command;
-                MySqlDataReader dataReader;
-                String queryString = "Select id from area where country= '" + area + "'";
-
-                command = new MySqlCommand(queryString, con);
-
-
-                dataReader = command.ExecuteReader();
-
-                while (dataReader.Read())
-                {
-                    areaId = Convert.ToInt32(dataReader.GetString(0));
-                }
-
-
-                con.Close();
-
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error");
-            }
 
 
             try
@@ -301,11 +307,11 @@ namespace itHappens.UIs
 
                 MySqlCommand cmd = con.CreateCommand(); ;
 
-                String query = "INSERT INTO users(areaID,Username,password,email,name,surname,age) VALUES(@areaId,@Username,@password,@email,@name,@surname,@age)";
+                String query = "INSERT INTO users(areaID,username,password,email,name,surname,age) VALUES(@areaId,@username,@password,@email,@name,@surname,@age)";
 
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@areaId", areaId);
-                cmd.Parameters.AddWithValue("@Username", userName);
+                cmd.Parameters.AddWithValue("@username", userName);
                 cmd.Parameters.AddWithValue("@password", pass);
                 cmd.Parameters.AddWithValue("@email", email);
                 cmd.Parameters.AddWithValue("@name", name);
