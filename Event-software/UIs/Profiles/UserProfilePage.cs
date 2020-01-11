@@ -58,15 +58,23 @@ namespace itHappens.UIs.andrea
         {
             
             MySqlConnection con;
-            /*
+            
             try
             {
                 con = new MySqlConnection(conStr);
                 con.Open();
 
+                int userId = UIs.anna.LogInPage.userId;
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "SELECT id, title, color FROM categories";
+                String queryString = "SELECT ev.id, cat.color, ev.title, ve.name, ev.startingDate   " +
+                                     "FROM users us " +
+                                     "JOIN event_list evL ON us.id = evL.creatorID " +
+                                     "JOIN attendants att ON evL.id = att.eventListID " +
+                                     "JOIN event ev ON att.eventID = ev.id " +
+                                     "JOIN categories cat ON cat.id = ev.categoryID " +
+                                     "JOIN venues ve ON ve.id = ev.venueID " +
+                                     "WHERE us.id = '" + userId + "'";
 
                 command = new MySqlCommand(queryString, con);
 
@@ -74,22 +82,7 @@ namespace itHappens.UIs.andrea
 
                 while (dataReader.Read())
                 {
-                    var box = new UIs.Common.CategoryMiniBox(Convert.ToInt32(dataReader.GetString(0)), dataReader.GetString(1), dataReader.GetString(2));
-                    box.OnSelectionChanged += () => { this.showMatches(); }; // new SelectionChanged(this.showMatches);
-
-                    if (Convert.ToInt32(dataReader.GetString(0)) < 4)
-                    {
-                        allcategoriesFlowLayoutPanel1.Controls.Add(box);
-                    }
-                    else if (Convert.ToInt32(dataReader.GetString(0)) < 36)
-                    {
-                        allcategoriesFlowLayoutPanel2.Controls.Add(box);
-                    }
-                    else
-                    {
-                        allcategoriesFlowLayoutPanel3.Controls.Add(box);
-                    }
-
+                    miniCaruselFillWithEventMiniView(dataReader.GetString(1), Convert.ToInt32(dataReader.GetString(0)), dataReader.GetString(2));
                 }
                 con.Close();
 
@@ -99,7 +92,7 @@ namespace itHappens.UIs.andrea
             {
                 Console.WriteLine("Error");
             }
-            */
+            
         }
 
 
