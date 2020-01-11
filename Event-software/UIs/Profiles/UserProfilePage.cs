@@ -61,31 +61,32 @@ namespace itHappens.UIs.andrea
             eventsUserWillAttendCarousel.AddControl(new UIs.Common.EventMiniView(categoryColor, theEventId));
         }
 
-        /*
-        public static void openUserPage(object sender, EventArgs e, int userId)
+        
+      /*  public static void openUserPage(object sender, EventArgs e, int userId)
         {
-            
+           
             MainSplitForm.middlePanel.Controls.Clear();
-            var v = Db_connector.Query(@"Select user.id, user.name , user.surname, venues.name, category.color,
-                                        event.startingDate  
+            var v = Db_connector.Query(@"Select user.id, event.id, user.name , user.surname, venues.name, area.address, category.color,
+                                        event.startingDate ,
 						FROM events e JOIN venues v 
 						ON e.venueID = v.id
 						JOIN category c
 						ON e.categoryID = c.id
 						JOIN user u
 						ON e.ownerID = u.id
+                        JOIN area a
+                        ON e
 						WHERE @userId = e.id",
                       new string[,] { { "@userId", userId + "" } });
             v.Read();
             var middlePage = new UserProfilePage
-                ( v.GetString(1),
-                 v.GetString(2), v.GetString(3),
-                 null, null, null, null, v.GetDateTime(5));
+                (v.GetInt32(0),v.GetInt32(1),v.GetString(2), v.GetString(3),
+                 v.GetString(4),v.GetString(5) , v.GetString(6),null,null,v.GetDateTime(7));
             MainSplitForm.middlePanel.Controls.Add(middlePage);
             middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             middlePage.Dock = DockStyle.Fill;
-           
-            
+
+
         }*/
 
     }

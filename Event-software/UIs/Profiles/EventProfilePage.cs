@@ -42,7 +42,6 @@ namespace itHappens.UIs.andrea
             eventNameLabel.Text = eventName;
             monthLabel.Text = Utility.Month(eventDateTime);
             dayLabel.Text = Utility.Day(eventDateTime);
-            //categoryColorLabel.BackColor = Utility.FromName(categoryColor); category color label doesnt exists
             backgroundPictureBox.BackgroundImage = background;
             locationTextBox.Text = venueName;
             organizerTextBox.Text = organizerName +" "+ organizerSurename ;
@@ -78,13 +77,13 @@ namespace itHappens.UIs.andrea
         }
         public static void openEventProfile(object sender, EventArgs e)
         {
-            /*
+            
             var eventview = (EventMiniView)sender;
             MainSplitForm.middlePanel.Controls.Clear();
             int eventid = eventview.eventId;
-            var v = Db_connector.Query(@"Select event.title, venues.name, category.color, user.name , 
-                        user.surname ,event.startingDate, 
-						event.ticketprice,event.description  
+            var v = Db_connector.Query(@"Select  event.title, venues.name, category.color, user.name , 
+                        user.surname, event.startingDate, 
+						event.ticketprice, event.description, user.id , event.id
 						FROM events e JOIN venues v 
 						ON e.venueID = v.id
 						JOIN category c
@@ -94,15 +93,16 @@ namespace itHappens.UIs.andrea
 						WHERE @eventid = e.id",
                        new string[,] { { "@eventid", eventid + "" } });
             v.Read();
-            var middlePage = new UIs.andrea.EventProfilePage
-                (v.GetString(0), v.GetString(1),
+            var middlePage = new EventProfilePage(
+                v.GetInt32(8), v.GetInt32(9),
+                v.GetString(0), v.GetString(1),
                  v.GetString(2), null, v.GetString(3),
                  v.GetString(4), v.GetDateTime(5),
                  v.GetDouble(6), v.GetString(7));
             MainSplitForm.middlePanel.Controls.Add(middlePage);
             middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             middlePage.Dock = DockStyle.Fill;
-           */
+           
         }
 
         private void organizerTextBox_TextChanged(object sender, EventArgs e)
