@@ -191,10 +191,10 @@ namespace itHappens.Classes
             designEditOfPanels(theSignUpPage);
         }
 
-        public void createEventToolStripMenuItem()
+        public void createEventToolStripMenuItem(string value)
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
-            theCreateEventPage = new UIs.anna.CreateEventPage();
+            theCreateEventPage = new UIs.anna.CreateEventPage(value);
             UIs.Common.MainSplitForm.middlePanel.Controls.Add(theCreateEventPage);
             designEditOfPanels(theCreateEventPage);
         }

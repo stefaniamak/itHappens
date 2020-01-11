@@ -24,6 +24,15 @@ namespace itHappens.UIs.andrea
         public EventProfilePage()
         {
             InitializeComponent();
+            //anti gia 0 stin methodo na mpei to id tou event
+            if (Classes.DatabaseGeneralMethods.CheckIfEventBelongsToLoggedInUser(0))
+            {
+                EditButton.Visible = true;
+            }
+            else
+            {
+                EditButton.Visible = false;
+            }
             friends();
 
         }
@@ -75,16 +84,17 @@ namespace itHappens.UIs.andrea
         {
 
         }
+
         public static void openEventProfile(object sender, EventArgs e)
         {
-            
+
             var eventview = (EventMiniView)sender;
             MainSplitForm.middlePanel.Controls.Clear();
             int eventid = eventview.eventId;
-            var v = Db_connector.Query(@"Select  event.title, venues.name, category.color, user.name , 
-                        user.surname, event.startingDate, 
+            var v = Db_connector.Query(@"Select  event.title, venues.name, category.color, user.name ,
+                        user.surname, event.startingDate,
 						event.ticketprice, event.description, user.id , event.id
-						FROM events e JOIN venues v 
+						FROM events e JOIN venues v
 						ON e.venueID = v.id
 						JOIN category c
 						ON e.categoryID = c.id
@@ -102,7 +112,7 @@ namespace itHappens.UIs.andrea
             MainSplitForm.middlePanel.Controls.Add(middlePage);
             middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             middlePage.Dock = DockStyle.Fill;
-           
+
         }
 
         private void organizerTextBox_TextChanged(object sender, EventArgs e)
@@ -113,6 +123,12 @@ namespace itHappens.UIs.andrea
         private void locationTextBox_TextChanged(object sender, EventArgs e)
         {
             Controllers.UIController.Instance.searchToolStripMenuItem_MiddlePanel();
+}
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            Classes.MiddlePanelMethods.Instance.createEventToolStripMenuItem("edit");
+
         }
     }
 }
