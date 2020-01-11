@@ -53,7 +53,6 @@ namespace itHappens.Classes
         {
             string categoryColorString = "";
             int theUserId = UIs.anna.LogInPage.userId;
-            int theEventId = -1;
 
             // Grapse ton kwdika sou edw gia thn emfanish stoixeiwn
 
@@ -64,11 +63,7 @@ namespace itHappens.Classes
             // Xrisimopoihse ton allon constuctor (tis emfaniseis apo to query apo panw tis evala me thn seira pou ths zhtaei o constructor), kai dwse null stis eikones:
                 // UserProfilePage(int userId, string userName, string userSurname, Image profilePicture)
             theUserProfilePage = new UIs.andrea.UserProfilePage(); 
-
-            // Auth h methodos tha periexei ta events pou o xrisths tha paei, dwse ws parametro to xrwma kathgorias tou event kai to id, apo to panw query pou s egrapsa.
-            UIs.andrea.UserProfilePage.Instance.miniCaruselFillWithEventMiniView(categoryColorString, theEventId);
-
-            
+       
             
         }
 
