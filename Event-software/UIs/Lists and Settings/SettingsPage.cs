@@ -445,7 +445,27 @@ namespace itHappens.UIs.valentina
             return result;
         }
 
-
-
+        private void DeleteAccountButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string MyConnection2 = "datasource=localhost;port=3307;username=root;password=root";
+                string Query = "delete from users where id = ? ";
+                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+                MySqlDataReader MyReader2;
+                MyConn2.Open();
+                MyReader2 = MyCommand2.ExecuteReader();
+                MessageBox.Show("User Deleted");
+                while (MyReader2.Read())
+                {
+                }
+                MyConn2.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
