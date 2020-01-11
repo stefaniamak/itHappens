@@ -88,6 +88,7 @@ namespace itHappens.Classes
 
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
+                Console.WriteLine("xaxa"+eventId);
                 addEventDetailsInEventProfile(eventId);
             }
             else

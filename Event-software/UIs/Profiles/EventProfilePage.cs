@@ -24,8 +24,7 @@ namespace itHappens.UIs.andrea
         public EventProfilePage()
         {
             InitializeComponent();
-            //anti gia 0 stin methodo na mpei to id tou event
-            if (Classes.DatabaseGeneralMethods.CheckIfEventBelongsToLoggedInUser(0))
+            if (Classes.DatabaseGeneralMethods.CheckIfEventBelongsToLoggedInUser(UIs.Common.EventMiniView.eventId))
             {
                 EditButton.Visible = true;
             }
@@ -44,6 +43,15 @@ namespace itHappens.UIs.andrea
 
         {
             InitializeComponent();
+            if (Classes.DatabaseGeneralMethods.CheckIfEventBelongsToLoggedInUser(UIs.Common.EventMiniView.eventId))
+            {
+                EditButton.Visible = true;
+            }
+            else
+            {
+                EditButton.Visible = false;
+            }
+
 
             friends();
             categoryColorPanel.BackColor = Utility.FromName(categoryColor);

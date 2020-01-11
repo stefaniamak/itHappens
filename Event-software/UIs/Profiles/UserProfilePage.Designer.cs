@@ -54,12 +54,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.userProfilePictureOvalPictureBox = new itHappens.UIs.Common.OvalPictureBox();
             this.userBackgroundPictureBox = new System.Windows.Forms.PictureBox();
+            this.listsContentPage1 = new itHappens.UIs.valentina.ListsContentPage();
             this.tabControl1.SuspendLayout();
             this.eventsUserTab.SuspendLayout();
             this.upcomingNextPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.eventShowcasedPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.miniEventBakcgroundPictureBox)).BeginInit();
+            this.UserEventsTab.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userProfilePictureOvalPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBackgroundPictureBox)).BeginInit();
@@ -334,6 +336,7 @@
             // 
             // UserEventsTab
             // 
+            this.UserEventsTab.Controls.Add(this.listsContentPage1);
             this.UserEventsTab.Location = new System.Drawing.Point(4, 22);
             this.UserEventsTab.Margin = new System.Windows.Forms.Padding(2);
             this.UserEventsTab.Name = "UserEventsTab";
@@ -378,6 +381,18 @@
             this.userBackgroundPictureBox.TabIndex = 12;
             this.userBackgroundPictureBox.TabStop = false;
             // 
+            // listsContentPage1
+            // 
+            this.listsContentPage1.AutoScroll = true;
+            this.listsContentPage1.AutoSize = true;
+            this.listsContentPage1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.listsContentPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.listsContentPage1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listsContentPage1.Location = new System.Drawing.Point(0, 0);
+            this.listsContentPage1.Name = "listsContentPage1";
+            this.listsContentPage1.Size = new System.Drawing.Size(764, 740);
+            this.listsContentPage1.TabIndex = 0;
+            // 
             // UserProfilePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,6 +411,8 @@
             this.tableLayoutPanel1.PerformLayout();
             this.eventShowcasedPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.miniEventBakcgroundPictureBox)).EndInit();
+            this.UserEventsTab.ResumeLayout(false);
+            this.UserEventsTab.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userProfilePictureOvalPictureBox)).EndInit();
@@ -430,5 +447,6 @@
         private Common.Carousel eventsUserWillAttendCarousel;
         private System.Windows.Forms.Panel categoryColorPanel;
         private System.Windows.Forms.Button followButton;
+        private valentina.ListsContentPage listsContentPage1;
     }
 }

@@ -17,7 +17,7 @@ namespace itHappens.UIs.anna
 
         private static DbConnector dbCon = new DbConnector();
         private static string conStr = dbCon.GetConnectionString();
-        public int eventID = 41; //tha pairnei to id tou event
+        public int eventID = UIs.andrea.EventProfilePage.Instance.eventId; 
 
         public CreateEventPage(String s)
         {
@@ -28,12 +28,12 @@ namespace itHappens.UIs.anna
                 fillTheDate();
                 fillCategories();
                 fillTime();
-                SDaycomboBox.SelectedIndex = 0;
-                EDaycomboBox.SelectedIndex = 0;
-                SMonthcomboBox.SelectedIndex = 0;
-                EMonthcomboBox.SelectedIndex = 0;
-                SYearcomboBox.SelectedIndex = 0;
-                EYearcomboBox.SelectedIndex = 0;
+                SDaycomboBox.Text = DateTime.Now.Day.ToString();
+                EDaycomboBox.Text = DateTime.Now.Day.ToString();
+                SMonthcomboBox.Text = DateTime.Now.Month.ToString();
+                EMonthcomboBox.Text = DateTime.Now.Month.ToString();
+                SYearcomboBox.Text = DateTime.Now.Year.ToString();
+                EYearcomboBox.Text = DateTime.Now.Year.ToString();
                 HourComboBox.SelectedIndex = 0;
                 MinutesComboBox.SelectedIndex = 0;
                 CategorycomboBox.Items.Insert(0, "Select");
@@ -54,7 +54,8 @@ namespace itHappens.UIs.anna
             }
         }
 
-        
+
+                
 
         public void fillTime()
         {
@@ -307,8 +308,8 @@ namespace itHappens.UIs.anna
                         Convert.ToDouble(PriceTextbox.Text), DescTextbox.Text);
                     MessageBox.Show("You successfully made an event!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    //Emfanish tou EventProfile (kanonika tha prepei me ta stoixeia tou event)
-                    Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel();
+                    
+                    Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel(GetCurrentEventId());
 
                     clearTextBoxes();
                     SDaycomboBox.SelectedIndex = 0;
@@ -338,7 +339,7 @@ namespace itHappens.UIs.anna
                         MessageBox.Show("You successfully update your event!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         //Emfanish tou EventProfile (kanonika tha prepei me ta stoixeia tou event)
-                        Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel();
+                        Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel(eventID);
 
                         clearTextBoxes();
                         SDaycomboBox.SelectedIndex = 0;
@@ -433,6 +434,41 @@ namespace itHappens.UIs.anna
             }
 
             return Convert.ToInt32(ownerid);
+        }
+
+        public int GetCurrentEventId()
+        {
+            MySqlConnection con;
+            int id = 0;
+
+            try
+            {
+                con = new MySqlConnection(conStr);
+                con.Open();
+
+                MySqlCommand command;
+                MySqlDataReader dataReader;
+                String queryString = "SELECT id FROM event order by id desc limit 1";
+
+
+                command = new MySqlCommand(queryString, con);
+
+                dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    id = dataReader.GetInt32(0);
+                }
+                con.Close();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error");
+            }
+
+            return id;
+
         }
 
         public int getCategoryId(String s)

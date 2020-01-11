@@ -12,7 +12,7 @@ namespace itHappens.UIs.Common
 {
     public partial class EventMiniView : UserControl
     {
-        public int eventId { get; set; }
+        public static int eventId;
         public EventMiniView()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace itHappens.UIs.Common
             Color catColor = Color.FromName(categoryColor);
             categoryColorPanel.BackColor = catColor;
             hoverOverPanel.Visible = false;
-            this.eventId = theEventId;
+            eventId = theEventId;
         }
 
 
@@ -103,7 +103,7 @@ namespace itHappens.UIs.Common
         private void detailsButton_Click(object sender, EventArgs e)
         {
             // opens Venue Profile Page
-            Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel(this.eventId);
+            Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel(eventId);
         }
 
         private void goingListOvalPictureBox_Click(object sender, EventArgs e)

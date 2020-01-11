@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Collections;
+using System.Windows.Forms;
 
 using itHappens.UIs.Common;
 
@@ -149,6 +151,26 @@ namespace itHappens.Controllers
                 //  eventminiview.Scale(0.55F);
                 UIs.valentina.ListsContentPage.EventHolderFlowLayoutPanel.Controls.Add(eventminiview);
             }
+        }
+
+        public static ArrayList eventIDList = new ArrayList();
+        public static ArrayList eventCategoryIDList = new ArrayList();
+        public void MyEventsListsContentPageLoad(int userId)
+        {
+            int EventNum = Classes.DatabaseGeneralMethods.ReturnNumberOfUserEvents(userId);
+            string catColor;
+            Classes.DatabaseGeneralMethods.GetUserEventCategoryIds(userId);
+            Classes.DatabaseGeneralMethods.GetUserEventIds(userId);
+
+            for (int i = 0; i < EventNum; i++)
+            {
+                catColor = Classes.DatabaseGeneralMethods.GetCategoryColorOfEvent(Convert.ToInt32(eventCategoryIDList[i]));
+                var eventminiview = new UIs.Common.EventMiniView(catColor,Convert.ToInt32(eventIDList[i]));
+                //  eventminiview.Scale(0.55F);
+                UIs.valentina.ListsContentPage.EventHolderFlowLayoutPanel.Controls.Add(eventminiview);
+            }
+            
+            
         }
 
         //    ----------    Sidebar Methods    ----------    

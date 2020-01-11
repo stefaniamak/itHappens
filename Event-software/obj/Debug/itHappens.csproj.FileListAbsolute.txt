@@ -276,7 +276,6 @@ C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\o
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.EventProfilePage.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.CreateEventPage.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.LogInPage.resources
-C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.SignUpPage.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.CategoryGroupBox.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.Carousel.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.HorizontalListing.resources
@@ -507,3 +506,5 @@ C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHapp
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.InputOldPassForm.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.Lists.CreateListPage.resources
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.Lists.CreateListPage.resources
+C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.NotificationBox.resources
+C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.Lists.CreateListPage.resources

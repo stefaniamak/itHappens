@@ -20,7 +20,17 @@ namespace itHappens.UIs.valentina
 
         private void ListsContentPage_Load(object sender, EventArgs e)
         {
-            Controllers.UIController.Instance.ListsContentPageLoad();
+            if (UIs.anna.LogInPage.loggedInUser == true)
+            {
+                Console.WriteLine(UIs.anna.LogInPage.userId);
+                Controllers.UIController.Instance.MyEventsListsContentPageLoad(UIs.anna.LogInPage.userId);
+            }
+            else
+            {
+                Controllers.UIController.Instance.ListsContentPageLoad();
+            }
+            
+            
         }
     }
 }
