@@ -26,7 +26,10 @@ namespace itHappens
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Application.Run(new UIs.SampleForm());
-            Application.Run(new UIs.Common.MainSplitForm());
+
+            UIs.anna.LogInPage.loggedInUser = false;
+
+            Application.Run(Controllers.UIController.Instance.MainSplitForm);
 
             //Application.Run(new LogEvents());
 

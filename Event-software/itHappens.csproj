@@ -149,6 +149,7 @@
   <ItemGroup>
     <Compile Include="Classes\Area.cs" />
     <Compile Include="Classes\Category.cs" />
+    <Compile Include="Classes\Utility.cs" />
     <Compile Include="Classes\madeForYouCarousel.cs" />
     <Compile Include="Classes\todayEventsCarousel.cs" />
     <Compile Include="Classes\CreateList.cs" />
@@ -159,6 +160,7 @@
     <Compile Include="Classes\SidebarsMethods.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\Venue.cs" />
+    <Compile Include="Controllers\LogoutController.cs" />
     <Compile Include="Controllers\UIController.cs" />
     <Compile Include="DbConnector.cs" />
     <Compile Include="DbConnectorInfo.cs" />
@@ -186,6 +188,12 @@
     </Compile>
     <Compile Include="UIs\Common\Notification.Designer.cs">
       <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Common\NotificationBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Common\NotificationBox.Designer.cs">
+      <DependentUpon>NotificationBox.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\Account\LoginWarning.cs">
       <SubType>UserControl</SubType>
@@ -217,12 +225,6 @@
     <Compile Include="UIs\Profiles\EventProfilePage.Designer.cs">
       <DependentUpon>EventProfilePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Account\SignUpPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIs\Account\SignUpPage.Designer.cs">
-      <DependentUpon>SignUpPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="UIs\Account\CreateEventPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -247,7 +249,6 @@
     <Compile Include="UIs\Main\MainSplitForm.Designer.cs">
       <DependentUpon>MainSplitForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Common\interfaceMethods.cs" />
     <Compile Include="UIs\Common\Carousel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -304,6 +305,12 @@
     </Compile>
     <Compile Include="UIs\Sidebars\Lists\ListsMini.Designer.cs">
       <DependentUpon>ListsMini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Sidebars\Lists\CreateListPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Sidebars\Lists\CreateListPage.Designer.cs">
+      <DependentUpon>CreateListPage.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\Sidebars\UpcomingEvents\UpcomingEventsSidebar.cs">
       <SubType>UserControl</SubType>
@@ -385,6 +392,9 @@
     <EmbeddedResource Include="UIs\Common\Notification.resx">
       <DependentUpon>Notification.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Common\NotificationBox.resx">
+      <DependentUpon>NotificationBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIs\Account\LoginWarning.resx">
       <DependentUpon>LoginWarning.cs</DependentUpon>
     </EmbeddedResource>
@@ -405,9 +415,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Account\LogInPage.resx">
       <DependentUpon>LogInPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\Account\SignUpPage.resx">
-      <DependentUpon>SignUpPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Account\SignUpUserControl.resx">
       <DependentUpon>SignUpUserControl.cs</DependentUpon>
@@ -447,6 +454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Sidebars\Lists\listsSidebar.resx">
       <DependentUpon>ListsSidebar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Sidebars\Lists\CreateListPage.resx">
+      <DependentUpon>CreateListPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Sidebars\Profile\ProfileSidebar.resx">
       <DependentUpon>ProfileSidebar.cs</DependentUpon>

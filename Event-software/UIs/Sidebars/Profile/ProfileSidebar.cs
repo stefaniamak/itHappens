@@ -15,15 +15,50 @@ namespace itHappens.UIs.Sidebars
         public ProfileSidebar()
         {
             InitializeComponent();
+
+            shownotificationUserControl();
         }
 
         private void LogoutButton_Click(object sender, EventArgs e)
         {
-            UIs.anna.LogInPage.loggedInUser = false;
+
+            userLogOut();
+            Controllers.LogoutController.Instance.logoutActions();
+        }
+
+        public void userLogOut()
+        {
             usernameLable.Text = "Username";
             LogoutButton.Visible = false;
-            Controllers.UIController.Instance.openHostForMainAndSearchPage();
-            Controllers.UIController.Instance.openPage("main");
+        }
+
+        public void userLogedIn(string username)
+        {
+            LogoutButton.Visible = true;
+            usernameLable.Text = username;
+        }
+
+        private void shownotificationUserControl()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                notificationBox.AddControl(new Common.Notification());
+            }
+        }
+
+        private void bellNotificationPictureBox_Click(object sender, EventArgs e)
+        {
+            notificationBox.Visible = !notificationBox.Visible;
+        }
+
+        private void ovalPictureBox1_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.Instance.mainToolStripMenuItem_MiddlePanel();
+        }
+
+        private void usernameLable_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.Instance.mainToolStripMenuItem_MiddlePanel();
         }
     }
 }

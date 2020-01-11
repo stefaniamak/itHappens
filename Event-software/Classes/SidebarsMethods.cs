@@ -1,46 +1,91 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using itHappens.UIs.Sidebars;
 
 namespace itHappens.Classes
 {
     class SidebarsMethods
     {
 
-        public static void addFriendList()
+        // Use the Singleton pattern
+        private static SidebarsMethods _instance = new SidebarsMethods();
+        public static SidebarsMethods Instance => _instance;
+
+        public ProfileSidebar TheProfileSidebar { get => theProfileSidebar; set => theProfileSidebar = value; }
+
+        // Profiles User Controls
+        private UIs.Sidebars.UpcomingEventsSidebar theUpcomingEvetsSidebar = null;
+        private UIs.Sidebars.ListsSidebar theListsSidebar = null;
+        private UIs.Sidebars.ProfileSidebar theProfileSidebar = null;
+        private UIs.Sidebars.FriendListSidebar theUptheFriendListSidebar = null;
+        // Extra User Controls
+        private UIs.Main.LoginWarning thisLoginWarningPage = null;
+
+
+        public void showLogedOutSidebars()
         {
-            var FriendListSidebar = new UIs.Sidebars.FriendListSidebar();
-            UIs.Common.MainSplitForm.rightBottomPanel.Controls.Add(FriendListSidebar);
-            FriendListSidebar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            FriendListSidebar.Dock = DockStyle.Fill;
+            clearSidebars();
+            addProfile();
+            Classes.SidebarsMethods.Instance.addWarningToLogIn();
         }
 
-        public static void addUpcomingEvents()
+        public void showLogedInSidebars()
         {
-            var upcomingEventsSidebar = new UIs.Sidebars.UpcomingEventsSidebar();
-            UIs.Common.MainSplitForm.leftTopPanel.Controls.Add(upcomingEventsSidebar);
-            upcomingEventsSidebar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            upcomingEventsSidebar.Dock = DockStyle.Fill;
+            clearSidebars();
+            Classes.SidebarsMethods.Instance.addUpcomingEvents();
+            Classes.SidebarsMethods.Instance.addLists();
+            Classes.SidebarsMethods.Instance.addProfile();
+            Classes.SidebarsMethods.Instance.addFriendList();
         }
 
-        public static void addLists()
+        public void clearSidebars()
         {
-            var listsSidebar = new UIs.Sidebars.ListsSidebar();
-            UIs.Common.MainSplitForm.leftMiddlePanel.Controls.Add(listsSidebar);
-            listsSidebar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            listsSidebar.Dock = DockStyle.Fill;
+           Controllers.UIController.Instance.MainSplitForm.rightBottomPanel.Controls.Clear();
+           Controllers.UIController.Instance.MainSplitForm.leftTopPanel.Controls.Clear();
+           Controllers.UIController.Instance.MainSplitForm.leftMiddlePanel.Controls.Clear();
+           Controllers.UIController.Instance.MainSplitForm.rightTopPanel.Controls.Clear();
         }
 
-        public static void addProfile()
+        public void addFriendList()
         {
-            var Profileidebar = new UIs.Sidebars.ProfileSidebar();
-            UIs.Common.MainSplitForm.rightTopPanel.Controls.Add(Profileidebar);
-            Profileidebar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            Profileidebar.Dock = DockStyle.Fill;
+            theUptheFriendListSidebar = new UIs.Sidebars.FriendListSidebar();
+           Controllers.UIController.Instance.MainSplitForm.rightBottomPanel.Controls.Add(theUptheFriendListSidebar);
+            Controllers.UIController.Instance.designEditOfPanels(theUptheFriendListSidebar);
         }
 
+        public void addUpcomingEvents()
+        {
+            theUpcomingEvetsSidebar = new UIs.Sidebars.UpcomingEventsSidebar();
+           Controllers.UIController.Instance.MainSplitForm.leftTopPanel.Controls.Add(theUpcomingEvetsSidebar);
+            Controllers.UIController.Instance.designEditOfPanels(theUpcomingEvetsSidebar);
+        }
+
+        public void addLists()
+        {
+            theListsSidebar = new UIs.Sidebars.ListsSidebar();
+           Controllers.UIController.Instance.MainSplitForm.leftMiddlePanel.Controls.Add(theListsSidebar);
+            Controllers.UIController.Instance.designEditOfPanels(theListsSidebar);
+        }
+
+        public void addProfile()
+        {
+            TheProfileSidebar = new UIs.Sidebars.ProfileSidebar();
+           Controllers.UIController.Instance.MainSplitForm.rightTopPanel.Controls.Add(TheProfileSidebar);
+            Controllers.UIController.Instance.designEditOfPanels(TheProfileSidebar);
+        }
+
+        public void addWarningToLogIn()
+        {
+            thisLoginWarningPage = new UIs.Main.LoginWarning();
+           Controllers.UIController.Instance.MainSplitForm.leftTopPanel.Controls.Add(thisLoginWarningPage);
+            Controllers.UIController.Instance.designEditOfPanels(thisLoginWarningPage);
+
+            thisLoginWarningPage = new UIs.Main.LoginWarning();
+           Controllers.UIController.Instance.MainSplitForm.leftMiddlePanel.Controls.Add(thisLoginWarningPage);
+            Controllers.UIController.Instance.designEditOfPanels(thisLoginWarningPage);
+
+            thisLoginWarningPage = new UIs.Main.LoginWarning();
+           Controllers.UIController.Instance.MainSplitForm.rightBottomPanel.Controls.Add(thisLoginWarningPage);
+            Controllers.UIController.Instance.designEditOfPanels(thisLoginWarningPage);
+
+        }
     }
 }

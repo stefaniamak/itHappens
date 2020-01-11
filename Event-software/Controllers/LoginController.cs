@@ -14,7 +14,10 @@ namespace itHappens.Controllers
         private static DbConnector dbCon = new DbConnector();
         private static string conStr = dbCon.GetConnectionString();
 
-        public static bool FieldsValidation(String username,String password,bool flag)
+        private static LoginController _instance = new LoginController();
+        public static LoginController Instance => _instance;
+
+        public bool FieldsValidation(String username,String password,bool flag)
         {
             if (String.IsNullOrEmpty(username) && String.IsNullOrEmpty(password))
             {
@@ -43,7 +46,7 @@ namespace itHappens.Controllers
             return flag;
         }
 
-        public static String DatabaseFieldValidation(String username, String password)
+        public String DatabaseFieldValidation(String username, String password)
         {
             MySqlConnection con;
             String result = "";
@@ -55,7 +58,7 @@ namespace itHappens.Controllers
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select username from users where username= '" + username + "' and password= '" + password + "'";
+                String queryString = "Select username, id from users where username= '" + username + "' and password= '" + password + "'";
 
                 command = new MySqlCommand(queryString, con);
 
@@ -64,6 +67,7 @@ namespace itHappens.Controllers
                 while (dataReader.Read())
                 {
                     result = dataReader.GetString(0);
+                    UIs.anna.LogInPage.userId = Convert.ToInt32(dataReader.GetString(2));
                 }
                 con.Close();
 
@@ -80,7 +84,7 @@ namespace itHappens.Controllers
 
         }
 
-        public static String loginNameSurnameToProfile(String usern, String pass)
+        public String loginNameSurnameToProfile(String usern, String pass)
         {
             MySqlConnection con;
             String userName = "";
@@ -120,7 +124,7 @@ namespace itHappens.Controllers
 
         }
 
-        public static int returnUsersID(String username, String password)
+        public int returnUsersID(String username, String password)
         {
             MySqlConnection con;
             String result = "";

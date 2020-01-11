@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace itHappens.UIs.Common
 {
-    public partial class notification : UserControl
+    public partial class Notification : UserControl
     {
-        public notification()
+        public Notification()
         {
             InitializeComponent();
         }
 
-        public notification(string message)
+        public Notification(string message)
         {
             InitializeComponent();
 

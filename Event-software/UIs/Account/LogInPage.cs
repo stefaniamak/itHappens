@@ -14,30 +14,27 @@ namespace itHappens.UIs.anna
     {
         public static bool loggedInUser;
         public static int ageOfUser;
+        public static int userId = -1;
+
         public LogInPage()
         {
             InitializeComponent();
         }
-
+        
         public static String userName;
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
           
             bool flag = false;
-            bool validation = Controllers.LoginController.FieldsValidation(UsernameTextBox.Text, PasswordTextBox.Text, flag);
+            bool validation = Controllers.LoginController.Instance.FieldsValidation(UsernameTextBox.Text, PasswordTextBox.Text, flag);
 
             if (validation == true)
             {
-                userName = Controllers.LoginController.DatabaseFieldValidation(UsernameTextBox.Text, PasswordTextBox.Text);
+                userName = Controllers.LoginController.Instance.DatabaseFieldValidation(UsernameTextBox.Text, PasswordTextBox.Text);
                 if (!userName.Equals(""))
                 {
-                    ageOfUser = Classes.DatabaseGeneralMethods.ReturnAgeOfUser(UsernameTextBox.Text, PasswordTextBox.Text);
-                    UIs.Sidebars.ProfileSidebar.usernameLable.Text = UsernameTextBox.Text;
-                    loggedInUser = true;
-                    UIs.Sidebars.ProfileSidebar.LogoutButton.Visible = true;
-                    Controllers.UIController.Instance.openHostForMainAndSearchPage();
-                    Controllers.UIController.Instance.openPage("main");
+                    loginActions();
                 }
                 else
                 {
@@ -48,6 +45,17 @@ namespace itHappens.UIs.anna
 
             UsernameTextBox.Text = "";
             PasswordTextBox.Text = "";
+        }
+
+        private void loginActions()
+        {
+            ageOfUser = Classes.DatabaseGeneralMethods.ReturnAgeOfUser(UsernameTextBox.Text, PasswordTextBox.Text);
+            loggedInUser = true;
+            
+            Controllers.UIController.Instance.openHostForMainAndSearchPage();
+            Controllers.UIController.Instance.openCommonSearchTextPage("main");
+            Controllers.UIController.Instance.showSidebars(UsernameTextBox.Text);
+            Controllers.UIController.Instance.MainSplitForm.logInSignOutButtonsVisibility();
         }
 
         private void PasswordTextBox_KeyPress(object sender, KeyPressEventArgs e)

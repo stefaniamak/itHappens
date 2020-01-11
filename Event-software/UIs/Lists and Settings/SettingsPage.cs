@@ -20,13 +20,14 @@ namespace itHappens.UIs.valentina
         private static DbConnector dbCon = new DbConnector();
         private static string conStr = dbCon.GetConnectionString();
         public int UsersID;
+        public static bool flagOldPass = true;
 
         public SettingsPage()
         {
             InitializeComponent();
             if (UIs.anna.LogInPage.loggedInUser == true) 
             {
-                UsersID = Classes.DatabaseGeneralMethods.returnUsersIDWhenIsLogedIn(UIs.Sidebars.ProfileSidebar.usernameLable.Text);
+                UsersID = Classes.DatabaseGeneralMethods.returnUsersIDWhenIsLogedIn(Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text);
                 UIs.SignUpUserControl.fillTheAreaComboBox(AreaComboBox);
                 fillTheFieldsWithUsersInfo();
             }            
@@ -35,7 +36,7 @@ namespace itHappens.UIs.valentina
 
         public void fillTheFieldsWithUsersInfo()
         {
-            UsernameTextBox.Text = UIs.Sidebars.ProfileSidebar.usernameLable.Text;
+            UsernameTextBox.Text = Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text;
             MySqlConnection con;
             int areaID=0;
 
@@ -47,7 +48,7 @@ namespace itHappens.UIs.valentina
                 MySqlCommand command;
                 MySqlDataReader dataReader;
                 String queryString = "Select name,surname,email,areaID from users where username= '" + 
-                    UIs.Sidebars.ProfileSidebar.usernameLable.Text + "'";
+                    Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text + "'";
 
                 command = new MySqlCommand(queryString, con);
 
@@ -140,7 +141,7 @@ namespace itHappens.UIs.valentina
                 {
                     if (UIs.anna.LogInPage.loggedInUser == true)
                     {
-                        int userID = Classes.DatabaseGeneralMethods.returnUsersIDWhenIsLogedIn(UIs.Sidebars.ProfileSidebar.usernameLable.Text);
+                        int userID = Classes.DatabaseGeneralMethods.returnUsersIDWhenIsLogedIn(Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text);
 
                         if (Classes.DatabaseGeneralMethods.checkIfExistsInDatabaseWithAnotherID(userID, "username", UsernameTextBox.Text))
                         {
@@ -174,7 +175,7 @@ namespace itHappens.UIs.valentina
                 {
                     if (UIs.anna.LogInPage.loggedInUser == true)
                     {
-                        int userID = Classes.DatabaseGeneralMethods.returnUsersIDWhenIsLogedIn(UIs.Sidebars.ProfileSidebar.usernameLable.Text);
+                        int userID = Classes.DatabaseGeneralMethods.returnUsersIDWhenIsLogedIn(Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text);
                      
                         if (Classes.DatabaseGeneralMethods.checkIfExistsInDatabaseWithAnotherID(userID, "email", EmailSettingsTextBox.Text))
                         {
@@ -270,47 +271,58 @@ namespace itHappens.UIs.valentina
 
         private void UpdateChangesButton_Click(object sender, EventArgs e)
         {
-            if(NameSettingsTextBox.Text.Equals("") || SurnameSettingsTextBox.Text.Equals("")
+            if (NameSettingsTextBox.Text.Equals("") || SurnameSettingsTextBox.Text.Equals("")
                 || UsernameTextBox.Text.Equals("") || EmailSettingsTextBox.Text.Equals(""))
             {
-                MessageBox.Show("Fill the fields right","Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Fill the fields right", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (NameWarningLabel.Text.Equals("") && SurnameWarningLabel.Text.Equals("")
-                     && UsernameWarningLabel.Text.Equals("") && EmailWarningLabel.Text.Equals("")
-                     && ReTypeLabel.Text.Equals("") && TypeNewPasswordLabel.Text.Equals(""))
-                 {
+                      && UsernameWarningLabel.Text.Equals("") && EmailWarningLabel.Text.Equals("")
+                      && ReTypeLabel.Text.Equals("") && TypeNewPasswordLabel.Text.Equals("")) 
+                 { 
+            
                     if (!NewPasswordTextBox.Text.Equals("Type new password") && !RepeatNewPasswordTextBox.Text.Equals("Re-type new password"))
                     {
-                        if (GiveOldPasswordInputBox())
-                        {
-                            Console.WriteLine("Kanei update");
 
+                        UIs.InputOldPassForm form = new UIs.InputOldPassForm();
+                        form.ShowDialog();
+
+                        if (flagOldPass && GiveOldPasswordForm())
+                        {
                             do_update();
                         }
-                        else
+                        else if (flagOldPass == false)
                         {
-                            MessageBox.Show("You have to type your old password to update changes!","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                            MessageBox.Show("You have to type your old password to update changes!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
                     }
                     else
                     {
-                        updateUserProfileWithoutPass(UsernameTextBox.Text,EmailSettingsTextBox.Text, NameSettingsTextBox.Text, SurnameSettingsTextBox.Text);                       
-                        MessageBox.Show("You successfully update your profile!","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                        if (!UIs.Sidebars.ProfileSidebar.usernameLable.Text.Equals(UsernameTextBox.Text))
+                        if (checkIfThereAreNotChangesInFields(NameSettingsTextBox.Text, SurnameSettingsTextBox.Text, UsernameTextBox.Text, EmailSettingsTextBox.Text))
                         {
-                            UIs.Sidebars.ProfileSidebar.usernameLable.Text = UsernameTextBox.Text;
+                            updateUserProfileWithoutPass(UsernameTextBox.Text, EmailSettingsTextBox.Text, NameSettingsTextBox.Text, SurnameSettingsTextBox.Text);
+                            MessageBox.Show("You successfully update your profile!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (!Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text.Equals(UsernameTextBox.Text))
+                            {
+                                Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text = UsernameTextBox.Text;
+                            }
                         }
-                }
+                        else
+                        {
+                            MessageBox.Show("There are no changes to update", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                    }
                  }
         }
 
         public void do_update()
         {
             updateUserProfile(UsernameTextBox.Text, NewPasswordTextBox.Text, EmailSettingsTextBox.Text, NameSettingsTextBox.Text, SurnameSettingsTextBox.Text);
-            if (!UIs.Sidebars.ProfileSidebar.usernameLable.Text.Equals(UsernameTextBox.Text))
+            if (!Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text.Equals(UsernameTextBox.Text))
             {
-                UIs.Sidebars.ProfileSidebar.usernameLable.Text = UsernameTextBox.Text;
+                Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text = UsernameTextBox.Text;
             }
 
             MessageBox.Show("You successfully update your profile!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -385,39 +397,53 @@ namespace itHappens.UIs.valentina
             }
         }
 
-        public static bool GiveOldPasswordInputBox()
+        public static bool GiveOldPasswordForm()
         {
-            bool flag = false;
-            bool flag2 = true;
-
-            while (flag == false && flag2 == true)
-            {
-                String x = Interaction.InputBox("Give your old password", "itHappens", "", -1, -1);
-
-                if (!x.Equals(""))
-                {
-                    String oldpasswrd = Classes.DatabaseGeneralMethods.ReturnUsersPassword(UIs.Sidebars.ProfileSidebar.usernameLable.Text);
-
-                    if (!x.Equals(oldpasswrd))
-                    {
-                        MessageBox.Show("Please type your old password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        flag = true;
-                    }
-                }
-                else
-                {
-                    flag2 = false;
-                }
-            }
-
-            
-            return flag;
+            return UIs.InputOldPassForm.oldPass;
         }
 
+        public bool checkIfThereAreNotChangesInFields(String name, String surname, String username, String email)
+        {
+            int areaId = Classes.DatabaseGeneralMethods.ReturnIdOfAray(AreaComboBox.Text);
+            MySqlConnection con;
+            bool result = true;
 
+            try
+            {
+
+                con = new MySqlConnection(conStr);
+                con.Open();
+
+                MySqlCommand command;
+                MySqlDataReader dataReader;
+                String queryString = "Select name,surname,username,email,areaID from users where id=" + UsersID + "";
+
+                command = new MySqlCommand(queryString, con);
+
+                dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    if (name.Equals(dataReader.GetString(0)) && surname.Equals(dataReader.GetString(1)) &&
+                        username.Equals(dataReader.GetString(2)) && email.Equals(dataReader.GetString(3))
+                        && areaId.Equals(dataReader.GetInt32(4)))
+                    {
+                        result = false;
+                    }
+                }
+                con.Close();
+
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error");
+            }
+
+
+            return result;
+        }
 
 
 

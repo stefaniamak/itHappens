@@ -32,6 +32,7 @@
             this.userNameLabel = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.eventsUserTab = new System.Windows.Forms.TabPage();
+            this.followButton = new System.Windows.Forms.Button();
             this.upNextLabel = new System.Windows.Forms.Label();
             this.eventNameLabel = new System.Windows.Forms.Label();
             this.overAtLabel = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.userProfilePictureOvalPictureBox = new itHappens.UIs.Common.OvalPictureBox();
             this.userBackgroundPictureBox = new System.Windows.Forms.PictureBox();
-            this.followButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.eventsUserTab.SuspendLayout();
             this.upcomingNextPanel.SuspendLayout();
@@ -118,6 +118,17 @@
             this.eventsUserTab.TabIndex = 0;
             this.eventsUserTab.Text = "EVENTS";
             this.eventsUserTab.UseVisualStyleBackColor = true;
+            // 
+            // followButton
+            // 
+            this.followButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.followButton.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.followButton.Location = new System.Drawing.Point(554, 22);
+            this.followButton.Name = "followButton";
+            this.followButton.Size = new System.Drawing.Size(196, 46);
+            this.followButton.TabIndex = 30;
+            this.followButton.Text = "FOLLOW";
+            this.followButton.UseVisualStyleBackColor = true;
             // 
             // upNextLabel
             // 
@@ -366,16 +377,6 @@
             this.userBackgroundPictureBox.Size = new System.Drawing.Size(772, 778);
             this.userBackgroundPictureBox.TabIndex = 12;
             this.userBackgroundPictureBox.TabStop = false;
-            // 
-            // followButton
-            // 
-            this.followButton.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.followButton.Location = new System.Drawing.Point(554, 22);
-            this.followButton.Name = "followButton";
-            this.followButton.Size = new System.Drawing.Size(196, 46);
-            this.followButton.TabIndex = 30;
-            this.followButton.Text = "FOLLOW";
-            this.followButton.UseVisualStyleBackColor = true;
             // 
             // UserProfilePage
             // 
