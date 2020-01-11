@@ -61,7 +61,7 @@
             // areaValLabel
             // 
             this.areaValLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.areaValLabel.ForeColor = System.Drawing.Color.Lime;
+            this.areaValLabel.ForeColor = System.Drawing.Color.Yellow;
             this.areaValLabel.Location = new System.Drawing.Point(456, 725);
             this.areaValLabel.Name = "areaValLabel";
             this.areaValLabel.Size = new System.Drawing.Size(166, 31);
@@ -70,7 +70,7 @@
             // repassValLabel
             // 
             this.repassValLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.repassValLabel.ForeColor = System.Drawing.Color.Lime;
+            this.repassValLabel.ForeColor = System.Drawing.Color.Yellow;
             this.repassValLabel.Location = new System.Drawing.Point(453, 587);
             this.repassValLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.repassValLabel.Name = "repassValLabel";
@@ -80,7 +80,7 @@
             // passwordValLabel
             // 
             this.passwordValLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.passwordValLabel.ForeColor = System.Drawing.Color.Lime;
+            this.passwordValLabel.ForeColor = System.Drawing.Color.Yellow;
             this.passwordValLabel.Location = new System.Drawing.Point(453, 520);
             this.passwordValLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.passwordValLabel.Name = "passwordValLabel";
@@ -90,7 +90,7 @@
             // usernameValLabel
             // 
             this.usernameValLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.usernameValLabel.ForeColor = System.Drawing.Color.Lime;
+            this.usernameValLabel.ForeColor = System.Drawing.Color.Yellow;
             this.usernameValLabel.Location = new System.Drawing.Point(453, 443);
             this.usernameValLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.usernameValLabel.Name = "usernameValLabel";
@@ -100,7 +100,7 @@
             // emailValLabel
             // 
             this.emailValLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.emailValLabel.ForeColor = System.Drawing.Color.Lime;
+            this.emailValLabel.ForeColor = System.Drawing.Color.Yellow;
             this.emailValLabel.Location = new System.Drawing.Point(453, 372);
             this.emailValLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.emailValLabel.Name = "emailValLabel";
@@ -110,7 +110,7 @@
             // surnameValLabel
             // 
             this.surnameValLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.surnameValLabel.ForeColor = System.Drawing.Color.Lime;
+            this.surnameValLabel.ForeColor = System.Drawing.Color.Yellow;
             this.surnameValLabel.Location = new System.Drawing.Point(453, 303);
             this.surnameValLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.surnameValLabel.Name = "surnameValLabel";
@@ -120,7 +120,7 @@
             // nameValLabel
             // 
             this.nameValLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.nameValLabel.ForeColor = System.Drawing.Color.Lime;
+            this.nameValLabel.ForeColor = System.Drawing.Color.Yellow;
             this.nameValLabel.Location = new System.Drawing.Point(453, 225);
             this.nameValLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.nameValLabel.Name = "nameValLabel";
