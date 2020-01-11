@@ -27,9 +27,31 @@ namespace itHappens.Classes
         public void mainToolStripMenuItem()
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
-            theUserProfilePage = new UIs.andrea.UserProfilePage();
+
+            if (UIs.anna.LogInPage.loggedInUser == true)
+            {
+                addUsersDetailsInUserProfile();
+            }
+            else
+            {           
+                theUserProfilePage = new UIs.andrea.UserProfilePage();               
+            }
             UIs.Common.MainSplitForm.middlePanel.Controls.Add(theUserProfilePage);
             designEditOfPanels(theUserProfilePage);
+        }
+
+        private void addUsersDetailsInUserProfile()
+        {
+            string categoryColorString = "";
+            int theEventId = -1;
+
+            // Grapse ton kwdika sou edw gia thn emfanish stoixeiwn
+
+
+            // Auth h methodos tha periexei ta events pou o xrisths tha paei
+            UIs.andrea.UserProfilePage.Instance.miniCaruselFillWithEventMiniView(categoryColorString, theEventId);
+
+            theUserProfilePage = new UIs.andrea.UserProfilePage(); // Xrisimopoihse ton allon constuctor
         }
 
         public void designEditOfPanels(UserControl theUserControl)

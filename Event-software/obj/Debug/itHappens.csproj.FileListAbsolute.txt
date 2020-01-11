@@ -160,7 +160,6 @@ L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\i
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.EventProfilePage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.VenueProfilePage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.UserProfilePage.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.SignUpPage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.CreateEventPage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.LogInPage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.valentina.ListPage.resources

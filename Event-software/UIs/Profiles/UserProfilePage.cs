@@ -13,6 +13,8 @@ namespace itHappens.UIs.andrea
         public int userId { get; set; }
         public int eventId { get; set; }
 
+        private static UserProfilePage _instance = new UserProfilePage();
+        public static UserProfilePage Instance => _instance;
 
         public UserProfilePage()
         {
@@ -23,7 +25,7 @@ namespace itHappens.UIs.andrea
         {
             InitializeComponent();
 
-            eventsUserWillAttend();
+            //eventsUserWillAttend();
 
             userNameLabel.Text = userName + " " + userSurname;
             userProfilePictureOvalPictureBox.BackgroundImage = profilePicture;
@@ -45,7 +47,7 @@ namespace itHappens.UIs.andrea
             eventsUserWillAttend();
         }
 
-
+        
         private void eventsUserWillAttend()
         {
             for (int i = 0; i < 10; i++)
@@ -54,7 +56,13 @@ namespace itHappens.UIs.andrea
             }
         }
 
-        /*public static void openUserPage(object sender, EventArgs e, int userId)
+        public void miniCaruselFillWithEventMiniView(string categoryColor, int theEventId)
+        {
+            eventsUserWillAttendCarousel.AddControl(new UIs.Common.EventMiniView(categoryColor, theEventId));
+        }
+
+        /*
+        public static void openUserPage(object sender, EventArgs e, int userId)
         {
             
             MainSplitForm.middlePanel.Controls.Clear();

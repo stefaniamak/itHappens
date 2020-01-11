@@ -14,22 +14,21 @@
         // Extra User Controls
         private UIs.Main.LoginWarning thisLoginWarningPage = null;
 
+
+        public void showLogedOutSidebars()
+        {
+            clearSidebars();
+            Classes.SidebarsMethods.Instance.addProfile();
+            Classes.SidebarsMethods.Instance.addWarningToLogIn();
+        }
+
         public void showLogedInSidebars()
         {
             clearSidebars();
             Classes.SidebarsMethods.Instance.addUpcomingEvents();
             Classes.SidebarsMethods.Instance.addLists();
             Classes.SidebarsMethods.Instance.addProfile();
- 
             Classes.SidebarsMethods.Instance.addFriendList();
-
-        }
-        
-        public void showLogedOutSidebars()
-        {
-            clearSidebars();
-            Classes.SidebarsMethods.Instance.addProfile();
-            Classes.SidebarsMethods.Instance.addWarningToLogIn();
         }
 
         public void clearSidebars()

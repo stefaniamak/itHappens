@@ -219,12 +219,6 @@
     <Compile Include="UIs\Profiles\EventProfilePage.Designer.cs">
       <DependentUpon>EventProfilePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Account\SignUpPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIs\Account\SignUpPage.Designer.cs">
-      <DependentUpon>SignUpPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="UIs\Account\CreateEventPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -415,9 +409,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Account\LogInPage.resx">
       <DependentUpon>LogInPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\Account\SignUpPage.resx">
-      <DependentUpon>SignUpPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Account\SignUpUserControl.resx">
       <DependentUpon>SignUpUserControl.cs</DependentUpon>
