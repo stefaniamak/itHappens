@@ -44,13 +44,13 @@ namespace itHappens.Controllers
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
                 Classes.SidebarsMethods.Instance.showLogedInSidebars();
-                UIs.Sidebars.ProfileSidebar.LogoutButton.Visible = true;
+                UIs.Sidebars.ProfileSidebar.Instance.LogoutButton.Visible = true;
             }
             else
             {
                 Classes.SidebarsMethods.Instance.showLogedOutSidebars();
             }
-            UIs.Sidebars.ProfileSidebar.usernameLable.Text = username;
+            UIs.Sidebars.ProfileSidebar.Instance.usernameLable.Text = username;
         }
 
         public void openHostForMainAndSearchPage()

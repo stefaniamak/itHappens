@@ -12,6 +12,9 @@ namespace itHappens.UIs.Sidebars
 {
     public partial class ProfileSidebar : UserControl
     {
+        private static ProfileSidebar _instance = new ProfileSidebar();
+        public static ProfileSidebar Instance => _instance;
+
         public ProfileSidebar()
         {
             InitializeComponent();
@@ -44,6 +47,16 @@ namespace itHappens.UIs.Sidebars
         private void bellNotificationPictureBox_Click(object sender, EventArgs e)
         {
             notificationBox.Visible = !notificationBox.Visible;
+        }
+
+        private void ovalPictureBox1_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.Instance.mainToolStripMenuItem_MiddlePanel();
+        }
+
+        private void usernameLable_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.Instance.mainToolStripMenuItem_MiddlePanel();
         }
     }
 }

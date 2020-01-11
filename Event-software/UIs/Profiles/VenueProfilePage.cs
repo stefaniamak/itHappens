@@ -38,7 +38,7 @@ namespace itHappens.UIs.andrea
             backgroundPictureBox.BackgroundImage = eventBackground;
             monthLabel.Text = Utility.Month(eventDateTime);
             dayLabel.Text = Utility.Day(eventDateTime);
-            categoryColorPanel.BackColor = categoryColor;
+            categoryColorPanel.BackColor = Color.FromName(categoryColor);
             miniEventBackgroundPictureBox.BackgroundImage = eventBackground;
 
             this.venueId = venueId;

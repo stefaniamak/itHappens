@@ -26,8 +26,8 @@ namespace itHappens.UIs.andrea
         }
 
 
-        public EventProfilePage(string eventName, string venueName, string categoryColor, Image background, string organizerName,
-                                string organizerSurename, DateTime eventDateTime, double ticketPrice, string description);
+        //public EventProfilePage(string eventName, string venueName, string categoryColor, Image background, string organizerName,
+        //                        string organizerSurename, DateTime eventDateTime, double ticketPrice, string description);
 
         public EventProfilePage(int organizerId, int eventId, string eventName, string venueName, string categoryColor, Image background, string organizerName, string organizerSurename, DateTime eventDateTime, double ticketPrice, string description)
 
@@ -70,6 +70,7 @@ namespace itHappens.UIs.andrea
         }
         public static void openEventProfile(object sender, EventArgs e)
         {
+            /*
             var eventview = (EventMiniView)sender;
             MainSplitForm.middlePanel.Controls.Clear();
             int eventid = eventview.eventId;
@@ -93,7 +94,7 @@ namespace itHappens.UIs.andrea
             MainSplitForm.middlePanel.Controls.Add(middlePage);
             middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             middlePage.Dock = DockStyle.Fill;
-          
+           */
         }
     }
 }

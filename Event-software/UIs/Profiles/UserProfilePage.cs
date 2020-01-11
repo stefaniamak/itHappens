@@ -27,11 +27,10 @@ namespace itHappens.UIs.andrea
 
             userNameLabel.Text = userName + " " + userSurname;
             userProfilePictureOvalPictureBox.BackgroundImage = profilePicture;
-            userBackgroundPictureBox.BackgroundImage = userBackground;
             monthLabel.Text = Utility.Month(eventDateTime);
             dayLabel.Text = Utility.Day(eventDateTime);
 
-            categoryColorPanel.BackColor = categoryColor;
+            categoryColorPanel.BackColor = Color.FromName(categoryColor);
             vanueLabel.Text = venueName;
             miniEventBakcgroundPictureBox.BackgroundImage = eventBackground;
 

@@ -14,6 +14,8 @@ namespace itHappens.UIs.anna
     {
         public static bool loggedInUser;
         public static int ageOfUser;
+        public static int userId = -1;
+
         public LogInPage()
         {
             InitializeComponent();

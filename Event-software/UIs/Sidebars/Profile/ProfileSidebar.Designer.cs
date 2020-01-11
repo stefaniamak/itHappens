@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileSidebar));
-            usernameLable = new System.Windows.Forms.Label();
+            this.usernameLable = new System.Windows.Forms.Label();
             this.bellNotificationPictureBox = new System.Windows.Forms.PictureBox();
-            LogoutButton = new System.Windows.Forms.Button();
+            this.LogoutButton = new System.Windows.Forms.Button();
             this.ovalPictureBox1 = new itHappens.UIs.Common.OvalPictureBox();
             this.notificationBox = new itHappens.UIs.Common.NotificationBox();
             ((System.ComponentModel.ISupportInitialize)(this.bellNotificationPictureBox)).BeginInit();
@@ -40,15 +40,16 @@
             // 
             // usernameLable
             // 
-            usernameLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            usernameLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            usernameLable.ForeColor = System.Drawing.Color.DarkOrange;
-            usernameLable.Location = new System.Drawing.Point(17, 101);
-            usernameLable.Name = "usernameLable";
-            usernameLable.Size = new System.Drawing.Size(104, 18);
-            usernameLable.TabIndex = 1;
-            usernameLable.Text = "Username";
-            usernameLable.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.usernameLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.usernameLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLable.ForeColor = System.Drawing.Color.DarkOrange;
+            this.usernameLable.Location = new System.Drawing.Point(17, 101);
+            this.usernameLable.Name = "usernameLable";
+            this.usernameLable.Size = new System.Drawing.Size(104, 18);
+            this.usernameLable.TabIndex = 1;
+            this.usernameLable.Text = "Username";
+            this.usernameLable.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.usernameLable.Click += new System.EventHandler(this.usernameLable_Click);
             // 
             // bellNotificationPictureBox
             // 
@@ -64,17 +65,17 @@
             // 
             // LogoutButton
             // 
-            LogoutButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            LogoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            LogoutButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            LogoutButton.Location = new System.Drawing.Point(35, 136);
-            LogoutButton.Name = "LogoutButton";
-            LogoutButton.Size = new System.Drawing.Size(77, 21);
-            LogoutButton.TabIndex = 4;
-            LogoutButton.Text = "Logout";
-            LogoutButton.UseVisualStyleBackColor = false;
-            LogoutButton.Visible = false;
-            LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
+            this.LogoutButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LogoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.LogoutButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LogoutButton.Location = new System.Drawing.Point(35, 136);
+            this.LogoutButton.Name = "LogoutButton";
+            this.LogoutButton.Size = new System.Drawing.Size(77, 21);
+            this.LogoutButton.TabIndex = 4;
+            this.LogoutButton.Text = "Logout";
+            this.LogoutButton.UseVisualStyleBackColor = false;
+            this.LogoutButton.Visible = false;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
             // ovalPictureBox1
             // 
@@ -87,9 +88,11 @@
             this.ovalPictureBox1.Size = new System.Drawing.Size(48, 49);
             this.ovalPictureBox1.TabIndex = 4;
             this.ovalPictureBox1.TabStop = false;
+            this.ovalPictureBox1.Click += new System.EventHandler(this.ovalPictureBox1_Click);
             // 
             // notificationBox
             // 
+            this.notificationBox.AutoScroll = true;
             this.notificationBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.notificationBox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.notificationBox.Location = new System.Drawing.Point(0, 25);
@@ -105,9 +108,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.Controls.Add(this.notificationBox);
             this.Controls.Add(this.ovalPictureBox1);
-            this.Controls.Add(LogoutButton);
+            this.Controls.Add(this.LogoutButton);
             this.Controls.Add(this.bellNotificationPictureBox);
-            this.Controls.Add(usernameLable);
+            this.Controls.Add(this.usernameLable);
             this.Name = "ProfileSidebar";
             this.Size = new System.Drawing.Size(142, 175);
             ((System.ComponentModel.ISupportInitialize)(this.bellNotificationPictureBox)).EndInit();
@@ -122,7 +125,7 @@
 
         private System.Windows.Forms.PictureBox bellNotificationPictureBox;
         private Common.NotificationBox notificationBox;
-        public static System.Windows.Forms.Button LogoutButton;
-        public static System.Windows.Forms.Label usernameLable;
+        public System.Windows.Forms.Button LogoutButton;
+        public System.Windows.Forms.Label usernameLable;
     }
 }

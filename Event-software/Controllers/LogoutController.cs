@@ -17,6 +17,7 @@ namespace itHappens.Controllers
             Controllers.UIController.Instance.openHostForMainAndSearchPage();
             Controllers.UIController.Instance.openCommonSearchTextPage("main");
             Controllers.UIController.Instance.showSidebars("Username");
+            UIs.anna.LogInPage.userId = -1;
         }
     }
 }
