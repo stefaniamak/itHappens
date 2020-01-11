@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using itHappens.Classes;
 using itHappens.UIs.Common;
 using itHappends;
+using dbstuff;
 
 namespace itHappens.UIs.andrea
 {
@@ -17,6 +18,7 @@ namespace itHappens.UIs.andrea
     {
         public int organizerId { get; set; }
         public int eventId { get; set; }
+        private DbController dbCon = new DbController();
 
         private static EventProfilePage _instance = new EventProfilePage();
         public static EventProfilePage Instance => _instance;
@@ -129,6 +131,16 @@ namespace itHappens.UIs.andrea
         {
             Classes.MiddlePanelMethods.Instance.createEventToolStripMenuItem("edit");
 
+        }
+
+        private void interestedButton_Click(object sender, EventArgs e)
+        {
+            dbCon.addInterested(this.eventId, UIs.anna.LogInPage.userId);
+        }
+
+        private void goingButton_Click(object sender, EventArgs e)
+        {
+            dbCon.addGoing(this.eventId, UIs.anna.LogInPage.userId);
         }
     }
 }

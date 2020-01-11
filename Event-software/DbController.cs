@@ -279,11 +279,11 @@ namespace dbstuff
         }
 
         //Needs Testing
-        public void addGoing(string eventID, int userID)
+        public void addGoing(int eventID, int userID)
         {
             string s = @"insert into attendants (eventListID, eventID)
 		                    values (@eventListId, @eventID)";
-            long eventListID = getUsersEventList(userID, "Going");
+            long eventListID = getUsersEventList(userID, "GOING");
 
             var sCommand = new MySqlCommand(s, con);
             sCommand.Parameters.AddWithValue("(@eventListID", eventListID);
@@ -293,17 +293,23 @@ namespace dbstuff
         }
 
         //Needs Testing
-        public void addInterested(string eventID, int userID)
+        public void addInterested(int eventID, int userID)
         {
-            string s = @"insert into attendants (eventListID, eventID)
+            string s = @"insert into attendants (eventListId, eventID)
 		                    values (@eventListId, @eventID)";
 
-            long eventListID = getUsersEventList(userID, "Interested");
-
-            var sCommand = new MySqlCommand(s, con);
-            sCommand.Parameters.AddWithValue("(@eventListID", eventListID);
+            long eventListId = getUsersEventList(userID, "INTERESTED");
+            if (eventListId.Equals(null)) {
+                Console.WriteLine("event list not found bro");
+            }
+            else
+            {
+ var sCommand = new MySqlCommand(s, con);
+            sCommand.Parameters.AddWithValue("@eventListId", eventListId);
             sCommand.Parameters.AddWithValue("@userID", userID);
             sCommand.ExecuteNonQuery();
+            }
+
 
         }
 
@@ -316,10 +322,12 @@ namespace dbstuff
             sCommand.Parameters.AddWithValue("@title", title);
             object tmp = sCommand.ExecuteScalar();
             Console.WriteLine(tmp);
-            return (long)(int)sCommand.ExecuteScalar();
+            return (long)(int)tmp;
         }
 
-        // Use it to grab images e.x. ( var image = GetImageFromPicPath(imageUrl) )
+        //Check if event exists in UsersEventList
+
+        // Use it to grab images e.x. ( var image = GetImageFromPicPath(imageUrl)s )
         public static Image GetImageFromPath(string strUrl)
         {
             using (WebResponse wrFileResponse = WebRequest.Create(strUrl).GetResponse())
