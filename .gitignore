@@ -384,3 +384,4 @@ MigrationBackup/
 .ionide/
 Event-software/.vs/events-software/v16/Server/sqlite3/storage.ide-wal
 Event-software/.vs/events-software/v16/Server/sqlite3/storage.ide-shm
+*.ide

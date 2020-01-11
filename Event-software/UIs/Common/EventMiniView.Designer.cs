@@ -33,12 +33,15 @@
             this.eventPictureBox = new System.Windows.Forms.PictureBox();
             this.categoryColorPanel = new System.Windows.Forms.Panel();
             this.hoverOverPanel = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.eventTitleLabel = new System.Windows.Forms.Label();
             this.intrestedListOvalPictureBox = new itHappens.UIs.Common.OvalPictureBox();
             this.goingListOvalPictureBox = new itHappens.UIs.Common.OvalPictureBox();
             this.detailsButton = new System.Windows.Forms.Button();
             this.eventTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventPictureBox)).BeginInit();
             this.hoverOverPanel.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.intrestedListOvalPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goingListOvalPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -94,6 +97,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.hoverOverPanel.BackColor = System.Drawing.Color.Silver;
+            this.hoverOverPanel.Controls.Add(this.flowLayoutPanel1);
             this.hoverOverPanel.Controls.Add(this.intrestedListOvalPictureBox);
             this.hoverOverPanel.Controls.Add(this.goingListOvalPictureBox);
             this.hoverOverPanel.Controls.Add(this.detailsButton);
@@ -104,6 +108,25 @@
             this.hoverOverPanel.TabIndex = 0;
             this.hoverOverPanel.MouseLeave += new System.EventHandler(this.hoverOverPanel_MouseLeave);
             this.hoverOverPanel.MouseHover += new System.EventHandler(this.hoverOverPanel_MouseHover);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.eventTitleLabel);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(18, 8);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(183, 82);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
+            // eventTitleLabel
+            // 
+            this.eventTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.eventTitleLabel.AutoSize = true;
+            this.eventTitleLabel.Location = new System.Drawing.Point(4, 0);
+            this.eventTitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.eventTitleLabel.Name = "eventTitleLabel";
+            this.eventTitleLabel.Size = new System.Drawing.Size(0, 20);
+            this.eventTitleLabel.TabIndex = 0;
             // 
             // intrestedListOvalPictureBox
             // 
@@ -156,6 +179,8 @@
             this.eventTableLayout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.eventPictureBox)).EndInit();
             this.hoverOverPanel.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.intrestedListOvalPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goingListOvalPictureBox)).EndInit();
             this.ResumeLayout(false);
@@ -171,5 +196,7 @@
         private System.Windows.Forms.Button detailsButton;
         private OvalPictureBox intrestedListOvalPictureBox;
         private OvalPictureBox goingListOvalPictureBox;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label eventTitleLabel;
     }
 }

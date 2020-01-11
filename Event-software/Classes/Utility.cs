@@ -36,30 +36,32 @@ namespace itHappens.Classes
             return Color.FromName(colorName);          
         }
 
-     /*   public static List<int> searchEvents(string searchString,
-                                     string country,
-                                     DateTime date,
-                                     int time,
-                                     string organizer)
-        {
 
-            var organizerFullName = organizer.Split(' ');
-            var reader = Db_connector.Query(@"select e.id, from events e
-                                  join user u on e.creatorID = u.id
-                                  where e.area = @country and
-                                      e.date = @date and
-                                      u.firstName = @firstname and
-                                      u.lastname = @lastname
-                                      e.title like @search",
-                                        new string[,] { {"@country", country },
-                                                {"@date",DateToText(date) },
-                                                {"@firstname", organizerFullName[0]},
-                                                {"@lastname", organizerFullName[1]},
-                                                {"@search", "%" + searchString + "%"}});
 
-            var events = Db_connector.Readrows(reader, new int [] { 0 });
-            return events.Select(e => Int32.Parse(e[0])).ToList();
+        /*   public static List<int> searchEvents(string searchString,
+                                        string country,
+                                        DateTime date,
+                                        int time,
+                                        string organizer)
+           {
 
-        }*/
+               var organizerFullName = organizer.Split(' ');
+               var reader = Db_connector.Query(@"select e.id, from events e
+                                     join user u on e.creatorID = u.id
+                                     where e.area = @country and
+                                         e.date = @date and
+                                         u.firstName = @firstname and
+                                         u.lastname = @lastname
+                                         e.title like @search",
+                                           new string[,] { {"@country", country },
+                                                   {"@date",DateToText(date) },
+                                                   {"@firstname", organizerFullName[0]},
+                                                   {"@lastname", organizerFullName[1]},
+                                                   {"@search", "%" + searchString + "%"}});
+
+               var events = Db_connector.Readrows(reader, new int [] { 0 });
+               return events.Select(e => Int32.Parse(e[0])).ToList();
+
+           }*/
     }
 }
