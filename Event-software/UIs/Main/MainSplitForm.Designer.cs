@@ -40,7 +40,6 @@
             this.CreateEvent = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mainInterfaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.interfacesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainPageToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,10 +56,12 @@
             this.listsPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listsContentPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.rightSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.loginToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rightSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.leftSplitContainer)).BeginInit();
             this.leftSplitContainer.Panel1.SuspendLayout();
             this.leftSplitContainer.Panel2.SuspendLayout();
@@ -111,7 +112,7 @@
             // 
             this.splitContainer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 24);
+            this.splitContainer2.Location = new System.Drawing.Point(0, 26);
             this.splitContainer2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -123,8 +124,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.CreateEvent);
-            this.splitContainer2.Size = new System.Drawing.Size(182, 618);
-            this.splitContainer2.SplitterDistance = 572;
+            this.splitContainer2.Size = new System.Drawing.Size(182, 616);
+            this.splitContainer2.SplitterDistance = 570;
             this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 2;
             // 
@@ -147,8 +148,8 @@
             // 
             this.splitContainer3.Panel2.AutoScroll = true;
             this.splitContainer3.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.splitContainer3.Size = new System.Drawing.Size(182, 572);
-            this.splitContainer3.SplitterDistance = 326;
+            this.splitContainer3.Size = new System.Drawing.Size(182, 570);
+            this.splitContainer3.SplitterDistance = 324;
             this.splitContainer3.SplitterWidth = 5;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -165,7 +166,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.5303F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.4697F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(182, 326);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(182, 324);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // upcommingEventsPanel
@@ -174,7 +175,7 @@
             this.upcommingEventsPanel.Location = new System.Drawing.Point(3, 54);
             this.upcommingEventsPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.upcommingEventsPanel.Name = "upcommingEventsPanel";
-            this.upcommingEventsPanel.Size = new System.Drawing.Size(176, 268);
+            this.upcommingEventsPanel.Size = new System.Drawing.Size(176, 266);
             this.upcommingEventsPanel.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -210,11 +211,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(42, 11);
+            this.label1.Location = new System.Drawing.Point(42, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 20);
+            this.label1.Size = new System.Drawing.Size(62, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Home";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -223,7 +224,7 @@
             // 
             this.CreateEvent.BackColor = System.Drawing.Color.WhiteSmoke;
             this.CreateEvent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CreateEvent.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateEvent.Location = new System.Drawing.Point(0, 0);
             this.CreateEvent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CreateEvent.Name = "CreateEvent";
@@ -242,7 +243,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(182, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(182, 26);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "mainMenuStrip";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -254,15 +255,9 @@
             this.loginToolStripMenuItem2,
             this.logOutToolStripMenuItem});
             this.mainInterfaceToolStripMenuItem.Name = "mainInterfaceToolStripMenuItem";
-            this.mainInterfaceToolStripMenuItem.Size = new System.Drawing.Size(53, 22);
+            this.mainInterfaceToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.mainInterfaceToolStripMenuItem.Text = "MENU";
             this.mainInterfaceToolStripMenuItem.Click += new System.EventHandler(this.mainInterfaceToolStripMenuItem_Click);
-            // 
-            // loginToolStripMenuItem2
-            // 
-            this.loginToolStripMenuItem2.Name = "loginToolStripMenuItem2";
-            this.loginToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.loginToolStripMenuItem2.Text = "Settings";
             // 
             // interfacesToolStripMenuItem
             // 
@@ -270,9 +265,10 @@
             this.accountToolStripMenuItem,
             this.accountToolStripMenuItem1,
             this.profilesToolStripMenuItem,
-            this.listsAndSettingsToolStripMenuItem});
+            this.listsAndSettingsToolStripMenuItem,
+            this.contactToolStripMenuItem});
             this.interfacesToolStripMenuItem.Name = "interfacesToolStripMenuItem";
-            this.interfacesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.interfacesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.interfacesToolStripMenuItem.Text = "Interfaces";
             // 
             // accountToolStripMenuItem
@@ -281,21 +277,21 @@
             this.mainPageToolStripMenuItem1,
             this.searchPageToolStripMenuItem1});
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.accountToolStripMenuItem.Text = "Main";
             this.accountToolStripMenuItem.Click += new System.EventHandler(this.accountToolStripMenuItem_Click);
             // 
             // mainPageToolStripMenuItem1
             // 
             this.mainPageToolStripMenuItem1.Name = "mainPageToolStripMenuItem1";
-            this.mainPageToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.mainPageToolStripMenuItem1.Size = new System.Drawing.Size(172, 26);
             this.mainPageToolStripMenuItem1.Text = "Main Page";
             this.mainPageToolStripMenuItem1.Click += new System.EventHandler(this.mainPageToolStripMenuItem1_Click);
             // 
             // searchPageToolStripMenuItem1
             // 
             this.searchPageToolStripMenuItem1.Name = "searchPageToolStripMenuItem1";
-            this.searchPageToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.searchPageToolStripMenuItem1.Size = new System.Drawing.Size(172, 26);
             this.searchPageToolStripMenuItem1.Text = "Search Page";
             this.searchPageToolStripMenuItem1.Click += new System.EventHandler(this.searchPageToolStripMenuItem1_Click);
             // 
@@ -306,27 +302,27 @@
             this.signUpToolStripMenuItem1,
             this.createEventToolStripMenuItem1});
             this.accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
-            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.accountToolStripMenuItem1.Text = "Account";
             // 
             // logInToolStripMenuItem1
             // 
             this.logInToolStripMenuItem1.Name = "logInToolStripMenuItem1";
-            this.logInToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.logInToolStripMenuItem1.Size = new System.Drawing.Size(175, 26);
             this.logInToolStripMenuItem1.Text = "Log in";
             this.logInToolStripMenuItem1.Click += new System.EventHandler(this.logInToolStripMenuItem1_Click);
             // 
             // signUpToolStripMenuItem1
             // 
             this.signUpToolStripMenuItem1.Name = "signUpToolStripMenuItem1";
-            this.signUpToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.signUpToolStripMenuItem1.Size = new System.Drawing.Size(175, 26);
             this.signUpToolStripMenuItem1.Text = "Sign up";
             this.signUpToolStripMenuItem1.Click += new System.EventHandler(this.signUpToolStripMenuItem1_Click);
             // 
             // createEventToolStripMenuItem1
             // 
             this.createEventToolStripMenuItem1.Name = "createEventToolStripMenuItem1";
-            this.createEventToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.createEventToolStripMenuItem1.Size = new System.Drawing.Size(175, 26);
             this.createEventToolStripMenuItem1.Text = "Create Event";
             this.createEventToolStripMenuItem1.Click += new System.EventHandler(this.createEventToolStripMenuItem1_Click);
             // 
@@ -337,27 +333,27 @@
             this.venuesProfileToolStripMenuItem,
             this.eventsProfileToolStripMenuItem1});
             this.profilesToolStripMenuItem.Name = "profilesToolStripMenuItem";
-            this.profilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.profilesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.profilesToolStripMenuItem.Text = "Profiles";
             // 
             // usersProfileToolStripMenuItem1
             // 
             this.usersProfileToolStripMenuItem1.Name = "usersProfileToolStripMenuItem1";
-            this.usersProfileToolStripMenuItem1.Size = new System.Drawing.Size(151, 22);
+            this.usersProfileToolStripMenuItem1.Size = new System.Drawing.Size(188, 26);
             this.usersProfileToolStripMenuItem1.Text = "User\'s Profile";
             this.usersProfileToolStripMenuItem1.Click += new System.EventHandler(this.usersProfileToolStripMenuItem1_Click);
             // 
             // venuesProfileToolStripMenuItem
             // 
             this.venuesProfileToolStripMenuItem.Name = "venuesProfileToolStripMenuItem";
-            this.venuesProfileToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.venuesProfileToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
             this.venuesProfileToolStripMenuItem.Text = "Venue\'s Profile";
             this.venuesProfileToolStripMenuItem.Click += new System.EventHandler(this.venuesProfileToolStripMenuItem_Click);
             // 
             // eventsProfileToolStripMenuItem1
             // 
             this.eventsProfileToolStripMenuItem1.Name = "eventsProfileToolStripMenuItem1";
-            this.eventsProfileToolStripMenuItem1.Size = new System.Drawing.Size(151, 22);
+            this.eventsProfileToolStripMenuItem1.Size = new System.Drawing.Size(188, 26);
             this.eventsProfileToolStripMenuItem1.Text = "Event\'s Profile";
             this.eventsProfileToolStripMenuItem1.Click += new System.EventHandler(this.eventsProfileToolStripMenuItem1_Click);
             // 
@@ -368,29 +364,48 @@
             this.listsContentPageToolStripMenuItem,
             this.settingsToolStripMenuItem1});
             this.listsAndSettingsToolStripMenuItem.Name = "listsAndSettingsToolStripMenuItem";
-            this.listsAndSettingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listsAndSettingsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.listsAndSettingsToolStripMenuItem.Text = "Lists and Settings";
             // 
             // listsPageToolStripMenuItem
             // 
             this.listsPageToolStripMenuItem.Name = "listsPageToolStripMenuItem";
-            this.listsPageToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.listsPageToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.listsPageToolStripMenuItem.Text = "Lists Page";
             this.listsPageToolStripMenuItem.Click += new System.EventHandler(this.listsPageToolStripMenuItem_Click);
             // 
             // listsContentPageToolStripMenuItem
             // 
             this.listsContentPageToolStripMenuItem.Name = "listsContentPageToolStripMenuItem";
-            this.listsContentPageToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.listsContentPageToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.listsContentPageToolStripMenuItem.Text = "Lists Content Page";
             this.listsContentPageToolStripMenuItem.Click += new System.EventHandler(this.listsContentPageToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem1
             // 
             this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
-            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
+            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
             this.settingsToolStripMenuItem1.Text = "Settings";
             this.settingsToolStripMenuItem1.Click += new System.EventHandler(this.settingsToolStripMenuItem1_Click);
+            // 
+            // loginToolStripMenuItem2
+            // 
+            this.loginToolStripMenuItem2.Name = "loginToolStripMenuItem2";
+            this.loginToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
+            this.loginToolStripMenuItem2.Text = "Settings";
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.logOutToolStripMenuItem.Text = "Log out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.signUpToolStripMenuItem_Click_1);
+            // 
+            // logInToolStripMenuItem
+            // 
+            this.logInToolStripMenuItem.Name = "logInToolStripMenuItem";
+            this.logInToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.logInToolStripMenuItem.Text = "LOGIN";
             // 
             // rightSplitContainer
             // 
@@ -409,7 +424,7 @@
             this.rightSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.rightSplitContainer.Panel2.Controls.Add(this.splitContainer1);
             this.rightSplitContainer.Size = new System.Drawing.Size(990, 642);
-            this.rightSplitContainer.SplitterDistance = 792;
+            this.rightSplitContainer.SplitterDistance = 791;
             this.rightSplitContainer.SplitterWidth = 5;
             this.rightSplitContainer.TabIndex = 0;
             this.rightSplitContainer.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.rightSplitContainer_SplitterMoved);
@@ -439,26 +454,20 @@
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 6;
             // 
-            // logOutToolStripMenuItem
+            // contactToolStripMenuItem
             // 
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.logOutToolStripMenuItem.Text = "Log out";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.signUpToolStripMenuItem_Click_1);
-            // 
-            // logInToolStripMenuItem
-            // 
-            this.logInToolStripMenuItem.Name = "logInToolStripMenuItem";
-            this.logInToolStripMenuItem.Size = new System.Drawing.Size(54, 22);
-            this.logInToolStripMenuItem.Text = "LOGIN";
+            this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
+            this.contactToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.contactToolStripMenuItem.Text = "Contact";
+            this.contactToolStripMenuItem.Click += new System.EventHandler(this.contactToolStripMenuItem_Click);
             // 
             // MainSplitForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1181, 650);
             this.Controls.Add(this.leftSplitContainer);
-            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainSplitForm";
             this.Text = "itHappens";
@@ -524,5 +533,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logInToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contactToolStripMenuItem;
     }
 }

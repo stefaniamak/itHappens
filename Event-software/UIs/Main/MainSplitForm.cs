@@ -220,5 +220,10 @@ namespace itHappens.UIs.Common
         {
 
         }
+        
+        private void contactToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.Instance.ContactToolStripMenuItem_MiddlePanel();
+        }
     }
 }
