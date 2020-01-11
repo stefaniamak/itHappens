@@ -73,7 +73,7 @@ namespace itHappens.Classes
         public void createEventToolStripMenuItem()
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
-            theCreateEventPage = new UIs.anna.CreateEventPage();
+            theCreateEventPage = new UIs.anna.CreateEventPage("create");
             UIs.Common.MainSplitForm.middlePanel.Controls.Add(theCreateEventPage);
             designEditOfPanels(theCreateEventPage);
         }

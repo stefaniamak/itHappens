@@ -15,6 +15,15 @@ namespace itHappens.UIs.andrea
         public EventProfilePage()
         {
             InitializeComponent();
+            //anti gia 0 stin methodo na mpei to id tou event
+            if (Classes.DatabaseGeneralMethods.CheckIfEventBelongsToLoggedInUser(0))
+            {
+                EditButton.Visible = true;
+            }
+            else
+            {
+                EditButton.Visible = false;
+            }
             friends();
             
         }
