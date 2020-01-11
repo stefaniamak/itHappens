@@ -31,12 +31,13 @@ namespace itHappens.UIs.Common
         }
 
         //  -----------  Προσωρινός Constructor χωρίς τα insert εικόνων.  -----------
-        public EventMiniView(string categoryColor, int theEventId) : this()
+        public EventMiniView(string categoryColor, int theEventId, string eventTitle) : this()
         {
             Color catColor = Color.FromName(categoryColor);
             categoryColorPanel.BackColor = catColor;
             hoverOverPanel.Visible = false;
             this.eventId = theEventId;
+            eventTitleLabel.Text = eventTitle;
         }
 
 
