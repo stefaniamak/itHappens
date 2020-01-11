@@ -17,16 +17,13 @@ namespace itHappens.UIs.Common
     {
 
         Panel leftPanel;
-        public static Panel middlePanel;
+        public Panel middlePanel;
         Panel rightpanel;
-        public static Panel leftTopPanel;
-        public static Panel leftMiddlePanel;
-        public static Panel rightTopPanel;
-        public static Panel rightBottomPanel;
-        
-        private static MainSplitForm _instance = new MainSplitForm();
-        public static MainSplitForm Instance => _instance;
-        
+        public Panel leftTopPanel;
+        public Panel leftMiddlePanel;
+        public Panel rightTopPanel;
+        public Panel rightBottomPanel;
+                
 
         public MainSplitForm()
         {
@@ -39,18 +36,21 @@ namespace itHappens.UIs.Common
             leftMiddlePanel = splitContainer3.Panel2;
             rightTopPanel = splitContainer1.Panel1;
             rightBottomPanel = splitContainer1.Panel2;
+
+            logInSignOutButtonsVisibility();
         }
+        
 
         public void logInSignOutButtonsVisibility()
         {
             bool userIsLoggedIn = UIs.anna.LogInPage.loggedInUser;
-            logInToolStripMenuItem.Visible = userIsLoggedIn;
-            logOutToolStripMenuItem.Visible = !userIsLoggedIn;
+            logInToolStripMenuItem.Visible = !userIsLoggedIn;
+            logOutToolStripMenuItem.Visible = userIsLoggedIn;
         }
       
         private void TestSplitForm_Load(object sender, EventArgs e)
         {
-            Controllers.UIController.Instance.showSidebars();
+            Controllers.UIController.Instance.showSidebars("Username");
 
             Controllers.UIController.Instance.openHostForMainAndSearchPage();
             Controllers.UIController.Instance.openCommonSearchTextPage("main");
@@ -163,7 +163,7 @@ namespace itHappens.UIs.Common
 
         private void venuesProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.Instance.searchToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.venueProfileToolStripMenuItem_MiddlePanel();
         }
 
         private void eventsProfileToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -217,5 +217,18 @@ namespace itHappens.UIs.Common
         {
 
         }
+
+        private void logInToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Controllers.UIController.Instance.logInToolStripMenuItem_MiddlePanel();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controllers.LogoutController.Instance.logoutActions();
+            logInSignOutButtonsVisibility();
+        }
+
+        
     }
 }

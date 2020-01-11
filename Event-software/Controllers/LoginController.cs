@@ -58,7 +58,7 @@ namespace itHappens.Controllers
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select username from users where username= '" + username + "' and password= '" + password + "'";
+                String queryString = "Select username, id from users where username= '" + username + "' and password= '" + password + "'";
 
                 command = new MySqlCommand(queryString, con);
 
@@ -67,6 +67,7 @@ namespace itHappens.Controllers
                 while (dataReader.Read())
                 {
                     result = dataReader.GetString(0);
+                    UIs.anna.LogInPage.userId = Convert.ToInt32(dataReader.GetString(2));
                 }
                 con.Close();
 

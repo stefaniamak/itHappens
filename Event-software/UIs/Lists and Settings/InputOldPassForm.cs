@@ -23,7 +23,7 @@ namespace itHappens.UIs
         {
             if (!OldPassTextBox.Text.Equals(""))
             {
-                String oldpasswrd = Classes.DatabaseGeneralMethods.ReturnUsersPassword(UIs.Sidebars.ProfileSidebar.usernameLable.Text);
+                String oldpasswrd = Classes.DatabaseGeneralMethods.ReturnUsersPassword(Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text);
 
                 if (!OldPassTextBox.Text.Equals(oldpasswrd))
                 {
