@@ -15,6 +15,15 @@ namespace itHappens.UIs.andrea
         public EventProfilePage()
         {
             InitializeComponent();
+            //anti gia 0 stin methodo na mpei to id tou event
+            if (Classes.DatabaseGeneralMethods.CheckIfEventBelongsToLoggedInUser(0))
+            {
+                EditButton.Visible = true;
+            }
+            else
+            {
+                EditButton.Visible = false;
+            }
             friends();
             
         }
@@ -53,6 +62,11 @@ namespace itHappens.UIs.andrea
         private void descriptionLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            Classes.MiddlePanelMethods.Instance.createEventToolStripMenuItem("edit");
         }
     }
 }
