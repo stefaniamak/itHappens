@@ -47,11 +47,14 @@ namespace itHappens.Classes
 
             // Grapse ton kwdika sou edw gia thn emfanish stoixeiwn
 
+            // to query gia na vreis auta pou thes:
+                // SELECT us.username, us.surname, ev.title, cat.color FROM it_happens.users us JOIN  it_happens.event_list evL ON us.id = evL.creatorID JOIN it_happens.attendants att ON evL.id = att.eventListID JOIN it_happens.event ev ON att.eventID = ev.id JOIN it_happens.categories cat ON ev.categoryID = cat.id WHERE evL.title = 'GOING'
+            // svise mono ta "it_happens.", ta afisa mipws thes na to trekseis sto workbench. To elenksa omws kai vgazei tis swstes times
 
-            // Auth h methodos tha periexei ta events pou o xrisths tha paei
+            // Auth h methodos tha periexei ta events pou o xrisths tha paei, dwse ws parametro to xrwma kathgorias tou event kai to id, apo to panw query pou s egrapsa.
             UIs.andrea.UserProfilePage.Instance.miniCaruselFillWithEventMiniView(categoryColorString, theEventId);
 
-            theUserProfilePage = new UIs.andrea.UserProfilePage(); // Xrisimopoihse ton allon constuctor
+            theUserProfilePage = new UIs.andrea.UserProfilePage(); // Xrisimopoihse ton allon constuctor, kai dwse "" sto location tou event, kai null stis eikones
         }
 
         public void designEditOfPanels(UserControl theUserControl)
