@@ -17,16 +17,13 @@ namespace itHappens.UIs.Common
     {
 
         Panel leftPanel;
-        public static Panel middlePanel;
+        public Panel middlePanel;
         Panel rightpanel;
-        public static Panel leftTopPanel;
-        public static Panel leftMiddlePanel;
-        public static Panel rightTopPanel;
-        public static Panel rightBottomPanel;
-        
-        private static MainSplitForm _instance = new MainSplitForm();
-        public static MainSplitForm Instance => _instance;
-        
+        public Panel leftTopPanel;
+        public Panel leftMiddlePanel;
+        public Panel rightTopPanel;
+        public Panel rightBottomPanel;
+                
 
         public MainSplitForm()
         {
@@ -40,7 +37,7 @@ namespace itHappens.UIs.Common
             rightTopPanel = splitContainer1.Panel1;
             rightBottomPanel = splitContainer1.Panel2;
 
-            //logInSignOutButtonsVisibility();
+            logInSignOutButtonsVisibility();
         }
         
 

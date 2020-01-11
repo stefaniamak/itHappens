@@ -1,4 +1,6 @@
-﻿namespace itHappens.Classes
+﻿using itHappens.UIs.Sidebars;
+
+namespace itHappens.Classes
 {
     class SidebarsMethods
     {
@@ -6,6 +8,9 @@
         // Use the Singleton pattern
         private static SidebarsMethods _instance = new SidebarsMethods();
         public static SidebarsMethods Instance => _instance;
+
+        public ProfileSidebar TheProfileSidebar { get => theProfileSidebar; set => theProfileSidebar = value; }
+
         // Profiles User Controls
         private UIs.Sidebars.UpcomingEventsSidebar theUpcomingEvetsSidebar = null;
         private UIs.Sidebars.ListsSidebar theListsSidebar = null;
@@ -18,7 +23,7 @@
         public void showLogedOutSidebars()
         {
             clearSidebars();
-            Classes.SidebarsMethods.Instance.addProfile();
+            addProfile();
             Classes.SidebarsMethods.Instance.addWarningToLogIn();
         }
 
@@ -33,52 +38,52 @@
 
         public void clearSidebars()
         {
-            UIs.Common.MainSplitForm.rightBottomPanel.Controls.Clear();
-            UIs.Common.MainSplitForm.leftTopPanel.Controls.Clear();
-            UIs.Common.MainSplitForm.leftMiddlePanel.Controls.Clear();
-            UIs.Common.MainSplitForm.rightTopPanel.Controls.Clear();
+           Controllers.UIController.Instance.MainSplitForm.rightBottomPanel.Controls.Clear();
+           Controllers.UIController.Instance.MainSplitForm.leftTopPanel.Controls.Clear();
+           Controllers.UIController.Instance.MainSplitForm.leftMiddlePanel.Controls.Clear();
+           Controllers.UIController.Instance.MainSplitForm.rightTopPanel.Controls.Clear();
         }
 
         public void addFriendList()
         {
             theUptheFriendListSidebar = new UIs.Sidebars.FriendListSidebar();
-            UIs.Common.MainSplitForm.rightBottomPanel.Controls.Add(theUptheFriendListSidebar);
+           Controllers.UIController.Instance.MainSplitForm.rightBottomPanel.Controls.Add(theUptheFriendListSidebar);
             Controllers.UIController.Instance.designEditOfPanels(theUptheFriendListSidebar);
         }
 
         public void addUpcomingEvents()
         {
             theUpcomingEvetsSidebar = new UIs.Sidebars.UpcomingEventsSidebar();
-            UIs.Common.MainSplitForm.leftTopPanel.Controls.Add(theUpcomingEvetsSidebar);
+           Controllers.UIController.Instance.MainSplitForm.leftTopPanel.Controls.Add(theUpcomingEvetsSidebar);
             Controllers.UIController.Instance.designEditOfPanels(theUpcomingEvetsSidebar);
         }
 
         public void addLists()
         {
             theListsSidebar = new UIs.Sidebars.ListsSidebar();
-            UIs.Common.MainSplitForm.leftMiddlePanel.Controls.Add(theListsSidebar);
+           Controllers.UIController.Instance.MainSplitForm.leftMiddlePanel.Controls.Add(theListsSidebar);
             Controllers.UIController.Instance.designEditOfPanels(theListsSidebar);
         }
 
         public void addProfile()
         {
-            theProfileSidebar = new UIs.Sidebars.ProfileSidebar();
-            UIs.Common.MainSplitForm.rightTopPanel.Controls.Add(theProfileSidebar);
-            Controllers.UIController.Instance.designEditOfPanels(theProfileSidebar);
+            TheProfileSidebar = new UIs.Sidebars.ProfileSidebar();
+           Controllers.UIController.Instance.MainSplitForm.rightTopPanel.Controls.Add(TheProfileSidebar);
+            Controllers.UIController.Instance.designEditOfPanels(TheProfileSidebar);
         }
 
         public void addWarningToLogIn()
         {
             thisLoginWarningPage = new UIs.Main.LoginWarning();
-            UIs.Common.MainSplitForm.leftTopPanel.Controls.Add(thisLoginWarningPage);
+           Controllers.UIController.Instance.MainSplitForm.leftTopPanel.Controls.Add(thisLoginWarningPage);
             Controllers.UIController.Instance.designEditOfPanels(thisLoginWarningPage);
 
             thisLoginWarningPage = new UIs.Main.LoginWarning();
-            UIs.Common.MainSplitForm.leftMiddlePanel.Controls.Add(thisLoginWarningPage);
+           Controllers.UIController.Instance.MainSplitForm.leftMiddlePanel.Controls.Add(thisLoginWarningPage);
             Controllers.UIController.Instance.designEditOfPanels(thisLoginWarningPage);
 
             thisLoginWarningPage = new UIs.Main.LoginWarning();
-            UIs.Common.MainSplitForm.rightBottomPanel.Controls.Add(thisLoginWarningPage);
+           Controllers.UIController.Instance.MainSplitForm.rightBottomPanel.Controls.Add(thisLoginWarningPage);
             Controllers.UIController.Instance.designEditOfPanels(thisLoginWarningPage);
 
         }

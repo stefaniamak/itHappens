@@ -9,6 +9,7 @@ namespace itHappens.Classes
         public static MiddlePanelMethods Instance => _instance;
 
 
+
         // Account User Controls
         private UIs.anna.CreateEventPage theCreateEventPage = null;
         private UIs.anna.LogInPage theLotInPage = null;
@@ -34,7 +35,7 @@ namespace itHappens.Classes
 // ------------------------ USER PROFILE ------------------------ 
         public void mainToolStripMenuItem()
         {
-            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
 
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
@@ -44,7 +45,7 @@ namespace itHappens.Classes
             {           
                 theUserProfilePage = new UIs.andrea.UserProfilePage();               
             }
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theUserProfilePage);
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theUserProfilePage);
             designEditOfPanels(theUserProfilePage);
         }
 
@@ -71,10 +72,21 @@ namespace itHappens.Classes
             
         }
 
-// ------------------------ EVENT PROFILE ------------------------ 
+        public void eventsProfileToolStripMenuItem()
+        {
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
+
+            theEventProfilePage = new UIs.andrea.EventProfilePage();
+            
+
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theEventProfilePage);
+            designEditOfPanels(theEventProfilePage);
+        }
+
+        // ------------------------ EVENT PROFILE ------------------------ 
         public void eventsProfileToolStripMenuItem(int eventId)
         {
-            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
 
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
@@ -85,7 +97,7 @@ namespace itHappens.Classes
                 theEventProfilePage = new UIs.andrea.EventProfilePage();
             }
 
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theEventProfilePage);
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theEventProfilePage);
             designEditOfPanels(theEventProfilePage);
         }
 
@@ -121,7 +133,7 @@ namespace itHappens.Classes
 // ------------------------ VENUE PROFILE ------------------------ 
         public void venueProfileToolStripMenuItem()
         {
-            UIs.Common.MainSplitForm.middlePanel.Controls.Clear(); 
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear(); 
 
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
@@ -132,7 +144,7 @@ namespace itHappens.Classes
                 theSVenueProfilePage = new UIs.andrea.VenueProfilePage();
             }
 
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theSVenueProfilePage);
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theSVenueProfilePage);
             designEditOfPanels(theSVenueProfilePage);
         }
 
@@ -167,9 +179,9 @@ namespace itHappens.Classes
         // ------------------------ SEARCH PAGE ------------------------ 
         public void searchToolStripMenuItem()
         {
-            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
             theUserProfilePage = new UIs.andrea.UserProfilePage();
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theSVenueProfilePage);
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theSVenueProfilePage);
             designEditOfPanels(theSVenueProfilePage);
         }
         */
@@ -177,49 +189,49 @@ namespace itHappens.Classes
 
         public void logInToolStripMenuItem()
         {
-            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
             theLotInPage = new UIs.anna.LogInPage();
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theLotInPage);
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theLotInPage);
             designEditOfPanels(theLotInPage);
         }
 
         public void signUpToolStripMenuItem()
         {
-            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
             theSignUpPage = new UIs.SignUpUserControl();
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theSignUpPage);
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theSignUpPage);
             designEditOfPanels(theSignUpPage);
         }
 
         public void createEventToolStripMenuItem(string value)
         {
-            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
             theCreateEventPage = new UIs.anna.CreateEventPage(value);
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theCreateEventPage);
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theCreateEventPage);
             designEditOfPanels(theCreateEventPage);
         }
 
         public void listToolStripMenuItem()
         {
-            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
             theListPage = new UIs.valentina.ListPage();
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theListPage);
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theListPage);
             designEditOfPanels(theListPage);
         }
 
         public void madeForYouToolStripMenuItem()
         {
-            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
             theListsContentPage = new UIs.valentina.ListsContentPage();
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theListsContentPage);
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theListsContentPage);
             designEditOfPanels(theListsContentPage);
         }
 
         public void settingsToolStripMenuItem()
         {
-            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
             theSettingsPage = new UIs.valentina.SettingsPage();
-            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theSettingsPage);
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theSettingsPage);
             designEditOfPanels(theSettingsPage);
         }
 

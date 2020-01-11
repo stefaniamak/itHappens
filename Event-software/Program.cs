@@ -28,7 +28,8 @@ namespace itHappens
             //Application.Run(new UIs.SampleForm());
 
             UIs.anna.LogInPage.loggedInUser = false;
-            Application.Run(new UIs.Common.MainSplitForm());
+
+            Application.Run(Controllers.UIController.Instance.MainSplitForm);
 
             //Application.Run(new LogEvents());
 

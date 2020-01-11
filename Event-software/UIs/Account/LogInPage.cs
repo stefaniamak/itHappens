@@ -55,7 +55,7 @@ namespace itHappens.UIs.anna
             Controllers.UIController.Instance.openHostForMainAndSearchPage();
             Controllers.UIController.Instance.openCommonSearchTextPage("main");
             Controllers.UIController.Instance.showSidebars(UsernameTextBox.Text);
-            //UIs.Common.MainSplitForm.Instance.logInSignOutButtonsVisibility();
+            Controllers.UIController.Instance.MainSplitForm.logInSignOutButtonsVisibility();
         }
 
         private void PasswordTextBox_KeyPress(object sender, KeyPressEventArgs e)

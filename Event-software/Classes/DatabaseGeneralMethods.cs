@@ -260,7 +260,7 @@ namespace itHappens.Classes
 
                 while (dataReader.Read())
                 {
-                    if (dataReader.GetInt32(0).Equals(returnUsersIDWhenIsLogedIn(UIs.Sidebars.ProfileSidebar.Instance.usernameLable.Text)))
+                    if (dataReader.GetInt32(0).Equals(returnUsersIDWhenIsLogedIn(Classes.SidebarsMethods.Instance.TheProfileSidebar.usernameLable.Text)))
                     {
                         result = true;
                     }

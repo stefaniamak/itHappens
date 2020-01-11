@@ -12,9 +12,6 @@ namespace itHappens.UIs.Sidebars
 {
     public partial class ProfileSidebar : UserControl
     {
-        private static ProfileSidebar _instance = new ProfileSidebar();
-        public static ProfileSidebar Instance => _instance;
-
         public ProfileSidebar()
         {
             InitializeComponent();
@@ -24,10 +21,15 @@ namespace itHappens.UIs.Sidebars
 
         private void LogoutButton_Click(object sender, EventArgs e)
         {
-            
+
+            userLogOut();
+            Controllers.LogoutController.Instance.logoutActions();
+        }
+
+        public void userLogOut()
+        {
             usernameLable.Text = "Username";
             LogoutButton.Visible = false;
-            Controllers.LogoutController.Instance.logoutActions();
         }
 
         public void userLogedIn(string username)
