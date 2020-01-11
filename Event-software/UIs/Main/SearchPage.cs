@@ -121,7 +121,7 @@ namespace itHappens.UIs.Common
                 dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    var eventminiview = new UIs.Common.EventMiniView(dataReader.GetString(1), Convert.ToInt32(dataReader.GetString(2), dataReader.GetString(0)));
+                    var eventminiview = new UIs.Common.EventMiniView(dataReader.GetString(1), Convert.ToInt32(dataReader.GetString(2)), dataReader.GetString(0));
                     eventminiview.Scale(0.90F);
                     matchesFlowLayoutPanel.Controls.Add(eventminiview);
                 }
