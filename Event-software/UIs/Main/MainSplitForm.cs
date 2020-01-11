@@ -166,7 +166,7 @@ namespace itHappens.UIs.Common
 
         private void venuesProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.Instance.searchToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.venueProfileToolStripMenuItem_MiddlePanel();
         }
 
         private void eventsProfileToolStripMenuItem1_Click(object sender, EventArgs e)

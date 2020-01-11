@@ -31,7 +31,7 @@ namespace itHappens.Classes
         }
 
 
-        // ------------------------ USER PROFILE ------------------------ 
+// ------------------------ USER PROFILE ------------------------ 
         public void mainToolStripMenuItem()
         {
             UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
@@ -57,14 +57,17 @@ namespace itHappens.Classes
             // Grapse ton kwdika sou edw gia thn emfanish stoixeiwn
 
             // to query gia na vreis auta pou thes:
-                // "SELECT us.id, ev.id, us.username, us.surname, ev.title, ar.country, cat.color FROM users us JOIN  event_list evL ON us.id = evL.creatorID JOIN attendants att ON evL.id = att.eventListID JOIN event ev ON att.eventID = ev.id JOIN categories cat ON ev.categoryID = cat.id JOIN venues v ON v.id = ev.venueID JOIN area ar ON v.areaID = ar.id WHERE evL.title = 'GOING' AND us.id = '" + theUserId + "'"
+            // "SELECT users.id, users.name, surname FROM users WHERE users.id = '" + theUserId + "'""
+            // den xreiazetai na allakseis kati se auto to query, par to opws einai.
+
+            // Xrisimopoihse ton allon constuctor (tis emfaniseis apo to query apo panw tis evala me thn seira pou ths zhtaei o constructor), kai dwse null stis eikones:
+                // UserProfilePage(int userId, string userName, string userSurname, Image profilePicture)
+            theUserProfilePage = new UIs.andrea.UserProfilePage(); 
 
             // Auth h methodos tha periexei ta events pou o xrisths tha paei, dwse ws parametro to xrwma kathgorias tou event kai to id, apo to panw query pou s egrapsa.
             UIs.andrea.UserProfilePage.Instance.miniCaruselFillWithEventMiniView(categoryColorString, theEventId);
 
-            // Xrisimopoihse ton allon constuctor (tis emfaniseis apo to query apo panw tis evala me thn seira pou ths zhtaei o constructor), kai dwse null stis eikones:
-                // UserProfilePage(int userId, int eventId, string userName, string userSurname, string venueName, string categoryColor, Image profilePicture, Image eventBackground, DateTime eventDateTime, string evLocation)
-            theUserProfilePage = new UIs.andrea.UserProfilePage(); 
+            
             
         }
 
@@ -89,7 +92,7 @@ namespace itHappens.Classes
         public void addEventDetailsInEventProfile()
         {
 
-// ----------- Gia na gemiseis to profil tou EVENT --------
+        // ----------- Gia na gemiseis to profil tou EVENT --------
             
             // Vale edw ton kwdika s
 
@@ -97,15 +100,12 @@ namespace itHappens.Classes
             // SELECT us.id, ev.id, ev.title, ve.name , cat.color, us.name, us.surname, ev.startingDate, ev.ticketprice, ev.description FROM it_happens.event ev JOIN it_happens.venues ve ON ev.venueID = ve.id JOIN it_happens.area ar ON ar.id = ve.areaID JOIN it_happens.users us ON us.id = ev.ownerID JOIN it_happens.categories cat ON ev.categoryID = cat.id WHERE ev.id = 42
             // GUERY NOTES
                 // svise ola ta "it_happens."
-             // allakse to WHERE ev.id = 42 kai vale anti gia 42 -> to it tou event pou epilextike
+                // allakse to WHERE ev.id = 42 kai vale anti gia 42 -> to it tou event pou epilextike
 
              theEventProfilePage = new UIs.andrea.EventProfilePage(); // Xrisimopoihse ton allon constuctor, kai dwse null stis eikones. Sou exw valei ta Select me thn idia seira pou ta zhtaei o constructor
-
-// ----------------------------------------------------------------------------------------------------------------------------
-
            
 
-// ----------- Gia na gemiseis to flowLayout me tous filous pou exoun auto to event sta lists tous GOING h INTERESTED --------
+        // ----------- Gia na gemiseis to flowLayout me tous filous pou exoun auto to event sta lists tous GOING h INTERESTED --------
             // To query gia na gemiseis to flowLayout me tous filous.  (diavase to NOTES FOR QUERY mia seira pio katw, prin xrhsimopoieiseis to query):
                 // SELECT  it_happens.us.name, it_happens.us.surname, evL.title FROM it_happens.following fol JOIN it_happens.users us ON fol.followed_user_id = us.id JOIN it_happens.event_list evL ON fol.followed_user_id = evL.creatorID JOIN it_happens.attendants att ON evL.id = att.eventListID JOIN it_happens.event ev ON att.eventID = ev.id WHERE ev.id = 42 AND fol.following_user_id = 4
             // ****NOTES FOR QUERY:****
@@ -115,29 +115,65 @@ namespace itHappens.Classes
 
             // Kalese to katw gia na emfaniseis tous filous pou exoun stis listes GOING h INTERESTED tous to event, steile NULL gia thn eikona
             //UIs.andrea.EventProfilePage.Instance.friendsWhoWillAttend(friendProfilePicture, friendName, friendSurname, listTitle);
-// ----------------------------------------------------------------------------------------------------------------------------
-
         }
 
-// ------------------------ SEARCH PAGE ------------------------ 
-        public void searchToolStripMenuItem()
+
+// ------------------------ VENUE PROFILE ------------------------ 
+        public void venueProfileToolStripMenuItem()
         {
-            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
-            
+            UIs.Common.MainSplitForm.middlePanel.Controls.Clear(); 
+
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
                 addEventDetailsInEventProfile();
             }
             else
             {
-                theUserProfilePage = new UIs.andrea.UserProfilePage();
+                theSVenueProfilePage = new UIs.andrea.VenueProfilePage();
             }
 
             UIs.Common.MainSplitForm.middlePanel.Controls.Add(theSVenueProfilePage);
             designEditOfPanels(theSVenueProfilePage);
         }
 
-        
+        public void addVenueDetailsToVenueProfile()
+        {
+
+            // ----------- Gia na gemiseis to profil tou VENUE --------
+            // to query:
+            // SELECT ve.id, ve.name, ar.country FROM it_happens.venues ve JOIN it_happens.area ar ON ve.areaID = ar.id WHERE ve.id = 106
+            // GUERY NOTES
+            // svise ola ta "it_happens."
+            // allakse to WHERE ve.id = 106 kai vale anti gia 106, to eventId pou hsoun, prin pathseis na anoiksei to venue profile
+
+            theSVenueProfilePage = new UIs.andrea.VenueProfilePage(); // xrhsimopoieise ton allon constructor. Vale null stis eikones
+
+            // ----------- Gia na gemiseis to FRIENDS WHO HAVE VISITED ----------- 
+            // to query s:
+            // SELECT DISTINCT it_happens.us.name, it_happens.us.surname, evL.title FROM it_happens.following fol JOIN it_happens.users us ON fol.followed_user_id = us.id JOIN it_happens.event_list evL ON fol.followed_user_id = evL.creatorID JOIN it_happens.attendants att ON evL.id = att.eventListID JOIN it_happens.event ev ON att.eventID = ev.id WHERE evL.title='HISTORY' AND fol.following_user_id = 4
+            // QUERY NOTES
+            // diegrapse ola ta "it_happens." 
+            // allakse ta: 
+            // fol.following_user_id = 4 => anti gia 4 tha valeis to onoma tou user pou einai sundedemenos
+            // ve.id = 107               => anti gia 107, tha valeis to venue ID tou venue pou pathses
+
+            //UIs.andrea.VenueProfilePage.Instance.friendsWhoHaveVisited(string friendName, string friendSurname); // svise apla ta "strings" kai dwse tis times apoto query pou s egrapsa
+
+        }
+
+
+
+        /*
+        // ------------------------ SEARCH PAGE ------------------------ 
+        public void searchToolStripMenuItem()
+        {
+            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            theUserProfilePage = new UIs.andrea.UserProfilePage();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theSVenueProfilePage);
+            designEditOfPanels(theSVenueProfilePage);
+        }
+        */
+
 
         public void logInToolStripMenuItem()
         {

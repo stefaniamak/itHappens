@@ -17,6 +17,10 @@ namespace itHappens.UIs.andrea
     {
         public int venueId { get; set; }
         public int eventId { get; set; }
+
+        private static VenueProfilePage _instance = new VenueProfilePage();
+        public static VenueProfilePage Instance => _instance;
+
         public VenueProfilePage()
         {
             InitializeComponent();
@@ -27,19 +31,19 @@ namespace itHappens.UIs.andrea
             showUserControls();
         }
 
-        public VenueProfilePage(int venueId, int eventId, string venueName, string categoryColor, Image profilePicture, Image venueBackground, Image eventBackground, DateTime eventDateTime)
+        public VenueProfilePage(int venueId, string venueName, Image profilePicture, Image venueBackground)
         {
             InitializeComponent();
 
-            showUserControls();
+            //showUserControls();
 
             venueNameLabel.Text = venueName;
             venueProfilePictureOvalPictureBox.BackgroundImage = profilePicture;
-            backgroundPictureBox.BackgroundImage = eventBackground;
-            monthLabel.Text = Utility.Month(eventDateTime);
-            dayLabel.Text = Utility.Day(eventDateTime);
-            categoryColorPanel.BackColor = Color.FromName(categoryColor);
-            miniEventBackgroundPictureBox.BackgroundImage = eventBackground;
+            //backgroundPictureBox.BackgroundImage = eventBackground;
+            //monthLabel.Text = Utility.Month(eventDateTime);
+            //dayLabel.Text = Utility.Day(eventDateTime);
+            //categoryColorPanel.BackColor = Color.FromName(categoryColor);
+            //miniEventBackgroundPictureBox.BackgroundImage = eventBackground;
 
             this.venueId = venueId;
             this.eventId = eventId;
@@ -56,6 +60,11 @@ namespace itHappens.UIs.andrea
             {
                 eventsUserWillAttendCarousel.AddControl(new UIs.Common.EventMiniView());
             }
+        }
+
+        public void friendsWhoHaveVisited(string friendName, string friendSurname)
+        {
+            friendsVisitedFlowLayoutPanel.Controls.Add(new UIs.Common.FriendsWhoHaveVisited(friendName, friendSurname));
         }
 
         private void interestedButton_Click(object sender, EventArgs e)

@@ -156,9 +156,13 @@ namespace itHappens.Controllers
         }
 
         //    ----------    Middle Panel Methods    ----------    
-        
-        
-        
+
+
+        public void venueProfileToolStripMenuItem_MiddlePanel()
+        {
+            Classes.MiddlePanelMethods.Instance.venueProfileToolStripMenuItem();
+        }
+
         public void mainToolStripMenuItem_MiddlePanel()
         {
             Classes.MiddlePanelMethods.Instance.mainToolStripMenuItem();
@@ -166,7 +170,7 @@ namespace itHappens.Controllers
 
         public void searchToolStripMenuItem_MiddlePanel()
         {
-            Classes.MiddlePanelMethods.Instance.searchToolStripMenuItem();
+            //Classes.MiddlePanelMethods.Instance.searchToolStripMenuItem();
         }
 
         public void eventsProfileToolStripMenuItem_MiddlePanel()
