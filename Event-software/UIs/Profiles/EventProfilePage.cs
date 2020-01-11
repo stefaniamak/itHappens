@@ -18,6 +18,9 @@ namespace itHappens.UIs.andrea
         public int organizerId { get; set; }
         public int eventId { get; set; }
 
+        private static EventProfilePage _instance = new EventProfilePage();
+        public static EventProfilePage Instance => _instance;
+
         public EventProfilePage()
         {
             InitializeComponent();
@@ -57,6 +60,11 @@ namespace itHappens.UIs.andrea
             {
                 friendsFlowPanel.Controls.Add(new UIs.Common.FriendsAttending());
             }
+        }
+
+        public void friendsWhoWillAttend(Image friendProfilePicture, string friendName, string friendSurname, string attendingList)
+        {
+            friendsFlowPanel.Controls.Add(new UIs.Common.FriendsAttending(friendProfilePicture, friendName, friendSurname, attendingList));
         }
 
         private void EventProfilePage_Load(object sender, EventArgs e)

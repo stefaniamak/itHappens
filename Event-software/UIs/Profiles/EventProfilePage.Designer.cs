@@ -33,6 +33,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.topBarPanel = new System.Windows.Forms.Panel();
             this.backgroundPictureBox = new System.Windows.Forms.PictureBox();
+            this.categoryColorPanel = new System.Windows.Forms.Panel();
             this.menuTabControl = new System.Windows.Forms.TabControl();
             this.eventsTabPage = new System.Windows.Forms.TabPage();
             this.ticketPanel = new System.Windows.Forms.Panel();
@@ -54,7 +55,6 @@
             this.eventNameLabel = new System.Windows.Forms.Label();
             this.dayLabel = new System.Windows.Forms.Label();
             this.monthLabel = new System.Windows.Forms.Label();
-            this.categoryColorPanel = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.topBarPanel.SuspendLayout();
@@ -126,6 +126,16 @@
             this.backgroundPictureBox.TabIndex = 3;
             this.backgroundPictureBox.TabStop = false;
             // 
+            // categoryColorPanel
+            // 
+            this.categoryColorPanel.BackColor = System.Drawing.Color.Red;
+            this.categoryColorPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryColorPanel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.categoryColorPanel.Location = new System.Drawing.Point(3, 3);
+            this.categoryColorPanel.Name = "categoryColorPanel";
+            this.categoryColorPanel.Size = new System.Drawing.Size(937, 14);
+            this.categoryColorPanel.TabIndex = 18;
+            // 
             // menuTabControl
             // 
             this.menuTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -166,7 +176,7 @@
             this.ticketPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ticketPanel.Controls.Add(this.ticketPriceLabel);
             this.ticketPanel.Controls.Add(this.ticketPictureBox);
-            this.ticketPanel.Location = new System.Drawing.Point(427, 34);
+            this.ticketPanel.Location = new System.Drawing.Point(410, 34);
             this.ticketPanel.Name = "ticketPanel";
             this.ticketPanel.Size = new System.Drawing.Size(159, 105);
             this.ticketPanel.TabIndex = 8;
@@ -238,7 +248,7 @@
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.ReadOnly = true;
-            this.descriptionTextBox.Size = new System.Drawing.Size(522, 187);
+            this.descriptionTextBox.Size = new System.Drawing.Size(505, 187);
             this.descriptionTextBox.TabIndex = 5;
             // 
             // descriptionLabel
@@ -325,7 +335,7 @@
             this.goingButton.Location = new System.Drawing.Point(867, 318);
             this.goingButton.Margin = new System.Windows.Forms.Padding(2);
             this.goingButton.Name = "goingButton";
-            this.goingButton.Size = new System.Drawing.Size(93, 28);
+            this.goingButton.Size = new System.Drawing.Size(93, 30);
             this.goingButton.TabIndex = 14;
             this.goingButton.Text = "GOING";
             this.goingButton.UseVisualStyleBackColor = false;
@@ -388,16 +398,6 @@
             this.monthLabel.Size = new System.Drawing.Size(77, 33);
             this.monthLabel.TabIndex = 5;
             this.monthLabel.Text = "NOV";
-            // 
-            // categoryColorPanel
-            // 
-            this.categoryColorPanel.BackColor = System.Drawing.Color.Red;
-            this.categoryColorPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoryColorPanel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.categoryColorPanel.Location = new System.Drawing.Point(3, 3);
-            this.categoryColorPanel.Name = "categoryColorPanel";
-            this.categoryColorPanel.Size = new System.Drawing.Size(937, 14);
-            this.categoryColorPanel.TabIndex = 18;
             // 
             // EventProfilePage
             // 

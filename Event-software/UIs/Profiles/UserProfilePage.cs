@@ -21,12 +21,12 @@ namespace itHappens.UIs.andrea
             InitializeComponent();
         }
 
-        public UserProfilePage(int userId, int eventId, string userName, string userSurname, string venueName, string categoryColor, Image profilePicture, Image eventBackground, DateTime eventDateTime)
+        public UserProfilePage(int userId, int eventId, string userName, string userSurname, string venueName, string evLocation, string categoryColor, Image profilePicture, Image eventBackground, DateTime eventDateTime)
         {
             InitializeComponent();
 
             //eventsUserWillAttend();
-
+            vanueLabel.Text = evLocation;
             userNameLabel.Text = userName + " " + userSurname;
             userProfilePictureOvalPictureBox.BackgroundImage = profilePicture;
             monthLabel.Text = Utility.Month(eventDateTime);
