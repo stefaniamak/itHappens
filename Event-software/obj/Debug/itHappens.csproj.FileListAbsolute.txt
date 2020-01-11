@@ -468,7 +468,6 @@ C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHapp
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.EventProfilePage.resources
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.CreateEventPage.resources
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.LogInPage.resources
-C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.SignUpPage.resources
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpUserControl.resources
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.CategoryGroupBox.resources
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.Carousel.resources
