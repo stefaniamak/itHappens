@@ -40,7 +40,7 @@ namespace itHappens.UIs.Common
             rightTopPanel = splitContainer1.Panel1;
             rightBottomPanel = splitContainer1.Panel2;
 
-            logInSignOutButtonsVisibility();
+            //logInSignOutButtonsVisibility();
         }
         
 

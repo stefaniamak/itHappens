@@ -103,7 +103,7 @@ namespace itHappens.UIs.Common
         private void detailsButton_Click(object sender, EventArgs e)
         {
             // opens Venue Profile Page
-            Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel();
+            Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel(this.eventId);
         }
 
         private void goingListOvalPictureBox_Click(object sender, EventArgs e)

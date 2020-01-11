@@ -30,7 +30,7 @@ namespace itHappens.UIs.Sidebars
             Controllers.LogoutController.Instance.logoutActions();
         }
 
-        private void userLogedIn(string username)
+        public void userLogedIn(string username)
         {
             LogoutButton.Visible = true;
             usernameLable.Text = username;

@@ -240,5 +240,40 @@ namespace itHappens.Classes
             return age;
         }
 
+        public static bool CheckIfEventBelongsToLoggedInUser(int eventid)
+        {
+            MySqlConnection con;
+            bool result = false;
+
+            try
+            {
+                con = new MySqlConnection(conStr);
+                con.Open();
+
+                MySqlCommand command;
+                MySqlDataReader dataReader;
+                String queryString = "Select ownerID from event where id="+eventid+"";
+
+                command = new MySqlCommand(queryString, con);
+
+                dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    if (dataReader.GetInt32(0).Equals(returnUsersIDWhenIsLogedIn(UIs.Sidebars.ProfileSidebar.Instance.usernameLable.Text)))
+                    {
+                        result = true;
+                    }
+                }
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error!!");
+            }
+
+            return result;
+        }
+
     }
 }

@@ -678,7 +678,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CreateEventPage";
             this.Size = new System.Drawing.Size(724, 1094);
-            this.Load += new System.EventHandler(this.CreateEventPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
