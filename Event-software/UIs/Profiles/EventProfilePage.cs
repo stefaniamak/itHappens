@@ -70,6 +70,8 @@ namespace itHappens.UIs.andrea
 
             this.organizerId = organizerId;
             this.eventId = eventId;
+            if (UIs.anna.LogInPage.loggedInUser == true)
+                EnableButtons();
         }
 
         private void friends()
@@ -83,6 +85,12 @@ namespace itHappens.UIs.andrea
         public void friendsWhoWillAttend(Image friendProfilePicture, string friendName, string friendSurname, string attendingList)
         {
             friendsFlowPanel.Controls.Add(new UIs.Common.FriendsAttending(friendProfilePicture, friendName, friendSurname, attendingList));
+        }
+
+        public void EnableButtons()
+        {
+            interestedButton.Enabled = true;
+            goingButton.Enabled = true;
         }
 
         private void EventProfilePage_Load(object sender, EventArgs e)

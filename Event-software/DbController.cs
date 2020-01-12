@@ -286,8 +286,8 @@ namespace dbstuff
             long eventListID = getUsersEventList(userID, "GOING");
 
             var sCommand = new MySqlCommand(s, con);
-            sCommand.Parameters.AddWithValue("(@eventListID", eventListID);
-            sCommand.Parameters.AddWithValue("@userID", userID);
+            sCommand.Parameters.AddWithValue("@eventListID", eventListID);
+            sCommand.Parameters.AddWithValue("@eventID", eventID);
             sCommand.ExecuteNonQuery();
 
         }
@@ -306,7 +306,7 @@ namespace dbstuff
             {
  var sCommand = new MySqlCommand(s, con);
             sCommand.Parameters.AddWithValue("@eventListId", eventListId);
-            sCommand.Parameters.AddWithValue("@userID", userID);
+            sCommand.Parameters.AddWithValue("@eventID", eventID);
             sCommand.ExecuteNonQuery();
             }
 

@@ -101,7 +101,7 @@ namespace itHappens.Classes
             int theUserId = UIs.anna.LogInPage.userId;
             var v = Db_connector.ExecuteQuery(@"SELECT us.id, ev.id, ev.title, ve.name, cat.color, ev.image, us.name, us.surname, ev.startingDate, ev.ticketprice, ev.description " +
                                                 "FROM event ev " +
-                                                "JOIN venues ve ON ev.venueID = ve.id "+
+                                                "JOIN venues ve ON ev.venueID = ve.id " +
                                                 "JOIN area ar ON ar.id = ve.areaID " +
                                                 "JOIN users us ON us.id = ev.ownerID " +
                                                 "JOIN categories cat ON ev.categoryID = cat.id " +
@@ -118,14 +118,14 @@ namespace itHappens.Classes
                      v.GetString(7), v.GetDateTime(8),
                      v.GetDouble(9), v.GetString(10));
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
                 theEventProfilePage = new UIs.andrea.EventProfilePage(-1, -1, "NoEventFound", "", "", null, "", "", DateTime.Now, 1.00, "");
             }
 
 
-            bool userLoggedIn = false;
+            //bool userLoggedIn = false;
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
                 var z = Db_connector.ExecuteQuery(@"SELECT  us.name, us.surname, evL.title FROM following fol JOIN users us ON 
@@ -134,19 +134,22 @@ namespace itHappens.Classes
                        new[] { new MySqlParameter("@eventId", eventId), new MySqlParameter("@theUserId", theUserId) });
                 try
                 {
-                    z.Read();
-                    theEventProfilePage.friendsWhoWillAttend(null, z.GetString(0), z.GetString(1), z.GetString(2));
-                    userLoggedIn = true;
+                    while (z.Read())
+                    {
+                        theEventProfilePage.friendsWhoWillAttend(null, z.GetString(0), z.GetString(1), z.GetString(2));
+                    }
+                    //userLoggedIn = true;
                 }
-                catch
+                catch (Exception e)
                 {
-                    userLoggedIn = false;
+                    Console.WriteLine(e.Message);
+                    //userLoggedIn = false;
                 }
 
             }
 
-            if (!userLoggedIn)
-                theEventProfilePage.friendsWhoWillAttend(null, "No", "User", "");
+            //if (!userLoggedIn)
+            //theEventProfilePage.friendsWhoWillAttend(null, "No", "User", "");
         }
 
 

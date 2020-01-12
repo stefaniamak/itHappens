@@ -147,12 +147,12 @@
             this.menuTabControl.Controls.Add(this.eventsTabPage);
             this.menuTabControl.Controls.Add(this.galleryTabPage);
             this.menuTabControl.Controls.Add(this.visitorsabPage);
-            this.menuTabControl.Location = new System.Drawing.Point(8, 294);
+            this.menuTabControl.Location = new System.Drawing.Point(8, 280);
             this.menuTabControl.Margin = new System.Windows.Forms.Padding(1);
             this.menuTabControl.Name = "menuTabControl";
             this.menuTabControl.Padding = new System.Drawing.Point(26, 3);
             this.menuTabControl.SelectedIndex = 0;
-            this.menuTabControl.Size = new System.Drawing.Size(630, 451);
+            this.menuTabControl.Size = new System.Drawing.Size(630, 465);
             this.menuTabControl.TabIndex = 16;
             // 
             // eventsTabPage
@@ -170,7 +170,7 @@
             this.eventsTabPage.Margin = new System.Windows.Forms.Padding(1);
             this.eventsTabPage.Name = "eventsTabPage";
             this.eventsTabPage.Padding = new System.Windows.Forms.Padding(1);
-            this.eventsTabPage.Size = new System.Drawing.Size(622, 425);
+            this.eventsTabPage.Size = new System.Drawing.Size(622, 439);
             this.eventsTabPage.TabIndex = 0;
             this.eventsTabPage.Text = "DETAILS";
             // 
@@ -298,7 +298,7 @@
             this.galleryTabPage.Margin = new System.Windows.Forms.Padding(1);
             this.galleryTabPage.Name = "galleryTabPage";
             this.galleryTabPage.Padding = new System.Windows.Forms.Padding(1);
-            this.galleryTabPage.Size = new System.Drawing.Size(622, 425);
+            this.galleryTabPage.Size = new System.Drawing.Size(622, 439);
             this.galleryTabPage.TabIndex = 3;
             this.galleryTabPage.Text = "GALLERY";
             // 
@@ -310,7 +310,7 @@
             this.visitorsabPage.Margin = new System.Windows.Forms.Padding(1);
             this.visitorsabPage.Name = "visitorsabPage";
             this.visitorsabPage.Padding = new System.Windows.Forms.Padding(1);
-            this.visitorsabPage.Size = new System.Drawing.Size(622, 425);
+            this.visitorsabPage.Size = new System.Drawing.Size(622, 439);
             this.visitorsabPage.TabIndex = 2;
             this.visitorsabPage.Text = "VISITORS ALSO LIKE";
             // 
@@ -359,12 +359,13 @@
             // 
             this.goingButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.goingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.goingButton.Enabled = false;
             this.goingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goingButton.ForeColor = System.Drawing.Color.Lime;
-            this.goingButton.Location = new System.Drawing.Point(763, 280);
+            this.goingButton.Location = new System.Drawing.Point(763, 290);
             this.goingButton.Margin = new System.Windows.Forms.Padding(1);
             this.goingButton.Name = "goingButton";
-            this.goingButton.Size = new System.Drawing.Size(107, 44);
+            this.goingButton.Size = new System.Drawing.Size(107, 34);
             this.goingButton.TabIndex = 14;
             this.goingButton.Text = "GOING";
             this.goingButton.UseVisualStyleBackColor = false;
@@ -374,12 +375,13 @@
             // 
             this.interestedButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.interestedButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.interestedButton.Enabled = false;
             this.interestedButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.interestedButton.ForeColor = System.Drawing.Color.Yellow;
-            this.interestedButton.Location = new System.Drawing.Point(652, 280);
+            this.interestedButton.Location = new System.Drawing.Point(652, 290);
             this.interestedButton.Margin = new System.Windows.Forms.Padding(1);
             this.interestedButton.Name = "interestedButton";
-            this.interestedButton.Size = new System.Drawing.Size(107, 44);
+            this.interestedButton.Size = new System.Drawing.Size(107, 34);
             this.interestedButton.TabIndex = 13;
             this.interestedButton.Text = "INTRESTED";
             this.interestedButton.UseVisualStyleBackColor = false;
@@ -408,7 +410,7 @@
             this.dayLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.dayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.dayLabel.Location = new System.Drawing.Point(778, 68);
+            this.dayLabel.Location = new System.Drawing.Point(778, 82);
             this.dayLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.dayLabel.Name = "dayLabel";
             this.dayLabel.Size = new System.Drawing.Size(75, 54);
