@@ -196,7 +196,7 @@
             //
             // homePagePictureBox
             //
-            this.homePagePictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePagePictureBox.BackgroundImage")));
+            //this.homePagePictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePagePictureBox.BackgroundImage")));
             this.homePagePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.homePagePictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.homePagePictureBox.Location = new System.Drawing.Point(2, 3);

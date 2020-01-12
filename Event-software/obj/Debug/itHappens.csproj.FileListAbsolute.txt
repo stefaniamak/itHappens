@@ -499,12 +499,10 @@ C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHapp
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsWhoHaveVisited.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.Notification.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.InputOldPassForm.resources
-
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.InputOldPassForm.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.InputOldPassForm.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.Lists.CreateListPage.resources
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.Lists.CreateListPage.resources
-
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.NotificationBox.resources
 C:\Users\Κωνσταντίνα\Desktop\Portfolio\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.Lists.CreateListPage.resources
 C:\Users\outergaze\Documents\GitHub\adopse-events\Event-software\bin\Debug\itHappens.exe.config
@@ -585,10 +583,7 @@ C:\Users\outergaze\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHap
 C:\Users\outergaze\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
 C:\Users\outergaze\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.exe
 C:\Users\outergaze\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.pdb
-
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.ContactForm.resources
-L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.InputOldPassForm.resources
-
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.csprojAssemblyReference.cache
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.exe.config
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsWhoHaveVisited.resources

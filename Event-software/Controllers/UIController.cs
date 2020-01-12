@@ -1,10 +1,10 @@
 
-﻿using System;
+using System;
 using System.Collections;
 using System.Windows.Forms;
 
 
-﻿using System.Windows.Forms;
+using System.Windows.Forms;
 using itHappens.Classes;
 
 using itHappens.UIs.Common;
@@ -81,30 +81,27 @@ namespace itHappens.Controllers
         {
             Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
             theHostPage = new UIs.Main.CommonSearchTextPage();
-            if (theHostPage != null)
-            {
-                Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theHostPage);
-                designEditOfPanels(theHostPage);
-            }
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theHostPage);
+            designEditOfPanels(theHostPage);
 
         }
 
 
         public void hostTheMainPage()
         {
-            theMainPage = new UIs.Main.MainPage();
-            if (theMainPage != null)
+            if (theHostPage != null)
             {
-                UIs.Main.CommonSearchTextPage.hostPanel.Controls.Add(theMainPage);
+                theMainPage = new UIs.Main.MainPage();
+                theHostPage.hostPanel.Controls.Add(theMainPage);
                 designEditOfPanels(theMainPage);
             }
         }
         public void hostTheSearchPage()
         {
-            theSearchPage = new UIs.Common.SearchPage();
-            if (theSearchPage != null)
+            if (theHostPage != null)
             {
-                UIs.Main.CommonSearchTextPage.hostPanel.Controls.Add(theSearchPage);
+                theSearchPage = new UIs.Common.SearchPage();
+                theHostPage.hostPanel.Controls.Add(theSearchPage);
                 designEditOfPanels(theSearchPage);
             }
         }
@@ -173,7 +170,7 @@ namespace itHappens.Controllers
             {
                 eventTitles = Classes.DatabaseGeneralMethods.returnTitleOfEvent(Convert.ToInt32(eventIDList[i]));
                 catColor = Classes.DatabaseGeneralMethods.GetCategoryColorOfEvent(Convert.ToInt32(eventCategoryIDList[i]));
-                var eventminiview = new UIs.Common.EventMiniView(catColor,Convert.ToInt32(eventIDList[i]), eventTitles);
+                var eventminiview = new UIs.Common.EventMiniView(catColor, Convert.ToInt32(eventIDList[i]), eventTitles);
                 //  eventminiview.Scale(0.55F);
                 UIs.valentina.ListsContentPage.EventHolderFlowLayoutPanel.Controls.Add(eventminiview);
             }

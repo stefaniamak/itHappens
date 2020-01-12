@@ -33,7 +33,8 @@ namespace itHappens.Classes
         }
         private void LoggedOutUser(int size)
         {
-            List<List<string>> Categories = Db_connector.Readrows(Db_connector.Categories(size),new int[] {2,3} );
+            var query = Db_connector.Categories(size);
+            List<List<string>> Categories = Db_connector.Readrows(query,new int[] {0,1} );
             for (int i=0; i < size; i++)
             {
                GroupBox.Add(new CategoryGroupBox(Categories [i] [0] , Categories[i][1]));
