@@ -43,7 +43,7 @@ namespace itHappens.UIs.Common
 
             if (eventImage != null)
             {
-                eventPictureBox.Image = eventImage;
+                eventPictureBox.BackgroundImage = eventImage;
             }
 
         }

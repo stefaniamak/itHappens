@@ -114,7 +114,8 @@ namespace itHappens.UIs.Common
                 String queryString = "SELECT ev.title, cat.color, ev.id, ev.image " +            // When Images get inserted to database, there will be a -- event.image -- added, and the -- event.title -- will be removed.
                                      "FROM event ev JOIN categories cat " +
                                      "ON cat.id = ev.categoryID " +
-                                     "WHERE cat.id IN (" + ids + ")";  
+                                     "WHERE cat.id IN (" + ids + ") " +
+                                     "LIMIT 50";  
 
 
                 command = new MySqlCommand(queryString, con);
