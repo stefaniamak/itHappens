@@ -34,9 +34,9 @@
             this.categoryColorPanel = new System.Windows.Forms.Panel();
             this.savedEventId = new System.Windows.Forms.Label();
             this.hoverOverPanel = new System.Windows.Forms.Panel();
-            eventIdTextBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            eventTitleLabel = new System.Windows.Forms.Label();
+            this.eventTitleLabel = new System.Windows.Forms.Label();
+            this.detailsButton = new System.Windows.Forms.Button();
             this.intrestedListOvalPictureBox = new itHappens.UIs.Common.OvalPictureBox();
             this.goingListOvalPictureBox = new itHappens.UIs.Common.OvalPictureBox();
             this.eventTableLayout.SuspendLayout();
@@ -47,9 +47,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.intrestedListOvalPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goingListOvalPictureBox)).BeginInit();
             this.SuspendLayout();
-            //
+            // 
             // eventTableLayout
-            //
+            // 
             this.eventTableLayout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -68,9 +68,9 @@
             this.eventTableLayout.Size = new System.Drawing.Size(144, 221);
             this.eventTableLayout.TabIndex = 0;
             this.eventTableLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.eventTableLayout_Paint);
-            //
+            // 
             // eventPictureBox
-            //
+            // 
             this.eventPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -83,9 +83,9 @@
             this.eventPictureBox.TabIndex = 0;
             this.eventPictureBox.TabStop = false;
             this.eventPictureBox.MouseEnter += new System.EventHandler(this.eventPictureBox_MouseEnter);
-            //
+            // 
             // categoryColorPanel
-            //
+            // 
             this.categoryColorPanel.Controls.Add(this.savedEventId);
             this.categoryColorPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.categoryColorPanel.Location = new System.Drawing.Point(3, 199);
@@ -93,23 +93,22 @@
             this.categoryColorPanel.Size = new System.Drawing.Size(138, 19);
             this.categoryColorPanel.TabIndex = 1;
             this.categoryColorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.categoryColorPanel_Paint);
-            //
+            // 
             // savedEventId
-            //
+            // 
             this.savedEventId.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.savedEventId.Location = new System.Drawing.Point(0, 0);
             this.savedEventId.Name = "savedEventId";
             this.savedEventId.Size = new System.Drawing.Size(35, 13);
             this.savedEventId.TabIndex = 0;
             this.savedEventId.Visible = false;
-            //
+            // 
             // hoverOverPanel
-            //
+            // 
             this.hoverOverPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.hoverOverPanel.BackColor = System.Drawing.Color.Silver;
-            this.hoverOverPanel.Controls.Add(eventIdTextBox);
             this.hoverOverPanel.Controls.Add(this.flowLayoutPanel1);
             this.hoverOverPanel.Controls.Add(this.intrestedListOvalPictureBox);
             this.hoverOverPanel.Controls.Add(this.goingListOvalPictureBox);
@@ -120,18 +119,9 @@
             this.hoverOverPanel.TabIndex = 0;
             this.hoverOverPanel.MouseLeave += new System.EventHandler(this.hoverOverPanel_MouseLeave);
             this.hoverOverPanel.MouseHover += new System.EventHandler(this.hoverOverPanel_MouseHover);
-            //
-            // eventIdTextBox
-            //
-            eventIdTextBox.Enabled = false;
-            eventIdTextBox.Location = new System.Drawing.Point(50, 176);
-            eventIdTextBox.Name = "eventIdTextBox";
-            eventIdTextBox.Size = new System.Drawing.Size(45, 20);
-            eventIdTextBox.TabIndex = 4;
-            eventIdTextBox.Visible = false;
-            //
+            // 
             // flowLayoutPanel1
-            //
+            // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -142,18 +132,19 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(145, 80);
             this.flowLayoutPanel1.TabIndex = 3;
             this.flowLayoutPanel1.MouseLeave += new System.EventHandler(this.flowLayoutPanel1_MouseLeave);
-            //
+            // 
             // eventTitleLabel
-            //
-            eventTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            eventTitleLabel.AutoSize = true;
-            eventTitleLabel.Location = new System.Drawing.Point(3, 0);
-            eventTitleLabel.Name = "eventTitleLabel";
-            eventTitleLabel.Size = new System.Drawing.Size(0, 13);
-            eventTitleLabel.TabIndex = 0;
-            //
+            // 
+            this.eventTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.eventTitleLabel.AutoSize = true;
+            this.eventTitleLabel.Location = new System.Drawing.Point(4, 0);
+            this.eventTitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.eventTitleLabel.Name = "eventTitleLabel";
+            this.eventTitleLabel.Size = new System.Drawing.Size(0, 13);
+            this.eventTitleLabel.TabIndex = 0;
+            // 
             // detailsButton
-            //
+            // 
             this.detailsButton.Location = new System.Drawing.Point(12, 88);
             this.detailsButton.Name = "detailsButton";
             this.detailsButton.Size = new System.Drawing.Size(122, 36);
@@ -162,9 +153,9 @@
             this.detailsButton.UseVisualStyleBackColor = true;
             this.detailsButton.Click += new System.EventHandler(this.detailsButton_Click);
             this.detailsButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.detailsButton_MouseClick);
-            //
+            // 
             // intrestedListOvalPictureBox
-            //
+            // 
             this.intrestedListOvalPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.intrestedListOvalPictureBox.BackgroundImage = global::itHappens.Properties.Resources.plus_yellow;
             this.intrestedListOvalPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -176,9 +167,9 @@
             this.intrestedListOvalPictureBox.TabStop = false;
             this.intrestedListOvalPictureBox.Click += new System.EventHandler(this.intrestedListOvalPictureBox_Click);
             this.intrestedListOvalPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.intrestedListOvalPictureBox_MouseClick);
-            //
+            // 
             // goingListOvalPictureBox
-            //
+            // 
             this.goingListOvalPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.goingListOvalPictureBox.BackgroundImage = global::itHappens.Properties.Resources.check_lime;
             this.goingListOvalPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -191,20 +182,9 @@
             this.goingListOvalPictureBox.TabStop = false;
             this.goingListOvalPictureBox.Click += new System.EventHandler(this.goingListOvalPictureBox_Click);
             this.goingListOvalPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.goingListOvalPictureBox_MouseClick);
-            //
-            // detailsButton
-            //
-            this.detailsButton.Location = new System.Drawing.Point(12, 64);
-            this.detailsButton.Name = "detailsButton";
-            this.detailsButton.Size = new System.Drawing.Size(122, 36);
-            this.detailsButton.TabIndex = 0;
-            this.detailsButton.Text = "DETAILS";
-            this.detailsButton.UseVisualStyleBackColor = true;
-            this.detailsButton.Click += new System.EventHandler(this.detailsButton_Click);
-            this.detailsButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.detailsButton_MouseClick);
-            //
+            // 
             // EventMiniView
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -219,7 +199,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.eventPictureBox)).EndInit();
             this.categoryColorPanel.ResumeLayout(false);
             this.hoverOverPanel.ResumeLayout(false);
-            this.hoverOverPanel.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.intrestedListOvalPictureBox)).EndInit();
@@ -238,7 +217,7 @@
         private OvalPictureBox intrestedListOvalPictureBox;
         private OvalPictureBox goingListOvalPictureBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        public static System.Windows.Forms.Label eventTitleLabel;
-        public static System.Windows.Forms.TextBox eventIdTextBox;
+        private System.Windows.Forms.Label eventTitleLabel;
+        private System.Windows.Forms.Label savedEventId;
     }
 }
