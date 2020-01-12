@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainSplitForm));
             this.leftSplitContainer = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.upcommingEventsPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.homePagePictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CreateEvent = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -57,10 +55,11 @@
             this.listsContentPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rightSplitContainer = new System.Windows.Forms.SplitContainer();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.homePagePictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.leftSplitContainer)).BeginInit();
             this.leftSplitContainer.Panel1.SuspendLayout();
             this.leftSplitContainer.Panel2.SuspendLayout();
@@ -74,13 +73,13 @@
             this.splitContainer3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.homePagePictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rightSplitContainer)).BeginInit();
             this.rightSplitContainer.Panel2.SuspendLayout();
             this.rightSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.homePagePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // leftSplitContainer
@@ -193,28 +192,15 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(172, 42);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
-            // homePagePictureBox
-            // 
-            this.homePagePictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePagePictureBox.BackgroundImage")));
-            this.homePagePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.homePagePictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.homePagePictureBox.Location = new System.Drawing.Point(3, 4);
-            this.homePagePictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.homePagePictureBox.Name = "homePagePictureBox";
-            this.homePagePictureBox.Size = new System.Drawing.Size(33, 34);
-            this.homePagePictureBox.TabIndex = 0;
-            this.homePagePictureBox.TabStop = false;
-            this.homePagePictureBox.Click += new System.EventHandler(this.homePagePictureBox_Click);
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(42, 11);
+            this.label1.Location = new System.Drawing.Point(42, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 20);
+            this.label1.Size = new System.Drawing.Size(49, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Home";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -223,7 +209,7 @@
             // 
             this.CreateEvent.BackColor = System.Drawing.Color.WhiteSmoke;
             this.CreateEvent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CreateEvent.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateEvent.Location = new System.Drawing.Point(0, 0);
             this.CreateEvent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CreateEvent.Name = "CreateEvent";
@@ -392,6 +378,13 @@
             this.loginToolStripMenuItem2.Size = new System.Drawing.Size(125, 22);
             this.loginToolStripMenuItem2.Text = "Settings";
             // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.logOutToolStripMenuItem.Text = "Log out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
             // logInToolStripMenuItem
             // 
             this.logInToolStripMenuItem.Name = "logInToolStripMenuItem";
@@ -416,7 +409,7 @@
             this.rightSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.rightSplitContainer.Panel2.Controls.Add(this.splitContainer1);
             this.rightSplitContainer.Size = new System.Drawing.Size(990, 642);
-            this.rightSplitContainer.SplitterDistance = 790;
+            this.rightSplitContainer.SplitterDistance = 789;
             this.rightSplitContainer.SplitterWidth = 5;
             this.rightSplitContainer.TabIndex = 0;
             this.rightSplitContainer.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.rightSplitContainer_SplitterMoved);
@@ -446,20 +439,26 @@
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 6;
             // 
-            // logOutToolStripMenuItem
+            // homePagePictureBox
             // 
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.logOutToolStripMenuItem.Text = "Log out";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            this.homePagePictureBox.BackgroundImage = global::itHappens.Properties.Resources.house_it_trans_orange;
+            this.homePagePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.homePagePictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.homePagePictureBox.Location = new System.Drawing.Point(3, 4);
+            this.homePagePictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.homePagePictureBox.Name = "homePagePictureBox";
+            this.homePagePictureBox.Size = new System.Drawing.Size(33, 34);
+            this.homePagePictureBox.TabIndex = 0;
+            this.homePagePictureBox.TabStop = false;
+            this.homePagePictureBox.Click += new System.EventHandler(this.homePagePictureBox_Click);
             // 
             // MainSplitForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1181, 650);
             this.Controls.Add(this.leftSplitContainer);
-            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainSplitForm";
             this.Text = "itHappens";
@@ -479,7 +478,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.homePagePictureBox)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.rightSplitContainer.Panel2.ResumeLayout(false);
@@ -487,6 +485,7 @@
             this.rightSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.homePagePictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

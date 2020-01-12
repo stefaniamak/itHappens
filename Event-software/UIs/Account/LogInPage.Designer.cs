@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.UserPictureBox = new System.Windows.Forms.PictureBox();
             this.LoginButton = new System.Windows.Forms.Button();
             this.createAccountLabel = new System.Windows.Forms.LinkLabel();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
@@ -36,21 +35,9 @@
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.itHappensLabel = new System.Windows.Forms.Label();
+            this.UserPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.UserPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // UserPictureBox
-            // 
-            this.UserPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.UserPictureBox.BackColor = System.Drawing.Color.DimGray;
-            this.UserPictureBox.BackgroundImage = global::itHappens.Properties.Resources.LOGOPLSS;
-            this.UserPictureBox.Location = new System.Drawing.Point(204, 94);
-            this.UserPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.UserPictureBox.Name = "UserPictureBox";
-            this.UserPictureBox.Size = new System.Drawing.Size(82, 76);
-            this.UserPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.UserPictureBox.TabIndex = 15;
-            this.UserPictureBox.TabStop = false;
             // 
             // LoginButton
             // 
@@ -145,6 +132,19 @@
             this.itHappensLabel.TabIndex = 43;
             this.itHappensLabel.Text = "LOGIN";
             this.itHappensLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // UserPictureBox
+            // 
+            this.UserPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.UserPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.UserPictureBox.BackgroundImage = global::itHappens.Properties.Resources.Logo_dark;
+            this.UserPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.UserPictureBox.Location = new System.Drawing.Point(162, 73);
+            this.UserPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UserPictureBox.Name = "UserPictureBox";
+            this.UserPictureBox.Size = new System.Drawing.Size(172, 147);
+            this.UserPictureBox.TabIndex = 15;
+            this.UserPictureBox.TabStop = false;
             // 
             // LogInPage
             // 

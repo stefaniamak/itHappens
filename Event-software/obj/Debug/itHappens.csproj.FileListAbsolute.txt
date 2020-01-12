@@ -419,7 +419,6 @@ D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.UserProfil
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.andrea.EventProfilePage.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.CreateEventPage.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.LogInPage.resources
-D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.anna.SignUpPage.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.CategoryGroupBox.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.Carousel.resources
 D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.HorizontalListing.resources
@@ -446,8 +445,6 @@ L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\i
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.ListMiniBox.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.CommonSearchTextPage.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.MainPage.resources
-D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.csprojResolveAssemblyReference.cache
-D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.csproj.itHappens.exe.config
 D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.SignUpUserControl.resources
 D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsAttending.resources
 D:\Adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.CommonSearchTextPage.resources
@@ -508,3 +505,12 @@ C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHapp
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.InputOldPassForm.resources
 L:\University\7th Semester\ΑδΟΠΣε\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.Lists.CreateListPage.resources
 C:\Users\Lycaonas\Documents\GitHub\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.Lists.CreateListPage.resources
+D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.csprojAssemblyReference.cache
+D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.exe.config
+D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.FriendsWhoHaveVisited.resources
+D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.Notification.resources
+D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Common.NotificationBox.resources
+D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Main.LoginWarning.resources
+D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.InputOldPassForm.resources
+D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.UIs.Sidebars.Lists.CreateListPage.resources
+D:\adopse\adopse-events\Event-software\obj\Debug\itHappens.csproj.CopyComplete
