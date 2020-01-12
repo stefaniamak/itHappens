@@ -46,6 +46,7 @@ namespace itHappens.UIs.Common
             categoryColorPanel.BackColor = catColor;
             hoverOverPanel.Visible = false;
 
+            //eventIdLabel.Text = theEventId.ToString();
             eventId = theEventId;
             savedEventId.Text = theEventId + "";
 

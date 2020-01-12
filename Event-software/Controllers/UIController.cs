@@ -136,14 +136,14 @@ namespace itHappens.Controllers
         {
 
         }
-        
+
         public static ArrayList eventIDList = new ArrayList();
         public static ArrayList eventCategoryIDList = new ArrayList();
         public void MyEventsListsContentPageLoad(int userId, UIs.valentina.ListsContentPage theListContentPage)
         {
             int EventNum = Classes.DatabaseGeneralMethods.ReturnNumberOfUserEvents(userId);
-            
-            
+
+
             Classes.DatabaseGeneralMethods.GetUserEventCategoryIds(userId);
             Classes.DatabaseGeneralMethods.GetUserEventIds(userId);
 

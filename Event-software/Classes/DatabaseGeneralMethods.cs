@@ -394,7 +394,7 @@ namespace itHappens.Classes
                 MySqlCommand command;
                 MySqlDataReader dataReader;
                 String queryString = "Select ownerID from event where id=" + eventid + "";
-                Console.WriteLine("Mpike" + eventid);
+                Console.WriteLine("EventID: "+eventid);
                 command = new MySqlCommand(queryString, con);
 
                 dataReader = command.ExecuteReader();
@@ -429,7 +429,7 @@ namespace itHappens.Classes
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select id from event where eventID=" + eventid + "";
+                String queryString = "Select title from event where id=" + eventid + "";
 
                 command = new MySqlCommand(queryString, con);
 

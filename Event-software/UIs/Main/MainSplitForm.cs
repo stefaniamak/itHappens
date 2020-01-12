@@ -226,6 +226,7 @@ namespace itHappens.UIs.Common
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Controllers.UIController.Instance.MainSplitForm.SettingsMenuButton.Visible = false;
             Controllers.LogoutController.Instance.logoutActions();
             logInSignOutButtonsVisibility();
         }

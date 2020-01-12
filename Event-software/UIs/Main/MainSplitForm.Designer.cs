@@ -40,7 +40,6 @@
             this.CreateEvent = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mainInterfaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.interfacesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainPageToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,6 +57,7 @@
             this.listsContentPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SettingsMenuButton = new System.Windows.Forms.ToolStripMenuItem();
             this.contactToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -250,7 +250,7 @@
             // mainInterfaceToolStripMenuItem
             // 
             this.mainInterfaceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loginToolStripMenuItem2,
+            this.SettingsMenuButton,
             this.interfacesToolStripMenuItem,
             this.contactToolStripMenuItem1,
             this.logOutToolStripMenuItem});
@@ -258,12 +258,6 @@
             this.mainInterfaceToolStripMenuItem.Size = new System.Drawing.Size(53, 22);
             this.mainInterfaceToolStripMenuItem.Text = "MENU";
             this.mainInterfaceToolStripMenuItem.Click += new System.EventHandler(this.mainInterfaceToolStripMenuItem_Click);
-            // 
-            // loginToolStripMenuItem2
-            // 
-            this.loginToolStripMenuItem2.Name = "loginToolStripMenuItem2";
-            this.loginToolStripMenuItem2.Size = new System.Drawing.Size(125, 22);
-            this.loginToolStripMenuItem2.Text = "Settings";
             // 
             // interfacesToolStripMenuItem
             // 
@@ -274,7 +268,7 @@
             this.listsAndSettingsToolStripMenuItem,
             this.contactToolStripMenuItem});
             this.interfacesToolStripMenuItem.Name = "interfacesToolStripMenuItem";
-            this.interfacesToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.interfacesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.interfacesToolStripMenuItem.Text = "Interfaces";
             // 
             // accountToolStripMenuItem
@@ -401,17 +395,25 @@
             this.contactToolStripMenuItem.Text = "Contact";
             this.contactToolStripMenuItem.Click += new System.EventHandler(this.contactToolStripMenuItem_Click);
             // 
+            // SettingsMenuButton
+            // 
+            this.SettingsMenuButton.Name = "SettingsMenuButton";
+            this.SettingsMenuButton.Size = new System.Drawing.Size(180, 22);
+            this.SettingsMenuButton.Text = "Settings";
+            this.SettingsMenuButton.Visible = false;
+            this.SettingsMenuButton.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
             // contactToolStripMenuItem1
             // 
             this.contactToolStripMenuItem1.Name = "contactToolStripMenuItem1";
-            this.contactToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
+            this.contactToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.contactToolStripMenuItem1.Text = "Contact";
             this.contactToolStripMenuItem1.Click += new System.EventHandler(this.contactToolStripMenuItem1_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logOutToolStripMenuItem.Text = "Log out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
@@ -532,7 +534,7 @@
         private System.Windows.Forms.ToolStripMenuItem listsContentPageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem2;
+        public System.Windows.Forms.ToolStripMenuItem SettingsMenuButton;
         private System.Windows.Forms.Panel upcommingEventsPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.PictureBox homePagePictureBox;
@@ -543,6 +545,5 @@
 
         private System.Windows.Forms.ToolStripMenuItem contactToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contactToolStripMenuItem1;
-
     }
 }

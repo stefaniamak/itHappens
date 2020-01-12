@@ -26,7 +26,7 @@ namespace itHappens.UIs.andrea
         public EventProfilePage()
         {
             InitializeComponent();
-            if (Classes.DatabaseGeneralMethods.CheckIfEventBelongsToLoggedInUser(UIs.Common.EventMiniView.eventId))
+            if (Classes.DatabaseGeneralMethods.CheckIfEventBelongsToLoggedInUser(eventId))
             {
                 EditButton.Visible = true;
             }
@@ -38,14 +38,42 @@ namespace itHappens.UIs.andrea
 
         }
 
+        public EventProfilePage(int organizerId, int eventId, string eventName, string venueName, string categoryColor, string organizerName, string organizerSurename, DateTime eventDateTime, double ticketPrice, string description)
 
+        {
+            InitializeComponent();
+            if (Classes.DatabaseGeneralMethods.CheckIfEventBelongsToLoggedInUser(eventId))
+            {
+                EditButton.Visible = true;
+            }
+            else
+            {
+                EditButton.Visible = false;
+            }
+
+
+            friends();
+            categoryColorPanel.BackColor = Utility.FromName(categoryColor);
+            eventNameLabel.Text = eventName;
+            monthLabel.Text = Utility.Month(eventDateTime);
+            dayLabel.Text = Utility.Day(eventDateTime);
+            //backgroundPictureBox.BackgroundImage = background;
+            locationTextBox.Text = venueName;
+            organizerTextBox.Text = organizerName + " " + organizerSurename;
+            dayTimeTextBox.Text = Utility.DateToText(eventDateTime);
+            ticketPriceLabel.Text = ticketPrice + "$";
+            descriptionTextBox.Text = description;
+
+            this.organizerId = organizerId;
+            this.eventId = eventId;
+        }
 
 
         public EventProfilePage(int organizerId, int eventId, string eventName, string venueName, string categoryColor, Image background, string organizerName, string organizerSurename, DateTime eventDateTime, double ticketPrice, string description)
 
         {
             InitializeComponent();
-            if (Classes.DatabaseGeneralMethods.CheckIfEventBelongsToLoggedInUser(UIs.Common.EventMiniView.eventId))
+            if (Classes.DatabaseGeneralMethods.CheckIfEventBelongsToLoggedInUser(eventId))
             {
                 EditButton.Visible = true;
             }

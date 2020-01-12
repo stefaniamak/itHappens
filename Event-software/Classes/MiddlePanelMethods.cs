@@ -37,7 +37,7 @@ namespace itHappens.Classes
         }
 
 
-        // ------------------------ USER PROFILE ------------------------ 
+        // ------------------------ USER PROFILE ------------------------
         public void mainToolStripMenuItem()
         {
             Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
@@ -84,7 +84,7 @@ namespace itHappens.Classes
             designEditOfPanels(theEventProfilePage);
         }
 
-        // ------------------------ EVENT PROFILE ------------------------ 
+        // ------------------------ EVENT PROFILE ------------------------
         public void eventsProfileToolStripMenuItem(int eventId)
         {
             Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
@@ -128,7 +128,7 @@ namespace itHappens.Classes
             //bool userLoggedIn = false;
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
-                var z = Db_connector.ExecuteQuery(@"SELECT  us.name, us.surname, evL.title FROM following fol JOIN users us ON 
+                var z = Db_connector.ExecuteQuery(@"SELECT  us.name, us.surname, evL.title FROM following fol JOIN users us ON
             fol.followed_user_id = us.id JOIN event_list evL ON fol.followed_user_id = evL.creatorID JOIN attendants att
             ON evL.id = att.eventListID JOIN event ev ON att.eventID = ev.id WHERE ev.id = @eventId AND fol.following_user_id = @theUserId ",
                        new[] { new MySqlParameter("@eventId", eventId), new MySqlParameter("@theUserId", theUserId) });
@@ -153,7 +153,7 @@ namespace itHappens.Classes
         }
 
 
-        // ------------------------ VENUE PROFILE ------------------------ 
+        // ------------------------ VENUE PROFILE ------------------------
         public void venueProfileToolStripMenuItem()
         {
             Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
@@ -191,8 +191,8 @@ namespace itHappens.Classes
             }
 
 
-            var z = Db_connector.ExecuteQuery(@"SELECT DISTINCT us.name, us.surname, evL.title FROM following fol 
-                                                JOIN users us ON fol.followed_user_id = us.id JOIN event_list evL ON fol.followed_user_id = evL.creatorID 
+            var z = Db_connector.ExecuteQuery(@"SELECT DISTINCT us.name, us.surname, evL.title FROM following fol
+                                                JOIN users us ON fol.followed_user_id = us.id JOIN event_list evL ON fol.followed_user_id = evL.creatorID
                                                 JOIN attendants att ON evL.id = att.eventListID JOIN event ev ON att.eventID = ev.id
                                                 WHERE evL.title='HISTORY' AND fol.following_user_id = @theUserId AND ev.id = @venueId ",
                         new[] { new MySqlParameter("@theUserId", theUserId), new MySqlParameter("@venueId", venueId) });
@@ -212,7 +212,7 @@ namespace itHappens.Classes
 
 
         /*
-        // ------------------------ SEARCH PAGE ------------------------ 
+        // ------------------------ SEARCH PAGE ------------------------
         public void searchToolStripMenuItem()
         {
             Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();

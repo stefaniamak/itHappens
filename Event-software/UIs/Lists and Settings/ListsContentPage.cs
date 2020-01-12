@@ -22,6 +22,7 @@ namespace itHappens.UIs.valentina
         {
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
+                Console.WriteLine("UserID: "+UIs.anna.LogInPage.userId);
 
             }
             else
