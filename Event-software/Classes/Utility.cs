@@ -39,6 +39,9 @@ namespace itHappens.Classes
 
         public static Image DownloadImage(string fromUrl)
         {
+            if (fromUrl == "")
+                return null;
+
             using (System.Net.WebClient webClient = new System.Net.WebClient())
             {
                 using (Stream stream = webClient.OpenRead(fromUrl))
