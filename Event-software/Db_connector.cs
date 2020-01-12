@@ -64,8 +64,8 @@ namespace itHappends
         }
         public static MySqlDataReader Categories(int limit)
         {
-            return Query(@"Select categories , title FROM categories LIMIT @limit",
-                        new string[,] { { "@limit", limit + "" } });
+            return Query(@"Select categories, title FROM categories ",
+                        new string[,] { });
         }
 
         public static MySqlDataReader GetEvent(int id)

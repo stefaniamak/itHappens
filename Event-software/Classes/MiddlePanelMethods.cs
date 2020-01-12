@@ -103,12 +103,19 @@ namespace itHappens.Classes
         public void addEventDetailsInEventProfile(int eventId)
         {
             int theUserId = UIs.anna.LogInPage.userId;
-            var v = Db_connector.Query(@"SELECT us.id, ev.id, ev.title, ve.name , cat.color,ev.image, us.name, us.surname, ev.startingDate,
-            ev.ticketprice, ev.description, FROM event ev JOIN venues ve ON ev.venueID = ve.id
-                JOIN area ar ON ar.id = ve.areaID JOIN users us ON us.id = ev.ownerID
-                JOIN categories cat ON ev.categoryID = cat.id WHERE ev.id = @eventId ",
-                       new string[,] { { "@eventId", eventId + "" } });
-            try
+            var v = Db_connector.Query(@"SELECT 
+            u.id, e.id, e.title, v.name, c.color, e.image, u.name, u.surname, e.startingDate, e.ticketprice, e.description   
+                    FROM  event e
+                    JOIN
+                    categories c ON c.id = e.categoryID
+                    JOIN
+                    users u ON u.id = e.ownerID
+                    JOIN
+                    venues v ON v.id = e.venueID
+                    WHERE
+                    e.id = @eventId ",
+                           new string[,] { { "@eventId", eventId + "" } });
+           try
             {
                 v.Read();
                 theEventProfilePage = new UIs.andrea.EventProfilePage(
@@ -117,10 +124,10 @@ namespace itHappens.Classes
                      v.GetString(4), Image.FromFile(v.GetString(5)), v.GetString(6),
                      v.GetString(7), v.GetDateTime(8),
                      v.GetDouble(9), v.GetString(10));
-            }
-            catch
+            } 
+             catch
             {
-                theEventProfilePage = new UIs.andrea.EventProfilePage(-1, -1, "NoEventFound", "", "", null, "", "", DateTime.Now, 1.00, "");
+            theEventProfilePage = new UIs.andrea.EventProfilePage(-1, -1, "NoEventFound", "", "", null, "", "", DateTime.Now, 1.00, "");
             }
 
 
