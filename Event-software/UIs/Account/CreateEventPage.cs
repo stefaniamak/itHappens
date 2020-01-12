@@ -17,7 +17,7 @@ namespace itHappens.UIs.anna
 
         private static DbConnector dbCon = new DbConnector();
         private static string conStr = dbCon.GetConnectionString();
-        public int eventID = UIs.andrea.EventProfilePage.Instance.eventId; 
+        public int eventID = UIs.Common.EventMiniView.eventId;
 
         public CreateEventPage(String s)
         {
@@ -49,13 +49,88 @@ namespace itHappens.UIs.anna
                 fillVenues();
                 fillCategories();
                 fillTime();
-                getEventDataAndFillTheFields(eventID); 
+                fillTheDate();
+                getEventDataAndFillTheFields(eventID);
 
             }
         }
 
 
-                
+        public void checkDateTimeFields(String day, String month, String year, String date)
+        {
+            DateTime todayDate = DateTime.Now;
+            if (date.Equals("s"))
+            {
+                if (Convert.ToInt32(year) == todayDate.Year)
+                {
+                    if (Convert.ToInt32(day) < todayDate.Day && Convert.ToInt32(month) < todayDate.Month)
+                    {
+                        sDLabel.Text = "Not valid Date";
+                    }
+                    else if (Convert.ToInt32(day) < todayDate.Day)
+                    {
+                        sDLabel.Text = "Not valid Day";
+                    }
+                    else if (Convert.ToInt32(month) < todayDate.Month)
+                    {
+                        sDLabel.Text = "Not Valid Month";
+                    }
+                    else
+                    {
+                        if (Convert.ToInt32(day) > Convert.ToInt32(EDaycomboBox.Text))
+                        {
+                            sDLabel.Text = "Check Day";
+                        }
+                        else
+                        {
+                            sDLabel.Text = "";
+                        }
+
+                    }
+
+                }
+                else
+                {
+                    sDLabel.Text = "";
+                }
+            }
+            else if (date.Equals("e"))
+            {
+                if (Convert.ToInt32(year) == todayDate.Year)
+                {
+                    if (Convert.ToInt32(day) < todayDate.Day && Convert.ToInt32(month) < todayDate.Month)
+                    {
+                        eDLabel.Text = "Not valid Date";
+                    }
+                    else if (Convert.ToInt32(day) < todayDate.Day)
+                    {
+                        eDLabel.Text = "Not valid Day";
+                    }
+                    else if (Convert.ToInt32(month) < todayDate.Month)
+                    {
+                        eDLabel.Text = "Not Valid Month";
+                    }
+                    else
+                    {
+                        if (Convert.ToInt32(day) < Convert.ToInt32(SDaycomboBox.Text))
+                        {
+                            sDLabel.Text = "Check Day";
+                        }
+                        else
+                        {
+                            sDLabel.Text = "";
+                        }
+                    }
+
+
+                }
+                else
+                {
+                    eDLabel.Text = "";
+                }
+            }
+
+        }
 
         public void fillTime()
         {
@@ -64,7 +139,7 @@ namespace itHappens.UIs.anna
                 HourComboBox.Items.Add(i.ToString());
             }
 
-            for(int j= 0; j <= 59; j++)
+            for (int j = 0; j <= 59; j++)
             {
                 MinutesComboBox.Items.Add(j.ToString());
             }
@@ -117,7 +192,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Error");
             }
 
         }
@@ -147,7 +222,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Error");
             }
 
         }
@@ -282,6 +357,8 @@ namespace itHappens.UIs.anna
 
         private void CreateEventButton_Click(object sender, EventArgs e)
         {
+
+
             if (EventNameTextbox.Text.Equals("") || VenuecomboBox.Text.Equals("Select")
                 || CategorycomboBox.Text.Equals("Select") || TagsTextbox.Text.Equals("")
                 || PriceTextbox.Text.Equals("") || DescTextbox.Text.Equals(""))
@@ -289,9 +366,10 @@ namespace itHappens.UIs.anna
                 MessageBox.Show("Fill the fields right", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (!NameValLabel.Text.Equals("") || !VenueValLabel.Text.Equals("") || !CategoryValLabel.Text.Equals("")
-                     || !TagsValLabel.Text.Equals("") || !TPriceValLabel.Text.Equals("") || !DescValLabel.Text.Equals(""))
+                     || !TagsValLabel.Text.Equals("") || !TPriceValLabel.Text.Equals("") || !DescValLabel.Text.Equals("")
+                     || !sDLabel.Text.Equals("") || !eDLabel.Text.Equals(""))
             {
-                     MessageBox.Show("Correct the fields right", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Correct the fields right", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -305,10 +383,10 @@ namespace itHappens.UIs.anna
                     int category = getCategoryId(CategorycomboBox.Text);
                     int ownerId = getOwnerId(UIs.anna.LogInPage.userName);
                     createEventCon(EventNameTextbox.Text, venue, ownerId, StartingDate, EndingDate, category, TagsTextbox.Text,
-                        Convert.ToDouble(PriceTextbox.Text), DescTextbox.Text);
+                     Convert.ToDouble(PriceTextbox.Text), DescTextbox.Text);
                     MessageBox.Show("You successfully made an event!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    
+
                     Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel(GetCurrentEventId());
 
                     clearTextBoxes();
@@ -321,19 +399,19 @@ namespace itHappens.UIs.anna
                     HourComboBox.SelectedIndex = 0;
                     MinutesComboBox.SelectedIndex = 0;
                 }
-                else if(CreateEventButton.Text.Equals("Update event"))
+                else if (CreateEventButton.Text.Equals("Update event"))
                 {
+                    Console.WriteLine("Update EventID: " + eventID);
                     DateTime StartingDate = convertDate(SYearcomboBox.Text, SMonthcomboBox.Text,
                                                         SDaycomboBox.Text, HourComboBox.Text, MinutesComboBox.Text);
                     DateTime EndingDate = convertDate(EYearcomboBox.Text, EMonthcomboBox.Text,
                                                         EDaycomboBox.Text, "0", "0");
                     int venue = getVenueId(VenuecomboBox.Text);
                     int category = getCategoryId(CategorycomboBox.Text);
-                    int ownerId = getOwnerId(UIs.anna.LogInPage.userName);
-                    if(CheckIfThereAreChangesOfEvent(eventID, EventNameTextbox.Text,venue,category,StartingDate,EndingDate,
-                        DescTextbox.Text,TagsTextbox.Text, Convert.ToDouble(PriceTextbox.Text)))
+                    if (CheckIfThereAreChangesOfEvent(eventID, EventNameTextbox.Text, venue, category, StartingDate, EndingDate,
+                        DescTextbox.Text, TagsTextbox.Text, Convert.ToDouble(PriceTextbox.Text)))
                     {
-                        UpdateEvent(EventNameTextbox.Text,venue,category,StartingDate,EndingDate,
+                        UpdateEvent(eventID, EventNameTextbox.Text, venue, category, StartingDate, EndingDate,
                             DescTextbox.Text, TagsTextbox.Text, Convert.ToDouble(PriceTextbox.Text));
 
                         MessageBox.Show("You successfully update your event!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -353,21 +431,21 @@ namespace itHappens.UIs.anna
                     }
                     else
                     {
-                        MessageBox.Show("There are no changes to update","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show("There are no changes to update", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
         }
 
 
-        public DateTime convertDate(String year,String month,String day,String hour,String minutes)
+        public DateTime convertDate(String year, String month, String day, String hour, String minutes)
         {
             DateTime sDate = new DateTime(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day),
-                Convert.ToInt32(hour), Convert.ToInt32(minutes),0);
+                Convert.ToInt32(hour), Convert.ToInt32(minutes), 0);
             return sDate;
         }
 
-        public void createEventCon(String eventTitle,int eventVenue,int eventOwner,DateTime start, DateTime end, int eventCategory, String EventTags,double ticketPrice, String desc)
+        public void createEventCon(String eventTitle, int eventVenue, int eventOwner, DateTime start, DateTime end, int eventCategory, String EventTags, double ticketPrice, String desc)
         {
             MySqlConnection con;
 
@@ -379,8 +457,8 @@ namespace itHappens.UIs.anna
                 MySqlCommand cmd = con.CreateCommand(); ;
 
                 String query = "INSERT INTO event(title,ownerID,venueID,categoryID,startingDate," +
-                    "endingDate,description,tags,ticketprice) VALUES(@title,@ownerID,@venueID,@categoryID,@startingDate," +
-                    "@endingDate,@description,@tags,@ticketprice)";
+                    "endingDate,description,tags,ticketprice,image) VALUES(@title,@ownerID,@venueID,@categoryID,@startingDate," +
+                    "@endingDate,@description,@tags,@ticketprice,@image)";
 
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@title", eventTitle);
@@ -390,15 +468,16 @@ namespace itHappens.UIs.anna
                 cmd.Parameters.AddWithValue("@startingDate", start);
                 cmd.Parameters.AddWithValue("@endingDate", end);
                 cmd.Parameters.AddWithValue("@description", desc);
-                cmd.Parameters.AddWithValue("@tags",EventTags);
+                cmd.Parameters.AddWithValue("@tags", EventTags);
                 cmd.Parameters.AddWithValue("@ticketprice", ticketPrice);
+                cmd.Parameters.AddWithValue("@image", "");
 
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-            catch(MySqlException e)
+            catch
             {
-                Console.WriteLine("Error Insert Statement: " + e.Message);
+                Console.WriteLine("Error Create Event Insert Statement");
             }
         }
 
@@ -430,7 +509,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Error");
             }
 
             return Convert.ToInt32(ownerid);
@@ -464,7 +543,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Error GetCurrentId");
             }
 
             return id;
@@ -483,7 +562,7 @@ namespace itHappens.UIs.anna
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select id from categories where categories.title='" + s + "'";
+                String queryString = "Select id from categories where categories='" + s + "'";
 
 
                 command = new MySqlCommand(queryString, con);
@@ -499,7 +578,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Error");
             }
 
             return Convert.ToInt32(categoryid);
@@ -508,7 +587,7 @@ namespace itHappens.UIs.anna
         public int getVenueId(String s)
         {
             MySqlConnection con;
-            String venueid="0";
+            String venueid = "0";
 
             try
             {
@@ -517,7 +596,7 @@ namespace itHappens.UIs.anna
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select id from venues where name='" +s+"'";
+                String queryString = "Select id from venues where name='" + s + "'";
 
 
                 command = new MySqlCommand(queryString, con);
@@ -533,7 +612,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Error");
             }
 
             return Convert.ToInt32(venueid);
@@ -542,9 +621,8 @@ namespace itHappens.UIs.anna
         public void getEventDataAndFillTheFields(int eventid)
         {
             MySqlConnection con;
-            DateTime sDate=new DateTime(0,0,0,0,0,0);
-            DateTime eDate=new DateTime(0,0,0,0,0,0);
-            
+            DateTime sDate = DateTime.Now;
+            DateTime eDate = DateTime.Now;
             try
             {
                 con = new MySqlConnection(conStr);
@@ -553,7 +631,7 @@ namespace itHappens.UIs.anna
                 MySqlCommand command;
                 MySqlDataReader dataReader;
                 String queryString = "Select title,venueID,categoryID,startingDate,endingDate" +
-                    ",description,tags,ticketprice from event where id="+eventid +"";
+                    ",description,tags,ticketprice from event where id=" + eventid + "";
 
 
                 command = new MySqlCommand(queryString, con);
@@ -570,13 +648,14 @@ namespace itHappens.UIs.anna
                     eDate = dataReader.GetDateTime(4);
                     ReturnNameOfVenueFromVenueId(dataReader.GetInt32(1));
                     ReturnNameOfCategoryFromCategoryId(dataReader.GetInt32(2));
+
                 }
                 con.Close();
 
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Error");
             }
 
             SDaycomboBox.Text = sDate.Day.ToString();
@@ -617,7 +696,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Error");
             }
         }
 
@@ -647,13 +726,13 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Error");
             }
 
         }
 
-        public bool CheckIfThereAreChangesOfEvent(int eventid,String Etitle,int EvenueID,int EcategoryID,
-            DateTime EsDate, DateTime EeDate, String Edesc ,String Etags, double Eticketprice)
+        public bool CheckIfThereAreChangesOfEvent(int eventid, String Etitle, int EvenueID, int EcategoryID,
+            DateTime EsDate, DateTime EeDate, String Edesc, String Etags, double Eticketprice)
         {
             MySqlConnection con;
             bool result = false;
@@ -675,9 +754,9 @@ namespace itHappens.UIs.anna
 
                 while (dataReader.Read())
                 {
-                    if (!Etitle.Equals(dataReader.GetString(0)) || !EvenueID.Equals(dataReader.GetInt32(1)) 
+                    if (!Etitle.Equals(dataReader.GetString(0)) || !EvenueID.Equals(dataReader.GetInt32(1))
                         || !EcategoryID.Equals(dataReader.GetInt32(2)) || !EsDate.Equals(dataReader.GetDateTime(3))
-                        || !EeDate.Equals(dataReader.GetDateTime(4)) || !Edesc.Equals(dataReader.GetString(5)) 
+                        || !EeDate.Equals(dataReader.GetDateTime(4)) || !Edesc.Equals(dataReader.GetString(5))
                         || !Etags.Equals(dataReader.GetString(6)) || !Eticketprice.Equals(dataReader.GetDouble(7)))
                     {
                         result = true;
@@ -688,13 +767,13 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Error");
             }
 
             return result;
         }
 
-        public void UpdateEvent(String Etitle, int EvenueID, int EcategoryID,
+        public void UpdateEvent(int eventid, String Etitle, int EvenueID, int EcategoryID,
             DateTime EsDate, DateTime EeDate, String Edesc, String Etags, double Eticketprice)
         {
             MySqlConnection con;
@@ -706,9 +785,9 @@ namespace itHappens.UIs.anna
 
                 MySqlCommand cmd = con.CreateCommand(); ;
 
-                String query = "Update event set title=@title, venueID=@venueID, categoryID=@categoryID," +
+                String query = "UPDATE event SET title=@title, venueID=@venueID, categoryID=@categoryID," +
                     "startingDate=@startingDate, endingDate=@endingDate, description=@description, tags=@tags," +
-                    "ticketprice=@ticketprice where id="+eventID+"";
+                    "ticketprice=@ticketprice, image=@image WHERE id=" + eventid + "";
 
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@title", Etitle);
@@ -719,6 +798,7 @@ namespace itHappens.UIs.anna
                 cmd.Parameters.AddWithValue("@description", Edesc);
                 cmd.Parameters.AddWithValue("@tags", Etags);
                 cmd.Parameters.AddWithValue("@ticketprice", Eticketprice);
+                cmd.Parameters.AddWithValue("@image", "");
 
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -729,5 +809,32 @@ namespace itHappens.UIs.anna
             }
         }
 
+
+
+
+
+
+
+
+
+        private void SDaycomboBox_Validating(object sender, CancelEventArgs e)
+        {
+            checkDateTimeFields(SDaycomboBox.Text, SMonthcomboBox.Text, SYearcomboBox.Text, "s");
+        }
+
+        private void SMonthcomboBox_Validating(object sender, CancelEventArgs e)
+        {
+            checkDateTimeFields(SDaycomboBox.Text, SMonthcomboBox.Text, SYearcomboBox.Text, "s");
+        }
+
+        private void EDaycomboBox_Validating(object sender, CancelEventArgs e)
+        {
+            checkDateTimeFields(EDaycomboBox.Text, EMonthcomboBox.Text, EYearcomboBox.Text, "e");
+        }
+
+        private void EMonthcomboBox_Validating(object sender, CancelEventArgs e)
+        {
+            checkDateTimeFields(EDaycomboBox.Text, EMonthcomboBox.Text, EYearcomboBox.Text, "e");
+        }
     }
 }
