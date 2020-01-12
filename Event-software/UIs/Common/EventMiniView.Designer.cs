@@ -32,6 +32,7 @@
             this.eventTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.eventPictureBox = new System.Windows.Forms.PictureBox();
             this.categoryColorPanel = new System.Windows.Forms.Panel();
+            this.savedEventId = new System.Windows.Forms.Label();
             this.hoverOverPanel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.eventTitleLabel = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.detailsButton = new System.Windows.Forms.Button();
             this.eventTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventPictureBox)).BeginInit();
+            this.categoryColorPanel.SuspendLayout();
             this.hoverOverPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.intrestedListOvalPictureBox)).BeginInit();
@@ -84,12 +86,22 @@
             // 
             // categoryColorPanel
             // 
+            this.categoryColorPanel.Controls.Add(this.savedEventId);
             this.categoryColorPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.categoryColorPanel.Location = new System.Drawing.Point(3, 199);
             this.categoryColorPanel.Name = "categoryColorPanel";
             this.categoryColorPanel.Size = new System.Drawing.Size(138, 19);
             this.categoryColorPanel.TabIndex = 1;
             this.categoryColorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.categoryColorPanel_Paint);
+            // 
+            // savedEventId
+            // 
+            this.savedEventId.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savedEventId.Location = new System.Drawing.Point(0, 0);
+            this.savedEventId.Name = "savedEventId";
+            this.savedEventId.Size = new System.Drawing.Size(35, 13);
+            this.savedEventId.TabIndex = 0;
+            this.savedEventId.Visible = false;
             // 
             // hoverOverPanel
             // 
@@ -182,6 +194,7 @@
             this.MouseHover += new System.EventHandler(this.EventMiniView_MouseHover);
             this.eventTableLayout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.eventPictureBox)).EndInit();
+            this.categoryColorPanel.ResumeLayout(false);
             this.hoverOverPanel.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
@@ -202,5 +215,6 @@
         private OvalPictureBox goingListOvalPictureBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label eventTitleLabel;
+        private System.Windows.Forms.Label savedEventId;
     }
 }

@@ -38,6 +38,7 @@ namespace itHappens.UIs.Common
             hoverOverPanel.Visible = false;
 
             eventId = theEventId;
+            savedEventId.Text = theEventId + "";
 
             eventTitleLabel.Text = eventTitle;
 
@@ -48,6 +49,13 @@ namespace itHappens.UIs.Common
 
         }
 
+        public int getEventId()
+        {
+            string eventIdString = savedEventId.Text;
+
+            int eventInt = Int32.Parse(eventIdString);
+            return eventInt;
+        }
 
         private void eventTableLayout_Paint(object sender, PaintEventArgs e)
         {
@@ -112,6 +120,7 @@ namespace itHappens.UIs.Common
         private void detailsButton_Click(object sender, EventArgs e)
         {
             // opens Venue Profile Page
+            int eventId = getEventId();
             Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel(eventId);
             hoverPanelVisibility(false);
         }
