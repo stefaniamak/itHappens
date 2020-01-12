@@ -67,7 +67,7 @@ namespace itHappens.UIs.andrea
                 int userId = UIs.anna.LogInPage.userId;
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "SELECT ev.id, cat.color, ev.title, ve.name, ev.startingDate   " +
+                String queryString = "SELECT ev.id, cat.color, ev.title, ve.name, ev.startingDate, ev.image   " +
                                      "FROM users us " +
                                      "JOIN event_list evL ON us.id = evL.creatorID " +
                                      "JOIN attendants att ON evL.id = att.eventListID " +
@@ -84,7 +84,10 @@ namespace itHappens.UIs.andrea
                 {
                     vanueLabel.Text = dataReader.GetString(2);
 
-                    miniCaruselFillWithEventMiniView(dataReader.GetString(1), Convert.ToInt32(dataReader.GetString(0)), dataReader.GetString(2));
+                    var imgPath = dataReader.IsDBNull(6) ? "" : dataReader.GetString(6);
+                    Image img = imgPath == "" ? null : Classes.Utility.DownloadImage(imgPath);
+
+                    miniCaruselFillWithEventMiniView(dataReader.GetString(1), Convert.ToInt32(dataReader.GetString(0)), dataReader.GetString(2), img);
                 }
                 con.Close();
 
@@ -92,7 +95,7 @@ namespace itHappens.UIs.andrea
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
             
         }
@@ -112,30 +115,38 @@ namespace itHappens.UIs.andrea
             }
         }
 
-        public void miniCaruselFillWithEventMiniView(string categoryColor, int theEventId, string eventTitle)
+        public void miniCaruselFillWithEventMiniView(string categoryColor, int theEventId, string eventTitle, Image eventImage)
         {
-            eventsUserWillAttendCarousel.AddControl(new UIs.Common.EventMiniView(categoryColor, theEventId, eventTitle));
+            eventsUserWillAttendCarousel.AddControl(new UIs.Common.EventMiniView(categoryColor, theEventId, eventTitle, eventImage));
         }
 
-        
-    /*   public static void openUserPage(object sender, EventArgs e, int userId)
+
+        private void listsContentPage1_Load(object sender, EventArgs e)
         {
-           
-            MainSplitForm.middlePanel.Controls.Clear();
-            var v = Db_connector.Query(@"Select user.id, user.name , user.surname,                                         
-						FROM user
-						WHERE @userId = ",
-                      new string[,] { { "@userId", userId + "" } });
-            v.Read();
-            var middlePage = new  UserProfilePage
-                (v.GetInt32(0),v.GetInt32(1),v.GetString(2), v.GetString(3),
-                 v.GetString(4),v.GetString(5) , v.GetString(6),null,null,v.GetDateTime(7));
-            MainSplitForm.middlePanel.Controls.Add(middlePage);
-            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            middlePage.Dock = DockStyle.Fill;
+            Console.WriteLine(UIs.anna.LogInPage.userId);
+            
+            Controllers.UIController.Instance.MyEventsListsContentPageLoad(UIs.anna.LogInPage.userId, listsContentPage);
+        }
 
 
-        }*/
+        /*   public static void openUserPage(object sender, EventArgs e, int userId)
+            {
+
+                MainSplitForm.middlePanel.Controls.Clear();
+                var v = Db_connector.Query(@"Select user.id, user.name , user.surname,                                         
+                            FROM user
+                            WHERE @userId = ",
+                          new string[,] { { "@userId", userId + "" } });
+                v.Read();
+                var middlePage = new  UserProfilePage
+                    (v.GetInt32(0),v.GetInt32(1),v.GetString(2), v.GetString(3),
+                     v.GetString(4),v.GetString(5) , v.GetString(6),null,null,v.GetDateTime(7));
+                MainSplitForm.middlePanel.Controls.Add(middlePage);
+                middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+                middlePage.Dock = DockStyle.Fill;
+
+
+            }*/
 
     }
 }

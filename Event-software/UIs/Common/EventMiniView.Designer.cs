@@ -2,12 +2,12 @@
 {
     partial class EventMiniView
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -22,8 +22,8 @@
 
         #region Component Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -32,25 +32,26 @@
             this.eventTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.eventPictureBox = new System.Windows.Forms.PictureBox();
             this.categoryColorPanel = new System.Windows.Forms.Panel();
+            this.savedEventId = new System.Windows.Forms.Label();
             this.hoverOverPanel = new System.Windows.Forms.Panel();
             eventIdTextBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             eventTitleLabel = new System.Windows.Forms.Label();
             this.intrestedListOvalPictureBox = new itHappens.UIs.Common.OvalPictureBox();
             this.goingListOvalPictureBox = new itHappens.UIs.Common.OvalPictureBox();
-            this.detailsButton = new System.Windows.Forms.Button();
             this.eventTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventPictureBox)).BeginInit();
+            this.categoryColorPanel.SuspendLayout();
             this.hoverOverPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.intrestedListOvalPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goingListOvalPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // eventTableLayout
-            // 
-            this.eventTableLayout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this.eventTableLayout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.eventTableLayout.BackColor = System.Drawing.SystemColors.Control;
             this.eventTableLayout.ColumnCount = 1;
@@ -67,11 +68,11 @@
             this.eventTableLayout.Size = new System.Drawing.Size(144, 221);
             this.eventTableLayout.TabIndex = 0;
             this.eventTableLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.eventTableLayout_Paint);
-            // 
+            //
             // eventPictureBox
-            // 
-            this.eventPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this.eventPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.eventPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("eventPictureBox.BackgroundImage")));
             this.eventPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -82,19 +83,30 @@
             this.eventPictureBox.TabIndex = 0;
             this.eventPictureBox.TabStop = false;
             this.eventPictureBox.MouseEnter += new System.EventHandler(this.eventPictureBox_MouseEnter);
-            // 
+            //
             // categoryColorPanel
-            // 
+            //
+            this.categoryColorPanel.Controls.Add(this.savedEventId);
             this.categoryColorPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.categoryColorPanel.Location = new System.Drawing.Point(3, 199);
             this.categoryColorPanel.Name = "categoryColorPanel";
             this.categoryColorPanel.Size = new System.Drawing.Size(138, 19);
             this.categoryColorPanel.TabIndex = 1;
-            // 
+            this.categoryColorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.categoryColorPanel_Paint);
+            //
+            // savedEventId
+            //
+            this.savedEventId.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savedEventId.Location = new System.Drawing.Point(0, 0);
+            this.savedEventId.Name = "savedEventId";
+            this.savedEventId.Size = new System.Drawing.Size(35, 13);
+            this.savedEventId.TabIndex = 0;
+            this.savedEventId.Visible = false;
+            //
             // hoverOverPanel
-            // 
-            this.hoverOverPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this.hoverOverPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.hoverOverPanel.BackColor = System.Drawing.Color.Silver;
             this.hoverOverPanel.Controls.Add(eventIdTextBox);
@@ -108,57 +120,80 @@
             this.hoverOverPanel.TabIndex = 0;
             this.hoverOverPanel.MouseLeave += new System.EventHandler(this.hoverOverPanel_MouseLeave);
             this.hoverOverPanel.MouseHover += new System.EventHandler(this.hoverOverPanel_MouseHover);
-            // 
+            //
             // eventIdTextBox
-            // 
+            //
             eventIdTextBox.Enabled = false;
             eventIdTextBox.Location = new System.Drawing.Point(50, 176);
             eventIdTextBox.Name = "eventIdTextBox";
             eventIdTextBox.Size = new System.Drawing.Size(45, 20);
             eventIdTextBox.TabIndex = 4;
             eventIdTextBox.Visible = false;
-            // 
+            //
             // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(eventTitleLabel);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 4);
+            //
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.Controls.Add(this.eventTitleLabel);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(122, 54);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(145, 80);
             this.flowLayoutPanel1.TabIndex = 3;
-            // 
+            this.flowLayoutPanel1.MouseLeave += new System.EventHandler(this.flowLayoutPanel1_MouseLeave);
+            //
             // eventTitleLabel
-            // 
+            //
             eventTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             eventTitleLabel.AutoSize = true;
             eventTitleLabel.Location = new System.Drawing.Point(3, 0);
             eventTitleLabel.Name = "eventTitleLabel";
             eventTitleLabel.Size = new System.Drawing.Size(0, 13);
             eventTitleLabel.TabIndex = 0;
-            // 
+            //
+            // detailsButton
+            //
+            this.detailsButton.Location = new System.Drawing.Point(12, 88);
+            this.detailsButton.Name = "detailsButton";
+            this.detailsButton.Size = new System.Drawing.Size(122, 36);
+            this.detailsButton.TabIndex = 0;
+            this.detailsButton.Text = "DETAILS";
+            this.detailsButton.UseVisualStyleBackColor = true;
+            this.detailsButton.Click += new System.EventHandler(this.detailsButton_Click);
+            this.detailsButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.detailsButton_MouseClick);
+            //
             // intrestedListOvalPictureBox
-            // 
-            this.intrestedListOvalPictureBox.BackColor = System.Drawing.Color.Yellow;
-            this.intrestedListOvalPictureBox.Location = new System.Drawing.Point(12, 122);
+            //
+            this.intrestedListOvalPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.intrestedListOvalPictureBox.BackgroundImage = global::itHappens.Properties.Resources.plus_yellow;
+            this.intrestedListOvalPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.intrestedListOvalPictureBox.Enabled = false;
+            this.intrestedListOvalPictureBox.Location = new System.Drawing.Point(10, 130);
             this.intrestedListOvalPictureBox.Name = "intrestedListOvalPictureBox";
-            this.intrestedListOvalPictureBox.Size = new System.Drawing.Size(51, 48);
+            this.intrestedListOvalPictureBox.Size = new System.Drawing.Size(65, 64);
             this.intrestedListOvalPictureBox.TabIndex = 1;
             this.intrestedListOvalPictureBox.TabStop = false;
             this.intrestedListOvalPictureBox.Click += new System.EventHandler(this.intrestedListOvalPictureBox_Click);
             this.intrestedListOvalPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.intrestedListOvalPictureBox_MouseClick);
-            // 
+            //
             // goingListOvalPictureBox
-            // 
-            this.goingListOvalPictureBox.BackColor = System.Drawing.Color.Lime;
-            this.goingListOvalPictureBox.Location = new System.Drawing.Point(83, 122);
+            //
+            this.goingListOvalPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.goingListOvalPictureBox.BackgroundImage = global::itHappens.Properties.Resources.check_lime;
+            this.goingListOvalPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.goingListOvalPictureBox.Enabled = false;
+            this.goingListOvalPictureBox.ErrorImage = null;
+            this.goingListOvalPictureBox.Location = new System.Drawing.Point(73, 130);
             this.goingListOvalPictureBox.Name = "goingListOvalPictureBox";
-            this.goingListOvalPictureBox.Size = new System.Drawing.Size(51, 48);
+            this.goingListOvalPictureBox.Size = new System.Drawing.Size(62, 64);
             this.goingListOvalPictureBox.TabIndex = 2;
             this.goingListOvalPictureBox.TabStop = false;
             this.goingListOvalPictureBox.Click += new System.EventHandler(this.goingListOvalPictureBox_Click);
             this.goingListOvalPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.goingListOvalPictureBox_MouseClick);
-            // 
+            //
             // detailsButton
-            // 
+            //
             this.detailsButton.Location = new System.Drawing.Point(12, 64);
             this.detailsButton.Name = "detailsButton";
             this.detailsButton.Size = new System.Drawing.Size(122, 36);
@@ -167,9 +202,9 @@
             this.detailsButton.UseVisualStyleBackColor = true;
             this.detailsButton.Click += new System.EventHandler(this.detailsButton_Click);
             this.detailsButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.detailsButton_MouseClick);
-            // 
+            //
             // EventMiniView
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -182,6 +217,7 @@
             this.MouseHover += new System.EventHandler(this.EventMiniView_MouseHover);
             this.eventTableLayout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.eventPictureBox)).EndInit();
+            this.categoryColorPanel.ResumeLayout(false);
             this.hoverOverPanel.ResumeLayout(false);
             this.hoverOverPanel.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);

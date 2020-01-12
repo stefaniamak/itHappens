@@ -17,7 +17,7 @@ namespace itHappens.UIs.anna
 
         private static DbConnector dbCon = new DbConnector();
         private static string conStr = dbCon.GetConnectionString();
-        public int eventID = UIs.Common.EventMiniView.eventId; 
+        public int eventID = UIs.Common.EventMiniView.eventId;
 
         public CreateEventPage(String s)
         {
@@ -50,7 +50,7 @@ namespace itHappens.UIs.anna
                 fillCategories();
                 fillTime();
                 fillTheDate();
-                getEventDataAndFillTheFields(eventID); 
+                getEventDataAndFillTheFields(eventID);
 
             }
         }
@@ -85,9 +85,9 @@ namespace itHappens.UIs.anna
                         {
                             sDLabel.Text = "";
                         }
-                        
+
                     }
-                    
+
                 }
                 else
                 {
@@ -121,7 +121,7 @@ namespace itHappens.UIs.anna
                             sDLabel.Text = "";
                         }
                     }
-                    
+
 
                 }
                 else
@@ -129,8 +129,8 @@ namespace itHappens.UIs.anna
                     eDLabel.Text = "";
                 }
             }
-            
-        }       
+
+        }
 
         public void fillTime()
         {
@@ -192,7 +192,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
         }
@@ -222,7 +222,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
         }
@@ -357,7 +357,7 @@ namespace itHappens.UIs.anna
 
         private void CreateEventButton_Click(object sender, EventArgs e)
         {
-           
+
 
             if (EventNameTextbox.Text.Equals("") || VenuecomboBox.Text.Equals("Select")
                 || CategorycomboBox.Text.Equals("Select") || TagsTextbox.Text.Equals("")
@@ -386,7 +386,7 @@ namespace itHappens.UIs.anna
                      Convert.ToDouble(PriceTextbox.Text), DescTextbox.Text);
                     MessageBox.Show("You successfully made an event!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    
+
                     Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel(GetCurrentEventId());
 
                     clearTextBoxes();
@@ -475,9 +475,9 @@ namespace itHappens.UIs.anna
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-            catch
+            catch(MySqlException e)
             {
-                Console.WriteLine("Error Create Event Insert Statement");
+                Console.WriteLine("Error Insert Statement: " + e.Message);
             }
         }
 
@@ -509,7 +509,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
             return Convert.ToInt32(ownerid);
@@ -543,7 +543,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error GetCurrentId");
+                Console.WriteLine(e.Message);
             }
 
             return id;
@@ -562,7 +562,7 @@ namespace itHappens.UIs.anna
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select id from categories where categories='" + s + "'";
+                String queryString = "Select id from categories where categories.title='" + s + "'";
 
 
                 command = new MySqlCommand(queryString, con);
@@ -578,7 +578,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
             return Convert.ToInt32(categoryid);
@@ -612,7 +612,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
             return Convert.ToInt32(venueid);
@@ -648,14 +648,14 @@ namespace itHappens.UIs.anna
                     eDate = dataReader.GetDateTime(4);
                     ReturnNameOfVenueFromVenueId(dataReader.GetInt32(1));
                     ReturnNameOfCategoryFromCategoryId(dataReader.GetInt32(2));
-                    
+
                 }
                 con.Close();
 
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
             SDaycomboBox.Text = sDate.Day.ToString();
@@ -696,7 +696,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
         }
 
@@ -726,7 +726,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
         }
@@ -754,9 +754,9 @@ namespace itHappens.UIs.anna
 
                 while (dataReader.Read())
                 {
-                    if (!Etitle.Equals(dataReader.GetString(0)) || !EvenueID.Equals(dataReader.GetInt32(1)) 
+                    if (!Etitle.Equals(dataReader.GetString(0)) || !EvenueID.Equals(dataReader.GetInt32(1))
                         || !EcategoryID.Equals(dataReader.GetInt32(2)) || !EsDate.Equals(dataReader.GetDateTime(3))
-                        || !EeDate.Equals(dataReader.GetDateTime(4)) || !Edesc.Equals(dataReader.GetString(5)) 
+                        || !EeDate.Equals(dataReader.GetDateTime(4)) || !Edesc.Equals(dataReader.GetString(5))
                         || !Etags.Equals(dataReader.GetString(6)) || !Eticketprice.Equals(dataReader.GetDouble(7)))
                     {
                         result = true;
@@ -767,7 +767,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
             return result;
@@ -809,13 +809,13 @@ namespace itHappens.UIs.anna
             }
         }
 
-        
-        
-        
 
-       
 
-       
+
+
+
+
+
 
         private void SDaycomboBox_Validating(object sender, CancelEventArgs e)
         {

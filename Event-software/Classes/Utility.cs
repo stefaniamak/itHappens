@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace itHappens.Classes
         {
             string[] months = new string[] { "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" };
            int month = Int32.Parse(Date.ToString("MM"));
-            return months[month--];
+            return months[--month];
         }
 
         public static string Day (DateTime Date)
@@ -36,7 +37,16 @@ namespace itHappens.Classes
             return Color.FromName(colorName);          
         }
 
-
+        public static Image DownloadImage(string fromUrl)
+        {
+            using (System.Net.WebClient webClient = new System.Net.WebClient())
+            {
+                using (Stream stream = webClient.OpenRead(fromUrl))
+                {
+                    return Image.FromStream(stream);
+                }
+            }
+        }
 
         /*   public static List<int> searchEvents(string searchString,
                                         string country,

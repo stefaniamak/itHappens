@@ -26,9 +26,13 @@ namespace itHappens.UIs.Common
             {
                 attendingColor = Color.FromName("lime");
             }
-            else
+            else if (Equals(attendingList, "INTERESTED"))
             {
                 attendingColor = Color.FromName("yellow");
+            }
+            else
+            {
+                attendingColor = Color.FromName("LightGray");
             }
             
             friendPicOvalPictureBox.BackgroundImage = friendProfilePicture;

@@ -10,7 +10,7 @@ namespace dbstuff
 {
     public class DbConnector
     {
-        string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+        string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
         MySqlConnection con;
 
         public DbConnector()
@@ -26,7 +26,7 @@ namespace dbstuff
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
         }
 

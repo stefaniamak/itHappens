@@ -65,7 +65,7 @@ namespace itHappens.UIs.valentina
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
             try
@@ -89,7 +89,7 @@ namespace itHappens.UIs.valentina
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
         }
 
@@ -438,7 +438,7 @@ namespace itHappens.UIs.valentina
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
 

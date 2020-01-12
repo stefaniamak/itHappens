@@ -43,7 +43,7 @@ namespace itHappens.Classes
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
 
@@ -224,7 +224,7 @@ namespace itHappens.Classes
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
             return flag;
@@ -233,7 +233,7 @@ namespace itHappens.Classes
         public static bool checkIfExistsInDatabaseWithAnotherID(int Uid, String variable, String s)
         {
             MySqlConnection con;
-            bool flag = false; 
+            bool flag = false;
 
             try
             {
@@ -242,7 +242,7 @@ namespace itHappens.Classes
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select " + variable +",id from users";
+                String queryString = "Select " + variable + ",id from users";
 
                 command = new MySqlCommand(queryString, con);
 
@@ -250,7 +250,7 @@ namespace itHappens.Classes
 
                 while (dataReader.Read())
                 {
-                    
+
                     if (s.Equals(dataReader.GetString(0)) && Uid != dataReader.GetInt32(1))
                     {
                         flag = true;
@@ -273,7 +273,7 @@ namespace itHappens.Classes
         public static String ReturnUsersPassword(String usern)
         {
             MySqlConnection con;
-            String pass = ""; 
+            String pass = "";
 
             try
             {
@@ -282,7 +282,7 @@ namespace itHappens.Classes
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select password from users where username= '" +usern+"'";
+                String queryString = "Select password from users where username= '" + usern + "'";
 
                 command = new MySqlCommand(queryString, con);
 
@@ -292,7 +292,7 @@ namespace itHappens.Classes
                 {
 
                     pass = dataReader.GetString(0);
-                    
+
                 }
                 con.Close();
 
@@ -306,7 +306,7 @@ namespace itHappens.Classes
 
             return pass;
         }
-        
+
 
         public static int ReturnIdOfAray(String area)
         {
@@ -339,7 +339,7 @@ namespace itHappens.Classes
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
             return areaId;
@@ -357,7 +357,7 @@ namespace itHappens.Classes
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select age from users where username='"+user+"' and password='"+pass+"'";
+                String queryString = "Select age from users where username='" + user + "' and password='" + pass + "'";
 
                 command = new MySqlCommand(queryString, con);
 
@@ -393,7 +393,7 @@ namespace itHappens.Classes
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select ownerID from event where id="+eventid+"";
+                String queryString = "Select ownerID from event where id=" + eventid + "";
                 Console.WriteLine("EventID: "+eventid);
                 command = new MySqlCommand(queryString, con);
 
@@ -447,5 +447,39 @@ namespace itHappens.Classes
             }
             return title;
         }
+
+        public static string returnImageOfEvent(int eventid)
+        {
+            MySqlConnection con;
+            string image = "";
+
+            try
+            {
+
+                con = new MySqlConnection(conStr);
+                con.Open();
+
+                MySqlCommand command;
+                MySqlDataReader dataReader;
+                String queryString = "Select image from event where eventID=" + eventid + "";
+
+                command = new MySqlCommand(queryString, con);
+
+                dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    if (!dataReader.IsDBNull(0))
+                        image = dataReader.GetString(0);
+                }
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error CategoryID Of User Events");
+            }
+            return image;
+        }
+
     }
 }

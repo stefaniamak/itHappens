@@ -7,16 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using itHappens.Classes;
+using itHappens.UIs.Common;
+using itHappends;
+using dbstuff;
 
 namespace itHappens.UIs.Common
 {
     public partial class EventMiniView : UserControl
     {
-        public static int eventId; //Convert.ToInt32(eventIdLabel.Text);
+        public static int eventId;
+        private DbController dbCon = new DbController();
         public EventMiniView()
         {
             InitializeComponent();
             hoverOverPanel.Visible = false;
+            if (UIs.anna.LogInPage.loggedInUser == true)
+                EnableButtons();
         }
 
         public EventMiniView(Image eventImage, string categoryColor) : this()
@@ -28,10 +35,12 @@ namespace itHappens.UIs.Common
             eventPictureBox.Image = eventImage;
             categoryColorPanel.BackColor = catColor;
             hoverOverPanel.Visible = false;
+            if (UIs.anna.LogInPage.loggedInUser == true)
+                EnableButtons();
         }
 
         //  -----------  Προσωρινός Constructor χωρίς τα insert εικόνων.  -----------
-        public EventMiniView(string categoryColor, int theEventId, string eventTitle) : this()
+        public EventMiniView(string categoryColor, int theEventId, string eventTitle, Image eventImage) : this()
         {
             Color catColor = Color.FromName(categoryColor);
             categoryColorPanel.BackColor = catColor;
@@ -39,10 +48,30 @@ namespace itHappens.UIs.Common
 
             //eventIdLabel.Text = theEventId.ToString();
             eventId = theEventId;
+            savedEventId.Text = theEventId + "";
+
             eventTitleLabel.Text = eventTitle;
+
+            if (eventImage != null)
+            {
+                eventPictureBox.BackgroundImage = eventImage;
+            }
 
         }
 
+        public int getEventId()
+        {
+            string eventIdString = savedEventId.Text;
+
+            int eventInt = Int32.Parse(eventIdString);
+            return eventInt;
+        }
+
+        public void EnableButtons()
+        {
+            goingListOvalPictureBox.Enabled = true;
+            intrestedListOvalPictureBox.Enabled = true;
+        }
 
         private void eventTableLayout_Paint(object sender, PaintEventArgs e)
         {
@@ -107,17 +136,31 @@ namespace itHappens.UIs.Common
         private void detailsButton_Click(object sender, EventArgs e)
         {
             // opens Venue Profile Page
+            int eventId = getEventId();
             Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel(eventId);
+            hoverPanelVisibility(false);
         }
 
         private void goingListOvalPictureBox_Click(object sender, EventArgs e)
         {
-            // Adds that Event on the GOING list
+            hoverPanelVisibility(false);
+            dbCon.addGoing(getEventId(), UIs.anna.LogInPage.userId); // Adds that Event on the GOING list
         }
 
         private void intrestedListOvalPictureBox_Click(object sender, EventArgs e)
         {
-            // Adds that Event on the INTERESTED list
+            hoverPanelVisibility(false);
+            dbCon.addInterested(getEventId(), UIs.anna.LogInPage.userId); // Adds that Event on the INTERESTED list
+        }
+
+        private void flowLayoutPanel1_MouseLeave(object sender, EventArgs e)
+        {
+            hoverPanelVisibility(false);
+        }
+
+        private void categoryColorPanel_Paint(object sender, PaintEventArgs e)
+        {
+            hoverPanelVisibility(false);
         }
     }
 }

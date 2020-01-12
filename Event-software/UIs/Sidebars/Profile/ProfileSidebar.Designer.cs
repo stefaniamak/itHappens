@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileSidebar));
             this.usernameLable = new System.Windows.Forms.Label();
-            this.bellNotificationPictureBox = new System.Windows.Forms.PictureBox();
             this.LogoutButton = new System.Windows.Forms.Button();
             this.notificationBox = new itHappens.UIs.Common.NotificationBox();
             this.ovalPictureBox1 = new itHappens.UIs.Common.OvalPictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.bellNotificationPictureBox)).BeginInit();
+            this.bellNotificationPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bellNotificationPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // usernameLable
@@ -50,18 +50,6 @@
             this.usernameLable.Text = "Username";
             this.usernameLable.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.usernameLable.Click += new System.EventHandler(this.usernameLable_Click);
-            // 
-            // bellNotificationPictureBox
-            // 
-            this.bellNotificationPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bellNotificationPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bellNotificationPictureBox.BackgroundImage")));
-            this.bellNotificationPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bellNotificationPictureBox.Location = new System.Drawing.Point(114, 0);
-            this.bellNotificationPictureBox.Name = "bellNotificationPictureBox";
-            this.bellNotificationPictureBox.Size = new System.Drawing.Size(27, 26);
-            this.bellNotificationPictureBox.TabIndex = 3;
-            this.bellNotificationPictureBox.TabStop = false;
-            this.bellNotificationPictureBox.Click += new System.EventHandler(this.bellNotificationPictureBox_Click);
             // 
             // LogoutButton
             // 
@@ -101,6 +89,18 @@
             this.ovalPictureBox1.TabStop = false;
             this.ovalPictureBox1.Click += new System.EventHandler(this.ovalPictureBox1_Click);
             // 
+            // bellNotificationPictureBox
+            // 
+            this.bellNotificationPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bellNotificationPictureBox.BackgroundImage = global::itHappens.Properties.Resources.bell_orange;
+            this.bellNotificationPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bellNotificationPictureBox.Location = new System.Drawing.Point(114, 0);
+            this.bellNotificationPictureBox.Name = "bellNotificationPictureBox";
+            this.bellNotificationPictureBox.Size = new System.Drawing.Size(25, 24);
+            this.bellNotificationPictureBox.TabIndex = 3;
+            this.bellNotificationPictureBox.TabStop = false;
+            this.bellNotificationPictureBox.Click += new System.EventHandler(this.bellNotificationPictureBox_Click);
+            // 
             // ProfileSidebar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,8 +113,8 @@
             this.Controls.Add(this.bellNotificationPictureBox);
             this.Name = "ProfileSidebar";
             this.Size = new System.Drawing.Size(142, 175);
-            ((System.ComponentModel.ISupportInitialize)(this.bellNotificationPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bellNotificationPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

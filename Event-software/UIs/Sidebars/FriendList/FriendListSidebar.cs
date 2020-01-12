@@ -66,7 +66,7 @@ namespace itHappens.UIs.Sidebars
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
             InitializeComponent();
         }

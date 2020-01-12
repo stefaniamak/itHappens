@@ -14,34 +14,52 @@ namespace itHappends
         public static MySqlDataReader connection()
         {
 
-            return Query(@"SELECT COUNT(*) FROM area WHERE country = @country",
-                                   new string[,] { { "@country", "Greece" } });
+            return ExecuteQuery(@"SELECT COUNT(*) FROM area WHERE country = @country",
+                                   new MySqlParameter("@country", "Greece"));
 
         }
         public static MySqlConnection Connect()
         {
-            String conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+            String conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
             MySqlConnection con;
             con = new MySqlConnection(conStr);
             con.Open();
+            Console.WriteLine("CONNECTED DATABASE VERSION: " + con.ServerVersion);
             return con;
         }
-        public static MySqlDataReader Query(string query, string[,] parameters)
+        public static MySqlDataReader ExecuteQuery(string query, MySqlParameter parameter)
         {
-            var Command = new MySqlCommand(query, Connect());
-            for (int i = 0; i < parameters.GetLength(0); i++)
+            return ExecuteQuery(query, new[] { parameter });
+        }
+        public static MySqlDataReader ExecuteQuery(string query, MySqlParameter[] parameters)
+        {
+            try
             {
-                Command.Parameters.AddWithValue(parameters[i, 0], parameters[i, 1]);
+                var Command = new MySqlCommand(query, Connect());
+                // Hack cause it throws an exeption when using the Add function... Something about incompatible MySql versions
+                foreach (var parameter in parameters)
+                    Command.Parameters.AddWithValue(parameter.ParameterName, parameter.Value);
+
+
+                return Command.ExecuteReader();
             }
-            return Command.ExecuteReader();
+            catch (MySqlException e)
+            {
+                Console.WriteLine("My SQL Error: " + e.Message);
+                return null;
+            }
+
+
 
         }
 
         public static MySqlDataReader ActiveEvents()
         {
+            var today = DateTime.Today;
+            var tomorrow = today.AddDays(1);
 
-            return Query(@"SELECT * FROM event WHERE startingDate < @Date AND endingDate  > @Date ",
-                                   new string[,] { { "@Date", Utility.DateToText(DateTime.Now) } });
+            return ExecuteQuery(@"SELECT event.id, event.title, categories.color, event.image FROM event JOIN categories ON categories.id = event.categoryID WHERE startingDate >= @Today AND startingDate < @Tomorrow ",
+                                  new[] { new MySqlParameter("@Today", today), new MySqlParameter("@Tomorrow", tomorrow) });
         }
 
         public static List<List<string>> Readrows(MySqlDataReader reader, int[] parameters)
@@ -54,7 +72,7 @@ namespace itHappends
 
                 foreach (int i in parameters)
                 {
-                    rows.Add(reader.GetString(i));
+                    rows.Add(reader.IsDBNull(i) ? "" : reader.GetString(i));
                 }
                 collumns.Add(rows);
             }
@@ -63,14 +81,14 @@ namespace itHappends
         }
         public static MySqlDataReader Categories(int limit)
         {
-            return Query(@"Select categories , title FROM categories LIMIT @limit",
-                        new string[,] { { "@limit", limit + "" } });
+            return ExecuteQuery(@"Select title, color FROM categories LIMIT @limit",
+                        new MySqlParameter("@limit", limit));
         }
 
         public static MySqlDataReader GetEvent(int id)
         {
-            return Query(@"Select * FROM event WHERE id = @id "
-                        , new string[,] { { "@id", id + "" } });
+            return ExecuteQuery(@"Select * FROM event WHERE id = @id "
+                        , new MySqlParameter("@id", id));
         }
 
 

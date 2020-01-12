@@ -1,6 +1,12 @@
-﻿using System;
+
+using System;
 using System.Collections;
+using System.Drawing;
 using System.Windows.Forms;
+
+
+using System.Windows.Forms;
+using itHappens.Classes;
 
 using itHappens.UIs.Common;
 
@@ -76,30 +82,27 @@ namespace itHappens.Controllers
         {
             Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
             theHostPage = new UIs.Main.CommonSearchTextPage();
-            if (theHostPage != null)
-            {
-                Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theHostPage);
-                designEditOfPanels(theHostPage);
-            }
+            Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theHostPage);
+            designEditOfPanels(theHostPage);
 
         }
 
 
         public void hostTheMainPage()
         {
-            theMainPage = new UIs.Main.MainPage();
-            if (theMainPage != null)
+            if (theHostPage != null)
             {
-                UIs.Main.CommonSearchTextPage.hostPanel.Controls.Add(theMainPage);
+                theMainPage = new UIs.Main.MainPage();
+                theHostPage.hostPanel.Controls.Add(theMainPage);
                 designEditOfPanels(theMainPage);
             }
         }
         public void hostTheSearchPage()
         {
-            theSearchPage = new UIs.Common.SearchPage();
-            if (theSearchPage != null)
+            if (theHostPage != null)
             {
-                UIs.Main.CommonSearchTextPage.hostPanel.Controls.Add(theSearchPage);
+                theSearchPage = new UIs.Common.SearchPage();
+                theHostPage.hostPanel.Controls.Add(theSearchPage);
                 designEditOfPanels(theSearchPage);
             }
         }
@@ -107,14 +110,15 @@ namespace itHappens.Controllers
 
         public void MainPageTodayEventsAndMadeForYouCarousel_Load()
         {
-            for (int i = 0; i < 10; i++)
+            todayEventsCarousel ob = new todayEventsCarousel();
+            for (int i = 0; i < ob.TodaysEvents.Count; i++)
             {
-                UIs.Main.MainPage.todayEventsCarousel.AddControl(new UIs.Common.EventMiniView());
+                UIs.Main.MainPage.todayEventsCarousel.AddControl(ob.TodaysEvents[i]);
             }
-
-            for (int i = 0; i < 5; i++)
+            madeForYouCarousel obj = new madeForYouCarousel(false);
+            for (int i = 0; i < obj.GroupBox.Count; i++)
             {
-                UIs.Main.MainPage.madeForYouCarusel.AddControl(new UIs.Common.CategoryGroupBox());
+                UIs.Main.MainPage.madeForYouCarusel.AddControl(obj.GroupBox[i]);
             }
         }
 
@@ -133,49 +137,31 @@ namespace itHappens.Controllers
 
         }
 
-        public void ListPageLoad()
-        {
-            for (int i = 0; i < 20; i++)
-            {
-                var listminibox = new UIs.Common.ListMiniBox();
-                //  eventminiview.Scale(0.55F);
-                UIs.valentina.ListPage.ListsFlowLayoutPanel.Controls.Add(listminibox);
-            }
-        }
-
-        public void ListsContentPageLoad()
-        {
-            for (int i = 0; i < 20; i++)
-            {
-                var eventminiview = new UIs.Common.EventMiniView();
-                //  eventminiview.Scale(0.55F);
-                UIs.valentina.ListsContentPage.EventHolderFlowLayoutPanel.Controls.Add(eventminiview);
-            }
-        }
-
         public static ArrayList eventIDList = new ArrayList();
         public static ArrayList eventCategoryIDList = new ArrayList();
-        public void MyEventsListsContentPageLoad(int userId)
+        public void MyEventsListsContentPageLoad(int userId, UIs.valentina.ListsContentPage theListContentPage)
         {
             int EventNum = Classes.DatabaseGeneralMethods.ReturnNumberOfUserEvents(userId);
-            string catColor;
-            string eventTitles;
+
+
             Classes.DatabaseGeneralMethods.GetUserEventCategoryIds(userId);
             Classes.DatabaseGeneralMethods.GetUserEventIds(userId);
 
             for (int i = 0; i < EventNum; i++)
             {
-                eventTitles = Classes.DatabaseGeneralMethods.returnTitleOfEvent(Convert.ToInt32(eventIDList[i]));
-                catColor = Classes.DatabaseGeneralMethods.GetCategoryColorOfEvent(Convert.ToInt32(eventCategoryIDList[i]));
-                var eventminiview = new UIs.Common.EventMiniView(catColor,Convert.ToInt32(eventIDList[i]), eventTitles);
+                var eventImagePath = Classes.DatabaseGeneralMethods.returnImageOfEvent(Convert.ToInt32(eventIDList[i]));
+                var eventImage = eventImagePath == "" ? null : Classes.Utility.DownloadImage(eventImagePath);
+                var eventTitle = Classes.DatabaseGeneralMethods.returnTitleOfEvent(Convert.ToInt32(eventIDList[i]));
+                var catColor = Classes.DatabaseGeneralMethods.GetCategoryColorOfEvent(Convert.ToInt32(eventCategoryIDList[i]));
+                var eventminiview = new UIs.Common.EventMiniView(catColor, Convert.ToInt32(eventIDList[i]), eventTitle, eventImage);
                 //  eventminiview.Scale(0.55F);
-                UIs.valentina.ListsContentPage.EventHolderFlowLayoutPanel.Controls.Add(eventminiview);
+                theListContentPage.EventHolderFlowLayoutPanel.Controls.Add(eventminiview);
             }
-            
-            
+
+
         }
 
-        //    ----------    Sidebar Methods    ----------    
+        //    ----------    Sidebar Methods    ----------
         public void addSidebarFriendList()
         {
             Classes.SidebarsMethods.Instance.addFriendList();
@@ -196,7 +182,7 @@ namespace itHappens.Controllers
             Classes.SidebarsMethods.Instance.addProfile();
         }
 
-        //    ----------    Middle Panel Methods    ----------    
+        //    ----------    Middle Panel Methods    ----------
 
 
         public void venueProfileToolStripMenuItem_MiddlePanel()
@@ -227,6 +213,11 @@ namespace itHappens.Controllers
         public void logInToolStripMenuItem_MiddlePanel()
         {
             Classes.MiddlePanelMethods.Instance.logInToolStripMenuItem();
+        }
+
+        public void ContactToolStripMenuItem_MiddlePanel()
+        {
+            Classes.MiddlePanelMethods.Instance.ContactToolStripMenuItem();
         }
 
         public void signUpToolStripMenuItem_MiddlePanel()

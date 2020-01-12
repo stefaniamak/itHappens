@@ -76,7 +76,7 @@ namespace itHappens.Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error DatabaseFieldValidation");
+                Console.WriteLine(e.Message);
             }
 
 
@@ -116,7 +116,7 @@ namespace itHappens.Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
 
@@ -153,7 +153,7 @@ namespace itHappens.Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
 
@@ -161,7 +161,7 @@ namespace itHappens.Controllers
 
         }
 
-        
+
 
     }
 }
