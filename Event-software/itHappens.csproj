@@ -528,6 +528,18 @@
     <None Include="Resources\pass2.jpg" />
     <None Include="Resources\user1.jpg" />
     <None Include="Resources\user2.jpg" />
+    <None Include="Resources\Logo brown.png" />
+    <None Include="Resources\Logo dark.png" />
+    <None Include="Resources\Logo darker brown.png" />
+    <None Include="Resources\Logo darker.png" />
+    <None Include="Resources\ticket black letters.png" />
+    <None Include="Resources\house it trans orange.png" />
+    <None Include="Resources\house it white.png" />
+    <None Include="Resources\ticket black.png" />
+    <None Include="Resources\magnifier orange.png" />
+    <None Include="Resources\plus yellow.png" />
+    <None Include="Resources\check lime.png" />
+    <None Include="Resources\bell orange.png" />
     <Content Include="UIs\instructionsUIsFolder.txt" />
   </ItemGroup>
   <ItemGroup />

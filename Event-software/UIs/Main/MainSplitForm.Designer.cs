@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainSplitForm));
             this.leftSplitContainer = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.upcommingEventsPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.homePagePictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CreateEvent = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -62,7 +60,11 @@
             this.logInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rightSplitContainer = new System.Windows.Forms.SplitContainer();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+
             this.contactToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+
+            this.homePagePictureBox = new System.Windows.Forms.PictureBox();
+
             ((System.ComponentModel.ISupportInitialize)(this.leftSplitContainer)).BeginInit();
             this.leftSplitContainer.Panel1.SuspendLayout();
             this.leftSplitContainer.Panel2.SuspendLayout();
@@ -76,13 +78,13 @@
             this.splitContainer3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.homePagePictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rightSplitContainer)).BeginInit();
             this.rightSplitContainer.Panel2.SuspendLayout();
             this.rightSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.homePagePictureBox)).BeginInit();
             this.SuspendLayout();
             //
             // leftSplitContainer
@@ -433,7 +435,7 @@
             this.rightSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.rightSplitContainer.Panel2.Controls.Add(this.splitContainer1);
             this.rightSplitContainer.Size = new System.Drawing.Size(990, 642);
-            this.rightSplitContainer.SplitterDistance = 790;
+            this.rightSplitContainer.SplitterDistance = 789;
             this.rightSplitContainer.SplitterWidth = 5;
             this.rightSplitContainer.TabIndex = 0;
             this.rightSplitContainer.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.rightSplitContainer_SplitterMoved);
@@ -478,6 +480,19 @@
             this.contactToolStripMenuItem1.Click += new System.EventHandler(this.contactToolStripMenuItem1_Click);
 
             //
+            // homePagePictureBox
+            //
+            this.homePagePictureBox.BackgroundImage = global::itHappens.Properties.Resources.house_it_trans_orange;
+            this.homePagePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.homePagePictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.homePagePictureBox.Location = new System.Drawing.Point(3, 4);
+            this.homePagePictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.homePagePictureBox.Name = "homePagePictureBox";
+            this.homePagePictureBox.Size = new System.Drawing.Size(33, 34);
+            this.homePagePictureBox.TabIndex = 0;
+            this.homePagePictureBox.TabStop = false;
+            this.homePagePictureBox.Click += new System.EventHandler(this.homePagePictureBox_Click);
+            //
             // MainSplitForm
             //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,7 +519,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.homePagePictureBox)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.rightSplitContainer.Panel2.ResumeLayout(false);
@@ -512,6 +526,7 @@
             this.rightSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.homePagePictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

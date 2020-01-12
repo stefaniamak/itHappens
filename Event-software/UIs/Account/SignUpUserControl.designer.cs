@@ -350,11 +350,12 @@
             // 
             // LogoSignUppictureBox
             // 
-            this.LogoSignUppictureBox.BackgroundImage = global::itHappens.Properties.Resources.LOGOPLSS;
-            this.LogoSignUppictureBox.Location = new System.Drawing.Point(304, 95);
+            this.LogoSignUppictureBox.BackgroundImage = global::itHappens.Properties.Resources.Logo_dark;
+            this.LogoSignUppictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LogoSignUppictureBox.Location = new System.Drawing.Point(256, 55);
             this.LogoSignUppictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LogoSignUppictureBox.Name = "LogoSignUppictureBox";
-            this.LogoSignUppictureBox.Size = new System.Drawing.Size(84, 83);
+            this.LogoSignUppictureBox.Size = new System.Drawing.Size(172, 147);
             this.LogoSignUppictureBox.TabIndex = 51;
             this.LogoSignUppictureBox.TabStop = false;
             // 

@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommonSearchTextPage));
             this.usersLocationLabel = new System.Windows.Forms.Label();
             this.textSearchTextBox = new System.Windows.Forms.TextBox();
-            hostPanel = new System.Windows.Forms.Panel();
+            this.hostPanel = new System.Windows.Forms.Panel();
             this.textSearchPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.locationComboBox = new System.Windows.Forms.ComboBox();
@@ -43,23 +41,24 @@
             this.organizerTextBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textSearchPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // usersLocationLabel
             // 
             this.usersLocationLabel.AutoSize = true;
-            this.usersLocationLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usersLocationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usersLocationLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.usersLocationLabel.Location = new System.Drawing.Point(37, 24);
             this.usersLocationLabel.Name = "usersLocationLabel";
-            this.usersLocationLabel.Size = new System.Drawing.Size(118, 20);
+            this.usersLocationLabel.Size = new System.Drawing.Size(112, 18);
             this.usersLocationLabel.TabIndex = 4;
             this.usersLocationLabel.Text = "User\'s Location";
             // 
@@ -76,15 +75,15 @@
             // 
             // hostPanel
             // 
-            hostPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.hostPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            hostPanel.AutoScroll = true;
-            hostPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            hostPanel.Location = new System.Drawing.Point(0, 108);
-            hostPanel.Name = "hostPanel";
-            hostPanel.Size = new System.Drawing.Size(1058, 323);
-            hostPanel.TabIndex = 6;
+            this.hostPanel.AutoScroll = true;
+            this.hostPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.hostPanel.Location = new System.Drawing.Point(0, 108);
+            this.hostPanel.Name = "hostPanel";
+            this.hostPanel.Size = new System.Drawing.Size(1058, 323);
+            this.hostPanel.TabIndex = 6;
             // 
             // textSearchPanel
             // 
@@ -110,17 +109,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(357, 26);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 20);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.flowLayoutPanel1);
@@ -137,7 +125,7 @@
             this.flowLayoutPanel1.Controls.Add(this.timeZoneComboBox);
             this.flowLayoutPanel1.Controls.Add(this.organizerTextBox);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -150,7 +138,7 @@
             this.locationComboBox.Location = new System.Drawing.Point(2, 2);
             this.locationComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.locationComboBox.Name = "locationComboBox";
-            this.locationComboBox.Size = new System.Drawing.Size(121, 24);
+            this.locationComboBox.Size = new System.Drawing.Size(121, 21);
             this.locationComboBox.TabIndex = 0;
             // 
             // dateMonthDateTimePicker
@@ -158,7 +146,7 @@
             this.dateMonthDateTimePicker.Location = new System.Drawing.Point(127, 2);
             this.dateMonthDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.dateMonthDateTimePicker.Name = "dateMonthDateTimePicker";
-            this.dateMonthDateTimePicker.Size = new System.Drawing.Size(135, 21);
+            this.dateMonthDateTimePicker.Size = new System.Drawing.Size(135, 20);
             this.dateMonthDateTimePicker.TabIndex = 1;
             // 
             // timeZoneComboBox
@@ -167,7 +155,7 @@
             this.timeZoneComboBox.Location = new System.Drawing.Point(266, 2);
             this.timeZoneComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.timeZoneComboBox.Name = "timeZoneComboBox";
-            this.timeZoneComboBox.Size = new System.Drawing.Size(72, 24);
+            this.timeZoneComboBox.Size = new System.Drawing.Size(72, 21);
             this.timeZoneComboBox.TabIndex = 2;
             // 
             // organizerTextBox
@@ -176,7 +164,7 @@
             this.organizerTextBox.Location = new System.Drawing.Point(342, 2);
             this.organizerTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.organizerTextBox.Name = "organizerTextBox";
-            this.organizerTextBox.Size = new System.Drawing.Size(124, 21);
+            this.organizerTextBox.Size = new System.Drawing.Size(124, 20);
             this.organizerTextBox.TabIndex = 3;
             this.organizerTextBox.Text = "Organizer";
             // 
@@ -200,25 +188,36 @@
             this.panel2.Size = new System.Drawing.Size(1012, 55);
             this.panel2.TabIndex = 10;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::itHappens.Properties.Resources.magnifier_orange;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 20);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // CommonSearchTextPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.panel2);
-            this.Controls.Add(hostPanel);
+            this.Controls.Add(this.hostPanel);
             this.Controls.Add(this.usersLocationLabel);
             this.Name = "CommonSearchTextPage";
             this.Size = new System.Drawing.Size(1058, 431);
             this.textSearchPanel.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,6 +238,6 @@
         private System.Windows.Forms.TextBox organizerTextBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel panel2;
-        public static System.Windows.Forms.Panel hostPanel;
+        public System.Windows.Forms.Panel hostPanel;
     }
 }
