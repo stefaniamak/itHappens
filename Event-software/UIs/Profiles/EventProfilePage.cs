@@ -11,6 +11,7 @@ using itHappens.Classes;
 using itHappens.UIs.Common;
 using itHappends;
 using dbstuff;
+using itHappens.UIs.andrea;
 
 namespace itHappens.UIs.andrea
 {
@@ -132,14 +133,15 @@ namespace itHappens.UIs.andrea
 
         }
 
-        private void interestedButton_Click(object sender, EventArgs e)
+        private void interestedButton_Click(obje
+            ct sender, EventArgs e)
         {
             dbCon.addInterested(this.eventId, UIs.anna.LogInPage.userId);
         }
 
         private void goingButton_Click(object sender, EventArgs e)
         {
-            dbCon.addGoing(this.eventId, UIs.anna.LogInPage.userId);
+            dbCon.addGoing(EventMiniView.eventId, UIs.anna.LogInPage.userId);
         }
     }
 }

@@ -170,6 +170,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="EventfulAPI.cs" />
     <Compile Include="DbController.cs" />
+    <Compile Include="EventsFromCities.cs" />
     <Compile Include="populateDB.cs" />
     <Compile Include="UIs\Common\FriendsWhoHaveVisited.cs">
       <SubType>UserControl</SubType>

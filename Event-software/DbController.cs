@@ -133,7 +133,6 @@ namespace dbstuff
             var sCommand = new MySqlCommand(s, con);
             sCommand.Parameters.AddWithValue("@Area_Address", address);
             object tmp = sCommand.ExecuteScalar();
-            Console.WriteLine(tmp);
             return (long)(int)sCommand.ExecuteScalar();
         }
 
@@ -242,7 +241,7 @@ namespace dbstuff
             var sCommand = new MySqlCommand(s, con);
 
 
-            sCommand.Parameters.AddWithValue("(@followingID", following_user_id);
+            sCommand.Parameters.AddWithValue("@followingID", following_user_id);
             sCommand.Parameters.AddWithValue("@followedID", followed_user_id);
             sCommand.ExecuteNonQuery();
 
@@ -281,14 +280,22 @@ namespace dbstuff
         //Needs Testing
         public void addGoing(int eventID, int userID)
         {
-            string s = @"insert into attendants (eventListID, eventID)
+            string s = @"insert into attendants (eventListId, eventID)
 		                    values (@eventListId, @eventID)";
-            long eventListID = getUsersEventList(userID, "GOING");
 
-            var sCommand = new MySqlCommand(s, con);
-            sCommand.Parameters.AddWithValue("(@eventListID", eventListID);
-            sCommand.Parameters.AddWithValue("@userID", userID);
-            sCommand.ExecuteNonQuery();
+            long eventListId = getUsersEventList(userID, "GOING");
+            if (eventListId.Equals(null))
+            {
+                Console.WriteLine("event list not found bro");
+            }
+            else
+            {
+                var sCommand = new MySqlCommand(s, con);
+                sCommand.Parameters.AddWithValue("@eventListId", eventListId);
+                sCommand.Parameters.AddWithValue("eventID", eventID);
+                sCommand.ExecuteNonQuery();
+            }
+
 
         }
 
@@ -306,7 +313,7 @@ namespace dbstuff
             {
  var sCommand = new MySqlCommand(s, con);
             sCommand.Parameters.AddWithValue("@eventListId", eventListId);
-            sCommand.Parameters.AddWithValue("@userID", userID);
+            sCommand.Parameters.AddWithValue("eventID", eventID);
             sCommand.ExecuteNonQuery();
             }
 
@@ -318,11 +325,11 @@ namespace dbstuff
         {
             string s = @"SELECT id FROM event_list WHERE creatorID = @userID and title = @title";
             var sCommand = new MySqlCommand(s, con);
-            sCommand.Parameters.AddWithValue("@userID", userID);
+            sCommand.Parameters.AddWithValue("@userID", 2);
             sCommand.Parameters.AddWithValue("@title", title);
             object tmp = sCommand.ExecuteScalar();
             Console.WriteLine(tmp);
-            return (long)(int)tmp;
+            return (long)(int)sCommand.ExecuteScalar();
         }
 
         //Check if event exists in UsersEventList

@@ -24,6 +24,7 @@ namespace itHappens.UIs.andrea
         public int eventId { get; set; }
 
         private static DbConnector dbCon = new DbConnector();
+        private static DbController dbControl = new DbController();
         private static string conStr = dbCon.GetConnectionString();
 
         private static UserProfilePage _instance = new UserProfilePage();
@@ -122,25 +123,30 @@ namespace itHappens.UIs.andrea
             eventsUserWillAttendCarousel.AddControl(new UIs.Common.EventMiniView(categoryColor, theEventId, eventTitle));
         }
 
-        
-    /*   public static void openUserPage(object sender, EventArgs e, int userId)
+        private void followButton_Click(object sender, EventArgs e)
         {
-           
-            MainSplitForm.middlePanel.Controls.Clear();
-            var v = Db_connector.Query(@"Select user.id, user.name , user.surname,                                         
-						FROM user
-						WHERE @userId = ",
-                      new string[,] { { "@userId", userId + "" } });
-            v.Read();
-            var middlePage = new  UserProfilePage
-                (v.GetInt32(0),v.GetInt32(1),v.GetString(2), v.GetString(3),
-                 v.GetString(4),v.GetString(5) , v.GetString(6),null,null,v.GetDateTime(7));
-            MainSplitForm.middlePanel.Controls.Add(middlePage);
-            middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-            middlePage.Dock = DockStyle.Fill;
+            dbControl.addFollowing(UIs.anna.LogInPage.userId, this.userId);
+        }
 
 
-        }*/
+        /*   public static void openUserPage(object sender, EventArgs e, int userId)
+            {
+
+                MainSplitForm.middlePanel.Controls.Clear();
+                var v = Db_connector.Query(@"Select user.id, user.name , user.surname,                                         
+                            FROM user
+                            WHERE @userId = ",
+                          new string[,] { { "@userId", userId + "" } });
+                v.Read();
+                var middlePage = new  UserProfilePage
+                    (v.GetInt32(0),v.GetInt32(1),v.GetString(2), v.GetString(3),
+                     v.GetString(4),v.GetString(5) , v.GetString(6),null,null,v.GetDateTime(7));
+                MainSplitForm.middlePanel.Controls.Add(middlePage);
+                middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+                middlePage.Dock = DockStyle.Fill;
+
+
+            }*/
 
     }
 }

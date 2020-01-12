@@ -67,7 +67,7 @@ namespace itHappens.Controllers
                 while (dataReader.Read())
                 {
                     result = dataReader.GetString(0);
-                    UIs.anna.LogInPage.userId = Convert.ToInt32(dataReader.GetString(2));
+                    UIs.anna.LogInPage.userId = Convert.ToInt32(dataReader.GetString(1));
                 }
                 con.Close();
 
