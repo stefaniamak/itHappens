@@ -11,7 +11,7 @@ namespace itHappens.Classes
 {
     class todayEventsCarousel
     {
-        List<EventMiniView> TodaysEvents;
+        public List<EventMiniView> TodaysEvents = new List<EventMiniView>();
         public todayEventsCarousel()
         {
             
@@ -20,6 +20,7 @@ namespace itHappens.Classes
          
             for (int i = 0; i < Events.Count; i++){
             EventMiniView obj = new EventMiniView(Events [i][1], Int32.Parse(Events[i][0]),Events [i][2]);
+                TodaysEvents.Add(obj);
 
             }
 

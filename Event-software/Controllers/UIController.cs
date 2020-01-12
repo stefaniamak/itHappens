@@ -1,6 +1,11 @@
+
 ﻿using System;
 using System.Collections;
 using System.Windows.Forms;
+
+
+﻿using System.Windows.Forms;
+using itHappens.Classes;
 
 using itHappens.UIs.Common;
 
@@ -107,14 +112,15 @@ namespace itHappens.Controllers
 
         public void MainPageTodayEventsAndMadeForYouCarousel_Load()
         {
-            for (int i = 0; i < 10; i++)
+            todayEventsCarousel ob = new todayEventsCarousel();
+            for (int i = 0; i < ob.TodaysEvents.Count; i++)
             {
-                UIs.Main.MainPage.todayEventsCarousel.AddControl(new UIs.Common.EventMiniView());
+                UIs.Main.MainPage.todayEventsCarousel.AddControl(ob.TodaysEvents[i]);
             }
-
-            for (int i = 0; i < 5; i++)
+            madeForYouCarousel obj = new madeForYouCarousel(false);
+            for (int i = 0; i < obj.GroupBox.Count; i++)
             {
-                UIs.Main.MainPage.madeForYouCarusel.AddControl(new UIs.Common.CategoryGroupBox());
+                UIs.Main.MainPage.madeForYouCarusel.AddControl(obj.GroupBox[i]);
             }
         }
 
@@ -171,11 +177,11 @@ namespace itHappens.Controllers
                 //  eventminiview.Scale(0.55F);
                 UIs.valentina.ListsContentPage.EventHolderFlowLayoutPanel.Controls.Add(eventminiview);
             }
-            
-            
+
+
         }
 
-        //    ----------    Sidebar Methods    ----------    
+        //    ----------    Sidebar Methods    ----------
         public void addSidebarFriendList()
         {
             Classes.SidebarsMethods.Instance.addFriendList();
@@ -196,7 +202,7 @@ namespace itHappens.Controllers
             Classes.SidebarsMethods.Instance.addProfile();
         }
 
-        //    ----------    Middle Panel Methods    ----------    
+        //    ----------    Middle Panel Methods    ----------
 
 
         public void venueProfileToolStripMenuItem_MiddlePanel()

@@ -16,7 +16,7 @@ namespace itHappens.Classes
         {
             string[] months = new string[] { "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" };
            int month = Int32.Parse(Date.ToString("MM"));
-            return months[month--];
+            return months[--month];
         }
 
         public static string Day (DateTime Date)
