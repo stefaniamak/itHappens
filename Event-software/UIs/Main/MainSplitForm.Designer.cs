@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainSplitForm));
             this.leftSplitContainer = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
@@ -438,7 +439,7 @@
             this.rightSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.rightSplitContainer.Panel2.Controls.Add(this.splitContainer1);
             this.rightSplitContainer.Size = new System.Drawing.Size(697, 491);
-            this.rightSplitContainer.SplitterDistance = 495;
+            this.rightSplitContainer.SplitterDistance = 494;
             this.rightSplitContainer.SplitterWidth = 5;
             this.rightSplitContainer.TabIndex = 0;
             this.rightSplitContainer.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.rightSplitContainer_SplitterMoved);
@@ -461,7 +462,7 @@
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.splitContainer1.Size = new System.Drawing.Size(197, 491);
+            this.splitContainer1.Size = new System.Drawing.Size(198, 491);
             this.splitContainer1.SplitterDistance = 160;
             this.splitContainer1.TabIndex = 6;
             // 
@@ -472,6 +473,7 @@
             this.ClientSize = new System.Drawing.Size(886, 497);
             this.Controls.Add(this.leftSplitContainer);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "MainSplitForm";
             this.Text = "itHappens";
