@@ -36,8 +36,8 @@
             this.categoryColorPanel = new System.Windows.Forms.Panel();
             this.menuTabControl = new System.Windows.Forms.TabControl();
             this.eventsTabPage = new System.Windows.Forms.TabPage();
-            this.EditButton = new System.Windows.Forms.Button();
             this.ticketPanel = new System.Windows.Forms.Panel();
+            this.EditButton = new System.Windows.Forms.Button();
             this.ticketPriceLabel = new System.Windows.Forms.Label();
             this.ticketPictureBox = new System.Windows.Forms.PictureBox();
             this.detailsLabel = new System.Windows.Forms.Label();
@@ -122,7 +122,7 @@
             this.backgroundPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.backgroundPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("backgroundPictureBox.Image")));
             this.backgroundPictureBox.Location = new System.Drawing.Point(0, -111);
-            this.backgroundPictureBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.backgroundPictureBox.Margin = new System.Windows.Forms.Padding(1);
             this.backgroundPictureBox.Name = "backgroundPictureBox";
             this.backgroundPictureBox.Size = new System.Drawing.Size(859, 488);
             this.backgroundPictureBox.TabIndex = 3;
@@ -148,7 +148,7 @@
             this.menuTabControl.Controls.Add(this.galleryTabPage);
             this.menuTabControl.Controls.Add(this.visitorsabPage);
             this.menuTabControl.Location = new System.Drawing.Point(8, 294);
-            this.menuTabControl.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.menuTabControl.Margin = new System.Windows.Forms.Padding(1);
             this.menuTabControl.Name = "menuTabControl";
             this.menuTabControl.Padding = new System.Drawing.Point(26, 3);
             this.menuTabControl.SelectedIndex = 0;
@@ -167,12 +167,24 @@
             this.eventsTabPage.Controls.Add(this.descriptionTextBox);
             this.eventsTabPage.Controls.Add(this.descriptionLabel);
             this.eventsTabPage.Location = new System.Drawing.Point(4, 22);
-            this.eventsTabPage.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.eventsTabPage.Margin = new System.Windows.Forms.Padding(1);
             this.eventsTabPage.Name = "eventsTabPage";
-            this.eventsTabPage.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.eventsTabPage.Padding = new System.Windows.Forms.Padding(1);
             this.eventsTabPage.Size = new System.Drawing.Size(622, 425);
             this.eventsTabPage.TabIndex = 0;
             this.eventsTabPage.Text = "DETAILS";
+            // 
+            // ticketPanel
+            // 
+            this.ticketPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ticketPanel.Controls.Add(this.EditButton);
+            this.ticketPanel.Controls.Add(this.ticketPriceLabel);
+            this.ticketPanel.Controls.Add(this.ticketPictureBox);
+            this.ticketPanel.Location = new System.Drawing.Point(392, 10);
+            this.ticketPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.ticketPanel.Name = "ticketPanel";
+            this.ticketPanel.Size = new System.Drawing.Size(203, 160);
+            this.ticketPanel.TabIndex = 8;
             // 
             // EditButton
             // 
@@ -186,18 +198,6 @@
             this.EditButton.UseVisualStyleBackColor = true;
             this.EditButton.Visible = false;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
-            // 
-            // ticketPanel
-            // 
-            this.ticketPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ticketPanel.Controls.Add(this.EditButton);
-            this.ticketPanel.Controls.Add(this.ticketPriceLabel);
-            this.ticketPanel.Controls.Add(this.ticketPictureBox);
-            this.ticketPanel.Location = new System.Drawing.Point(392, 10);
-            this.ticketPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.ticketPanel.Name = "ticketPanel";
-            this.ticketPanel.Size = new System.Drawing.Size(203, 160);
-            this.ticketPanel.TabIndex = 8;
             // 
             // ticketPriceLabel
             // 
@@ -241,7 +241,7 @@
             this.locationTextBox.Location = new System.Drawing.Point(13, 56);
             this.locationTextBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.locationTextBox.Name = "locationTextBox";
-            this.locationTextBox.Size = new System.Drawing.Size(78, 20);
+            this.locationTextBox.Size = new System.Drawing.Size(190, 20);
             this.locationTextBox.TabIndex = 1;
             this.locationTextBox.Text = "Location";
             this.locationTextBox.TextChanged += new System.EventHandler(this.locationTextBox_TextChanged);
@@ -251,7 +251,7 @@
             this.organizerTextBox.Location = new System.Drawing.Point(13, 80);
             this.organizerTextBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.organizerTextBox.Name = "organizerTextBox";
-            this.organizerTextBox.Size = new System.Drawing.Size(78, 20);
+            this.organizerTextBox.Size = new System.Drawing.Size(190, 20);
             this.organizerTextBox.TabIndex = 2;
             this.organizerTextBox.Text = "Organizer";
             this.organizerTextBox.TextChanged += new System.EventHandler(this.organizerTextBox_TextChanged);
@@ -261,7 +261,7 @@
             this.dayTimeTextBox.Location = new System.Drawing.Point(13, 104);
             this.dayTimeTextBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.dayTimeTextBox.Name = "dayTimeTextBox";
-            this.dayTimeTextBox.Size = new System.Drawing.Size(78, 20);
+            this.dayTimeTextBox.Size = new System.Drawing.Size(190, 20);
             this.dayTimeTextBox.TabIndex = 3;
             this.dayTimeTextBox.Text = "Date | Time";
             // 
@@ -295,10 +295,10 @@
             this.galleryTabPage.AutoScroll = true;
             this.galleryTabPage.BackColor = System.Drawing.SystemColors.Control;
             this.galleryTabPage.Location = new System.Drawing.Point(4, 22);
-            this.galleryTabPage.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.galleryTabPage.Margin = new System.Windows.Forms.Padding(1);
             this.galleryTabPage.Name = "galleryTabPage";
-            this.galleryTabPage.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.galleryTabPage.Size = new System.Drawing.Size(325, 170);
+            this.galleryTabPage.Padding = new System.Windows.Forms.Padding(1);
+            this.galleryTabPage.Size = new System.Drawing.Size(622, 425);
             this.galleryTabPage.TabIndex = 3;
             this.galleryTabPage.Text = "GALLERY";
             // 
@@ -307,10 +307,10 @@
             this.visitorsabPage.AutoScroll = true;
             this.visitorsabPage.BackColor = System.Drawing.SystemColors.Control;
             this.visitorsabPage.Location = new System.Drawing.Point(4, 22);
-            this.visitorsabPage.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.visitorsabPage.Margin = new System.Windows.Forms.Padding(1);
             this.visitorsabPage.Name = "visitorsabPage";
-            this.visitorsabPage.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.visitorsabPage.Size = new System.Drawing.Size(325, 170);
+            this.visitorsabPage.Padding = new System.Windows.Forms.Padding(1);
+            this.visitorsabPage.Size = new System.Drawing.Size(622, 425);
             this.visitorsabPage.TabIndex = 2;
             this.visitorsabPage.Text = "VISITORS ALSO LIKE";
             // 
@@ -322,10 +322,10 @@
             this.friendsAttendingPanel.Controls.Add(this.friendsAttendingLabel);
             this.friendsAttendingPanel.Controls.Add(this.friendsFlowPanel);
             this.friendsAttendingPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.friendsAttendingPanel.Location = new System.Drawing.Point(652, 309);
-            this.friendsAttendingPanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.friendsAttendingPanel.Location = new System.Drawing.Point(652, 326);
+            this.friendsAttendingPanel.Margin = new System.Windows.Forms.Padding(1);
             this.friendsAttendingPanel.Name = "friendsAttendingPanel";
-            this.friendsAttendingPanel.Size = new System.Drawing.Size(218, 437);
+            this.friendsAttendingPanel.Size = new System.Drawing.Size(218, 420);
             this.friendsAttendingPanel.TabIndex = 15;
             this.friendsAttendingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.friendsAttendingPanel_Paint);
             // 
@@ -362,9 +362,9 @@
             this.goingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goingButton.ForeColor = System.Drawing.Color.Lime;
             this.goingButton.Location = new System.Drawing.Point(763, 280);
-            this.goingButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.goingButton.Margin = new System.Windows.Forms.Padding(1);
             this.goingButton.Name = "goingButton";
-            this.goingButton.Size = new System.Drawing.Size(107, 26);
+            this.goingButton.Size = new System.Drawing.Size(107, 44);
             this.goingButton.TabIndex = 14;
             this.goingButton.Text = "GOING";
             this.goingButton.UseVisualStyleBackColor = false;
@@ -377,9 +377,9 @@
             this.interestedButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.interestedButton.ForeColor = System.Drawing.Color.Yellow;
             this.interestedButton.Location = new System.Drawing.Point(652, 280);
-            this.interestedButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.interestedButton.Margin = new System.Windows.Forms.Padding(1);
             this.interestedButton.Name = "interestedButton";
-            this.interestedButton.Size = new System.Drawing.Size(107, 26);
+            this.interestedButton.Size = new System.Drawing.Size(107, 44);
             this.interestedButton.TabIndex = 13;
             this.interestedButton.Text = "INTRESTED";
             this.interestedButton.UseVisualStyleBackColor = false;

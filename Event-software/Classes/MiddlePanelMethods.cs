@@ -88,16 +88,9 @@ namespace itHappens.Classes
         public void eventsProfileToolStripMenuItem(int eventId)
         {
             Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
+            Console.WriteLine("xaxa" + eventId);
+            addEventDetailsInEventProfile(eventId);
 
-            if (UIs.anna.LogInPage.loggedInUser == true)
-            {
-                Console.WriteLine("xaxa" + eventId);
-                addEventDetailsInEventProfile(eventId);
-            }
-            else
-            {
-                theEventProfilePage = new UIs.andrea.EventProfilePage();
-            }
 
             Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theEventProfilePage);
             designEditOfPanels(theEventProfilePage);
@@ -106,41 +99,54 @@ namespace itHappens.Classes
         public void addEventDetailsInEventProfile(int eventId)
         {
             int theUserId = UIs.anna.LogInPage.userId;
-            var v = Db_connector.ExecuteQuery(@"SELECT us.id, ev.id, ev.title, ve.name , cat.color,ev.image, us.name, us.surname, ev.startingDate,
-            ev.ticketprice, ev.description, FROM event ev JOIN venues ve ON ev.venueID = ve.id
-                JOIN area ar ON ar.id = ve.areaID JOIN users us ON us.id = ev.ownerID
-                JOIN categories cat ON ev.categoryID = cat.id WHERE ev.id = @eventId ",
-                       new MySqlParameter("@eventId", eventId));
+            var v = Db_connector.ExecuteQuery(@"SELECT us.id, ev.id, ev.title, ve.name, cat.color, ev.image, us.name, us.surname, ev.startingDate, ev.ticketprice, ev.description " +
+                                                "FROM event ev " +
+                                                "JOIN venues ve ON ev.venueID = ve.id "+
+                                                "JOIN area ar ON ar.id = ve.areaID " +
+                                                "JOIN users us ON us.id = ev.ownerID " +
+                                                "JOIN categories cat ON ev.categoryID = cat.id " +
+                                                "WHERE ev.id = @eventId ",
+                                                new MySqlParameter("@eventId", eventId));
             try
             {
                 v.Read();
+                Image img = v.IsDBNull(5) ? null : Image.FromFile(v.GetString(5));
                 theEventProfilePage = new UIs.andrea.EventProfilePage(
                     v.GetInt32(0), v.GetInt32(1),
                     v.GetString(2), v.GetString(3),
-                     v.GetString(4), Image.FromFile(v.GetString(5)), v.GetString(6),
+                     v.GetString(4), img, v.GetString(6),
                      v.GetString(7), v.GetDateTime(8),
                      v.GetDouble(9), v.GetString(10));
             }
-            catch
+            catch(Exception e)
             {
+                Console.WriteLine(e.Message);
                 theEventProfilePage = new UIs.andrea.EventProfilePage(-1, -1, "NoEventFound", "", "", null, "", "", DateTime.Now, 1.00, "");
             }
 
 
-
-            var z = Db_connector.ExecuteQuery(@"SELECT  us.name, us.surname, evL.title FROM following fol JOIN users us ON 
+            bool userLoggedIn = false;
+            if (UIs.anna.LogInPage.loggedInUser == true)
+            {
+                var z = Db_connector.ExecuteQuery(@"SELECT  us.name, us.surname, evL.title FROM following fol JOIN users us ON 
             fol.followed_user_id = us.id JOIN event_list evL ON fol.followed_user_id = evL.creatorID JOIN attendants att
             ON evL.id = att.eventListID JOIN event ev ON att.eventID = ev.id WHERE ev.id = @eventId AND fol.following_user_id = @theUserId ",
                        new[] { new MySqlParameter("@eventId", eventId), new MySqlParameter("@theUserId", theUserId) });
-            try
-            {
-                z.Read();
-                theEventProfilePage.friendsWhoWillAttend(null, z.GetString(0), z.GetString(1), z.GetString(2));
+                try
+                {
+                    z.Read();
+                    theEventProfilePage.friendsWhoWillAttend(null, z.GetString(0), z.GetString(1), z.GetString(2));
+                    userLoggedIn = true;
+                }
+                catch
+                {
+                    userLoggedIn = false;
+                }
+
             }
-            catch
-            {
+
+            if (!userLoggedIn)
                 theEventProfilePage.friendsWhoWillAttend(null, "No", "User", "");
-            }
         }
 
 
