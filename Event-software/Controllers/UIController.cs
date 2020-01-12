@@ -159,13 +159,15 @@ namespace itHappens.Controllers
         {
             int EventNum = Classes.DatabaseGeneralMethods.ReturnNumberOfUserEvents(userId);
             string catColor;
+            string eventTitles;
             Classes.DatabaseGeneralMethods.GetUserEventCategoryIds(userId);
             Classes.DatabaseGeneralMethods.GetUserEventIds(userId);
 
             for (int i = 0; i < EventNum; i++)
             {
+                eventTitles = Classes.DatabaseGeneralMethods.returnTitleOfEvent(Convert.ToInt32(eventIDList[i]));
                 catColor = Classes.DatabaseGeneralMethods.GetCategoryColorOfEvent(Convert.ToInt32(eventCategoryIDList[i]));
-                var eventminiview = new UIs.Common.EventMiniView(catColor,Convert.ToInt32(eventIDList[i]));
+                var eventminiview = new UIs.Common.EventMiniView(catColor,Convert.ToInt32(eventIDList[i]), eventTitles);
                 //  eventminiview.Scale(0.55F);
                 UIs.valentina.ListsContentPage.EventHolderFlowLayoutPanel.Controls.Add(eventminiview);
             }

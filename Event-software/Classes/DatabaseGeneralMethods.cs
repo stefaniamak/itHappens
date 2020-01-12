@@ -416,5 +416,36 @@ namespace itHappens.Classes
             return result;
         }
 
+        public static string returnTitleOfEvent(int eventid)
+        {
+            MySqlConnection con;
+            string title = "";
+
+            try
+            {
+
+                con = new MySqlConnection(conStr);
+                con.Open();
+
+                MySqlCommand command;
+                MySqlDataReader dataReader;
+                String queryString = "Select id from event where eventID=" + eventid + "";
+
+                command = new MySqlCommand(queryString, con);
+
+                dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    title = dataReader.GetString(0);
+                }
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error CategoryID Of User Events");
+            }
+            return title;
+        }
     }
 }
