@@ -56,6 +56,8 @@
             this.eventNameLabel = new System.Windows.Forms.Label();
             this.dayLabel = new System.Windows.Forms.Label();
             this.monthLabel = new System.Windows.Forms.Label();
+            this.ticketEuroSign = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.topBarPanel.SuspendLayout();
@@ -65,10 +67,12 @@
             this.ticketPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketPictureBox)).BeginInit();
             this.friendsAttendingPanel.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.EditButton);
             this.panel3.Controls.Add(this.tableLayoutPanel1);
             this.panel3.Controls.Add(this.menuTabControl);
             this.panel3.Controls.Add(this.friendsAttendingPanel);
@@ -121,10 +125,10 @@
             this.backgroundPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backgroundPictureBox.BackgroundImage")));
             this.backgroundPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.backgroundPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("backgroundPictureBox.Image")));
-            this.backgroundPictureBox.Location = new System.Drawing.Point(0, -111);
+            this.backgroundPictureBox.Location = new System.Drawing.Point(-1, -228);
             this.backgroundPictureBox.Margin = new System.Windows.Forms.Padding(1);
             this.backgroundPictureBox.Name = "backgroundPictureBox";
-            this.backgroundPictureBox.Size = new System.Drawing.Size(859, 488);
+            this.backgroundPictureBox.Size = new System.Drawing.Size(859, 627);
             this.backgroundPictureBox.TabIndex = 3;
             this.backgroundPictureBox.TabStop = false;
             // 
@@ -177,25 +181,26 @@
             // ticketPanel
             // 
             this.ticketPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ticketPanel.Controls.Add(this.EditButton);
-            this.ticketPanel.Controls.Add(this.ticketPriceLabel);
+            this.ticketPanel.Controls.Add(this.flowLayoutPanel1);
             this.ticketPanel.Controls.Add(this.ticketPictureBox);
-            this.ticketPanel.Location = new System.Drawing.Point(392, 10);
+            this.ticketPanel.Location = new System.Drawing.Point(301, 15);
             this.ticketPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.ticketPanel.Name = "ticketPanel";
-            this.ticketPanel.Size = new System.Drawing.Size(203, 160);
+            this.ticketPanel.Size = new System.Drawing.Size(203, 146);
             this.ticketPanel.TabIndex = 8;
             // 
             // EditButton
             // 
+            this.EditButton.BackColor = System.Drawing.Color.DarkOrange;
             this.EditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.EditButton.Location = new System.Drawing.Point(127, 66);
+            this.EditButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.EditButton.Location = new System.Drawing.Point(652, 216);
             this.EditButton.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(35, 24);
+            this.EditButton.Size = new System.Drawing.Size(206, 49);
             this.EditButton.TabIndex = 9;
-            this.EditButton.Text = "EDIT";
-            this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Text = "EDIT EVENT";
+            this.EditButton.UseVisualStyleBackColor = false;
             this.EditButton.Visible = false;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
@@ -203,13 +208,13 @@
             // 
             this.ticketPriceLabel.AutoSize = true;
             this.ticketPriceLabel.BackColor = System.Drawing.Color.Black;
-            this.ticketPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ticketPriceLabel.Location = new System.Drawing.Point(70, 56);
+            this.ticketPriceLabel.Font = new System.Drawing.Font("Century Gothic", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ticketPriceLabel.Location = new System.Drawing.Point(63, 0);
             this.ticketPriceLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.ticketPriceLabel.Name = "ticketPriceLabel";
-            this.ticketPriceLabel.Size = new System.Drawing.Size(55, 39);
+            this.ticketPriceLabel.Size = new System.Drawing.Size(35, 40);
             this.ticketPriceLabel.TabIndex = 7;
-            this.ticketPriceLabel.Text = "$5";
+            this.ticketPriceLabel.Text = "0";
             this.ticketPriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ticketPictureBox
@@ -221,7 +226,7 @@
             this.ticketPictureBox.Location = new System.Drawing.Point(0, 0);
             this.ticketPictureBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.ticketPictureBox.Name = "ticketPictureBox";
-            this.ticketPictureBox.Size = new System.Drawing.Size(203, 160);
+            this.ticketPictureBox.Size = new System.Drawing.Size(203, 146);
             this.ticketPictureBox.TabIndex = 6;
             this.ticketPictureBox.TabStop = false;
             // 
@@ -432,6 +437,30 @@
             this.monthLabel.TabIndex = 5;
             this.monthLabel.Text = "NOV";
             // 
+            // ticketEuroSign
+            // 
+            this.ticketEuroSign.AutoSize = true;
+            this.ticketEuroSign.BackColor = System.Drawing.Color.Black;
+            this.ticketEuroSign.Font = new System.Drawing.Font("Century Gothic", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ticketEuroSign.Location = new System.Drawing.Point(100, 0);
+            this.ticketEuroSign.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.ticketEuroSign.Name = "ticketEuroSign";
+            this.ticketEuroSign.Size = new System.Drawing.Size(35, 40);
+            this.ticketEuroSign.TabIndex = 8;
+            this.ticketEuroSign.Text = "€";
+            this.ticketEuroSign.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Black;
+            this.flowLayoutPanel1.Controls.Add(this.ticketEuroSign);
+            this.flowLayoutPanel1.Controls.Add(this.ticketPriceLabel);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(31, 52);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(136, 47);
+            this.flowLayoutPanel1.TabIndex = 9;
+            // 
             // EventProfilePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -456,10 +485,11 @@
             this.eventsTabPage.ResumeLayout(false);
             this.eventsTabPage.PerformLayout();
             this.ticketPanel.ResumeLayout(false);
-            this.ticketPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketPictureBox)).EndInit();
             this.friendsAttendingPanel.ResumeLayout(false);
             this.friendsAttendingPanel.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -494,5 +524,7 @@
         private System.Windows.Forms.PictureBox ticketPictureBox;
         private System.Windows.Forms.Panel categoryColorPanel;
         private System.Windows.Forms.Button EditButton;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label ticketEuroSign;
     }
 }

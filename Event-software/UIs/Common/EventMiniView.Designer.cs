@@ -36,9 +36,9 @@
             this.hoverOverPanel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.eventTitleLabel = new System.Windows.Forms.Label();
+            this.detailsButton = new System.Windows.Forms.Button();
             this.intrestedListOvalPictureBox = new itHappens.UIs.Common.OvalPictureBox();
             this.goingListOvalPictureBox = new itHappens.UIs.Common.OvalPictureBox();
-            this.detailsButton = new System.Windows.Forms.Button();
             this.eventTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventPictureBox)).BeginInit();
             this.categoryColorPanel.SuspendLayout();
@@ -143,11 +143,23 @@
             this.eventTitleLabel.Size = new System.Drawing.Size(0, 13);
             this.eventTitleLabel.TabIndex = 0;
             // 
+            // detailsButton
+            // 
+            this.detailsButton.Location = new System.Drawing.Point(12, 88);
+            this.detailsButton.Name = "detailsButton";
+            this.detailsButton.Size = new System.Drawing.Size(122, 36);
+            this.detailsButton.TabIndex = 0;
+            this.detailsButton.Text = "DETAILS";
+            this.detailsButton.UseVisualStyleBackColor = true;
+            this.detailsButton.Click += new System.EventHandler(this.detailsButton_Click);
+            this.detailsButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.detailsButton_MouseClick);
+            // 
             // intrestedListOvalPictureBox
             // 
             this.intrestedListOvalPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.intrestedListOvalPictureBox.BackgroundImage = global::itHappens.Properties.Resources.plus_yellow;
             this.intrestedListOvalPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.intrestedListOvalPictureBox.Enabled = false;
             this.intrestedListOvalPictureBox.Location = new System.Drawing.Point(10, 130);
             this.intrestedListOvalPictureBox.Name = "intrestedListOvalPictureBox";
             this.intrestedListOvalPictureBox.Size = new System.Drawing.Size(65, 64);
@@ -161,6 +173,8 @@
             this.goingListOvalPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.goingListOvalPictureBox.BackgroundImage = global::itHappens.Properties.Resources.check_lime;
             this.goingListOvalPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.goingListOvalPictureBox.Enabled = false;
+            this.goingListOvalPictureBox.ErrorImage = null;
             this.goingListOvalPictureBox.Location = new System.Drawing.Point(73, 130);
             this.goingListOvalPictureBox.Name = "goingListOvalPictureBox";
             this.goingListOvalPictureBox.Size = new System.Drawing.Size(62, 64);
@@ -168,17 +182,6 @@
             this.goingListOvalPictureBox.TabStop = false;
             this.goingListOvalPictureBox.Click += new System.EventHandler(this.goingListOvalPictureBox_Click);
             this.goingListOvalPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.goingListOvalPictureBox_MouseClick);
-            // 
-            // detailsButton
-            // 
-            this.detailsButton.Location = new System.Drawing.Point(12, 88);
-            this.detailsButton.Name = "detailsButton";
-            this.detailsButton.Size = new System.Drawing.Size(122, 36);
-            this.detailsButton.TabIndex = 0;
-            this.detailsButton.Text = "DETAILS";
-            this.detailsButton.UseVisualStyleBackColor = true;
-            this.detailsButton.Click += new System.EventHandler(this.detailsButton_Click);
-            this.detailsButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.detailsButton_MouseClick);
             // 
             // EventMiniView
             // 

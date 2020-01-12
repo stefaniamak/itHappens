@@ -7,16 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using itHappens.Classes;
+using itHappens.UIs.Common;
+using itHappends;
+using dbstuff;
 
 namespace itHappens.UIs.Common
 {
     public partial class EventMiniView : UserControl
     {
         public static int eventId;
+        private DbController dbCon = new DbController();
         public EventMiniView()
         {
             InitializeComponent();
             hoverOverPanel.Visible = false;
+            if (UIs.anna.LogInPage.loggedInUser == true)
+                EnableButtons();
         }
 
         public EventMiniView(Image eventImage, string categoryColor) : this()
@@ -28,6 +35,8 @@ namespace itHappens.UIs.Common
             eventPictureBox.Image = eventImage;
             categoryColorPanel.BackColor = catColor;
             hoverOverPanel.Visible = false;
+            if (UIs.anna.LogInPage.loggedInUser == true)
+                EnableButtons();
         }
 
         //  -----------  Προσωρινός Constructor χωρίς τα insert εικόνων.  -----------
@@ -55,6 +64,12 @@ namespace itHappens.UIs.Common
 
             int eventInt = Int32.Parse(eventIdString);
             return eventInt;
+        }
+
+        public void EnableButtons()
+        {
+            goingListOvalPictureBox.Enabled = true;
+            intrestedListOvalPictureBox.Enabled = true;
         }
 
         private void eventTableLayout_Paint(object sender, PaintEventArgs e)
@@ -128,13 +143,13 @@ namespace itHappens.UIs.Common
         private void goingListOvalPictureBox_Click(object sender, EventArgs e)
         {
             hoverPanelVisibility(false);
-            // Adds that Event on the GOING list
+            dbCon.addGoing(getEventId(), UIs.anna.LogInPage.userId); // Adds that Event on the GOING list
         }
 
         private void intrestedListOvalPictureBox_Click(object sender, EventArgs e)
         {
             hoverPanelVisibility(false);
-            // Adds that Event on the INTERESTED list
+            dbCon.addInterested(getEventId(), UIs.anna.LogInPage.userId); // Adds that Event on the INTERESTED list
         }
 
         private void flowLayoutPanel1_MouseLeave(object sender, EventArgs e)

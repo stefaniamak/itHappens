@@ -54,7 +54,6 @@ namespace itHappens.UIs.andrea
                 EditButton.Visible = false;
             }
 
-
             //friends();
             categoryColorPanel.BackColor = Utility.FromName(categoryColor);
             eventNameLabel.Text = eventName;
@@ -102,36 +101,6 @@ namespace itHappens.UIs.andrea
         {
 
         }
-
-        /*  public static void openEventProfile(object sender, EventArgs e)
-          {
-
-              var eventview = (EventMiniView)sender;
-              Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
-              int eventid = eventview.eventId;
-              var v = Db_connector.Query(@"Select  event.title, venues.name, category.color, user.name ,
-                          user.surname, event.startingDate,
-                          event.ticketprice, event.description, user.id , event.id
-                          FROM events e JOIN venues v
-                          ON e.venueID = v.id
-                          JOIN category c
-                          ON e.categoryID = c.id
-                          JOIN user u
-                          ON e.ownerID = u.id
-                          WHERE @eventid = e.id",
-                         new string[,] { { "@eventid", eventid + "" } });
-              v.Read();
-              var middlePage = new EventProfilePage(
-                  v.GetInt32(8), v.GetInt32(9),
-                  v.GetString(0), v.GetString(1),
-                   v.GetString(2), null, v.GetString(3),
-                   v.GetString(4), v.GetDateTime(5),
-                   v.GetDouble(6), v.GetString(7));
-              Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(middlePage);
-              middlePage.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
-              middlePage.Dock = DockStyle.Fill;
-
-          }*/
 
         private void organizerTextBox_TextChanged(object sender, EventArgs e)
         {
