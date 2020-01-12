@@ -103,8 +103,8 @@ namespace itHappens.Classes
         public void addEventDetailsInEventProfile(int eventId)
         {
             int theUserId = UIs.anna.LogInPage.userId;
-            var v = Db_connector.Query(@"SELECT us.id, ev.id, ev.title, ve.name , cat.color, us.name, us.surname, ev.startingDate,
-            ev.ticketprice, ev.description, ev.image FROM event ev JOIN venues ve ON ev.venueID = ve.id
+            var v = Db_connector.Query(@"SELECT us.id, ev.id, ev.title, ve.name , cat.color,ev.image, us.name, us.surname, ev.startingDate,
+            ev.ticketprice, ev.description, FROM event ev JOIN venues ve ON ev.venueID = ve.id
                 JOIN area ar ON ar.id = ve.areaID JOIN users us ON us.id = ev.ownerID
                 JOIN categories cat ON ev.categoryID = cat.id WHERE ev.id = @eventId ",
                        new string[,] { { "@eventId", eventId + "" } });
@@ -114,9 +114,9 @@ namespace itHappens.Classes
                 theEventProfilePage = new UIs.andrea.EventProfilePage(
                     v.GetInt32(0), v.GetInt32(1),
                     v.GetString(2), v.GetString(3),
-                     v.GetString(4), Image.FromFile(v.GetString(10)), v.GetString(5),
-                     v.GetString(6), v.GetDateTime(7),
-                     v.GetDouble(8), v.GetString(9));
+                     v.GetString(4), Image.FromFile(v.GetString(5)), v.GetString(6),
+                     v.GetString(7), v.GetDateTime(8),
+                     v.GetDouble(9), v.GetString(10));
             }
             catch
             {
@@ -177,11 +177,11 @@ namespace itHappens.Classes
                 theSVenueProfilePage = new UIs.andrea.VenueProfilePage(-1, "No Venue", null, null);
             }
 
-          
-            var z = Db_connector.Query(@"SELECT DISTINCT us.name, us.surname, evL.title FROM following fol 
+            
+                var z = Db_connector.Query(@"SELECT DISTINCT us.name, us.surname, evL.title FROM following fol 
             JOIN users us ON fol.followed_user_id = us.id JOIN event_list evL ON fol.followed_user_id = evL.creatorID 
             JOIN attendants att ON evL.id = att.eventListID JOIN event ev ON att.eventID = ev.id
-            WHERE evL.title='HISTORY' AND fol.following_user_id = @theUserId AND ve.id = @venueId ",
+            WHERE evL.title='HISTORY' AND fol.following_user_id = @theUserId AND ev.id = @venueId ",
             new string[,] { { "@theUserId", theUserId + "" }, { "@venueId", venueId + "" } });
             try
             {

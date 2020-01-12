@@ -10,8 +10,8 @@ namespace itHappens.Classes
 {
     class madeForYouCarousel
     {
-        List <CategoryGroupBox> GroupBox;
-        madeForYouCarousel(bool logged)
+        public List<CategoryGroupBox> GroupBox = new List<CategoryGroupBox>();
+        public madeForYouCarousel(bool logged)
         
         {
             if (logged)

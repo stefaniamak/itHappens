@@ -15,16 +15,17 @@ namespace itHappends
         {
 
             return Query(@"SELECT COUNT(*) FROM area WHERE country = @country",
-                                   new string[,] { { "@country", "Greece" } });
+                                   new string[,] { { "@country", "Greece" } }); 
 
         }
         public static MySqlConnection Connect()
         {
+           
             String conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=0dinth0rz3us;";
             MySqlConnection con;
             con = new MySqlConnection(conStr);
             con.Open();
-            return con;
+            return con; 
         }
         public static MySqlDataReader Query(string query, string[,] parameters)
         {
