@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace itHappens.UIs.Common
 {
 
-    
+
 
     public partial class MainSplitForm : Form
     {
@@ -23,7 +23,7 @@ namespace itHappens.UIs.Common
         public Panel leftMiddlePanel;
         public Panel rightTopPanel;
         public Panel rightBottomPanel;
-                
+
 
         public MainSplitForm()
         {
@@ -39,7 +39,7 @@ namespace itHappens.UIs.Common
 
             logInSignOutButtonsVisibility();
         }
-        
+
 
         public void logInSignOutButtonsVisibility()
         {
@@ -47,7 +47,7 @@ namespace itHappens.UIs.Common
             logInToolStripMenuItem.Visible = !userIsLoggedIn;
             logOutToolStripMenuItem.Visible = userIsLoggedIn;
         }
-      
+
         private void TestSplitForm_Load(object sender, EventArgs e)
         {
             Controllers.UIController.Instance.showSidebars("Username");
@@ -98,7 +98,7 @@ namespace itHappens.UIs.Common
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controllers.UIController.Instance.settingsToolStripMenuItem_MiddlePanel();           
+            Controllers.UIController.Instance.settingsToolStripMenuItem_MiddlePanel();
         }
 
         private void mainPageToolStripMenuItem_Click(object sender, EventArgs e)
@@ -123,7 +123,7 @@ namespace itHappens.UIs.Common
             {
                 //Ti tha emfanizei an den einai sundedemenos o xrhsths
             }
-            
+
         }
 
         private void rightSplitContainer_SplitterMoved(object sender, SplitterEventArgs e)
@@ -218,6 +218,7 @@ namespace itHappens.UIs.Common
 
         }
 
+
         private void logInToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Controllers.UIController.Instance.logInToolStripMenuItem_MiddlePanel();
@@ -229,6 +230,18 @@ namespace itHappens.UIs.Common
             logInSignOutButtonsVisibility();
         }
 
-        
+
+
+
+        private void contactToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.Instance.ContactToolStripMenuItem_MiddlePanel();
+        }
+
+        private void contactToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Controllers.UIController.Instance.ContactToolStripMenuItem_MiddlePanel();
+        }
+
     }
 }

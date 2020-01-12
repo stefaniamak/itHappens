@@ -171,6 +171,12 @@
     <Compile Include="EventfulAPI.cs" />
     <Compile Include="DbController.cs" />
     <Compile Include="populateDB.cs" />
+    <Compile Include="UIs\Account\ContactForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Account\ContactForm.Designer.cs">
+      <DependentUpon>ContactForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\Common\FriendsWhoHaveVisited.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -380,6 +386,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UIs\Account\ContactForm.resx">
+      <DependentUpon>ContactForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIs\Common\FriendsWhoHaveVisited.resx">
       <DependentUpon>FriendsWhoHaveVisited.cs</DependentUpon>
     </EmbeddedResource>

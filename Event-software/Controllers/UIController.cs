@@ -235,6 +235,11 @@ namespace itHappens.Controllers
             Classes.MiddlePanelMethods.Instance.logInToolStripMenuItem();
         }
 
+        public void ContactToolStripMenuItem_MiddlePanel()
+        {
+            Classes.MiddlePanelMethods.Instance.ContactToolStripMenuItem();
+        }
+
         public void signUpToolStripMenuItem_MiddlePanel()
         {
             Classes.MiddlePanelMethods.Instance.signUpToolStripMenuItem();

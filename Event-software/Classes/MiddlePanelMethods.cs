@@ -27,6 +27,7 @@ namespace itHappens.Classes
         private UIs.valentina.SettingsPage theSettingsPage = null;
         // Extra User Controls
         private UIs.Main.LoginWarning thisLoginWarningPage = null;
+        private UIs.anna.ContactForm theContactPage = null;
 
         public void designEditOfPanels(UserControl theUserControl)
         {
@@ -257,6 +258,13 @@ namespace itHappens.Classes
             theSettingsPage = new UIs.valentina.SettingsPage();
             Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theSettingsPage);
             designEditOfPanels(theSettingsPage);
+        }
+        public void ContactToolStripMenuItem()
+        {
+            UIs.Common.MainSplitForm.middlePanel.Controls.Clear();
+            theContactPage = new UIs.anna.ContactForm();
+            UIs.Common.MainSplitForm.middlePanel.Controls.Add(theContactPage);
+            designEditOfPanels(theContactPage);
         }
 
     }
