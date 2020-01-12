@@ -74,7 +74,7 @@
             galleryTab.Location = new System.Drawing.Point(4, 25);
             galleryTab.Margin = new System.Windows.Forms.Padding(2);
             galleryTab.Name = "galleryTab";
-            galleryTab.Size = new System.Drawing.Size(867, 760);
+            galleryTab.Size = new System.Drawing.Size(600, 422);
             galleryTab.TabIndex = 3;
             galleryTab.Text = "GALLERY";
             galleryTab.UseVisualStyleBackColor = true;
@@ -275,7 +275,7 @@
             this.eventsUserWillAttendCarousel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.eventsUserWillAttendCarousel.Name = "eventsUserWillAttendCarousel";
             this.eventsUserWillAttendCarousel.Padding = new System.Windows.Forms.Padding(2);
-            this.eventsUserWillAttendCarousel.Size = new System.Drawing.Size(517, 343);
+            this.eventsUserWillAttendCarousel.Size = new System.Drawing.Size(500, 343);
             this.eventsUserWillAttendCarousel.TabIndex = 25;
             // 
             // eventTab
@@ -285,7 +285,7 @@
             this.eventTab.Margin = new System.Windows.Forms.Padding(2);
             this.eventTab.Name = "eventTab";
             this.eventTab.Padding = new System.Windows.Forms.Padding(2);
-            this.eventTab.Size = new System.Drawing.Size(867, 760);
+            this.eventTab.Size = new System.Drawing.Size(600, 422);
             this.eventTab.TabIndex = 1;
             this.eventTab.Text = "EVENTS";
             this.eventTab.UseVisualStyleBackColor = true;
@@ -296,7 +296,7 @@
             this.detailsTab.Location = new System.Drawing.Point(4, 25);
             this.detailsTab.Margin = new System.Windows.Forms.Padding(2);
             this.detailsTab.Name = "detailsTab";
-            this.detailsTab.Size = new System.Drawing.Size(867, 760);
+            this.detailsTab.Size = new System.Drawing.Size(600, 422);
             this.detailsTab.TabIndex = 2;
             this.detailsTab.Text = "DETAILS";
             this.detailsTab.UseVisualStyleBackColor = true;

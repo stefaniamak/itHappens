@@ -136,7 +136,7 @@ namespace itHappens.UIs.Common
         private void detailsButton_Click(object sender, EventArgs e)
         {
             // opens Venue Profile Page
-            int eventId = getEventId();
+            ola int eventId = getEventId();
             Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel(eventId);
             hoverPanelVisibility(false);
         }
