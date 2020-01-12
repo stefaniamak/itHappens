@@ -108,16 +108,29 @@ namespace itHappens.UIs.Common
         {
             // opens Venue Profile Page
             Controllers.UIController.Instance.eventsProfileToolStripMenuItem_MiddlePanel(eventId);
+            hoverPanelVisibility(false);
         }
 
         private void goingListOvalPictureBox_Click(object sender, EventArgs e)
         {
+            hoverPanelVisibility(false);
             // Adds that Event on the GOING list
         }
 
         private void intrestedListOvalPictureBox_Click(object sender, EventArgs e)
         {
+            hoverPanelVisibility(false);
             // Adds that Event on the INTERESTED list
+        }
+
+        private void flowLayoutPanel1_MouseLeave(object sender, EventArgs e)
+        {
+            hoverPanelVisibility(false);
+        }
+
+        private void categoryColorPanel_Paint(object sender, PaintEventArgs e)
+        {
+            hoverPanelVisibility(false);
         }
     }
 }

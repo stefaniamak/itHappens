@@ -32,9 +32,9 @@
             this.mostFrequentLabel = new System.Windows.Forms.Label();
             this.machesLabel = new System.Windows.Forms.Label();
             this.allCategoriesLabel = new System.Windows.Forms.Label();
-            allcategoriesFlowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            allcategoriesFlowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            allcategoriesFlowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.allcategoriesFlowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.allcategoriesFlowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.allcategoriesFlowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.matchesFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.fullPageflowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.clearSelections = new System.Windows.Forms.Label();
@@ -90,45 +90,45 @@
             // 
             // allcategoriesFlowLayoutPanel1
             // 
-            allcategoriesFlowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.allcategoriesFlowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            allcategoriesFlowLayoutPanel1.AutoSize = true;
-            allcategoriesFlowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            allcategoriesFlowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            allcategoriesFlowLayoutPanel1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            allcategoriesFlowLayoutPanel1.ForeColor = System.Drawing.Color.Black;
-            allcategoriesFlowLayoutPanel1.Location = new System.Drawing.Point(3, 81);
-            allcategoriesFlowLayoutPanel1.Name = "allcategoriesFlowLayoutPanel1";
-            allcategoriesFlowLayoutPanel1.Size = new System.Drawing.Size(223, 0);
-            allcategoriesFlowLayoutPanel1.TabIndex = 19;
+            this.allcategoriesFlowLayoutPanel1.AutoSize = true;
+            this.allcategoriesFlowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.allcategoriesFlowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.allcategoriesFlowLayoutPanel1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.allcategoriesFlowLayoutPanel1.ForeColor = System.Drawing.Color.Black;
+            this.allcategoriesFlowLayoutPanel1.Location = new System.Drawing.Point(3, 81);
+            this.allcategoriesFlowLayoutPanel1.Name = "allcategoriesFlowLayoutPanel1";
+            this.allcategoriesFlowLayoutPanel1.Size = new System.Drawing.Size(223, 0);
+            this.allcategoriesFlowLayoutPanel1.TabIndex = 19;
             // 
             // allcategoriesFlowLayoutPanel2
             // 
-            allcategoriesFlowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.allcategoriesFlowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            allcategoriesFlowLayoutPanel2.AutoSize = true;
-            allcategoriesFlowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            allcategoriesFlowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            allcategoriesFlowLayoutPanel2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            allcategoriesFlowLayoutPanel2.ForeColor = System.Drawing.Color.Black;
-            allcategoriesFlowLayoutPanel2.Location = new System.Drawing.Point(3, 87);
-            allcategoriesFlowLayoutPanel2.Name = "allcategoriesFlowLayoutPanel2";
-            allcategoriesFlowLayoutPanel2.Size = new System.Drawing.Size(223, 0);
-            allcategoriesFlowLayoutPanel2.TabIndex = 20;
+            this.allcategoriesFlowLayoutPanel2.AutoSize = true;
+            this.allcategoriesFlowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.allcategoriesFlowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.allcategoriesFlowLayoutPanel2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.allcategoriesFlowLayoutPanel2.ForeColor = System.Drawing.Color.Black;
+            this.allcategoriesFlowLayoutPanel2.Location = new System.Drawing.Point(3, 87);
+            this.allcategoriesFlowLayoutPanel2.Name = "allcategoriesFlowLayoutPanel2";
+            this.allcategoriesFlowLayoutPanel2.Size = new System.Drawing.Size(223, 0);
+            this.allcategoriesFlowLayoutPanel2.TabIndex = 20;
             // 
             // allcategoriesFlowLayoutPanel3
             // 
-            allcategoriesFlowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.allcategoriesFlowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            allcategoriesFlowLayoutPanel3.AutoSize = true;
-            allcategoriesFlowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            allcategoriesFlowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            allcategoriesFlowLayoutPanel3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            allcategoriesFlowLayoutPanel3.ForeColor = System.Drawing.Color.Black;
-            allcategoriesFlowLayoutPanel3.Location = new System.Drawing.Point(3, 93);
-            allcategoriesFlowLayoutPanel3.Name = "allcategoriesFlowLayoutPanel3";
-            allcategoriesFlowLayoutPanel3.Size = new System.Drawing.Size(223, 0);
-            allcategoriesFlowLayoutPanel3.TabIndex = 20;
+            this.allcategoriesFlowLayoutPanel3.AutoSize = true;
+            this.allcategoriesFlowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.allcategoriesFlowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.allcategoriesFlowLayoutPanel3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.allcategoriesFlowLayoutPanel3.ForeColor = System.Drawing.Color.Black;
+            this.allcategoriesFlowLayoutPanel3.Location = new System.Drawing.Point(3, 93);
+            this.allcategoriesFlowLayoutPanel3.Name = "allcategoriesFlowLayoutPanel3";
+            this.allcategoriesFlowLayoutPanel3.Size = new System.Drawing.Size(223, 0);
+            this.allcategoriesFlowLayoutPanel3.TabIndex = 20;
             // 
             // matchesFlowLayoutPanel
             // 
@@ -154,9 +154,9 @@
             this.fullPageflowLayoutPanel.Controls.Add(this.mostFrequentLabel);
             this.fullPageflowLayoutPanel.Controls.Add(this.mostFrequentFlowLayoutPanel);
             this.fullPageflowLayoutPanel.Controls.Add(this.allCategoriesLabel);
-            this.fullPageflowLayoutPanel.Controls.Add(allcategoriesFlowLayoutPanel1);
-            this.fullPageflowLayoutPanel.Controls.Add(allcategoriesFlowLayoutPanel2);
-            this.fullPageflowLayoutPanel.Controls.Add(allcategoriesFlowLayoutPanel3);
+            this.fullPageflowLayoutPanel.Controls.Add(this.allcategoriesFlowLayoutPanel1);
+            this.fullPageflowLayoutPanel.Controls.Add(this.allcategoriesFlowLayoutPanel2);
+            this.fullPageflowLayoutPanel.Controls.Add(this.allcategoriesFlowLayoutPanel3);
             this.fullPageflowLayoutPanel.Controls.Add(this.machesLabel);
             this.fullPageflowLayoutPanel.Controls.Add(this.matchesFlowLayoutPanel);
             this.fullPageflowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -207,8 +207,8 @@
         public System.Windows.Forms.FlowLayoutPanel mostFrequentFlowLayoutPanel;
         public System.Windows.Forms.FlowLayoutPanel matchesFlowLayoutPanel;
         private System.Windows.Forms.Label clearSelections;
-        public static System.Windows.Forms.FlowLayoutPanel allcategoriesFlowLayoutPanel2;
-        public static System.Windows.Forms.FlowLayoutPanel allcategoriesFlowLayoutPanel3;
-        public static System.Windows.Forms.FlowLayoutPanel allcategoriesFlowLayoutPanel1;
+        public System.Windows.Forms.FlowLayoutPanel allcategoriesFlowLayoutPanel2;
+        public System.Windows.Forms.FlowLayoutPanel allcategoriesFlowLayoutPanel3;
+        public System.Windows.Forms.FlowLayoutPanel allcategoriesFlowLayoutPanel1;
     }
 }

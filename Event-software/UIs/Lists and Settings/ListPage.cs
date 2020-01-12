@@ -24,7 +24,9 @@ namespace itHappens.UIs.valentina
 
         private void ListPage_Load(object sender, EventArgs e)
         {
-            Controllers.UIController.Instance.ListPageLoad();
+            var listminibox = new UIs.Common.ListMiniBox();
+            //  eventminiview.Scale(0.55F);
+            ListsFlowLayoutPanel.Controls.Add(listminibox);
         }
     }
 }

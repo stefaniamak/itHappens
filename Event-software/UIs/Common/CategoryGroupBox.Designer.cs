@@ -33,14 +33,14 @@
             this.firstEventimagePictureBox = new System.Windows.Forms.PictureBox();
             this.secondEventimagePictureBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.categoryColorControl = new itHappens.UIs.Common.Carousel();
-            this.eventImagesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.eventImagesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.categoryColorControl = new itHappens.UIs.Common.Carousel();
             ((System.ComponentModel.ISupportInitialize)(this.firstEventimagePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondEventimagePictureBox)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.eventImagesTableLayoutPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
+            this.eventImagesTableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // categoryNameLabel
@@ -48,10 +48,10 @@
             this.categoryNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.categoryNameLabel.AutoSize = true;
             this.categoryNameLabel.BackColor = System.Drawing.Color.Silver;
-            this.categoryNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryNameLabel.Location = new System.Drawing.Point(56, 11);
+            this.categoryNameLabel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryNameLabel.Location = new System.Drawing.Point(3, 12);
             this.categoryNameLabel.Name = "categoryNameLabel";
-            this.categoryNameLabel.Size = new System.Drawing.Size(105, 29);
+            this.categoryNameLabel.Size = new System.Drawing.Size(121, 30);
             this.categoryNameLabel.TabIndex = 0;
             this.categoryNameLabel.Text = "category";
             this.categoryNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,19 +103,14 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(217, 223);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
-            // categoryColorControl
+            // topPanel
             // 
-            this.categoryColorControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.categoryColorControl.AutoScroll = true;
-            this.categoryColorControl.BackColor = System.Drawing.Color.DarkRed;
-            this.categoryColorControl.Location = new System.Drawing.Point(0, 195);
-            this.categoryColorControl.Margin = new System.Windows.Forms.Padding(0);
-            this.categoryColorControl.Name = "categoryColorControl";
-            this.categoryColorControl.Padding = new System.Windows.Forms.Padding(2);
-            this.categoryColorControl.Size = new System.Drawing.Size(217, 28);
-            this.categoryColorControl.TabIndex = 2;
+            this.topPanel.Controls.Add(this.categoryNameLabel);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topPanel.Location = new System.Drawing.Point(3, 3);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(211, 54);
+            this.topPanel.TabIndex = 3;
             // 
             // eventImagesTableLayoutPanel
             // 
@@ -132,18 +127,23 @@
             this.eventImagesTableLayoutPanel.Name = "eventImagesTableLayoutPanel";
             this.eventImagesTableLayoutPanel.RowCount = 1;
             this.eventImagesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.eventImagesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.eventImagesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 129F));
             this.eventImagesTableLayoutPanel.Size = new System.Drawing.Size(211, 129);
             this.eventImagesTableLayoutPanel.TabIndex = 1;
             // 
-            // topPanel
+            // categoryColorControl
             // 
-            this.topPanel.Controls.Add(this.categoryNameLabel);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.topPanel.Location = new System.Drawing.Point(3, 3);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(211, 54);
-            this.topPanel.TabIndex = 3;
+            this.categoryColorControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.categoryColorControl.AutoScroll = true;
+            this.categoryColorControl.BackColor = System.Drawing.Color.DarkRed;
+            this.categoryColorControl.Location = new System.Drawing.Point(0, 195);
+            this.categoryColorControl.Margin = new System.Windows.Forms.Padding(0);
+            this.categoryColorControl.Name = "categoryColorControl";
+            this.categoryColorControl.Padding = new System.Windows.Forms.Padding(2);
+            this.categoryColorControl.Size = new System.Drawing.Size(217, 28);
+            this.categoryColorControl.TabIndex = 2;
             // 
             // CategoryGroupBox
             // 
@@ -157,9 +157,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.firstEventimagePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondEventimagePictureBox)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.eventImagesTableLayoutPanel.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
+            this.eventImagesTableLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

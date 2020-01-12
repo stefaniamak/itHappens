@@ -135,30 +135,10 @@ namespace itHappens.Controllers
         {
 
         }
-
-        public void ListPageLoad()
-        {
-            for (int i = 0; i < 20; i++)
-            {
-                var listminibox = new UIs.Common.ListMiniBox();
-                //  eventminiview.Scale(0.55F);
-                UIs.valentina.ListPage.ListsFlowLayoutPanel.Controls.Add(listminibox);
-            }
-        }
-
-        public void ListsContentPageLoad()
-        {
-            for (int i = 0; i < 20; i++)
-            {
-                var eventminiview = new UIs.Common.EventMiniView();
-                //  eventminiview.Scale(0.55F);
-                UIs.valentina.ListsContentPage.EventHolderFlowLayoutPanel.Controls.Add(eventminiview);
-            }
-        }
-
+        
         public static ArrayList eventIDList = new ArrayList();
         public static ArrayList eventCategoryIDList = new ArrayList();
-        public void MyEventsListsContentPageLoad(int userId)
+        public void MyEventsListsContentPageLoad(int userId, UIs.valentina.ListsContentPage theListContentPage)
         {
             int EventNum = Classes.DatabaseGeneralMethods.ReturnNumberOfUserEvents(userId);
             string catColor;
@@ -172,7 +152,7 @@ namespace itHappens.Controllers
                 catColor = Classes.DatabaseGeneralMethods.GetCategoryColorOfEvent(Convert.ToInt32(eventCategoryIDList[i]));
                 var eventminiview = new UIs.Common.EventMiniView(catColor, Convert.ToInt32(eventIDList[i]), eventTitles);
                 //  eventminiview.Scale(0.55F);
-                UIs.valentina.ListsContentPage.EventHolderFlowLayoutPanel.Controls.Add(eventminiview);
+                theListContentPage.EventHolderFlowLayoutPanel.Controls.Add(eventminiview);
             }
 
 

@@ -149,5 +149,15 @@ namespace itHappens.UIs.andrea
         {
             dbCon.addGoing(this.eventId, UIs.anna.LogInPage.userId);
         }
+
+        private void categoryColorPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void friendsAttendingPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

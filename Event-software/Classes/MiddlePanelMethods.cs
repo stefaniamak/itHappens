@@ -24,7 +24,7 @@ namespace itHappens.Classes
         private UIs.andrea.VenueProfilePage theSVenueProfilePage = null;
         // Lists and Settings Controls
         private UIs.valentina.ListPage theListPage = null;
-        private UIs.valentina.ListsContentPage theListsContentPage = null;
+        public UIs.valentina.ListsContentPage theListsContentPage = null;
         private UIs.valentina.SettingsPage theSettingsPage = null;
         // Extra User Controls
         private UIs.Main.LoginWarning thisLoginWarningPage = null;

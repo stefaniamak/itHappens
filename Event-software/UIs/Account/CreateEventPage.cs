@@ -396,9 +396,9 @@ namespace itHappens.UIs.anna
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-            catch
+            catch(MySqlException e)
             {
-                Console.WriteLine("Error Insert Statement");
+                Console.WriteLine("Error Insert Statement: " + e.Message);
             }
         }
 
@@ -483,7 +483,7 @@ namespace itHappens.UIs.anna
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "Select id from categories where categories='" + s + "'";
+                String queryString = "Select id from categories where categories.title='" + s + "'";
 
 
                 command = new MySqlCommand(queryString, con);

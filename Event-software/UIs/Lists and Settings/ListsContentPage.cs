@@ -15,22 +15,25 @@ namespace itHappens.UIs.valentina
         public ListsContentPage()
         {
             InitializeComponent();
-        }      
+        }
 
 
         private void ListsContentPage_Load(object sender, EventArgs e)
         {
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
-                Console.WriteLine(UIs.anna.LogInPage.userId);
-                Controllers.UIController.Instance.MyEventsListsContentPageLoad(UIs.anna.LogInPage.userId);
+
             }
             else
             {
-                Controllers.UIController.Instance.ListsContentPageLoad();
+
+                var eventminiview = new UIs.Common.EventMiniView();
+                //  eventminiview.Scale(0.55F);
+                EventHolderFlowLayoutPanel.Controls.Add(eventminiview);
+
             }
-            
-            
+
+
         }
     }
 }

@@ -55,9 +55,11 @@ namespace itHappends
 
         public static MySqlDataReader ActiveEvents()
         {
+            var today = DateTime.Today;
+            var tomorrow = today.AddDays(1);
 
-            return ExecuteQuery(@"SELECT * FROM event WHERE startingDate < @Date AND endingDate  > @Date ",
-                                  new MySqlParameter("@Date", Utility.DateToText(DateTime.Now)));
+            return ExecuteQuery(@"SELECT event.id, event.title, categories.color FROM event JOIN categories ON categories.id = event.categoryID WHERE startingDate >= @Today AND startingDate < @Tomorrow ",
+                                  new[] { new MySqlParameter("@Today", today), new MySqlParameter("@Tomorrow", tomorrow) });
         }
 
         public static List<List<string>> Readrows(MySqlDataReader reader, int[] parameters)
@@ -79,7 +81,7 @@ namespace itHappends
         }
         public static MySqlDataReader Categories(int limit)
         {
-            return ExecuteQuery(@"Select categories, title FROM categories LIMIT @limit",
+            return ExecuteQuery(@"Select title, color FROM categories LIMIT @limit",
                         new MySqlParameter("@limit", limit));
         }
 
