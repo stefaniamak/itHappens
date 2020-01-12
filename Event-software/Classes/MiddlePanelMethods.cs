@@ -89,7 +89,7 @@ namespace itHappens.Classes
 
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
-                Console.WriteLine("xaxa"+eventId);
+                
                 addEventDetailsInEventProfile(eventId);
             }
             else
@@ -115,12 +115,14 @@ namespace itHappens.Classes
                 theEventProfilePage = new UIs.andrea.EventProfilePage(
                     v.GetInt32(0), v.GetInt32(1),
                     v.GetString(2), v.GetString(3),
-                     v.GetString(4), Image.FromFile(v.GetString(10)), v.GetString(5),
+                     v.GetString(4), //Image.FromFile(v.GetString(10)), 
+                     v.GetString(5),
                      v.GetString(6), v.GetDateTime(7),
                      v.GetDouble(8), v.GetString(9));
             }
             catch
             {
+                Console.WriteLine("Error addEventDetailsInEventProfile");
                 theEventProfilePage = new UIs.andrea.EventProfilePage(-1, -1, "NoEventFound", "", "", null, "", "", DateTime.Now, 1.00, "");
             }
 
@@ -136,6 +138,7 @@ namespace itHappens.Classes
                 }
             catch
             {
+                Console.WriteLine("Error addEventDetailsInEventProfile2");
                 theEventProfilePage.friendsWhoWillAttend(null, "No", "User", "");
             }
         }

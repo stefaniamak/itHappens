@@ -12,7 +12,7 @@ namespace itHappens.UIs.Common
 {
     public partial class EventMiniView : UserControl
     {
-        public static int eventId;
+        public static int eventId; //Convert.ToInt32(eventIdLabel.Text);
         public EventMiniView()
         {
             InitializeComponent();
@@ -37,8 +37,8 @@ namespace itHappens.UIs.Common
             categoryColorPanel.BackColor = catColor;
             hoverOverPanel.Visible = false;
 
+            //eventIdLabel.Text = theEventId.ToString();
             eventId = theEventId;
-
             eventTitleLabel.Text = eventTitle;
 
         }

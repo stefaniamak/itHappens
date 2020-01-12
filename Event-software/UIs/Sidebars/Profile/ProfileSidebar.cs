@@ -23,7 +23,9 @@ namespace itHappens.UIs.Sidebars
         {
 
             userLogOut();
+            Controllers.UIController.Instance.MainSplitForm.SettingsMenuButton.Visible = false;
             Controllers.LogoutController.Instance.logoutActions();
+            Controllers.UIController.Instance.MainSplitForm.logInSignOutButtonsVisibility();
         }
 
         public void userLogOut()

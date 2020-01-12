@@ -22,7 +22,7 @@ namespace itHappens.UIs.valentina
         {
             if (UIs.anna.LogInPage.loggedInUser == true)
             {
-                Console.WriteLine(UIs.anna.LogInPage.userId);
+                Console.WriteLine("UserID: "+UIs.anna.LogInPage.userId);
                 Controllers.UIController.Instance.MyEventsListsContentPageLoad(UIs.anna.LogInPage.userId);
             }
             else

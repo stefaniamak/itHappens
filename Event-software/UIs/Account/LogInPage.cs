@@ -52,7 +52,7 @@ namespace itHappens.UIs.anna
         {
             ageOfUser = Classes.DatabaseGeneralMethods.ReturnAgeOfUser(UsernameTextBox.Text, PasswordTextBox.Text);
             loggedInUser = true;
-            
+            Controllers.UIController.Instance.MainSplitForm.SettingsMenuButton.Visible = true;
             Controllers.UIController.Instance.openHostForMainAndSearchPage();
             Controllers.UIController.Instance.openCommonSearchTextPage("main");
             Controllers.UIController.Instance.showSidebars(UsernameTextBox.Text);

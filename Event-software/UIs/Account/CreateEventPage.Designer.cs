@@ -78,6 +78,8 @@
             this.HourComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.MinutesComboBox = new System.Windows.Forms.ComboBox();
+            this.sDLabel = new System.Windows.Forms.Label();
+            this.eDLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -475,6 +477,7 @@
             this.SDaycomboBox.Name = "SDaycomboBox";
             this.SDaycomboBox.Size = new System.Drawing.Size(55, 21);
             this.SDaycomboBox.TabIndex = 62;
+            this.SDaycomboBox.Validating += new System.ComponentModel.CancelEventHandler(this.SDaycomboBox_Validating);
             // 
             // SMonthcomboBox
             // 
@@ -485,6 +488,7 @@
             this.SMonthcomboBox.Name = "SMonthcomboBox";
             this.SMonthcomboBox.Size = new System.Drawing.Size(65, 21);
             this.SMonthcomboBox.TabIndex = 63;
+            this.SMonthcomboBox.Validating += new System.ComponentModel.CancelEventHandler(this.SMonthcomboBox_Validating);
             // 
             // SYearcomboBox
             // 
@@ -505,6 +509,7 @@
             this.EDaycomboBox.Name = "EDaycomboBox";
             this.EDaycomboBox.Size = new System.Drawing.Size(56, 21);
             this.EDaycomboBox.TabIndex = 65;
+            this.EDaycomboBox.Validating += new System.ComponentModel.CancelEventHandler(this.EDaycomboBox_Validating);
             // 
             // EMonthcomboBox
             // 
@@ -515,6 +520,7 @@
             this.EMonthcomboBox.Name = "EMonthcomboBox";
             this.EMonthcomboBox.Size = new System.Drawing.Size(64, 21);
             this.EMonthcomboBox.TabIndex = 66;
+            this.EMonthcomboBox.Validating += new System.ComponentModel.CancelEventHandler(this.EMonthcomboBox_Validating);
             // 
             // EYearcomboBox
             // 
@@ -618,12 +624,34 @@
             this.MinutesComboBox.Size = new System.Drawing.Size(50, 21);
             this.MinutesComboBox.TabIndex = 78;
             // 
+            // sDLabel
+            // 
+            this.sDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.sDLabel.ForeColor = System.Drawing.Color.Lime;
+            this.sDLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sDLabel.Location = new System.Drawing.Point(580, 498);
+            this.sDLabel.Name = "sDLabel";
+            this.sDLabel.Size = new System.Drawing.Size(124, 23);
+            this.sDLabel.TabIndex = 79;
+            // 
+            // eDLabel
+            // 
+            this.eDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.eDLabel.ForeColor = System.Drawing.Color.Lime;
+            this.eDLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.eDLabel.Location = new System.Drawing.Point(583, 585);
+            this.eDLabel.Name = "eDLabel";
+            this.eDLabel.Size = new System.Drawing.Size(121, 23);
+            this.eDLabel.TabIndex = 80;
+            // 
             // CreateEventPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.eDLabel);
+            this.Controls.Add(this.sDLabel);
             this.Controls.Add(this.MinutesComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.HourComboBox);
@@ -737,5 +765,7 @@
         private System.Windows.Forms.ComboBox HourComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox MinutesComboBox;
+        private System.Windows.Forms.Label sDLabel;
+        private System.Windows.Forms.Label eDLabel;
     }
 }

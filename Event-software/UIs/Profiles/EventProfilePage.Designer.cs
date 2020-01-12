@@ -165,20 +165,20 @@
             this.eventsTabPage.Controls.Add(this.dayTimeTextBox);
             this.eventsTabPage.Controls.Add(this.descriptionTextBox);
             this.eventsTabPage.Controls.Add(this.descriptionLabel);
-            this.eventsTabPage.Location = new System.Drawing.Point(8, 40);
+            this.eventsTabPage.Location = new System.Drawing.Point(4, 22);
             this.eventsTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.eventsTabPage.Name = "eventsTabPage";
             this.eventsTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.eventsTabPage.Size = new System.Drawing.Size(705, 344);
+            this.eventsTabPage.Size = new System.Drawing.Size(713, 366);
             this.eventsTabPage.TabIndex = 0;
             this.eventsTabPage.Text = "DETAILS";
             // 
             // EditButton
             // 
             this.EditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.EditButton.Location = new System.Drawing.Point(607, 6);
+            this.EditButton.Location = new System.Drawing.Point(522, 5);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(75, 48);
+            this.EditButton.Size = new System.Drawing.Size(72, 48);
             this.EditButton.TabIndex = 9;
             this.EditButton.Text = "EDIT";
             this.EditButton.UseVisualStyleBackColor = true;
@@ -190,7 +190,7 @@
             this.ticketPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ticketPanel.Controls.Add(this.ticketPriceLabel);
             this.ticketPanel.Controls.Add(this.ticketPictureBox);
-            this.ticketPanel.Location = new System.Drawing.Point(353, 34);
+            this.ticketPanel.Location = new System.Drawing.Point(336, 34);
             this.ticketPanel.Name = "ticketPanel";
             this.ticketPanel.Size = new System.Drawing.Size(159, 105);
             this.ticketPanel.TabIndex = 8;
@@ -201,7 +201,7 @@
             this.ticketPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ticketPriceLabel.Location = new System.Drawing.Point(55, 31);
             this.ticketPriceLabel.Name = "ticketPriceLabel";
-            this.ticketPriceLabel.Size = new System.Drawing.Size(107, 76);
+            this.ticketPriceLabel.Size = new System.Drawing.Size(55, 39);
             this.ticketPriceLabel.TabIndex = 7;
             this.ticketPriceLabel.Text = "$5";
             this.ticketPriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -221,7 +221,7 @@
             this.detailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detailsLabel.Location = new System.Drawing.Point(37, 20);
             this.detailsLabel.Name = "detailsLabel";
-            this.detailsLabel.Size = new System.Drawing.Size(105, 36);
+            this.detailsLabel.Size = new System.Drawing.Size(53, 18);
             this.detailsLabel.TabIndex = 0;
             this.detailsLabel.Text = "Details";
             // 
@@ -230,7 +230,7 @@
             this.locationTextBox.Location = new System.Drawing.Point(27, 52);
             this.locationTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.locationTextBox.Name = "locationTextBox";
-            this.locationTextBox.Size = new System.Drawing.Size(165, 32);
+            this.locationTextBox.Size = new System.Drawing.Size(165, 20);
             this.locationTextBox.TabIndex = 1;
             this.locationTextBox.Text = "Location";
             this.locationTextBox.TextChanged += new System.EventHandler(this.locationTextBox_TextChanged);
@@ -240,7 +240,7 @@
             this.organizerTextBox.Location = new System.Drawing.Point(27, 84);
             this.organizerTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.organizerTextBox.Name = "organizerTextBox";
-            this.organizerTextBox.Size = new System.Drawing.Size(165, 32);
+            this.organizerTextBox.Size = new System.Drawing.Size(165, 20);
             this.organizerTextBox.TabIndex = 2;
             this.organizerTextBox.Text = "Organizer";
             this.organizerTextBox.TextChanged += new System.EventHandler(this.organizerTextBox_TextChanged);
@@ -250,7 +250,7 @@
             this.dayTimeTextBox.Location = new System.Drawing.Point(27, 116);
             this.dayTimeTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dayTimeTextBox.Name = "dayTimeTextBox";
-            this.dayTimeTextBox.Size = new System.Drawing.Size(165, 32);
+            this.dayTimeTextBox.Size = new System.Drawing.Size(165, 20);
             this.dayTimeTextBox.TabIndex = 3;
             this.dayTimeTextBox.Text = "Date | Time";
             // 
@@ -264,7 +264,7 @@
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.ReadOnly = true;
-            this.descriptionTextBox.Size = new System.Drawing.Size(448, 187);
+            this.descriptionTextBox.Size = new System.Drawing.Size(431, 187);
             this.descriptionTextBox.TabIndex = 5;
             // 
             // descriptionLabel
@@ -273,7 +273,7 @@
             this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descriptionLabel.Location = new System.Drawing.Point(37, 165);
             this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(165, 36);
+            this.descriptionLabel.Size = new System.Drawing.Size(83, 18);
             this.descriptionLabel.TabIndex = 4;
             this.descriptionLabel.Text = "Description";
             this.descriptionLabel.Click += new System.EventHandler(this.descriptionLabel_Click);
@@ -282,11 +282,11 @@
             // 
             this.galleryTabPage.AutoScroll = true;
             this.galleryTabPage.BackColor = System.Drawing.SystemColors.Control;
-            this.galleryTabPage.Location = new System.Drawing.Point(8, 40);
+            this.galleryTabPage.Location = new System.Drawing.Point(4, 22);
             this.galleryTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.galleryTabPage.Name = "galleryTabPage";
             this.galleryTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.galleryTabPage.Size = new System.Drawing.Size(705, 344);
+            this.galleryTabPage.Size = new System.Drawing.Size(713, 366);
             this.galleryTabPage.TabIndex = 3;
             this.galleryTabPage.Text = "GALLERY";
             // 
@@ -294,11 +294,11 @@
             // 
             this.visitorsabPage.AutoScroll = true;
             this.visitorsabPage.BackColor = System.Drawing.SystemColors.Control;
-            this.visitorsabPage.Location = new System.Drawing.Point(8, 40);
+            this.visitorsabPage.Location = new System.Drawing.Point(4, 22);
             this.visitorsabPage.Margin = new System.Windows.Forms.Padding(2);
             this.visitorsabPage.Name = "visitorsabPage";
             this.visitorsabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.visitorsabPage.Size = new System.Drawing.Size(705, 344);
+            this.visitorsabPage.Size = new System.Drawing.Size(713, 366);
             this.visitorsabPage.TabIndex = 2;
             this.visitorsabPage.Text = "VISITORS ALSO LIKE";
             // 
@@ -324,7 +324,7 @@
             this.friendsAttendingLabel.Location = new System.Drawing.Point(25, 14);
             this.friendsAttendingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.friendsAttendingLabel.Name = "friendsAttendingLabel";
-            this.friendsAttendingLabel.Size = new System.Drawing.Size(251, 36);
+            this.friendsAttendingLabel.Size = new System.Drawing.Size(121, 18);
             this.friendsAttendingLabel.TabIndex = 0;
             this.friendsAttendingLabel.Text = "Friends Attending";
             // 
@@ -383,7 +383,7 @@
             this.eventNameLabel.Location = new System.Drawing.Point(38, 255);
             this.eventNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.eventNameLabel.Name = "eventNameLabel";
-            this.eventNameLabel.Size = new System.Drawing.Size(396, 75);
+            this.eventNameLabel.Size = new System.Drawing.Size(197, 38);
             this.eventNameLabel.TabIndex = 8;
             this.eventNameLabel.Text = "Event Name";
             // 
@@ -398,7 +398,7 @@
             this.dayLabel.Location = new System.Drawing.Point(835, 102);
             this.dayLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dayLabel.Name = "dayLabel";
-            this.dayLabel.Size = new System.Drawing.Size(149, 107);
+            this.dayLabel.Size = new System.Drawing.Size(75, 54);
             this.dayLabel.TabIndex = 4;
             this.dayLabel.Text = "25";
             // 
@@ -413,13 +413,13 @@
             this.monthLabel.Location = new System.Drawing.Point(835, 66);
             this.monthLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.monthLabel.Name = "monthLabel";
-            this.monthLabel.Size = new System.Drawing.Size(144, 63);
+            this.monthLabel.Size = new System.Drawing.Size(73, 31);
             this.monthLabel.TabIndex = 5;
             this.monthLabel.Text = "NOV";
             // 
             // EventProfilePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -478,6 +478,6 @@
         private System.Windows.Forms.Label ticketPriceLabel;
         private System.Windows.Forms.PictureBox ticketPictureBox;
         private System.Windows.Forms.Panel categoryColorPanel;
-        private System.Windows.Forms.Button EditButton;
+        public System.Windows.Forms.Button EditButton;
     }
 }
