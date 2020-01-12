@@ -20,7 +20,7 @@ namespace itHappends
         }
         public static MySqlConnection Connect()
         {
-            String conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
+            String conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
             MySqlConnection con;
             con = new MySqlConnection(conStr);
             con.Open();
