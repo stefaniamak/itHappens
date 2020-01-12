@@ -117,7 +117,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
         }
@@ -147,7 +147,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
         }
@@ -430,7 +430,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
             return Convert.ToInt32(ownerid);
@@ -464,7 +464,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
             return id;
@@ -499,7 +499,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
             return Convert.ToInt32(categoryid);
@@ -533,7 +533,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
             return Convert.ToInt32(venueid);
@@ -576,7 +576,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
             SDaycomboBox.Text = sDate.Day.ToString();
@@ -617,7 +617,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
         }
 
@@ -647,7 +647,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
         }
@@ -688,7 +688,7 @@ namespace itHappens.UIs.anna
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
             return result;

@@ -34,7 +34,7 @@ namespace dbstuff
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
         }
 

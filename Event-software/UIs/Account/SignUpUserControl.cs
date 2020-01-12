@@ -57,7 +57,7 @@ namespace itHappens.UIs
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
         }
 

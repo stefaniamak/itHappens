@@ -80,7 +80,7 @@ namespace itHappens.UIs.Common
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
         }
 
@@ -111,8 +111,8 @@ namespace itHappens.UIs.Common
 
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "SELECT ev.title, cat.color, ev.id " +            // When Images get inserted to database, there will be a -- event.image -- added, and the -- event.title -- will be removed.
-                                     "FROM it_happens.event ev JOIN it_happens.categories cat " +
+                String queryString = "SELECT ev.title, cat.color, ev.id, ev.image " +            // When Images get inserted to database, there will be a -- event.image -- added, and the -- event.title -- will be removed.
+                                     "FROM event ev JOIN categories cat " +
                                      "ON cat.id = ev.categoryID " +
                                      "WHERE cat.id IN (" + ids + ")";  
 
@@ -121,7 +121,9 @@ namespace itHappens.UIs.Common
                 dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    var eventminiview = new UIs.Common.EventMiniView(dataReader.GetString(1), Convert.ToInt32(dataReader.GetString(2)), dataReader.GetString(0));
+                    var imUrl = dataReader.IsDBNull(3) ? "" : dataReader.GetString(3);
+                    Image img = imUrl == "" ? null : Classes.Utility.DownloadImage(imUrl);
+                    var eventminiview = new UIs.Common.EventMiniView(dataReader.GetString(1), Convert.ToInt32(dataReader.GetString(2)), dataReader.GetString(0), img);
                     eventminiview.Scale(0.90F);
                     matchesFlowLayoutPanel.Controls.Add(eventminiview);
                 }
@@ -131,7 +133,7 @@ namespace itHappens.UIs.Common
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
             /*
             var eventminiview = new UIs.Common.EventMiniView();

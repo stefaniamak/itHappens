@@ -110,7 +110,7 @@ namespace itHappens.Classes
             try
             {
                 v.Read();
-                Image img = v.IsDBNull(5) ? null : Image.FromFile(v.GetString(5));
+                Image img = v.IsDBNull(5) ? null : Classes.Utility.DownloadImage(v.GetString(5));
                 theEventProfilePage = new UIs.andrea.EventProfilePage(
                     v.GetInt32(0), v.GetInt32(1),
                     v.GetString(2), v.GetString(3),

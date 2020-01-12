@@ -58,7 +58,7 @@ namespace itHappends
             var today = DateTime.Today;
             var tomorrow = today.AddDays(1);
 
-            return ExecuteQuery(@"SELECT event.id, event.title, categories.color FROM event JOIN categories ON categories.id = event.categoryID WHERE startingDate >= @Today AND startingDate < @Tomorrow ",
+            return ExecuteQuery(@"SELECT event.id, event.title, categories.color, event.image FROM event JOIN categories ON categories.id = event.categoryID WHERE startingDate >= @Today AND startingDate < @Tomorrow ",
                                   new[] { new MySqlParameter("@Today", today), new MySqlParameter("@Tomorrow", tomorrow) });
         }
 
@@ -72,7 +72,7 @@ namespace itHappends
 
                 foreach (int i in parameters)
                 {
-                    rows.Add(reader.GetString(i));
+                    rows.Add(reader.IsDBNull(i) ? "" : reader.GetString(i));
                 }
                 collumns.Add(rows);
             }

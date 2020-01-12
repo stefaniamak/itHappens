@@ -67,7 +67,7 @@ namespace itHappens.UIs.andrea
                 int userId = UIs.anna.LogInPage.userId;
                 MySqlCommand command;
                 MySqlDataReader dataReader;
-                String queryString = "SELECT ev.id, cat.color, ev.title, ve.name, ev.startingDate   " +
+                String queryString = "SELECT ev.id, cat.color, ev.title, ve.name, ev.startingDate, ev.image   " +
                                      "FROM users us " +
                                      "JOIN event_list evL ON us.id = evL.creatorID " +
                                      "JOIN attendants att ON evL.id = att.eventListID " +
@@ -84,7 +84,10 @@ namespace itHappens.UIs.andrea
                 {
                     vanueLabel.Text = dataReader.GetString(2);
 
-                    miniCaruselFillWithEventMiniView(dataReader.GetString(1), Convert.ToInt32(dataReader.GetString(0)), dataReader.GetString(2));
+                    var imgPath = dataReader.IsDBNull(6) ? "" : dataReader.GetString(6);
+                    Image img = imgPath == "" ? null : Classes.Utility.DownloadImage(imgPath);
+
+                    miniCaruselFillWithEventMiniView(dataReader.GetString(1), Convert.ToInt32(dataReader.GetString(0)), dataReader.GetString(2), img);
                 }
                 con.Close();
 
@@ -92,7 +95,7 @@ namespace itHappens.UIs.andrea
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
             
         }
@@ -112,9 +115,9 @@ namespace itHappens.UIs.andrea
             }
         }
 
-        public void miniCaruselFillWithEventMiniView(string categoryColor, int theEventId, string eventTitle)
+        public void miniCaruselFillWithEventMiniView(string categoryColor, int theEventId, string eventTitle, Image eventImage)
         {
-            eventsUserWillAttendCarousel.AddControl(new UIs.Common.EventMiniView(categoryColor, theEventId, eventTitle));
+            eventsUserWillAttendCarousel.AddControl(new UIs.Common.EventMiniView(categoryColor, theEventId, eventTitle, eventImage));
         }
 
 

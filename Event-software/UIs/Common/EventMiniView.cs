@@ -31,7 +31,7 @@ namespace itHappens.UIs.Common
         }
 
         //  -----------  Προσωρινός Constructor χωρίς τα insert εικόνων.  -----------
-        public EventMiniView(string categoryColor, int theEventId, string eventTitle) : this()
+        public EventMiniView(string categoryColor, int theEventId, string eventTitle, Image eventImage) : this()
         {
             Color catColor = Color.FromName(categoryColor);
             categoryColorPanel.BackColor = catColor;
@@ -40,6 +40,11 @@ namespace itHappens.UIs.Common
             eventId = theEventId;
 
             eventTitleLabel.Text = eventTitle;
+
+            if (eventImage != null)
+            {
+                eventPictureBox.Image = eventImage;
+            }
 
         }
 

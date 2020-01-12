@@ -55,7 +55,7 @@ namespace itHappens.UIs.Sidebars
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
             }
 
             //upcomingEventsFlowLayout.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);

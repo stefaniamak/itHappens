@@ -1,6 +1,7 @@
 
 using System;
 using System.Collections;
+using System.Drawing;
 using System.Windows.Forms;
 
 
@@ -141,16 +142,18 @@ namespace itHappens.Controllers
         public void MyEventsListsContentPageLoad(int userId, UIs.valentina.ListsContentPage theListContentPage)
         {
             int EventNum = Classes.DatabaseGeneralMethods.ReturnNumberOfUserEvents(userId);
-            string catColor;
-            string eventTitles;
+            
+            
             Classes.DatabaseGeneralMethods.GetUserEventCategoryIds(userId);
             Classes.DatabaseGeneralMethods.GetUserEventIds(userId);
 
             for (int i = 0; i < EventNum; i++)
             {
-                eventTitles = Classes.DatabaseGeneralMethods.returnTitleOfEvent(Convert.ToInt32(eventIDList[i]));
-                catColor = Classes.DatabaseGeneralMethods.GetCategoryColorOfEvent(Convert.ToInt32(eventCategoryIDList[i]));
-                var eventminiview = new UIs.Common.EventMiniView(catColor, Convert.ToInt32(eventIDList[i]), eventTitles);
+                var eventImagePath = Classes.DatabaseGeneralMethods.returnImageOfEvent(Convert.ToInt32(eventIDList[i]));
+                var eventImage = eventImagePath == "" ? null : Classes.Utility.DownloadImage(eventImagePath);
+                var eventTitle = Classes.DatabaseGeneralMethods.returnTitleOfEvent(Convert.ToInt32(eventIDList[i]));
+                var catColor = Classes.DatabaseGeneralMethods.GetCategoryColorOfEvent(Convert.ToInt32(eventCategoryIDList[i]));
+                var eventminiview = new UIs.Common.EventMiniView(catColor, Convert.ToInt32(eventIDList[i]), eventTitle, eventImage);
                 //  eventminiview.Scale(0.55F);
                 theListContentPage.EventHolderFlowLayoutPanel.Controls.Add(eventminiview);
             }
