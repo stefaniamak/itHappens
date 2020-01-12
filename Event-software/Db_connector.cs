@@ -20,7 +20,7 @@ namespace itHappends
         }
         public static MySqlConnection Connect()
         {
-            String conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
+            String conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
             MySqlConnection con;
             con = new MySqlConnection(conStr);
             con.Open();
@@ -69,7 +69,7 @@ namespace itHappends
 
         public static MySqlDataReader GetEvent(int id)
         {
-            return Query(@"Select * FROM event WHERE id = @id " 
+            return Query(@"Select * FROM event WHERE id = @id "
                         , new string[,] { { "@id", id + "" } });
         }
 

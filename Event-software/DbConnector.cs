@@ -10,7 +10,7 @@ namespace dbstuff
 {
     public class DbConnector
     {
-        string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456Steph;";
+        string conStr = "Server=127.0.0.1;Database=it_happens;Uid=root;Pwd=123456;";
         MySqlConnection con;
 
         public DbConnector()
