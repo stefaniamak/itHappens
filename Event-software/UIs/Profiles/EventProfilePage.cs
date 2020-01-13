@@ -95,6 +95,7 @@ namespace itHappens.UIs.andrea
             ticketPriceLabel.Text = ticketPrice + "";
             descriptionTextBox.Text = description;
 
+            saveid.Text = eventId.ToString();
             this.organizerId = organizerId;
             this.eventId = eventId;
             if (UIs.anna.LogInPage.loggedInUser == true)
@@ -142,7 +143,8 @@ namespace itHappens.UIs.andrea
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            Classes.MiddlePanelMethods.Instance.createEventToolStripMenuItem("edit");
+            int EvId = Convert.ToInt32(saveid.Text);
+            Classes.MiddlePanelMethods.Instance.createEventToolStripMenuItem("edit",EvId);
 
         }
 

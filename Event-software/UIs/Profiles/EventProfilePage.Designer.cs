@@ -58,6 +58,7 @@
             this.eventNameLabel = new System.Windows.Forms.Label();
             this.dayLabel = new System.Windows.Forms.Label();
             this.monthLabel = new System.Windows.Forms.Label();
+            this.saveid = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.topBarPanel.SuspendLayout();
@@ -179,6 +180,7 @@
             // 
             this.eventsTabPage.AutoScroll = true;
             this.eventsTabPage.BackColor = System.Drawing.SystemColors.Control;
+            this.eventsTabPage.Controls.Add(this.saveid);
             this.eventsTabPage.Controls.Add(this.ticketPanel);
             this.eventsTabPage.Controls.Add(this.detailsLabel);
             this.eventsTabPage.Controls.Add(this.locationTextBox);
@@ -462,6 +464,15 @@
             this.monthLabel.TabIndex = 5;
             this.monthLabel.Text = "NOV";
             // 
+            // saveid
+            // 
+            this.saveid.AutoSize = true;
+            this.saveid.Location = new System.Drawing.Point(568, 5);
+            this.saveid.Name = "saveid";
+            this.saveid.Size = new System.Drawing.Size(0, 13);
+            this.saveid.TabIndex = 9;
+            this.saveid.Visible = false;
+            // 
             // EventProfilePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,5 +538,6 @@
         public System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label ticketEuroSign;
+        private System.Windows.Forms.Label saveid;
     }
 }
