@@ -88,7 +88,7 @@ namespace itHappens.Classes
         public void eventsProfileToolStripMenuItem(int eventId)
         {
             Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
-            Console.WriteLine("xaxa" + eventId);
+            
             addEventDetailsInEventProfile(eventId);
 
 
@@ -239,10 +239,10 @@ namespace itHappens.Classes
             designEditOfPanels(theSignUpPage);
         }
 
-        public void createEventToolStripMenuItem(string value)
+        public void createEventToolStripMenuItem(string value,int eventid)
         {
             Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Clear();
-            theCreateEventPage = new UIs.anna.CreateEventPage(value);
+            theCreateEventPage = new UIs.anna.CreateEventPage(value,eventid);
             Controllers.UIController.Instance.MainSplitForm.middlePanel.Controls.Add(theCreateEventPage);
             designEditOfPanels(theCreateEventPage);
         }

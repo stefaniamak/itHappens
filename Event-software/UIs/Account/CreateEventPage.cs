@@ -17,10 +17,11 @@ namespace itHappens.UIs.anna
 
         private static DbConnector dbCon = new DbConnector();
         private static string conStr = dbCon.GetConnectionString();
-        public int eventID = UIs.andrea.EventProfilePage.Instance.eventId; 
+        public int eventID; 
 
-        public CreateEventPage(String s)
+        public CreateEventPage(String s,int id)
         {
+            eventID = id;
             if (s.Equals("create"))
             {
                 InitializeComponent();
