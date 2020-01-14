@@ -96,7 +96,7 @@ In more detail..
 
 ![IMG_2529](https://user-images.githubusercontent.com/48293545/72313190-2d84ed00-3693-11ea-9c63-d08bb6a0b318.jpg)
 
-# The vision
+# The vision for itHappens
 ### Suggesting Trip Planers
 >itHappens is software for a way to find and plan your days or... trips!
 
