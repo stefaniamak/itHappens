@@ -1,6 +1,6 @@
 ![IMG_2471](https://user-images.githubusercontent.com/48293545/72225391-ae59c100-358d-11ea-8653-ed6632183ed9.jpg)
 
-# Members
+# Developers
 
 | [Στεφανία Μακρυγιαννάκη](https://github.com/stefaniamak) | [Άννα Αρχιτεκτονίδου](https://github.com/Anna-ar) | [Ανδρέας Ραπεσης](https://github.com/outergaze) | [Νικόλαος Κουμπατής](https://github.com/Lycaonas) | [Κωνσταντίνα Καραμπίδου](https://github.com/KonstantinaK98) | [Παναγιωτης Στόικος](https://github.com/Stoy-atd) | [Βαλεντίνα Αρχιτεκτονίδου](https://github.com/Valentina-ar) |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
