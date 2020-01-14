@@ -8,7 +8,7 @@
 | WP2 + WP9 | WP10 | WP1 + WP4 | WP5 + WP7 | WP3 | WP6 | WP8 |
 | --------iT-------- | --------H-------- | --------a-------- | --------p-------- | --------p-------- | --------e-------- | --------ns-------- |
 
-## Accountable: [Στεφανία Μακρυγιαννάκη](https://github.com/stefaniamak)
+## &#x1F536; 1st Accountable: [Στεφανία Μακρυγιαννάκη](https://github.com/stefaniamak)
 ###  **WP9:** User Interfaces Development
 ><u>Highlight:<u> The whole reasearch and designing done!
   
@@ -28,7 +28,7 @@ In more detail..
 
 ![IMG_2499](https://user-images.githubusercontent.com/48293545/72313185-2bbb2980-3693-11ea-88d4-0cf70795e6fd.jpg)
 
-## Accountable: [Βαλεντίνα Αρχιτεκτονίδου](https://github.com/Valentina-ar)
+## &#x1F536; 2nd Accountable: [Βαλεντίνα Αρχιτεκτονίδου](https://github.com/Valentina-ar)
 ###  **WP10:** Graphic Design
 ><u>Highlight:<u> 42 .png files with original designs in multiple colors.
 * Team
@@ -40,7 +40,7 @@ In more detail..
 
 ![IMG_2511](https://user-images.githubusercontent.com/48293545/72313186-2c53c000-3693-11ea-89bc-e6e084082a8d.jpg)
  
-## Accountable: [Ανδρέας Ραπεσης](https://github.com/outergaze)
+## &#x1F536; 3rd Accountable: [Ανδρέας Ραπεσης](https://github.com/outergaze)
 ###  **WP1:** Database Management, Data Manipulation & Processing
 ><u>Highlight:<u> The software is enriched with data from an API!
 * Team
@@ -55,20 +55,20 @@ In more detail..
 
 ![IMG_2515](https://user-images.githubusercontent.com/48293545/72313187-2c53c000-3693-11ea-8bb2-557488fc8e3b.jpg) 
  
-### **WP4:** Events Management, friend lists, attending lists, interested lists
+### &#x1F536; **WP4:** Events Management, friend lists, attending lists, interested lists
 ><u>Highlight:<u> A user can show to their friends that they'll be attend an event!
 * Development Team
   * [Παναγιωτης Στόικος](https://github.com/Stoy-atd)
   
 ![IMG_2497](https://user-images.githubusercontent.com/48293545/72226414-9a1bc100-3599-11ea-897c-88a73216757d.jpg)
 
-## Accountable: [Κωνσταντίνα Καραμπίδου](https://github.com/KonstantinaK98)
+## &#x1F536; 4th Accountable: [Κωνσταντίνα Καραμπίδου](https://github.com/KonstantinaK98)
 ### **WP3:** System Administration: Creation of profiles, Settings
 ><u>Highlight:<u> Login, Sign Up, Create Event and Settings provided to the user!
 
 ![IMG_2518](https://user-images.githubusercontent.com/48293545/72313188-2c53c000-3693-11ea-9ad3-5f7be1d7bc2d.jpg)
 
-## Accountable: [Νικόλαος Κουμπατής](https://github.com/Lycaonas)
+## &#x1F536; 5th Accountable: [Νικόλαος Κουμπατής](https://github.com/Lycaonas)
 ### **WP5:** Search (Free Text / Structural,Filtered,Faceted,Geo)
 ><u>Highlight:<u> Basic search according to categories.
 * Team
@@ -79,12 +79,12 @@ In more detail..
 ### **WP7:** Events Recommendations
 ><u>Highlight:<u> Small progress on giving events suggestions to users according to their pass visits!
  
-## Accountable: [Παναγιωτης Στόικος](https://github.com/Stoy-atd)   
+## &#x1F536; 6th Accountable: [Παναγιωτης Στόικος](https://github.com/Stoy-atd)   
 ### **WP6:** Advertise Management, Publishing, User feedback
 ><u>Highlight:<u> This package was not a priority.
 ![IMG_2478](https://user-images.githubusercontent.com/48293545/72226431-d51df480-3599-11ea-90db-ab6bebcabba0.jpg)
   
-## Accountable: [Άννα Αρχιτεκτονίδου](https://github.com/Anna-ar)
+## &#x1F536; 7th Accountable: [Άννα Αρχιτεκτονίδου](https://github.com/Anna-ar)
 ### **WP8:** Empirical User-Centered Evaluation
 ><u>Highlight:<u> Usability tests with INR subjects.
 * Team
