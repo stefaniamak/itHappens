@@ -79,6 +79,8 @@ In more detail..
 ### **WP7:** Events Recommendations
 ><u>Highlight:<u> Small progress on giving events suggestions to users according to their pass visits!
  
+![IMG_2524](https://user-images.githubusercontent.com/48293545/72313189-2cec5680-3693-11ea-880b-50369aa65f23.jpg) 
+ 
 ## &#x1F536; 6th Accountable: [Παναγιωτης Στόικος](https://github.com/Stoy-atd)   
 ### **WP6:** Advertise Management, Publishing, User feedback
 ><u>Highlight:<u> This package was not a priority.
