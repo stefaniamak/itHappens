@@ -6,7 +6,7 @@
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | ![Stefania Makrygiannaki](https://user-images.githubusercontent.com/48293545/72304199-7bd8c280-3678-11ea-97c2-6efd94188285.jpg)| ![Valentina Arxitektonidou](https://user-images.githubusercontent.com/48293545/72304201-7d09ef80-3678-11ea-9916-2cb0bf780b10.jpg) | ![Andreas Rapessis](https://user-images.githubusercontent.com/48293545/72304183-6e233d00-3678-11ea-9dd3-b8f2d94271fa.jpg) | ![Nikos Koumpatis](https://user-images.githubusercontent.com/48293545/72304195-78ddd200-3678-11ea-8126-2bb5d7de8e8b.jpg) | ![Konstantina Karampidou](https://user-images.githubusercontent.com/48293545/72304193-77140e80-3678-11ea-862e-8547af889626.jpg) | ![Panagiotis Stoee](https://user-images.githubusercontent.com/48293545/72304281-ca865c80-3678-11ea-9ba8-fb06babd24af.jpg) | ![Anna Arxitektonidou](https://user-images.githubusercontent.com/48293545/72304186-6fed0080-3678-11ea-9b8d-1721c6fab7c9.jpg) |
 | WP2 + WP9 | WP10 | WP1 + WP4 | WP5 + WP7 | WP3 | WP6 | WP8 |
-| ----------------- | ----------------- | ------------------ | ------------------ | ------------------ | ------------------ | ----------------- |
+| --------+-------- | --------+-------- | --------+-------- | --------+-------- | --------+-------- | --------+-------- | --------+-------- |
 
 ## Accountable: [Στεφανία Μακρυγιαννάκη](https://github.com/stefaniamak)
 ###  **WP9:** User Interfaces Development
