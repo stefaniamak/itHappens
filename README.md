@@ -104,3 +104,5 @@ In more detail..
 
 ![IMG_2452](https://user-images.githubusercontent.com/48293545/72225631-4f497b80-3590-11ea-9819-7dc872442c11.jpg)
 
+![Logo darker](https://user-images.githubusercontent.com/48293545/72314550-0d0b6180-3698-11ea-907d-b8b121362684.png)
+
