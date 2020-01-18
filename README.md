@@ -55,7 +55,7 @@ In more detail..
 
 ![IMG_2515](https://user-images.githubusercontent.com/48293545/72313187-2c53c000-3693-11ea-8bb2-557488fc8e3b.jpg) 
  
-### &#x1F536; **WP4:** Events Management, friend lists, attending lists, interested lists
+### **WP4:** Events Management, friend lists, attending lists, interested lists
 ><u>Highlight:<u> A user can show to their friends that they'll be attend an event!
 * Development Team
   * [Παναγιωτης Στόικος](https://github.com/Stoy-atd)
@@ -84,6 +84,7 @@ In more detail..
 ## &#x1F536; 6th Accountable: [Παναγιωτης Στόικος](https://github.com/Stoy-atd)   
 ### **WP6:** Advertise Management, Publishing, User feedback
 ><u>Highlight:<u> This package was not a priority.
+  
 ![IMG_2478](https://user-images.githubusercontent.com/48293545/72226431-d51df480-3599-11ea-90db-ab6bebcabba0.jpg)
   
 ## &#x1F536; 7th Accountable: [Άννα Αρχιτεκτονίδου](https://github.com/Anna-ar)
